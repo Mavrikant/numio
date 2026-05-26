@@ -52,7 +52,7 @@ const uid = `ad-slot-${Math.random().toString(36).slice(2, 9)}`;
     <div class="ad-slot-placeholder" style={`min-height:${minHeight}px; width:100%;`}></div>
   </div>
 
-  <script define:vars={{ uid, slot, format, minHeight }}>
+  <script is:inline define:vars={{ uid, slot, format, minHeight }}>
     (function () {
       const CONSENT_KEY = "ads-consent";
       const CONSENT_TTL_KEY = "ads-consent-ttl";
