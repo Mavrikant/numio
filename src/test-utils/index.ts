@@ -74,15 +74,30 @@ export function assertI18nComplete(calc: AnyCalculatorDefinition): void {
       ).toBeTruthy();
     }
 
-    const forbiddenPlaceholders = ["TODO", "FIXME", "XXX", "PLACEHOLDER"];
-    const bundleStr = JSON.stringify(bundle);
-    for (const placeholder of forbiddenPlaceholders) {
+    const forbiddenValues = ["TODO", "FIXME", "XXX", "PLACEHOLDER"];
+    const stringValues = collectStringValues(bundle);
+    for (const forbidden of forbiddenValues) {
+      const offender = stringValues.find((v) =>
+        v.toUpperCase().includes(forbidden),
+      );
       expect(
-        bundleStr.toUpperCase().includes(placeholder),
-        `${calc.slug}.${locale} contains placeholder "${placeholder}"`,
-      ).toBe(false);
+        offender,
+        `${calc.slug}.${locale} value contains forbidden token "${forbidden}": ${offender}`,
+      ).toBeUndefined();
     }
   }
+}
+
+function collectStringValues(obj: unknown): string[] {
+  const out: string[] = [];
+  if (typeof obj === "string") {
+    out.push(obj);
+  } else if (Array.isArray(obj)) {
+    for (const item of obj) out.push(...collectStringValues(item));
+  } else if (obj && typeof obj === "object") {
+    for (const v of Object.values(obj)) out.push(...collectStringValues(v));
+  }
+  return out;
 }
 
 export function assertSchemaValidates(

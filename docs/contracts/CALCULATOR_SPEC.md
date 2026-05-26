@@ -17,7 +17,10 @@ src/calculators/{category}/{slug}/
 ├── definition.ts        # Tek default export: CalculatorDefinition
 ├── compute.ts           # Pure compute fonksiyonu
 ├── i18n.ts              # 12 dilde CalculatorI18n bundle
-├── content.mdx          # SEO içerik (per-locale: önce EN+TR, sonra 10 dil)
+├── content/             # SEO içerik, 12 ayrı dosya
+│   ├── en.mdx
+│   ├── tr.mdx
+│   └── … (de, fr, es, it, ar, ru, zh, ja, ko, hi)
 ├── visualizations.tsx   # (opsiyonel) React görsel componentleri
 └── test/
     ├── compute.test.ts      # Numeric correctness
@@ -70,9 +73,11 @@ Her dil için bundle:
 
 **YASAK**: `"TODO"`, `"FIXME"`, `"PLACEHOLDER"`, `"XXX"` stringleri. Test bunları yakalar = otomatik reject.
 
-### 2.4 `content.mdx`
+### 2.4 `content/{locale}.mdx` (12 dosya)
 
-Her dilde 500+ kelime özgün içerik. EN ve TR önce yazılır, diğer 10 dil çevirisi sonra. Çeviri "literal MT" değil "natural" olmalı.
+Her dil ayrı MDX dosyası, 500+ kelime özgün içerik. EN ve TR önce sıfırdan yazılır, diğer 10 dil natural çevirisi sonra. Çeviri "literal MT" değil "natural" olmalı.
+
+**Neden 12 ayrı dosya** (golden reference kararı): editör araçları, diff'ler, lazy loading hepsi temiz; tek dosyada export bloklarıyla çoklu locale Astro MDX pattern'ını zorlaştırırdı.
 
 **Yapı:**
 - H1: hesaplayıcı başlığı
