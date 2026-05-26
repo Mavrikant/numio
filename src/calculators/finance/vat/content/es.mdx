@@ -1,0 +1,41 @@
+## Cómo funciona la calculadora de IVA
+
+La **calculadora de IVA / impuesto de ventas** calcula precios sin IVA o con IVA incluido en ambas direcciones: añadir IVA a un precio base o extraer el IVA de un precio bruto.
+
+### Dos modos de cálculo
+
+**Añadir IVA al precio (modo exclusivo)**
+
+- **Cuota de IVA** = Precio base × (Tipo IVA ÷ 100)
+- **Total IVA incluido** = Precio base + Cuota IVA
+
+Ejemplo: 500 € sin IVA al tipo general del 21 %:
+- IVA = 500 × 0,21 = **105 €**
+- Total = 500 + 105 = **605 €**
+
+**Extraer IVA del precio (modo inclusivo)**
+
+- **Precio base** = Precio bruto ÷ (1 + Tipo IVA ÷ 100)
+- **Cuota IVA** = Precio bruto − Precio base
+
+Ejemplo: 605 € con IVA incluido al 21 %:
+- Base = 605 ÷ 1,21 = **500 €**
+- IVA = 605 − 500 = **105 €**
+
+### Tipos de IVA en España
+
+| Tipo | Ámbito de aplicación |
+|---|---|
+| 21 % | Tipo general |
+| 10 % | Reducido (alimentación general, hostelería) |
+| 4 % | Superreducido (alimentos básicos, libros, medicamentos) |
+
+### Facturación
+
+Una factura correcta debe indicar la base imponible, el tipo de IVA, la cuota de IVA y el total. Esta calculadora proporciona los cuatro valores al instante.
+
+| Escenario | Fórmula |
+|---|---|
+| Cuota IVA (exclusivo) | `IVA = Base × Tipo ÷ 100` |
+| Total con IVA | `Total = Base × (1 + Tipo ÷ 100)` |
+| Base desde bruto | `Base = Bruto ÷ (1 + Tipo ÷ 100)` |

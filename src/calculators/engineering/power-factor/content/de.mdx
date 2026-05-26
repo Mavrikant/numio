@@ -1,0 +1,113 @@
+# Leistungsfaktor-Rechner
+
+Der Leistungsfaktor-Rechner analysiert die Beziehung zwischen Wirkleistung, Scheinleistung und Blindleistung in elektrischen Systemen. Drei Betriebsmodi stehen zur Verfügung: Leistungsfaktorberechnung aus dem Leistungsdreieck, Berechnung der Leistungskomponenten aus dem Leistungsfaktor und Leistungsfaktorkorrektur mit Kondensatoren.
+
+## Was ist der Leistungsfaktor?
+
+Der Leistungsfaktor (PF) ist das Verhältnis der Wirkleistung (P) zur Scheinleistung (S). Er ist eine dimensionslose Zahl zwischen 0 und 1. Ein hoher Leistungsfaktor zeigt effizienten Energieeinsatz an; ein niedriger Leistungsfaktor bedeutet unnötige Blindleistungszirkulation.
+
+**Leistungsdreieck-Komponenten:**
+
+- **P (Wirkleistung, kW):** Die Leistung, die tatsächliche Arbeit verrichtet — Lampen leuchten, Motoren drehen.
+- **Q (Blindleistung, kVAR):** Leistung, die in elektrischen und magnetischen Feldern gespeichert und freigegeben wird. Entsteht in Motoren und Transformatoren.
+- **S (Scheinleistung, kVA):** Vektorsumme aus Wirk- und Blindleistung: S = √(P² + Q²)
+
+Leistungsfaktor: **PF = cos(φ) = P / S**
+
+Phasenwinkel: **φ = arccos(PF)**
+
+## Bedeutung des Leistungsfaktors
+
+**Wirtschaftliche Auswirkungen:** Industriebetriebe zahlen bei niedrigem Leistungsfaktor Blindleistungsgebühren. Blindleistung belastet Leitungen und Transformatoren, ohne nützliche Arbeit zu leisten.
+
+**Technische Auswirkungen:**
+- Niedriger PF erfordert größere Leitungsquerschnitte
+- Transformatoren und Generatoren werden in ihrer Nutzkapazität eingeschränkt
+- Systemverluste steigen (I²R-Verluste)
+- Spannungsabfälle werden größer
+
+**Normen:** IEEE und IEC empfehlen für Industrieanlagen typischerweise PF ≥ 0,90.
+
+## Betriebsmodi
+
+### Modus 1: Leistungsfaktor aus Leistung
+
+Berechnet den Leistungsfaktor aus Wirkleistung (kW) und Blindleistung (kVAR).
+
+**Formeln:**
+- S = √(P² + Q²) kVA
+- PF = P / S
+- φ = arccos(PF) Grad
+
+Dieser Modus ist ideal für Messungen mit Leistungsanalysatoren oder Energiemessgeräten.
+
+### Modus 2: Leistungskomponenten aus Leistungsfaktor
+
+Berechnet Wirk- und Blindleistungskomponenten aus Scheinleistung (kVA) und Leistungsfaktor.
+
+**Formeln:**
+- P = S × PF kW
+- Q = √(S² - P²) kVAR
+
+Nützlich für die Planung von Transformatoren und Generatorkapazitäten.
+
+### Modus 3: Leistungsfaktorkorrektur
+
+Berechnet den benötigten Kondensatorwert zur Verbesserung des Leistungsfaktors auf einen Zielwert.
+
+**Formeln:**
+- Q_cap = P × (tan φ₁ - tan φ₂) kVAR
+- C = Q_cap × 1000 / (2π × f × V²) Farad
+- C_µF = C × 10⁶ Mikrofarad
+
+Dabei gilt:
+- φ₁ = arccos(aktueller PF)
+- φ₂ = arccos(Ziel-PF)
+- f = Netzfrequenz (50 oder 60 Hz)
+- V = Netzspannung (Volt)
+
+## Kondensatoren zur Leistungsfaktorkorrektur
+
+Induktive Lasten (Motoren, Vorschaltgeräte, Transformatoren) verursachen nacheilenden Leistungsfaktor, da der Strom der Spannung nacheilt. Parallelkondensatoren liefern Blindleistung lokal und:
+
+1. Reduzieren den Blindstrombezug aus dem Netz
+2. Senken den Scheinleistungsbedarf
+3. Verringern Leitungsverluste
+4. Verbessern das Spannungsprofil
+
+**Hinweis:** Diese Berechnung gilt für lineare Lasten bei Grundfrequenz. Lasten mit Oberwellen (FU, USV, Lichtbogenöfen) erfordern eine spezielle Oberwellenanalyse.
+
+## Praktisches Berechnungsbeispiel
+
+**Szenario:** Ein 75-kW-Motor läuft mit einem Leistungsfaktor von 0,70. Ziel: PF auf 0,95 erhöhen.
+
+**Schritt 1:** Aktuellen Zustand berechnen
+- φ₁ = arccos(0,70) = 45,57°
+- Q₁ = 75 × tan(45,57°) = 75 × 1,020 = 76,5 kVAR
+- S₁ = 75 / 0,70 = 107,1 kVA
+
+**Schritt 2:** Zielzustand berechnen
+- φ₂ = arccos(0,95) = 18,19°
+- Q₂ = 75 × tan(18,19°) = 75 × 0,329 = 24,7 kVAR
+
+**Schritt 3:** Erforderliche Kondensatorkapazität berechnen
+- Q_cap = 75 × (1,020 - 0,329) = 75 × 0,691 = 51,8 kVAR
+- Bei 400 V, 50 Hz: C = 51 800 / (2π × 50 × 400²) = 1 030 µF
+
+**Ergebnis:** Scheinleistung sinkt von 107,1 kVA auf 78,9 kVA; Verluste reduzieren sich erheblich.
+
+## Bewertungstabelle Leistungsfaktor
+
+| Leistungsfaktor | Bewertung | Maßnahme |
+|---|---|---|
+| 0,95 – 1,00 | Ausgezeichnet | Keine Korrektur erforderlich |
+| 0,90 – 0,95 | Gut | Beobachten |
+| 0,80 – 0,90 | Mittel | Korrektur empfohlen |
+| 0,70 – 0,80 | Niedrig | Kondensatoren erforderlich |
+| &lt; 0,70 | Sehr niedrig | Sofortige Korrektur nötig |
+
+## Referenzen
+
+- IEEE 1459: Messung elektrischer Leistungsgrößen
+- IEC 61000-3-2: Grenzwerte für Oberschwingungsstrom-Emissionen
+- VDE 0100: Errichten von Niederspannungsanlagen

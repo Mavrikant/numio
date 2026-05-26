@@ -1,0 +1,112 @@
+# Beton Karışım Hesaplayıcı
+
+Beton karışım hesaplayıcısı, herhangi bir beton hacmi için gerekli çimento, kum, iri agrega ve su miktarlarını belirlemenize yardımcı olur. İster standart karışım sınıfları (M10-M30) ister özel oran kullanın, bu araç malzeme ağırlıklarını kilogram cinsinden ve gerekli çimento torbası sayısını hesaplar.
+
+## Beton Karışım Sınıflarının Anlaşılması
+
+Beton sınıfları M harfi ile başlar; M "Mix" (Karışım) anlamına gelir, sayı ise 28. günde elde edilen karakteristik basınç dayanımını N/mm² (MPa) cinsinden gösterir. Yüksek sınıf daha dayanıklı beton demektir.
+
+### Standart Nominal Karışım Oranları (hacimce)
+
+| Sınıf | Çimento : Kum : Agrega | Tipik Kullanım |
+|---|---|---|
+| M10 | 1 : 3 : 6 | Tesviye betonu, yapısal olmayan dolgu |
+| M15 | 1 : 2 : 4 | Sade beton temeller, kaldırımlar |
+| M20 | 1 : 1,5 : 3 | Genel amaçlı betonarme |
+| M25 | 1 : 1 : 2 | Betonarme kiriş ve kolonlar |
+| M30 | 1 : 0,75 : 1,5 | Yüksek dayanımlı yapısal elemanlar |
+
+## Hesaplama Yöntemi
+
+### Adım 1: Kuru Hacim Dönüşümü
+
+Taze karıştırılmış beton su ve boşluklar içerir. Malzemelerin gerçek hacmi ıslak beton hacminden daha büyüktür. Standart dönüşüm katsayısı:
+
+**Kuru Hacim = Islak Hacim × 1,54**
+
+Bu katsayı (1,54) agregalar içindeki boşlukları ve karıştırma sırasında oluşan sıkışmayı telafi eder.
+
+### Adım 2: Her Malzemenin Oranlanması
+
+Çimento : Kum : Agrega = C : S : A toplamı (C + S + A) olduğunda her malzeme kuru hacmin orantılı bir bölümünü kaplar:
+
+- Çimento hacmi = [C / (C + S + A)] × Kuru Hacim (m³)
+- Kum hacmi = [S / (C + S + A)] × Kuru Hacim (m³)
+- Agrega hacmi = [A / (C + S + A)] × Kuru Hacim (m³)
+
+### Adım 3: Hacmın Ağırlığa Çevrilmesi
+
+Her hacim, malzemenin yığın yoğunluğu ile çarpılarak kilogram cinsine dönüştürülür:
+
+- Çimento: 1440 kg/m³
+- Kum: 1600 kg/m³
+- İri agrega: 1500 kg/m³
+
+### Adım 4: Su Miktarı
+
+Su miktarı su/çimento (S/Ç) oranı ile hesaplanır:
+
+**Su (kg) = S/Ç oranı × Çimento (kg)**
+
+1 kg su = 1 litre olduğundan, su miktarı litre cinsinden kg değerine eşittir.
+
+### Adım 5: Çimento Torbası Sayısı
+
+Standart bir çimento torbası 50 kg içerir. Torba sayısını bulmak için toplam çimento ağırlığını 50'ye bölün; pratikte yukarı yuvarlayın.
+
+## Örnek Hesaplama: 1 m³ M20 Beton
+
+**Veri:** Hacim = 1 m³, Karışım = M20 (1:1,5:3), S/Ç = 0,50
+
+**Adım 1:** Kuru Hacim = 1 × 1,54 = 1,54 m³
+
+**Adım 2:** Toplam oran = 1 + 1,5 + 3 = 5,5
+- Çimento hacmi = (1/5,5) × 1,54 = 0,280 m³
+- Kum hacmi = (1,5/5,5) × 1,54 = 0,420 m³
+- Agrega hacmi = (3/5,5) × 1,54 = 0,840 m³
+
+**Adım 3:** Ağırlık dönüşümleri:
+- Çimento = 0,280 × 1440 = 403 kg
+- Kum = 0,420 × 1600 = 672 kg
+- Agrega = 0,840 × 1500 = 1260 kg
+
+**Adım 4:** Su = 0,50 × 403 = 201,5 kg = 201,5 litre
+
+**Adım 5:** Çimento torbası = 403 / 50 = 8,06 → 9 torba (yukarı yuvarlanır)
+
+## Su/Çimento Oranı
+
+Su/çimento (S/Ç) oranı beton teknolojisinin en kritik parametrelerinden biridir ve doğrudan şunları etkiler:
+
+- **Dayanım:** Düşük S/Ç → yüksek dayanım.
+- **Dayanıklılık:** Düşük S/Ç geçirimliliği azaltarak klorit ve karbonasyon hasarını önler.
+- **İşlenebilirlik:** Yüksek S/Ç betonu yerleştirmeyi kolaylaştırır; ancak dayanım ve dayanıklılık düşer.
+
+**Önerilen maksimum S/Ç oranları:**
+- M20 genel kullanım: 0,55
+- M25 betonarme: 0,50
+- M30 yüksek performans: 0,45
+- Ağır maruz kalma (deniz ortamı): 0,40
+
+## Kullanılan Yığın Yoğunlukları
+
+| Malzeme | Yığın Yoğunluğu (kg/m³) |
+|---|---|
+| Portland Çimento | 1440 |
+| Dere kumu (kuru) | 1600 |
+| 20 mm kırma taş | 1500 |
+| Su | 1000 |
+
+## Pratik İpuçları
+
+Hacimsel tartıma yerine **ağırlıkla tartım** daha doğru sonuç verir. Nemli kumda şişme nedeniyle hacimsel ölçümde %10-20 hata oluşabilir.
+
+**Fire payı:** Hesaplanan miktarlara kalıp eşitsizlikleri ve dökme kayıpları için %5-10 ilave edin.
+
+**Kür:** Beton 7 günde 28 günlük dayanımının %70'ine ulaşır. Yüzeyi en az 7 gün (yüksek sınıflarda 14 gün) nemli tutun.
+
+## Referanslar
+
+- TS 500: Betonarme Yapıların Tasarım ve Yapım Kuralları
+- ACI 211.1: Normal Beton İçin Karışım Oranı Seçimi
+- IS 456:2000: Düz ve Betonarme Yapılar Uygulama Kodu

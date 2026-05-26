@@ -1,0 +1,42 @@
+## Come funziona il calcolatore IVA
+
+Il **calcolatore IVA / imposta sulle vendite** calcola i prezzi IVA esclusa o IVA inclusa in entrambe le direzioni: aggiungere l'IVA a un prezzo netto o estrarre l'IVA da un prezzo lordo.
+
+### Due modalità di calcolo
+
+**Aggiungi IVA al prezzo (modalità esclusiva)**
+
+- **Importo IVA** = Prezzo netto × (Aliquota IVA ÷ 100)
+- **Prezzo totale IVA inclusa** = Prezzo netto + Importo IVA
+
+Esempio: 400 € IVA esclusa all'aliquota ordinaria del 22 %:
+- IVA = 400 × 0,22 = **88 €**
+- Totale = 400 + 88 = **488 €**
+
+**Estrai IVA dal prezzo (modalità inclusiva)**
+
+- **Prezzo netto** = Prezzo lordo ÷ (1 + Aliquota IVA ÷ 100)
+- **Importo IVA** = Prezzo lordo − Prezzo netto
+
+Esempio: 488 € IVA inclusa al 22 %:
+- Netto = 488 ÷ 1,22 = **400 €**
+- IVA = 488 − 400 = **88 €**
+
+### Aliquote IVA in Italia
+
+| Aliquota | Ambito di applicazione |
+|---|---|
+| 22 % | Ordinaria |
+| 10 % | Ridotta (alberghi, ristorazione, alcuni beni) |
+| 5 % | Ridotta speciale (alcuni prodotti) |
+| 4 % | Super-ridotta (beni di prima necessità) |
+
+### Fatturazione
+
+Una fattura conforme deve indicare l'imponibile, l'aliquota IVA, l'importo IVA e il totale IVA inclusa. Questo calcolatore fornisce immediatamente tutti e quattro i valori.
+
+| Scenario | Formula |
+|---|---|
+| Importo IVA (esclusivo) | `IVA = Netto × Aliquota ÷ 100` |
+| Totale IVA inclusa | `Totale = Netto × (1 + Aliquota ÷ 100)` |
+| Netto da lordo | `Netto = Lordo ÷ (1 + Aliquota ÷ 100)` |

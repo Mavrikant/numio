@@ -1,0 +1,42 @@
+## Comment fonctionne la calculatrice TVA
+
+La **calculatrice TVA / taxe de vente** calcule les prix hors TVA ou toutes taxes comprises dans les deux sens : ajouter la TVA à un prix HT ou extraire la TVA d'un prix TTC.
+
+### Deux modes de calcul
+
+**Ajouter la TVA au prix (mode exclusif)**
+
+- **Montant TVA** = Prix HT × (Taux TVA ÷ 100)
+- **Prix TTC** = Prix HT + Montant TVA
+
+Exemple : 300 € HT à 20 % de TVA :
+- TVA = 300 × 0,20 = **60 €**
+- TTC = 300 + 60 = **360 €**
+
+**Extraire la TVA du prix (mode inclusif)**
+
+- **Prix HT** = Prix TTC ÷ (1 + Taux TVA ÷ 100)
+- **Montant TVA** = Prix TTC − Prix HT
+
+Exemple : 360 € TTC à 20 % de TVA :
+- HT = 360 ÷ 1,20 = **300 €**
+- TVA = 360 − 300 = **60 €**
+
+### Taux de TVA en France
+
+| Taux | Domaine d'application |
+|---|---|
+| 20 % | Taux normal |
+| 10 % | Taux intermédiaire (restaurants, travaux) |
+| 5,5 % | Taux réduit (alimentation, livres) |
+| 2,1 % | Taux super-réduit (médicaments, presse) |
+
+### Facturation
+
+Une facture conforme doit mentionner le montant HT, le taux de TVA, le montant de TVA et le montant TTC. Cette calculatrice fournit instantanément ces quatre valeurs.
+
+| Scénario | Formule |
+|---|---|
+| TVA (prix HT) | `TVA = HT × Taux ÷ 100` |
+| Prix TTC | `TTC = HT × (1 + Taux ÷ 100)` |
+| Prix HT (depuis TTC) | `HT = TTC ÷ (1 + Taux ÷ 100)` |

@@ -1,0 +1,113 @@
+# Calcolatore del Fattore di Potenza
+
+Il calcolatore del fattore di potenza analizza la relazione tra potenza attiva, potenza apparente e potenza reattiva nei sistemi elettrici. Tre modalità operative: calcolo del fattore di potenza dal triangolo delle potenze, calcolo delle componenti di potenza dal fattore di potenza e correzione del fattore di potenza tramite condensatori.
+
+## Cos'è il Fattore di Potenza?
+
+Il fattore di potenza (FP) è il rapporto tra la potenza attiva (P) e la potenza apparente (S). È un numero adimensionale compreso tra 0 e 1. Un fattore di potenza elevato indica un uso efficiente dell'energia elettrica; uno basso segnala una circolazione inutile di potenza reattiva.
+
+**Componenti del triangolo delle potenze:**
+
+- **P (Potenza Attiva, kW):** La potenza che compie lavoro reale — illuminazione, rotazione dei motori.
+- **Q (Potenza Reattiva, kVAR):** Potenza immagazzinata e rilasciata in campi elettrici e magnetici. Presente nei motori e nei trasformatori.
+- **S (Potenza Apparente, kVA):** Somma vettoriale di potenza attiva e reattiva: S = √(P² + Q²)
+
+Fattore di potenza: **FP = cos(φ) = P / S**
+
+Angolo di fase: **φ = arccos(FP)**
+
+## Importanza del Fattore di Potenza
+
+**Impatto economico:** Gli impianti industriali pagano penali per energia reattiva quando il fattore di potenza è basso. La potenza reattiva carica linee e trasformatori senza compiere lavoro utile.
+
+**Impatto tecnico:**
+- Un FP basso richiede conduttori di sezione maggiore
+- La capacità di trasformatori e generatori viene ridotta
+- Le perdite del sistema aumentano (perdite I²R)
+- Le cadute di tensione si amplificano
+
+**Norme:** IEEE e IEC raccomandano generalmente FP ≥ 0,90 per impianti industriali.
+
+## Modalità Operative
+
+### Modalità 1: Fattore di Potenza dalle Potenze
+
+Calcola il fattore di potenza dalla potenza attiva (kW) e reattiva (kVAR).
+
+**Formule:**
+- S = √(P² + Q²) kVA
+- FP = P / S
+- φ = arccos(FP) gradi
+
+Questa modalità è ideale per misurazioni effettuate con analizzatori di potenza o registratori di energia.
+
+### Modalità 2: Componenti di Potenza dal Fattore di Potenza
+
+Calcola le componenti attiva e reattiva dalla potenza apparente (kVA) e dal fattore di potenza.
+
+**Formule:**
+- P = S × FP kW
+- Q = √(S² - P²) kVAR
+
+Utile per pianificare le capacità di trasformatori e generatori.
+
+### Modalità 3: Correzione del Fattore di Potenza
+
+Calcola il valore del condensatore necessario per migliorare il fattore di potenza fino a un valore obiettivo.
+
+**Formule:**
+- Q_cap = P × (tan φ₁ - tan φ₂) kVAR
+- C = Q_cap × 1000 / (2π × f × V²) Farad
+- C_µF = C × 10⁶ microfarad
+
+Dove:
+- φ₁ = arccos(FP attuale)
+- φ₂ = arccos(FP obiettivo)
+- f = frequenza di rete (50 o 60 Hz)
+- V = tensione di linea (volt)
+
+## Correzione con Condensatori
+
+I carichi induttivi (motori, reattori, trasformatori) causano un fattore di potenza in ritardo perché la corrente è in ritardo rispetto alla tensione. I condensatori in parallelo forniscono potenza reattiva localmente e consentono di:
+
+1. Ridurre la corrente reattiva prelevata dalla rete
+2. Diminuire la domanda di potenza apparente
+3. Ridurre le perdite nei conduttori
+4. Migliorare il profilo di tensione
+
+**Attenzione:** Questo calcolo è valido per carichi lineari a frequenza fondamentale. I carichi che generano armoniche (variatori di frequenza, UPS, forni ad arco) richiedono un'analisi armonica specializzata.
+
+## Esempio di Calcolo Pratico
+
+**Scenario:** Un motore da 75 kW funziona con un fattore di potenza di 0,70. Obiettivo: portare il FP a 0,95.
+
+**Passo 1:** Calcolare lo stato attuale
+- φ₁ = arccos(0,70) = 45,57°
+- Q₁ = 75 × tan(45,57°) = 75 × 1,020 = 76,5 kVAR
+- S₁ = 75 / 0,70 = 107,1 kVA
+
+**Passo 2:** Calcolare lo stato obiettivo
+- φ₂ = arccos(0,95) = 18,19°
+- Q₂ = 75 × tan(18,19°) = 75 × 0,329 = 24,7 kVAR
+
+**Passo 3:** Calcolare la capacità del condensatore
+- Q_cap = 75 × (1,020 - 0,329) = 75 × 0,691 = 51,8 kVAR
+- A 400 V, 50 Hz: C = 51 800 / (2π × 50 × 400²) = 1 030 µF
+
+**Risultato:** La potenza apparente scende da 107,1 kVA a 78,9 kVA; le perdite si riducono significativamente.
+
+## Tabella di Valutazione del Fattore di Potenza
+
+| Fattore di Potenza | Valutazione | Azione |
+|---|---|---|
+| 0,95 – 1,00 | Eccellente | Nessuna correzione necessaria |
+| 0,90 – 0,95 | Buono | Monitorare |
+| 0,80 – 0,90 | Medio | Correzione raccomandata |
+| 0,70 – 0,80 | Basso | Condensatori richiesti |
+| &lt; 0,70 | Molto basso | Correzione immediata |
+
+## Riferimenti
+
+- IEEE 1459: Misurazione delle grandezze di potenza elettrica
+- IEC 61000-3-2: Limiti per le emissioni di corrente armonica
+- CEI 64-8: Impianti elettrici utilizzatori

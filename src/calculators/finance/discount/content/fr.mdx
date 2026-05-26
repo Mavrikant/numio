@@ -1,0 +1,36 @@
+## Comment fonctionne la calculatrice de remise
+
+La **calculatrice de remise** calcule instantanément le prix après une réduction en pourcentage, ou détermine le taux de remise à partir du prix de vente connu. La TVA optionnelle affiche le montant total réel à payer.
+
+### Mode pourcentage de remise
+
+Si vous connaissez le prix original et le pourcentage de remise :
+
+**Prix soldé = Prix original × (1 − Remise% ÷ 100)**
+
+Exemple : article à 150 € avec 30 % de remise :
+- Prix soldé = 150 × 0,70 = **105 €**
+- Économie = 150 − 105 = **45 €**
+- Total avec 20 % de TVA = 105 × 1,20 = **126 €**
+
+### Mode prix final
+
+Si vous connaissez le prix original et le prix soldé :
+
+**Remise% = ((Original − Soldé) ÷ Original) × 100**
+
+### Prix après taxes
+
+La TVA est calculée sur le prix soldé (remise déjà appliquée), conformément à la pratique commerciale courante.
+
+### Cas d'utilisation courants
+
+- Soldes d'été ou d'hiver — vérifier que la réduction affichée est exacte
+- Planification de budget avant de faire ses achats
+- Comparer le prix final (TVA incluse) entre différentes enseignes
+
+| Scénario | Formule |
+|---|---|
+| Prix soldé | `Soldé = Original × (1 − Remise/100)` |
+| Taux de remise | `Remise% = (Original − Soldé) / Original × 100` |
+| Total TTC | `Total = Soldé × (1 + TVA/100)` |

@@ -1,0 +1,118 @@
+# Emeklilik Tasarruf Hesaplayıcısı
+
+## Emeklilik Tasarruf Hesaplayıcısı Nedir?
+
+Bir emeklilik tasarruf hesaplayıcısı, mevcut birikimlerinizi, aylık katkılarınızı, beklenen yatırım getirilerinizi ve hedef emeklilik yaşınızı temel alarak emekliliğe kadar ne kadar para biriktirebileceğinizi tahmin eder. Ardından, genellikle "%4 kuralı" olarak bilinen bir çekim oranı kullanarak portföyünüzün sürdürülebilir aylık gelir sağlayıp sağlayamayacağını hesaplar.
+
+Emeklilik planlaması, çoğu insanın karşılaştığı en önemli finansal kararlardan biridir. Bileşik büyümenin ve sürdürülebilir para çekimlerinin matematiksel altyapısını anlamak, gerçekçi hedefler belirlemenize, tasarruf oranınızı erken dönemde ayarlamanıza ve emeklilikte paranızın bitmesini önlemenize yardımcı olur.
+
+**Bu hesaplayıcının sunduğu temel çıktılar:**
+- **Emeklilikteki toplam birikim:** Emeklilik gününüzdeki portföy değeri
+- **Aylık gelir:** Seçtiğiniz çekim oranına göre sürdürülebilir aylık para çekimi
+- **Gelir yılı:** Bu çekim oranıyla portföyünüzün tahmini ömrü
+- **Toplam katkı:** Yaptığınız tüm katkıların toplamı (başlangıç birikimleri + aylık katkılar × yıl sayısı)
+- **Toplam faiz:** Yatırım getirilerinden kaynaklanan büyüme (katkılar hariç)
+
+## Emeklilik Tasarruf Hesaplayıcısı Nasıl Kullanılır?
+
+1. **Mevcut yaşınızı girin:** Bugünkü yaşınız. Hesaplayıcı bu bilgiyi emekliliğe kadar kalan bileşik büyüme süresini hesaplamak için kullanır.
+2. **Hedef emeklilik yaşınızı girin:** Çalışmayı bırakmayı planladığınız yaş. Mevcut yaşınızdan büyük olmalıdır.
+3. **Mevcut tasarruflarınızı girin:** Emeklilik hesaplarında (401(k), IRA, aracı kurum hesabı vb.) halihazırda biriktirdiğiniz miktar.
+4. **Aylık katkınızı girin:** Her ay emeklilik birikimlerinize eklediğiniz tutar. İşveren katkı paylarını da dahil edebilirsiniz.
+5. **Beklenen yıllık getiriyi girin:** Yatırımlarınızdan beklediğiniz ortalama yıllık getiri (yüzde olarak). Hisse senedi/tahvil karışımı bir portföy için yaygın varsayım %6–8'dir.
+6. **Çekim oranını girin:** Emeklilikte portföyünüzden yılda çekmeyi planladığınız yüzde. Klasik "%4 kuralı" yaygın bir başlangıç noktasıdır.
+7. **Sonuçlarınızı inceleyin:** Hesaplayıcı tahmin edilen emeklilik bakiyenizi, aylık geliri ve portföy sürdürülebilirlik metriklerini gösterir.
+
+## Hesaplama Nasıl Çalışır?
+
+### Mevcut Tasarrufların Gelecekteki Değeri
+
+Mevcut birikimleriniz, bileşik faiz formülü kullanılarak emekliliğe kadar büyür:
+
+**FV_tasarruf = PV × (1 + r)^n**
+
+Burada:
+- PV = mevcut tasarruf (bugünkü değer)
+- r = aylık faiz oranı = yıllık getiri ÷ 12 ÷ 100
+- n = emekliliğe kadar kalan ay sayısı
+
+### Aylık Katkıların Gelecekteki Değeri (Dönemsel Anüite)
+
+Devam eden aylık katkılarınız da zamanla bileşik olarak büyür:
+
+**FV_anüite = PMT × [(1 + r)^n − 1] / r**
+
+Getiri oranı %0 olduğunda bu formül PMT × n'ye sadeleşir.
+
+### Emeklilikteki Toplam Birikim
+
+**Toplam = FV_tasarruf + FV_anüite**
+
+### Aylık Gelir
+
+Seçtiğiniz çekim oranı kullanılarak:
+
+**Aylık gelir = Toplam × (çekimOranı / 100) / 12**
+
+### Portföyün Ömrü (Gelir Yılı)
+
+Anüitenin bugünkü değer formülü, dönem sayısı için çözülerek kullanılır:
+
+**n_ay = −ln(1 − bakiye × r / PMT) / ln(1 + r)**
+
+Portföy getirisi çekim miktarını aşarsa portföy hiç tükenmez (999+ yıl olarak gösterilir).
+
+## Örnekler
+
+### Örnek 1: Erken Başlayanlar
+
+- Mevcut yaş: 25, Emeklilik yaşı: 65 (40 yıl)
+- Mevcut tasarruf: 10.000 TL
+- Aylık katkı: 1.500 TL
+- Yıllık getiri: %7
+- Çekim oranı: %4
+
+Bu senaryo, bileşik faizin uzun vadeli gücünü açıkça ortaya koyar. Erken başlamak, daha küçük aylık katkılarla bile önemli bir birikim sağlar.
+
+### Örnek 2: Orta Yaş Katkısı
+
+- Mevcut yaş: 40, Emeklilik yaşı: 65 (25 yıl)
+- Mevcut tasarruf: 100.000 TL
+- Aylık katkı: 3.000 TL
+- Yıllık getiri: %6
+- Çekim oranı: %4
+
+Bu senaryo, geç başlayanlara daha yüksek aylık katkılarla farkı kapatabileceğini gösterir.
+
+### Örnek 3: Muhafazakâr Yatırımcı
+
+- Mevcut yaş: 50, Emeklilik yaşı: 65 (15 yıl)
+- Mevcut tasarruf: 250.000 TL
+- Aylık katkı: 5.000 TL
+- Yıllık getiri: %5
+- Çekim oranı: %3,5
+
+Daha kısa süre ve düşük getiri varsayımıyla, daha yüksek katkılar kritik önem taşır.
+
+## Sıkça Sorulan Sorular
+
+**%4 kuralı nedir?**
+%4 kuralı, William Bengen'in 1994 yılındaki araştırmasından kaynaklanmaktadır. Bu araştırmaya göre emekliler, portföylerinin %4'ünü ilk yılda çekebilir ve ardından enflasyona göre ayarlayabilir; tarihsel piyasa düşüşleri yaşansa bile 30 yıllık bir emeklilikte paranın bitmemesi beklenebilir. Pek çok finansal danışman, uzun ömür ve düşük beklenen getiriler göz önüne alındığında artık %3–3,5'i önermektedir.
+
+**Hangi yıllık getiriyi kullanmalıyım?**
+Hisse senetleri ve tahvillerden oluşan çeşitlendirilmiş bir portföy için birçok planlayıcı, uzun vadeli nominal getiri varsayımı olarak %6–7'yi kullanır. ABD hisse senedi piyasası tarihsel olarak yaklaşık %10 nominal ve enflasyon sonrası %7 getiri sağlamıştır. Daha muhafazakâr portföyler daha az getirir. Güvenlik payı sağlamak için muhafazakâr bir tahmin (%5–6) kullanmak önerilir.
+
+**Bu hesap enflasyonu dikkate alıyor mu?**
+Bu hesaplayıcı nominal (enflasyona göre düzeltilmemiş) getiri ve değerleri kullanır. "Bugünün parasıyla" düşünmek için beklenen enflasyon oranını (genellikle %2–3) beklenen getiriden çıkarın. Örneğin, %7 getiri ve %3 enflasyon bekliyorsanız, reel getiri olarak %4'ü kullanın.
+
+**Erken emeklilik için güvenli çekim oranı nedir?**
+%4 kuralı 30 yıllık bir emeklilik için tasarlanmıştır. 65 yerine 55 yaşında emekli olursanız, önünüzde 40+ yıllık bir emeklilik dönemi olabilir; bu durumda portföyü tüketmemek için daha düşük bir çekim oranı (%3–3,5) daha uygundur.
+
+**Bu hesapta sosyal güvenceyi dahil etmeli miyim?**
+Bu hesaplayıcı portföy tabanlı tasarruflara odaklanmaktadır. Sosyal güvenlik geliri ayrıdır ve tasarruflardan çekmeniz gereken miktarı azaltır. Gerçek gelir açığınızı belirlemek için beklenen sosyal güvenlik ödeneğini hesaba katın.
+
+## Kaynaklar
+
+- Bengen, W.P. (1994). Determining Withdrawal Rates Using Historical Data. *Journal of Financial Planning*, 7(4), 171–180.
+- Vanguard. *Emeklilik Gelir Hesaplayıcısı*. https://investor.vanguard.com/tools-calculators/retirement-income-calculator
+- İç Gelir Servisi (IRS). *Emeklilik Planları*. https://www.irs.gov/retirement-plans

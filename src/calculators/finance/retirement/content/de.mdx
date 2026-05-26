@@ -1,0 +1,115 @@
+# Rentenrechner
+
+## Was ist ein Rentenrechner?
+
+Ein Rentenrechner schätzt, wie viel Geld Sie bis zu Ihrem Rentenantritt angespart haben werden – basierend auf Ihren aktuellen Ersparnissen, laufenden Beiträgen, erwarteten Anlagerenditen und dem angestrebten Rentenalter. Anschließend wird mithilfe einer Entnahmerate – häufig die sogenannte „4-%-Regel" – berechnet, welches monatliche Einkommen Ihr Vermögen nachhaltig bereitstellen kann.
+
+Die Altersvorsorge ist eine der folgenreichsten Finanzentscheidungen, die die meisten Menschen treffen müssen. Das Verständnis der Mathematik hinter dem Zinseszinseffekt und nachhaltigen Entnahmen hilft Ihnen, realistische Ziele zu setzen, Ihre Sparrate frühzeitig anzupassen und zu verhindern, dass Ihnen im Ruhestand das Geld ausgeht.
+
+**Wichtige Ausgaben dieses Rechners:**
+- **Kapital bei Renteneintritt:** Der geschätzte Wert Ihres Portfolios am Tag des Rentenantritts
+- **Monatliches Einkommen:** Nachhaltige monatliche Entnahmen basierend auf Ihrer gewählten Entnahmerate
+- **Einkommensjahre:** Wie lange Ihr Portfolio bei dieser Entnahmerate voraussichtlich reicht
+- **Gesamte Einzahlungen:** Die Summe aller Beiträge (Anfangsersparnisse + monatliche Beiträge × Jahre)
+- **Gesamtzinsen:** Das durch Anlagerenditen erzielte Wachstum (ohne Einzahlungen)
+
+## So verwenden Sie den Rentenrechner
+
+1. **Aktuelles Alter eingeben:** Ihr heutiges Alter. Der Rechner ermittelt damit, wie viele Jahre Zinseszins bis zur Rente bleiben.
+2. **Angestrebtes Rentenalter eingeben:** Das Alter, in dem Sie aufhören möchten zu arbeiten. Muss höher als Ihr aktuelles Alter sein.
+3. **Aktuelle Ersparnisse eingeben:** Der Betrag, den Sie bereits in Rentenkonten (betriebliche Altersvorsorge, Riester-Rente, Wertpapierdepot usw.) angespart haben.
+4. **Monatlichen Beitrag eingeben:** Der Betrag, den Sie monatlich zu Ihrer Altersvorsorge hinzufügen. Arbeitgeberzuschüsse können einbezogen werden.
+5. **Erwartete Jahresrendite eingeben:** Die durchschnittliche jährliche Rendite, die Sie von Ihren Anlagen erwarten (in Prozent). Für ein diversifiziertes Aktien-/Anleihenportfolio sind 6–8 % eine verbreitete Annahme.
+6. **Entnahmerate eingeben:** Der Prozentsatz Ihres Portfolios, den Sie pro Jahr in der Rente entnehmen möchten. Die klassische „4-%-Regel" ist ein gängiger Ausgangspunkt.
+7. **Ergebnisse prüfen:** Der Rechner zeigt Ihr prognostiziertes Rentenkapital, monatliches Einkommen und Nachhaltigkeitskennzahlen.
+
+## Wie die Berechnung funktioniert
+
+### Zukünftiger Wert aktueller Ersparnisse
+
+Ihre bestehenden Ersparnisse wachsen bis zur Rente gemäß der Zinseszinsformel:
+
+**ZW_Ersparnisse = BW × (1 + r)^n**
+
+Dabei:
+- BW = aktuelle Ersparnisse (Barwert)
+- r = monatlicher Zinssatz = Jahresrendite ÷ 12 ÷ 100
+- n = Anzahl der Monate bis zur Rente
+
+### Zukünftiger Wert monatlicher Beiträge (Rentenanwartschaft)
+
+Ihre laufenden monatlichen Beiträge wachsen ebenfalls mit Zinseszins:
+
+**ZW_Rente = PMT × [(1 + r)^n − 1] / r**
+
+Bei einer Rendite von 0 % vereinfacht sich dies zu PMT × n.
+
+### Gesamtkapital bei Renteneintritt
+
+**Gesamt = ZW_Ersparnisse + ZW_Rente**
+
+### Monatliches Einkommen
+
+Unter Verwendung Ihrer gewählten Entnahmerate:
+
+**Monatliches Einkommen = Gesamt × (Entnahmerate / 100) / 12**
+
+### Portfoliolaufzeit (Einkommensjahre)
+
+Mithilfe der Barwert-Renten-Formel, nach der Periodenanzahl aufgelöst:
+
+**n_Monate = −ln(1 − Guthaben × r / PMT) / ln(1 + r)**
+
+Übersteigt die Portfoliorendite den Entnahmebetrag, wird das Portfolio nie aufgebraucht (dargestellt als 999+ Jahre).
+
+## Beispiele
+
+### Beispiel 1: Früh anfangen
+
+- Aktuelles Alter: 25, Rentenalter: 65 (40 Jahre)
+- Aktuelle Ersparnisse: 10.000 €
+- Monatlicher Beitrag: 400 €
+- Jahresrendite: 7 %
+- Entnahmerate: 4 %
+
+Dieses Szenario verdeutlicht die langfristige Kraft des Zinseszinses. Frühes Anfangen ermöglicht auch mit kleineren monatlichen Beiträgen erhebliche Ersparnisse.
+
+### Beispiel 2: Nachholbedarf in der Lebensmitte
+
+- Aktuelles Alter: 40, Rentenalter: 65 (25 Jahre)
+- Aktuelle Ersparnisse: 80.000 €
+- Monatlicher Beitrag: 1.200 €
+- Jahresrendite: 6 %
+- Entnahmerate: 4 %
+
+Höhere monatliche Beiträge können einen späten Start teilweise ausgleichen.
+
+### Beispiel 3: Konservativer Anleger
+
+- Aktuelles Alter: 50, Rentenalter: 65 (15 Jahre)
+- Aktuelle Ersparnisse: 200.000 €
+- Monatlicher Beitrag: 2.000 €
+- Jahresrendite: 5 %
+- Entnahmerate: 3,5 %
+
+Bei kürzerer Laufzeit und konservativen Renditeerwartungen sind höhere Beiträge entscheidend.
+
+## Häufig gestellte Fragen
+
+**Was ist die 4-%-Regel?**
+Die 4-%-Regel geht auf William Bengens Forschung von 1994 zurück, die zeigte, dass Rentner im ersten Jahr 4 % ihres Portfolios entnehmen und diesen Betrag anschließend inflationsbereinigt steigern können, ohne über 30 Jahre das Kapital aufzubrauchen. Viele Finanzplaner empfehlen heute 3–3,5 % angesichts niedrigerer erwarteter Renditen und längerer Lebenserwartungen.
+
+**Welche Jahresrendite soll ich verwenden?**
+Für ein diversifiziertes Aktien-/Anleihenportfolio nutzen viele Planer 6–7 % als langfristige nominale Rendite. Der US-Aktienmarkt hat historisch etwa 10 % nominal und 7 % nach Inflation erzielt. Konservativere Portfolios erzielen weniger. Ein konservativer Schätzwert (5–6 %) bietet einen Sicherheitspuffer.
+
+**Berücksichtigt dieser Rechner die Inflation?**
+Dieser Rechner verwendet nominale (nicht inflationsbereinigte) Renditen und Werte. Um in „heutigen Euros" zu rechnen, ziehen Sie die erwartete Inflationsrate (typischerweise 2–3 %) von Ihrer erwarteten Rendite ab. Bei 7 % Rendite und 3 % Inflation würden Sie 4 % als Realrendite verwenden.
+
+**Was gilt als Altersvorsorgekapital?**
+Alle steuerbegünstigten und steuerpflichtigen Konten: betriebliche Altersversorgung, Riester-Rente, Rürup-Rente, private Rentenversicherungen und Wertpapierdepots.
+
+## Quellen
+
+- Bengen, W.P. (1994). Determining Withdrawal Rates Using Historical Data. *Journal of Financial Planning*, 7(4), 171–180.
+- Vanguard. *Retirement Income Calculator*. https://investor.vanguard.com/tools-calculators/retirement-income-calculator
+- Deutsche Rentenversicherung. *Altersvorsorge*. https://www.deutsche-rentenversicherung.de

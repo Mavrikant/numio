@@ -1,0 +1,113 @@
+# Calculateur de Facteur de Puissance
+
+Le calculateur de facteur de puissance analyse la relation entre la puissance active, la puissance apparente et la puissance réactive dans les systèmes électriques. Trois modes de fonctionnement sont disponibles : calcul du facteur de puissance à partir du triangle des puissances, calcul des composantes de puissance à partir du facteur de puissance, et correction du facteur de puissance par condensateurs.
+
+## Qu'est-ce que le Facteur de Puissance ?
+
+Le facteur de puissance (FP) est le rapport de la puissance active (P) à la puissance apparente (S). C'est un nombre sans dimension compris entre 0 et 1. Un facteur de puissance élevé indique une utilisation efficace de l'énergie électrique ; un facteur bas signale une circulation inutile de puissance réactive.
+
+**Composantes du triangle des puissances :**
+
+- **P (Puissance active, kW) :** La puissance qui accomplit un travail réel — éclairage, rotation des moteurs.
+- **Q (Puissance réactive, kVAR) :** Puissance stockée et libérée dans les champs électriques et magnétiques. Présente dans les moteurs et transformateurs.
+- **S (Puissance apparente, kVA) :** Somme vectorielle des puissances active et réactive : S = √(P² + Q²)
+
+Facteur de puissance : **FP = cos(φ) = P / S**
+
+Angle de phase : **φ = arccos(FP)**
+
+## Importance du Facteur de Puissance
+
+**Impacts économiques :** Les installations industrielles paient des pénalités d'énergie réactive lorsque le facteur de puissance est bas. La puissance réactive charge les lignes et les transformateurs sans accomplir de travail utile.
+
+**Impacts techniques :**
+- Un FP bas nécessite des conducteurs de plus grande section
+- La capacité des transformateurs et générateurs est réduite
+- Les pertes système augmentent (pertes I²R)
+- Les chutes de tension s'amplifient
+
+**Normes :** IEEE et IEC recommandent généralement FP ≥ 0,90 pour les installations industrielles.
+
+## Modes de Fonctionnement
+
+### Mode 1 : Facteur de Puissance à partir des Puissances
+
+Calcule le facteur de puissance à partir de la puissance active (kW) et réactive (kVAR).
+
+**Formules :**
+- S = √(P² + Q²) kVA
+- FP = P / S
+- φ = arccos(FP) degrés
+
+Ce mode est idéal pour les mesures effectuées avec des analyseurs de puissance ou des enregistreurs d'énergie.
+
+### Mode 2 : Composantes de Puissance à partir du Facteur de Puissance
+
+Calcule les composantes active et réactive à partir de la puissance apparente (kVA) et du facteur de puissance.
+
+**Formules :**
+- P = S × FP kW
+- Q = √(S² - P²) kVAR
+
+Utile pour planifier les capacités des transformateurs et générateurs.
+
+### Mode 3 : Correction du Facteur de Puissance
+
+Calcule la valeur du condensateur nécessaire pour améliorer le facteur de puissance jusqu'à une valeur cible.
+
+**Formules :**
+- Q_cap = P × (tan φ₁ - tan φ₂) kVAR
+- C = Q_cap × 1000 / (2π × f × V²) Farads
+- C_µF = C × 10⁶ microfarads
+
+Où :
+- φ₁ = arccos(FP actuel)
+- φ₂ = arccos(FP cible)
+- f = fréquence réseau (50 ou 60 Hz)
+- V = tension de ligne (volts)
+
+## Correction par Condensateurs
+
+Les charges inductives (moteurs, ballasts, transformateurs) provoquent un facteur de puissance en retard car le courant est en retard par rapport à la tension. Les condensateurs en parallèle fournissent localement la puissance réactive et permettent de :
+
+1. Réduire le courant réactif prélevé sur le réseau
+2. Diminuer la demande de puissance apparente
+3. Réduire les pertes dans les conducteurs
+4. Améliorer le profil de tension
+
+**Attention :** Ce calcul est valable pour les charges linéaires à fréquence fondamentale. Les charges générant des harmoniques (variateurs de fréquence, UPS, fours à arc) nécessitent une analyse harmonique spécialisée.
+
+## Exemple de Calcul Pratique
+
+**Scénario :** Un moteur de 75 kW fonctionne avec un facteur de puissance de 0,70. Objectif : porter le FP à 0,95.
+
+**Étape 1 :** Calculer l'état actuel
+- φ₁ = arccos(0,70) = 45,57°
+- Q₁ = 75 × tan(45,57°) = 75 × 1,020 = 76,5 kVAR
+- S₁ = 75 / 0,70 = 107,1 kVA
+
+**Étape 2 :** Calculer l'état cible
+- φ₂ = arccos(0,95) = 18,19°
+- Q₂ = 75 × tan(18,19°) = 75 × 0,329 = 24,7 kVAR
+
+**Étape 3 :** Calculer la capacité du condensateur
+- Q_cap = 75 × (1,020 - 0,329) = 75 × 0,691 = 51,8 kVAR
+- À 400 V, 50 Hz : C = 51 800 / (2π × 50 × 400²) = 1 030 µF
+
+**Résultat :** La puissance apparente passe de 107,1 kVA à 78,9 kVA ; les pertes sont significativement réduites.
+
+## Tableau d'Évaluation du Facteur de Puissance
+
+| Facteur de Puissance | Évaluation | Action |
+|---|---|---|
+| 0,95 – 1,00 | Excellent | Aucune correction nécessaire |
+| 0,90 – 0,95 | Bon | Surveillance |
+| 0,80 – 0,90 | Moyen | Correction recommandée |
+| 0,70 – 0,80 | Faible | Condensateurs requis |
+| &lt; 0,70 | Très faible | Correction immédiate |
+
+## Références
+
+- IEEE 1459 : Mesure des grandeurs électriques de puissance
+- IEC 61000-3-2 : Limites pour les émissions de courant harmonique
+- NF C 15-100 : Installations électriques basse tension

@@ -1,0 +1,113 @@
+# Calculadora de Factor de Potencia
+
+La calculadora de factor de potencia analiza la relación entre potencia activa, potencia aparente y potencia reactiva en sistemas eléctricos. Dispone de tres modos: cálculo del factor de potencia desde el triángulo de potencias, cálculo de componentes de potencia desde el factor de potencia, y corrección del factor de potencia mediante condensadores.
+
+## ¿Qué es el Factor de Potencia?
+
+El factor de potencia (FP) es la relación entre la potencia activa (P) y la potencia aparente (S). Es un número adimensional entre 0 y 1. Un factor de potencia alto indica un uso eficiente de la energía eléctrica; uno bajo señala circulación innecesaria de potencia reactiva.
+
+**Componentes del triángulo de potencias:**
+
+- **P (Potencia Activa, kW):** La potencia que realiza trabajo real: iluminar, hacer girar motores.
+- **Q (Potencia Reactiva, kVAR):** Potencia almacenada y liberada en campos eléctricos y magnéticos. Presente en motores y transformadores.
+- **S (Potencia Aparente, kVA):** Suma vectorial de potencia activa y reactiva: S = √(P² + Q²)
+
+Factor de potencia: **FP = cos(φ) = P / S**
+
+Ángulo de fase: **φ = arccos(FP)**
+
+## Importancia del Factor de Potencia
+
+**Impacto económico:** Las instalaciones industriales pagan penalizaciones por energía reactiva cuando el factor de potencia es bajo. La potencia reactiva carga líneas y transformadores sin realizar trabajo útil.
+
+**Impacto técnico:**
+- Un FP bajo requiere conductores de mayor sección
+- Se reduce la capacidad útil de transformadores y generadores
+- Las pérdidas del sistema aumentan (pérdidas I²R)
+- Las caídas de tensión se incrementan
+
+**Normas:** IEEE e IEC recomiendan generalmente FP ≥ 0,90 para instalaciones industriales.
+
+## Modos de Operación
+
+### Modo 1: Factor de Potencia desde las Potencias
+
+Calcula el factor de potencia a partir de la potencia activa (kW) y reactiva (kVAR).
+
+**Fórmulas:**
+- S = √(P² + Q²) kVA
+- FP = P / S
+- φ = arccos(FP) grados
+
+Este modo es ideal para mediciones realizadas con analizadores de potencia o registradores de energía.
+
+### Modo 2: Componentes de Potencia desde el Factor de Potencia
+
+Calcula las componentes activa y reactiva a partir de la potencia aparente (kVA) y el factor de potencia.
+
+**Fórmulas:**
+- P = S × FP kW
+- Q = √(S² - P²) kVAR
+
+Útil para planificar capacidades de transformadores y generadores.
+
+### Modo 3: Corrección del Factor de Potencia
+
+Calcula el valor del condensador necesario para mejorar el factor de potencia hasta un valor objetivo.
+
+**Fórmulas:**
+- Q_cap = P × (tan φ₁ - tan φ₂) kVAR
+- C = Q_cap × 1000 / (2π × f × V²) Faradios
+- C_µF = C × 10⁶ microfaradios
+
+Donde:
+- φ₁ = arccos(FP actual)
+- φ₂ = arccos(FP objetivo)
+- f = frecuencia de red (50 ó 60 Hz)
+- V = tensión de línea (voltios)
+
+## Corrección mediante Condensadores
+
+Las cargas inductivas (motores, balastos, transformadores) producen un factor de potencia inductivo porque la corriente va retrasada respecto a la tensión. Los condensadores en paralelo suministran potencia reactiva localmente y permiten:
+
+1. Reducir la corriente reactiva tomada de la red
+2. Disminuir la demanda de potencia aparente
+3. Reducir las pérdidas en conductores
+4. Mejorar el perfil de tensión
+
+**Advertencia:** Este cálculo es válido para cargas lineales a frecuencia fundamental. Las cargas que generan armónicos (variadores de frecuencia, SAI, hornos de arco) requieren análisis armónico especializado.
+
+## Ejemplo de Cálculo Práctico
+
+**Escenario:** Un motor de 75 kW funciona con un factor de potencia de 0,70. Objetivo: llevar el FP a 0,95.
+
+**Paso 1:** Calcular el estado actual
+- φ₁ = arccos(0,70) = 45,57°
+- Q₁ = 75 × tan(45,57°) = 75 × 1,020 = 76,5 kVAR
+- S₁ = 75 / 0,70 = 107,1 kVA
+
+**Paso 2:** Calcular el estado objetivo
+- φ₂ = arccos(0,95) = 18,19°
+- Q₂ = 75 × tan(18,19°) = 75 × 0,329 = 24,7 kVAR
+
+**Paso 3:** Calcular la capacidad del condensador
+- Q_cap = 75 × (1,020 - 0,329) = 75 × 0,691 = 51,8 kVAR
+- A 400 V, 50 Hz: C = 51 800 / (2π × 50 × 400²) = 1 030 µF
+
+**Resultado:** La potencia aparente baja de 107,1 kVA a 78,9 kVA; las pérdidas se reducen significativamente.
+
+## Tabla de Evaluación del Factor de Potencia
+
+| Factor de Potencia | Evaluación | Acción |
+|---|---|---|
+| 0,95 – 1,00 | Excelente | Sin corrección necesaria |
+| 0,90 – 0,95 | Bueno | Vigilar |
+| 0,80 – 0,90 | Moderado | Corrección recomendada |
+| 0,70 – 0,80 | Bajo | Condensadores requeridos |
+| &lt; 0,70 | Muy bajo | Corrección inmediata |
+
+## Referencias
+
+- IEEE 1459: Medición de magnitudes de potencia eléctrica
+- IEC 61000-3-2: Límites para emisiones de corriente armónica
+- REBT (Reglamento Electrotécnico para Baja Tensión)

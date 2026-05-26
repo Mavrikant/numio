@@ -1,0 +1,115 @@
+# Calculateur d'Épargne Retraite
+
+## Qu'est-ce qu'un calculateur d'épargne retraite ?
+
+Un calculateur d'épargne retraite estime le montant que vous aurez accumulé au moment de votre départ à la retraite, en tenant compte de votre épargne actuelle, de vos cotisations régulières, des rendements attendus et de votre âge de retraite cible. Il utilise ensuite un taux de retrait — communément la « règle des 4 % » — pour projeter le revenu mensuel durable que votre patrimoine peut fournir.
+
+La planification de la retraite est l'une des décisions financières les plus importantes que la plupart des gens auront à prendre. Comprendre les mathématiques de la croissance composée et des retraits durables vous aide à fixer des objectifs réalistes, à ajuster votre taux d'épargne tôt et à éviter de manquer d'argent à la retraite.
+
+**Résultats clés fournis par ce calculateur :**
+- **Total à la retraite :** La valeur projetée de votre portefeuille le jour de votre retraite
+- **Revenu mensuel :** Retraits mensuels durables selon le taux de retrait choisi
+- **Années de revenu :** Durée estimée de votre portefeuille à ce taux de retrait
+- **Cotisations totales :** La somme de toutes vos contributions (épargne initiale + cotisations mensuelles × années)
+- **Intérêts totaux :** La croissance attribuable aux rendements des investissements
+
+## Comment utiliser le calculateur d'épargne retraite
+
+1. **Entrez votre âge actuel :** Votre âge aujourd'hui. Le calculateur l'utilise pour déterminer combien d'années de capitalisation restent avant la retraite.
+2. **Entrez votre âge de retraite cible :** L'âge auquel vous prévoyez de cesser de travailler. Doit être supérieur à votre âge actuel.
+3. **Entrez votre épargne actuelle :** Le montant que vous avez déjà épargné dans des comptes retraite (PER, assurance-vie, PEA, compte-titres, etc.).
+4. **Entrez votre cotisation mensuelle :** Le montant que vous ajoutez chaque mois à votre épargne retraite. Les contributions de l'employeur peuvent être incluses.
+5. **Entrez le rendement annuel attendu :** Le rendement annuel moyen que vous attendez de vos investissements, exprimé en pourcentage. Pour un portefeuille diversifié actions/obligations, 6–8 % est une hypothèse courante.
+6. **Entrez le taux de retrait :** Le pourcentage de votre portefeuille que vous prévoyez de retirer par an à la retraite. La « règle des 4 % » classique est un point de départ habituel.
+7. **Examinez vos résultats :** Le calculateur affiche votre solde retraite projeté, votre revenu mensuel et les indicateurs de durabilité.
+
+## Fonctionnement du calcul
+
+### Valeur future de l'épargne actuelle
+
+Votre épargne existante croît jusqu'à la retraite selon la formule des intérêts composés :
+
+**VF_épargne = VA × (1 + r)^n**
+
+Où :
+- VA = épargne actuelle (valeur actuelle)
+- r = taux d'intérêt mensuel = rendement annuel ÷ 12 ÷ 100
+- n = nombre de mois avant la retraite
+
+### Valeur future des cotisations mensuelles (rente ordinaire)
+
+Vos cotisations mensuelles régulières se capitalisent également avec le temps :
+
+**VF_rente = PMT × [(1 + r)^n − 1] / r**
+
+Lorsque le taux de rendement est de 0 %, cela se simplifie en PMT × n.
+
+### Total à la retraite
+
+**Total = VF_épargne + VF_rente**
+
+### Revenu mensuel
+
+En utilisant votre taux de retrait choisi :
+
+**Revenu mensuel = Total × (tauxRetrait / 100) / 12**
+
+### Longévité du portefeuille (années de revenu)
+
+En utilisant la formule de valeur actuelle de rente résolue pour le nombre de périodes :
+
+**n_mois = −ln(1 − solde × r / PMT) / ln(1 + r)**
+
+Si le rendement du portefeuille dépasse le montant des retraits, le portefeuille ne s'épuise jamais (affiché comme 999+ ans).
+
+## Exemples
+
+### Exemple 1 : Commencer tôt
+
+- Âge actuel : 25 ans, Âge de retraite : 65 ans (40 ans)
+- Épargne actuelle : 10 000 €
+- Cotisation mensuelle : 400 €
+- Rendement annuel : 7 %
+- Taux de retrait : 4 %
+
+Ce scénario illustre la puissance à long terme des intérêts composés. Commencer tôt permet d'accumuler un capital significatif même avec des cotisations mensuelles modestes.
+
+### Exemple 2 : Rattrapage en milieu de carrière
+
+- Âge actuel : 40 ans, Âge de retraite : 65 ans (25 ans)
+- Épargne actuelle : 80 000 €
+- Cotisation mensuelle : 1 200 €
+- Rendement annuel : 6 %
+- Taux de retrait : 4 %
+
+Des cotisations mensuelles plus élevées peuvent partiellement compenser un démarrage tardif.
+
+### Exemple 3 : Investisseur prudent
+
+- Âge actuel : 50 ans, Âge de retraite : 65 ans (15 ans)
+- Épargne actuelle : 200 000 €
+- Cotisation mensuelle : 2 000 €
+- Rendement annuel : 5 %
+- Taux de retrait : 3,5 %
+
+Avec une durée plus courte et des hypothèses de rendement prudentes, les cotisations élevées sont cruciales.
+
+## Questions fréquentes
+
+**Qu'est-ce que la règle des 4 % ?**
+La règle des 4 % provient des recherches de William Bengen en 1994, qui montraient que les retraités pouvaient retirer 4 % de leur portefeuille la première année de retraite, puis ajuster ce montant à l'inflation chaque année, sans manquer d'argent sur une retraite de 30 ans — même en traversant des baisses historiques des marchés. De nombreux planificateurs financiers recommandent désormais 3–3,5 % en raison des rendements futurs attendus plus faibles et de l'allongement de la durée de vie.
+
+**Quel rendement annuel dois-je utiliser ?**
+Pour un portefeuille diversifié d'actions et d'obligations, de nombreux planificateurs utilisent 6–7 % comme hypothèse de rendement nominal à long terme. Le marché boursier américain a historiquement rapporté environ 10 % nominalement et 7 % après inflation. Les portefeuilles plus prudents avec des obligations rapporteront moins. Utiliser une estimation prudente (5–6 %) fournit une marge de sécurité.
+
+**Ce calculateur tient-il compte de l'inflation ?**
+Ce calculateur utilise des rendements et des valeurs nominaux (non ajustés à l'inflation). Pour raisonner en « euros d'aujourd'hui », soustrayez le taux d'inflation attendu (généralement 2–3 %) de votre rendement attendu. Par exemple, si vous attendez 7 % de rendement et 3 % d'inflation, utilisez 4 % comme rendement réel.
+
+**Qu'est-ce qui compte comme épargne retraite ?**
+Tous les comptes à avantage fiscal et imposables : PER (Plan d'Épargne Retraite), assurance-vie, PEA, comptes-titres ordinaires, et l'épargne salariale (PEE, PERCO).
+
+## Références
+
+- Bengen, W.P. (1994). Determining Withdrawal Rates Using Historical Data. *Journal of Financial Planning*, 7(4), 171–180.
+- Vanguard. *Retirement Income Calculator*. https://investor.vanguard.com/tools-calculators/retirement-income-calculator
+- Autorité des marchés financiers. *Épargne retraite*. https://www.amf-france.org

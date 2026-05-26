@@ -1,0 +1,118 @@
+# Concrete Mix Calculator
+
+The concrete mix calculator helps you determine the exact quantities of cement, sand, coarse aggregate, and water needed for any volume of concrete. Whether you are working with standard mix grades (M10 through M30) or a custom ratio, this tool computes material weights in kilograms and the number of cement bags required.
+
+## Understanding Concrete Mix Grades
+
+Concrete mix grades follow an M-number designation where M stands for "Mix" and the number indicates the characteristic compressive strength in N/mm² (MPa) at 28 days. Higher grades mean stronger concrete.
+
+### Standard Nominal Mix Proportions (by volume)
+
+| Grade | Cement : Sand : Aggregate | Typical Use |
+|---|---|---|
+| M10 | 1 : 3 : 6 | Blinding, lean fill, non-structural |
+| M15 | 1 : 2 : 4 | Plain concrete footings, pavements |
+| M20 | 1 : 1.5 : 3 | General-purpose reinforced concrete |
+| M25 | 1 : 1 : 2 | Reinforced concrete beams, columns |
+| M30 | 1 : 0.75 : 1.5 | High-strength structural elements |
+
+## The Calculation Method
+
+### Step 1: Dry Volume Conversion
+
+Freshly mixed concrete contains water and voids. When aggregates and cement are combined, the actual volume of dry materials needed is greater than the wet concrete volume. The standard conversion factor is:
+
+**Dry Volume = Wet Volume × 1.54**
+
+This factor (1.54) accounts for the voids in the aggregates and the compaction that occurs during mixing. Some engineers use 1.57 for additional safety margin.
+
+### Step 2: Proportion Each Material
+
+Given cement : sand : aggregate = C : S : A, the total ratio is (C + S + A). Each material occupies its proportional fraction of the dry volume:
+
+- Cement volume = [C / (C + S + A)] × Dry Volume (m³)
+- Sand volume = [S / (C + S + A)] × Dry Volume (m³)
+- Aggregate volume = [A / (C + S + A)] × Dry Volume (m³)
+
+### Step 3: Convert Volume to Weight
+
+Multiplying each volume by the bulk density of the material gives the weight in kilograms:
+
+- Cement: 1440 kg/m³
+- Sand (fine aggregate): 1600 kg/m³
+- Coarse aggregate: 1500 kg/m³
+
+### Step 4: Water Quantity
+
+Water is calculated using the water-cement (w/c) ratio:
+
+**Water (kg) = w/c ratio × Cement (kg)**
+
+Since 1 kg of water equals 1 litre, the water quantity in litres equals the weight in kilograms.
+
+### Step 5: Cement Bags
+
+A standard cement bag contains 50 kg of cement in most countries. Divide the total cement weight by 50 to get the number of bags, rounding up in practice.
+
+## Worked Example: 1 m³ of M20 Concrete
+
+**Given:** Volume = 1 m³, Mix = M20 (1:1.5:3), w/c = 0.50
+
+**Step 1:** Dry Volume = 1 × 1.54 = 1.54 m³
+
+**Step 2:** Total ratio = 1 + 1.5 + 3 = 5.5
+- Cement volume = (1/5.5) × 1.54 = 0.280 m³
+- Sand volume = (1.5/5.5) × 1.54 = 0.420 m³
+- Aggregate volume = (3/5.5) × 1.54 = 0.840 m³
+
+**Step 3:** Weight conversions:
+- Cement = 0.280 × 1440 = 403 kg
+- Sand = 0.420 × 1600 = 672 kg
+- Aggregate = 0.840 × 1500 = 1260 kg
+
+**Step 4:** Water = 0.50 × 403 = 201.5 kg = 201.5 litres
+
+**Step 5:** Cement bags = 403 / 50 = 8.06 → 9 bags (round up)
+
+## Water-Cement Ratio Explained
+
+The water-cement (w/c) ratio is one of the most critical parameters in concrete technology. It directly governs:
+
+- **Strength:** Lower w/c → higher strength. Every 0.05 reduction in w/c increases 28-day compressive strength by roughly 5–7 MPa.
+- **Durability:** Lower w/c reduces permeability, protecting against chloride ingress and carbonation.
+- **Workability:** Higher w/c makes concrete easier to place, but at the cost of strength and durability.
+
+**Recommended maximum w/c ratios:**
+- M20 general use: 0.55
+- M25 reinforced concrete: 0.50
+- M30 high-performance: 0.45
+- Severe exposure (marine): 0.40
+
+## Bulk Densities Used
+
+The calculation assumes the following bulk (loose) densities:
+
+| Material | Bulk Density (kg/m³) |
+|---|---|
+| OPC Cement | 1440 |
+| River sand (dry) | 1600 |
+| 20 mm crushed aggregate | 1500 |
+| Water | 1000 |
+
+These are typical values. Actual densities vary with moisture content, particle size, and source.
+
+## Practical Tips
+
+**Batching by weight is more accurate than by volume.** Volumetric batching can introduce errors of 10–20% due to bulking of moist sand.
+
+**Admixtures** such as plasticisers can improve workability at lower w/c ratios, enabling stronger concrete with the same mix proportions.
+
+**Wastage allowance:** Add 5–10% to computed quantities to account for spillage, uneven formwork, and variations in aggregate void content.
+
+**Curing:** Concrete gains 70% of its 28-day strength in the first 7 days. Keep the surface moist for at least 7 days (14 days for high-performance grades) to prevent premature drying.
+
+## References
+
+- IS 456:2000 — Plain and Reinforced Concrete Code of Practice (Bureau of Indian Standards)
+- ACI 211.1 — Standard Practice for Selecting Proportions for Normal Concrete
+- BS EN 206:2013 — Concrete: Specification, Performance, Production and Conformity

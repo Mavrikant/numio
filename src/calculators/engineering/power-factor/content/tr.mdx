@@ -1,0 +1,113 @@
+# Güç Faktörü Hesaplayıcı
+
+Güç faktörü hesaplayıcısı, elektrik sistemlerindeki gerçek güç, görünür güç ve reaktif güç arasındaki ilişkiyi analiz etmenizi sağlar. Üç farklı çalışma modu: güç üçgeninden güç faktörü hesaplama, güç faktöründen güç bileşenlerini hesaplama ve kondansatör kullanarak güç faktörü düzeltmesi.
+
+## Güç Faktörü Nedir?
+
+Güç faktörü (PF), gerçek gücün (P) görünür güce (S) oranıdır. 0 ile 1 arasında değişen boyutsuz bir sayıdır. Yüksek güç faktörü, elektrik enerjisinin verimli kullanıldığını gösterir; düşük güç faktörü ise gereksiz reaktif güç dolaşımına işaret eder.
+
+**Güç üçgeni bileşenleri:**
+
+- **P (Gerçek Güç, kW):** Gerçek işi yapan güç. Ampullerin ışık vermesi, motorların döndürmesi gibi.
+- **Q (Reaktif Güç, kVAR):** Elektrik ve manyetik alanlarda depolanan ve serbest bırakılan güç. Motolarda ve transformatörlerde oluşur.
+- **S (Görünür Güç, kVA):** Gerçek ve reaktif gücün vektör toplamı: S = √(P² + Q²)
+
+Güç faktörü: **PF = cos(φ) = P / S**
+
+Faz açısı: **φ = arccos(PF)**
+
+## Güç Faktörünün Önemi
+
+**Ekonomik etkiler:** Endüstriyel tesisler, düşük güç faktörü için elektrik şirketlerine ekstra ücret öder. Reaktif güç, iletim hatlarını ve trafoları yükler ancak faydalı iş yapmaz.
+
+**Teknik etkiler:**
+- Düşük PF, daha büyük iletkenler gerektirir
+- Trafo ve jeneratör kapasitesi azalır
+- Sistem kayıpları artar (I²R kayıpları)
+- Gerilim düşümleri büyür
+
+**Standartlar:** IEEE ve IEC standartları, endüstriyel tesisler için genellikle PF ≥ 0,90 değerini önermektedir.
+
+## Çalışma Modları
+
+### Mod 1: Güçten Güç Faktörü
+
+Gerçek güç (kW) ve reaktif güç (kVAR) değerlerinden güç faktörünü hesaplar.
+
+**Formüller:**
+- S = √(P² + Q²) kVA
+- PF = P / S
+- φ = arccos(PF) derece
+
+Bu mod, güç analiz cihazları veya enerji analizörleri ile yapılan ölçümler için idealdir.
+
+### Mod 2: Güç Faktöründen Güç Bileşenleri
+
+Görünür güç (kVA) ve güç faktöründen gerçek ve reaktif güç bileşenlerini hesaplar.
+
+**Formüller:**
+- P = S × PF kW
+- Q = √(S² - P²) kVAR
+
+Transformatör veya jeneratör kapasitesi planlaması için kullanışlıdır.
+
+### Mod 3: Güç Faktörü Düzeltmesi
+
+Mevcut güç faktörünü istenen hedefe yükseltmek için gereken kondansatör değerini hesaplar.
+
+**Formüller:**
+- Q_cap = P × (tan φ₁ - tan φ₂) kVAR
+- C = Q_cap × 1000 / (2π × f × V²) Farad
+- C_µF = C × 10⁶ mikrofarad
+
+Burada:
+- φ₁ = arccos(mevcut PF)
+- φ₂ = arccos(hedef PF)
+- f = şebeke frekansı (50 veya 60 Hz)
+- V = hat gerilimi (volt)
+
+## Kondansatör ile Güç Faktörü Düzeltmesi
+
+Endüktif yükler (motorlar, balastlar, transformatörler), akımın gerilimin gerisinde kalmasına neden olarak gecikmeli güç faktörü oluşturur. Paralel kondansatörler reaktif gücü yerelde sağlayarak:
+
+1. Reaktif akımın şebekeden çekilmesini azaltır
+2. Görünür güç talebini düşürür
+3. İletken kayıplarını azaltır
+4. Gerilim profilini iyileştirir
+
+**Dikkat:** Bu hesaplama doğrusal yükler ve temel frekanste geçerlidir. VFD, UPS veya ark fırınları gibi harmonik üreten yükler için özel harmonik analizi gereklidir.
+
+## Pratik Hesaplama Örneği
+
+**Senaryo:** 75 kW'lık bir motor, 0,70 güç faktörüyle çalışıyor. Hedef: PF = 0,95'e çıkarmak.
+
+**Adım 1:** Mevcut durumu hesapla
+- φ₁ = arccos(0,70) = 45,57°
+- Q₁ = 75 × tan(45,57°) = 75 × 1,020 = 76,5 kVAR
+- S₁ = 75 / 0,70 = 107,1 kVA
+
+**Adım 2:** Hedef durumu hesapla
+- φ₂ = arccos(0,95) = 18,19°
+- Q₂ = 75 × tan(18,19°) = 75 × 0,329 = 24,7 kVAR
+
+**Adım 3:** Gerekli kondansatör kapasitesini hesapla
+- Q_cap = 75 × (1,020 - 0,329) = 75 × 0,691 = 51,8 kVAR
+- 400 V, 50 Hz için: C = 51 800 / (2π × 50 × 400²) = 1 030 µF
+
+**Sonuç:** Görünür güç 107,1 kVA'dan 78,9 kVA'ya düşer; kayıplar azalır.
+
+## Güç Faktörü Değerlendirme Tablosu
+
+| Güç Faktörü | Değerlendirme | Eylem |
+|---|---|---|
+| 0,95 – 1,00 | Mükemmel | Düzeltme gerekmez |
+| 0,90 – 0,95 | İyi | Gözlemle |
+| 0,80 – 0,90 | Orta | Düzeltme önerilir |
+| 0,70 – 0,80 | Düşük | Kondansatör gerekli |
+| &lt; 0,70 | Çok düşük | Acil düzeltme |
+
+## Referanslar
+
+- IEEE 1459: Elektrik Güç Miktarları Ölçüm Standartları
+- IEC 61000-3-2: Harmonik Akım Emisyon Limitleri
+- NEC Madde 460: Kondansatörler

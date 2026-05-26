@@ -1,0 +1,36 @@
+## Cómo funciona la calculadora de descuentos
+
+La **calculadora de descuentos** calcula al instante el precio después de un descuento porcentual, o determina el porcentaje de descuento a partir del precio de venta conocido. El IVA opcional muestra el importe total real a pagar.
+
+### Modo porcentaje de descuento
+
+Si conoce el precio original y el porcentaje de descuento:
+
+**Precio de oferta = Precio original × (1 − Descuento% ÷ 100)**
+
+Ejemplo: artículo a 200 € con 15 % de descuento:
+- Precio de oferta = 200 × 0,85 = **170 €**
+- Ahorro = 200 − 170 = **30 €**
+- Total con 21 % de IVA = 170 × 1,21 = **205,70 €**
+
+### Modo precio final
+
+Si conoce el precio original y el precio de oferta:
+
+**Descuento% = ((Original − Oferta) ÷ Original) × 100**
+
+### Precio con impuestos
+
+El IVA o impuesto sobre ventas se aplica sobre el precio con descuento ya aplicado.
+
+### Casos de uso habituales
+
+- Verificar las rebajas de temporada (enero, verano)
+- Comparar precios entre tiendas con diferentes tipos de IVA
+- Planificar compras dentro de un presupuesto
+
+| Escenario | Fórmula |
+|---|---|
+| Precio de oferta | `Oferta = Original × (1 − Descuento/100)` |
+| Porcentaje de descuento | `Descuento% = (Original − Oferta) / Original × 100` |
+| Total con IVA | `Total = Oferta × (1 + IVA/100)` |

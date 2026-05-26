@@ -47,7 +47,7 @@ export function compute(inputs: TdeeInputs): TdeeResult {
     bmr = 10 * weight + 6.25 * height - 5 * age - 161;
   }
 
-  const multiplier = ACTIVITY_MULTIPLIERS[activityLevel];
+  const multiplier = ACTIVITY_MULTIPLIERS[activityLevel] ?? 1.55;
   const tdee = bmr * multiplier;
 
   // Protein: 1.6g/kg for active, 0.8g/kg for sedentary

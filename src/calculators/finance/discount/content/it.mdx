@@ -1,0 +1,36 @@
+## Come funziona il calcolatore di sconti
+
+Il **calcolatore di sconti** calcola istantaneamente il prezzo dopo uno sconto percentuale, oppure determina la percentuale di sconto a partire dal prezzo di vendita noto. L'IVA opzionale mostra l'importo totale reale da pagare.
+
+### Modalità percentuale di sconto
+
+Se si conosce il prezzo originale e la percentuale di sconto:
+
+**Prezzo scontato = Prezzo originale × (1 − Sconto% ÷ 100)**
+
+Esempio: articolo da 120 € con sconto del 25 %:
+- Prezzo scontato = 120 × 0,75 = **90 €**
+- Risparmio = 120 − 90 = **30 €**
+- Totale con IVA al 22 % = 90 × 1,22 = **109,80 €**
+
+### Modalità prezzo finale
+
+Se si conosce il prezzo originale e il prezzo scontato:
+
+**Sconto% = ((Originale − Scontato) ÷ Originale) × 100**
+
+### Prezzo con tasse
+
+L'IVA viene applicata al prezzo scontato, come previsto dalla pratica commerciale.
+
+### Casi d'uso principali
+
+- Saldi invernali ed estivi — verificare che lo sconto esposto sia corretto
+- Confrontare il prezzo finale tra negozi con aliquote IVA diverse
+- Pianificare acquisti rispettando un budget prestabilito
+
+| Scenario | Formula |
+|---|---|
+| Prezzo scontato | `Scontato = Originale × (1 − Sconto/100)` |
+| Percentuale di sconto | `Sconto% = (Originale − Scontato) / Originale × 100` |
+| Totale IVA inclusa | `Totale = Scontato × (1 + IVA/100)` |

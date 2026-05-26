@@ -1,0 +1,115 @@
+# Calculadora de Ahorro para la Jubilación
+
+## ¿Qué es una calculadora de ahorro para la jubilación?
+
+Una calculadora de ahorro para la jubilación estima cuánto dinero habrá acumulado en el momento de jubilarse, basándose en sus ahorros actuales, aportaciones periódicas, rendimientos esperados y edad de jubilación objetivo. A continuación, utiliza una tasa de retirada — comúnmente la «regla del 4 %» — para proyectar el ingreso mensual sostenible que su capital puede proporcionar.
+
+La planificación de la jubilación es una de las decisiones financieras más importantes que la mayoría de las personas deberán tomar. Comprender las matemáticas del crecimiento compuesto y los retiros sostenibles le ayuda a establecer objetivos realistas, ajustar su tasa de ahorro con anticipación y evitar quedarse sin dinero durante la jubilación.
+
+**Resultados clave que proporciona esta calculadora:**
+- **Total en la jubilación:** El valor proyectado de su cartera el día de su jubilación
+- **Ingreso mensual:** Retiros mensuales sostenibles según la tasa de retirada elegida
+- **Años de ingreso:** Estimación de cuánto tiempo durará su cartera con esa tasa de retirada
+- **Aportaciones totales:** La suma de todo lo que aportó (ahorros iniciales + aportaciones mensuales × años)
+- **Intereses totales:** El crecimiento atribuible a los rendimientos de la inversión
+
+## Cómo usar la calculadora de ahorro para la jubilación
+
+1. **Introduzca su edad actual:** Su edad hoy. La calculadora la usa para determinar cuántos años de capitalización restan hasta la jubilación.
+2. **Introduzca su edad de jubilación objetivo:** La edad a la que planea dejar de trabajar. Debe ser superior a su edad actual.
+3. **Introduzca sus ahorros actuales:** El monto que ya ha ahorrado en cuentas de jubilación (plan de pensiones, cuenta de inversión, etc.).
+4. **Introduzca su aportación mensual:** La cantidad que añade cada mes a sus ahorros para la jubilación. Puede incluir contribuciones del empleador.
+5. **Introduzca el rendimiento anual esperado:** El rendimiento anual promedio que espera de sus inversiones, expresado en porcentaje. Para una cartera diversificada de acciones/bonos, el 6–8 % es una suposición habitual.
+6. **Introduzca la tasa de retirada:** El porcentaje de su cartera que planea retirar por año en la jubilación. La clásica «regla del 4 %» es un punto de partida común.
+7. **Revise sus resultados:** La calculadora muestra su saldo proyectado de jubilación, ingreso mensual e indicadores de sostenibilidad.
+
+## Cómo funciona el cálculo
+
+### Valor futuro de los ahorros actuales
+
+Sus ahorros existentes crecen hasta la jubilación mediante la fórmula del interés compuesto:
+
+**VF_ahorros = VP × (1 + r)^n**
+
+Donde:
+- VP = ahorros actuales (valor presente)
+- r = tasa de interés mensual = rendimiento anual ÷ 12 ÷ 100
+- n = número de meses hasta la jubilación
+
+### Valor futuro de las aportaciones mensuales (anualidad ordinaria)
+
+Sus aportaciones mensuales también se capitalizan con el tiempo:
+
+**VF_anualidad = PMT × [(1 + r)^n − 1] / r**
+
+Cuando la tasa de rendimiento es del 0 %, esto se simplifica a PMT × n.
+
+### Total en la jubilación
+
+**Total = VF_ahorros + VF_anualidad**
+
+### Ingreso mensual
+
+Usando la tasa de retirada elegida:
+
+**Ingreso mensual = Total × (tasaRetiro / 100) / 12**
+
+### Longevidad de la cartera (años de ingreso)
+
+Usando la fórmula del valor presente de anualidad resuelta para el número de períodos:
+
+**n_meses = −ln(1 − saldo × r / PMT) / ln(1 + r)**
+
+Si el rendimiento de la cartera supera el monto de los retiros, la cartera nunca se agota (se muestra como 999+ años).
+
+## Ejemplos
+
+### Ejemplo 1: Comienzo temprano
+
+- Edad actual: 25, Edad de jubilación: 65 (40 años)
+- Ahorros actuales: 10 000 €
+- Aportación mensual: 400 €
+- Rendimiento anual: 7 %
+- Tasa de retirada: 4 %
+
+Este escenario ilustra el poder a largo plazo del interés compuesto. Comenzar temprano permite acumular un capital significativo incluso con aportaciones mensuales modestas.
+
+### Ejemplo 2: Recuperación a mitad de carrera
+
+- Edad actual: 40, Edad de jubilación: 65 (25 años)
+- Ahorros actuales: 80 000 €
+- Aportación mensual: 1 200 €
+- Rendimiento anual: 6 %
+- Tasa de retirada: 4 %
+
+Aportaciones mensuales más elevadas pueden compensar parcialmente un comienzo tardío.
+
+### Ejemplo 3: Inversor conservador
+
+- Edad actual: 50, Edad de jubilación: 65 (15 años)
+- Ahorros actuales: 200 000 €
+- Aportación mensual: 2 000 €
+- Rendimiento anual: 5 %
+- Tasa de retirada: 3,5 %
+
+Con un horizonte más corto y supuestos de rendimiento conservadores, las aportaciones elevadas son fundamentales.
+
+## Preguntas frecuentes
+
+**¿Qué es la regla del 4 %?**
+La regla del 4 % proviene de la investigación de William Bengen en 1994, que demostró que los jubilados podían retirar el 4 % de su cartera en el primer año de jubilación y ajustar esa cantidad a la inflación cada año sin quedarse sin dinero durante una jubilación de 30 años, incluso en períodos de caídas históricas del mercado. Muchos planificadores financieros ahora recomiendan el 3–3,5 % dado que los rendimientos futuros esperados son más bajos y la esperanza de vida es mayor.
+
+**¿Qué rendimiento anual debo usar?**
+Para una cartera diversificada de acciones y bonos, muchos planificadores utilizan el 6–7 % como supuesto de rendimiento nominal a largo plazo. El mercado de valores estadounidense ha rendido históricamente alrededor del 10 % en términos nominales y del 7 % después de la inflación. Las carteras más conservadoras con bonos rendirán menos. Usar una estimación conservadora (5–6 %) proporciona un margen de seguridad.
+
+**¿Esta calculadora tiene en cuenta la inflación?**
+Esta calculadora utiliza rendimientos y valores nominales (no ajustados por inflación). Para pensar en «euros de hoy», reste la tasa de inflación esperada (generalmente 2–3 %) de su rendimiento esperado. Por ejemplo, si espera un rendimiento del 7 % y una inflación del 3 %, use el 4 % como rendimiento real.
+
+**¿Qué cuenta como ahorro para la jubilación?**
+Todas las cuentas con ventajas fiscales y tributables: planes de pensiones, planes individuales de ahorro sistemático (PIAS), seguros de vida-ahorro y carteras de inversión.
+
+## Referencias
+
+- Bengen, W.P. (1994). Determining Withdrawal Rates Using Historical Data. *Journal of Financial Planning*, 7(4), 171–180.
+- Vanguard. *Retirement Income Calculator*. https://investor.vanguard.com/tools-calculators/retirement-income-calculator
+- Dirección General de Seguros y Fondos de Pensiones. *Planes de pensiones*. https://www.dgsfp.mineco.es

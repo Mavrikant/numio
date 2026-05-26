@@ -1,0 +1,37 @@
+## İndirim Hesaplayıcısı Nasıl Çalışır?
+
+**İndirim Hesaplayıcısı**, belirli bir yüzde indirimi sonrasında ne kadar ödeyeceğinizi anında hesaplamanıza ya da indirim yüzdesini geriye doğru hesaplamanıza yardımcı olur. Satış vergisi de eklenerek gerçek çıkış maliyetiniz gösterilir.
+
+### İndirim Yüzdesi Modu
+
+Orijinal fiyat ve indirim yüzdesini bildiğinizde hesaplama şu şekilde yapılır:
+
+**İndirimli Fiyat = Orijinal Fiyat × (1 − İndirim% ÷ 100)**
+
+Örneğin, 200 TL değerindeki bir ürün %30 indirimli ise:
+
+- İndirimli Fiyat = 200 × 0,70 = **140 TL**
+- Tasarruf = 200 − 140 = **60 TL**
+- %18 KDV dahil toplam = 140 × 1,18 = **165,20 TL**
+
+### Son Fiyat Modu
+
+Orijinal ve indirimli fiyatı biliyorsanız indirim yüzdesi şu formülle hesaplanır:
+
+**İndirim% = ((Orijinal − İndirimli) ÷ Orijinal) × 100**
+
+### Vergi Sonrası Fiyat
+
+KDV veya satış vergisi genellikle indirim uygulandıktan sonra hesaplanır. Hesaplayıcı, indirimli fiyatı (1 + Vergi Oranı ÷ 100) ile çarpar.
+
+### Ne Zaman Kullanılır?
+
+- **Sezon sonu indirimleri**: Gerçek tasarrufu doğrulayın.
+- **Bütçe planlaması**: Kasaya gitmeden önce toplam harcamayı bilin.
+- **Fiyat karşılaştırması**: Farklı mağazalar arasında vergi dahil son fiyatı karşılaştırın.
+
+| Senaryo | Formül |
+|---|---|
+| İndirimli fiyat | `İndirimli = Orijinal × (1 − İndirim/100)` |
+| İndirim yüzdesi | `İndirim% = (Orijinal − İndirimli) / Orijinal × 100` |
+| Vergi dahil toplam | `Toplam = İndirimli × (1 + Vergi/100)` |

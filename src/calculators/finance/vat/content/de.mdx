@@ -1,0 +1,41 @@
+## So funktioniert der MwSt.-Rechner
+
+Der **MwSt.- / Umsatzsteuer-Rechner** berechnet Netto- und Bruttopreise inklusive Mehrwertsteuer in beide Richtungen: MwSt. zum Nettobetrag addieren oder MwSt. aus dem Bruttobetrag herausrechnen.
+
+### Zwei Berechnungsmodi
+
+**MwSt. zum Preis addieren (exklusiv)**
+
+- **MwSt.-Betrag** = Nettobetrag × (MwSt.-Satz ÷ 100)
+- **Bruttobetrag** = Nettobetrag + MwSt.-Betrag
+
+Beispiel: 500 € netto, 19 % MwSt.:
+- MwSt. = 500 × 0,19 = **95 €**
+- Brutto = 500 + 95 = **595 €**
+
+**MwSt. aus Preis herausrechnen (inklusiv)**
+
+- **Nettobetrag** = Bruttobetrag ÷ (1 + MwSt.-Satz ÷ 100)
+- **MwSt.-Betrag** = Bruttobetrag − Nettobetrag
+
+Beispiel: 595 € brutto, 19 % MwSt.:
+- Netto = 595 ÷ 1,19 = **500 €**
+- MwSt. = 595 − 500 = **95 €**
+
+### Deutsche MwSt.-Sätze
+
+| Satz | Anwendungsbereich |
+|---|---|
+| 19 % | Regelsteuersatz |
+| 7 % | Ermäßigt: Lebensmittel, Bücher, ÖPNV |
+| 0 % | Steuerbefreit: Bestimmte Exporte |
+
+### Rechnungsstellung
+
+Auf einer ordnungsgemäßen Rechnung müssen Nettobetrag, MwSt.-Satz, MwSt.-Betrag und Bruttobetrag ausgewiesen sein. Dieser Rechner liefert alle vier Werte sofort.
+
+| Szenario | Formel |
+|---|---|
+| MwSt.-Betrag (exklusiv) | `MwSt. = Netto × Satz ÷ 100` |
+| Bruttobetrag | `Brutto = Netto × (1 + Satz ÷ 100)` |
+| Nettobetrag (aus Brutto) | `Netto = Brutto ÷ (1 + Satz ÷ 100)` |

@@ -1,0 +1,115 @@
+# Calcolatore di Risparmio Pensionistico
+
+## Che cos'è un calcolatore di risparmio pensionistico?
+
+Un calcolatore di risparmio pensionistico stima quanto denaro avrete accumulato al momento del pensionamento, basandosi sui vostri risparmi attuali, i contributi periodici, i rendimenti attesi degli investimenti e l'età pensionabile desiderata. Utilizza poi un tasso di prelievo — comunemente la «regola del 4 %» — per proiettare il reddito mensile sostenibile che il vostro patrimonio può fornire.
+
+La pianificazione pensionistica è una delle decisioni finanziarie più importanti che la maggior parte delle persone dovrà affrontare. Comprendere la matematica della crescita composta e dei prelievi sostenibili aiuta a stabilire obiettivi realistici, adeguare il tasso di risparmio in anticipo ed evitare di rimanere senza denaro durante la pensione.
+
+**Risultati principali forniti da questo calcolatore:**
+- **Totale al pensionamento:** Il valore proiettato del portafoglio il giorno del pensionamento
+- **Reddito mensile:** Prelievi mensili sostenibili in base al tasso di prelievo scelto
+- **Anni di reddito:** Stima di quanto durerà il portafoglio con quel tasso di prelievo
+- **Contributi totali:** La somma di tutto ciò che avete versato (risparmi iniziali + contributi mensili × anni)
+- **Interessi totali:** La crescita attribuibile ai rendimenti degli investimenti
+
+## Come utilizzare il calcolatore di risparmio pensionistico
+
+1. **Inserite la vostra età attuale:** La vostra età oggi. Il calcolatore la usa per determinare quanti anni di capitalizzazione rimangono prima del pensionamento.
+2. **Inserite l'età pensionabile desiderata:** L'età alla quale prevedete di smettere di lavorare. Deve essere superiore all'età attuale.
+3. **Inserite i risparmi attuali:** L'importo già risparmiato in conti pensionistici (fondi pensione, piani individuali pensionistici, portafogli di investimento, ecc.).
+4. **Inserite il contributo mensile:** L'importo che aggiungete ogni mese ai vostri risparmi pensionistici. I contributi del datore di lavoro possono essere inclusi.
+5. **Inserite il rendimento annuale atteso:** Il rendimento annuale medio atteso dagli investimenti, espresso in percentuale. Per un portafoglio diversificato di azioni/obbligazioni, il 6–8 % è un'ipotesi comune.
+6. **Inserite il tasso di prelievo:** La percentuale del portafoglio che prevedete di prelevare ogni anno in pensione. La classica «regola del 4 %» è un punto di partenza comune.
+7. **Esaminate i risultati:** Il calcolatore mostra il saldo pensionistico proiettato, il reddito mensile e gli indicatori di sostenibilità.
+
+## Come funziona il calcolo
+
+### Valore futuro dei risparmi attuali
+
+I risparmi esistenti crescono fino al pensionamento usando la formula dell'interesse composto:
+
+**VF_risparmi = VA × (1 + r)^n**
+
+Dove:
+- VA = risparmi attuali (valore attuale)
+- r = tasso di interesse mensile = rendimento annuale ÷ 12 ÷ 100
+- n = numero di mesi fino al pensionamento
+
+### Valore futuro dei contributi mensili (rendita ordinaria)
+
+I contributi mensili regolari si capitalizzano anch'essi nel tempo:
+
+**VF_rendita = PMT × [(1 + r)^n − 1] / r**
+
+Quando il tasso di rendimento è 0 %, questo si semplifica in PMT × n.
+
+### Totale al pensionamento
+
+**Totale = VF_risparmi + VF_rendita**
+
+### Reddito mensile
+
+Usando il tasso di prelievo scelto:
+
+**Reddito mensile = Totale × (tassoPrelievo / 100) / 12**
+
+### Longevità del portafoglio (anni di reddito)
+
+Usando la formula del valore attuale della rendita risolta per il numero di periodi:
+
+**n_mesi = −ln(1 − saldo × r / PMT) / ln(1 + r)**
+
+Se il rendimento del portafoglio supera l'importo dei prelievi, il portafoglio non si esaurisce mai (mostrato come 999+ anni).
+
+## Esempi
+
+### Esempio 1: Iniziare presto
+
+- Età attuale: 25, Età pensionabile: 65 (40 anni)
+- Risparmi attuali: 10 000 €
+- Contributo mensile: 400 €
+- Rendimento annuale: 7 %
+- Tasso di prelievo: 4 %
+
+Questo scenario illustra il potere a lungo termine dell'interesse composto. Iniziare presto permette di accumulare un capitale significativo anche con contributi mensili modesti.
+
+### Esempio 2: Recupero a metà carriera
+
+- Età attuale: 40, Età pensionabile: 65 (25 anni)
+- Risparmi attuali: 80 000 €
+- Contributo mensile: 1 200 €
+- Rendimento annuale: 6 %
+- Tasso di prelievo: 4 %
+
+Contributi mensili più elevati possono compensare parzialmente un inizio tardivo.
+
+### Esempio 3: Investitore prudente
+
+- Età attuale: 50, Età pensionabile: 65 (15 anni)
+- Risparmi attuali: 200 000 €
+- Contributo mensile: 2 000 €
+- Rendimento annuale: 5 %
+- Tasso di prelievo: 3,5 %
+
+Con un orizzonte temporale più breve e ipotesi di rendimento prudenti, i contributi elevati sono fondamentali.
+
+## Domande frequenti
+
+**Cos'è la regola del 4 %?**
+La regola del 4 % proviene dalla ricerca di William Bengen del 1994, che dimostrava che i pensionati potevano prelevare il 4 % del portafoglio nel primo anno di pensionamento, adeguando poi quell'importo all'inflazione ogni anno, senza esaurire il denaro nell'arco di 30 anni — anche durante le flessioni storiche dei mercati. Molti consulenti finanziari ora raccomandano il 3–3,5 % considerando i rendimenti futuri attesi più bassi e la maggiore longevità.
+
+**Quale rendimento annuale dovrei usare?**
+Per un portafoglio diversificato di azioni e obbligazioni, molti consulenti utilizzano il 6–7 % come ipotesi di rendimento nominale a lungo termine. Il mercato azionario statunitense ha storicamente reso circa il 10 % nominalmente e il 7 % dopo l'inflazione. I portafogli più prudenti con obbligazioni renderanno meno. Usare una stima prudente (5–6 %) fornisce un margine di sicurezza.
+
+**Questo calcolatore tiene conto dell'inflazione?**
+Questo calcolatore usa rendimenti e valori nominali (non aggiustati per l'inflazione). Per ragionare in «euro di oggi», sottraete il tasso di inflazione atteso (di solito 2–3 %) dal rendimento atteso. Ad esempio, con il 7 % di rendimento e il 3 % di inflazione, userete il 4 % come rendimento reale.
+
+**Cosa conta come risparmio pensionistico?**
+Tutti i conti con agevolazioni fiscali e imponibili: fondi pensione aperti e chiusi, piani individuali pensionistici (PIP), polizze vita rivalutabili e portafogli titoli.
+
+## Riferimenti
+
+- Bengen, W.P. (1994). Determining Withdrawal Rates Using Historical Data. *Journal of Financial Planning*, 7(4), 171–180.
+- Vanguard. *Retirement Income Calculator*. https://investor.vanguard.com/tools-calculators/retirement-income-calculator
+- COVIP — Commissione di Vigilanza sui Fondi Pensione. *Fondi pensione*. https://www.covip.it

@@ -1,0 +1,128 @@
+# Retirement Savings Calculator
+
+## What Is a Retirement Savings Calculator?
+
+A retirement savings calculator estimates how much money you will accumulate by the time you retire, based on your current savings, ongoing contributions, expected investment returns, and your target retirement age. It then uses a withdrawal rate — commonly the "4% rule" — to project how much monthly income your nest egg can sustainably provide.
+
+Retirement planning is one of the most consequential financial decisions most people face. Understanding the mathematics of compound growth and sustainable withdrawals helps you set realistic goals, adjust your savings rate early, and avoid running out of money in retirement.
+
+**Key outputs this calculator provides:**
+- **Total at retirement:** The projected value of your portfolio on the day you retire
+- **Monthly income:** Sustainable monthly withdrawals based on your chosen withdrawal rate
+- **Years of income:** How long your portfolio is estimated to last at that withdrawal rate
+- **Total contributions:** The sum of everything you contributed (initial savings + monthly contributions × years)
+- **Total interest:** The growth attributable to investment returns, not contributions
+
+## How to Use the Retirement Savings Calculator
+
+1. **Enter your current age:** Your age today. The calculator uses this to determine how many years of compounding remain before retirement.
+2. **Enter your target retirement age:** The age at which you plan to stop working. Must be greater than your current age.
+3. **Enter your current savings:** The amount you have already saved in retirement accounts (401(k), IRA, brokerage accounts, etc.).
+4. **Enter your monthly contribution:** How much you add to your retirement savings each month. This may include employer matches.
+5. **Enter expected annual return:** The average annual return you expect on your investments, expressed as a percentage. A common assumption for a diversified stock/bond portfolio is 6–8%.
+6. **Enter withdrawal rate:** The percentage of your portfolio you plan to withdraw per year in retirement. The classic "4% rule" is a common starting point.
+7. **Review your results:** The calculator shows your projected retirement balance, monthly income, and sustainability metrics.
+
+## How the Calculation Works
+
+### Future Value of Current Savings
+
+Your existing savings grow over the years until retirement using the compound interest formula:
+
+**FV_savings = PV × (1 + r)^n**
+
+Where:
+- PV = current savings (present value)
+- r = monthly interest rate = annual return ÷ 12 ÷ 100
+- n = number of months until retirement
+
+### Future Value of Monthly Contributions (Ordinary Annuity)
+
+Your ongoing monthly contributions also compound over time:
+
+**FV_annuity = PMT × [(1 + r)^n − 1] / r**
+
+Where PMT is the monthly contribution. When the return rate is 0%, this simplifies to PMT × n.
+
+### Total at Retirement
+
+**Total = FV_savings + FV_annuity**
+
+### Monthly Income
+
+Using your chosen withdrawal rate:
+
+**Monthly income = Total × (withdrawalRate / 100) / 12**
+
+### Portfolio Longevity (Years of Income)
+
+Using the present value of annuity formula solved for number of periods:
+
+**n_months = −ln(1 − balance × r / PMT) / ln(1 + r)**
+
+If the portfolio return exceeds the withdrawal amount, the portfolio never depletes (shown as 999+ years).
+
+## Examples
+
+### Example 1: Early Starter
+
+- Current age: 25, Retirement age: 65 (40 years)
+- Current savings: $10,000
+- Monthly contribution: $400
+- Annual return: 7%
+- Withdrawal rate: 4%
+
+**Total at retirement ≈ $1,096,000**
+- Monthly income: ~$3,653
+- Years of income: indefinite (portfolio grows faster than withdrawals)
+
+### Example 2: Mid-Career Catch-Up
+
+- Current age: 40, Retirement age: 65 (25 years)
+- Current savings: $80,000
+- Monthly contribution: $1,200
+- Annual return: 6%
+- Withdrawal rate: 4%
+
+**Total at retirement ≈ $900,000**
+- Monthly income: ~$3,000
+- Years of income: ~35 years
+
+### Example 3: Conservative Investor
+
+- Current age: 50, Retirement age: 65 (15 years)
+- Current savings: $200,000
+- Monthly contribution: $2,000
+- Annual return: 5%
+- Withdrawal rate: 3.5%
+
+**Total at retirement ≈ $800,000**
+- Monthly income: ~$2,333
+- Years of income: ~30+ years
+
+## FAQ
+
+**What is the 4% rule?**
+The 4% rule originates from William Bengen's 1994 research showing that retirees could withdraw 4% of their portfolio in the first year of retirement, then adjust for inflation each year, without running out of money over a 30-year retirement — even through historical market downturns. It remains a useful starting point, though some financial planners now recommend 3–3.5% given lower expected future returns and longer lifespans.
+
+**What annual return should I use?**
+For a diversified portfolio of stocks and bonds, many planners use 6–7% as a long-run real or nominal return assumption. The U.S. stock market has returned roughly 10% nominally and 7% after inflation historically. More conservative portfolios with bonds will return less. For planning purposes, using a conservative estimate (5–6%) provides a margin of safety.
+
+**Does this account for inflation?**
+This calculator uses nominal (not inflation-adjusted) returns and values. To think in "today's dollars," subtract the expected inflation rate (typically 2–3%) from your expected return. For example, if you expect 7% returns and 3% inflation, use 4% as your real return.
+
+**What is a safe withdrawal rate if I retire early?**
+The 4% rule was designed for a 30-year retirement. If you retire at 55 instead of 65, you may have a 40+ year retirement ahead, making a lower withdrawal rate (3–3.5%) more appropriate to avoid depleting your portfolio.
+
+**Should I include Social Security in this calculation?**
+This calculator focuses on portfolio-based savings. Social Security income is separate and will reduce the amount you need to withdraw from savings. Factor in your expected Social Security benefit to determine your actual income gap.
+
+**What counts as retirement savings?**
+All tax-advantaged and taxable accounts: 401(k), 403(b), traditional IRA, Roth IRA, SEP IRA, SIMPLE IRA, and taxable brokerage accounts. Include employer contributions in your monthly contribution figure if they vest immediately.
+
+## References
+
+- Bengen, W.P. (1994). Determining Withdrawal Rates Using Historical Data. *Journal of Financial Planning*, 7(4), 171–180.
+- Vanguard. *Retirement Income Calculator*. https://investor.vanguard.com/tools-calculators/retirement-income-calculator
+- Internal Revenue Service. *Retirement Plans*. https://www.irs.gov/retirement-plans
+- Pfau, W.D. (2012). Capital Market Expectations, Portfolio Optimization, and Safe Withdrawal Rates. *Journal of Financial Planning*.

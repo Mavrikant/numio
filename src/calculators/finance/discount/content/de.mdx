@@ -1,0 +1,36 @@
+## So funktioniert der Rabattrechner
+
+Der **Rabattrechner** zeigt Ihnen sofort, wie viel Sie nach einem prozentualen Preisnachlass zahlen, oder er berechnet den Rabattsatz rückwärts aus dem bekannten Verkaufspreis. Die optionale Mehrwertsteuer zeigt den tatsächlichen Gesamtbetrag.
+
+### Modus: Rabattprozent
+
+Wenn Sie den Originalpreis und den Rabatt kennen:
+
+**Verkaufspreis = Originalpreis × (1 − Rabatt% ÷ 100)**
+
+Beispiel: Artikel für 80 € mit 20 % Rabatt:
+- Verkaufspreis = 80 × 0,80 = **64 €**
+- Ersparnis = 80 − 64 = **16 €**
+- Endpreis mit 19 % MwSt. = 64 × 1,19 = **76,16 €**
+
+### Modus: Endpreis
+
+Wenn Sie Originalpreis und Verkaufspreis kennen:
+
+**Rabatt% = ((Original − Verkauf) ÷ Original) × 100**
+
+### Nach Steuer
+
+Die Mehrwertsteuer wird auf den rabattierten Preis angewendet. Das Ergebnis ist der tatsächliche Checkout-Betrag.
+
+### Typische Anwendungen
+
+- Saisonschlussverkäufe und Black-Friday-Angebote prüfen
+- Preise zwischen Händlern in verschiedenen Bundesländern (unterschiedliche MwSt.) vergleichen
+- Coupon-Ersparnis vor dem Kauf berechnen
+
+| Szenario | Formel |
+|---|---|
+| Verkaufspreis aus Rabatt | `Verkauf = Original × (1 − Rabatt/100)` |
+| Rabatt aus Preisen | `Rabatt% = (Original − Verkauf) / Original × 100` |
+| Betrag inkl. MwSt. | `Gesamt = Verkauf × (1 + Steuer/100)` |

@@ -1,0 +1,100 @@
+# Power Factor Calculator
+
+## What is Power Factor?
+
+Power factor (PF) is one of the most important concepts in AC electrical engineering. It describes how efficiently electrical power is being used in a circuit. Formally, power factor is the ratio of **real power** (measured in kilowatts, kW) to **apparent power** (measured in kilovolt-amperes, kVA):
+
+**PF = cos(φ) = P_real / S_apparent = kW / kVA**
+
+The angle φ (phi) is the phase angle between the voltage and current waveforms. A power factor of 1.0 (unity) means voltage and current are perfectly in phase — all the power drawn from the supply performs useful work. A power factor below 1.0 means some of the current oscillates back and forth between the source and the load without delivering useful energy.
+
+### The Power Triangle
+
+In AC circuits, there are three types of power:
+
+- **Real Power (P, kW)**: The actual power that does work — heats, rotates, or illuminates.
+- **Reactive Power (Q, kVAR)**: Power that oscillates between the source and inductive/capacitive loads. It does no net work but must be supplied by the generator.
+- **Apparent Power (S, kVA)**: The total power the source must supply, calculated as the vector sum: S = √(P² + Q²).
+
+The relationships are:
+- PF = P/S = cos(φ)
+- Q = √(S² − P²)
+- φ = arccos(PF)
+
+### Power Factor Correction
+
+When a system has a low power factor (below ~0.9), utilities may impose penalties. Adding capacitor banks in parallel with inductive loads improves the power factor. The required correction capacitor is:
+
+**Q_cap = P × (tan φ₁ − tan φ₂)**
+**C = Q_cap / (2π × f × V²)**
+
+Where φ₁ is the current phase angle, φ₂ is the target phase angle, f is the supply frequency, and V is the supply voltage.
+
+## How to Use This Calculator
+
+This calculator has three modes:
+
+### Mode 1: Calculate PF from Real and Reactive Power
+- Enter the **Real Power (kW)** — measured with a wattmeter or taken from equipment nameplate.
+- Enter the **Reactive Power (kVAR)** — measured with a power analyzer.
+- The calculator returns apparent power (kVA), power factor, and phase angle.
+
+### Mode 2: Calculate kW and kVAR from kVA and PF
+- Enter the **Apparent Power (kVA)** — from utility billing or transformer rating.
+- Enter the **Power Factor** — from the utility bill or measured with a power meter.
+- The calculator returns real power (kW) and reactive power (kVAR).
+
+### Mode 3: Calculate Power Factor Correction Capacitor
+- Enter the **Real Power (kW)**, **Current Power Factor**, and **Target Power Factor**.
+- Enter the **System Voltage (V)** and **Frequency (50 or 60 Hz)**.
+- The calculator returns the kVAR to be added and the capacitor value in µF.
+
+## Examples
+
+### Example 1 — Calculate PF from Power Measurements
+
+An industrial motor draws 75 kW of real power and 50 kVAR of reactive power.
+
+- S = √(75² + 50²) = √(5625 + 2500) = √8125 = **90.14 kVA**
+- PF = 75 / 90.14 = **0.832** (lagging)
+- Phase angle φ = arccos(0.832) = **33.7°**
+
+### Example 2 — Calculate Power Components
+
+A 100 kVA transformer operates at a power factor of 0.85.
+
+- Real Power = 100 × 0.85 = **85 kW**
+- Reactive Power = √(100² − 85²) = √(10000 − 7225) = √2775 = **52.7 kVAR**
+- Phase angle = arccos(0.85) = **31.8°**
+
+### Example 3 — Power Factor Correction
+
+Improve a 75 kW load from PF = 0.70 to PF = 0.95 on a 400V, 50Hz system.
+
+- φ₁ = arccos(0.70) = 45.57°; tan(φ₁) = 1.020
+- φ₂ = arccos(0.95) = 18.19°; tan(φ₂) = 0.329
+- Q_cap = 75 × (1.020 − 0.329) = 75 × 0.691 = **51.8 kVAR**
+- C = 51,800 / (2π × 50 × 400²) = 51,800 / 50,265,482 = **1030 µF** (for 3-phase delta, divide by 3 ≈ 343 µF per phase)
+
+## FAQ
+
+### What is the difference between real, reactive, and apparent power?
+Real power (kW) performs useful work. Reactive power (kVAR) is the oscillating component associated with inductive and capacitive loads — it does no net work but must flow in the circuit. Apparent power (kVA) is the total magnitude of power the source delivers, combining both real and reactive components.
+
+### Why do utilities charge for low power factor?
+When a customer has a low power factor, more current must flow to deliver the same real power. This excess current causes additional losses in utility lines and transformers, and requires larger infrastructure. Utilities impose power factor penalties (or demand charges) to recover these costs and encourage customers to improve their PF.
+
+### What is a good power factor?
+Most utilities require industrial customers to maintain PF above 0.90 (sometimes 0.95). Residential customers typically have PF between 0.85 and 0.95. Unity (1.0) is only achievable with unity-PF power supplies or perfectly compensated loads.
+
+### Can power factor be greater than 1?
+No. By definition, PF = P/S, and S is always ≥ P (apparent power is always ≥ real power), so PF ≤ 1. A PF of exactly 1.0 means all apparent power is real power (purely resistive load).
+
+### What causes low power factor?
+The main causes are inductive loads: motors, transformers, fluorescent lighting ballasts, and welding machines. These loads draw reactive current that lags behind the voltage, reducing the power factor.
+
+## References
+
+- [IEEE Std 1459-2010 — Power Factor and Reactive Power](https://standards.ieee.org/ieee/1459/3388/) — IEEE
+- [IEC 61000-3-2 — Harmonic Current Limits](https://www.iec.ch/) — International Electrotechnical Commission
+- [Power Factor Correction — Schneider Electric](https://www.se.com/ww/en/work/solutions/system/s1/electrical-network-and-quality/power-factor-and-reactive-power/) — Schneider Electric

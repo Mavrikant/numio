@@ -1,0 +1,43 @@
+## KDV Hesaplayıcısı Nasıl Çalışır?
+
+**KDV / Satış Vergisi Hesaplayıcısı**, KDV hariç veya KDV dahil fiyatları hesaplamanıza yardımcı olur. Fatura düzenlerken, fiş kontrolü yaparken veya alışveriş planlarken iki yönde de hesaplama yapabilirsiniz.
+
+### İki Hesaplama Modu
+
+**Fiyata KDV Ekle (Dışlayıcı Mod)**
+
+KDV öncesi fiyatı biliyorsanız toplam tutarı bulmak için:
+- **KDV Tutarı** = Matrah × (KDV Oranı ÷ 100)
+- **Toplam** = Matrah + KDV Tutarı
+
+Örnek: 1.000 TL tutarında bir hizmet, %20 KDV ile:
+- KDV = 1.000 × 0,20 = **200 TL**
+- Toplam = 1.000 + 200 = **1.200 TL**
+
+**Fiyattan KDV Çıkar (Kapsayıcı Mod)**
+
+KDV dahil fiyatı biliyorsanız matrah ve KDV tutarını bulmak için:
+- **Matrah** = Brüt Fiyat ÷ (1 + KDV Oranı ÷ 100)
+- **KDV Tutarı** = Brüt Fiyat − Matrah
+
+Örnek: 1.200 TL KDV dahil, %20 KDV:
+- Matrah = 1.200 ÷ 1,20 = **1.000 TL**
+- KDV = 1.200 − 1.000 = **200 TL**
+
+### Türkiye KDV Oranları
+
+| Oran | Kapsam |
+|---|---|
+| %20 | Genel oran (2023 sonrası) |
+| %10 | Gıda, tarım, bazı hizmetler |
+| %1 | Temel gıda maddeleri |
+
+### Fatura Kullanımı
+
+Fatura düzenlerken KDV hariç tutar, KDV oranı, KDV tutarı ve KDV dahil toplam açıkça belirtilmelidir. Bu hesaplayıcı dört değeri de anında verir.
+
+| Senaryo | Formül |
+|---|---|
+| KDV tutarı (hariç) | `KDV = Matrah × Oran ÷ 100` |
+| KDV dahil toplam | `Toplam = Matrah × (1 + Oran ÷ 100)` |
+| Matrah (KDV dahil fiyattan) | `Matrah = Brüt ÷ (1 + Oran ÷ 100)` |

@@ -1,0 +1,71 @@
+## How the VAT Calculator Works
+
+The **VAT / Sales Tax Calculator** helps you compute prices with or without Value-Added Tax (VAT), Goods and Services Tax (GST), or any general sales tax. Whether you are preparing an invoice, checking a receipt, or planning a purchase, this tool handles both directions: adding tax to a base price and extracting tax from a tax-inclusive gross price.
+
+### Two Calculation Modes
+
+**Add VAT to price (exclusive mode)**
+
+You know the pre-tax price and want to find the total. The formulas are:
+
+- **VAT Amount** = Base Price × (VAT Rate ÷ 100)
+- **Total Price** = Base Price + VAT Amount
+
+Example: A service costs £200 ex-VAT at the UK standard rate of 20%:
+- VAT Amount = £200 × 0.20 = **£40**
+- Total Price = £200 + £40 = **£240**
+
+**Extract VAT from price (inclusive mode)**
+
+You have a VAT-inclusive price and want to know the pre-tax base and the tax amount:
+
+- **Base Price** = Gross Price ÷ (1 + VAT Rate ÷ 100)
+- **VAT Amount** = Gross Price − Base Price
+
+Example: A receipt shows £240 including 20% VAT:
+- Base Price = £240 ÷ 1.20 = **£200**
+- VAT Amount = £240 − £200 = **£40**
+
+### Effective Rate
+
+The effective rate field confirms the VAT as a percentage of the base price. In standard scenarios it equals the stated VAT rate. It is useful when checking that an inclusive-mode calculation returned the correct proportion.
+
+### Common VAT Rates Around the World
+
+| Country / Region | Standard Rate | Notes |
+|---|---|---|
+| EU (most countries) | 20–27% | Varies: Hungary 27%, France 20%, Germany 19% |
+| United Kingdom | 20% | Reduced 5%, zero-rated food/books |
+| Australia (GST) | 10% | Some goods zero-rated |
+| India (GST) | 5%, 12%, 18%, 28% | Rate depends on category |
+| Canada (GST) | 5% | + provincial tax (PST/HST) |
+| United States | 0–13% | No federal VAT; state & local sales tax |
+| Saudi Arabia | 15% | Raised from 5% in 2020 |
+| UAE | 5% | Introduced 2018 |
+
+### Business Use: Invoicing
+
+When issuing an invoice, you must clearly show:
+1. The pre-tax amount (base price)
+2. The applicable VAT rate
+3. The VAT amount
+4. The total inclusive amount
+
+This calculator gives you all four values instantly.
+
+### Consumer Use: Checking Receipts
+
+Retail receipts in many countries show a line-item VAT breakdown. Use inclusive mode to verify the figures:
+- Enter the total you paid
+- Enter the tax rate from the receipt
+- Confirm the extracted base price and tax match the printed values
+
+### Formula Summary
+
+| Scenario | Formula |
+|---|---|
+| VAT amount (exclusive) | `VAT = Base × Rate ÷ 100` |
+| Total (exclusive) | `Total = Base × (1 + Rate ÷ 100)` |
+| Base price (inclusive) | `Base = Gross ÷ (1 + Rate ÷ 100)` |
+| VAT amount (inclusive) | `VAT = Gross − Base` |
+| Effective rate | `EffRate = VAT ÷ Base × 100` |
