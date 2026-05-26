@@ -3,7 +3,24 @@ import type { UnitKey } from "../types/calculator";
 type ConversionFn = (value: number) => number;
 
 interface UnitDefinition {
-  readonly category: "mass" | "length" | "volume" | "temperature" | "time" | "energy" | "power" | "pressure";
+  readonly category:
+    | "mass"
+    | "length"
+    | "volume"
+    | "temperature"
+    | "time"
+    | "energy"
+    | "power"
+    | "pressure"
+    | "ratio"
+    | "voltage"
+    | "current"
+    | "resistance"
+    | "currency_usd"
+    | "currency_eur"
+    | "currency_try"
+    | "currency_gbp"
+    | "currency_jpy";
   readonly toBase: ConversionFn;
   readonly fromBase: ConversionFn;
 }
@@ -57,6 +74,22 @@ const UNITS: Partial<Record<UnitKey, UnitDefinition>> = {
   kpa: { category: "pressure", toBase: (v) => v * 1000, fromBase: (v) => v / 1000 },
   bar: { category: "pressure", toBase: (v) => v * 100000, fromBase: (v) => v / 100000 },
   psi: { category: "pressure", toBase: (v) => v * 6894.757, fromBase: (v) => v / 6894.757 },
+
+  // ratio / percent
+  percent: { category: "ratio", toBase: (v) => v / 100, fromBase: (v) => v * 100 },
+  ratio: { category: "ratio", toBase: (v) => v, fromBase: (v) => v },
+
+  // electrical (kept separate categories so cross-type conversions are rejected)
+  volt: { category: "voltage", toBase: (v) => v, fromBase: (v) => v },
+  amp: { category: "current", toBase: (v) => v, fromBase: (v) => v },
+  ohm: { category: "resistance", toBase: (v) => v, fromBase: (v) => v },
+
+  // currencies: treated as distinct categories to avoid implicit cross-currency conversions
+  usd: { category: "currency_usd", toBase: (v) => v, fromBase: (v) => v },
+  eur: { category: "currency_eur", toBase: (v) => v, fromBase: (v) => v },
+  try: { category: "currency_try", toBase: (v) => v, fromBase: (v) => v },
+  gbp: { category: "currency_gbp", toBase: (v) => v, fromBase: (v) => v },
+  jpy: { category: "currency_jpy", toBase: (v) => v, fromBase: (v) => v },
 };
 
 export class UnitConversionError extends Error {
