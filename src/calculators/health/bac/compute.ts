@@ -5,7 +5,7 @@ export interface BacInputs {
   hoursElapsed: number;
 }
 
-export interface BacResult {
+export interface BacResult extends Record<string, unknown> {
   bac: number;
   hoursUntilSober: number;
   isLegal: boolean;

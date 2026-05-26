@@ -1,0 +1,100 @@
+# Calcolatore del Mix di Calcestruzzo
+
+Il calcolatore del mix di calcestruzzo aiuta a determinare le quantità esatte di cemento, sabbia, aggregato grosso e acqua necessarie per qualsiasi volume di calcestruzzo. Che si lavori con classi standard (da M10 a M30) o con un rapporto personalizzato, questo strumento calcola i pesi dei materiali in chilogrammi e il numero di sacchi di cemento necessari.
+
+## Classi di Calcestruzzo
+
+Le classi di calcestruzzo usano la designazione M, dove M indica "Mix" (miscela) e il numero rappresenta la resistenza caratteristica a compressione in N/mm² (MPa) a 28 giorni.
+
+### Proporzioni Nominali Standard (volumetriche)
+
+| Classe | Cemento : Sabbia : Aggregato | Uso Tipico |
+|---|---|---|
+| M10 | 1 : 3 : 6 | Magrone, riempimenti non strutturali |
+| M15 | 1 : 2 : 4 | Fondazioni in massa, pavimentazioni |
+| M20 | 1 : 1,5 : 3 | Calcestruzzo armato generale |
+| M25 | 1 : 1 : 2 | Travi e pilastri in c.a. |
+| M30 | 1 : 0,75 : 1,5 | Elementi strutturali ad alta resistenza |
+
+## Metodo di Calcolo
+
+### Fase 1: Conversione al Volume Secco
+
+Il calcestruzzo fresco contiene acqua e vuoti. Il volume effettivo di materiali secchi necessario è maggiore del volume di calcestruzzo fresco:
+
+**Volume Secco = Volume Umido × 1,54**
+
+Questo fattore tiene conto dei vuoti negli aggregati e della compattazione durante la miscelazione.
+
+### Fase 2: Proporzione di Ciascun Materiale
+
+Per cemento : sabbia : aggregato = C : S : A, il totale è (C + S + A). Ogni materiale occupa la sua frazione proporzionale del volume secco:
+
+- Volume cemento = [C / (C + S + A)] × Volume secco (m³)
+- Volume sabbia = [S / (C + S + A)] × Volume secco (m³)
+- Volume aggregato = [A / (C + S + A)] × Volume secco (m³)
+
+### Fase 3: Conversione Volume–Peso
+
+- Cemento: 1440 kg/m³
+- Sabbia (aggregato fine): 1600 kg/m³
+- Aggregato grosso: 1500 kg/m³
+
+### Fase 4: Quantità d'Acqua
+
+**Acqua (kg) = rapporto a/c × Cemento (kg)**
+
+Poiché 1 kg d'acqua = 1 litro, la quantità in litri eguaglia il peso in kg.
+
+### Fase 5: Sacchi di Cemento
+
+Un sacco standard contiene 50 kg. Numero di sacchi = peso totale cemento / 50 (arrotondare per eccesso).
+
+## Esempio Pratico: 1 m³ di Calcestruzzo M20
+
+**Dati:** Volume = 1 m³, Miscela = M20 (1:1,5:3), a/c = 0,50
+
+- Volume secco = 1 × 1,54 = 1,54 m³
+- Totale parti = 5,5
+- Cemento: (1/5,5) × 1,54 × 1440 = **403 kg**
+- Sabbia: (1,5/5,5) × 1,54 × 1600 = **672 kg**
+- Aggregato: (3/5,5) × 1,54 × 1500 = **1260 kg**
+- Acqua: 0,50 × 403 = **201,5 litri**
+- Sacchi di cemento: 403 / 50 = **8,06 → 9 sacchi**
+
+## Rapporto Acqua/Cemento
+
+Il rapporto a/c è uno dei parametri più critici della tecnologia del calcestruzzo:
+
+- **Resistenza:** a/c basso → resistenza elevata
+- **Durabilità:** a/c basso riduce la permeabilità
+- **Lavorabilità:** a/c alto facilita la messa in opera
+
+**Valori massimi raccomandati:**
+- M20 uso generale: 0,55
+- M25 calcestruzzo armato: 0,50
+- M30 alte prestazioni: 0,45
+- Esposizione severa: 0,40
+
+## Masse Volumiche Utilizzate
+
+| Materiale | Massa Volumica (kg/m³) |
+|---|---|
+| Cemento Portland | 1440 |
+| Sabbia di fiume (secca) | 1600 |
+| Aggregato frantumato 20 mm | 1500 |
+| Acqua | 1000 |
+
+## Consigli Pratici
+
+La **dosatura in peso** è più precisa di quella volumetrica, poiché la sabbia umida si gonfia e può causare errori del 10–20%.
+
+**Margine di perdita:** Aggiungere il 5–10% alle quantità calcolate per tenere conto di versamenti e irregolarità delle casseforme.
+
+**Maturazione:** Il calcestruzzo raggiunge il 70% della resistenza a 28 giorni nei primi 7 giorni. Mantenere la superficie umida per almeno 7 giorni.
+
+## Riferimenti
+
+- UNI EN 206:2016 — Calcestruzzo: Specificazione, prestazione, produzione e conformità
+- NTC 2018 — Norme Tecniche per le Costruzioni
+- ACI 211.1 — Proporzioni per calcestruzzo normale

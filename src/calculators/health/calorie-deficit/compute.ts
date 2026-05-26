@@ -5,7 +5,7 @@ export interface CalorieDeficitInputs {
   dailyCalorieDeficit: number;
 }
 
-export interface CalorieDeficitResult {
+export interface CalorieDeficitResult extends Record<string, unknown> {
   weightToLoseKg: number;
   weeklyDeficit: number;
   weeksToGoal: number;

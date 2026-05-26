@@ -3,8 +3,10 @@ import type { CalculatorI18n } from "@/types/i18n";
 const i18n: CalculatorI18n = {
   en: {
     title: "Salary & Take-Home Pay Calculator",
+    short: "Take-Home Pay",
     description:
       "Estimate your US take-home pay after federal income tax, Social Security, Medicare, and state income tax.",
+    keywords: ["salary", "take-home pay", "net pay", "federal income tax", "FICA", "paycheck calculator"],
     inputs: {
       annualSalary: { label: "Annual Salary", help: "Your gross annual salary before any taxes or deductions." },
       filingStatus: {
@@ -40,8 +42,10 @@ const i18n: CalculatorI18n = {
   },
   tr: {
     title: "Maaş ve Elde Kalacak Gelir Hesaplayıcısı",
+    short: "Net Maaş",
     description:
       "Federal gelir vergisi, Sosyal Güvenlik, Medicare ve eyalet gelir vergisi düşüldükten sonra ABD'de elde kalacak gelirinizi tahmin edin.",
+    keywords: ["maaş", "net maaş", "vergi", "federal gelir vergisi", "FICA", "maaş hesaplayıcı"],
     inputs: {
       annualSalary: { label: "Yıllık Maaş", help: "Vergi ve kesintiler öncesi brüt yıllık maaşınız." },
       filingStatus: {
@@ -77,8 +81,10 @@ const i18n: CalculatorI18n = {
   },
   de: {
     title: "Gehaltsrechner und Nettolohn-Rechner",
+    short: "Nettolohn",
     description:
       "Schätzen Sie Ihren US-amerikanischen Nettolohn nach Bundeseinkommensteuer, Sozialversicherung, Medicare und Staatseinkommensteuer.",
+    keywords: ["Gehalt", "Nettolohn", "Steuer", "Bundeseinkommensteuer", "FICA", "Gehaltsrechner"],
     inputs: {
       annualSalary: { label: "Jahresgehalt", help: "Ihr Brutto-Jahresgehalt vor Steuern und Abzügen." },
       filingStatus: {
@@ -114,8 +120,10 @@ const i18n: CalculatorI18n = {
   },
   fr: {
     title: "Calculateur de Salaire Net",
+    short: "Salaire Net",
     description:
       "Estimez votre salaire net américain après l'impôt fédéral sur le revenu, la Sécurité sociale, Medicare et l'impôt sur le revenu de l'État.",
+    keywords: ["salaire", "salaire net", "impôt", "impôt fédéral", "FICA", "calculateur de paie"],
     inputs: {
       annualSalary: { label: "Salaire annuel brut", help: "Votre salaire annuel brut avant impôts et déductions." },
       filingStatus: {
@@ -151,8 +159,10 @@ const i18n: CalculatorI18n = {
   },
   es: {
     title: "Calculadora de Salario Neto",
+    short: "Salario Neto",
     description:
       "Estime su salario neto en EE. UU. después del impuesto federal sobre la renta, el Seguro Social, Medicare y el impuesto estatal sobre la renta.",
+    keywords: ["salario", "salario neto", "impuesto", "impuesto federal", "FICA", "calculadora de nómina"],
     inputs: {
       annualSalary: { label: "Salario anual bruto", help: "Su salario anual bruto antes de impuestos y deducciones." },
       filingStatus: {
@@ -188,8 +198,10 @@ const i18n: CalculatorI18n = {
   },
   it: {
     title: "Calcolatore dello Stipendio Netto",
+    short: "Stipendio Netto",
     description:
       "Stima il tuo stipendio netto negli USA dopo l'imposta federale sul reddito, la Previdenza sociale, Medicare e l'imposta statale sul reddito.",
+    keywords: ["stipendio", "stipendio netto", "imposta", "imposta federale", "FICA", "calcolatore busta paga"],
     inputs: {
       annualSalary: { label: "Stipendio annuo lordo", help: "Il vostro stipendio annuo lordo prima di tasse e detrazioni." },
       filingStatus: {
@@ -225,8 +237,10 @@ const i18n: CalculatorI18n = {
   },
   ar: {
     title: "حاسبة الراتب الصافي",
+    short: "الراتب الصافي",
     description:
       "احسب راتبك الصافي في الولايات المتحدة بعد ضريبة الدخل الفيدرالية والضمان الاجتماعي وميديكير وضريبة دخل الولاية.",
+    keywords: ["راتب", "راتب صافي", "ضريبة", "ضريبة دخل", "FICA", "حاسبة الراتب"],
     inputs: {
       annualSalary: { label: "الراتب السنوي الإجمالي", help: "راتبك السنوي الإجمالي قبل الضرائب والخصومات." },
       filingStatus: {
@@ -261,9 +275,11 @@ const i18n: CalculatorI18n = {
     },
   },
   ru: {
-    title: "Калькулятор заработной платы",
+    title: "Калькулятор чистой зарплаты",
+    short: "Чистая зарплата",
     description:
       "Рассчитайте свою чистую зарплату в США после федерального налога на доходы, взносов в Социальное обеспечение, Medicare и налога штата.",
+    keywords: ["зарплата", "чистая зарплата", "налог", "федеральный налог", "FICA", "калькулятор зарплаты"],
     inputs: {
       annualSalary: { label: "Годовая зарплата (брутто)", help: "Ваша годовая зарплата до налогов и удержаний." },
       filingStatus: {
@@ -299,13 +315,15 @@ const i18n: CalculatorI18n = {
   },
   zh: {
     title: "薪资税后收入计算器",
+    short: "税后收入",
     description:
       "估算扣除美国联邦所得税、社会保障税、医疗保险税和州所得税后的税后收入。",
+    keywords: ["薪资", "税后收入", "所得税", "联邦税", "FICA", "工资计算器"],
     inputs: {
       annualSalary: { label: "年薪（税前）", help: "扣税及其他扣款前的年薪总额。" },
       filingStatus: {
         label: "报税身份",
-        help: '您的联邦税务申报身份。如果您未婚且支付了供养合格人员超过一半的费用，则适用"户主"身份。',
+        help: "您的联邦税务申报身份。如果您未婚且支付了供养合格人员超过一半的费用，则适用「户主」身份。",
       },
       stateIncomeTaxRate: {
         label: "州所得税率",
@@ -336,8 +354,10 @@ const i18n: CalculatorI18n = {
   },
   ja: {
     title: "給与・手取り計算ツール",
+    short: "手取り計算",
     description:
       "米国の連邦所得税、社会保障税、メディケア税、州所得税を差し引いた手取り額を試算します。",
+    keywords: ["給与", "手取り", "所得税", "連邦税", "FICA", "給与計算ツール"],
     inputs: {
       annualSalary: { label: "年収（税引き前）", help: "税金や控除前の年収総額。" },
       filingStatus: {
@@ -373,8 +393,10 @@ const i18n: CalculatorI18n = {
   },
   ko: {
     title: "급여 및 실수령액 계산기",
+    short: "실수령액",
     description:
       "미국 연방 소득세, 사회보장세, 메디케어세, 주 소득세를 공제한 후의 실수령액을 추정합니다.",
+    keywords: ["급여", "실수령액", "소득세", "연방세", "FICA", "급여 계산기"],
     inputs: {
       annualSalary: { label: "연봉 (세전)", help: "세금 및 공제 전 총 연봉." },
       filingStatus: {
@@ -410,8 +432,10 @@ const i18n: CalculatorI18n = {
   },
   hi: {
     title: "वेतन और हाथ में आने वाला वेतन कैलकुलेटर",
+    short: "शुद्ध वेतन",
     description:
       "संघीय आयकर, सामाजिक सुरक्षा, Medicare और राज्य आयकर के बाद अमेरिका में हाथ में आने वाले वेतन का अनुमान लगाएं।",
+    keywords: ["वेतन", "शुद्ध वेतन", "आयकर", "संघीय कर", "FICA", "वेतन कैलकुलेटर"],
     inputs: {
       annualSalary: { label: "वार्षिक वेतन (सकल)", help: "करों और कटौतियों से पहले आपका सकल वार्षिक वेतन।" },
       filingStatus: {

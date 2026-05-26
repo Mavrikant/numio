@@ -1,0 +1,1718 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`pregnancy-weight definition — shape snapshot > snapshot: definition shape 1`] = `
+{
+  "category": Any<String>,
+  "compute": [Function],
+  "i18n": {
+    "ar": {
+      "description": "حاسبة مجانية لزيادة الوزن أثناء الحمل استنادًا إلى إرشادات IOM 2009. أدخلي وزنك قبل الحمل وطولك والأسبوع الحالي من الحمل لمعرفة الزيادة الموصى بها.",
+      "errors": {
+        "heightOutOfRange": "يجب أن يكون الطول بين 100 و220 سم.",
+        "weekOutOfRange": "يجب أن يكون أسبوع الحمل بين 1 و42.",
+        "weightOutOfRange": "يجب أن يكون الوزن قيمة موجبة ضمن النطاق الصحيح.",
+      },
+      "faq": [
+        {
+          "a": "يوصي معهد الطب بنطاقات الزيادة الإجمالية التالية وفق مؤشر كتلة الجسم قبل الحمل: نقص الوزن (<18.5): 12.5–18 كجم؛ الوزن الطبيعي (18.5–24.9): 11.5–16 كجم؛ زيادة الوزن (25–29.9): 7–11.5 كجم؛ السمنة (≥30): 5–9 كجم.",
+          "q": "ما هي إرشادات IOM 2009 لزيادة الوزن أثناء الحمل؟",
+        },
+        {
+          "a": "نعم. في الثلاثية الأولى، تكون الزيادة ضئيلة (0.5–2 كجم إجمالًا). تنطبق معدلات IOM الأسبوعية أساسًا على الثلاثيتين الثانية والثالثة.",
+          "q": "هل تتغير زيادة الوزن بين الثلاثيات؟",
+        },
+        {
+          "a": "كل من الزيادة غير الكافية والمفرطة مرتبطة بمخاطر للأم والجنين. التقلبات العرضية طبيعية، لكن إذا ظللتِ خارج النطاق الموصى به لأسابيع متعددة، تشاوري مع طبيبتك أو القابلة.",
+          "q": "هل يجب أن أقلق إذا كنت دون أو فوق الزيادة الموصى بها؟",
+        },
+      ],
+      "inputs": {
+        "currentWeight": {
+          "help": "وزنك اليوم.",
+          "label": "الوزن الحالي",
+        },
+        "gestationalWeek": {
+          "help": "الأسبوع الحالي من الحمل (1–42).",
+          "label": "أسبوع الحمل",
+        },
+        "height": {
+          "help": "طولك لحساب مؤشر كتلة الجسم قبل الحمل.",
+          "label": "الطول",
+        },
+        "prePregnancyWeight": {
+          "help": "وزنك قبل الحمل.",
+          "label": "الوزن قبل الحمل",
+        },
+        "unit": {
+          "help": "اختري المتري (كجم/سم) أو الإمبراطوري (رطل/بوصة).",
+          "label": "نظام الوحدات",
+        },
+      },
+      "keywords": [
+        "حاسبة زيادة الوزن أثناء الحمل",
+        "زيادة الوزن الحملية",
+        "إرشادات IOM للحمل",
+        "الوزن قبل الوضع",
+        "وزن صحي أثناء الحمل",
+        "مؤشر كتلة الجسم للحمل",
+        "زيادة الوزن في كل ثلاثية",
+      ],
+      "options": {
+        "unit": {
+          "imperial": "إمبراطوري (رطل، بوصة)",
+          "metric": "متري (كجم، سم)",
+        },
+      },
+      "outputs": {
+        "bmiCategory": {
+          "help": "فئة مؤشر كتلة الجسم قبل الحمل.",
+          "label": "فئة المؤشر",
+        },
+        "currentGain": {
+          "help": "الوزن المكتسب منذ ما قبل الحمل.",
+          "label": "الزيادة الحالية",
+          "suffix": "كجم",
+        },
+        "expectedGainAtWeek": {
+          "help": "متوسط الزيادة الموصى بها من IOM في أسبوعك الحالي.",
+          "label": "الزيادة المتوقعة هذا الأسبوع",
+          "suffix": "كجم",
+        },
+        "onTrack": {
+          "help": "هل زيادة وزنك الحالية ضمن النطاق المتوقع؟",
+          "label": "الحالة",
+        },
+        "preBmi": {
+          "help": "مؤشرك قبل الحمل.",
+          "label": "مؤشر كتلة الجسم قبل الحمل",
+        },
+        "recommendedTotalGainMax": {
+          "help": "الزيادة الإجمالية القصوى الموصى بها وفق IOM 2009.",
+          "label": "الزيادة الموصى بها (الحد الأقصى)",
+          "suffix": "كجم",
+        },
+        "recommendedTotalGainMin": {
+          "help": "الزيادة الإجمالية الدنيا الموصى بها وفق IOM 2009.",
+          "label": "الزيادة الموصى بها (الحد الأدنى)",
+          "suffix": "كجم",
+        },
+        "weeklyRateKg": {
+          "help": "الزيادة الأسبوعية الموصى بها من IOM في الثلاثية الثانية والثالثة.",
+          "label": "المعدل الأسبوعي الموصى به",
+          "suffix": "كجم/أسبوع",
+        },
+      },
+      "short": "تابعي زيادة وزنك خلال الحمل وفق إرشادات IOM 2009 في كل ثلاثية.",
+      "title": "حاسبة زيادة الوزن أثناء الحمل",
+    },
+    "de": {
+      "description": "Kostenloser Rechner für die Gewichtszunahme in der Schwangerschaft nach IOM-Richtlinien 2009. Geben Sie Ihr Gewicht vor der Schwangerschaft, Ihre Größe und die aktuelle Schwangerschaftswoche ein.",
+      "errors": {
+        "heightOutOfRange": "Die Größe muss zwischen 100 und 220 cm liegen.",
+        "weekOutOfRange": "Die Schwangerschaftswoche muss zwischen 1 und 42 liegen.",
+        "weightOutOfRange": "Das Gewicht muss im gültigen Bereich liegen.",
+      },
+      "faq": [
+        {
+          "a": "Das Institute of Medicine empfiehlt folgende Gesamtzunahmen je nach BMI vor der Schwangerschaft: Untergewicht (<18,5): 12,5–18 kg; Normalgewicht (18,5–24,9): 11,5–16 kg; Übergewicht (25–29,9): 7–11,5 kg; Adipositas (≥30): 5–9 kg.",
+          "q": "Was sind die IOM-Richtlinien 2009 für die Gewichtszunahme in der Schwangerschaft?",
+        },
+        {
+          "a": "Ja. Im ersten Trimester ist die Gewichtszunahme gering (etwa 0,5–2 kg). Die wöchentlichen IOM-Empfehlungen gelten hauptsächlich für das 2. und 3. Trimester.",
+          "q": "Ändert sich die Gewichtszunahme von Trimester zu Trimester?",
+        },
+        {
+          "a": "Sowohl zu geringe als auch zu hohe Gewichtszunahme in der Schwangerschaft birgt Risiken für Mutter und Kind. Gelegentliche Schwankungen sind normal. Wenn Sie über mehrere Wochen außerhalb des empfohlenen Bereichs liegen, sprechen Sie mit Ihrer Hebamme oder Ihrem Arzt.",
+          "q": "Was tun, wenn ich unter oder über der empfohlenen Zunahme liege?",
+        },
+      ],
+      "inputs": {
+        "currentWeight": {
+          "help": "Ihr heutiges Körpergewicht.",
+          "label": "Aktuelles Gewicht",
+        },
+        "gestationalWeek": {
+          "help": "Aktuelle Schwangerschaftswoche (1–42).",
+          "label": "Schwangerschaftswoche",
+        },
+        "height": {
+          "help": "Ihre Körpergröße für die BMI-Berechnung.",
+          "label": "Größe",
+        },
+        "prePregnancyWeight": {
+          "help": "Ihr Gewicht vor der Schwangerschaft.",
+          "label": "Gewicht vor der Schwangerschaft",
+        },
+        "unit": {
+          "help": "Metrisch (kg/cm) oder imperial (lb/Zoll) wählen.",
+          "label": "Einheitensystem",
+        },
+      },
+      "keywords": [
+        "Schwangerschaftsgewicht Rechner",
+        "Gewichtszunahme Schwangerschaft",
+        "IOM Schwangerschaftsrichtlinien",
+        "pränatales Gewicht",
+        "gesunde Schwangerschaft Gewicht",
+        "Schwangerschaft BMI",
+        "Gewichtszunahme Trimester",
+      ],
+      "options": {
+        "unit": {
+          "imperial": "Imperial (lb, Zoll)",
+          "metric": "Metrisch (kg, cm)",
+        },
+      },
+      "outputs": {
+        "bmiCategory": {
+          "help": "BMI-Kategorie vor der Schwangerschaft.",
+          "label": "BMI-Kategorie",
+        },
+        "currentGain": {
+          "help": "Gewichtszunahme seit vor der Schwangerschaft.",
+          "label": "Aktuelle Gewichtszunahme",
+          "suffix": "kg",
+        },
+        "expectedGainAtWeek": {
+          "help": "Erwarteter Mittelwert der IOM-Zunahme für Ihre aktuelle Schwangerschaftswoche.",
+          "label": "Erwartete Zunahme in dieser Woche",
+          "suffix": "kg",
+        },
+        "onTrack": {
+          "help": "Ob Ihre aktuelle Gewichtszunahme im erwarteten Bereich liegt.",
+          "label": "Status",
+        },
+        "preBmi": {
+          "help": "Ihr BMI vor der Schwangerschaft.",
+          "label": "BMI vor der Schwangerschaft",
+        },
+        "recommendedTotalGainMax": {
+          "help": "Maximale empfohlene Gesamtzunahme nach IOM 2009.",
+          "label": "Empfohlene Zunahme (max)",
+          "suffix": "kg",
+        },
+        "recommendedTotalGainMin": {
+          "help": "Minimale empfohlene Gesamtzunahme nach IOM 2009.",
+          "label": "Empfohlene Zunahme (min)",
+          "suffix": "kg",
+        },
+        "weeklyRateKg": {
+          "help": "IOM-empfohlene wöchentliche Gewichtszunahme im 2. und 3. Trimester.",
+          "label": "Empfohlene wöchentliche Zunahme",
+          "suffix": "kg/Woche",
+        },
+      },
+      "short": "Verfolgen Sie Ihre Gewichtszunahme in der Schwangerschaft anhand der IOM-Richtlinien 2009.",
+      "title": "Schwangerschaftsgewicht-Rechner",
+    },
+    "en": {
+      "description": "Free pregnancy weight gain calculator based on IOM 2009 guidelines. Enter your pre-pregnancy weight, height, and current gestational week to see your recommended total gain and whether you are on track.",
+      "errors": {
+        "heightOutOfRange": "Height must be between 100 and 220 cm.",
+        "weekOutOfRange": "Gestational week must be between 1 and 42.",
+        "weightOutOfRange": "Weight must be a positive value within the valid range.",
+      },
+      "faq": [
+        {
+          "a": "The Institute of Medicine (IOM) published updated guidelines in 2009 recommending total weight gain ranges based on pre-pregnancy BMI: Underweight (<18.5): 12.5–18 kg; Normal weight (18.5–24.9): 11.5–16 kg; Overweight (25–29.9): 7–11.5 kg; Obese (≥30): 5–9 kg. Weekly rates in the 2nd and 3rd trimester are approximately 0.5, 0.42, 0.28, and 0.22 kg respectively.",
+          "q": "What are the IOM 2009 pregnancy weight gain guidelines?",
+        },
+        {
+          "a": "Yes. In the first trimester, weight gain is minimal — typically 0.5 to 2 kg total. The 2nd and 3rd trimesters involve more consistent weekly gains. The IOM weekly rate guidelines apply mainly to the 2nd and 3rd trimesters. This calculator uses a simplified linear model for the first trimester and the IOM weekly rates thereafter.",
+          "q": "Does the rate of weight gain change across trimesters?",
+        },
+        {
+          "a": "This calculator is designed for singleton pregnancies. The IOM has separate guidelines for twins (typically 17–25 kg for normal weight with twins). For multiple pregnancies, consult your obstetrician for personalised guidance.",
+          "q": "What if I'm carrying twins?",
+        },
+        {
+          "a": "Both insufficient and excessive weight gain during pregnancy are associated with risks for mother and baby. However, occasional fluctuations are normal. If you are consistently outside the recommended range for several weeks, discuss this with your healthcare provider who can consider your individual circumstances.",
+          "q": "Should I be worried if I'm below or above the recommended gain?",
+        },
+        {
+          "a": "No. Weight gained during pregnancy is distributed across many components: the baby (typically 3–4 kg at term), placenta (~0.7 kg), amniotic fluid (~0.8 kg), uterine enlargement (~0.9 kg), increased blood volume (~1.8 kg), breast tissue (~0.4 kg), and maternal fat stores (~2–5 kg). The rest is water retention in maternal tissues.",
+          "q": "Is all pregnancy weight gain from the baby?",
+        },
+      ],
+      "inputs": {
+        "currentWeight": {
+          "help": "Your weight today.",
+          "label": "Current weight",
+        },
+        "gestationalWeek": {
+          "help": "Current week of pregnancy (1–42).",
+          "label": "Gestational week",
+        },
+        "height": {
+          "help": "Your height (for calculating pre-pregnancy BMI).",
+          "label": "Height",
+        },
+        "prePregnancyWeight": {
+          "help": "Your weight before pregnancy (before week 1).",
+          "label": "Pre-pregnancy weight",
+        },
+        "unit": {
+          "help": "Choose metric (kg/cm) or imperial (lb/in).",
+          "label": "Unit system",
+        },
+      },
+      "keywords": [
+        "pregnancy weight gain calculator",
+        "gestational weight gain",
+        "IOM pregnancy guidelines",
+        "prenatal weight",
+        "healthy pregnancy weight",
+        "pregnancy BMI",
+        "weight gain by trimester",
+      ],
+      "options": {
+        "unit": {
+          "imperial": "Imperial (lb, in)",
+          "metric": "Metric (kg, cm)",
+        },
+      },
+      "outputs": {
+        "bmiCategory": {
+          "help": "Pre-pregnancy BMI category (underweight, normal, overweight, obese).",
+          "label": "BMI category",
+        },
+        "currentGain": {
+          "help": "How much weight you have gained since pre-pregnancy.",
+          "label": "Current weight gain",
+          "suffix": "kg",
+        },
+        "expectedGainAtWeek": {
+          "help": "The midpoint of the IOM-recommended gain at your current gestational week.",
+          "label": "Expected gain at this week",
+          "suffix": "kg",
+        },
+        "onTrack": {
+          "help": "Whether your current weight gain is within, below, or above the expected range for your gestational week.",
+          "label": "Status",
+        },
+        "preBmi": {
+          "help": "Your BMI before pregnancy, used to determine the IOM weight gain category.",
+          "label": "Pre-pregnancy BMI",
+        },
+        "recommendedTotalGainMax": {
+          "help": "Maximum total weight gain recommended by IOM 2009 for your BMI category.",
+          "label": "Recommended gain (max)",
+          "suffix": "kg",
+        },
+        "recommendedTotalGainMin": {
+          "help": "Minimum total weight gain recommended by IOM 2009 for your BMI category.",
+          "label": "Recommended gain (min)",
+          "suffix": "kg",
+        },
+        "weeklyRateKg": {
+          "help": "IOM-recommended weekly weight gain in 2nd and 3rd trimester.",
+          "label": "Recommended weekly rate",
+          "suffix": "kg/week",
+        },
+      },
+      "short": "Track your pregnancy weight gain against IOM 2009 guidelines by trimester.",
+      "title": "Pregnancy Weight Gain Calculator",
+    },
+    "es": {
+      "description": "Calculadora gratuita de aumento de peso en el embarazo basada en las directrices IOM 2009. Introduce tu peso pregestacional, talla y semana gestacional actual para ver el aumento recomendado.",
+      "errors": {
+        "heightOutOfRange": "La talla debe estar entre 100 y 220 cm.",
+        "weekOutOfRange": "La semana gestacional debe estar entre 1 y 42.",
+        "weightOutOfRange": "El peso debe ser un valor positivo dentro del rango válido.",
+      },
+      "faq": [
+        {
+          "a": "El Instituto de Medicina recomienda los siguientes rangos de aumento total según el IMC pregestacional: Bajo peso (<18,5): 12,5–18 kg; Peso normal (18,5–24,9): 11,5–16 kg; Sobrepeso (25–29,9): 7–11,5 kg; Obesidad (≥30): 5–9 kg.",
+          "q": "¿Cuáles son las directrices IOM 2009 sobre el aumento de peso en el embarazo?",
+        },
+        {
+          "a": "Sí. En el primer trimestre, el aumento es mínimo (0,5 a 2 kg en total). Las tasas semanales de IOM se aplican principalmente al 2.º y 3.er trimestre.",
+          "q": "¿Varía la tasa de aumento de peso entre trimestres?",
+        },
+        {
+          "a": "Tanto el aumento insuficiente como el excesivo se asocian con riesgos para la madre y el bebé. Las fluctuaciones ocasionales son normales. Si te mantienes fuera del rango recomendado durante varias semanas, consulta a tu médico o matrona.",
+          "q": "¿Debo preocuparme si estoy por debajo o por encima del aumento recomendado?",
+        },
+      ],
+      "inputs": {
+        "currentWeight": {
+          "help": "Tu peso hoy.",
+          "label": "Peso actual",
+        },
+        "gestationalWeek": {
+          "help": "Semana actual del embarazo (1–42).",
+          "label": "Semana gestacional",
+        },
+        "height": {
+          "help": "Tu talla para calcular el IMC pregestacional.",
+          "label": "Talla",
+        },
+        "prePregnancyWeight": {
+          "help": "Tu peso antes del embarazo.",
+          "label": "Peso pregestacional",
+        },
+        "unit": {
+          "help": "Métrico (kg/cm) o imperial (lb/in).",
+          "label": "Sistema de unidades",
+        },
+      },
+      "keywords": [
+        "calculadora peso embarazo",
+        "aumento peso gestacional",
+        "directrices IOM embarazo",
+        "peso prenatal",
+        "embarazo peso saludable",
+        "IMC embarazo",
+        "aumento peso por trimestre",
+      ],
+      "options": {
+        "unit": {
+          "imperial": "Imperial (lb, in)",
+          "metric": "Métrico (kg, cm)",
+        },
+      },
+      "outputs": {
+        "bmiCategory": {
+          "help": "Categoría de IMC pregestacional.",
+          "label": "Categoría de IMC",
+        },
+        "currentGain": {
+          "help": "Peso ganado desde antes del embarazo.",
+          "label": "Aumento actual",
+          "suffix": "kg",
+        },
+        "expectedGainAtWeek": {
+          "help": "Punto medio del aumento recomendado por IOM en tu semana gestacional actual.",
+          "label": "Aumento esperado en esta semana",
+          "suffix": "kg",
+        },
+        "onTrack": {
+          "help": "Si tu aumento de peso actual está dentro del rango esperado.",
+          "label": "Estado",
+        },
+        "preBmi": {
+          "help": "Tu IMC antes del embarazo.",
+          "label": "IMC pregestacional",
+        },
+        "recommendedTotalGainMax": {
+          "help": "Aumento total máximo recomendado por IOM 2009.",
+          "label": "Aumento recomendado (máx)",
+          "suffix": "kg",
+        },
+        "recommendedTotalGainMin": {
+          "help": "Aumento total mínimo recomendado por IOM 2009.",
+          "label": "Aumento recomendado (mín)",
+          "suffix": "kg",
+        },
+        "weeklyRateKg": {
+          "help": "Aumento semanal recomendado por IOM en el 2.º y 3.er trimestre.",
+          "label": "Tasa semanal recomendada",
+          "suffix": "kg/semana",
+        },
+      },
+      "short": "Sigue tu aumento de peso en el embarazo según las directrices IOM 2009 por trimestre.",
+      "title": "Calculadora de aumento de peso en el embarazo",
+    },
+    "fr": {
+      "description": "Calculateur gratuit de prise de poids pendant la grossesse selon les directives IOM 2009. Saisissez votre poids avant grossesse, votre taille et la semaine d'aménorrhée actuelle.",
+      "errors": {
+        "heightOutOfRange": "La taille doit être comprise entre 100 et 220 cm.",
+        "weekOutOfRange": "La semaine de grossesse doit être comprise entre 1 et 42.",
+        "weightOutOfRange": "Le poids doit être une valeur positive dans la plage valide.",
+      },
+      "faq": [
+        {
+          "a": "L'Institut de Médecine recommande les prises de poids totales suivantes selon l'IMC pré-grossesse : Insuffisance pondérale (<18,5) : 12,5–18 kg ; Poids normal (18,5–24,9) : 11,5–16 kg ; Surpoids (25–29,9) : 7–11,5 kg ; Obésité (≥30) : 5–9 kg.",
+          "q": "Quelles sont les directives IOM 2009 sur la prise de poids pendant la grossesse ?",
+        },
+        {
+          "a": "Oui. Au premier trimestre, la prise est minime (0,5 à 2 kg au total). Les rythmes hebdomadaires de l'IOM s'appliquent principalement aux 2ᵉ et 3ᵉ trimestres.",
+          "q": "La prise de poids varie-t-elle d'un trimestre à l'autre ?",
+        },
+        {
+          "a": "Une prise insuffisante ou excessive est associée à des risques pour la mère et le bébé. Des fluctuations ponctuelles sont normales. Si vous restez en dehors de la fourchette recommandée pendant plusieurs semaines, consultez votre sage-femme ou médecin.",
+          "q": "Dois-je m'inquiéter si je suis en dessous ou au-dessus de la prise recommandée ?",
+        },
+      ],
+      "inputs": {
+        "currentWeight": {
+          "help": "Votre poids aujourd'hui.",
+          "label": "Poids actuel",
+        },
+        "gestationalWeek": {
+          "help": "Semaine actuelle de grossesse (1–42).",
+          "label": "Semaine de grossesse",
+        },
+        "height": {
+          "help": "Votre taille pour calculer l'IMC pré-grossesse.",
+          "label": "Taille",
+        },
+        "prePregnancyWeight": {
+          "help": "Votre poids avant la grossesse.",
+          "label": "Poids avant la grossesse",
+        },
+        "unit": {
+          "help": "Métrique (kg/cm) ou impérial (lb/po).",
+          "label": "Système d'unités",
+        },
+      },
+      "keywords": [
+        "calculateur prise de poids grossesse",
+        "prise de poids gestationnelle",
+        "directives IOM grossesse",
+        "poids prénatal",
+        "grossesse poids santé",
+        "IMC grossesse",
+        "prise de poids par trimestre",
+      ],
+      "options": {
+        "unit": {
+          "imperial": "Impérial (lb, po)",
+          "metric": "Métrique (kg, cm)",
+        },
+      },
+      "outputs": {
+        "bmiCategory": {
+          "help": "Catégorie d'IMC avant la grossesse.",
+          "label": "Catégorie d'IMC",
+        },
+        "currentGain": {
+          "help": "Poids pris depuis avant la grossesse.",
+          "label": "Prise actuelle",
+          "suffix": "kg",
+        },
+        "expectedGainAtWeek": {
+          "help": "Valeur médiane de la prise recommandée par l'IOM à votre semaine actuelle.",
+          "label": "Prise attendue à cette semaine",
+          "suffix": "kg",
+        },
+        "onTrack": {
+          "help": "Indique si votre prise de poids est dans la fourchette attendue.",
+          "label": "Statut",
+        },
+        "preBmi": {
+          "help": "Votre IMC avant la grossesse.",
+          "label": "IMC avant la grossesse",
+        },
+        "recommendedTotalGainMax": {
+          "help": "Prise totale maximale recommandée par l'IOM 2009.",
+          "label": "Prise recommandée (max)",
+          "suffix": "kg",
+        },
+        "recommendedTotalGainMin": {
+          "help": "Prise totale minimale recommandée par l'IOM 2009.",
+          "label": "Prise recommandée (min)",
+          "suffix": "kg",
+        },
+        "weeklyRateKg": {
+          "help": "Prise de poids hebdomadaire recommandée aux 2ᵉ et 3ᵉ trimestres.",
+          "label": "Rythme hebdomadaire recommandé",
+          "suffix": "kg/semaine",
+        },
+      },
+      "short": "Suivez votre prise de poids pendant la grossesse selon les directives IOM 2009.",
+      "title": "Calculateur de prise de poids pendant la grossesse",
+    },
+    "hi": {
+      "description": "IOM 2009 दिशानिर्देशों पर आधारित निःशुल्क गर्भावस्था वज़न वृद्धि कैलकुलेटर। गर्भावस्था से पहले का वज़न, ऊंचाई और वर्तमान गर्भावस्था सप्ताह दर्ज करें।",
+      "errors": {
+        "heightOutOfRange": "ऊंचाई 100 से 220 cm के बीच होनी चाहिए।",
+        "weekOutOfRange": "गर्भावस्था सप्ताह 1 से 42 के बीच होना चाहिए।",
+        "weightOutOfRange": "वज़न मान्य सीमा में एक सकारात्मक मान होना चाहिए।",
+      },
+      "faq": [
+        {
+          "a": "इंस्टीट्यूट ऑफ मेडिसिन ने गर्भावस्था से पहले के BMI के आधार पर कुल वज़न वृद्धि की ये सीमाएं अनुशंसित की हैं: कम वज़न (<18.5): 12.5–18 kg; सामान्य वज़न (18.5–24.9): 11.5–16 kg; अधिक वज़न (25–29.9): 7–11.5 kg; मोटापा (≥30): 5–9 kg।",
+          "q": "IOM 2009 गर्भावस्था वज़न वृद्धि दिशानिर्देश क्या हैं?",
+        },
+        {
+          "a": "हां। पहली तिमाही में वृद्धि न्यूनतम होती है (कुल 0.5–2 kg)। IOM की साप्ताहिक अनुशंसाएं मुख्यतः दूसरी और तीसरी तिमाही पर लागू होती हैं।",
+          "q": "क्या तिमाहियों में वज़न वृद्धि की दर बदलती है?",
+        },
+        {
+          "a": "गर्भावस्था के दौरान अपर्याप्त और अत्यधिक वज़न वृद्धि दोनों माँ और शिशु के लिए जोखिम से जुड़े हैं। कभी-कभी के उतार-चढ़ाव सामान्य हैं। यदि आप कई हफ्तों तक अनुशंसित सीमा से बाहर रहती हैं तो अपने स्वास्थ्य सेवा प्रदाता से परामर्श लें।",
+          "q": "क्या अनुशंसित से कम या अधिक वृद्धि चिंताजनक है?",
+        },
+      ],
+      "inputs": {
+        "currentWeight": {
+          "help": "आज का आपका वज़न।",
+          "label": "वर्तमान वज़न",
+        },
+        "gestationalWeek": {
+          "help": "गर्भावस्था का वर्तमान सप्ताह (1–42)।",
+          "label": "गर्भावस्था सप्ताह",
+        },
+        "height": {
+          "help": "गर्भावस्था से पहले का BMI गणना के लिए आपकी ऊंचाई।",
+          "label": "ऊंचाई",
+        },
+        "prePregnancyWeight": {
+          "help": "गर्भावस्था से पहले का आपका वज़न।",
+          "label": "गर्भावस्था से पहले का वज़न",
+        },
+        "unit": {
+          "help": "मेट्रिक (kg/cm) या इम्पीरियल (lb/in) चुनें।",
+          "label": "माप प्रणाली",
+        },
+      },
+      "keywords": [
+        "गर्भावस्था वज़न वृद्धि कैलकुलेटर",
+        "गर्भावस्था के दौरान वज़न",
+        "IOM गर्भावस्था दिशानिर्देश",
+        "प्रसव पूर्व वज़न",
+        "स्वस्थ गर्भावस्था वज़न",
+        "गर्भावस्था BMI",
+        "तिमाही वज़न वृद्धि",
+      ],
+      "options": {
+        "unit": {
+          "imperial": "इम्पीरियल (lb, in)",
+          "metric": "मेट्रिक (kg, cm)",
+        },
+      },
+      "outputs": {
+        "bmiCategory": {
+          "help": "गर्भावस्था से पहले की BMI श्रेणी।",
+          "label": "BMI श्रेणी",
+        },
+        "currentGain": {
+          "help": "गर्भावस्था से पहले से अब तक बढ़ा हुआ वज़न।",
+          "label": "वर्तमान वज़न वृद्धि",
+          "suffix": "kg",
+        },
+        "expectedGainAtWeek": {
+          "help": "वर्तमान गर्भावस्था सप्ताह के लिए IOM अनुशंसित वृद्धि का मध्य बिंदु।",
+          "label": "इस सप्ताह अपेक्षित वृद्धि",
+          "suffix": "kg",
+        },
+        "onTrack": {
+          "help": "क्या आपकी वर्तमान वज़न वृद्धि अपेक्षित सीमा में है।",
+          "label": "स्थिति",
+        },
+        "preBmi": {
+          "help": "गर्भावस्था से पहले का BMI मान।",
+          "label": "गर्भावस्था से पहले का BMI",
+        },
+        "recommendedTotalGainMax": {
+          "help": "IOM 2009 के अनुसार अधिकतम अनुशंसित कुल वज़न वृद्धि।",
+          "label": "अनुशंसित कुल वृद्धि (अधिकतम)",
+          "suffix": "kg",
+        },
+        "recommendedTotalGainMin": {
+          "help": "IOM 2009 के अनुसार न्यूनतम अनुशंसित कुल वज़न वृद्धि।",
+          "label": "अनुशंसित कुल वृद्धि (न्यूनतम)",
+          "suffix": "kg",
+        },
+        "weeklyRateKg": {
+          "help": "दूसरी और तीसरी तिमाही में IOM अनुशंसित साप्ताहिक वज़न वृद्धि दर।",
+          "label": "अनुशंसित साप्ताहिक वृद्धि",
+          "suffix": "kg/सप्ताह",
+        },
+      },
+      "short": "IOM 2009 दिशानिर्देशों के अनुसार तिमाही दर तिमाही अपनी गर्भावस्था वज़न वृद्धि ट्रैक करें।",
+      "title": "गर्भावस्था वज़न वृद्धि कैलकुलेटर",
+    },
+    "it": {
+      "description": "Calcolatore gratuito dell'aumento di peso in gravidanza basato sulle linee guida IOM 2009. Inserisci peso pre-gravidanza, altezza e settimana gestazionale attuale per vedere l'aumento raccomandato.",
+      "errors": {
+        "heightOutOfRange": "L'altezza deve essere compresa tra 100 e 220 cm.",
+        "weekOutOfRange": "La settimana gestazionale deve essere compresa tra 1 e 42.",
+        "weightOutOfRange": "Il peso deve essere un valore positivo nell'intervallo valido.",
+      },
+      "faq": [
+        {
+          "a": "L'Institute of Medicine raccomanda i seguenti aumenti totali in base al BMI pre-gravidanza: Sottopeso (<18,5): 12,5–18 kg; Normopeso (18,5–24,9): 11,5–16 kg; Sovrappeso (25–29,9): 7–11,5 kg; Obesità (≥30): 5–9 kg.",
+          "q": "Quali sono le linee guida IOM 2009 sull'aumento di peso in gravidanza?",
+        },
+        {
+          "a": "Sì. Nel primo trimestre, l'aumento è minimo (0,5–2 kg totali). I tassi settimanali IOM si applicano principalmente al 2º e 3º trimestre.",
+          "q": "Il ritmo di aumento cambia tra i trimestri?",
+        },
+        {
+          "a": "Sia l'aumento insufficiente che eccessivo è associato a rischi per madre e bambino. Le fluttuazioni occasionali sono normali. Se rimani fuori dall'intervallo raccomandato per diverse settimane, consulta il tuo medico o ostetrica.",
+          "q": "Devo preoccuparmi se sono al di sotto o al di sopra dell'aumento raccomandato?",
+        },
+      ],
+      "inputs": {
+        "currentWeight": {
+          "help": "Il tuo peso oggi.",
+          "label": "Peso attuale",
+        },
+        "gestationalWeek": {
+          "help": "Settimana attuale di gravidanza (1–42).",
+          "label": "Settimana gestazionale",
+        },
+        "height": {
+          "help": "La tua altezza per calcolare il BMI pre-gravidanza.",
+          "label": "Altezza",
+        },
+        "prePregnancyWeight": {
+          "help": "Il tuo peso prima della gravidanza.",
+          "label": "Peso pre-gravidanza",
+        },
+        "unit": {
+          "help": "Metrico (kg/cm) o imperiale (lb/in).",
+          "label": "Sistema di unità",
+        },
+      },
+      "keywords": [
+        "calcolatore peso gravidanza",
+        "aumento peso gestazionale",
+        "linee guida IOM gravidanza",
+        "peso prenatale",
+        "gravidanza peso sano",
+        "BMI gravidanza",
+        "aumento peso per trimestre",
+      ],
+      "options": {
+        "unit": {
+          "imperial": "Imperiale (lb, in)",
+          "metric": "Metrico (kg, cm)",
+        },
+      },
+      "outputs": {
+        "bmiCategory": {
+          "help": "Categoria BMI pre-gravidanza.",
+          "label": "Categoria BMI",
+        },
+        "currentGain": {
+          "help": "Peso guadagnato dalla pre-gravidanza ad oggi.",
+          "label": "Aumento attuale",
+          "suffix": "kg",
+        },
+        "expectedGainAtWeek": {
+          "help": "Valore mediano dell'aumento IOM raccomandato per la tua settimana gestazionale.",
+          "label": "Aumento atteso a questa settimana",
+          "suffix": "kg",
+        },
+        "onTrack": {
+          "help": "Se il tuo aumento di peso attuale è nell'intervallo atteso.",
+          "label": "Stato",
+        },
+        "preBmi": {
+          "help": "Il tuo BMI prima della gravidanza.",
+          "label": "BMI pre-gravidanza",
+        },
+        "recommendedTotalGainMax": {
+          "help": "Aumento totale massimo consigliato dall'IOM 2009.",
+          "label": "Aumento consigliato (max)",
+          "suffix": "kg",
+        },
+        "recommendedTotalGainMin": {
+          "help": "Aumento totale minimo consigliato dall'IOM 2009.",
+          "label": "Aumento consigliato (min)",
+          "suffix": "kg",
+        },
+        "weeklyRateKg": {
+          "help": "Aumento settimanale consigliato dall'IOM nel 2º e 3º trimestre.",
+          "label": "Tasso settimanale consigliato",
+          "suffix": "kg/settimana",
+        },
+      },
+      "short": "Monitora l'aumento di peso in gravidanza secondo le linee guida IOM 2009 per trimestre.",
+      "title": "Calcolatore dell'aumento di peso in gravidanza",
+    },
+    "ja": {
+      "description": "IOM 2009ガイドラインに基づく無料の妊娠中体重増加計算機。妊娠前の体重・身長・現在の妊娠週数を入力して、推奨される総増加量と現在の状況を確認できます。",
+      "errors": {
+        "heightOutOfRange": "身長は100〜220 cmの範囲で入力してください。",
+        "weekOutOfRange": "妊娠週数は1〜42の範囲で入力してください。",
+        "weightOutOfRange": "体重は有効な範囲内の正の数を入力してください。",
+      },
+      "faq": [
+        {
+          "a": "アメリカ医学研究所は妊娠前BMIに基づく総体重増加範囲を推奨しています：低体重（<18.5）：12.5〜18 kg；普通体重（18.5〜24.9）：11.5〜16 kg；過体重（25〜29.9）：7〜11.5 kg；肥満（≥30）：5〜9 kg。",
+          "q": "IOM 2009の妊娠中体重増加ガイドラインとは？",
+        },
+        {
+          "a": "はい。第1トリメスターは増加が最小限（合計0.5〜2 kg）です。IOMの週間推奨量は主に第2・第3トリメスターに適用されます。",
+          "q": "体重増加率はトリメスターによって変わりますか？",
+        },
+        {
+          "a": "妊娠中の体重増加不足・過多はともに母子のリスクと関連します。一時的な変動は正常です。数週間にわたって推奨範囲を外れる場合は産科医や助産師に相談してください。",
+          "q": "推奨量を下回るまたは超えた場合は心配すべきですか？",
+        },
+      ],
+      "inputs": {
+        "currentWeight": {
+          "help": "今日の体重。",
+          "label": "現在の体重",
+        },
+        "gestationalWeek": {
+          "help": "現在の妊娠週数（1〜42）。",
+          "label": "妊娠週数",
+        },
+        "height": {
+          "help": "妊娠前BMI計算のための身長。",
+          "label": "身長",
+        },
+        "prePregnancyWeight": {
+          "help": "妊娠前の体重。",
+          "label": "妊娠前体重",
+        },
+        "unit": {
+          "help": "メートル法（kg/cm）またはヤード・ポンド法（lb/in）。",
+          "label": "単位系",
+        },
+      },
+      "keywords": [
+        "妊娠中 体重増加 計算機",
+        "妊娠期 体重増加",
+        "IOM 妊娠 ガイドライン",
+        "産前 体重",
+        "妊娠 健康体重",
+        "妊娠 BMI",
+        "妊娠期別 体重増加",
+      ],
+      "options": {
+        "unit": {
+          "imperial": "ヤード・ポンド法（lb・in）",
+          "metric": "メートル法（kg・cm）",
+        },
+      },
+      "outputs": {
+        "bmiCategory": {
+          "help": "妊娠前のBMI区分。",
+          "label": "BMI区分",
+        },
+        "currentGain": {
+          "help": "妊娠前からの体重増加量。",
+          "label": "現在の体重増加量",
+          "suffix": "kg",
+        },
+        "expectedGainAtWeek": {
+          "help": "現在の妊娠週数でのIOM推奨増加量の中間値。",
+          "label": "この週の期待増加量",
+          "suffix": "kg",
+        },
+        "onTrack": {
+          "help": "現在の体重増加が期待範囲内かどうか。",
+          "label": "状態",
+        },
+        "preBmi": {
+          "help": "妊娠前のBMI値。",
+          "label": "妊娠前BMI",
+        },
+        "recommendedTotalGainMax": {
+          "help": "IOM 2009が推奨する最大総体重増加量。",
+          "label": "推奨総増加量（最大）",
+          "suffix": "kg",
+        },
+        "recommendedTotalGainMin": {
+          "help": "IOM 2009が推奨する最小総体重増加量。",
+          "label": "推奨総増加量（最小）",
+          "suffix": "kg",
+        },
+        "weeklyRateKg": {
+          "help": "第2・第3トリメスターでのIOM推奨週間体重増加量。",
+          "label": "推奨週間増加率",
+          "suffix": "kg/週",
+        },
+      },
+      "short": "IOM 2009ガイドラインに基づいて、妊娠期の体重増加をトリメスター別に追跡します。",
+      "title": "妊娠中の体重増加計算機",
+    },
+    "ko": {
+      "description": "IOM 2009 지침에 기반한 무료 임신 중 체중 증가 계산기. 임신 전 체중, 키, 현재 임신 주수를 입력하면 권장 총 증가량과 현재 상태를 확인할 수 있습니다.",
+      "errors": {
+        "heightOutOfRange": "키는 100~220 cm 사이여야 합니다.",
+        "weekOutOfRange": "임신 주수는 1~42주 사이여야 합니다.",
+        "weightOutOfRange": "체중은 유효 범위 내의 양수여야 합니다.",
+      },
+      "faq": [
+        {
+          "a": "미국 의학연구소(IOM)는 임신 전 BMI에 따른 총 체중 증가 범위를 권장합니다: 저체중(<18.5): 12.5–18 kg; 정상 체중(18.5–24.9): 11.5–16 kg; 과체중(25–29.9): 7–11.5 kg; 비만(≥30): 5–9 kg.",
+          "q": "IOM 2009 임신 중 체중 증가 지침은 무엇인가요?",
+        },
+        {
+          "a": "네. 임신 1기에는 증가가 매우 적습니다(총 0.5–2 kg). IOM의 주간 권장량은 주로 임신 2기와 3기에 적용됩니다.",
+          "q": "체중 증가 속도는 각 분기에 따라 다른가요?",
+        },
+        {
+          "a": "임신 중 체중 증가 부족과 과다 모두 모체와 태아에 위험과 관련됩니다. 일시적인 변동은 정상입니다. 수주간 권장 범위를 벗어나면 산부인과 의사나 조산사와 상담하세요.",
+          "q": "권장 증가량보다 적거나 많으면 걱정해야 하나요?",
+        },
+      ],
+      "inputs": {
+        "currentWeight": {
+          "help": "오늘의 체중.",
+          "label": "현재 체중",
+        },
+        "gestationalWeek": {
+          "help": "현재 임신 주수(1~42주).",
+          "label": "임신 주수",
+        },
+        "height": {
+          "help": "임신 전 BMI 계산을 위한 키.",
+          "label": "키",
+        },
+        "prePregnancyWeight": {
+          "help": "임신 전 체중.",
+          "label": "임신 전 체중",
+        },
+        "unit": {
+          "help": "미터법(kg/cm) 또는 야드파운드법(lb/in)을 선택하세요.",
+          "label": "단위 시스템",
+        },
+      },
+      "keywords": [
+        "임신 체중 증가 계산기",
+        "임신 중 체중 증가",
+        "IOM 임신 지침",
+        "산전 체중",
+        "건강한 임신 체중",
+        "임신 BMI",
+        "분기별 체중 증가",
+      ],
+      "options": {
+        "unit": {
+          "imperial": "야드파운드법(lb, in)",
+          "metric": "미터법(kg, cm)",
+        },
+      },
+      "outputs": {
+        "bmiCategory": {
+          "help": "임신 전 BMI 분류.",
+          "label": "BMI 분류",
+        },
+        "currentGain": {
+          "help": "임신 전부터 현재까지 증가한 체중.",
+          "label": "현재 체중 증가량",
+          "suffix": "kg",
+        },
+        "expectedGainAtWeek": {
+          "help": "현재 임신 주수에서 IOM 권장 증가량의 중간값.",
+          "label": "이번 주 예상 증가량",
+          "suffix": "kg",
+        },
+        "onTrack": {
+          "help": "현재 체중 증가가 예상 범위 내에 있는지 여부.",
+          "label": "상태",
+        },
+        "preBmi": {
+          "help": "임신 전 BMI 값.",
+          "label": "임신 전 BMI",
+        },
+        "recommendedTotalGainMax": {
+          "help": "IOM 2009 권장 최대 총 체중 증가량.",
+          "label": "권장 총 증가량(최대)",
+          "suffix": "kg",
+        },
+        "recommendedTotalGainMin": {
+          "help": "IOM 2009 권장 최소 총 체중 증가량.",
+          "label": "권장 총 증가량(최소)",
+          "suffix": "kg",
+        },
+        "weeklyRateKg": {
+          "help": "임신 2기 및 3기에서 IOM 권장 주간 체중 증가량.",
+          "label": "권장 주간 증가율",
+          "suffix": "kg/주",
+        },
+      },
+      "short": "IOM 2009 지침에 따라 분기별로 임신 중 체중 증가를 추적하세요.",
+      "title": "임신 중 체중 증가 계산기",
+    },
+    "ru": {
+      "description": "Бесплатный калькулятор набора веса при беременности по рекомендациям IOM 2009. Введите вес до беременности, рост и текущую неделю беременности для расчёта рекомендуемой прибавки.",
+      "errors": {
+        "heightOutOfRange": "Рост должен быть от 100 до 220 см.",
+        "weekOutOfRange": "Неделя беременности должна быть от 1 до 42.",
+        "weightOutOfRange": "Вес должен быть положительным числом в допустимом диапазоне.",
+      },
+      "faq": [
+        {
+          "a": "Институт медицины рекомендует следующие диапазоны общей прибавки в зависимости от ИМТ до беременности: Дефицит массы тела (<18,5): 12,5–18 кг; Нормальная масса (18,5–24,9): 11,5–16 кг; Избыточная масса (25–29,9): 7–11,5 кг; Ожирение (≥30): 5–9 кг.",
+          "q": "Каковы рекомендации IOM 2009 по набору веса при беременности?",
+        },
+        {
+          "a": "Да. В первом триместре прибавка минимальна (0,5–2 кг всего). Еженедельные показатели IOM применяются главным образом ко 2-му и 3-му триместрам.",
+          "q": "Меняется ли темп набора веса в разных триместрах?",
+        },
+        {
+          "a": "Как недостаточная, так и избыточная прибавка веса при беременности связана с рисками для матери и ребёнка. Редкие колебания нормальны. Если вы систематически выходите за рекомендуемые пределы, обсудите это с вашим акушером или акушеркой.",
+          "q": "Нужно ли беспокоиться, если прибавка выше или ниже рекомендуемой?",
+        },
+      ],
+      "inputs": {
+        "currentWeight": {
+          "help": "Ваш вес на сегодняшний день.",
+          "label": "Текущий вес",
+        },
+        "gestationalWeek": {
+          "help": "Текущая неделя беременности (1–42).",
+          "label": "Неделя беременности",
+        },
+        "height": {
+          "help": "Ваш рост для расчёта ИМТ до беременности.",
+          "label": "Рост",
+        },
+        "prePregnancyWeight": {
+          "help": "Ваш вес до наступления беременности.",
+          "label": "Вес до беременности",
+        },
+        "unit": {
+          "help": "Метрическая (кг/см) или имперская (фунт/дюйм).",
+          "label": "Система единиц",
+        },
+      },
+      "keywords": [
+        "калькулятор набора веса при беременности",
+        "гестационная прибавка веса",
+        "рекомендации IOM беременность",
+        "пренатальный вес",
+        "здоровый вес при беременности",
+        "ИМТ при беременности",
+        "набор веса по триместрам",
+      ],
+      "options": {
+        "unit": {
+          "imperial": "Имперская (фунт, дюйм)",
+          "metric": "Метрическая (кг, см)",
+        },
+      },
+      "outputs": {
+        "bmiCategory": {
+          "help": "Категория ИМТ до беременности.",
+          "label": "Категория ИМТ",
+        },
+        "currentGain": {
+          "help": "Набранный вес с момента до беременности.",
+          "label": "Текущая прибавка",
+          "suffix": "кг",
+        },
+        "expectedGainAtWeek": {
+          "help": "Среднее значение рекомендуемой IOM прибавки на текущей неделе беременности.",
+          "label": "Ожидаемая прибавка на этой неделе",
+          "suffix": "кг",
+        },
+        "onTrack": {
+          "help": "Соответствует ли текущая прибавка ожидаемому диапазону.",
+          "label": "Статус",
+        },
+        "preBmi": {
+          "help": "Ваш ИМТ до беременности.",
+          "label": "ИМТ до беременности",
+        },
+        "recommendedTotalGainMax": {
+          "help": "Максимальная общая прибавка веса по рекомендациям IOM 2009.",
+          "label": "Рекомендуемая прибавка (макс)",
+          "suffix": "кг",
+        },
+        "recommendedTotalGainMin": {
+          "help": "Минимальная общая прибавка веса по рекомендациям IOM 2009.",
+          "label": "Рекомендуемая прибавка (мин)",
+          "suffix": "кг",
+        },
+        "weeklyRateKg": {
+          "help": "Еженедельная прибавка по рекомендациям IOM во 2-м и 3-м триместрах.",
+          "label": "Рекомендуемая недельная прибавка",
+          "suffix": "кг/нед",
+        },
+      },
+      "short": "Отслеживайте набор веса при беременности по рекомендациям IOM 2009 по триместрам.",
+      "title": "Калькулятор набора веса при беременности",
+    },
+    "tr": {
+      "description": "IOM 2009 kılavuzlarına dayalı ücretsiz gebelik kilo artışı hesaplayıcı. Gebelik öncesi kilonuzu, boyunuzu ve mevcut gebelik haftanızı girerek önerilen toplam artışı öğrenin.",
+      "errors": {
+        "heightOutOfRange": "Boy 100 ile 220 cm arasında olmalıdır.",
+        "weekOutOfRange": "Gebelik haftası 1 ile 42 arasında olmalıdır.",
+        "weightOutOfRange": "Kilo geçerli aralıkta pozitif bir değer olmalıdır.",
+      },
+      "faq": [
+        {
+          "a": "IOM, 2009'da gebelik öncesi VKİ'ye göre önerilen toplam kilo artışı aralıklarını yayımladı: Düşük kilolu (<18,5): 12,5–18 kg; Normal kilolu (18,5–24,9): 11,5–16 kg; Fazla kilolu (25–29,9): 7–11,5 kg; Obez (≥30): 5–9 kg.",
+          "q": "IOM 2009 gebelik kilo artışı kılavuzları nelerdir?",
+        },
+        {
+          "a": "Evet. İlk trimesterde kilo artışı genellikle 0,5–2 kg ile sınırlıdır. IOM haftalık kilo artışı kılavuzu ağırlıklı olarak 2. ve 3. trimester için geçerlidir.",
+          "q": "Kilo artış hızı trimesterler arasında değişir mi?",
+        },
+        {
+          "a": "Yetersiz ya da fazla kilo alımı hem anne hem de bebek için risklerle ilişkilendirilmektedir. Ancak küçük dalgalanmalar normaldir. Haftalarca önerilen aralığın dışında kalırsanız sağlık uzmanınıza danışın.",
+          "q": "Önerilen miktarın altında veya üstünde kalırsam ne olur?",
+        },
+      ],
+      "inputs": {
+        "currentWeight": {
+          "help": "Bugünkü kilonuz.",
+          "label": "Mevcut kilo",
+        },
+        "gestationalWeek": {
+          "help": "Gebeliğin mevcut haftası (1–42).",
+          "label": "Gebelik haftası",
+        },
+        "height": {
+          "help": "Gebelik öncesi VKİ hesaplamak için boyunuz.",
+          "label": "Boy",
+        },
+        "prePregnancyWeight": {
+          "help": "Gebelik öncesindeki kilonuz.",
+          "label": "Gebelik öncesi kilo",
+        },
+        "unit": {
+          "help": "Metrik (kg/cm) veya İngiliz birimi (lb/inç) seçin.",
+          "label": "Birim sistemi",
+        },
+      },
+      "keywords": [
+        "gebelik kilo artışı hesaplayıcı",
+        "gestasyonel kilo artışı",
+        "IOM gebelik kılavuzu",
+        "prenatal kilo",
+        "sağlıklı gebelik kilosu",
+        "gebelik VKİ",
+        "trimester kilo artışı",
+      ],
+      "options": {
+        "unit": {
+          "imperial": "İngiliz birimi (lb, inç)",
+          "metric": "Metrik (kg, cm)",
+        },
+      },
+      "outputs": {
+        "bmiCategory": {
+          "help": "Gebelik öncesi VKİ kategorisi.",
+          "label": "VKİ kategorisi",
+        },
+        "currentGain": {
+          "help": "Gebelik öncesinden bu yana aldığınız kilo.",
+          "label": "Mevcut kilo artışı",
+          "suffix": "kg",
+        },
+        "expectedGainAtWeek": {
+          "help": "Mevcut gebelik haftanız için IOM önerilen artışın orta noktası.",
+          "label": "Bu haftaki beklenen artış",
+          "suffix": "kg",
+        },
+        "onTrack": {
+          "help": "Mevcut kilo artışınızın beklenen aralıkta olup olmadığı.",
+          "label": "Durum",
+        },
+        "preBmi": {
+          "help": "Gebelik öncesi VKİ değeriniz.",
+          "label": "Gebelik öncesi VKİ",
+        },
+        "recommendedTotalGainMax": {
+          "help": "IOM 2009 kılavuzuna göre maksimum önerilen toplam kilo artışı.",
+          "label": "Önerilen artış (maks)",
+          "suffix": "kg",
+        },
+        "recommendedTotalGainMin": {
+          "help": "IOM 2009 kılavuzuna göre minimum önerilen toplam kilo artışı.",
+          "label": "Önerilen artış (min)",
+          "suffix": "kg",
+        },
+        "weeklyRateKg": {
+          "help": "2. ve 3. trimesterde IOM'un önerdiği haftalık kilo artışı.",
+          "label": "Haftalık önerilen artış",
+          "suffix": "kg/hafta",
+        },
+      },
+      "short": "IOM 2009 kılavuzlarına göre gebelik kilo artışınızı trimester bazında takip edin.",
+      "title": "Gebelik Kilo Artışı Hesaplayıcı",
+    },
+    "zh": {
+      "description": "基于IOM 2009指南的免费孕期体重增长计算器。输入孕前体重、身高和当前孕周，了解推荐的总增重量及您是否达标。",
+      "errors": {
+        "heightOutOfRange": "身高必须在100至220厘米之间。",
+        "weekOutOfRange": "孕周必须在1至42周之间。",
+        "weightOutOfRange": "体重必须在有效范围内为正数。",
+      },
+      "faq": [
+        {
+          "a": "美国医学研究所（IOM）2009年根据孕前BMI提出以下总增重范围建议：低体重（<18.5）：12.5–18 kg；正常体重（18.5–24.9）：11.5–16 kg；超重（25–29.9）：7–11.5 kg；肥胖（≥30）：5–9 kg。",
+          "q": "IOM 2009孕期增重指南是什么？",
+        },
+        {
+          "a": "是的。孕早期增重极少（约0.5–2 kg）。IOM每周增重建议主要适用于孕中期和孕晚期。",
+          "q": "体重增长速率在各孕期是否不同？",
+        },
+        {
+          "a": "孕期增重不足和过多都与母婴风险相关。偶尔波动属正常。如连续数周超出建议范围，请咨询产科医生或助产士。",
+          "q": "低于或超过建议增重是否需要担心？",
+        },
+      ],
+      "inputs": {
+        "currentWeight": {
+          "help": "您今天的体重。",
+          "label": "当前体重",
+        },
+        "gestationalWeek": {
+          "help": "当前孕周（1–42周）。",
+          "label": "孕周",
+        },
+        "height": {
+          "help": "用于计算孕前BMI的身高。",
+          "label": "身高",
+        },
+        "prePregnancyWeight": {
+          "help": "您怀孕前的体重。",
+          "label": "孕前体重",
+        },
+        "unit": {
+          "help": "选择公制（kg/cm）或英制（lb/in）。",
+          "label": "单位制",
+        },
+      },
+      "keywords": [
+        "孕期体重增长计算器",
+        "妊娠期体重增长",
+        "IOM孕期指南",
+        "产前体重",
+        "健康孕期体重",
+        "孕期BMI",
+        "按孕期体重增长",
+      ],
+      "options": {
+        "unit": {
+          "imperial": "英制（lb, in）",
+          "metric": "公制（kg, cm）",
+        },
+      },
+      "outputs": {
+        "bmiCategory": {
+          "help": "孕前BMI分类。",
+          "label": "BMI分类",
+        },
+        "currentGain": {
+          "help": "从孕前至今增加的体重。",
+          "label": "当前增重",
+          "suffix": "kg",
+        },
+        "expectedGainAtWeek": {
+          "help": "当前孕周IOM建议增重的中点值。",
+          "label": "本孕周预期增重",
+          "suffix": "kg",
+        },
+        "onTrack": {
+          "help": "您当前的体重增长是否在预期范围内。",
+          "label": "状态",
+        },
+        "preBmi": {
+          "help": "您怀孕前的BMI值。",
+          "label": "孕前BMI",
+        },
+        "recommendedTotalGainMax": {
+          "help": "IOM 2009建议的最高总增重量。",
+          "label": "建议总增重（最高）",
+          "suffix": "kg",
+        },
+        "recommendedTotalGainMin": {
+          "help": "IOM 2009建议的最低总增重量。",
+          "label": "建议总增重（最低）",
+          "suffix": "kg",
+        },
+        "weeklyRateKg": {
+          "help": "IOM建议的孕中期和晚期每周体重增长速率。",
+          "label": "建议每周增重",
+          "suffix": "kg/周",
+        },
+      },
+      "short": "根据IOM 2009指南按孕期追踪您的体重增长情况。",
+      "title": "孕期体重增长计算器",
+    },
+  },
+  "icon": Any<String>,
+  "inputSchema": ZodObject {
+    "_cached": {
+      "keys": [
+        "prePregnancyWeight",
+        "height",
+        "currentWeight",
+        "gestationalWeek",
+        "unit",
+      ],
+      "shape": {
+        "currentWeight": ZodNumber {
+          "_def": {
+            "checks": [
+              {
+                "inclusive": false,
+                "kind": "min",
+                "message": undefined,
+                "value": 0,
+              },
+              {
+                "inclusive": true,
+                "kind": "min",
+                "message": undefined,
+                "value": 30,
+              },
+              {
+                "inclusive": true,
+                "kind": "max",
+                "message": undefined,
+                "value": 350,
+              },
+            ],
+            "coerce": false,
+            "typeName": "ZodNumber",
+          },
+          "and": [Function],
+          "array": [Function],
+          "brand": [Function],
+          "catch": [Function],
+          "default": [Function],
+          "describe": [Function],
+          "isNullable": [Function],
+          "isOptional": [Function],
+          "max": [Function],
+          "min": [Function],
+          "nullable": [Function],
+          "nullish": [Function],
+          "optional": [Function],
+          "or": [Function],
+          "parse": [Function],
+          "parseAsync": [Function],
+          "pipe": [Function],
+          "promise": [Function],
+          "readonly": [Function],
+          "refine": [Function],
+          "refinement": [Function],
+          "safeParse": [Function],
+          "safeParseAsync": [Function],
+          "spa": [Function],
+          "step": [Function],
+          "superRefine": [Function],
+          "transform": [Function],
+          "~standard": {
+            "validate": [Function],
+            "vendor": "zod",
+            "version": 1,
+          },
+        },
+        "gestationalWeek": ZodNumber {
+          "_def": {
+            "checks": [
+              {
+                "kind": "int",
+                "message": undefined,
+              },
+              {
+                "inclusive": true,
+                "kind": "min",
+                "message": undefined,
+                "value": 1,
+              },
+              {
+                "inclusive": true,
+                "kind": "max",
+                "message": undefined,
+                "value": 42,
+              },
+            ],
+            "coerce": false,
+            "typeName": "ZodNumber",
+          },
+          "and": [Function],
+          "array": [Function],
+          "brand": [Function],
+          "catch": [Function],
+          "default": [Function],
+          "describe": [Function],
+          "isNullable": [Function],
+          "isOptional": [Function],
+          "max": [Function],
+          "min": [Function],
+          "nullable": [Function],
+          "nullish": [Function],
+          "optional": [Function],
+          "or": [Function],
+          "parse": [Function],
+          "parseAsync": [Function],
+          "pipe": [Function],
+          "promise": [Function],
+          "readonly": [Function],
+          "refine": [Function],
+          "refinement": [Function],
+          "safeParse": [Function],
+          "safeParseAsync": [Function],
+          "spa": [Function],
+          "step": [Function],
+          "superRefine": [Function],
+          "transform": [Function],
+          "~standard": {
+            "validate": [Function],
+            "vendor": "zod",
+            "version": 1,
+          },
+        },
+        "height": ZodNumber {
+          "_def": {
+            "checks": [
+              {
+                "inclusive": false,
+                "kind": "min",
+                "message": undefined,
+                "value": 0,
+              },
+              {
+                "inclusive": true,
+                "kind": "min",
+                "message": undefined,
+                "value": 100,
+              },
+              {
+                "inclusive": true,
+                "kind": "max",
+                "message": undefined,
+                "value": 220,
+              },
+            ],
+            "coerce": false,
+            "typeName": "ZodNumber",
+          },
+          "and": [Function],
+          "array": [Function],
+          "brand": [Function],
+          "catch": [Function],
+          "default": [Function],
+          "describe": [Function],
+          "isNullable": [Function],
+          "isOptional": [Function],
+          "max": [Function],
+          "min": [Function],
+          "nullable": [Function],
+          "nullish": [Function],
+          "optional": [Function],
+          "or": [Function],
+          "parse": [Function],
+          "parseAsync": [Function],
+          "pipe": [Function],
+          "promise": [Function],
+          "readonly": [Function],
+          "refine": [Function],
+          "refinement": [Function],
+          "safeParse": [Function],
+          "safeParseAsync": [Function],
+          "spa": [Function],
+          "step": [Function],
+          "superRefine": [Function],
+          "transform": [Function],
+          "~standard": {
+            "validate": [Function],
+            "vendor": "zod",
+            "version": 1,
+          },
+        },
+        "prePregnancyWeight": ZodNumber {
+          "_def": {
+            "checks": [
+              {
+                "inclusive": false,
+                "kind": "min",
+                "message": undefined,
+                "value": 0,
+              },
+              {
+                "inclusive": true,
+                "kind": "min",
+                "message": undefined,
+                "value": 30,
+              },
+              {
+                "inclusive": true,
+                "kind": "max",
+                "message": undefined,
+                "value": 300,
+              },
+            ],
+            "coerce": false,
+            "typeName": "ZodNumber",
+          },
+          "and": [Function],
+          "array": [Function],
+          "brand": [Function],
+          "catch": [Function],
+          "default": [Function],
+          "describe": [Function],
+          "isNullable": [Function],
+          "isOptional": [Function],
+          "max": [Function],
+          "min": [Function],
+          "nullable": [Function],
+          "nullish": [Function],
+          "optional": [Function],
+          "or": [Function],
+          "parse": [Function],
+          "parseAsync": [Function],
+          "pipe": [Function],
+          "promise": [Function],
+          "readonly": [Function],
+          "refine": [Function],
+          "refinement": [Function],
+          "safeParse": [Function],
+          "safeParseAsync": [Function],
+          "spa": [Function],
+          "step": [Function],
+          "superRefine": [Function],
+          "transform": [Function],
+          "~standard": {
+            "validate": [Function],
+            "vendor": "zod",
+            "version": 1,
+          },
+        },
+        "unit": ZodEnum {
+          "_cache": Set {
+            "metric",
+            "imperial",
+          },
+          "_def": {
+            "typeName": "ZodEnum",
+            "values": [
+              "metric",
+              "imperial",
+            ],
+          },
+          "and": [Function],
+          "array": [Function],
+          "brand": [Function],
+          "catch": [Function],
+          "default": [Function],
+          "describe": [Function],
+          "isNullable": [Function],
+          "isOptional": [Function],
+          "nullable": [Function],
+          "nullish": [Function],
+          "optional": [Function],
+          "or": [Function],
+          "parse": [Function],
+          "parseAsync": [Function],
+          "pipe": [Function],
+          "promise": [Function],
+          "readonly": [Function],
+          "refine": [Function],
+          "refinement": [Function],
+          "safeParse": [Function],
+          "safeParseAsync": [Function],
+          "spa": [Function],
+          "superRefine": [Function],
+          "transform": [Function],
+          "~standard": {
+            "validate": [Function],
+            "vendor": "zod",
+            "version": 1,
+          },
+        },
+      },
+    },
+    "_def": {
+      "catchall": ZodNever {
+        "_def": {
+          "typeName": "ZodNever",
+        },
+        "and": [Function],
+        "array": [Function],
+        "brand": [Function],
+        "catch": [Function],
+        "default": [Function],
+        "describe": [Function],
+        "isNullable": [Function],
+        "isOptional": [Function],
+        "nullable": [Function],
+        "nullish": [Function],
+        "optional": [Function],
+        "or": [Function],
+        "parse": [Function],
+        "parseAsync": [Function],
+        "pipe": [Function],
+        "promise": [Function],
+        "readonly": [Function],
+        "refine": [Function],
+        "refinement": [Function],
+        "safeParse": [Function],
+        "safeParseAsync": [Function],
+        "spa": [Function],
+        "superRefine": [Function],
+        "transform": [Function],
+        "~standard": {
+          "validate": [Function],
+          "vendor": "zod",
+          "version": 1,
+        },
+      },
+      "shape": [Function],
+      "typeName": "ZodObject",
+      "unknownKeys": "strip",
+    },
+    "and": [Function],
+    "array": [Function],
+    "augment": [Function],
+    "brand": [Function],
+    "catch": [Function],
+    "default": [Function],
+    "describe": [Function],
+    "isNullable": [Function],
+    "isOptional": [Function],
+    "nonstrict": [Function],
+    "nullable": [Function],
+    "nullish": [Function],
+    "optional": [Function],
+    "or": [Function],
+    "parse": [Function],
+    "parseAsync": [Function],
+    "pipe": [Function],
+    "promise": [Function],
+    "readonly": [Function],
+    "refine": [Function],
+    "refinement": [Function],
+    "safeParse": [Function],
+    "safeParseAsync": [Function],
+    "spa": [Function],
+    "superRefine": [Function],
+    "transform": [Function],
+    "~standard": {
+      "validate": [Function],
+      "vendor": "zod",
+      "version": 1,
+    },
+  },
+  "inputs": [
+    {
+      "defaultValue": "metric",
+      "id": "unit",
+      "required": true,
+      "type": {
+        "kind": "select",
+        "options": [
+          {
+            "i18nKey": "metric",
+            "value": "metric",
+          },
+          {
+            "i18nKey": "imperial",
+            "value": "imperial",
+          },
+        ],
+      },
+    },
+    {
+      "defaultValue": 65,
+      "id": "prePregnancyWeight",
+      "required": true,
+      "type": {
+        "kind": "number",
+        "max": 300,
+        "min": 30,
+        "step": 0.1,
+        "unit": "kg",
+      },
+    },
+    {
+      "defaultValue": 165,
+      "id": "height",
+      "required": true,
+      "type": {
+        "kind": "number",
+        "max": 220,
+        "min": 100,
+        "step": 1,
+        "unit": "cm",
+      },
+    },
+    {
+      "defaultValue": 20,
+      "id": "gestationalWeek",
+      "required": true,
+      "type": {
+        "integer": true,
+        "kind": "number",
+        "max": 42,
+        "min": 1,
+        "step": 1,
+        "unit": "week",
+      },
+    },
+    {
+      "defaultValue": 72,
+      "id": "currentWeight",
+      "required": true,
+      "type": {
+        "kind": "number",
+        "max": 350,
+        "min": 30,
+        "step": 0.1,
+        "unit": "kg",
+      },
+    },
+  ],
+  "meta": {
+    "disclaimer": "This calculator is based on IOM 2009 guidelines and provides population-level estimates. Individual needs vary. Consult your obstetrician or midwife for personalised advice.",
+    "references": [
+      {
+        "authority": "Institute of Medicine (IOM) / National Academies of Sciences, Engineering, and Medicine",
+        "title": "Weight Gain During Pregnancy: Reexamining the Guidelines (IOM 2009)",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK32813/",
+      },
+      {
+        "authority": "World Health Organization (WHO)",
+        "title": "WHO recommendations on antenatal care for a positive pregnancy experience",
+        "url": "https://www.who.int/publications/i/item/9789241549912",
+      },
+    ],
+  },
+  "outputs": [
+    {
+      "format": "number",
+      "id": "preBmi",
+      "precision": 1,
+    },
+    {
+      "format": "text",
+      "id": "bmiCategory",
+    },
+    {
+      "format": "number",
+      "id": "recommendedTotalGainMin",
+      "precision": 1,
+      "unit": "kg",
+    },
+    {
+      "format": "number",
+      "id": "recommendedTotalGainMax",
+      "precision": 1,
+      "unit": "kg",
+    },
+    {
+      "format": "number",
+      "highlight": true,
+      "id": "currentGain",
+      "precision": 1,
+      "unit": "kg",
+    },
+    {
+      "format": "number",
+      "id": "expectedGainAtWeek",
+      "precision": 1,
+      "unit": "kg",
+    },
+    {
+      "format": "text",
+      "id": "onTrack",
+    },
+    {
+      "format": "number",
+      "id": "weeklyRateKg",
+      "precision": 2,
+      "unit": "kg",
+    },
+  ],
+  "priority": Any<String>,
+  "related": [
+    "bmi",
+    "conception",
+    "bmi-kids",
+  ],
+  "slug": Any<String>,
+  "tags": [
+    "pregnancy weight gain",
+    "IOM guidelines",
+    "gestational weight",
+    "prenatal",
+    "obstetrics",
+  ],
+}
+`;

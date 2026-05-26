@@ -1,0 +1,23 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`calorie-deficit snapshot > matches snapshot for imperial inputs 1`] = `
+{
+  "monthsToGoal": 5.8,
+  "totalCalorieDeficit": 69839,
+  "weeklyDeficit": 2800,
+  "weeklyLossKg": 0.364,
+  "weeksToGoal": 25,
+  "weightToLoseKg": 9.07,
+}
+`;
+
+exports[`calorie-deficit snapshot > matches snapshot for metric inputs 1`] = `
+{
+  "monthsToGoal": 5.1,
+  "totalCalorieDeficit": 77000,
+  "weeklyDeficit": 3500,
+  "weeklyLossKg": 0.455,
+  "weeksToGoal": 22,
+  "weightToLoseKg": 10,
+}
+`;

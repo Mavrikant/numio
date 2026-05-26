@@ -168,8 +168,8 @@ const i18n: CalculatorI18n = {
   },
   it: {
     title: "Calcolatore del Mix di Calcestruzzo",
-    short: "Calculate cement, sand, aggregate and water quantities for concrete.",
-    keywords: ["concrete mix calculator", "cement calculator", "M20 mix", "concrete volume"],
+    short: "Calcola le quantità di cemento, sabbia, aggregati e acqua per qualsiasi classe di calcestruzzo.",
+    keywords: ["calcolatore mix calcestruzzo", "rapporto cemento sabbia aggregato", "calcestruzzo M20", "rapporto acqua cemento"],
     description: "Calcola le quantità di cemento, sabbia, aggregati e acqua per qualsiasi classe di calcestruzzo.",
     inputs: {
       mixGrade: { label: "Classe di Miscelazione", help: "Seleziona una classe standard o inserisci una proporzione personalizzata." },
@@ -201,8 +201,8 @@ const i18n: CalculatorI18n = {
   },
   ar: {
     title: "حاسبة خلط الخرسانة",
-    short: "Calculate cement, sand, aggregate and water quantities for concrete.",
-    keywords: ["concrete mix calculator", "cement calculator", "M20 mix", "concrete volume"],
+    short: "احسب كميات الإسمنت والرمل والحصى والماء لأي درجة خرسانة.",
+    keywords: ["حاسبة خلط الخرسانة", "نسبة الإسمنت والرمل والحصى", "خرسانة M20", "نسبة الماء إلى الإسمنت"],
     description: "احسب كميات الإسمنت والرمل والحصى والماء لأي درجة خرسانة.",
     inputs: {
       mixGrade: { label: "درجة الخلط", help: "اختر درجة خلط قياسية أو أدخل نسبة مخصصة." },
@@ -234,8 +234,8 @@ const i18n: CalculatorI18n = {
   },
   ru: {
     title: "Калькулятор Состава Бетонной Смеси",
-    short: "Calculate cement, sand, aggregate and water quantities for concrete.",
-    keywords: ["concrete mix calculator", "cement calculator", "M20 mix", "concrete volume"],
+    short: "Рассчитайте количество цемента, песка, щебня и воды для любого класса бетона.",
+    keywords: ["калькулятор состава бетона", "соотношение цемент песок щебень", "бетон M20", "водоцементное отношение"],
     description: "Рассчитайте количество цемента, песка, щебня и воды для любого класса бетона.",
     inputs: {
       mixGrade: { label: "Класс смеси", help: "Выберите стандартный класс или введите пользовательское соотношение." },
@@ -267,8 +267,8 @@ const i18n: CalculatorI18n = {
   },
   zh: {
     title: "混凝土配合比计算器",
-    short: "Calculate cement, sand, aggregate and water quantities for concrete.",
-    keywords: ["concrete mix calculator", "cement calculator", "M20 mix", "concrete volume"],
+    short: "计算任何混凝土标号所需的水泥、砂、骨料和水的用量。",
+    keywords: ["混凝土配合比计算器", "水泥砂骨料比例", "M20混凝土", "水灰比"],
     description: "计算任何混凝土标号所需的水泥、砂、骨料和水的用量。",
     inputs: {
       mixGrade: { label: "混凝土标号", help: "选择标准标号或输入自定义配合比。" },
@@ -300,8 +300,8 @@ const i18n: CalculatorI18n = {
   },
   ja: {
     title: "コンクリート配合計算機",
-    short: "Calculate cement, sand, aggregate and water quantities for concrete.",
-    keywords: ["concrete mix calculator", "cement calculator", "M20 mix", "concrete volume"],
+    short: "任意のコンクリート配合強度に対してセメント、砂、骨材、水の量を計算します。",
+    keywords: ["コンクリート配合計算機", "セメント砂骨材比率", "M20コンクリート", "水セメント比"],
     description: "任意のコンクリート配合強度に対してセメント、砂、骨材、水の量を計算します。",
     inputs: {
       mixGrade: { label: "配合強度", help: "標準の配合強度を選択するか、カスタム比率を入力してください。" },
@@ -333,8 +333,8 @@ const i18n: CalculatorI18n = {
   },
   ko: {
     title: "콘크리트 배합 계산기",
-    short: "Calculate cement, sand, aggregate and water quantities for concrete.",
-    keywords: ["concrete mix calculator", "cement calculator", "M20 mix", "concrete volume"],
+    short: "모든 콘크리트 배합 등급에 대한 시멘트, 모래, 골재, 물의 양을 계산합니다.",
+    keywords: ["콘크리트 배합 계산기", "시멘트 모래 골재 비율", "M20 콘크리트", "물시멘트비"],
     description: "모든 콘크리트 배합 등급에 대한 시멘트, 모래, 골재, 물의 양을 계산합니다.",
     inputs: {
       mixGrade: { label: "배합 등급", help: "표준 배합 등급을 선택하거나 사용자 정의 비율을 입력하세요." },
@@ -366,8 +366,8 @@ const i18n: CalculatorI18n = {
   },
   hi: {
     title: "कंक्रीट मिश्रण कैलकुलेटर",
-    short: "Calculate cement, sand, aggregate and water quantities for concrete.",
-    keywords: ["concrete mix calculator", "cement calculator", "M20 mix", "concrete volume"],
+    short: "किसी भी कंक्रीट मिश्रण ग्रेड के लिए सीमेंट, रेत, समुच्चय और पानी की मात्रा की गणना करें।",
+    keywords: ["कंक्रीट मिश्रण कैलकुलेटर", "सीमेंट रेत समुच्चय अनुपात", "M20 कंक्रीट", "जल-सीमेंट अनुपात"],
     description: "किसी भी कंक्रीट मिश्रण ग्रेड के लिए सीमेंट, रेत, समुच्चय और पानी की मात्रा की गणना करें।",
     inputs: {
       mixGrade: { label: "मिश्रण ग्रेड", help: "एक मानक मिश्रण ग्रेड चुनें या कस्टम अनुपात दर्ज करें।" },

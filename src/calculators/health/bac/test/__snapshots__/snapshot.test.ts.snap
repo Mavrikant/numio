@@ -1,0 +1,21 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`bac snapshot > matches snapshot for standard female inputs 1`] = `
+{
+  "bac": 0.055,
+  "category": "impaired",
+  "hoursUntilSober": 3.7,
+  "isDangerous": false,
+  "isLegal": true,
+}
+`;
+
+exports[`bac snapshot > matches snapshot for standard male inputs 1`] = `
+{
+  "bac": 0.067,
+  "category": "impaired",
+  "hoursUntilSober": 4.5,
+  "isDangerous": false,
+  "isLegal": true,
+}
+`;

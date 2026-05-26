@@ -38,7 +38,7 @@ describe("Power Factor definition — shape snapshot", () => {
   });
   it("has meta.formulaLatex", () => {
     expect(typeof calculator.meta.formulaLatex).toBe("string");
-    expect(calculator.meta.formulaLatex.length).toBeGreaterThan(0);
+    expect((calculator.meta.formulaLatex ?? "").length).toBeGreaterThan(0);
   });
   it("has meta.references with at least 1 entry", () => {
     expect(calculator.meta.references.length).toBeGreaterThanOrEqual(1);

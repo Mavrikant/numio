@@ -1,72 +1,96 @@
-import { defineCalculator } from "@/types/calculator";
 import { z } from "zod";
+import { defineCalculator } from "@/types/calculator";
 import { compute } from "./compute";
+import i18n from "./i18n";
+
+const inputSchema = z.object({
+  drinks: z.number().min(0).max(30),
+  weightKg: z.number().min(30).max(300),
+  sex: z.enum(["male", "female"]),
+  hoursElapsed: z.number().min(0).max(24),
+});
 
 export default defineCalculator({
   slug: "bac",
   category: "health",
+  priority: "P1",
+  icon: "wine",
   inputs: [
     {
       id: "drinks",
-      type: "number",
-      label: "Number of Drinks",
+      type: { kind: "number", min: 0, max: 30, step: 0.5 },
       defaultValue: 2,
-      validation: z.number().min(0).max(30),
+      required: true,
     },
     {
       id: "weightKg",
-      type: "number",
-      label: "Weight (kg)",
+      type: { kind: "number", min: 30, max: 300, step: 0.5, unit: "kg" },
       defaultValue: 70,
-      validation: z.number().min(30).max(300),
+      required: true,
     },
     {
       id: "sex",
-      type: "select",
-      label: "Biological Sex",
+      type: {
+        kind: "select",
+        options: [
+          { value: "male", i18nKey: "male" },
+          { value: "female", i18nKey: "female" },
+        ],
+      },
       defaultValue: "male",
-      options: [
-        { value: "male", label: "Male" },
-        { value: "female", label: "Female" },
-      ],
-      validation: z.enum(["male", "female"]),
+      required: true,
     },
     {
       id: "hoursElapsed",
-      type: "number",
-      label: "Hours Since First Drink",
+      type: { kind: "number", min: 0, max: 24, step: 0.25, unit: "hour" },
       defaultValue: 1,
-      validation: z.number().min(0).max(24),
+      required: true,
     },
   ],
   outputs: [
     {
       id: "bac",
-      type: "number",
-      label: "Blood Alcohol Content (%)",
-      unit: "%",
+      format: "number",
+      precision: 3,
+      highlight: true,
     },
     {
       id: "hoursUntilSober",
-      type: "number",
-      label: "Hours Until Sober",
-      unit: "h",
+      format: "number",
+      precision: 1,
+      unit: "hour",
     },
     {
       id: "isLegal",
-      type: "boolean",
-      label: "Legal to Drive",
+      format: "text",
     },
     {
       id: "isDangerous",
-      type: "boolean",
-      label: "Dangerous Level",
+      format: "text",
     },
     {
       id: "category",
-      type: "text",
-      label: "Impairment Category",
+      format: "text",
     },
   ],
+  inputSchema,
   compute,
+  i18n,
+  meta: {
+    references: [
+      {
+        title: "Widmark EMP (1932). Die theoretischen Grundlagen und die praktische Verwendbarkeit der gerichtlich-medizinischen Alkoholbestimmung.",
+        authority: "Urban & Schwarzenberg",
+      },
+      {
+        title: "Alcohol Facts and Statistics",
+        url: "https://www.niaaa.nih.gov/publications/brochures-and-fact-sheets/alcohol-facts-and-statistics",
+        authority: "National Institute on Alcohol Abuse and Alcoholism (NIAAA)",
+      },
+    ],
+    disclaimer:
+      "This calculator provides an educational estimate only. Never use it to determine fitness to drive. Always check local laws regarding blood alcohol limits.",
+  },
+  related: ["bmr", "water-intake"],
+  tags: ["health", "alcohol", "bac", "widmark", "driving"],
 });
