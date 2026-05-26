@@ -1,0 +1,1341 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Auto Loan definition — shape snapshot > snapshot: definition shape 1`] = `
+{
+  "category": Any<String>,
+  "compute": [Function],
+  "i18n": {
+    "ar": {
+      "description": "حاسبة قرض سيارة مجانية. أدخل سعر السيارة والدفعة المقدمة وقيمة المقايضة والفائدة والمدة لرؤية قسطك الشهري.",
+      "errors": {
+        "downPaymentExceeds": "لا يمكن أن يتجاوز مجموع الدفعة المقدمة وقيمة المقايضة سعر السيارة.",
+        "rateRange": "يجب أن يكون معدل الفائدة السنوي بين 0% و40%.",
+        "termRange": "يجب أن تكون مدة القرض بين 12 و96 شهراً.",
+        "vehiclePriceRange": "يجب أن يكون سعر السيارة بين 1,000 و500,000.",
+      },
+      "faq": [
+        {
+          "a": "المدد القصيرة (36–48 شهراً) أقل تكلفةً من ناحية الفوائد لكن أقساطها أعلى. المدد الأطول (60–84 شهراً) تُخفض القسط الشهري لكن تزيد التكلفة الإجمالية.",
+          "q": "ما هي أفضل مدة لقرض السيارة؟",
+        },
+      ],
+      "inputs": {
+        "annualRate": {
+          "help": "المعدل السنوي الذي تقدمه جهة الإقراض.",
+          "label": "معدل الفائدة السنوي (%)",
+        },
+        "downPayment": {
+          "help": "المبلغ المدفوع نقداً عند الشراء.",
+          "label": "الدفعة المقدمة",
+        },
+        "termMonths": {
+          "help": "مدة القرض بالأشهر (مثلاً 36، 48، 60).",
+          "label": "مدة القرض (أشهر)",
+        },
+        "tradeInValue": {
+          "help": "قيمة سيارة تُقدّمها كجزء من الدفع. تُخفض المبلغ الممول.",
+          "label": "قيمة المقايضة",
+        },
+        "vehiclePrice": {
+          "help": "سعر شراء السيارة.",
+          "label": "سعر السيارة",
+        },
+      },
+      "keywords": [
+        "حاسبة قرض السيارة",
+        "تمويل سيارة",
+        "قسط شهري سيارة",
+        "قرض مركبة",
+        "تمويل سيارات",
+        "حساب قرض السيارة",
+        "فائدة قرض السيارة",
+      ],
+      "outputs": {
+        "loanAmount": {
+          "help": "سعر السيارة ناقص الدفعة المقدمة وقيمة المقايضة.",
+          "label": "المبلغ الممول",
+        },
+        "monthlyPayment": {
+          "help": "المبلغ الثابت المستحق كل شهر.",
+          "label": "القسط الشهري",
+        },
+        "totalInterest": {
+          "help": "مجموع الفوائد المدفوعة خلال مدة القرض.",
+          "label": "إجمالي الفوائد",
+        },
+        "totalPayment": {
+          "help": "مجموع جميع الأقساط الشهرية.",
+          "label": "إجمالي المدفوعات",
+        },
+      },
+      "short": "احسب قسطك الشهري والتكلفة الإجمالية والفوائد لأي قرض سيارة.",
+      "title": "حاسبة قرض السيارة",
+    },
+    "de": {
+      "description": "Kostenloser Autokredit-Rechner. Geben Sie Fahrzeugpreis, Anzahlung, Inzahlungnahme, Zinssatz und Laufzeit ein und erhalten Sie Ihre Monatsrate.",
+      "errors": {
+        "downPaymentExceeds": "Anzahlung und Inzahlungnahme dürfen den Fahrzeugpreis nicht überschreiten.",
+        "rateRange": "Jahreszins muss zwischen 0 % und 40 % liegen.",
+        "termRange": "Laufzeit muss zwischen 12 und 96 Monaten liegen.",
+        "vehiclePriceRange": "Fahrzeugpreis muss zwischen 1.000 und 500.000 liegen.",
+      },
+      "faq": [
+        {
+          "a": "Kürzere Laufzeiten (36–48 Monate) sind günstiger im Gesamtzins, haben aber höhere Raten. Längere Laufzeiten senken die Rate, erhöhen aber die Gesamtkosten.",
+          "q": "Welche Laufzeit ist für einen Autokredit am besten?",
+        },
+      ],
+      "inputs": {
+        "annualRate": {
+          "help": "Der effektive Jahreszins Ihrer Bank.",
+          "label": "Jährlicher Zinssatz (%)",
+        },
+        "downPayment": {
+          "help": "Sofort gezahlter Betrag beim Kauf.",
+          "label": "Anzahlung",
+        },
+        "termMonths": {
+          "help": "Kreditlaufzeit in Monaten (z. B. 36, 48, 60).",
+          "label": "Laufzeit (Monate)",
+        },
+        "tradeInValue": {
+          "help": "Wert eines eingetauschten Fahrzeugs. Reduziert den Kreditbetrag.",
+          "label": "Inzahlungnahme",
+        },
+        "vehiclePrice": {
+          "help": "Kaufpreis des Fahrzeugs.",
+          "label": "Fahrzeugpreis",
+        },
+      },
+      "keywords": [
+        "Autokredit Rechner",
+        "Kfz Finanzierung",
+        "Monatsrate Auto",
+        "Autokredit Zinsen",
+        "Autofinanzierung",
+        "Auto Kreditrechner",
+        "Fahrzeug Finanzierung",
+      ],
+      "outputs": {
+        "loanAmount": {
+          "help": "Fahrzeugpreis minus Anzahlung und Inzahlungnahme.",
+          "label": "Finanzierter Betrag",
+        },
+        "monthlyPayment": {
+          "help": "Feste monatliche Zahlung.",
+          "label": "Monatliche Rate",
+        },
+        "totalInterest": {
+          "help": "Über die gesamte Laufzeit gezahlte Zinsen.",
+          "label": "Gesamtzinsen",
+        },
+        "totalPayment": {
+          "help": "Summe aller monatlichen Raten.",
+          "label": "Gesamtzahlung",
+        },
+      },
+      "short": "Berechnen Sie Ihre monatliche Kfz-Kreditrate, Gesamtkosten und Zinsen.",
+      "title": "Autokredit-Rechner",
+    },
+    "en": {
+      "description": "Free auto loan calculator. Enter the vehicle price, down payment, trade-in value, interest rate, and term to see your monthly payment and total loan cost.",
+      "errors": {
+        "downPaymentExceeds": "Down payment and trade-in cannot exceed vehicle price.",
+        "rateRange": "Annual rate must be between 0% and 40%.",
+        "termRange": "Loan term must be between 12 and 96 months.",
+        "vehiclePriceRange": "Vehicle price must be between $1,000 and $500,000.",
+      },
+      "faq": [
+        {
+          "a": "Shorter terms (36–48 months) cost less in total interest but have higher monthly payments. Longer terms (60–84 months) lower monthly payments but increase total interest and risk being 'underwater' on the loan (owing more than the car is worth).",
+          "q": "What is the best loan term for a car?",
+        },
+        {
+          "a": "The trade-in value is applied directly against the purchase price, reducing the amount you need to finance. This lowers both your monthly payment and total interest.",
+          "q": "How does a trade-in affect my auto loan?",
+        },
+        {
+          "a": "Rates vary by credit score, lender, and loan term. As of recent years, well-qualified buyers often receive rates between 4–7% for new cars and 6–12% for used cars. Always compare multiple lenders.",
+          "q": "What is a good auto loan rate?",
+        },
+      ],
+      "inputs": {
+        "annualRate": {
+          "help": "The APR offered by your lender.",
+          "label": "Annual Interest Rate (%)",
+        },
+        "downPayment": {
+          "help": "Amount paid upfront at purchase.",
+          "label": "Down Payment",
+        },
+        "termMonths": {
+          "help": "Length of the loan in months (e.g. 36, 48, 60, 72).",
+          "label": "Loan Term (months)",
+        },
+        "tradeInValue": {
+          "help": "Value of any vehicle you trade in. Reduces the financed amount.",
+          "label": "Trade-In Value",
+        },
+        "vehiclePrice": {
+          "help": "The purchase price of the vehicle.",
+          "label": "Vehicle Price",
+        },
+      },
+      "keywords": [
+        "auto loan calculator",
+        "car loan calculator",
+        "monthly car payment",
+        "vehicle financing",
+        "car payment calculator",
+        "auto loan interest",
+        "car financing calculator",
+      ],
+      "outputs": {
+        "loanAmount": {
+          "help": "Vehicle price minus down payment and trade-in value.",
+          "label": "Amount Financed",
+        },
+        "monthlyPayment": {
+          "help": "Fixed amount due each month.",
+          "label": "Monthly Payment",
+        },
+        "totalInterest": {
+          "help": "Total interest paid over the life of the loan.",
+          "label": "Total Interest",
+        },
+        "totalPayment": {
+          "help": "Sum of all monthly payments over the loan term.",
+          "label": "Total Payment",
+        },
+      },
+      "short": "Calculate your monthly car payment, total cost, and interest for any auto loan.",
+      "title": "Auto Loan Calculator",
+    },
+    "es": {
+      "description": "Calculadora gratuita de préstamo de coche. Introduce el precio del vehículo, la entrada, el valor de permuta, el tipo y el plazo para ver tu cuota mensual.",
+      "errors": {
+        "downPaymentExceeds": "La entrada y la permuta no pueden superar el precio del vehículo.",
+        "rateRange": "El tipo anual debe estar entre 0 % y 40 %.",
+        "termRange": "El plazo debe estar entre 12 y 96 meses.",
+        "vehiclePriceRange": "El precio debe estar entre 1.000 y 500.000.",
+      },
+      "faq": [
+        {
+          "a": "Los plazos cortos (36–48 meses) son más baratos en intereses pero tienen cuotas más altas. Los plazos largos (60–84 meses) reducen la cuota pero aumentan el coste total.",
+          "q": "¿Qué plazo es mejor para un préstamo de coche?",
+        },
+      ],
+      "inputs": {
+        "annualRate": {
+          "help": "La TAE ofrecida por tu entidad financiera.",
+          "label": "Tipo de interés anual (%)",
+        },
+        "downPayment": {
+          "help": "Importe pagado al contado en el momento de la compra.",
+          "label": "Entrada",
+        },
+        "termMonths": {
+          "help": "Duración del préstamo en meses (ej. 36, 48, 60).",
+          "label": "Plazo (meses)",
+        },
+        "tradeInValue": {
+          "help": "Valor de un vehículo que entregas como parte de pago. Reduce el importe financiado.",
+          "label": "Valor de permuta",
+        },
+        "vehiclePrice": {
+          "help": "Precio de compra del vehículo.",
+          "label": "Precio del vehículo",
+        },
+      },
+      "keywords": [
+        "calculadora préstamo coche",
+        "crédito auto",
+        "cuota mensual coche",
+        "financiación vehículo",
+        "préstamo automóvil",
+        "simulador financiación coche",
+        "interés préstamo coche",
+      ],
+      "outputs": {
+        "loanAmount": {
+          "help": "Precio del vehículo menos entrada y permuta.",
+          "label": "Importe financiado",
+        },
+        "monthlyPayment": {
+          "help": "Importe fijo pagadero cada mes.",
+          "label": "Cuota mensual",
+        },
+        "totalInterest": {
+          "help": "Total de intereses pagados durante el préstamo.",
+          "label": "Intereses totales",
+        },
+        "totalPayment": {
+          "help": "Suma de todas las cuotas mensuales.",
+          "label": "Coste total",
+        },
+      },
+      "short": "Calcula tu cuota mensual, el coste total y los intereses para cualquier préstamo de vehículo.",
+      "title": "Calculadora de Préstamo de Coche",
+    },
+    "fr": {
+      "description": "Calculateur de prêt auto gratuit. Entrez le prix du véhicule, l'apport, la valeur de reprise, le taux et la durée pour obtenir votre mensualité.",
+      "errors": {
+        "downPaymentExceeds": "L'apport et la reprise ne peuvent dépasser le prix du véhicule.",
+        "rateRange": "Le taux annuel doit être entre 0 % et 40 %.",
+        "termRange": "La durée doit être entre 12 et 96 mois.",
+        "vehiclePriceRange": "Le prix doit être compris entre 1 000 et 500 000.",
+      },
+      "faq": [
+        {
+          "a": "Les durées courtes (36–48 mois) coûtent moins en intérêts mais ont des mensualités plus élevées. Les durées longues (60–84 mois) réduisent la mensualité mais augmentent le coût total.",
+          "q": "Quelle durée choisir pour un prêt auto ?",
+        },
+      ],
+      "inputs": {
+        "annualRate": {
+          "help": "Le TAEG proposé par votre organisme de crédit.",
+          "label": "Taux annuel (%)",
+        },
+        "downPayment": {
+          "help": "Montant versé comptant à l'achat.",
+          "label": "Apport",
+        },
+        "termMonths": {
+          "help": "Durée du crédit en mois (ex. 36, 48, 60).",
+          "label": "Durée (mois)",
+        },
+        "tradeInValue": {
+          "help": "Valeur d'un véhicule repris. Réduit le montant financé.",
+          "label": "Valeur de reprise",
+        },
+        "vehiclePrice": {
+          "help": "Prix d'achat du véhicule.",
+          "label": "Prix du véhicule",
+        },
+      },
+      "keywords": [
+        "calculateur prêt auto",
+        "crédit voiture",
+        "mensualité voiture",
+        "financement auto",
+        "crédit automobile",
+        "simulateur prêt voiture",
+        "taux crédit auto",
+      ],
+      "outputs": {
+        "loanAmount": {
+          "help": "Prix du véhicule moins apport et valeur de reprise.",
+          "label": "Montant financé",
+        },
+        "monthlyPayment": {
+          "help": "Montant fixe dû chaque mois.",
+          "label": "Mensualité",
+        },
+        "totalInterest": {
+          "help": "Total des intérêts payés sur la durée du prêt.",
+          "label": "Intérêts totaux",
+        },
+        "totalPayment": {
+          "help": "Somme de toutes les mensualités.",
+          "label": "Coût total",
+        },
+      },
+      "short": "Calculez votre mensualité, le coût total et les intérêts pour tout prêt automobile.",
+      "title": "Calculateur de Prêt Auto",
+    },
+    "hi": {
+      "description": "मुफ़्त ऑटो लोन कैलकुलेटर। वाहन मूल्य, डाउन पेमेंट, ट्रेड-इन मूल्य, ब्याज दर और अवधि दर्ज करें और मासिक EMI देखें।",
+      "errors": {
+        "downPaymentExceeds": "डाउन पेमेंट और ट्रेड-इन का योग वाहन मूल्य से अधिक नहीं हो सकता।",
+        "rateRange": "वार्षिक ब्याज दर 0% से 40% के बीच होनी चाहिए।",
+        "termRange": "लोन अवधि 12 से 96 महीनों के बीच होनी चाहिए।",
+        "vehiclePriceRange": "वाहन मूल्य 1,000 से 500,000 के बीच होना चाहिए।",
+      },
+      "faq": [
+        {
+          "a": "कम अवधि (36–48 महीने) कुल ब्याज में कम लेकिन मासिक EMI अधिक होती है। लंबी अवधि (60–84 महीने) मासिक भार कम करती है लेकिन कुल ब्याज बढ़ता है।",
+          "q": "कार लोन के लिए कौन सी अवधि सबसे अच्छी है?",
+        },
+      ],
+      "inputs": {
+        "annualRate": {
+          "help": "आपके ऋणदाता द्वारा दी जाने वाली वार्षिक ब्याज दर।",
+          "label": "वार्षिक ब्याज दर (%)",
+        },
+        "downPayment": {
+          "help": "खरीद के समय नकद भुगतान की गई राशि।",
+          "label": "डाउन पेमेंट",
+        },
+        "termMonths": {
+          "help": "लोन की अवधि महीनों में (जैसे 36, 48, 60)।",
+          "label": "लोन अवधि (महीने)",
+        },
+        "tradeInValue": {
+          "help": "एक्सचेंज किए जाने वाले वाहन का मूल्य। लोन राशि को कम करता है।",
+          "label": "ट्रेड-इन मूल्य",
+        },
+        "vehiclePrice": {
+          "help": "वाहन की खरीद कीमत।",
+          "label": "वाहन मूल्य",
+        },
+      },
+      "keywords": [
+        "ऑटो लोन कैलकुलेटर",
+        "कार लोन कैलकुलेटर",
+        "मासिक कार EMI",
+        "वाहन वित्तपोषण",
+        "कार लोन ब्याज",
+        "वाहन ऋण गणना",
+        "कार खरीद कैलकुलेटर",
+      ],
+      "outputs": {
+        "loanAmount": {
+          "help": "वाहन मूल्य से डाउन पेमेंट और ट्रेड-इन घटाने के बाद।",
+          "label": "वित्तपोषित राशि",
+        },
+        "monthlyPayment": {
+          "help": "हर महीने देय निश्चित राशि।",
+          "label": "मासिक EMI",
+        },
+        "totalInterest": {
+          "help": "लोन अवधि के दौरान चुकाया गया कुल ब्याज।",
+          "label": "कुल ब्याज",
+        },
+        "totalPayment": {
+          "help": "सभी मासिक EMI का योग।",
+          "label": "कुल भुगतान",
+        },
+      },
+      "short": "किसी भी वाहन लोन के लिए मासिक EMI, कुल लागत और ब्याज की गणना करें।",
+      "title": "ऑटो लोन कैलकुलेटर",
+    },
+    "it": {
+      "description": "Calcolatore gratuito di prestito auto. Inserisci il prezzo del veicolo, l'acconto, il valore della permuta, il tasso e la durata per vedere la rata mensile.",
+      "errors": {
+        "downPaymentExceeds": "Acconto e permuta non possono superare il prezzo del veicolo.",
+        "rateRange": "Il tasso annuo deve essere tra 0% e 40%.",
+        "termRange": "La durata deve essere tra 12 e 96 mesi.",
+        "vehiclePriceRange": "Il prezzo deve essere tra 1.000 e 500.000.",
+      },
+      "faq": [
+        {
+          "a": "Durate brevi (36–48 mesi) costano meno in interessi ma hanno rate più alte. Durate lunghe (60–84 mesi) abbassano la rata ma aumentano il costo totale.",
+          "q": "Qual è la durata migliore per un prestito auto?",
+        },
+      ],
+      "inputs": {
+        "annualRate": {
+          "help": "Il TAEG offerto dalla tua banca.",
+          "label": "Tasso annuo (%)",
+        },
+        "downPayment": {
+          "help": "Importo versato immediatamente all'acquisto.",
+          "label": "Acconto",
+        },
+        "termMonths": {
+          "help": "Durata del prestito in mesi (es. 36, 48, 60).",
+          "label": "Durata (mesi)",
+        },
+        "tradeInValue": {
+          "help": "Valore di un veicolo dato in permuta. Riduce l'importo finanziato.",
+          "label": "Valore permuta",
+        },
+        "vehiclePrice": {
+          "help": "Prezzo di acquisto del veicolo.",
+          "label": "Prezzo del veicolo",
+        },
+      },
+      "keywords": [
+        "calcolatore prestito auto",
+        "finanziamento auto",
+        "rata mensile auto",
+        "credito auto",
+        "prestito veicolo",
+        "simulatore finanziamento auto",
+        "tasso prestito auto",
+      ],
+      "outputs": {
+        "loanAmount": {
+          "help": "Prezzo del veicolo meno acconto e permuta.",
+          "label": "Importo finanziato",
+        },
+        "monthlyPayment": {
+          "help": "Importo fisso da pagare ogni mese.",
+          "label": "Rata mensile",
+        },
+        "totalInterest": {
+          "help": "Totale interessi pagati nel corso del prestito.",
+          "label": "Interessi totali",
+        },
+        "totalPayment": {
+          "help": "Somma di tutte le rate mensili.",
+          "label": "Costo totale",
+        },
+      },
+      "short": "Calcola la rata mensile, il costo totale e gli interessi per qualsiasi prestito auto.",
+      "title": "Calcolatore Prestito Auto",
+    },
+    "ja": {
+      "description": "無料の自動車ローン計算機です。車両価格、頭金、下取り価格、金利、返済期間を入力して月々の返済額を確認できます。",
+      "errors": {
+        "downPaymentExceeds": "頭金と下取り価格の合計が車両価格を超えることはできません。",
+        "rateRange": "年利は 0% ～ 40% の範囲で入力してください。",
+        "termRange": "返済期間は 12 ～ 96 ヶ月の範囲で入力してください。",
+        "vehiclePriceRange": "車両価格は 1,000 ～ 500,000 の範囲で入力してください。",
+      },
+      "faq": [
+        {
+          "a": "短期間（36〜48ヶ月）は利息が少ない一方で月々の返済額が高くなります。長期間（60〜84ヶ月）は月々の負担が軽くなりますが、利息総額が増えます。",
+          "q": "自動車ローンの返済期間はどれくらいが良いですか？",
+        },
+      ],
+      "inputs": {
+        "annualRate": {
+          "help": "金融機関が提示する年間利率。",
+          "label": "年利 (%)",
+        },
+        "downPayment": {
+          "help": "購入時に支払う金額。",
+          "label": "頭金",
+        },
+        "termMonths": {
+          "help": "ローンの返済期間（例：36、48、60ヶ月）。",
+          "label": "返済期間（ヶ月）",
+        },
+        "tradeInValue": {
+          "help": "下取りに出す車両の価値。融資額から差し引かれます。",
+          "label": "下取り価格",
+        },
+        "vehiclePrice": {
+          "help": "購入する車両の価格。",
+          "label": "車両価格",
+        },
+      },
+      "keywords": [
+        "自動車ローン計算機",
+        "カーローン計算",
+        "月々の返済額",
+        "車両ファイナンス",
+        "マイカーローン",
+        "自動車ローン金利",
+        "車購入計算機",
+      ],
+      "outputs": {
+        "loanAmount": {
+          "help": "車両価格から頭金と下取り価格を引いた金額。",
+          "label": "融資額",
+        },
+        "monthlyPayment": {
+          "help": "毎月支払う固定額。",
+          "label": "毎月の返済額",
+        },
+        "totalInterest": {
+          "help": "ローン期間全体で支払う利息の合計。",
+          "label": "総支払利息",
+        },
+        "totalPayment": {
+          "help": "全月次返済額の合計。",
+          "label": "総返済額",
+        },
+      },
+      "short": "自動車ローンの毎月の返済額、総費用、利息を計算します。",
+      "title": "自動車ローン計算機",
+    },
+    "ko": {
+      "description": "무료 자동차 할부 계산기입니다. 차량 가격, 계약금, 보상판매 가치, 금리, 기간을 입력하면 월 납입액과 총 대출 비용을 확인할 수 있습니다.",
+      "errors": {
+        "downPaymentExceeds": "계약금과 보상판매 금액의 합이 차량 가격을 초과할 수 없습니다.",
+        "rateRange": "연이율은 0% ~ 40% 사이여야 합니다.",
+        "termRange": "대출 기간은 12 ~ 96개월 사이여야 합니다.",
+        "vehiclePriceRange": "차량 가격은 1,000 ~ 500,000 사이여야 합니다.",
+      },
+      "faq": [
+        {
+          "a": "단기(36~48개월)는 이자 총액이 적지만 월 납입액이 높습니다. 장기(60~84개월)는 월 납입 부담이 줄지만 이자 총액이 늘어납니다.",
+          "q": "자동차 대출 기간은 얼마가 좋나요?",
+        },
+      ],
+      "inputs": {
+        "annualRate": {
+          "help": "금융기관이 제시하는 연간 이자율.",
+          "label": "연이율 (%)",
+        },
+        "downPayment": {
+          "help": "구매 시 즉시 납부하는 금액.",
+          "label": "계약금",
+        },
+        "termMonths": {
+          "help": "대출 기간(예: 36, 48, 60개월).",
+          "label": "대출 기간 (개월)",
+        },
+        "tradeInValue": {
+          "help": "기존 차량의 보상판매 금액. 대출 금액을 줄입니다.",
+          "label": "보상판매 가치",
+        },
+        "vehiclePrice": {
+          "help": "구입하는 차량의 가격.",
+          "label": "차량 가격",
+        },
+      },
+      "keywords": [
+        "자동차 할부 계산기",
+        "자동차 대출 계산",
+        "월 납입액 계산",
+        "차량 금융",
+        "마이카 론",
+        "자동차 이자 계산",
+        "차량 구매 계산기",
+      ],
+      "outputs": {
+        "loanAmount": {
+          "help": "차량 가격에서 계약금과 보상판매 금액을 뺀 실제 대출액.",
+          "label": "대출 금액",
+        },
+        "monthlyPayment": {
+          "help": "매달 납부하는 고정 금액.",
+          "label": "월 납입액",
+        },
+        "totalInterest": {
+          "help": "대출 기간 동안 납부하는 이자 총액.",
+          "label": "총 이자",
+        },
+        "totalPayment": {
+          "help": "모든 월 납입액의 합계.",
+          "label": "총 상환액",
+        },
+      },
+      "short": "모든 자동차 대출의 월 납입액, 총비용 및 이자를 계산하세요.",
+      "title": "자동차 할부 계산기",
+    },
+    "ru": {
+      "description": "Бесплатный калькулятор автокредита. Введите стоимость автомобиля, первоначальный взнос, стоимость трейд-ин, ставку и срок — получите ежемесячный платёж.",
+      "errors": {
+        "downPaymentExceeds": "Первоначальный взнос и трейд-ин не могут превышать стоимость авто.",
+        "rateRange": "Годовая ставка должна быть от 0 % до 40 %.",
+        "termRange": "Срок должен быть от 12 до 96 месяцев.",
+        "vehiclePriceRange": "Стоимость автомобиля должна быть от 1 000 до 500 000.",
+      },
+      "faq": [
+        {
+          "a": "Короткие сроки (36–48 месяцев) выгоднее по процентам, но выше платёж. Длинные сроки (60–84 месяца) снижают платёж, но увеличивают общую переплату.",
+          "q": "Какой срок автокредита лучше?",
+        },
+      ],
+      "inputs": {
+        "annualRate": {
+          "help": "Годовая процентная ставка банка.",
+          "label": "Годовая ставка (%)",
+        },
+        "downPayment": {
+          "help": "Сумма, уплачиваемая сразу при покупке.",
+          "label": "Первоначальный взнос",
+        },
+        "termMonths": {
+          "help": "Срок кредита в месяцах (напр. 36, 48, 60).",
+          "label": "Срок (месяцев)",
+        },
+        "tradeInValue": {
+          "help": "Стоимость сдаваемого автомобиля. Уменьшает финансируемую сумму.",
+          "label": "Стоимость трейд-ин",
+        },
+        "vehiclePrice": {
+          "help": "Цена покупки автомобиля.",
+          "label": "Стоимость автомобиля",
+        },
+      },
+      "keywords": [
+        "калькулятор автокредита",
+        "автокредит",
+        "ежемесячный платёж по автокредиту",
+        "автомобильный кредит",
+        "расчёт автокредита",
+        "лизинг автомобиля",
+        "проценты по автокредиту",
+      ],
+      "outputs": {
+        "loanAmount": {
+          "help": "Стоимость авто минус взнос и трейд-ин.",
+          "label": "Сумма кредита",
+        },
+        "monthlyPayment": {
+          "help": "Фиксированная сумма, выплачиваемая каждый месяц.",
+          "label": "Ежемесячный платёж",
+        },
+        "totalInterest": {
+          "help": "Итоговая сумма процентов за весь срок.",
+          "label": "Переплата по процентам",
+        },
+        "totalPayment": {
+          "help": "Сумма всех ежемесячных платежей.",
+          "label": "Общая сумма выплат",
+        },
+      },
+      "short": "Рассчитайте ежемесячный платёж, общую стоимость и проценты по автокредиту.",
+      "title": "Калькулятор автокредита",
+    },
+    "tr": {
+      "description": "Ücretsiz araç kredisi hesaplayıcısı. Araç fiyatı, peşinat, takas değeri, faiz oranı ve vadeyi girerek aylık ödemenizi ve toplam kredi maliyetinizi görün.",
+      "errors": {
+        "downPaymentExceeds": "Peşinat ve takas değeri araç fiyatını aşamaz.",
+        "rateRange": "Yıllık faiz oranı %0 ile %40 arasında olmalıdır.",
+        "termRange": "Kredi vadesi 12 ile 96 ay arasında olmalıdır.",
+        "vehiclePriceRange": "Araç fiyatı 1.000 ile 500.000 arasında olmalıdır.",
+      },
+      "faq": [
+        {
+          "a": "Kısa vadeler (36–48 ay) toplam faiz maliyetini azaltır; ancak aylık taksit yüksektir. Uzun vadeler (60–84 ay) aylık taksidi düşürür fakat daha fazla faiz ödenmesine ve aracın piyasa değerinin altına düşme riskine yol açar.",
+          "q": "Araç kredisinde en uygun vade nedir?",
+        },
+        {
+          "a": "Takas değeri, satın alma fiyatından düşülerek finanse edilmesi gereken tutarı azaltır. Bu hem aylık taksidi hem de toplam faizi düşürür.",
+          "q": "Takas aracın krediye etkisi nedir?",
+        },
+      ],
+      "inputs": {
+        "annualRate": {
+          "help": "Bankanızın sunduğu yıllık faiz oranı.",
+          "label": "Yıllık Faiz Oranı (%)",
+        },
+        "downPayment": {
+          "help": "Satın almada peşin ödenen tutar.",
+          "label": "Peşinat",
+        },
+        "termMonths": {
+          "help": "Kredinin ay cinsinden süresi (örn. 36, 48, 60).",
+          "label": "Kredi Vadesi (ay)",
+        },
+        "tradeInValue": {
+          "help": "Takas ettiğiniz aracın değeri. Finanse edilecek tutarı azaltır.",
+          "label": "Takas Değeri",
+        },
+        "vehiclePrice": {
+          "help": "Aracın satın alma fiyatı.",
+          "label": "Araç Fiyatı",
+        },
+      },
+      "keywords": [
+        "araç kredisi hesaplayıcı",
+        "otomobil kredisi",
+        "aylık araba taksiti",
+        "araç finansmanı",
+        "araba kredisi hesaplama",
+        "otomobil faizi",
+        "araç satın alma hesaplayıcı",
+      ],
+      "outputs": {
+        "loanAmount": {
+          "help": "Araç fiyatından peşinat ve takas değeri düşüldükten kalan.",
+          "label": "Finanse Edilen Tutar",
+        },
+        "monthlyPayment": {
+          "help": "Her ay ödenmesi gereken sabit tutar.",
+          "label": "Aylık Taksit",
+        },
+        "totalInterest": {
+          "help": "Kredi süresince ödenen toplam faiz.",
+          "label": "Toplam Faiz",
+        },
+        "totalPayment": {
+          "help": "Kredi vadesi boyunca yapılan tüm ödemelerin toplamı.",
+          "label": "Toplam Ödeme",
+        },
+      },
+      "short": "Herhangi bir araç kredisi için aylık ödemeyi, toplam maliyeti ve faizi hesaplayın.",
+      "title": "Araç Kredisi Hesaplayıcı",
+    },
+    "zh": {
+      "description": "免费汽车贷款计算器。输入车价、首付、以旧换新价值、利率和期限，即可查看月供和贷款总费用。",
+      "errors": {
+        "downPaymentExceeds": "首付和以旧换新价值之和不能超过车辆价格。",
+        "rateRange": "年利率必须在 0% 至 40% 之间。",
+        "termRange": "贷款期限必须在 12 至 96 个月之间。",
+        "vehiclePriceRange": "车辆价格必须在 1,000 至 500,000 之间。",
+      },
+      "faq": [
+        {
+          "a": "较短期限（36–48 个月）利息总额更少，但月供较高。较长期限（60–84 个月）降低月供，但增加总利息支出。",
+          "q": "汽车贷款选多长期限最好？",
+        },
+      ],
+      "inputs": {
+        "annualRate": {
+          "help": "贷款机构提供的年利率。",
+          "label": "年利率 (%)",
+        },
+        "downPayment": {
+          "help": "购车时预先支付的金额。",
+          "label": "首付款",
+        },
+        "termMonths": {
+          "help": "贷款期限（月数），如 36、48、60。",
+          "label": "贷款期限（月）",
+        },
+        "tradeInValue": {
+          "help": "旧车的置换价值，用于抵减贷款金额。",
+          "label": "以旧换新价值",
+        },
+        "vehiclePrice": {
+          "help": "车辆的购买价格。",
+          "label": "车辆价格",
+        },
+      },
+      "keywords": [
+        "汽车贷款计算器",
+        "车贷计算",
+        "月供计算",
+        "汽车融资",
+        "购车贷款",
+        "车贷利率",
+        "汽车分期计算",
+      ],
+      "outputs": {
+        "loanAmount": {
+          "help": "车价减去首付和以旧换新价值后的实际贷款额。",
+          "label": "贷款金额",
+        },
+        "monthlyPayment": {
+          "help": "每月需支付的固定金额。",
+          "label": "月供",
+        },
+        "totalInterest": {
+          "help": "贷款期内支付的利息总额。",
+          "label": "总利息",
+        },
+        "totalPayment": {
+          "help": "所有月供的总和。",
+          "label": "还款总额",
+        },
+      },
+      "short": "计算任何汽车贷款的月供、总费用和利息。",
+      "title": "汽车贷款计算器",
+    },
+  },
+  "icon": Any<String>,
+  "inputSchema": ZodEffects {
+    "_def": {
+      "effect": {
+        "refinement": [Function],
+        "type": "refinement",
+      },
+      "schema": ZodObject {
+        "_cached": {
+          "keys": [
+            "vehiclePrice",
+            "downPayment",
+            "tradeInValue",
+            "annualRate",
+            "termMonths",
+          ],
+          "shape": {
+            "annualRate": ZodNumber {
+              "_def": {
+                "checks": [
+                  {
+                    "inclusive": true,
+                    "kind": "min",
+                    "message": undefined,
+                    "value": 0,
+                  },
+                  {
+                    "inclusive": true,
+                    "kind": "max",
+                    "message": undefined,
+                    "value": 40,
+                  },
+                ],
+                "coerce": false,
+                "typeName": "ZodNumber",
+              },
+              "and": [Function],
+              "array": [Function],
+              "brand": [Function],
+              "catch": [Function],
+              "default": [Function],
+              "describe": [Function],
+              "isNullable": [Function],
+              "isOptional": [Function],
+              "max": [Function],
+              "min": [Function],
+              "nullable": [Function],
+              "nullish": [Function],
+              "optional": [Function],
+              "or": [Function],
+              "parse": [Function],
+              "parseAsync": [Function],
+              "pipe": [Function],
+              "promise": [Function],
+              "readonly": [Function],
+              "refine": [Function],
+              "refinement": [Function],
+              "safeParse": [Function],
+              "safeParseAsync": [Function],
+              "spa": [Function],
+              "step": [Function],
+              "superRefine": [Function],
+              "transform": [Function],
+              "~standard": {
+                "validate": [Function],
+                "vendor": "zod",
+                "version": 1,
+              },
+            },
+            "downPayment": ZodNumber {
+              "_def": {
+                "checks": [
+                  {
+                    "inclusive": true,
+                    "kind": "min",
+                    "message": undefined,
+                    "value": 0,
+                  },
+                ],
+                "coerce": false,
+                "typeName": "ZodNumber",
+              },
+              "and": [Function],
+              "array": [Function],
+              "brand": [Function],
+              "catch": [Function],
+              "default": [Function],
+              "describe": [Function],
+              "isNullable": [Function],
+              "isOptional": [Function],
+              "max": [Function],
+              "min": [Function],
+              "nullable": [Function],
+              "nullish": [Function],
+              "optional": [Function],
+              "or": [Function],
+              "parse": [Function],
+              "parseAsync": [Function],
+              "pipe": [Function],
+              "promise": [Function],
+              "readonly": [Function],
+              "refine": [Function],
+              "refinement": [Function],
+              "safeParse": [Function],
+              "safeParseAsync": [Function],
+              "spa": [Function],
+              "step": [Function],
+              "superRefine": [Function],
+              "transform": [Function],
+              "~standard": {
+                "validate": [Function],
+                "vendor": "zod",
+                "version": 1,
+              },
+            },
+            "termMonths": ZodNumber {
+              "_def": {
+                "checks": [
+                  {
+                    "kind": "int",
+                    "message": undefined,
+                  },
+                  {
+                    "inclusive": true,
+                    "kind": "min",
+                    "message": undefined,
+                    "value": 12,
+                  },
+                  {
+                    "inclusive": true,
+                    "kind": "max",
+                    "message": undefined,
+                    "value": 96,
+                  },
+                ],
+                "coerce": false,
+                "typeName": "ZodNumber",
+              },
+              "and": [Function],
+              "array": [Function],
+              "brand": [Function],
+              "catch": [Function],
+              "default": [Function],
+              "describe": [Function],
+              "isNullable": [Function],
+              "isOptional": [Function],
+              "max": [Function],
+              "min": [Function],
+              "nullable": [Function],
+              "nullish": [Function],
+              "optional": [Function],
+              "or": [Function],
+              "parse": [Function],
+              "parseAsync": [Function],
+              "pipe": [Function],
+              "promise": [Function],
+              "readonly": [Function],
+              "refine": [Function],
+              "refinement": [Function],
+              "safeParse": [Function],
+              "safeParseAsync": [Function],
+              "spa": [Function],
+              "step": [Function],
+              "superRefine": [Function],
+              "transform": [Function],
+              "~standard": {
+                "validate": [Function],
+                "vendor": "zod",
+                "version": 1,
+              },
+            },
+            "tradeInValue": ZodDefault {
+              "_def": {
+                "defaultValue": [Function],
+                "description": undefined,
+                "errorMap": [Function],
+                "innerType": ZodNumber {
+                  "_def": {
+                    "checks": [
+                      {
+                        "inclusive": true,
+                        "kind": "min",
+                        "message": undefined,
+                        "value": 0,
+                      },
+                    ],
+                    "coerce": false,
+                    "typeName": "ZodNumber",
+                  },
+                  "and": [Function],
+                  "array": [Function],
+                  "brand": [Function],
+                  "catch": [Function],
+                  "default": [Function],
+                  "describe": [Function],
+                  "isNullable": [Function],
+                  "isOptional": [Function],
+                  "max": [Function],
+                  "min": [Function],
+                  "nullable": [Function],
+                  "nullish": [Function],
+                  "optional": [Function],
+                  "or": [Function],
+                  "parse": [Function],
+                  "parseAsync": [Function],
+                  "pipe": [Function],
+                  "promise": [Function],
+                  "readonly": [Function],
+                  "refine": [Function],
+                  "refinement": [Function],
+                  "safeParse": [Function],
+                  "safeParseAsync": [Function],
+                  "spa": [Function],
+                  "step": [Function],
+                  "superRefine": [Function],
+                  "transform": [Function],
+                  "~standard": {
+                    "validate": [Function],
+                    "vendor": "zod",
+                    "version": 1,
+                  },
+                },
+                "typeName": "ZodDefault",
+              },
+              "and": [Function],
+              "array": [Function],
+              "brand": [Function],
+              "catch": [Function],
+              "default": [Function],
+              "describe": [Function],
+              "isNullable": [Function],
+              "isOptional": [Function],
+              "nullable": [Function],
+              "nullish": [Function],
+              "optional": [Function],
+              "or": [Function],
+              "parse": [Function],
+              "parseAsync": [Function],
+              "pipe": [Function],
+              "promise": [Function],
+              "readonly": [Function],
+              "refine": [Function],
+              "refinement": [Function],
+              "safeParse": [Function],
+              "safeParseAsync": [Function],
+              "spa": [Function],
+              "superRefine": [Function],
+              "transform": [Function],
+              "~standard": {
+                "validate": [Function],
+                "vendor": "zod",
+                "version": 1,
+              },
+            },
+            "vehiclePrice": ZodNumber {
+              "_def": {
+                "checks": [
+                  {
+                    "inclusive": true,
+                    "kind": "min",
+                    "message": undefined,
+                    "value": 1000,
+                  },
+                  {
+                    "inclusive": true,
+                    "kind": "max",
+                    "message": undefined,
+                    "value": 500000,
+                  },
+                ],
+                "coerce": false,
+                "typeName": "ZodNumber",
+              },
+              "and": [Function],
+              "array": [Function],
+              "brand": [Function],
+              "catch": [Function],
+              "default": [Function],
+              "describe": [Function],
+              "isNullable": [Function],
+              "isOptional": [Function],
+              "max": [Function],
+              "min": [Function],
+              "nullable": [Function],
+              "nullish": [Function],
+              "optional": [Function],
+              "or": [Function],
+              "parse": [Function],
+              "parseAsync": [Function],
+              "pipe": [Function],
+              "promise": [Function],
+              "readonly": [Function],
+              "refine": [Function],
+              "refinement": [Function],
+              "safeParse": [Function],
+              "safeParseAsync": [Function],
+              "spa": [Function],
+              "step": [Function],
+              "superRefine": [Function],
+              "transform": [Function],
+              "~standard": {
+                "validate": [Function],
+                "vendor": "zod",
+                "version": 1,
+              },
+            },
+          },
+        },
+        "_def": {
+          "catchall": ZodNever {
+            "_def": {
+              "typeName": "ZodNever",
+            },
+            "and": [Function],
+            "array": [Function],
+            "brand": [Function],
+            "catch": [Function],
+            "default": [Function],
+            "describe": [Function],
+            "isNullable": [Function],
+            "isOptional": [Function],
+            "nullable": [Function],
+            "nullish": [Function],
+            "optional": [Function],
+            "or": [Function],
+            "parse": [Function],
+            "parseAsync": [Function],
+            "pipe": [Function],
+            "promise": [Function],
+            "readonly": [Function],
+            "refine": [Function],
+            "refinement": [Function],
+            "safeParse": [Function],
+            "safeParseAsync": [Function],
+            "spa": [Function],
+            "superRefine": [Function],
+            "transform": [Function],
+            "~standard": {
+              "validate": [Function],
+              "vendor": "zod",
+              "version": 1,
+            },
+          },
+          "shape": [Function],
+          "typeName": "ZodObject",
+          "unknownKeys": "strip",
+        },
+        "and": [Function],
+        "array": [Function],
+        "augment": [Function],
+        "brand": [Function],
+        "catch": [Function],
+        "default": [Function],
+        "describe": [Function],
+        "isNullable": [Function],
+        "isOptional": [Function],
+        "nonstrict": [Function],
+        "nullable": [Function],
+        "nullish": [Function],
+        "optional": [Function],
+        "or": [Function],
+        "parse": [Function],
+        "parseAsync": [Function],
+        "pipe": [Function],
+        "promise": [Function],
+        "readonly": [Function],
+        "refine": [Function],
+        "refinement": [Function],
+        "safeParse": [Function],
+        "safeParseAsync": [Function],
+        "spa": [Function],
+        "superRefine": [Function],
+        "transform": [Function],
+        "~standard": {
+          "validate": [Function],
+          "vendor": "zod",
+          "version": 1,
+        },
+      },
+      "typeName": "ZodEffects",
+    },
+    "and": [Function],
+    "array": [Function],
+    "brand": [Function],
+    "catch": [Function],
+    "default": [Function],
+    "describe": [Function],
+    "isNullable": [Function],
+    "isOptional": [Function],
+    "nullable": [Function],
+    "nullish": [Function],
+    "optional": [Function],
+    "or": [Function],
+    "parse": [Function],
+    "parseAsync": [Function],
+    "pipe": [Function],
+    "promise": [Function],
+    "readonly": [Function],
+    "refine": [Function],
+    "refinement": [Function],
+    "safeParse": [Function],
+    "safeParseAsync": [Function],
+    "spa": [Function],
+    "superRefine": [Function],
+    "transform": [Function],
+    "~standard": {
+      "validate": [Function],
+      "vendor": "zod",
+      "version": 1,
+    },
+  },
+  "inputs": [
+    {
+      "defaultValue": 30000,
+      "id": "vehiclePrice",
+      "required": true,
+      "type": {
+        "kind": "number",
+        "max": 500000,
+        "min": 1000,
+        "step": 500,
+        "unit": "usd",
+      },
+    },
+    {
+      "defaultValue": 3000,
+      "id": "downPayment",
+      "required": true,
+      "type": {
+        "kind": "number",
+        "max": 500000,
+        "min": 0,
+        "step": 500,
+        "unit": "usd",
+      },
+    },
+    {
+      "defaultValue": 0,
+      "id": "tradeInValue",
+      "required": false,
+      "type": {
+        "kind": "number",
+        "max": 500000,
+        "min": 0,
+        "step": 500,
+        "unit": "usd",
+      },
+    },
+    {
+      "defaultValue": 6.5,
+      "id": "annualRate",
+      "required": true,
+      "type": {
+        "kind": "number",
+        "max": 40,
+        "min": 0,
+        "step": 0.01,
+        "unit": "percent",
+      },
+    },
+    {
+      "defaultValue": 60,
+      "id": "termMonths",
+      "required": true,
+      "type": {
+        "integer": true,
+        "kind": "number",
+        "max": 96,
+        "min": 12,
+        "step": 12,
+        "unit": "month",
+      },
+    },
+  ],
+  "meta": {
+    "disclaimer": "This calculator estimates principal and interest only. Actual costs may include dealer fees, taxes, registration, and insurance.",
+    "formulaLatex": "M = L \\cdot \\frac{r(1+r)^n}{(1+r)^n - 1}",
+    "references": [
+      {
+        "authority": "Consumer Financial Protection Bureau (CFPB)",
+        "title": "Auto Loans",
+        "url": "https://www.consumerfinance.gov/consumer-tools/auto-loans/",
+      },
+      {
+        "authority": "NerdWallet",
+        "title": "Car Loans",
+        "url": "https://www.nerdwallet.com/best/loans/auto-loans/best-auto-loans",
+      },
+    ],
+  },
+  "outputs": [
+    {
+      "format": "currency",
+      "highlight": true,
+      "id": "monthlyPayment",
+      "precision": 2,
+    },
+    {
+      "format": "currency",
+      "id": "loanAmount",
+      "precision": 2,
+    },
+    {
+      "format": "currency",
+      "id": "totalPayment",
+      "precision": 2,
+    },
+    {
+      "format": "currency",
+      "id": "totalInterest",
+      "precision": 2,
+    },
+  ],
+  "priority": Any<String>,
+  "related": [
+    "mortgage",
+    "loan-amortization",
+    "compound-interest",
+  ],
+  "slug": Any<String>,
+  "tags": [
+    "auto loan",
+    "car loan",
+    "vehicle financing",
+    "monthly payment",
+    "finance",
+  ],
+}
+`;

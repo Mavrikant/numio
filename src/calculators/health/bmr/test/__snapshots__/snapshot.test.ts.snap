@@ -1,0 +1,1328 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`BMR definition — shape snapshot > snapshot: definition shape 1`] = `
+{
+  "category": Any<String>,
+  "compute": [Function],
+  "i18n": {
+    "ar": {
+      "description": "حاسبة معدل الأيض الأساسي المجانية باستخدام معادلتَي ميفلين-سانت جيور وهاريس-بنيديكت. اعرف عدد السعرات الحرارية التي يحتاجها جسمك في حالة الراحة التامة للحفاظ على وظائفه الحيوية.",
+      "errors": {
+        "ageOutOfRange": "يجب أن يكون العمر بين 1 و120 سنة.",
+        "heightOutOfRange": "يجب أن يكون الطول بين 50 و250 سنتيمتر.",
+        "weightOutOfRange": "يجب أن يكون الوزن بين 1 و300 كيلوغرام.",
+      },
+      "faq": [
+        {
+          "a": "معدل الأيض الأساسي هو عدد السعرات الحرارية التي يحرقها الجسم في حالة الراحة التامة للحفاظ على الوظائف الأساسية كالتنفس والدورة الدموية وتجديد الخلايا وتنظيم الحرارة.",
+          "q": "ما معدل الأيض الأساسي؟",
+        },
+        {
+          "a": "تُعدّ معادلة ميفلين-سانت جيور (1990) الأدق عموماً للمجتمعات الحديثة، وتوصي بها أكاديمية التغذية والديتيتيك.",
+          "q": "أيّ معادلة أكثر دقة؟",
+        },
+        {
+          "a": "نعم. يتراجع معدل الأيض الأساسي بنحو 1-2% كل عقد بعد سن العشرين، بسبب فقدان الكتلة العضلية. ويساعد تدريب المقاومة على إبطاء هذا التراجع.",
+          "q": "هل يتراجع معدل الأيض الأساسي مع التقدم في السن؟",
+        },
+      ],
+      "inputs": {
+        "age": {
+          "help": "عمرك بالسنوات. يتراجع معدل الأيض الأساسي بنحو 2% كل عقد بعد سن العشرين.",
+          "label": "العمر",
+        },
+        "formula": {
+          "help": "يوصي معظم أخصائيي التغذية بمعادلة ميفلين-سانت جيور (1990). ومعادلة هاريس-بنيديكت (مراجعة 1984) بديل أقدم.",
+          "label": "المعادلة",
+        },
+        "gender": {
+          "help": "يؤثر الجنس في معدل الأيض الأساسي بسبب الفوارق في الكتلة العضلية والهرمونات.",
+          "label": "الجنس البيولوجي",
+        },
+        "height": {
+          "help": "طولك بالسنتيمتر.",
+          "label": "الطول",
+        },
+        "weight": {
+          "help": "وزن جسمك الحالي بالكيلوغرام.",
+          "label": "الوزن",
+        },
+      },
+      "keywords": [
+        "حاسبة معدل الأيض",
+        "معدل الأيض الأساسي",
+        "السعرات الحرارية في الراحة",
+        "ميفلين سانت جيور",
+        "هاريس بنيديكت",
+        "حساب الطاقة",
+        "الاستقلاب الأساسي",
+      ],
+      "options": {
+        "formula": {
+          "harris": "هاريس-بنيديكت (مراجعة 1984)",
+          "mifflin": "ميفلين-سانت جيور (موصى به)",
+        },
+        "gender": {
+          "female": "أنثى",
+          "male": "ذكر",
+        },
+      },
+      "outputs": {
+        "bmr": {
+          "help": "السعرات الحرارية المحروقة يومياً في حالة الراحة التامة.",
+          "label": "معدل الأيض الأساسي",
+          "suffix": "سعرة/يوم",
+        },
+      },
+      "short": "احسب معدل الأيض الأساسي لجسمك — السعرات التي يحرقها جسمك أثناء الراحة.",
+      "title": "حاسبة معدل الأيض الأساسي",
+    },
+    "de": {
+      "description": "Kostenloser BMR-Rechner mit Mifflin-St-Jeor- und Harris-Benedict-Formel. Erfahren Sie, wie viele Kalorien Ihr Körper in völliger Ruhe benötigt, um lebenswichtige Funktionen aufrechtzuerhalten.",
+      "errors": {
+        "ageOutOfRange": "Das Alter muss zwischen 1 und 120 Jahren liegen.",
+        "heightOutOfRange": "Die Körpergröße muss zwischen 50 und 250 cm liegen.",
+        "weightOutOfRange": "Das Gewicht muss zwischen 1 und 300 kg liegen.",
+      },
+      "faq": [
+        {
+          "a": "Der Grundumsatz (BMR) gibt an, wie viele Kalorien der Körper in vollständiger Ruhe verbraucht, um lebenswichtige Funktionen wie Atmung, Kreislauf und Zellregeneration aufrechtzuerhalten.",
+          "q": "Was ist der BMR?",
+        },
+        {
+          "a": "Die Mifflin-St-Jeor-Gleichung (1990) gilt für die meisten modernen Bevölkerungsgruppen als genauer und wird von der Academy of Nutrition and Dietetics empfohlen.",
+          "q": "Welche Formel ist genauer?",
+        },
+        {
+          "a": "Ja. Ab dem 20. Lebensjahr sinkt der BMR pro Jahrzehnt um etwa 1–2 %, hauptsächlich wegen des Abbaus von Muskelmasse. Krafttraining kann diesen Rückgang verlangsamen.",
+          "q": "Nimmt der BMR mit dem Alter ab?",
+        },
+      ],
+      "inputs": {
+        "age": {
+          "help": "Ihr Alter in Jahren. Der BMR sinkt nach dem 20. Lebensjahr um etwa 2 % pro Jahrzehnt.",
+          "label": "Alter",
+        },
+        "formula": {
+          "help": "Mifflin-St Jeor (1990) wird von den meisten Ernährungsberatern empfohlen. Harris-Benedict (Revision 1984) ist eine ältere Alternative.",
+          "label": "Formel",
+        },
+        "gender": {
+          "help": "Das Geschlecht beeinflusst den BMR durch Unterschiede in Muskelmasse und Hormonen.",
+          "label": "Biologisches Geschlecht",
+        },
+        "height": {
+          "help": "Ihre Körpergröße in Zentimetern.",
+          "label": "Größe",
+        },
+        "weight": {
+          "help": "Ihr aktuelles Körpergewicht in Kilogramm.",
+          "label": "Gewicht",
+        },
+      },
+      "keywords": [
+        "BMR-Rechner",
+        "Grundumsatz",
+        "Ruheumsatz",
+        "Mifflin St Jeor",
+        "Harris Benedict",
+        "Kalorienrechner",
+        "Metabolismus",
+      ],
+      "options": {
+        "formula": {
+          "harris": "Harris-Benedict (Revision 1984)",
+          "mifflin": "Mifflin-St Jeor (empfohlen)",
+        },
+        "gender": {
+          "female": "Weiblich",
+          "male": "Männlich",
+        },
+      },
+      "outputs": {
+        "bmr": {
+          "help": "Kalorien, die pro Tag in vollständiger Ruhe verbrannt werden.",
+          "label": "Grundumsatz (BMR)",
+          "suffix": "kcal/Tag",
+        },
+      },
+      "short": "Berechnen Sie Ihren Grundumsatz — die Kalorien, die Ihr Körper in Ruhe verbraucht.",
+      "title": "BMR-Rechner",
+    },
+    "en": {
+      "description": "Free BMR calculator using Mifflin-St Jeor and Harris-Benedict formulas. Find out how many calories your body needs at complete rest to maintain vital functions.",
+      "errors": {
+        "ageOutOfRange": "Age must be between 1 and 120 years.",
+        "heightOutOfRange": "Height must be between 50 and 250 cm.",
+        "weightOutOfRange": "Weight must be between 1 and 300 kg.",
+      },
+      "faq": [
+        {
+          "a": "Basal Metabolic Rate (BMR) is the number of calories your body burns at complete rest to maintain essential functions such as breathing, circulation, cell production, and temperature regulation.",
+          "q": "What is BMR?",
+        },
+        {
+          "a": "The Mifflin-St Jeor equation (1990) is generally considered more accurate for most modern populations and is endorsed by the Academy of Nutrition and Dietetics. The Harris-Benedict revised formula (1984) is slightly less precise but still widely used.",
+          "q": "Which BMR formula is more accurate?",
+        },
+        {
+          "a": "BMR is the calories needed at complete rest. Total Daily Energy Expenditure (TDEE) multiplies BMR by an activity factor to account for physical activity. Use our Calorie calculator to compute your TDEE.",
+          "q": "How is BMR different from TDEE?",
+        },
+        {
+          "a": "Yes. BMR typically declines by about 1–2% per decade from age 20, partly because muscle mass decreases with age. Resistance training can help slow this decline.",
+          "q": "Does BMR decrease with age?",
+        },
+        {
+          "a": "Eating significantly below your BMR for extended periods can cause muscle loss, hormonal disruption, and nutrient deficiencies. Always consult a healthcare professional before attempting very-low-calorie diets.",
+          "q": "Can I eat fewer calories than my BMR?",
+        },
+      ],
+      "inputs": {
+        "age": {
+          "help": "Your age in years. BMR decreases roughly 2% per decade after age 20.",
+          "label": "Age",
+        },
+        "formula": {
+          "help": "Mifflin-St Jeor (1990) is recommended by most dietitians. Harris-Benedict (1984 revision) is an older alternative.",
+          "label": "Formula",
+        },
+        "gender": {
+          "help": "Sex affects BMR due to differences in muscle mass and hormones.",
+          "label": "Biological sex",
+        },
+        "height": {
+          "help": "Your height in centimetres.",
+          "label": "Height",
+        },
+        "weight": {
+          "help": "Your current body weight in kilograms.",
+          "label": "Weight",
+        },
+      },
+      "keywords": [
+        "BMR calculator",
+        "basal metabolic rate",
+        "resting metabolic rate",
+        "calories at rest",
+        "Mifflin St Jeor",
+        "Harris Benedict",
+        "metabolism calculator",
+      ],
+      "options": {
+        "formula": {
+          "harris": "Harris-Benedict (revised 1984)",
+          "mifflin": "Mifflin-St Jeor (recommended)",
+        },
+        "gender": {
+          "female": "Female",
+          "male": "Male",
+        },
+      },
+      "outputs": {
+        "bmr": {
+          "help": "Basal Metabolic Rate — calories burned per day at complete rest.",
+          "label": "BMR",
+          "suffix": "kcal/day",
+        },
+      },
+      "short": "Calculate your Basal Metabolic Rate — the calories your body burns at rest.",
+      "title": "BMR Calculator",
+    },
+    "es": {
+      "description": "Calculadora de TMB gratuita con las fórmulas Mifflin-St Jeor y Harris-Benedict. Descubre cuántas calorías necesita tu cuerpo en reposo completo para mantener sus funciones vitales.",
+      "errors": {
+        "ageOutOfRange": "La edad debe estar entre 1 y 120 años.",
+        "heightOutOfRange": "La altura debe estar entre 50 y 250 cm.",
+        "weightOutOfRange": "El peso debe estar entre 1 y 300 kg.",
+      },
+      "faq": [
+        {
+          "a": "La Tasa Metabólica Basal (TMB) es el número de calorías que el cuerpo quema en reposo completo para mantener funciones esenciales como respiración, circulación, producción celular y regulación de temperatura.",
+          "q": "¿Qué es la TMB?",
+        },
+        {
+          "a": "La ecuación Mifflin-St Jeor (1990) es generalmente más precisa para las poblaciones modernas y está respaldada por la Academia de Nutrición y Dietética.",
+          "q": "¿Qué fórmula es más precisa?",
+        },
+        {
+          "a": "Sí. La TMB desciende aproximadamente un 1-2% por década desde los 20 años, principalmente por la pérdida de masa muscular. El entrenamiento de fuerza puede ralentizar este descenso.",
+          "q": "¿Disminuye la TMB con la edad?",
+        },
+      ],
+      "inputs": {
+        "age": {
+          "help": "Tu edad en años. La TMB disminuye aproximadamente un 2% por década después de los 20.",
+          "label": "Edad",
+        },
+        "formula": {
+          "help": "Mifflin-St Jeor (1990) es la recomendada por la mayoría de dietistas. Harris-Benedict (revisión 1984) es una alternativa más antigua.",
+          "label": "Fórmula",
+        },
+        "gender": {
+          "help": "El sexo influye en la TMB por las diferencias de masa muscular y hormonas.",
+          "label": "Sexo biológico",
+        },
+        "height": {
+          "help": "Tu altura en centímetros.",
+          "label": "Altura",
+        },
+        "weight": {
+          "help": "Tu peso corporal actual en kilogramos.",
+          "label": "Peso",
+        },
+      },
+      "keywords": [
+        "calculadora TMB",
+        "tasa metabólica basal",
+        "metabolismo basal",
+        "Mifflin St Jeor",
+        "Harris Benedict",
+        "calorías en reposo",
+        "cálculo metabolismo",
+      ],
+      "options": {
+        "formula": {
+          "harris": "Harris-Benedict (revisión 1984)",
+          "mifflin": "Mifflin-St Jeor (recomendada)",
+        },
+        "gender": {
+          "female": "Mujer",
+          "male": "Hombre",
+        },
+      },
+      "outputs": {
+        "bmr": {
+          "help": "Calorías quemadas por día en reposo completo.",
+          "label": "TMB (Tasa Metabólica Basal)",
+          "suffix": "kcal/día",
+        },
+      },
+      "short": "Calcula tu Tasa Metabólica Basal — las calorías que tu cuerpo quema en reposo.",
+      "title": "Calculadora de TMB",
+    },
+    "fr": {
+      "description": "Calculateur BMR gratuit utilisant les formules Mifflin-St Jeor et Harris-Benedict. Découvrez combien de calories votre corps dépense au repos pour maintenir ses fonctions vitales.",
+      "errors": {
+        "ageOutOfRange": "L'âge doit être compris entre 1 et 120 ans.",
+        "heightOutOfRange": "La taille doit être comprise entre 50 et 250 cm.",
+        "weightOutOfRange": "Le poids doit être compris entre 1 et 300 kg.",
+      },
+      "faq": [
+        {
+          "a": "Le métabolisme de base (BMR) correspond au nombre de calories que le corps brûle au repos complet pour maintenir ses fonctions essentielles : respiration, circulation, production cellulaire et régulation de la température.",
+          "q": "Qu'est-ce que le BMR ?",
+        },
+        {
+          "a": "L'équation de Mifflin-St Jeor (1990) est généralement considérée comme plus précise pour les populations modernes et est recommandée par l'Academy of Nutrition and Dietetics.",
+          "q": "Quelle formule est la plus précise ?",
+        },
+        {
+          "a": "Oui. Le BMR baisse d'environ 1 à 2 % par décennie à partir de 20 ans, principalement en raison de la perte de masse musculaire. L'entraînement en résistance peut ralentir ce déclin.",
+          "q": "Le BMR diminue-t-il avec l'âge ?",
+        },
+      ],
+      "inputs": {
+        "age": {
+          "help": "Votre âge en années. Le BMR diminue d'environ 2 % par décennie après 20 ans.",
+          "label": "Âge",
+        },
+        "formula": {
+          "help": "Mifflin-St Jeor (1990) est recommandée par la plupart des diététiciens. Harris-Benedict (révision 1984) est une alternative plus ancienne.",
+          "label": "Formule",
+        },
+        "gender": {
+          "help": "Le sexe influence le BMR en raison des différences de masse musculaire et d'hormones.",
+          "label": "Sexe biologique",
+        },
+        "height": {
+          "help": "Votre taille en centimètres.",
+          "label": "Taille",
+        },
+        "weight": {
+          "help": "Votre poids corporel actuel en kilogrammes.",
+          "label": "Poids",
+        },
+      },
+      "keywords": [
+        "calculateur BMR",
+        "métabolisme de base",
+        "dépense énergétique au repos",
+        "Mifflin St Jeor",
+        "Harris Benedict",
+        "calories au repos",
+        "calcul métabolisme",
+      ],
+      "options": {
+        "formula": {
+          "harris": "Harris-Benedict (révision 1984)",
+          "mifflin": "Mifflin-St Jeor (recommandée)",
+        },
+        "gender": {
+          "female": "Femme",
+          "male": "Homme",
+        },
+      },
+      "outputs": {
+        "bmr": {
+          "help": "Calories brûlées par jour en repos complet.",
+          "label": "Métabolisme de base (BMR)",
+          "suffix": "kcal/jour",
+        },
+      },
+      "short": "Calculez votre métabolisme de base (BMR) — les calories brûlées au repos.",
+      "title": "Calculateur du Métabolisme de Base",
+    },
+    "hi": {
+      "description": "Mifflin-St Jeor और Harris-Benedict फ़ॉर्मूले का उपयोग करने वाला मुफ़्त BMR कैलकुलेटर। जानें कि पूर्ण आराम की स्थिति में आपके शरीर को महत्वपूर्ण कार्यों के लिए कितनी कैलोरी चाहिए।",
+      "errors": {
+        "ageOutOfRange": "आयु 1 से 120 वर्ष के बीच होनी चाहिए।",
+        "heightOutOfRange": "लंबाई 50 से 250 cm के बीच होनी चाहिए।",
+        "weightOutOfRange": "वज़न 1 से 300 kg के बीच होना चाहिए।",
+      },
+      "faq": [
+        {
+          "a": "बेसल मेटाबॉलिक रेट (BMR) वह कैलोरी है जो आपका शरीर पूर्ण आराम की स्थिति में सांस लेने, रक्त संचार, कोशिका उत्पादन और तापमान नियंत्रण जैसी आवश्यक क्रियाओं के लिए जलाता है।",
+          "q": "BMR क्या है?",
+        },
+        {
+          "a": "हाँ। 20 वर्ष की आयु के बाद BMR हर दशक में लगभग 1-2% कम हो जाता है, मुख्यतः मांसपेशियों की कमी के कारण। प्रतिरोध प्रशिक्षण इस गिरावट को धीमा कर सकता है।",
+          "q": "क्या BMR उम्र के साथ कम होता है?",
+        },
+        {
+          "a": "Mifflin-St Jeor समीकरण (1990) आधुनिक जनसंख्या के लिए अधिक सटीक माना जाता है और Academy of Nutrition and Dietetics द्वारा अनुशंसित है।",
+          "q": "कौन सा फ़ॉर्मूला अधिक सटीक है?",
+        },
+      ],
+      "inputs": {
+        "age": {
+          "help": "आपकी आयु वर्षों में। 20 वर्ष के बाद BMR प्रत्येक दशक में लगभग 2% कम होता है।",
+          "label": "आयु",
+        },
+        "formula": {
+          "help": "अधिकांश पोषण विशेषज्ञ Mifflin-St Jeor (1990) फ़ॉर्मूले की सलाह देते हैं। Harris-Benedict (1984 संशोधन) एक पुराना विकल्प है।",
+          "label": "फ़ॉर्मूला",
+        },
+        "gender": {
+          "help": "मांसपेशियों और हार्मोन के अंतर के कारण लिंग BMR को प्रभावित करता है।",
+          "label": "जैविक लिंग",
+        },
+        "height": {
+          "help": "आपकी लंबाई सेंटीमीटर में।",
+          "label": "लंबाई",
+        },
+        "weight": {
+          "help": "आपका वर्तमान शारीरिक वज़न किलोग्राम में।",
+          "label": "वज़न",
+        },
+      },
+      "keywords": [
+        "BMR कैलकुलेटर",
+        "बेसल मेटाबॉलिक रेट",
+        "आराम में कैलोरी",
+        "Mifflin St Jeor",
+        "Harris Benedict",
+        "चयापचय दर",
+        "कैलोरी गणना",
+      ],
+      "options": {
+        "formula": {
+          "harris": "Harris-Benedict (1984 संशोधन)",
+          "mifflin": "Mifflin-St Jeor (अनुशंसित)",
+        },
+        "gender": {
+          "female": "महिला",
+          "male": "पुरुष",
+        },
+      },
+      "outputs": {
+        "bmr": {
+          "help": "पूर्ण आराम की स्थिति में प्रतिदिन जलाई जाने वाली कैलोरी।",
+          "label": "बेसल मेटाबॉलिक रेट (BMR)",
+          "suffix": "kcal/दिन",
+        },
+      },
+      "short": "अपना बेसल मेटाबॉलिक रेट (BMR) जानें — आराम की स्थिति में शरीर कितनी कैलोरी जलाता है।",
+      "title": "बीएमआर कैलकुलेटर",
+    },
+    "it": {
+      "description": "Calcolatore BMR gratuito con le formule Mifflin-St Jeor e Harris-Benedict. Scopri quante calorie il tuo corpo consuma a riposo per mantenere le funzioni vitali.",
+      "errors": {
+        "ageOutOfRange": "L'età deve essere compresa tra 1 e 120 anni.",
+        "heightOutOfRange": "L'altezza deve essere compresa tra 50 e 250 cm.",
+        "weightOutOfRange": "Il peso deve essere compreso tra 1 e 300 kg.",
+      },
+      "faq": [
+        {
+          "a": "Il metabolismo basale (BMR) è il numero di calorie che il corpo brucia a riposo completo per mantenere funzioni essenziali come respirazione, circolazione, produzione cellulare e regolazione della temperatura.",
+          "q": "Che cos'è il BMR?",
+        },
+        {
+          "a": "L'equazione di Mifflin-St Jeor (1990) è generalmente considerata più accurata per le popolazioni moderne ed è raccomandata dall'Academy of Nutrition and Dietetics.",
+          "q": "Quale formula è più precisa?",
+        },
+        {
+          "a": "Sì. Il BMR diminuisce di circa l'1-2% per decennio dopo i 20 anni, principalmente a causa della perdita di massa muscolare. L'allenamento con i pesi può rallentare questo calo.",
+          "q": "Il BMR diminuisce con l'età?",
+        },
+      ],
+      "inputs": {
+        "age": {
+          "help": "La tua età in anni. Il BMR diminuisce di circa il 2% per decennio dopo i 20 anni.",
+          "label": "Età",
+        },
+        "formula": {
+          "help": "Mifflin-St Jeor (1990) è raccomandata dalla maggior parte dei dietologi. Harris-Benedict (revisione 1984) è un'alternativa più datata.",
+          "label": "Formula",
+        },
+        "gender": {
+          "help": "Il sesso influenza il BMR a causa delle differenze nella massa muscolare e negli ormoni.",
+          "label": "Sesso biologico",
+        },
+        "height": {
+          "help": "La tua altezza in centimetri.",
+          "label": "Altezza",
+        },
+        "weight": {
+          "help": "Il tuo peso corporeo attuale in chilogrammi.",
+          "label": "Peso",
+        },
+      },
+      "keywords": [
+        "calcolatore BMR",
+        "metabolismo basale",
+        "dispendio energetico a riposo",
+        "Mifflin St Jeor",
+        "Harris Benedict",
+        "calorie a riposo",
+        "calcolo metabolismo",
+      ],
+      "options": {
+        "formula": {
+          "harris": "Harris-Benedict (revisione 1984)",
+          "mifflin": "Mifflin-St Jeor (consigliata)",
+        },
+        "gender": {
+          "female": "Femmina",
+          "male": "Maschio",
+        },
+      },
+      "outputs": {
+        "bmr": {
+          "help": "Calorie bruciate al giorno in completo riposo.",
+          "label": "Metabolismo basale (BMR)",
+          "suffix": "kcal/giorno",
+        },
+      },
+      "short": "Calcola il tuo metabolismo basale (BMR) — le calorie bruciate a riposo.",
+      "title": "Calcolatore del Metabolismo Basale",
+    },
+    "ja": {
+      "description": "ミフリン・セントジョー式とハリス・ベネディクト式を使用した無料BMR計算機。体が完全な安静状態で生命維持に必要とするカロリーを算出します。",
+      "errors": {
+        "ageOutOfRange": "年齢は1〜120歳の範囲で入力してください。",
+        "heightOutOfRange": "身長は50〜250 cmの範囲で入力してください。",
+        "weightOutOfRange": "体重は1〜300 kgの範囲で入力してください。",
+      },
+      "faq": [
+        {
+          "a": "基礎代謝量（BMR）とは、呼吸・循環・細胞生成・体温調節など生命維持に必要な機能を維持するために、完全な安静状態で体が1日に消費するカロリーのことです。",
+          "q": "BMRとは何ですか？",
+        },
+        {
+          "a": "はい。20歳以降、BMRは10年ごとに約1〜2%低下します。これは主に筋肉量の減少によるものです。筋力トレーニングでこの低下を緩やかにすることができます。",
+          "q": "BMRは年齢とともに低下しますか？",
+        },
+      ],
+      "inputs": {
+        "age": {
+          "help": "年齢（歳）を入力してください。BMRは20歳以降、10年ごとに約2%低下します。",
+          "label": "年齢",
+        },
+        "formula": {
+          "help": "ミフリン・セントジョー式（1990年）は多くの栄養士に推奨されています。ハリス・ベネディクト式（1984年改訂版）はやや古い代替手法です。",
+          "label": "計算式",
+        },
+        "gender": {
+          "help": "筋肉量やホルモンの違いにより、性別はBMRに影響します。",
+          "label": "生物学的性別",
+        },
+        "height": {
+          "help": "身長（センチメートル）を入力してください。",
+          "label": "身長",
+        },
+        "weight": {
+          "help": "現在の体重（キログラム）を入力してください。",
+          "label": "体重",
+        },
+      },
+      "keywords": [
+        "基礎代謝量計算機",
+        "BMR計算",
+        "安静時代謝",
+        "ミフリン式",
+        "ハリスベネディクト",
+        "カロリー計算",
+        "代謝計算",
+      ],
+      "options": {
+        "formula": {
+          "harris": "ハリス・ベネディクト式（1984年改訂版）",
+          "mifflin": "ミフリン・セントジョー式（推奨）",
+        },
+        "gender": {
+          "female": "女性",
+          "male": "男性",
+        },
+      },
+      "outputs": {
+        "bmr": {
+          "help": "完全な安静状態で1日に消費するカロリー。",
+          "label": "基礎代謝量（BMR）",
+          "suffix": "kcal/日",
+        },
+      },
+      "short": "基礎代謝量（BMR）を計算しましょう — 安静時に体が消費するカロリー。",
+      "title": "基礎代謝量計算機",
+    },
+    "ko": {
+      "description": "Mifflin-St Jeor 및 Harris-Benedict 공식을 사용한 무료 BMR 계산기. 신체가 완전한 안정 상태에서 생명 유지에 필요한 칼로리를 알아보세요.",
+      "errors": {
+        "ageOutOfRange": "나이는 1~120세 범위여야 합니다.",
+        "heightOutOfRange": "키는 50~250 cm 범위여야 합니다.",
+        "weightOutOfRange": "체중은 1~300 kg 범위여야 합니다.",
+      },
+      "faq": [
+        {
+          "a": "기초대사량(BMR)은 호흡, 순환, 세포 생성, 체온 조절 등 필수 생명 유지 기능을 위해 완전한 안정 상태에서 신체가 하루에 소모하는 칼로리입니다.",
+          "q": "BMR이란 무엇인가요?",
+        },
+        {
+          "a": "네. BMR은 20세 이후 10년마다 약 1~2% 감소하며, 이는 주로 근육량 감소 때문입니다. 근력 운동으로 이 감소를 늦출 수 있습니다.",
+          "q": "BMR은 나이에 따라 감소하나요?",
+        },
+      ],
+      "inputs": {
+        "age": {
+          "help": "나이(세)를 입력하세요. BMR은 20세 이후 10년마다 약 2% 감소합니다.",
+          "label": "나이",
+        },
+        "formula": {
+          "help": "대부분의 영양사들이 Mifflin-St Jeor(1990) 공식을 권장합니다. Harris-Benedict(1984년 개정판)는 오래된 대안입니다.",
+          "label": "공식",
+        },
+        "gender": {
+          "help": "근육량과 호르몬 차이로 인해 성별이 BMR에 영향을 미칩니다.",
+          "label": "생물학적 성별",
+        },
+        "height": {
+          "help": "키(센티미터)를 입력하세요.",
+          "label": "키",
+        },
+        "weight": {
+          "help": "현재 체중(킬로그램)을 입력하세요.",
+          "label": "체중",
+        },
+      },
+      "keywords": [
+        "기초대사량 계산기",
+        "BMR 계산",
+        "안정 시 대사",
+        "Mifflin St Jeor",
+        "Harris Benedict",
+        "칼로리 계산",
+        "대사량 계산",
+      ],
+      "options": {
+        "formula": {
+          "harris": "Harris-Benedict(1984년 개정판)",
+          "mifflin": "Mifflin-St Jeor(권장)",
+        },
+        "gender": {
+          "female": "여성",
+          "male": "남성",
+        },
+      },
+      "outputs": {
+        "bmr": {
+          "help": "완전한 안정 상태에서 하루 소모하는 칼로리.",
+          "label": "기초대사량(BMR)",
+          "suffix": "kcal/일",
+        },
+      },
+      "short": "기초대사량(BMR)을 계산하세요 — 안정 시 신체가 소모하는 칼로리.",
+      "title": "기초대사량 계산기",
+    },
+    "ru": {
+      "description": "Бесплатный калькулятор BMR по формулам Миффлина-Сан-Жеора и Харриса-Бенедикта. Узнайте, сколько калорий нужно вашему организму в состоянии полного покоя для поддержания жизненно важных функций.",
+      "errors": {
+        "ageOutOfRange": "Возраст должен быть от 1 до 120 лет.",
+        "heightOutOfRange": "Рост должен быть от 50 до 250 см.",
+        "weightOutOfRange": "Вес должен быть от 1 до 300 кг.",
+      },
+      "faq": [
+        {
+          "a": "Базальный метаболизм (BMR) — это количество калорий, которое организм сжигает в состоянии полного покоя для поддержания жизнеобеспечивающих функций: дыхания, кровообращения, клеточного обновления и терморегуляции.",
+          "q": "Что такое BMR?",
+        },
+        {
+          "a": "Уравнение Миффлина-Сан-Жеора (1990) считается более точным для современных популяций и рекомендовано Академией питания и диетологии.",
+          "q": "Какая формула точнее?",
+        },
+        {
+          "a": "Да. Начиная с 20 лет BMR снижается примерно на 1–2% за каждое десятилетие, главным образом из-за уменьшения мышечной массы. Силовые тренировки помогают замедлить этот процесс.",
+          "q": "Снижается ли BMR с возрастом?",
+        },
+      ],
+      "inputs": {
+        "age": {
+          "help": "Ваш возраст в годах. После 20 лет BMR снижается примерно на 2% каждое десятилетие.",
+          "label": "Возраст",
+        },
+        "formula": {
+          "help": "Формула Миффлина-Сан-Жеора (1990) рекомендована большинством диетологов. Формула Харриса-Бенедикта (редакция 1984 г.) — более старая альтернатива.",
+          "label": "Формула",
+        },
+        "gender": {
+          "help": "Пол влияет на BMR из-за различий в мышечной массе и гормональном фоне.",
+          "label": "Биологический пол",
+        },
+        "height": {
+          "help": "Ваш рост в сантиметрах.",
+          "label": "Рост",
+        },
+        "weight": {
+          "help": "Ваш текущий вес в килограммах.",
+          "label": "Масса тела",
+        },
+      },
+      "keywords": [
+        "калькулятор BMR",
+        "основной обмен веществ",
+        "базальный метаболизм",
+        "Миффлин Сан-Жеор",
+        "Харрис Бенедикт",
+        "калории в покое",
+        "расчёт метаболизма",
+      ],
+      "options": {
+        "formula": {
+          "harris": "Харрис-Бенедикт (редакция 1984)",
+          "mifflin": "Миффлин-Сан-Жеор (рекомендуется)",
+        },
+        "gender": {
+          "female": "Женский",
+          "male": "Мужской",
+        },
+      },
+      "outputs": {
+        "bmr": {
+          "help": "Калории, сжигаемые в день в состоянии полного покоя.",
+          "label": "Основной обмен (BMR)",
+          "suffix": "ккал/день",
+        },
+      },
+      "short": "Рассчитайте ваш базальный метаболизм (BMR) — калории, которые сжигает тело в покое.",
+      "title": "Калькулятор основного обмена",
+    },
+    "tr": {
+      "description": "Mifflin-St Jeor ve Harris-Benedict formüllerini kullanan ücretsiz BMR hesaplayıcı. Vücudunuzun yaşamsal fonksiyonlarını sürdürmek için ihtiyaç duyduğu kaloriyi öğrenin.",
+      "errors": {
+        "ageOutOfRange": "Yaş 1 ile 120 yıl arasında olmalıdır.",
+        "heightOutOfRange": "Boy 50 ile 250 cm arasında olmalıdır.",
+        "weightOutOfRange": "Kilo 1 ile 300 kg arasında olmalıdır.",
+      },
+      "faq": [
+        {
+          "a": "Bazal Metabolizma Hızı (BMR), vücudunuzun tam dinlenme halinde solunum, dolaşım, hücre üretimi ve ısı düzenlemesi gibi temel işlevleri sürdürmek için yaktığı kalori miktarıdır.",
+          "q": "BMR nedir?",
+        },
+        {
+          "a": "Mifflin-St Jeor denklemi (1990), günümüz popülasyonları için genellikle daha doğru kabul edilmektedir. Academy of Nutrition and Dietetics tarafından da önerilmektedir.",
+          "q": "Hangi BMR formülü daha doğrudur?",
+        },
+        {
+          "a": "Evet. BMR, 20 yaşından itibaren her 10 yılda yaklaşık %1-2 oranında düşer; bunun başlıca nedeni kas kütlesinin azalmasıdır. Direnç egzersizleri bu düşüşü yavaşlatmaya yardımcı olabilir.",
+          "q": "BMR yaşla birlikte azalır mı?",
+        },
+      ],
+      "inputs": {
+        "age": {
+          "help": "Yaşınız yıl cinsinden. BMR, 20 yaşından sonra her 10 yılda yaklaşık %2 azalır.",
+          "label": "Yaş",
+        },
+        "formula": {
+          "help": "Mifflin-St Jeor (1990) diyetisyenlerin çoğu tarafından önerilen formüldür. Harris-Benedict (1984 revizyonu) daha eski bir alternatiftir.",
+          "label": "Formül",
+        },
+        "gender": {
+          "help": "Cinsiyet, kas kütlesi ve hormonal farklılıklar nedeniyle BMR'yi etkiler.",
+          "label": "Biyolojik cinsiyet",
+        },
+        "height": {
+          "help": "Boyunuz santimetre cinsinden.",
+          "label": "Boy",
+        },
+        "weight": {
+          "help": "Mevcut vücut ağırlığınız (kg cinsinden).",
+          "label": "Kilo",
+        },
+      },
+      "keywords": [
+        "BMR hesaplayıcı",
+        "bazal metabolizma hızı",
+        "dinlenme metabolizması",
+        "Mifflin St Jeor",
+        "Harris Benedict",
+        "metabolizma hesaplama",
+        "günlük kalori ihtiyacı",
+      ],
+      "options": {
+        "formula": {
+          "harris": "Harris-Benedict (1984 revizyonu)",
+          "mifflin": "Mifflin-St Jeor (önerilen)",
+        },
+        "gender": {
+          "female": "Kadın",
+          "male": "Erkek",
+        },
+      },
+      "outputs": {
+        "bmr": {
+          "help": "Bazal Metabolizma Hızı — tam dinlenme halinde günde yakılan kalori.",
+          "label": "BMR",
+          "suffix": "kcal/gün",
+        },
+      },
+      "short": "Bazal Metabolizma Hızınızı hesaplayın — vücudunuzun dinlenirken yaktığı kalori.",
+      "title": "BMR Hesaplayıcı",
+    },
+    "zh": {
+      "description": "免费BMR计算器，采用Mifflin-St Jeor和Harris-Benedict公式。了解您的身体在完全休息状态下维持生命功能所需的卡路里数量。",
+      "errors": {
+        "ageOutOfRange": "年龄必须在1至120岁之间。",
+        "heightOutOfRange": "身高必须在50至250厘米之间。",
+        "weightOutOfRange": "体重必须在1至300千克之间。",
+      },
+      "faq": [
+        {
+          "a": "基础代谢率（BMR）是身体在完全休息状态下维持呼吸、循环、细胞再生和体温调节等基本功能所需燃烧的卡路里数量。",
+          "q": "什么是BMR？",
+        },
+        {
+          "a": "会。20岁后，BMR每十年下降约1-2%，主要原因是肌肉量减少。力量训练有助于减缓这一下降趋势。",
+          "q": "BMR会随年龄下降吗？",
+        },
+      ],
+      "inputs": {
+        "age": {
+          "help": "您的年龄（岁）。20岁后，BMR每十年下降约2%。",
+          "label": "年龄",
+        },
+        "formula": {
+          "help": "大多数营养师推荐Mifflin-St Jeor公式（1990年）。Harris-Benedict（1984年修订版）是较早的替代方案。",
+          "label": "计算公式",
+        },
+        "gender": {
+          "help": "性别因肌肉量和激素差异而影响BMR。",
+          "label": "生理性别",
+        },
+        "height": {
+          "help": "您的身高（厘米）。",
+          "label": "身高",
+        },
+        "weight": {
+          "help": "您当前的体重（千克）。",
+          "label": "体重",
+        },
+      },
+      "keywords": [
+        "BMR计算器",
+        "基础代谢率",
+        "静息代谢",
+        "Mifflin St Jeor",
+        "Harris Benedict",
+        "卡路里计算",
+        "新陈代谢",
+      ],
+      "options": {
+        "formula": {
+          "harris": "Harris-Benedict（1984年修订版）",
+          "mifflin": "Mifflin-St Jeor（推荐）",
+        },
+        "gender": {
+          "female": "女性",
+          "male": "男性",
+        },
+      },
+      "outputs": {
+        "bmr": {
+          "help": "完全休息状态下每日燃烧的卡路里。",
+          "label": "基础代谢率（BMR）",
+          "suffix": "千卡/天",
+        },
+      },
+      "short": "计算您的基础代谢率（BMR）——身体静息时燃烧的卡路里。",
+      "title": "基础代谢率计算器",
+    },
+  },
+  "icon": Any<String>,
+  "inputSchema": ZodEffects {
+    "_def": {
+      "effect": {
+        "refinement": [Function],
+        "type": "refinement",
+      },
+      "schema": ZodObject {
+        "_cached": {
+          "keys": [
+            "formula",
+            "gender",
+            "weight",
+            "height",
+            "age",
+          ],
+          "shape": {
+            "age": ZodNumber {
+              "_def": {
+                "checks": [
+                  {
+                    "inclusive": false,
+                    "kind": "min",
+                    "message": undefined,
+                    "value": 0,
+                  },
+                ],
+                "coerce": false,
+                "typeName": "ZodNumber",
+              },
+              "and": [Function],
+              "array": [Function],
+              "brand": [Function],
+              "catch": [Function],
+              "default": [Function],
+              "describe": [Function],
+              "isNullable": [Function],
+              "isOptional": [Function],
+              "max": [Function],
+              "min": [Function],
+              "nullable": [Function],
+              "nullish": [Function],
+              "optional": [Function],
+              "or": [Function],
+              "parse": [Function],
+              "parseAsync": [Function],
+              "pipe": [Function],
+              "promise": [Function],
+              "readonly": [Function],
+              "refine": [Function],
+              "refinement": [Function],
+              "safeParse": [Function],
+              "safeParseAsync": [Function],
+              "spa": [Function],
+              "step": [Function],
+              "superRefine": [Function],
+              "transform": [Function],
+              "~standard": {
+                "validate": [Function],
+                "vendor": "zod",
+                "version": 1,
+              },
+            },
+            "formula": ZodEnum {
+              "_cache": Set {
+                "mifflin",
+                "harris",
+              },
+              "_def": {
+                "typeName": "ZodEnum",
+                "values": [
+                  "mifflin",
+                  "harris",
+                ],
+              },
+              "and": [Function],
+              "array": [Function],
+              "brand": [Function],
+              "catch": [Function],
+              "default": [Function],
+              "describe": [Function],
+              "isNullable": [Function],
+              "isOptional": [Function],
+              "nullable": [Function],
+              "nullish": [Function],
+              "optional": [Function],
+              "or": [Function],
+              "parse": [Function],
+              "parseAsync": [Function],
+              "pipe": [Function],
+              "promise": [Function],
+              "readonly": [Function],
+              "refine": [Function],
+              "refinement": [Function],
+              "safeParse": [Function],
+              "safeParseAsync": [Function],
+              "spa": [Function],
+              "superRefine": [Function],
+              "transform": [Function],
+              "~standard": {
+                "validate": [Function],
+                "vendor": "zod",
+                "version": 1,
+              },
+            },
+            "gender": ZodEnum {
+              "_cache": Set {
+                "male",
+                "female",
+              },
+              "_def": {
+                "typeName": "ZodEnum",
+                "values": [
+                  "male",
+                  "female",
+                ],
+              },
+              "and": [Function],
+              "array": [Function],
+              "brand": [Function],
+              "catch": [Function],
+              "default": [Function],
+              "describe": [Function],
+              "isNullable": [Function],
+              "isOptional": [Function],
+              "nullable": [Function],
+              "nullish": [Function],
+              "optional": [Function],
+              "or": [Function],
+              "parse": [Function],
+              "parseAsync": [Function],
+              "pipe": [Function],
+              "promise": [Function],
+              "readonly": [Function],
+              "refine": [Function],
+              "refinement": [Function],
+              "safeParse": [Function],
+              "safeParseAsync": [Function],
+              "spa": [Function],
+              "superRefine": [Function],
+              "transform": [Function],
+              "~standard": {
+                "validate": [Function],
+                "vendor": "zod",
+                "version": 1,
+              },
+            },
+            "height": ZodNumber {
+              "_def": {
+                "checks": [
+                  {
+                    "inclusive": false,
+                    "kind": "min",
+                    "message": undefined,
+                    "value": 0,
+                  },
+                ],
+                "coerce": false,
+                "typeName": "ZodNumber",
+              },
+              "and": [Function],
+              "array": [Function],
+              "brand": [Function],
+              "catch": [Function],
+              "default": [Function],
+              "describe": [Function],
+              "isNullable": [Function],
+              "isOptional": [Function],
+              "max": [Function],
+              "min": [Function],
+              "nullable": [Function],
+              "nullish": [Function],
+              "optional": [Function],
+              "or": [Function],
+              "parse": [Function],
+              "parseAsync": [Function],
+              "pipe": [Function],
+              "promise": [Function],
+              "readonly": [Function],
+              "refine": [Function],
+              "refinement": [Function],
+              "safeParse": [Function],
+              "safeParseAsync": [Function],
+              "spa": [Function],
+              "step": [Function],
+              "superRefine": [Function],
+              "transform": [Function],
+              "~standard": {
+                "validate": [Function],
+                "vendor": "zod",
+                "version": 1,
+              },
+            },
+            "weight": ZodNumber {
+              "_def": {
+                "checks": [
+                  {
+                    "inclusive": false,
+                    "kind": "min",
+                    "message": undefined,
+                    "value": 0,
+                  },
+                ],
+                "coerce": false,
+                "typeName": "ZodNumber",
+              },
+              "and": [Function],
+              "array": [Function],
+              "brand": [Function],
+              "catch": [Function],
+              "default": [Function],
+              "describe": [Function],
+              "isNullable": [Function],
+              "isOptional": [Function],
+              "max": [Function],
+              "min": [Function],
+              "nullable": [Function],
+              "nullish": [Function],
+              "optional": [Function],
+              "or": [Function],
+              "parse": [Function],
+              "parseAsync": [Function],
+              "pipe": [Function],
+              "promise": [Function],
+              "readonly": [Function],
+              "refine": [Function],
+              "refinement": [Function],
+              "safeParse": [Function],
+              "safeParseAsync": [Function],
+              "spa": [Function],
+              "step": [Function],
+              "superRefine": [Function],
+              "transform": [Function],
+              "~standard": {
+                "validate": [Function],
+                "vendor": "zod",
+                "version": 1,
+              },
+            },
+          },
+        },
+        "_def": {
+          "catchall": ZodNever {
+            "_def": {
+              "typeName": "ZodNever",
+            },
+            "and": [Function],
+            "array": [Function],
+            "brand": [Function],
+            "catch": [Function],
+            "default": [Function],
+            "describe": [Function],
+            "isNullable": [Function],
+            "isOptional": [Function],
+            "nullable": [Function],
+            "nullish": [Function],
+            "optional": [Function],
+            "or": [Function],
+            "parse": [Function],
+            "parseAsync": [Function],
+            "pipe": [Function],
+            "promise": [Function],
+            "readonly": [Function],
+            "refine": [Function],
+            "refinement": [Function],
+            "safeParse": [Function],
+            "safeParseAsync": [Function],
+            "spa": [Function],
+            "superRefine": [Function],
+            "transform": [Function],
+            "~standard": {
+              "validate": [Function],
+              "vendor": "zod",
+              "version": 1,
+            },
+          },
+          "shape": [Function],
+          "typeName": "ZodObject",
+          "unknownKeys": "strip",
+        },
+        "and": [Function],
+        "array": [Function],
+        "augment": [Function],
+        "brand": [Function],
+        "catch": [Function],
+        "default": [Function],
+        "describe": [Function],
+        "isNullable": [Function],
+        "isOptional": [Function],
+        "nonstrict": [Function],
+        "nullable": [Function],
+        "nullish": [Function],
+        "optional": [Function],
+        "or": [Function],
+        "parse": [Function],
+        "parseAsync": [Function],
+        "pipe": [Function],
+        "promise": [Function],
+        "readonly": [Function],
+        "refine": [Function],
+        "refinement": [Function],
+        "safeParse": [Function],
+        "safeParseAsync": [Function],
+        "spa": [Function],
+        "superRefine": [Function],
+        "transform": [Function],
+        "~standard": {
+          "validate": [Function],
+          "vendor": "zod",
+          "version": 1,
+        },
+      },
+      "typeName": "ZodEffects",
+    },
+    "and": [Function],
+    "array": [Function],
+    "brand": [Function],
+    "catch": [Function],
+    "default": [Function],
+    "describe": [Function],
+    "isNullable": [Function],
+    "isOptional": [Function],
+    "nullable": [Function],
+    "nullish": [Function],
+    "optional": [Function],
+    "or": [Function],
+    "parse": [Function],
+    "parseAsync": [Function],
+    "pipe": [Function],
+    "promise": [Function],
+    "readonly": [Function],
+    "refine": [Function],
+    "refinement": [Function],
+    "safeParse": [Function],
+    "safeParseAsync": [Function],
+    "spa": [Function],
+    "superRefine": [Function],
+    "transform": [Function],
+    "~standard": {
+      "validate": [Function],
+      "vendor": "zod",
+      "version": 1,
+    },
+  },
+  "inputs": [
+    {
+      "defaultValue": "mifflin",
+      "id": "formula",
+      "required": true,
+      "type": {
+        "kind": "select",
+        "options": [
+          {
+            "i18nKey": "mifflin",
+            "value": "mifflin",
+          },
+          {
+            "i18nKey": "harris",
+            "value": "harris",
+          },
+        ],
+      },
+    },
+    {
+      "defaultValue": "male",
+      "id": "gender",
+      "required": true,
+      "type": {
+        "kind": "select",
+        "options": [
+          {
+            "i18nKey": "male",
+            "value": "male",
+          },
+          {
+            "i18nKey": "female",
+            "value": "female",
+          },
+        ],
+      },
+    },
+    {
+      "defaultValue": 70,
+      "id": "weight",
+      "required": true,
+      "type": {
+        "kind": "number",
+        "max": 300,
+        "min": 1,
+        "step": 0.1,
+        "unit": "kg",
+      },
+    },
+    {
+      "defaultValue": 170,
+      "id": "height",
+      "required": true,
+      "type": {
+        "kind": "number",
+        "max": 250,
+        "min": 50,
+        "step": 1,
+        "unit": "cm",
+      },
+    },
+    {
+      "defaultValue": 30,
+      "id": "age",
+      "required": true,
+      "type": {
+        "integer": true,
+        "kind": "number",
+        "max": 120,
+        "min": 1,
+        "step": 1,
+      },
+    },
+  ],
+  "meta": {
+    "disclaimer": "BMR is an estimate of resting energy expenditure. Individual values may vary due to genetics, body composition, and health status. Consult a registered dietitian for personalised guidance.",
+    "formulaLatex": "\\text{BMR (Mifflin)} = 10w + 6.25h - 5a + s \\quad (s=+5\\text{ male},\\ -161\\text{ female})",
+    "references": [
+      {
+        "authority": "American Journal of Clinical Nutrition",
+        "title": "Mifflin MD et al. (1990). A new predictive equation for resting energy expenditure in healthy individuals.",
+        "url": "https://doi.org/10.1093/ajcn/51.2.241",
+      },
+      {
+        "authority": "American Journal of Clinical Nutrition",
+        "title": "Roza AM, Shizgal HM (1984). The Harris Benedict equation reevaluated.",
+        "url": "https://doi.org/10.1093/ajcn/40.1.168",
+      },
+    ],
+  },
+  "outputs": [
+    {
+      "format": "number",
+      "highlight": true,
+      "id": "bmr",
+      "precision": 0,
+      "unit": "kcal",
+    },
+  ],
+  "priority": Any<String>,
+  "related": [
+    "calorie",
+    "bmi",
+    "ideal-weight",
+  ],
+  "slug": Any<String>,
+  "tags": [
+    "health",
+    "bmr",
+    "metabolism",
+    "calories",
+    "nutrition",
+    "fitness",
+  ],
+}
+`;

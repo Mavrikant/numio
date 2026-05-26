@@ -1,0 +1,1516 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Body Fat definition — shape snapshot > snapshot: definition shape 1`] = `
+{
+  "category": Any<String>,
+  "compute": [Function],
+  "i18n": {
+    "ar": {
+      "description": "حاسبة مجانية لنسبة دهون الجسم بطريقة البحرية الأمريكية (هودجدون وبيكيت، 1984). قِس محيطَي الرقبة والخصر والوركين للحصول على تقدير دقيق دون أجهزة.",
+      "errors": {
+        "heightOutOfRange": "يجب أن يكون الطول بين 50 و250 سم.",
+        "hipRequired": "قياس الوركين مطلوب للإناث.",
+        "waistMustExceedNeck": "يجب أن يكون محيط الخصر أكبر من محيط الرقبة.",
+        "weightOutOfRange": "يجب أن يكون الوزن بين 1 و300 كجم.",
+      },
+      "faq": [
+        {
+          "a": "تتمتع طريقة قياس المحيط بدقة تبلغ عادةً ±3-4 نقاط مئوية مقارنةً بتقنية DEXA. وهي أدق من مؤشر كتلة الجسم لكنها أقل دقةً من الوزن الهيدروستاتيكي أو DEXA.",
+          "q": "ما مدى دقة طريقة البحرية الأمريكية؟",
+        },
+      ],
+      "inputs": {
+        "gender": {
+          "help": "تتضمن معادلة الأنثى قياس محيط الوركين.",
+          "label": "الجنس البيولوجي",
+        },
+        "height": {
+          "help": "طولك بالسنتيمتر.",
+          "label": "الطول",
+        },
+        "hip": {
+          "help": "قِس عند أعرض نقطة في الوركين والأرداف. مطلوب للإناث فقط.",
+          "label": "محيط الوركين (الإناث)",
+        },
+        "neck": {
+          "help": "قِس مباشرةً أسفل الحنجرة مع ميل طفيف للأسفل.",
+          "label": "محيط الرقبة",
+        },
+        "waist": {
+          "help": "قِس على مستوى السرة للذكور، أو عند أضيق نقطة في الخصر للإناث.",
+          "label": "محيط الخصر",
+        },
+        "weight": {
+          "help": "وزنك بالكيلوغرام، يُستخدم لحساب الكتلة الدهنية والعضلية.",
+          "label": "الوزن",
+        },
+      },
+      "keywords": [
+        "حاسبة الدهون",
+        "نسبة دهون الجسم",
+        "طريقة البحرية الأمريكية",
+        "طريقة القياس بالمحيط",
+        "الكتلة العضلية",
+        "كتلة الدهون",
+        "تركيب الجسم",
+      ],
+      "options": {
+        "gender": {
+          "female": "أنثى",
+          "male": "ذكر",
+        },
+      },
+      "outputs": {
+        "bodyFatPct": {
+          "help": "النسبة التقديرية للدهون من إجمالي وزن الجسم.",
+          "label": "نسبة الدهون في الجسم",
+        },
+        "category": {
+          "help": "تصنيف دهون الجسم وفق معهد ACE الأمريكي.",
+          "label": "التصنيف",
+        },
+        "fatMass": {
+          "help": "الوزن التقديري للدهون بالكيلوغرام.",
+          "label": "كتلة الدهون",
+          "suffix": "كجم",
+        },
+        "leanMass": {
+          "help": "وزن الجسم ناقص كتلة الدهون — يشمل العضلات والعظام والماء والأعضاء.",
+          "label": "الكتلة العضلية الخالية من الدهون",
+          "suffix": "كجم",
+        },
+      },
+      "short": "قدّر نسبة دهون جسمك باستخدام طريقة قياس المحيط الخاصة بالبحرية الأمريكية.",
+      "title": "حاسبة نسبة الدهون في الجسم",
+    },
+    "de": {
+      "description": "Kostenloser Körperfettrechner mit der US-Navy-Methode (Hodgdon & Beckett, 1984). Messen Sie Hals-, Taillen- und Hüftumfang für eine gerätefreie, genaue Schätzung.",
+      "errors": {
+        "heightOutOfRange": "Die Körpergröße muss zwischen 50 und 250 cm liegen.",
+        "hipRequired": "Für Frauen ist der Hüftumfang erforderlich.",
+        "waistMustExceedNeck": "Der Taillenumfang muss größer als der Halsumfang sein.",
+        "weightOutOfRange": "Das Gewicht muss zwischen 1 und 300 kg liegen.",
+      },
+      "faq": [
+        {
+          "a": "Die US-Navy-Umfangsmethode hat im Vergleich zu DEXA typischerweise eine Genauigkeit von ±3–4 Prozentpunkten. Sie ist genauer als der BMI, aber weniger präzise als Unterwasserwägen oder DEXA.",
+          "q": "Wie genau ist die US-Navy-Methode?",
+        },
+      ],
+      "inputs": {
+        "gender": {
+          "help": "Die Formel für Frauen enthält den Hüftumfang.",
+          "label": "Biologisches Geschlecht",
+        },
+        "height": {
+          "help": "Ihre Körpergröße in Zentimetern.",
+          "label": "Körpergröße",
+        },
+        "hip": {
+          "help": "An der breitesten Stelle von Hüfte und Gesäß messen. Nur für Frauen erforderlich.",
+          "label": "Hüftumfang (Frauen)",
+        },
+        "neck": {
+          "help": "Direkt unterhalb des Kehlkopfes leicht nach unten geneigt messen.",
+          "label": "Halsumfang",
+        },
+        "waist": {
+          "help": "Bei Männern auf Nabelhöhe, bei Frauen an der schmalsten Stelle messen.",
+          "label": "Taillenumfang",
+        },
+        "weight": {
+          "help": "Ihr Körpergewicht in Kilogramm, zur Berechnung von Fett- und Magermasse.",
+          "label": "Gewicht",
+        },
+      },
+      "keywords": [
+        "Körperfett Rechner",
+        "Körperfettanteil",
+        "US-Navy-Methode",
+        "Umfangsmethode",
+        "Magermasse",
+        "Fettmasse",
+        "Fitness Körperfett",
+      ],
+      "options": {
+        "gender": {
+          "female": "Weiblich",
+          "male": "Männlich",
+        },
+      },
+      "outputs": {
+        "bodyFatPct": {
+          "help": "Geschätzter prozentualer Fettanteil am Gesamtkörpergewicht.",
+          "label": "Körperfettanteil",
+        },
+        "category": {
+          "help": "ACE-Körperfettklassifikation (American Council on Exercise).",
+          "label": "Kategorie",
+        },
+        "fatMass": {
+          "help": "Geschätztes Gewicht des Körperfetts in Kilogramm.",
+          "label": "Fettmasse",
+          "suffix": "kg",
+        },
+        "leanMass": {
+          "help": "Körpergewicht minus Fettmasse — enthält Muskeln, Knochen, Wasser und Organe.",
+          "label": "Magermasse",
+          "suffix": "kg",
+        },
+      },
+      "short": "Schätzen Sie Ihren Körperfettanteil mit der US-Navy-Umfangsmethode.",
+      "title": "Körperfett-Rechner",
+    },
+    "en": {
+      "description": "Free body fat percentage calculator using the US Navy tape measure method (Hodgdon & Beckett, 1984). Enter neck, waist, and hip circumferences for an accurate estimate without equipment.",
+      "errors": {
+        "heightOutOfRange": "Height must be between 50 and 250 cm.",
+        "hipRequired": "Hip measurement is required for females.",
+        "waistMustExceedNeck": "Waist circumference must be greater than neck circumference.",
+        "weightOutOfRange": "Weight must be between 1 and 300 kg.",
+      },
+      "faq": [
+        {
+          "a": "The US Navy circumference method typically has an accuracy of ±3–4 percentage points compared to DEXA (dual-energy X-ray absorptiometry). It is more accurate than BMI for estimating body composition but less precise than hydrostatic weighing or DEXA.",
+          "q": "How accurate is the US Navy method?",
+        },
+        {
+          "a": "The American Council on Exercise (ACE) defines healthy ranges as 18–24% for men and 25–31% for women. Athletes typically have lower percentages (6–13% for men, 14–20% for women). Essential fat (minimum needed for life) is about 2–5% for men and 10–13% for women.",
+          "q": "What is a healthy body fat percentage?",
+        },
+        {
+          "a": "For males, measure at the navel. For females, measure at the narrowest point of the torso. Keep the tape horizontal and measure at the end of a normal exhalation without sucking in your stomach.",
+          "q": "Where should I measure my waist?",
+        },
+        {
+          "a": "Yes, but ensure you measure consistently: same time of day, same measuring tape, same body position, and the same person taking measurements. Circumference methods are excellent for tracking trends over time.",
+          "q": "Can I use this calculator to track progress?",
+        },
+      ],
+      "inputs": {
+        "gender": {
+          "help": "Female formula includes hip circumference.",
+          "label": "Biological sex",
+        },
+        "height": {
+          "help": "Your height in centimetres.",
+          "label": "Height",
+        },
+        "hip": {
+          "help": "Measure at the widest point of the hips and buttocks. Required for females only.",
+          "label": "Hip circumference (females)",
+        },
+        "neck": {
+          "help": "Measure just below the larynx (Adam's apple), sloping slightly downward.",
+          "label": "Neck circumference",
+        },
+        "waist": {
+          "help": "Measure at the navel level for males, or at the narrowest point for females. Keep tape horizontal.",
+          "label": "Waist circumference",
+        },
+        "weight": {
+          "help": "Your body weight in kilograms, used to calculate fat and lean mass.",
+          "label": "Weight",
+        },
+      },
+      "keywords": [
+        "body fat calculator",
+        "body fat percentage",
+        "US Navy method",
+        "circumference method",
+        "lean mass calculator",
+        "fat mass",
+        "ACE body fat",
+      ],
+      "options": {
+        "gender": {
+          "female": "Female",
+          "male": "Male",
+        },
+      },
+      "outputs": {
+        "bodyFatPct": {
+          "help": "Estimated percentage of total body weight that is fat.",
+          "label": "Body fat percentage",
+        },
+        "category": {
+          "help": "ACE (American Council on Exercise) body fat classification.",
+          "label": "Category",
+        },
+        "fatMass": {
+          "help": "Estimated weight of body fat in kilograms.",
+          "label": "Fat mass",
+          "suffix": "kg",
+        },
+        "leanMass": {
+          "help": "Body weight minus fat mass — includes muscle, bone, water, and organs.",
+          "label": "Lean mass",
+          "suffix": "kg",
+        },
+      },
+      "short": "Estimate your body fat percentage using the US Navy circumference method.",
+      "title": "Body Fat Calculator",
+    },
+    "es": {
+      "description": "Calculadora de grasa corporal gratuita con el método de la Marina de EE. UU. (Hodgdon & Beckett, 1984). Mide cuello, cintura y caderas para una estimación precisa sin equipos.",
+      "errors": {
+        "heightOutOfRange": "La altura debe estar entre 50 y 250 cm.",
+        "hipRequired": "La medida de la cadera es necesaria para mujeres.",
+        "waistMustExceedNeck": "La circunferencia de la cintura debe ser mayor que la del cuello.",
+        "weightOutOfRange": "El peso debe estar entre 1 y 300 kg.",
+      },
+      "faq": [
+        {
+          "a": "El método de circunferencias de la Marina de EE. UU. tiene una precisión de ±3–4 puntos porcentuales en comparación con el DEXA. Es más preciso que el IMC pero menos que la pesada hidrostática o el DEXA.",
+          "q": "¿Qué tan preciso es el método US Navy?",
+        },
+      ],
+      "inputs": {
+        "gender": {
+          "help": "La fórmula femenina incluye la circunferencia de la cadera.",
+          "label": "Sexo biológico",
+        },
+        "height": {
+          "help": "Tu altura en centímetros.",
+          "label": "Altura",
+        },
+        "hip": {
+          "help": "Mide en el punto más ancho de caderas y glúteos. Solo para mujeres.",
+          "label": "Circunferencia de cadera (mujeres)",
+        },
+        "neck": {
+          "help": "Mide justo debajo de la laringe, ligeramente inclinado hacia abajo.",
+          "label": "Circunferencia de cuello",
+        },
+        "waist": {
+          "help": "Mide a nivel del ombligo (hombres) o en el punto más estrecho (mujeres).",
+          "label": "Circunferencia de cintura",
+        },
+        "weight": {
+          "help": "Tu peso corporal en kilogramos, usado para calcular masa grasa y magra.",
+          "label": "Peso",
+        },
+      },
+      "keywords": [
+        "calculadora grasa corporal",
+        "porcentaje de grasa",
+        "método Marina EE. UU.",
+        "método circunferencias",
+        "masa magra",
+        "masa grasa",
+        "composición corporal",
+      ],
+      "options": {
+        "gender": {
+          "female": "Mujer",
+          "male": "Hombre",
+        },
+      },
+      "outputs": {
+        "bodyFatPct": {
+          "help": "Porcentaje estimado de grasa en el peso corporal total.",
+          "label": "Porcentaje de grasa corporal",
+        },
+        "category": {
+          "help": "Clasificación de grasa corporal según el ACE.",
+          "label": "Categoría",
+        },
+        "fatMass": {
+          "help": "Peso estimado de la grasa corporal en kilogramos.",
+          "label": "Masa grasa",
+          "suffix": "kg",
+        },
+        "leanMass": {
+          "help": "Peso corporal menos masa grasa — incluye músculo, hueso, agua y órganos.",
+          "label": "Masa magra",
+          "suffix": "kg",
+        },
+      },
+      "short": "Estima tu porcentaje de grasa corporal con el método de circunferencias de la Marina de EE. UU.",
+      "title": "Calculadora de Grasa Corporal",
+    },
+    "fr": {
+      "description": "Calculateur de taux de graisse corporelle gratuit utilisant la méthode de la Marine américaine (Hodgdon & Beckett, 1984). Mesurez cou, taille et hanches pour une estimation précise sans équipement.",
+      "errors": {
+        "heightOutOfRange": "La taille doit être comprise entre 50 et 250 cm.",
+        "hipRequired": "La mesure des hanches est requise pour les femmes.",
+        "waistMustExceedNeck": "Le tour de taille doit être supérieur au tour de cou.",
+        "weightOutOfRange": "Le poids doit être compris entre 1 et 300 kg.",
+      },
+      "faq": [
+        {
+          "a": "La méthode des circonférences de la Marine américaine offre généralement une précision de ±3–4 points de pourcentage par rapport au DEXA. Elle est plus précise que l'IMC mais moins que la pesée hydrostatique ou le DEXA.",
+          "q": "Quelle est la précision de la méthode US Navy ?",
+        },
+      ],
+      "inputs": {
+        "gender": {
+          "help": "La formule féminine inclut la circonférence des hanches.",
+          "label": "Sexe biologique",
+        },
+        "height": {
+          "help": "Votre taille en centimètres.",
+          "label": "Taille",
+        },
+        "hip": {
+          "help": "Mesurez au point le plus large des hanches et fesses. Requis pour les femmes uniquement.",
+          "label": "Tour de hanches (femmes)",
+        },
+        "neck": {
+          "help": "Mesurez juste sous le larynx, en légère pente vers le bas.",
+          "label": "Tour de cou",
+        },
+        "waist": {
+          "help": "Mesurez au niveau du nombril (hommes) ou au point le plus étroit (femmes).",
+          "label": "Tour de taille",
+        },
+        "weight": {
+          "help": "Votre poids corporel en kilogrammes, utilisé pour calculer masse grasse et masse maigre.",
+          "label": "Poids",
+        },
+      },
+      "keywords": [
+        "calculateur graisse corporelle",
+        "taux de graisse",
+        "méthode Marine américaine",
+        "méthode des circonférences",
+        "masse maigre",
+        "masse grasse",
+        "composition corporelle",
+      ],
+      "options": {
+        "gender": {
+          "female": "Femme",
+          "male": "Homme",
+        },
+      },
+      "outputs": {
+        "bodyFatPct": {
+          "help": "Pourcentage estimé de graisse dans le poids corporel total.",
+          "label": "Taux de graisse corporelle",
+        },
+        "category": {
+          "help": "Classification ACE (American Council on Exercise) du taux de graisse.",
+          "label": "Catégorie",
+        },
+        "fatMass": {
+          "help": "Poids estimé de la graisse corporelle en kilogrammes.",
+          "label": "Masse grasse",
+          "suffix": "kg",
+        },
+        "leanMass": {
+          "help": "Poids corporel moins la masse grasse — muscles, os, eau et organes.",
+          "label": "Masse maigre",
+          "suffix": "kg",
+        },
+      },
+      "short": "Estimez votre taux de graisse corporelle avec la méthode des circonférences de la Marine américaine.",
+      "title": "Calculateur de Graisse Corporelle",
+    },
+    "hi": {
+      "description": "अमेरिकी नौसेना की टेप माप विधि (Hodgdon & Beckett, 1984) का उपयोग करने वाला मुफ़्त बॉडी फैट प्रतिशत कैलकुलेटर। गर्दन, कमर और कूल्हे की माप दर्ज करें और बिना किसी उपकरण के सटीक अनुमान पाएं।",
+      "errors": {
+        "heightOutOfRange": "लंबाई 50 से 250 cm के बीच होनी चाहिए।",
+        "hipRequired": "महिलाओं के लिए कूल्हे की माप आवश्यक है।",
+        "waistMustExceedNeck": "कमर की परिधि गर्दन की परिधि से अधिक होनी चाहिए।",
+        "weightOutOfRange": "वज़न 1 से 300 kg के बीच होना चाहिए।",
+      },
+      "faq": [
+        {
+          "a": "अमेरिकी नौसेना की परिधि माप विधि DEXA की तुलना में आमतौर पर ±3-4 प्रतिशत अंक की सटीकता रखती है। यह BMI से अधिक सटीक है लेकिन हाइड्रोस्टेटिक वज़न या DEXA से कम।",
+          "q": "अमेरिकी नौसेना विधि कितनी सटीक है?",
+        },
+      ],
+      "inputs": {
+        "gender": {
+          "help": "महिला फ़ॉर्मूले में कूल्हे की माप शामिल होती है।",
+          "label": "जैविक लिंग",
+        },
+        "height": {
+          "help": "आपकी लंबाई सेंटीमीटर में।",
+          "label": "लंबाई",
+        },
+        "hip": {
+          "help": "कूल्हों और नितंबों के सबसे चौड़े हिस्से पर नापें। केवल महिलाओं के लिए आवश्यक।",
+          "label": "कूल्हे की परिधि (महिलाएं)",
+        },
+        "neck": {
+          "help": "कंठ के ठीक नीचे, थोड़ा नीचे की ओर झुकाकर नापें।",
+          "label": "गर्दन की परिधि",
+        },
+        "waist": {
+          "help": "पुरुषों के लिए नाभि के स्तर पर, महिलाओं के लिए सबसे पतले बिंदु पर नापें।",
+          "label": "कमर की परिधि",
+        },
+        "weight": {
+          "help": "आपका शारीरिक वज़न किलोग्राम में, वसा और दुबली मांसपेशी की गणना के लिए।",
+          "label": "वज़न",
+        },
+      },
+      "keywords": [
+        "बॉडी फैट कैलकुलेटर",
+        "शरीर की वसा प्रतिशत",
+        "अमेरिकी नौसेना विधि",
+        "परिधि माप विधि",
+        "दुबली मांसपेशी",
+        "वसा द्रव्यमान",
+        "शरीर संरचना",
+      ],
+      "options": {
+        "gender": {
+          "female": "महिला",
+          "male": "पुरुष",
+        },
+      },
+      "outputs": {
+        "bodyFatPct": {
+          "help": "कुल शरीर के वज़न का अनुमानित वसा प्रतिशत।",
+          "label": "शरीर की वसा प्रतिशत",
+        },
+        "category": {
+          "help": "ACE (American Council on Exercise) शरीर वसा वर्गीकरण।",
+          "label": "श्रेणी",
+        },
+        "fatMass": {
+          "help": "शरीर की वसा का अनुमानित वज़न किलोग्राम में।",
+          "label": "वसा द्रव्यमान",
+          "suffix": "kg",
+        },
+        "leanMass": {
+          "help": "शरीर का वज़न घटाकर वसा द्रव्यमान — मांसपेशियां, हड्डियां, पानी और अंग शामिल हैं।",
+          "label": "दुबली मांसपेशी",
+          "suffix": "kg",
+        },
+      },
+      "short": "अमेरिकी नौसेना की परिधि माप विधि से शरीर की वसा प्रतिशत का अनुमान लगाएं।",
+      "title": "बॉडी फैट कैलकुलेटर",
+    },
+    "it": {
+      "description": "Calcolatore gratuito della percentuale di grasso corporeo con il metodo della Marina americana (Hodgdon & Beckett, 1984). Misura collo, vita e fianchi per una stima accurata senza attrezzatura.",
+      "errors": {
+        "heightOutOfRange": "L'altezza deve essere compresa tra 50 e 250 cm.",
+        "hipRequired": "La misurazione dei fianchi è richiesta per le donne.",
+        "waistMustExceedNeck": "La circonferenza vita deve essere maggiore di quella del collo.",
+        "weightOutOfRange": "Il peso deve essere compreso tra 1 e 300 kg.",
+      },
+      "faq": [
+        {
+          "a": "Il metodo delle circonferenze della Marina americana ha tipicamente un'accuratezza di ±3–4 punti percentuali rispetto al DEXA. È più preciso dell'IMC ma meno della pesata idrostatica o del DEXA.",
+          "q": "Quanto è accurato il metodo US Navy?",
+        },
+      ],
+      "inputs": {
+        "gender": {
+          "help": "La formula femminile include la circonferenza dei fianchi.",
+          "label": "Sesso biologico",
+        },
+        "height": {
+          "help": "La tua altezza in centimetri.",
+          "label": "Altezza",
+        },
+        "hip": {
+          "help": "Misura nel punto più largo di fianchi e glutei. Solo per donne.",
+          "label": "Circonferenza fianchi (donne)",
+        },
+        "neck": {
+          "help": "Misura appena sotto la laringe, leggermente inclinato verso il basso.",
+          "label": "Circonferenza collo",
+        },
+        "waist": {
+          "help": "Misura a livello dell'ombelico (uomini) o nel punto più stretto (donne).",
+          "label": "Circonferenza vita",
+        },
+        "weight": {
+          "help": "Il tuo peso corporeo in chilogrammi, usato per calcolare massa grassa e magra.",
+          "label": "Peso",
+        },
+      },
+      "keywords": [
+        "calcolatore grasso corporeo",
+        "percentuale grasso",
+        "metodo Marina USA",
+        "metodo circonferenze",
+        "massa magra",
+        "massa grassa",
+        "composizione corporea",
+      ],
+      "options": {
+        "gender": {
+          "female": "Femmina",
+          "male": "Maschio",
+        },
+      },
+      "outputs": {
+        "bodyFatPct": {
+          "help": "Percentuale stimata di grasso nel peso corporeo totale.",
+          "label": "Percentuale di grasso corporeo",
+        },
+        "category": {
+          "help": "Classificazione ACE del grasso corporeo.",
+          "label": "Categoria",
+        },
+        "fatMass": {
+          "help": "Peso stimato del grasso corporeo in chilogrammi.",
+          "label": "Massa grassa",
+          "suffix": "kg",
+        },
+        "leanMass": {
+          "help": "Peso corporeo meno la massa grassa — include muscoli, ossa, acqua e organi.",
+          "label": "Massa magra",
+          "suffix": "kg",
+        },
+      },
+      "short": "Stima la tua percentuale di grasso corporeo con il metodo delle circonferenze della Marina americana.",
+      "title": "Calcolatore della Percentuale di Grasso Corporeo",
+    },
+    "ja": {
+      "description": "米海軍の周囲径法（Hodgdon & Beckett, 1984年）を使用した無料体脂肪率計算機。首・腹・腰の周囲を測定するだけで、専門機器なしに正確な推定値が得られます。",
+      "errors": {
+        "heightOutOfRange": "身長は50〜250 cmの範囲で入力してください。",
+        "hipRequired": "女性は腰の周囲径が必要です。",
+        "waistMustExceedNeck": "腹囲は頸囲より大きくなければなりません。",
+        "weightOutOfRange": "体重は1〜300 kgの範囲で入力してください。",
+      },
+      "faq": [
+        {
+          "a": "米海軍の周囲径法は、DEXAと比較して通常±3〜4ポイントの精度を持ちます。体組成の推定においてBMIより精度が高いですが、水中体重測定やDEXAには及びません。",
+          "q": "米海軍法はどれくらい正確ですか？",
+        },
+      ],
+      "inputs": {
+        "gender": {
+          "help": "女性の計算式には腰の周囲径が含まれます。",
+          "label": "生物学的性別",
+        },
+        "height": {
+          "help": "身長（センチメートル）。",
+          "label": "身長",
+        },
+        "hip": {
+          "help": "ヒップとお尻の最も広い部分で測定。女性のみ必要です。",
+          "label": "腰囲（女性）",
+        },
+        "neck": {
+          "help": "喉仏のすぐ下で、やや下向きに傾けて測定してください。",
+          "label": "頸囲",
+        },
+        "waist": {
+          "help": "男性はへそのあたり、女性はウエストの最も細い部分で測定してください。",
+          "label": "腹囲",
+        },
+        "weight": {
+          "help": "体重（キログラム）。脂肪量と除脂肪体重の計算に使用します。",
+          "label": "体重",
+        },
+      },
+      "keywords": [
+        "体脂肪率計算機",
+        "体脂肪率",
+        "米海軍法",
+        "周囲径法",
+        "除脂肪体重",
+        "脂肪量",
+        "体組成",
+      ],
+      "options": {
+        "gender": {
+          "female": "女性",
+          "male": "男性",
+        },
+      },
+      "outputs": {
+        "bodyFatPct": {
+          "help": "体重に占める脂肪の推定割合。",
+          "label": "体脂肪率",
+        },
+        "category": {
+          "help": "ACE（米国運動評議会）の体脂肪分類。",
+          "label": "カテゴリ",
+        },
+        "fatMass": {
+          "help": "体脂肪の推定重量（キログラム）。",
+          "label": "脂肪量",
+          "suffix": "kg",
+        },
+        "leanMass": {
+          "help": "体重から脂肪量を引いた値。筋肉・骨・水分・内臓を含む。",
+          "label": "除脂肪体重",
+          "suffix": "kg",
+        },
+      },
+      "short": "米海軍の周囲径法で体脂肪率を推定しましょう。",
+      "title": "体脂肪率計算機",
+    },
+    "ko": {
+      "description": "미 해군 줄자 측정법(Hodgdon & Beckett, 1984)을 사용한 무료 체지방률 계산기. 목, 허리, 엉덩이 둘레를 측정하면 장비 없이도 정확한 추정값을 얻을 수 있습니다.",
+      "errors": {
+        "heightOutOfRange": "키는 50~250 cm 범위여야 합니다.",
+        "hipRequired": "여성은 엉덩이 둘레 측정이 필요합니다.",
+        "waistMustExceedNeck": "허리 둘레는 목 둘레보다 커야 합니다.",
+        "weightOutOfRange": "체중은 1~300 kg 범위여야 합니다.",
+      },
+      "faq": [
+        {
+          "a": "미 해군 둘레 측정법은 DEXA와 비교했을 때 일반적으로 ±3-4 퍼센트포인트의 정확도를 가집니다. 체성분 추정에서 BMI보다 정확하지만 수중 체중 측정이나 DEXA보다는 덜 정밀합니다.",
+          "q": "미 해군 방법은 얼마나 정확한가요?",
+        },
+      ],
+      "inputs": {
+        "gender": {
+          "help": "여성 공식은 엉덩이 둘레를 포함합니다.",
+          "label": "생물학적 성별",
+        },
+        "height": {
+          "help": "키(센티미터).",
+          "label": "키",
+        },
+        "hip": {
+          "help": "엉덩이의 가장 넓은 부분에서 측정하세요. 여성에게만 필요합니다.",
+          "label": "엉덩이 둘레(여성)",
+        },
+        "neck": {
+          "help": "후두 바로 아래에서 약간 아래로 기울여 측정하세요.",
+          "label": "목 둘레",
+        },
+        "waist": {
+          "help": "남성은 배꼽 높이에서, 여성은 허리의 가장 좁은 부분에서 측정하세요.",
+          "label": "허리 둘레",
+        },
+        "weight": {
+          "help": "체중(킬로그램). 지방량과 제지방량 계산에 사용됩니다.",
+          "label": "체중",
+        },
+      },
+      "keywords": [
+        "체지방률 계산기",
+        "체지방 비율",
+        "미 해군 방법",
+        "둘레 측정법",
+        "제지방량",
+        "지방량",
+        "체성분",
+      ],
+      "options": {
+        "gender": {
+          "female": "여성",
+          "male": "남성",
+        },
+      },
+      "outputs": {
+        "bodyFatPct": {
+          "help": "총 체중에서 지방이 차지하는 추정 비율.",
+          "label": "체지방률",
+        },
+        "category": {
+          "help": "ACE(미국 운동위원회)의 체지방 분류.",
+          "label": "분류",
+        },
+        "fatMass": {
+          "help": "체지방의 추정 무게(킬로그램).",
+          "label": "지방량",
+          "suffix": "kg",
+        },
+        "leanMass": {
+          "help": "체중에서 지방량을 뺀 값 — 근육, 뼈, 수분, 장기 포함.",
+          "label": "제지방량",
+          "suffix": "kg",
+        },
+      },
+      "short": "미 해군 둘레 측정법으로 체지방률을 추정하세요.",
+      "title": "체지방률 계산기",
+    },
+    "ru": {
+      "description": "Бесплатный калькулятор жира в теле по методу ВМС США (Ходждон и Беккет, 1984). Введите обхваты шеи, талии и бёдер для точной оценки без специального оборудования.",
+      "errors": {
+        "heightOutOfRange": "Рост должен быть от 50 до 250 см.",
+        "hipRequired": "Для женщин требуется измерение обхвата бёдер.",
+        "waistMustExceedNeck": "Обхват талии должен быть больше обхвата шеи.",
+        "weightOutOfRange": "Вес должен быть от 1 до 300 кг.",
+      },
+      "faq": [
+        {
+          "a": "Метод обхватов ВМС США обычно даёт точность ±3–4 процентных пункта по сравнению с DEXA. Он точнее ИМТ для оценки состава тела, но уступает гидростатическому взвешиванию или DEXA.",
+          "q": "Насколько точен метод ВМС США?",
+        },
+      ],
+      "inputs": {
+        "gender": {
+          "help": "Женская формула учитывает обхват бёдер.",
+          "label": "Биологический пол",
+        },
+        "height": {
+          "help": "Ваш рост в сантиметрах.",
+          "label": "Рост",
+        },
+        "hip": {
+          "help": "Измеряется в самом широком месте бёдер и ягодиц. Требуется только для женщин.",
+          "label": "Обхват бёдер (женщины)",
+        },
+        "neck": {
+          "help": "Измеряется чуть ниже гортани, с небольшим наклоном вниз.",
+          "label": "Обхват шеи",
+        },
+        "waist": {
+          "help": "Измеряется на уровне пупка (мужчины) или в самой узкой части (женщины).",
+          "label": "Обхват талии",
+        },
+        "weight": {
+          "help": "Ваш вес в килограммах, используется для расчёта жировой и мышечной массы.",
+          "label": "Масса тела",
+        },
+      },
+      "keywords": [
+        "калькулятор жира",
+        "процент жира в теле",
+        "метод ВМС США",
+        "метод обхватов",
+        "мышечная масса",
+        "жировая масса",
+        "состав тела",
+      ],
+      "options": {
+        "gender": {
+          "female": "Женский",
+          "male": "Мужской",
+        },
+      },
+      "outputs": {
+        "bodyFatPct": {
+          "help": "Расчётная доля жира от общего веса тела.",
+          "label": "Процент жира в теле",
+        },
+        "category": {
+          "help": "Классификация жировой массы по ACE (Американский совет по физическим упражнениям).",
+          "label": "Категория",
+        },
+        "fatMass": {
+          "help": "Расчётный вес жировой ткани в килограммах.",
+          "label": "Жировая масса",
+          "suffix": "кг",
+        },
+        "leanMass": {
+          "help": "Масса тела минус жировая масса — мышцы, кости, вода и органы.",
+          "label": "Тощая масса тела",
+          "suffix": "кг",
+        },
+      },
+      "short": "Оцените процент жира в теле с помощью метода обхватов ВМС США.",
+      "title": "Калькулятор процента жира в теле",
+    },
+    "tr": {
+      "description": "ABD Donanması bant ölçümü yöntemini kullanan ücretsiz vücut yağ yüzdesi hesaplayıcı. Boyun, bel ve kalça çevrelerinizi girerek cihaz gerektirmeden doğru bir tahmin elde edin.",
+      "errors": {
+        "heightOutOfRange": "Boy 50 ile 250 cm arasında olmalıdır.",
+        "hipRequired": "Kadınlar için kalça ölçümü gereklidir.",
+        "waistMustExceedNeck": "Bel çevresi boyun çevresinden büyük olmalıdır.",
+        "weightOutOfRange": "Kilo 1 ile 300 kg arasında olmalıdır.",
+      },
+      "faq": [
+        {
+          "a": "ABD Donanması çevre ölçümü yöntemi, DEXA ile karşılaştırıldığında genellikle ±3–4 yüzde puan doğruluk sağlar. Vücut kompozisyonunu tahmin etmede BMI'dan daha doğru, ancak sualtı tartımı veya DEXA kadar hassas değildir.",
+          "q": "ABD Donanması yöntemi ne kadar doğrudur?",
+        },
+      ],
+      "inputs": {
+        "gender": {
+          "help": "Kadın formülü kalça çevresini içerir.",
+          "label": "Biyolojik cinsiyet",
+        },
+        "height": {
+          "help": "Boyunuz santimetre cinsinden.",
+          "label": "Boy",
+        },
+        "hip": {
+          "help": "Kalça ve popo bölgesinin en geniş noktasında ölçün. Yalnızca kadınlar için gereklidir.",
+          "label": "Kalça çevresi (kadınlar)",
+        },
+        "neck": {
+          "help": "Larinksin (Adem elması) hemen altından, hafifçe aşağıya doğru eğimli ölçün.",
+          "label": "Boyun çevresi",
+        },
+        "waist": {
+          "help": "Erkekler için göbek hizasında, kadınlar için belin en ince noktasında ölçün.",
+          "label": "Bel çevresi",
+        },
+        "weight": {
+          "help": "Yağ ve kas kütlesini hesaplamak için kullanılan vücut ağırlığınız.",
+          "label": "Kilo",
+        },
+      },
+      "keywords": [
+        "vücut yağ oranı hesaplayıcı",
+        "vücut yağ yüzdesi",
+        "ABD Donanması yöntemi",
+        "çevre ölçümü yöntemi",
+        "yağsız kütle",
+        "yağ kütlesi",
+        "fitness vücut yağı",
+      ],
+      "options": {
+        "gender": {
+          "female": "Kadın",
+          "male": "Erkek",
+        },
+      },
+      "outputs": {
+        "bodyFatPct": {
+          "help": "Toplam vücut ağırlığının yağ olan tahmini yüzdesi.",
+          "label": "Vücut yağ yüzdesi",
+        },
+        "category": {
+          "help": "ACE (Amerikan Egzersiz Konseyi) vücut yağ sınıflandırması.",
+          "label": "Kategori",
+        },
+        "fatMass": {
+          "help": "Tahmini vücut yağı ağırlığı (kg).",
+          "label": "Yağ kütlesi",
+          "suffix": "kg",
+        },
+        "leanMass": {
+          "help": "Vücut ağırlığı eksi yağ kütlesi — kas, kemik, su ve organları içerir.",
+          "label": "Yağsız kütle",
+          "suffix": "kg",
+        },
+      },
+      "short": "ABD Donanması çevre ölçümü yöntemiyle vücut yağ yüzdenizi tahmin edin.",
+      "title": "Vücut Yağ Oranı Hesaplayıcı",
+    },
+    "zh": {
+      "description": "免费体脂率计算器，采用美国海军围度法（Hodgdon & Beckett，1984年）。输入颈围、腰围和臀围，无需专业设备即可获得准确估算。",
+      "errors": {
+        "heightOutOfRange": "身高必须在50至250厘米之间。",
+        "hipRequired": "女性需要提供臀围数据。",
+        "waistMustExceedNeck": "腰围必须大于颈围。",
+        "weightOutOfRange": "体重必须在1至300千克之间。",
+      },
+      "faq": [
+        {
+          "a": "美国海军围度法的准确度通常在±3-4个百分点以内（与DEXA相比）。它比BMI更准确，但不如水下称重或DEXA精确。",
+          "q": "美国海军法有多准确？",
+        },
+      ],
+      "inputs": {
+        "gender": {
+          "help": "女性公式需要臀围数据。",
+          "label": "生理性别",
+        },
+        "height": {
+          "help": "您的身高（厘米）。",
+          "label": "身高",
+        },
+        "hip": {
+          "help": "在臀部和臀部最宽处测量。仅女性需要。",
+          "label": "臀围（女性）",
+        },
+        "neck": {
+          "help": "在喉结正下方稍微向下倾斜处测量。",
+          "label": "颈围",
+        },
+        "waist": {
+          "help": "男性在肚脐处测量，女性在腰部最细处测量。",
+          "label": "腰围",
+        },
+        "weight": {
+          "help": "您的体重（千克），用于计算脂肪质量和瘦体重。",
+          "label": "体重",
+        },
+      },
+      "keywords": [
+        "体脂率计算器",
+        "体脂百分比",
+        "美国海军法",
+        "围度法",
+        "瘦体重",
+        "脂肪质量",
+        "身体成分",
+      ],
+      "options": {
+        "gender": {
+          "female": "女性",
+          "male": "男性",
+        },
+      },
+      "outputs": {
+        "bodyFatPct": {
+          "help": "体重中脂肪占比的估算值。",
+          "label": "体脂率",
+        },
+        "category": {
+          "help": "美国运动委员会（ACE）的体脂分类。",
+          "label": "分类",
+        },
+        "fatMass": {
+          "help": "体脂的估算重量（千克）。",
+          "label": "脂肪质量",
+          "suffix": "千克",
+        },
+        "leanMass": {
+          "help": "体重减去脂肪质量——包括肌肉、骨骼、水分和器官。",
+          "label": "瘦体重",
+          "suffix": "千克",
+        },
+      },
+      "short": "使用美国海军围度法估算您的体脂率。",
+      "title": "体脂率计算器",
+    },
+  },
+  "icon": Any<String>,
+  "inputSchema": ZodEffects {
+    "_def": {
+      "effect": {
+        "refinement": [Function],
+        "type": "refinement",
+      },
+      "schema": ZodObject {
+        "_cached": {
+          "keys": [
+            "gender",
+            "height",
+            "weight",
+            "waist",
+            "neck",
+            "hip",
+          ],
+          "shape": {
+            "gender": ZodEnum {
+              "_cache": Set {
+                "male",
+                "female",
+              },
+              "_def": {
+                "typeName": "ZodEnum",
+                "values": [
+                  "male",
+                  "female",
+                ],
+              },
+              "and": [Function],
+              "array": [Function],
+              "brand": [Function],
+              "catch": [Function],
+              "default": [Function],
+              "describe": [Function],
+              "isNullable": [Function],
+              "isOptional": [Function],
+              "nullable": [Function],
+              "nullish": [Function],
+              "optional": [Function],
+              "or": [Function],
+              "parse": [Function],
+              "parseAsync": [Function],
+              "pipe": [Function],
+              "promise": [Function],
+              "readonly": [Function],
+              "refine": [Function],
+              "refinement": [Function],
+              "safeParse": [Function],
+              "safeParseAsync": [Function],
+              "spa": [Function],
+              "superRefine": [Function],
+              "transform": [Function],
+              "~standard": {
+                "validate": [Function],
+                "vendor": "zod",
+                "version": 1,
+              },
+            },
+            "height": ZodNumber {
+              "_def": {
+                "checks": [
+                  {
+                    "inclusive": false,
+                    "kind": "min",
+                    "message": undefined,
+                    "value": 0,
+                  },
+                ],
+                "coerce": false,
+                "typeName": "ZodNumber",
+              },
+              "and": [Function],
+              "array": [Function],
+              "brand": [Function],
+              "catch": [Function],
+              "default": [Function],
+              "describe": [Function],
+              "isNullable": [Function],
+              "isOptional": [Function],
+              "max": [Function],
+              "min": [Function],
+              "nullable": [Function],
+              "nullish": [Function],
+              "optional": [Function],
+              "or": [Function],
+              "parse": [Function],
+              "parseAsync": [Function],
+              "pipe": [Function],
+              "promise": [Function],
+              "readonly": [Function],
+              "refine": [Function],
+              "refinement": [Function],
+              "safeParse": [Function],
+              "safeParseAsync": [Function],
+              "spa": [Function],
+              "step": [Function],
+              "superRefine": [Function],
+              "transform": [Function],
+              "~standard": {
+                "validate": [Function],
+                "vendor": "zod",
+                "version": 1,
+              },
+            },
+            "hip": ZodOptional {
+              "_def": {
+                "description": undefined,
+                "errorMap": [Function],
+                "innerType": ZodNumber {
+                  "_def": {
+                    "checks": [],
+                    "coerce": false,
+                    "typeName": "ZodNumber",
+                  },
+                  "and": [Function],
+                  "array": [Function],
+                  "brand": [Function],
+                  "catch": [Function],
+                  "default": [Function],
+                  "describe": [Function],
+                  "isNullable": [Function],
+                  "isOptional": [Function],
+                  "max": [Function],
+                  "min": [Function],
+                  "nullable": [Function],
+                  "nullish": [Function],
+                  "optional": [Function],
+                  "or": [Function],
+                  "parse": [Function],
+                  "parseAsync": [Function],
+                  "pipe": [Function],
+                  "promise": [Function],
+                  "readonly": [Function],
+                  "refine": [Function],
+                  "refinement": [Function],
+                  "safeParse": [Function],
+                  "safeParseAsync": [Function],
+                  "spa": [Function],
+                  "step": [Function],
+                  "superRefine": [Function],
+                  "transform": [Function],
+                  "~standard": {
+                    "validate": [Function],
+                    "vendor": "zod",
+                    "version": 1,
+                  },
+                },
+                "typeName": "ZodOptional",
+              },
+              "and": [Function],
+              "array": [Function],
+              "brand": [Function],
+              "catch": [Function],
+              "default": [Function],
+              "describe": [Function],
+              "isNullable": [Function],
+              "isOptional": [Function],
+              "nullable": [Function],
+              "nullish": [Function],
+              "optional": [Function],
+              "or": [Function],
+              "parse": [Function],
+              "parseAsync": [Function],
+              "pipe": [Function],
+              "promise": [Function],
+              "readonly": [Function],
+              "refine": [Function],
+              "refinement": [Function],
+              "safeParse": [Function],
+              "safeParseAsync": [Function],
+              "spa": [Function],
+              "superRefine": [Function],
+              "transform": [Function],
+              "~standard": {
+                "validate": [Function],
+                "vendor": "zod",
+                "version": 1,
+              },
+            },
+            "neck": ZodNumber {
+              "_def": {
+                "checks": [
+                  {
+                    "inclusive": false,
+                    "kind": "min",
+                    "message": undefined,
+                    "value": 0,
+                  },
+                ],
+                "coerce": false,
+                "typeName": "ZodNumber",
+              },
+              "and": [Function],
+              "array": [Function],
+              "brand": [Function],
+              "catch": [Function],
+              "default": [Function],
+              "describe": [Function],
+              "isNullable": [Function],
+              "isOptional": [Function],
+              "max": [Function],
+              "min": [Function],
+              "nullable": [Function],
+              "nullish": [Function],
+              "optional": [Function],
+              "or": [Function],
+              "parse": [Function],
+              "parseAsync": [Function],
+              "pipe": [Function],
+              "promise": [Function],
+              "readonly": [Function],
+              "refine": [Function],
+              "refinement": [Function],
+              "safeParse": [Function],
+              "safeParseAsync": [Function],
+              "spa": [Function],
+              "step": [Function],
+              "superRefine": [Function],
+              "transform": [Function],
+              "~standard": {
+                "validate": [Function],
+                "vendor": "zod",
+                "version": 1,
+              },
+            },
+            "waist": ZodNumber {
+              "_def": {
+                "checks": [
+                  {
+                    "inclusive": false,
+                    "kind": "min",
+                    "message": undefined,
+                    "value": 0,
+                  },
+                ],
+                "coerce": false,
+                "typeName": "ZodNumber",
+              },
+              "and": [Function],
+              "array": [Function],
+              "brand": [Function],
+              "catch": [Function],
+              "default": [Function],
+              "describe": [Function],
+              "isNullable": [Function],
+              "isOptional": [Function],
+              "max": [Function],
+              "min": [Function],
+              "nullable": [Function],
+              "nullish": [Function],
+              "optional": [Function],
+              "or": [Function],
+              "parse": [Function],
+              "parseAsync": [Function],
+              "pipe": [Function],
+              "promise": [Function],
+              "readonly": [Function],
+              "refine": [Function],
+              "refinement": [Function],
+              "safeParse": [Function],
+              "safeParseAsync": [Function],
+              "spa": [Function],
+              "step": [Function],
+              "superRefine": [Function],
+              "transform": [Function],
+              "~standard": {
+                "validate": [Function],
+                "vendor": "zod",
+                "version": 1,
+              },
+            },
+            "weight": ZodNumber {
+              "_def": {
+                "checks": [
+                  {
+                    "inclusive": false,
+                    "kind": "min",
+                    "message": undefined,
+                    "value": 0,
+                  },
+                ],
+                "coerce": false,
+                "typeName": "ZodNumber",
+              },
+              "and": [Function],
+              "array": [Function],
+              "brand": [Function],
+              "catch": [Function],
+              "default": [Function],
+              "describe": [Function],
+              "isNullable": [Function],
+              "isOptional": [Function],
+              "max": [Function],
+              "min": [Function],
+              "nullable": [Function],
+              "nullish": [Function],
+              "optional": [Function],
+              "or": [Function],
+              "parse": [Function],
+              "parseAsync": [Function],
+              "pipe": [Function],
+              "promise": [Function],
+              "readonly": [Function],
+              "refine": [Function],
+              "refinement": [Function],
+              "safeParse": [Function],
+              "safeParseAsync": [Function],
+              "spa": [Function],
+              "step": [Function],
+              "superRefine": [Function],
+              "transform": [Function],
+              "~standard": {
+                "validate": [Function],
+                "vendor": "zod",
+                "version": 1,
+              },
+            },
+          },
+        },
+        "_def": {
+          "catchall": ZodNever {
+            "_def": {
+              "typeName": "ZodNever",
+            },
+            "and": [Function],
+            "array": [Function],
+            "brand": [Function],
+            "catch": [Function],
+            "default": [Function],
+            "describe": [Function],
+            "isNullable": [Function],
+            "isOptional": [Function],
+            "nullable": [Function],
+            "nullish": [Function],
+            "optional": [Function],
+            "or": [Function],
+            "parse": [Function],
+            "parseAsync": [Function],
+            "pipe": [Function],
+            "promise": [Function],
+            "readonly": [Function],
+            "refine": [Function],
+            "refinement": [Function],
+            "safeParse": [Function],
+            "safeParseAsync": [Function],
+            "spa": [Function],
+            "superRefine": [Function],
+            "transform": [Function],
+            "~standard": {
+              "validate": [Function],
+              "vendor": "zod",
+              "version": 1,
+            },
+          },
+          "shape": [Function],
+          "typeName": "ZodObject",
+          "unknownKeys": "strip",
+        },
+        "and": [Function],
+        "array": [Function],
+        "augment": [Function],
+        "brand": [Function],
+        "catch": [Function],
+        "default": [Function],
+        "describe": [Function],
+        "isNullable": [Function],
+        "isOptional": [Function],
+        "nonstrict": [Function],
+        "nullable": [Function],
+        "nullish": [Function],
+        "optional": [Function],
+        "or": [Function],
+        "parse": [Function],
+        "parseAsync": [Function],
+        "pipe": [Function],
+        "promise": [Function],
+        "readonly": [Function],
+        "refine": [Function],
+        "refinement": [Function],
+        "safeParse": [Function],
+        "safeParseAsync": [Function],
+        "spa": [Function],
+        "superRefine": [Function],
+        "transform": [Function],
+        "~standard": {
+          "validate": [Function],
+          "vendor": "zod",
+          "version": 1,
+        },
+      },
+      "typeName": "ZodEffects",
+    },
+    "and": [Function],
+    "array": [Function],
+    "brand": [Function],
+    "catch": [Function],
+    "default": [Function],
+    "describe": [Function],
+    "isNullable": [Function],
+    "isOptional": [Function],
+    "nullable": [Function],
+    "nullish": [Function],
+    "optional": [Function],
+    "or": [Function],
+    "parse": [Function],
+    "parseAsync": [Function],
+    "pipe": [Function],
+    "promise": [Function],
+    "readonly": [Function],
+    "refine": [Function],
+    "refinement": [Function],
+    "safeParse": [Function],
+    "safeParseAsync": [Function],
+    "spa": [Function],
+    "superRefine": [Function],
+    "transform": [Function],
+    "~standard": {
+      "validate": [Function],
+      "vendor": "zod",
+      "version": 1,
+    },
+  },
+  "inputs": [
+    {
+      "defaultValue": "male",
+      "id": "gender",
+      "required": true,
+      "type": {
+        "kind": "select",
+        "options": [
+          {
+            "i18nKey": "male",
+            "value": "male",
+          },
+          {
+            "i18nKey": "female",
+            "value": "female",
+          },
+        ],
+      },
+    },
+    {
+      "defaultValue": 175,
+      "id": "height",
+      "required": true,
+      "type": {
+        "kind": "number",
+        "max": 250,
+        "min": 50,
+        "step": 0.5,
+        "unit": "cm",
+      },
+    },
+    {
+      "defaultValue": 75,
+      "id": "weight",
+      "required": true,
+      "type": {
+        "kind": "number",
+        "max": 300,
+        "min": 1,
+        "step": 0.1,
+        "unit": "kg",
+      },
+    },
+    {
+      "defaultValue": 85,
+      "id": "waist",
+      "required": true,
+      "type": {
+        "kind": "number",
+        "max": 200,
+        "min": 30,
+        "step": 0.5,
+        "unit": "cm",
+      },
+    },
+    {
+      "defaultValue": 37,
+      "id": "neck",
+      "required": true,
+      "type": {
+        "kind": "number",
+        "max": 80,
+        "min": 20,
+        "step": 0.5,
+        "unit": "cm",
+      },
+    },
+    {
+      "defaultValue": 95,
+      "id": "hip",
+      "required": false,
+      "type": {
+        "kind": "number",
+        "max": 200,
+        "min": 50,
+        "step": 0.5,
+        "unit": "cm",
+      },
+    },
+  ],
+  "meta": {
+    "disclaimer": "The US Navy tape method estimates body fat percentage from circumference measurements. It is less accurate than DEXA or hydrostatic weighing but is a practical field assessment tool.",
+    "formulaLatex": "\\%BF_{\\text{male}} = 86.01\\log_{10}(\\text{waist}-\\text{neck}) - 70.041\\log_{10}(\\text{height}) + 36.76",
+    "references": [
+      {
+        "authority": "Naval Health Research Center",
+        "title": "Hodgdon JA, Beckett MB (1984). Prediction of percent body fat for US Navy personnel.",
+      },
+      {
+        "authority": "United States Navy",
+        "title": "US Navy Body Composition Assessment",
+        "url": "https://www.public.navy.mil/",
+      },
+    ],
+  },
+  "outputs": [
+    {
+      "format": "percent",
+      "highlight": true,
+      "id": "bodyFatPct",
+      "precision": 1,
+    },
+    {
+      "format": "number",
+      "id": "fatMass",
+      "precision": 1,
+      "unit": "kg",
+    },
+    {
+      "format": "number",
+      "id": "leanMass",
+      "precision": 1,
+      "unit": "kg",
+    },
+    {
+      "format": "text",
+      "id": "category",
+    },
+  ],
+  "priority": Any<String>,
+  "related": [
+    "bmi",
+    "ideal-weight",
+    "bmr",
+  ],
+  "slug": Any<String>,
+  "tags": [
+    "health",
+    "body fat",
+    "US Navy",
+    "circumference",
+    "fitness",
+    "lean mass",
+  ],
+}
+`;

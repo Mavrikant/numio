@@ -1,0 +1,1453 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Voltage Drop definition — shape snapshot > snapshot matches 1`] = `
+{
+  "category": Any<String>,
+  "compute": [Function],
+  "i18n": {
+    "ar": {
+      "description": "حاسبة مجانية لهبوط الجهد الكهربائي في موصلات النحاس والألومنيوم. أدخل المقطع العرضي والطول والتيار وجهد النظام.",
+      "errors": {
+        "invalidGauge": "يجب أن يكون مقطع السلك عدداً موجباً.",
+      },
+      "faq": [
+        {
+          "a": "يوصي الكود الكهربائي الوطني (NEC) بألا يتجاوز هبوط الجهد في دوائر التفرع 3% من جهد المصدر عند الحمل الكامل.",
+          "q": "ما هي قاعدة NEC للـ 3%؟",
+        },
+      ],
+      "inputs": {
+        "conductorMaterial": {
+          "help": "النحاس له مقاومية أقل من الألومنيوم.",
+          "label": "مادة الموصل",
+        },
+        "currentA": {
+          "help": "تيار الحمل بالأمبير.",
+          "label": "التيار (أمبير)",
+        },
+        "lengthM": {
+          "help": "المسافة من المصدر إلى الحمل بالأمتار.",
+          "label": "طول الذهاب (م)",
+        },
+        "voltage": {
+          "help": "الجهد الاسمي للنظام عند المصدر.",
+          "label": "جهد المصدر (فولت)",
+        },
+        "wireGauge": {
+          "help": "رقم AWG (أصغر = أسمك) أو المقطع بالمليمتر المربع.",
+          "label": "مقطع السلك / الكابل",
+        },
+        "wireGaugeUnit": {
+          "help": "AWG (مقياس الأسلاك الأمريكي) أو mm² للمقطع العرضي.",
+          "label": "وحدة المقطع",
+        },
+      },
+      "keywords": [
+        "حاسبة هبوط الجهد",
+        "هبوط جهد الكابل",
+        "مقطع الكابل الكهربائي",
+        "NEC هبوط الجهد",
+      ],
+      "options": {
+        "conductorMaterial": {
+          "aluminum": "ألومنيوم (Al)",
+          "copper": "نحاس (Cu)",
+        },
+        "wireGaugeUnit": {
+          "awg": "AWG (مقياس الأسلاك الأمريكي)",
+          "mm2": "mm² (مقطع عرضي)",
+        },
+      },
+      "outputs": {
+        "areaMm2": {
+          "help": "المساحة المقطعية الفعلية للموصل.",
+          "label": "مقطع الموصل (mm²)",
+        },
+        "receivingVoltage": {
+          "help": "الجهد الفعلي المتاح للحمل.",
+          "label": "الجهد المستلم (فولت)",
+        },
+        "recommendation": {
+          "help": "ok = ≤3%، تحذير = 3–5%، حرج = >5%.",
+          "label": "حالة NEC",
+        },
+        "voltageDrop": {
+          "help": "إجمالي فقد الجهد في كلا الموصلين (ذهاباً وإياباً).",
+          "label": "هبوط الجهد (فولت)",
+        },
+        "voltageDropPct": {
+          "help": "نسبة الهبوط من جهد المصدر. يوصي NEC بـ ≤3%.",
+          "label": "هبوط الجهد (%)",
+        },
+      },
+      "short": "احسب هبوط الجهد في الكابلات الكهربائية للدوائر أحادية الطور وفق إرشادات NEC.",
+      "title": "حاسبة هبوط الجهد الكهربائي",
+    },
+    "de": {
+      "description": "Kostenloser Rechner für den Spannungsabfall bei Kupfer- und Aluminiumleitern. Geben Sie Leiterquerschnitt, einseitige Leitungslänge, Strom und Nennspannung ein.",
+      "errors": {
+        "invalidGauge": "Der Kabelquerschnitt muss eine positive Zahl sein.",
+      },
+      "faq": [
+        {
+          "a": "Der NEC empfiehlt, dass der Spannungsabfall in Abzweigstromkreisen 3% der Quellspannung nicht übersteigt und der kombinierte Abfall von Zuleitung und Abzweigstromkreis 5% nicht überschreitet.",
+          "q": "Was ist die NEC-3%-Regel für Spannungsabfall?",
+        },
+      ],
+      "inputs": {
+        "conductorMaterial": {
+          "help": "Kupfer hat einen niedrigeren spezifischen Widerstand als Aluminium.",
+          "label": "Leitermaterial",
+        },
+        "currentA": {
+          "help": "Laststrom in Ampere.",
+          "label": "Strom (A)",
+        },
+        "lengthM": {
+          "help": "Entfernung von der Quelle zur Last in Metern.",
+          "label": "Einseitige Leitungslänge (m)",
+        },
+        "voltage": {
+          "help": "Nennspannung an der Quelle.",
+          "label": "Quellspannung (V)",
+        },
+        "wireGauge": {
+          "help": "AWG-Nummer (kleiner = dicker) oder Querschnitt in mm².",
+          "label": "Kabelquerschnitt",
+        },
+        "wireGaugeUnit": {
+          "help": "AWG (American Wire Gauge) oder mm² Querschnitt.",
+          "label": "Querschnittseinheit",
+        },
+      },
+      "keywords": [
+        "Spannungsabfall Rechner",
+        "Kabelquerschnitt Rechner",
+        "Leitungsverlust berechnen",
+        "VDE Spannungsabfall",
+      ],
+      "options": {
+        "conductorMaterial": {
+          "aluminum": "Aluminium (Al)",
+          "copper": "Kupfer (Cu)",
+        },
+        "wireGaugeUnit": {
+          "awg": "AWG (American Wire Gauge)",
+          "mm2": "mm² (Querschnitt)",
+        },
+      },
+      "outputs": {
+        "areaMm2": {
+          "help": "Effektiver Querschnitt des Leiters.",
+          "label": "Leiterquerschnitt (mm²)",
+        },
+        "receivingVoltage": {
+          "help": "Tatsächliche Spannung an der Last.",
+          "label": "Empfangsspannung (V)",
+        },
+        "recommendation": {
+          "help": "ok = ≤3%, Warnung = 3–5%, kritisch = >5%.",
+          "label": "NEC-Status",
+        },
+        "voltageDrop": {
+          "help": "Gesamter Spannungsverlust auf Hin- und Rückleiter.",
+          "label": "Spannungsabfall (V)",
+        },
+        "voltageDropPct": {
+          "help": "Abfall als Prozentsatz der Quellspannung. NEC empfiehlt ≤3%.",
+          "label": "Spannungsabfall (%)",
+        },
+      },
+      "short": "Berechnen Sie den Spannungsabfall in Elektrokabeln für einphasige Stromkreise gemäß NEC.",
+      "title": "Spannungsabfall Rechner",
+    },
+    "en": {
+      "description": "Free voltage drop calculator for copper and aluminum conductors. Enter conductor size (AWG or mm²), one-way length, current, and system voltage to find voltage drop, percentage drop, and NEC compliance status.",
+      "errors": {
+        "invalidGauge": "Wire gauge must be a positive number.",
+      },
+      "faq": [
+        {
+          "a": "The National Electrical Code (NEC) recommends that voltage drop on branch circuits not exceed 3% of the source voltage under full load, with a combined feeder and branch circuit drop not exceeding 5%. Exceeding these limits can cause equipment malfunction, overheating, and reduced efficiency.",
+          "q": "What is the NEC 3% rule for voltage drop?",
+        },
+        {
+          "a": "Copper has a resistivity of 1.724×10⁻⁸ Ω·m compared to aluminum's 2.65×10⁻⁸ Ω·m. Copper conductors are about 61% more conductive, meaning less voltage drop for the same wire size. Aluminum is lighter and cheaper, so it is used for large feeders and utility distribution.",
+          "q": "Why is copper better than aluminum for wiring?",
+        },
+        {
+          "a": "AWG stands for American Wire Gauge, a standardized system for wire sizes. Lower AWG numbers indicate thicker wire with lower resistance. Common household circuits use AWG 14 (15A) or AWG 12 (20A).",
+          "q": "What does AWG mean?",
+        },
+      ],
+      "inputs": {
+        "conductorMaterial": {
+          "help": "Copper has lower resistivity than aluminum.",
+          "label": "Conductor material",
+        },
+        "currentA": {
+          "help": "Load current in amperes.",
+          "label": "Current (A)",
+        },
+        "lengthM": {
+          "help": "Distance from source to load in metres. Total cable run is twice this.",
+          "label": "One-way length (m)",
+        },
+        "voltage": {
+          "help": "Nominal system voltage at the source.",
+          "label": "Source voltage (V)",
+        },
+        "wireGauge": {
+          "help": "AWG number (lower = thicker) or cross-section in mm².",
+          "label": "Wire gauge / size",
+        },
+        "wireGaugeUnit": {
+          "help": "AWG (American Wire Gauge) or mm² cross-section.",
+          "label": "Wire gauge unit",
+        },
+      },
+      "keywords": [
+        "voltage drop calculator",
+        "cable voltage drop",
+        "AWG voltage drop",
+        "NEC voltage drop",
+        "wire size calculator",
+        "electrical cable calculator",
+        "conductor voltage drop",
+      ],
+      "options": {
+        "conductorMaterial": {
+          "aluminum": "Aluminum (Al)",
+          "copper": "Copper (Cu)",
+        },
+        "wireGaugeUnit": {
+          "awg": "AWG (American Wire Gauge)",
+          "mm2": "mm² (cross-section)",
+        },
+      },
+      "outputs": {
+        "areaMm2": {
+          "help": "Effective cross-sectional area of the conductor.",
+          "label": "Conductor area (mm²)",
+        },
+        "receivingVoltage": {
+          "help": "Actual voltage available at the load.",
+          "label": "Receiving voltage (V)",
+        },
+        "recommendation": {
+          "help": "ok = ≤3%, warning = 3–5%, critical = >5%.",
+          "label": "NEC status",
+        },
+        "voltageDrop": {
+          "help": "Total voltage lost in both conductors (2-way path).",
+          "label": "Voltage drop (V)",
+        },
+        "voltageDropPct": {
+          "help": "Drop as percentage of source voltage. NEC recommends ≤3% for branch circuits.",
+          "label": "Voltage drop (%)",
+        },
+      },
+      "short": "Calculate voltage drop in electrical cables for single-phase circuits per NEC guidelines.",
+      "title": "Voltage Drop Calculator",
+    },
+    "es": {
+      "description": "Calculadora gratuita de caída de tensión para conductores de cobre y aluminio. Introduce la sección del conductor, la longitud de ida, la corriente y la tensión del sistema.",
+      "errors": {
+        "invalidGauge": "El calibre del cable debe ser un número positivo.",
+      },
+      "faq": [
+        {
+          "a": "El NEC recomienda que la caída de tensión en circuitos de derivación no supere el 3% de la tensión fuente a plena carga, y el 5% considerando el alimentador y el circuito de derivación combinados.",
+          "q": "¿Qué es la regla del 3% del NEC?",
+        },
+      ],
+      "inputs": {
+        "conductorMaterial": {
+          "help": "El cobre tiene menor resistividad que el aluminio.",
+          "label": "Material del conductor",
+        },
+        "currentA": {
+          "help": "Corriente de carga en amperios.",
+          "label": "Corriente (A)",
+        },
+        "lengthM": {
+          "help": "Distancia de la fuente a la carga en metros.",
+          "label": "Longitud de ida (m)",
+        },
+        "voltage": {
+          "help": "Tensión nominal del sistema en la fuente.",
+          "label": "Tensión fuente (V)",
+        },
+        "wireGauge": {
+          "help": "Número AWG (menor = más grueso) o sección en mm².",
+          "label": "Calibre / sección del cable",
+        },
+        "wireGaugeUnit": {
+          "help": "AWG (calibre americano de alambre) o mm² de sección.",
+          "label": "Unidad de sección",
+        },
+      },
+      "keywords": [
+        "calculadora caída de tensión",
+        "caída de tensión cable",
+        "sección cable eléctrico",
+        "NEC caída de tensión",
+      ],
+      "options": {
+        "conductorMaterial": {
+          "aluminum": "Aluminio (Al)",
+          "copper": "Cobre (Cu)",
+        },
+        "wireGaugeUnit": {
+          "awg": "AWG (Calibre americano)",
+          "mm2": "mm² (sección)",
+        },
+      },
+      "outputs": {
+        "areaMm2": {
+          "help": "Área de sección transversal efectiva del conductor.",
+          "label": "Sección conductor (mm²)",
+        },
+        "receivingVoltage": {
+          "help": "Tensión real disponible en la carga.",
+          "label": "Tensión en receptor (V)",
+        },
+        "recommendation": {
+          "help": "ok = ≤3%, advertencia = 3–5%, crítico = >5%.",
+          "label": "Estado NEC",
+        },
+        "voltageDrop": {
+          "help": "Pérdida de tensión total en ambos conductores (ida y vuelta).",
+          "label": "Caída de tensión (V)",
+        },
+        "voltageDropPct": {
+          "help": "Caída como porcentaje de la tensión fuente. NEC recomienda ≤3%.",
+          "label": "Caída de tensión (%)",
+        },
+      },
+      "short": "Calcula la caída de tensión en cables eléctricos para circuitos monofásicos según la norma NEC.",
+      "title": "Calculadora de Caída de Tensión",
+    },
+    "fr": {
+      "description": "Calculateur gratuit de chute de tension pour conducteurs en cuivre et aluminium. Saisissez la section du conducteur, la longueur aller, le courant et la tension du réseau.",
+      "errors": {
+        "invalidGauge": "Le calibre du fil doit être un nombre positif.",
+      },
+      "faq": [
+        {
+          "a": "Le NEC recommande que la chute de tension sur les circuits de dérivation ne dépasse pas 3% de la tension source en charge nominale, et 5% en cumulant l'alimentation et le circuit de dérivation.",
+          "q": "Qu'est-ce que la règle NEC des 3% ?",
+        },
+      ],
+      "inputs": {
+        "conductorMaterial": {
+          "help": "Le cuivre a une résistivité plus faible que l'aluminium.",
+          "label": "Matériau du conducteur",
+        },
+        "currentA": {
+          "help": "Courant de charge en ampères.",
+          "label": "Courant (A)",
+        },
+        "lengthM": {
+          "help": "Distance de la source à la charge en mètres.",
+          "label": "Longueur aller (m)",
+        },
+        "voltage": {
+          "help": "Tension nominale du réseau à la source.",
+          "label": "Tension source (V)",
+        },
+        "wireGauge": {
+          "help": "Numéro AWG (plus petit = plus épais) ou section en mm².",
+          "label": "Section / calibre du fil",
+        },
+        "wireGaugeUnit": {
+          "help": "AWG (American Wire Gauge) ou mm² de section.",
+          "label": "Unité de section",
+        },
+      },
+      "keywords": [
+        "calculateur chute de tension",
+        "chute de tension câble",
+        "section câble électrique",
+        "NEC chute de tension",
+      ],
+      "options": {
+        "conductorMaterial": {
+          "aluminum": "Aluminium (Al)",
+          "copper": "Cuivre (Cu)",
+        },
+        "wireGaugeUnit": {
+          "awg": "AWG (American Wire Gauge)",
+          "mm2": "mm² (section)",
+        },
+      },
+      "outputs": {
+        "areaMm2": {
+          "help": "Section transversale effective du conducteur.",
+          "label": "Section conducteur (mm²)",
+        },
+        "receivingVoltage": {
+          "help": "Tension réelle disponible à la charge.",
+          "label": "Tension en réception (V)",
+        },
+        "recommendation": {
+          "help": "ok = ≤3%, avertissement = 3–5%, critique = >5%.",
+          "label": "Statut NEC",
+        },
+        "voltageDrop": {
+          "help": "Perte de tension totale sur les deux conducteurs (aller-retour).",
+          "label": "Chute de tension (V)",
+        },
+        "voltageDropPct": {
+          "help": "Chute en pourcentage de la tension source. NEC recommande ≤3%.",
+          "label": "Chute de tension (%)",
+        },
+      },
+      "short": "Calculez la chute de tension dans les câbles électriques pour les circuits monophasés selon les normes NEC.",
+      "title": "Calculateur de Chute de Tension",
+    },
+    "hi": {
+      "description": "तांबे और एल्युमीनियम कंडक्टर के लिए निःशुल्क वोल्टेज ड्रॉप कैलकुलेटर। कंडक्टर आकार (AWG या mm²), एकतरफा लंबाई, करंट और सिस्टम वोल्टेज दर्ज करें।",
+      "errors": {
+        "invalidGauge": "तार गेज एक सकारात्मक संख्या होनी चाहिए।",
+      },
+      "faq": [
+        {
+          "a": "राष्ट्रीय विद्युत संहिता (NEC) अनुशंसा करती है कि शाखा सर्किट पर वोल्टेज ड्रॉप पूर्ण भार पर स्रोत वोल्टेज के 3% से अधिक न हो।",
+          "q": "NEC की 3% नियम क्या है?",
+        },
+      ],
+      "inputs": {
+        "conductorMaterial": {
+          "help": "तांबे की प्रतिरोधकता एल्युमीनियम से कम होती है।",
+          "label": "कंडक्टर सामग्री",
+        },
+        "currentA": {
+          "help": "एम्पीयर में लोड करंट।",
+          "label": "करंट (A)",
+        },
+        "lengthM": {
+          "help": "स्रोत से लोड तक की दूरी मीटर में।",
+          "label": "एकतरफा लंबाई (m)",
+        },
+        "voltage": {
+          "help": "स्रोत पर नाममात्र सिस्टम वोल्टेज।",
+          "label": "स्रोत वोल्टेज (V)",
+        },
+        "wireGauge": {
+          "help": "AWG संख्या (कम = मोटा) या mm² में अनुप्रस्थ काट।",
+          "label": "तार गेज / आकार",
+        },
+        "wireGaugeUnit": {
+          "help": "AWG (अमेरिकी तार गेज) या mm² अनुप्रस्थ काट।",
+          "label": "तार मापन इकाई",
+        },
+      },
+      "keywords": [
+        "वोल्टेज ड्रॉप कैलकुलेटर",
+        "केबल वोल्टेज ड्रॉप",
+        "AWG वोल्टेज ड्रॉप",
+        "NEC वोल्टेज ड्रॉप",
+      ],
+      "options": {
+        "conductorMaterial": {
+          "aluminum": "एल्युमीनियम (Al)",
+          "copper": "तांबा (Cu)",
+        },
+        "wireGaugeUnit": {
+          "awg": "AWG (अमेरिकी तार गेज)",
+          "mm2": "mm² (अनुप्रस्थ काट)",
+        },
+      },
+      "outputs": {
+        "areaMm2": {
+          "help": "कंडक्टर का प्रभावी अनुप्रस्थ काट क्षेत्रफल।",
+          "label": "कंडक्टर क्षेत्रफल (mm²)",
+        },
+        "receivingVoltage": {
+          "help": "लोड पर वास्तविक उपलब्ध वोल्टेज।",
+          "label": "प्राप्त वोल्टेज (V)",
+        },
+        "recommendation": {
+          "help": "ok = ≤3%, चेतावनी = 3–5%, गंभीर = >5%।",
+          "label": "NEC स्थिति",
+        },
+        "voltageDrop": {
+          "help": "दोनों कंडक्टरों (आने-जाने) पर कुल वोल्टेज हानि।",
+          "label": "वोल्टेज ड्रॉप (V)",
+        },
+        "voltageDropPct": {
+          "help": "स्रोत वोल्टेज के प्रतिशत के रूप में ड्रॉप। NEC ≤3% की सिफारिश करता है।",
+          "label": "वोल्टेज ड्रॉप (%)",
+        },
+      },
+      "short": "NEC दिशानिर्देशों के अनुसार एकल-चरण सर्किट में विद्युत केबलों में वोल्टेज ड्रॉप की गणना करें।",
+      "title": "वोल्टेज ड्रॉप कैलकुलेटर",
+    },
+    "it": {
+      "description": "Calcolatore gratuito della caduta di tensione per conduttori in rame e alluminio. Inserisci sezione, lunghezza andata, corrente e tensione di sistema.",
+      "errors": {
+        "invalidGauge": "Il calibro del cavo deve essere un numero positivo.",
+      },
+      "faq": [
+        {
+          "a": "Il NEC raccomanda che la caduta di tensione sui circuiti di derivazione non superi il 3% della tensione sorgente a pieno carico, con un massimo del 5% combinando alimentazione e circuito di derivazione.",
+          "q": "Cos'è la regola del 3% NEC?",
+        },
+      ],
+      "inputs": {
+        "conductorMaterial": {
+          "help": "Il rame ha resistività inferiore rispetto all'alluminio.",
+          "label": "Materiale conduttore",
+        },
+        "currentA": {
+          "help": "Corrente di carico in ampere.",
+          "label": "Corrente (A)",
+        },
+        "lengthM": {
+          "help": "Distanza dalla sorgente al carico in metri.",
+          "label": "Lunghezza andata (m)",
+        },
+        "voltage": {
+          "help": "Tensione nominale del sistema alla sorgente.",
+          "label": "Tensione sorgente (V)",
+        },
+        "wireGauge": {
+          "help": "Numero AWG (più piccolo = più spesso) o sezione in mm².",
+          "label": "Sezione / calibro del cavo",
+        },
+        "wireGaugeUnit": {
+          "help": "AWG (American Wire Gauge) o mm² di sezione.",
+          "label": "Unità di sezione",
+        },
+      },
+      "keywords": [
+        "calcolatore caduta di tensione",
+        "caduta di tensione cavo",
+        "sezione cavo elettrico",
+        "NEC caduta di tensione",
+      ],
+      "options": {
+        "conductorMaterial": {
+          "aluminum": "Alluminio (Al)",
+          "copper": "Rame (Cu)",
+        },
+        "wireGaugeUnit": {
+          "awg": "AWG (American Wire Gauge)",
+          "mm2": "mm² (sezione)",
+        },
+      },
+      "outputs": {
+        "areaMm2": {
+          "help": "Sezione trasversale effettiva del conduttore.",
+          "label": "Sezione conduttore (mm²)",
+        },
+        "receivingVoltage": {
+          "help": "Tensione reale disponibile al carico.",
+          "label": "Tensione al carico (V)",
+        },
+        "recommendation": {
+          "help": "ok = ≤3%, avviso = 3–5%, critico = >5%.",
+          "label": "Stato NEC",
+        },
+        "voltageDrop": {
+          "help": "Perdita di tensione totale su entrambi i conduttori (andata e ritorno).",
+          "label": "Caduta di tensione (V)",
+        },
+        "voltageDropPct": {
+          "help": "Caduta come percentuale della tensione sorgente. NEC raccomanda ≤3%.",
+          "label": "Caduta di tensione (%)",
+        },
+      },
+      "short": "Calcola la caduta di tensione nei cavi elettrici per circuiti monofase secondo le norme NEC.",
+      "title": "Calcolatore Caduta di Tensione",
+    },
+    "ja": {
+      "description": "銅・アルミ導体向けの無料電圧降下計算機。導体サイズ（AWGまたはmm²）、片道距離、電流、系統電圧を入力して電圧降下、降下率、NEC適合状況を確認できます。",
+      "errors": {
+        "invalidGauge": "線径は正の数でなければなりません。",
+      },
+      "faq": [
+        {
+          "a": "NEC（米国電気法）は、分岐回路の電圧降下が定格負荷時に電源電圧の3%を超えないよう推奨しており、幹線と分岐回路を合わせた降下が5%を超えないことを求めています。",
+          "q": "NECの3%ルールとは何ですか？",
+        },
+      ],
+      "inputs": {
+        "conductorMaterial": {
+          "help": "銅はアルミより低い抵抗率を持ちます。",
+          "label": "導体材料",
+        },
+        "currentA": {
+          "help": "負荷電流（アンペア）。",
+          "label": "電流（A）",
+        },
+        "lengthM": {
+          "help": "電源から負荷までの距離（メートル）。",
+          "label": "片道長さ（m）",
+        },
+        "voltage": {
+          "help": "電源側の公称系統電圧。",
+          "label": "電源電圧（V）",
+        },
+        "wireGauge": {
+          "help": "AWG番号（小さいほど太い）またはmm²断面積。",
+          "label": "線径 / 断面積",
+        },
+        "wireGaugeUnit": {
+          "help": "AWG（アメリカ電線規格）またはmm²断面積。",
+          "label": "線径単位",
+        },
+      },
+      "keywords": [
+        "電圧降下計算機",
+        "ケーブル電圧降下",
+        "AWG電圧降下",
+        "NEC電圧降下",
+        "電線断面積計算機",
+      ],
+      "options": {
+        "conductorMaterial": {
+          "aluminum": "アルミニウム（Al）",
+          "copper": "銅（Cu）",
+        },
+        "wireGaugeUnit": {
+          "awg": "AWG（アメリカ電線規格）",
+          "mm2": "mm²（断面積）",
+        },
+      },
+      "outputs": {
+        "areaMm2": {
+          "help": "導体の有効断面積。",
+          "label": "導体断面積（mm²）",
+        },
+        "receivingVoltage": {
+          "help": "負荷側で実際に使用できる電圧。",
+          "label": "受電電圧（V）",
+        },
+        "recommendation": {
+          "help": "ok = ≤3%、警告 = 3–5%、危険 = >5%。",
+          "label": "NEC判定",
+        },
+        "voltageDrop": {
+          "help": "両導体（往復）の合計電圧損失。",
+          "label": "電圧降下（V）",
+        },
+        "voltageDropPct": {
+          "help": "電源電圧に対する降下の割合。NECは≤3%を推奨。",
+          "label": "電圧降下率（%）",
+        },
+      },
+      "short": "NEC基準に従って単相回路の電気ケーブルの電圧降下を計算します。",
+      "title": "電圧降下計算機",
+    },
+    "ko": {
+      "description": "동선 및 알루미늄 도체용 무료 전압 강하 계산기. 도체 단면적(AWG 또는 mm²), 편도 길이, 전류, 시스템 전압을 입력하면 전압 강하, 강하율, NEC 준수 상태를 확인할 수 있습니다.",
+      "errors": {
+        "invalidGauge": "선경은 양수여야 합니다.",
+      },
+      "faq": [
+        {
+          "a": "NEC는 분기 회로의 전압 강하가 정격 부하 시 전원 전압의 3%를 초과하지 않고, 간선과 분기 회로를 합산한 강하가 5%를 넘지 않도록 권장합니다.",
+          "q": "NEC 3% 규정이란 무엇인가요?",
+        },
+      ],
+      "inputs": {
+        "conductorMaterial": {
+          "help": "구리는 알루미늄보다 낮은 저항률을 가집니다.",
+          "label": "도체 재료",
+        },
+        "currentA": {
+          "help": "부하 전류(암페어).",
+          "label": "전류(A)",
+        },
+        "lengthM": {
+          "help": "전원에서 부하까지의 거리(미터).",
+          "label": "편도 길이(m)",
+        },
+        "voltage": {
+          "help": "전원 측 공칭 시스템 전압.",
+          "label": "전원 전압(V)",
+        },
+        "wireGauge": {
+          "help": "AWG 번호(작을수록 굵음) 또는 mm² 단면적.",
+          "label": "선경 / 단면적",
+        },
+        "wireGaugeUnit": {
+          "help": "AWG(미국 전선 규격) 또는 mm² 단면적.",
+          "label": "선경 단위",
+        },
+      },
+      "keywords": [
+        "전압 강하 계산기",
+        "케이블 전압 강하",
+        "AWG 전압 강하",
+        "NEC 전압 강하",
+        "전선 단면적 계산기",
+      ],
+      "options": {
+        "conductorMaterial": {
+          "aluminum": "알루미늄(Al)",
+          "copper": "구리(Cu)",
+        },
+        "wireGaugeUnit": {
+          "awg": "AWG(미국 전선 규격)",
+          "mm2": "mm²(단면적)",
+        },
+      },
+      "outputs": {
+        "areaMm2": {
+          "help": "도체의 유효 단면적.",
+          "label": "도체 단면적(mm²)",
+        },
+        "receivingVoltage": {
+          "help": "부하에서 실제로 사용 가능한 전압.",
+          "label": "수전 전압(V)",
+        },
+        "recommendation": {
+          "help": "ok = ≤3%, 경고 = 3–5%, 위험 = >5%.",
+          "label": "NEC 상태",
+        },
+        "voltageDrop": {
+          "help": "두 도체(왕복)의 총 전압 손실.",
+          "label": "전압 강하(V)",
+        },
+        "voltageDropPct": {
+          "help": "전원 전압 대비 강하 비율. NEC는 ≤3%를 권장합니다.",
+          "label": "전압 강하율(%)",
+        },
+      },
+      "short": "NEC 지침에 따라 단상 회로의 전기 케이블 전압 강하를 계산합니다.",
+      "title": "전압 강하 계산기",
+    },
+    "ru": {
+      "description": "Бесплатный калькулятор падения напряжения для медных и алюминиевых проводников. Введите сечение, длину, ток и напряжение системы.",
+      "errors": {
+        "invalidGauge": "Сечение провода должно быть положительным числом.",
+      },
+      "faq": [
+        {
+          "a": "NEC рекомендует, чтобы падение напряжения на разветвительных цепях не превышало 3% напряжения источника при полной нагрузке, а суммарное падение (магистраль + ответвление) не превышало 5%.",
+          "q": "Что такое правило NEC 3%?",
+        },
+      ],
+      "inputs": {
+        "conductorMaterial": {
+          "help": "Медь имеет более низкое удельное сопротивление, чем алюминий.",
+          "label": "Материал проводника",
+        },
+        "currentA": {
+          "help": "Ток нагрузки в амперах.",
+          "label": "Ток (А)",
+        },
+        "lengthM": {
+          "help": "Расстояние от источника до нагрузки в метрах.",
+          "label": "Длина в одну сторону (м)",
+        },
+        "voltage": {
+          "help": "Номинальное напряжение системы у источника.",
+          "label": "Напряжение источника (В)",
+        },
+        "wireGauge": {
+          "help": "Номер AWG (меньше = толще) или сечение в мм².",
+          "label": "Сечение / сортамент провода",
+        },
+        "wireGaugeUnit": {
+          "help": "AWG (американская система) или мм² поперечного сечения.",
+          "label": "Единица сечения",
+        },
+      },
+      "keywords": [
+        "калькулятор падения напряжения",
+        "падение напряжения кабель",
+        "сечение кабеля",
+        "NEC падение напряжения",
+      ],
+      "options": {
+        "conductorMaterial": {
+          "aluminum": "Алюминий (Al)",
+          "copper": "Медь (Cu)",
+        },
+        "wireGaugeUnit": {
+          "awg": "AWG (американская система)",
+          "mm2": "мм² (сечение)",
+        },
+      },
+      "outputs": {
+        "areaMm2": {
+          "help": "Эффективная площадь поперечного сечения проводника.",
+          "label": "Сечение проводника (мм²)",
+        },
+        "receivingVoltage": {
+          "help": "Фактическое напряжение, доступное нагрузке.",
+          "label": "Напряжение у нагрузки (В)",
+        },
+        "recommendation": {
+          "help": "ok = ≤3%, предупреждение = 3–5%, критично = >5%.",
+          "label": "Статус NEC",
+        },
+        "voltageDrop": {
+          "help": "Суммарные потери напряжения на обоих проводниках (туда и обратно).",
+          "label": "Падение напряжения (В)",
+        },
+        "voltageDropPct": {
+          "help": "Падение как процент от напряжения источника. NEC рекомендует ≤3%.",
+          "label": "Падение напряжения (%)",
+        },
+      },
+      "short": "Рассчитайте падение напряжения в электрических кабелях для однофазных цепей по нормам NEC.",
+      "title": "Калькулятор падения напряжения",
+    },
+    "tr": {
+      "description": "Bakır ve alüminyum iletkenler için ücretsiz gerilim düşümü hesaplayıcısı. İletken kesitini, tek yön uzunluğu, akımı ve sistem gerilimini girerek gerilim düşümü, yüzde düşüm ve NEC uygunluk durumunu öğrenin.",
+      "errors": {
+        "invalidGauge": "Kablo kalınlığı pozitif bir sayı olmalıdır.",
+      },
+      "faq": [
+        {
+          "a": "Ulusal Elektrik Kodu (NEC), dallanma devrelerinde tam yük altında gerilim düşümünün kaynak geriliminin %3'ünü aşmamasını ve besleme ile dallanma devresi toplamının %5'i geçmemesini tavsiye eder.",
+          "q": "NEC'in %3 gerilim düşümü kuralı nedir?",
+        },
+      ],
+      "inputs": {
+        "conductorMaterial": {
+          "help": "Bakırın özgül direnci alüminyumdan düşüktür.",
+          "label": "İletken malzeme",
+        },
+        "currentA": {
+          "help": "Yük akımı (amper).",
+          "label": "Akım (A)",
+        },
+        "lengthM": {
+          "help": "Kaynaktan yüke olan mesafe (metre). Toplam kablo uzunluğu bunun iki katıdır.",
+          "label": "Tek yön uzunluk (m)",
+        },
+        "voltage": {
+          "help": "Kaynaktaki nominal sistem gerilimi.",
+          "label": "Kaynak gerilimi (V)",
+        },
+        "wireGauge": {
+          "help": "AWG numarası (küçük = daha kalın) veya mm² cinsinden kesit.",
+          "label": "Kablo kalınlığı",
+        },
+        "wireGaugeUnit": {
+          "help": "AWG (Amerikan Tel Kaliperi) veya mm² kesit alanı.",
+          "label": "Kablo kesit birimi",
+        },
+      },
+      "keywords": [
+        "gerilim düşümü hesaplayıcı",
+        "kablo gerilim düşümü",
+        "AWG gerilim düşümü",
+        "elektrik kablo hesaplayıcı",
+      ],
+      "options": {
+        "conductorMaterial": {
+          "aluminum": "Alüminyum (Al)",
+          "copper": "Bakır (Cu)",
+        },
+        "wireGaugeUnit": {
+          "awg": "AWG (Amerikan Tel Kaliperi)",
+          "mm2": "mm² (kesit alanı)",
+        },
+      },
+      "outputs": {
+        "areaMm2": {
+          "help": "İletkenin etkin kesit alanı.",
+          "label": "İletken kesiti (mm²)",
+        },
+        "receivingVoltage": {
+          "help": "Yükte mevcut gerçek gerilim.",
+          "label": "Alınan gerilim (V)",
+        },
+        "recommendation": {
+          "help": "ok = ≤%3, uyarı = %3–5, kritik = >%5.",
+          "label": "NEC durumu",
+        },
+        "voltageDrop": {
+          "help": "Her iki iletkendeki toplam gerilim kaybı (gidiş-dönüş).",
+          "label": "Gerilim düşümü (V)",
+        },
+        "voltageDropPct": {
+          "help": "Kaynak gerilimine oranla düşüm. NEC ≤%3 önerir.",
+          "label": "Gerilim düşümü (%)",
+        },
+      },
+      "short": "NEC kılavuzlarına göre tek fazlı devrelerde elektrik kablolarındaki gerilim düşümünü hesaplayın.",
+      "title": "Gerilim Düşümü Hesaplayıcı",
+    },
+    "zh": {
+      "description": "免费铜铝导体电压降计算器。输入导体截面积（AWG或mm²）、单程长度、电流和系统电压，即可获得电压降、百分比降和NEC合规状态。",
+      "errors": {
+        "invalidGauge": "线径必须为正数。",
+      },
+      "faq": [
+        {
+          "a": "美国国家电气法规（NEC）建议分支电路在满载时的电压降不超过电源电压的3%，馈线与分支电路的综合压降不超过5%。",
+          "q": "NEC的3%规则是什么？",
+        },
+      ],
+      "inputs": {
+        "conductorMaterial": {
+          "help": "铜的电阻率低于铝。",
+          "label": "导体材料",
+        },
+        "currentA": {
+          "help": "负载电流（安培）。",
+          "label": "电流（A）",
+        },
+        "lengthM": {
+          "help": "从电源到负载的距离（米）。总电缆长度为此值的两倍。",
+          "label": "单程长度（m）",
+        },
+        "voltage": {
+          "help": "电源处的额定系统电压。",
+          "label": "电源电压（V）",
+        },
+        "wireGauge": {
+          "help": "AWG编号（数字越小越粗）或mm²截面积。",
+          "label": "线径/截面积",
+        },
+        "wireGaugeUnit": {
+          "help": "AWG（美国线规）或mm²横截面积。",
+          "label": "线径单位",
+        },
+      },
+      "keywords": [
+        "电压降计算器",
+        "电缆电压降",
+        "AWG电压降",
+        "NEC电压降",
+        "导线截面积计算器",
+      ],
+      "options": {
+        "conductorMaterial": {
+          "aluminum": "铝（Al）",
+          "copper": "铜（Cu）",
+        },
+        "wireGaugeUnit": {
+          "awg": "AWG（美国线规）",
+          "mm2": "mm²（截面积）",
+        },
+      },
+      "outputs": {
+        "areaMm2": {
+          "help": "导体的有效横截面积。",
+          "label": "导体面积（mm²）",
+        },
+        "receivingVoltage": {
+          "help": "负载处实际可用电压。",
+          "label": "负载端电压（V）",
+        },
+        "recommendation": {
+          "help": "ok = ≤3%，警告 = 3–5%，严重 = >5%。",
+          "label": "NEC状态",
+        },
+        "voltageDrop": {
+          "help": "两根导体上的总电压损失（双程路径）。",
+          "label": "电压降（V）",
+        },
+        "voltageDropPct": {
+          "help": "相对于电源电压的降落百分比。NEC建议不超过3%。",
+          "label": "电压降（%）",
+        },
+      },
+      "short": "根据NEC指南计算单相电路中电缆的电压降。",
+      "title": "电压降计算器",
+    },
+  },
+  "icon": Any<String>,
+  "inputSchema": ZodObject {
+    "_cached": {
+      "keys": [
+        "conductorMaterial",
+        "wireGaugeUnit",
+        "wireGauge",
+        "lengthM",
+        "currentA",
+        "voltage",
+      ],
+      "shape": {
+        "conductorMaterial": ZodEnum {
+          "_cache": Set {
+            "copper",
+            "aluminum",
+          },
+          "_def": {
+            "typeName": "ZodEnum",
+            "values": [
+              "copper",
+              "aluminum",
+            ],
+          },
+          "and": [Function],
+          "array": [Function],
+          "brand": [Function],
+          "catch": [Function],
+          "default": [Function],
+          "describe": [Function],
+          "isNullable": [Function],
+          "isOptional": [Function],
+          "nullable": [Function],
+          "nullish": [Function],
+          "optional": [Function],
+          "or": [Function],
+          "parse": [Function],
+          "parseAsync": [Function],
+          "pipe": [Function],
+          "promise": [Function],
+          "readonly": [Function],
+          "refine": [Function],
+          "refinement": [Function],
+          "safeParse": [Function],
+          "safeParseAsync": [Function],
+          "spa": [Function],
+          "superRefine": [Function],
+          "transform": [Function],
+          "~standard": {
+            "validate": [Function],
+            "vendor": "zod",
+            "version": 1,
+          },
+        },
+        "currentA": ZodNumber {
+          "_def": {
+            "checks": [
+              {
+                "inclusive": false,
+                "kind": "min",
+                "message": undefined,
+                "value": 0,
+              },
+            ],
+            "coerce": false,
+            "typeName": "ZodNumber",
+          },
+          "and": [Function],
+          "array": [Function],
+          "brand": [Function],
+          "catch": [Function],
+          "default": [Function],
+          "describe": [Function],
+          "isNullable": [Function],
+          "isOptional": [Function],
+          "max": [Function],
+          "min": [Function],
+          "nullable": [Function],
+          "nullish": [Function],
+          "optional": [Function],
+          "or": [Function],
+          "parse": [Function],
+          "parseAsync": [Function],
+          "pipe": [Function],
+          "promise": [Function],
+          "readonly": [Function],
+          "refine": [Function],
+          "refinement": [Function],
+          "safeParse": [Function],
+          "safeParseAsync": [Function],
+          "spa": [Function],
+          "step": [Function],
+          "superRefine": [Function],
+          "transform": [Function],
+          "~standard": {
+            "validate": [Function],
+            "vendor": "zod",
+            "version": 1,
+          },
+        },
+        "lengthM": ZodNumber {
+          "_def": {
+            "checks": [
+              {
+                "inclusive": false,
+                "kind": "min",
+                "message": undefined,
+                "value": 0,
+              },
+            ],
+            "coerce": false,
+            "typeName": "ZodNumber",
+          },
+          "and": [Function],
+          "array": [Function],
+          "brand": [Function],
+          "catch": [Function],
+          "default": [Function],
+          "describe": [Function],
+          "isNullable": [Function],
+          "isOptional": [Function],
+          "max": [Function],
+          "min": [Function],
+          "nullable": [Function],
+          "nullish": [Function],
+          "optional": [Function],
+          "or": [Function],
+          "parse": [Function],
+          "parseAsync": [Function],
+          "pipe": [Function],
+          "promise": [Function],
+          "readonly": [Function],
+          "refine": [Function],
+          "refinement": [Function],
+          "safeParse": [Function],
+          "safeParseAsync": [Function],
+          "spa": [Function],
+          "step": [Function],
+          "superRefine": [Function],
+          "transform": [Function],
+          "~standard": {
+            "validate": [Function],
+            "vendor": "zod",
+            "version": 1,
+          },
+        },
+        "voltage": ZodNumber {
+          "_def": {
+            "checks": [
+              {
+                "inclusive": false,
+                "kind": "min",
+                "message": undefined,
+                "value": 0,
+              },
+            ],
+            "coerce": false,
+            "typeName": "ZodNumber",
+          },
+          "and": [Function],
+          "array": [Function],
+          "brand": [Function],
+          "catch": [Function],
+          "default": [Function],
+          "describe": [Function],
+          "isNullable": [Function],
+          "isOptional": [Function],
+          "max": [Function],
+          "min": [Function],
+          "nullable": [Function],
+          "nullish": [Function],
+          "optional": [Function],
+          "or": [Function],
+          "parse": [Function],
+          "parseAsync": [Function],
+          "pipe": [Function],
+          "promise": [Function],
+          "readonly": [Function],
+          "refine": [Function],
+          "refinement": [Function],
+          "safeParse": [Function],
+          "safeParseAsync": [Function],
+          "spa": [Function],
+          "step": [Function],
+          "superRefine": [Function],
+          "transform": [Function],
+          "~standard": {
+            "validate": [Function],
+            "vendor": "zod",
+            "version": 1,
+          },
+        },
+        "wireGauge": ZodNumber {
+          "_def": {
+            "checks": [
+              {
+                "inclusive": false,
+                "kind": "min",
+                "message": undefined,
+                "value": 0,
+              },
+            ],
+            "coerce": false,
+            "typeName": "ZodNumber",
+          },
+          "and": [Function],
+          "array": [Function],
+          "brand": [Function],
+          "catch": [Function],
+          "default": [Function],
+          "describe": [Function],
+          "isNullable": [Function],
+          "isOptional": [Function],
+          "max": [Function],
+          "min": [Function],
+          "nullable": [Function],
+          "nullish": [Function],
+          "optional": [Function],
+          "or": [Function],
+          "parse": [Function],
+          "parseAsync": [Function],
+          "pipe": [Function],
+          "promise": [Function],
+          "readonly": [Function],
+          "refine": [Function],
+          "refinement": [Function],
+          "safeParse": [Function],
+          "safeParseAsync": [Function],
+          "spa": [Function],
+          "step": [Function],
+          "superRefine": [Function],
+          "transform": [Function],
+          "~standard": {
+            "validate": [Function],
+            "vendor": "zod",
+            "version": 1,
+          },
+        },
+        "wireGaugeUnit": ZodEnum {
+          "_cache": Set {
+            "awg",
+            "mm2",
+          },
+          "_def": {
+            "typeName": "ZodEnum",
+            "values": [
+              "awg",
+              "mm2",
+            ],
+          },
+          "and": [Function],
+          "array": [Function],
+          "brand": [Function],
+          "catch": [Function],
+          "default": [Function],
+          "describe": [Function],
+          "isNullable": [Function],
+          "isOptional": [Function],
+          "nullable": [Function],
+          "nullish": [Function],
+          "optional": [Function],
+          "or": [Function],
+          "parse": [Function],
+          "parseAsync": [Function],
+          "pipe": [Function],
+          "promise": [Function],
+          "readonly": [Function],
+          "refine": [Function],
+          "refinement": [Function],
+          "safeParse": [Function],
+          "safeParseAsync": [Function],
+          "spa": [Function],
+          "superRefine": [Function],
+          "transform": [Function],
+          "~standard": {
+            "validate": [Function],
+            "vendor": "zod",
+            "version": 1,
+          },
+        },
+      },
+    },
+    "_def": {
+      "catchall": ZodNever {
+        "_def": {
+          "typeName": "ZodNever",
+        },
+        "and": [Function],
+        "array": [Function],
+        "brand": [Function],
+        "catch": [Function],
+        "default": [Function],
+        "describe": [Function],
+        "isNullable": [Function],
+        "isOptional": [Function],
+        "nullable": [Function],
+        "nullish": [Function],
+        "optional": [Function],
+        "or": [Function],
+        "parse": [Function],
+        "parseAsync": [Function],
+        "pipe": [Function],
+        "promise": [Function],
+        "readonly": [Function],
+        "refine": [Function],
+        "refinement": [Function],
+        "safeParse": [Function],
+        "safeParseAsync": [Function],
+        "spa": [Function],
+        "superRefine": [Function],
+        "transform": [Function],
+        "~standard": {
+          "validate": [Function],
+          "vendor": "zod",
+          "version": 1,
+        },
+      },
+      "shape": [Function],
+      "typeName": "ZodObject",
+      "unknownKeys": "strip",
+    },
+    "and": [Function],
+    "array": [Function],
+    "augment": [Function],
+    "brand": [Function],
+    "catch": [Function],
+    "default": [Function],
+    "describe": [Function],
+    "isNullable": [Function],
+    "isOptional": [Function],
+    "nonstrict": [Function],
+    "nullable": [Function],
+    "nullish": [Function],
+    "optional": [Function],
+    "or": [Function],
+    "parse": [Function],
+    "parseAsync": [Function],
+    "pipe": [Function],
+    "promise": [Function],
+    "readonly": [Function],
+    "refine": [Function],
+    "refinement": [Function],
+    "safeParse": [Function],
+    "safeParseAsync": [Function],
+    "spa": [Function],
+    "superRefine": [Function],
+    "transform": [Function],
+    "~standard": {
+      "validate": [Function],
+      "vendor": "zod",
+      "version": 1,
+    },
+  },
+  "inputs": [
+    {
+      "defaultValue": "copper",
+      "id": "conductorMaterial",
+      "required": true,
+      "type": {
+        "kind": "select",
+        "options": [
+          {
+            "i18nKey": "copper",
+            "value": "copper",
+          },
+          {
+            "i18nKey": "aluminum",
+            "value": "aluminum",
+          },
+        ],
+      },
+    },
+    {
+      "defaultValue": "awg",
+      "id": "wireGaugeUnit",
+      "required": true,
+      "type": {
+        "kind": "select",
+        "options": [
+          {
+            "i18nKey": "awg",
+            "value": "awg",
+          },
+          {
+            "i18nKey": "mm2",
+            "value": "mm2",
+          },
+        ],
+      },
+    },
+    {
+      "defaultValue": 12,
+      "id": "wireGauge",
+      "required": true,
+      "type": {
+        "kind": "number",
+        "min": 0.1,
+        "step": 1,
+      },
+    },
+    {
+      "defaultValue": 30,
+      "id": "lengthM",
+      "required": true,
+      "type": {
+        "kind": "number",
+        "min": 0.1,
+        "step": 1,
+        "unit": "m",
+      },
+    },
+    {
+      "defaultValue": 15,
+      "id": "currentA",
+      "required": true,
+      "type": {
+        "kind": "number",
+        "min": 0.01,
+        "step": 0.1,
+        "unit": "amp",
+      },
+    },
+    {
+      "defaultValue": 120,
+      "id": "voltage",
+      "required": true,
+      "type": {
+        "kind": "number",
+        "min": 1,
+        "step": 1,
+        "unit": "volt",
+      },
+    },
+  ],
+  "meta": {
+    "disclaimer": "This calculator assumes a single-phase resistive circuit with copper or aluminum conductors. For three-phase systems, multiply the result by √3/2 ≈ 0.866. Always verify with a licensed electrician.",
+    "formulaLatex": "\\Delta V = \\frac{2 \\rho I L}{A},\\quad \\Delta V_{\\%} = \\frac{\\Delta V}{V_{\\text{source}}} \\times 100",
+    "references": [
+      {
+        "authority": "National Electrical Code (NEC)",
+        "title": "NEC Article 210.19(A)(1) FPN No. 4",
+      },
+      {
+        "authority": "IEEE",
+        "title": "IEEE Std 399 — Recommended Practice for Power Systems Analysis",
+        "url": "https://www.ieee.org/",
+      },
+    ],
+  },
+  "outputs": [
+    {
+      "format": "number",
+      "highlight": true,
+      "id": "voltageDrop",
+      "precision": 2,
+      "unit": "volt",
+    },
+    {
+      "format": "number",
+      "id": "voltageDropPct",
+      "precision": 2,
+      "unit": "percent",
+    },
+    {
+      "format": "number",
+      "id": "receivingVoltage",
+      "precision": 2,
+      "unit": "volt",
+    },
+    {
+      "format": "text",
+      "id": "recommendation",
+    },
+    {
+      "format": "number",
+      "id": "areaMm2",
+      "precision": 2,
+    },
+  ],
+  "priority": Any<String>,
+  "related": [
+    "ohms-law",
+  ],
+  "slug": Any<String>,
+  "tags": [
+    "voltage drop",
+    "cable",
+    "wire",
+    "NEC",
+    "AWG",
+    "electrical",
+    "conductor",
+  ],
+}
+`;

@@ -1,0 +1,1169 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Loan Amortization definition — shape snapshot > snapshot: definition shape 1`] = `
+{
+  "category": Any<String>,
+  "compute": [Function],
+  "i18n": {
+    "ar": {
+      "description": "حاسبة جدول إطفاء القرض المجانية. أدخل رأس المال والفائدة والمدة لرؤية قسطك الشهري والتفصيل الشهري الكامل.",
+      "errors": {
+        "principalRange": "يجب أن يكون مبلغ القرض بين 100 و10,000,000.",
+        "rateRange": "يجب أن يكون معدل الفائدة السنوي بين 0% و50%.",
+        "termRange": "يجب أن تكون مدة القرض بين شهر واحد و600 شهر.",
+      },
+      "faq": [
+        {
+          "a": "جدول الإطفاء هو جدول تفصيلي يوضح شهرياً مقدار كل قسط المخصص لرأس المال ومقدار المخصص للفوائد حتى سداد القرض بالكامل.",
+          "q": "ما هو جدول الإطفاء؟",
+        },
+      ],
+      "inputs": {
+        "annualRate": {
+          "help": "معدل الفائدة السنوي للقرض.",
+          "label": "معدل الفائدة السنوي (%)",
+        },
+        "principal": {
+          "help": "إجمالي المبلغ المقترض.",
+          "label": "مبلغ القرض",
+        },
+        "startDate": {
+          "help": "إذا تم إدخاله، ستظهر التواريخ في جدول الإطفاء.",
+          "label": "تاريخ البداية (اختياري)",
+        },
+        "termMonths": {
+          "help": "إجمالي عدد الأشهر لسداد القرض.",
+          "label": "مدة القرض (أشهر)",
+        },
+      },
+      "keywords": [
+        "جدول إطفاء القرض",
+        "جدول السداد",
+        "حاسبة القسط الشهري",
+        "تفصيل القسط",
+        "خطة السداد",
+        "فائدة القرض",
+        "الرصيد المتبقي",
+      ],
+      "outputs": {
+        "amortizationSchedule": {
+          "help": "التفصيل الشهري للقسط والأصل والفائدة والرصيد المتبقي.",
+          "label": "جدول الإطفاء",
+        },
+        "monthlyPayment": {
+          "help": "المبلغ الثابت المدفوع كل شهر.",
+          "label": "القسط الشهري",
+        },
+        "totalInterest": {
+          "help": "مجموع الفوائد المدفوعة على مدار القرض.",
+          "label": "إجمالي الفوائد",
+        },
+        "totalPayment": {
+          "help": "مجموع جميع الأقساط الشهرية.",
+          "label": "إجمالي المدفوعات",
+        },
+      },
+      "short": "أنشئ جدول إطفاء كاملاً لأي قرض مع القسط الشهري والفائدة والرصيد.",
+      "title": "جدول إطفاء القرض",
+    },
+    "de": {
+      "description": "Kostenloser Kreditamortisationsrechner. Geben Sie Darlehensbetrag, Zinssatz und Laufzeit ein und erhalten Sie eine vollständige monatliche Aufschlüsselung.",
+      "errors": {
+        "principalRange": "Kreditbetrag muss zwischen 100 und 10.000.000 liegen.",
+        "rateRange": "Jahreszins muss zwischen 0 % und 50 % liegen.",
+        "termRange": "Laufzeit muss zwischen 1 und 600 Monaten liegen.",
+      },
+      "faq": [
+        {
+          "a": "Ein Tilgungsplan ist eine detaillierte Tabelle, die für jede Periode zeigt, wie viel der Rate auf Zinsen und wie viel auf Tilgung entfällt.",
+          "q": "Was ist ein Tilgungsplan?",
+        },
+      ],
+      "inputs": {
+        "annualRate": {
+          "help": "Der Jahreszins des Kredits.",
+          "label": "Jährlicher Zinssatz (%)",
+        },
+        "principal": {
+          "help": "Der gesamte geliehene Betrag.",
+          "label": "Darlehensbetrag",
+        },
+        "startDate": {
+          "help": "Falls angegeben, werden Daten im Tilgungsplan angezeigt.",
+          "label": "Startdatum (optional)",
+        },
+        "termMonths": {
+          "help": "Gesamtanzahl der Monate zur Rückzahlung.",
+          "label": "Laufzeit (Monate)",
+        },
+      },
+      "keywords": [
+        "Tilgungsplan",
+        "Kreditamortisation",
+        "Kreditraten Rechner",
+        "monatliche Rate",
+        "Restschuld",
+        "Zinsen berechnen",
+        "Kredit Tabelle",
+      ],
+      "outputs": {
+        "amortizationSchedule": {
+          "help": "Monatliche Aufschlüsselung von Rate, Tilgung, Zinsen und Restschuld.",
+          "label": "Tilgungsplan",
+        },
+        "monthlyPayment": {
+          "help": "Feste monatliche Zahlung.",
+          "label": "Monatliche Rate",
+        },
+        "totalInterest": {
+          "help": "Über die gesamte Laufzeit gezahlte Zinsen.",
+          "label": "Gesamtzinsen",
+        },
+        "totalPayment": {
+          "help": "Summe aller monatlichen Zahlungen.",
+          "label": "Gesamtzahlung",
+        },
+      },
+      "short": "Erstellen Sie einen vollständigen Tilgungsplan für jeden Kredit mit monatlicher Rate, Zinsen und Restschuld.",
+      "title": "Kreditamortisationsplan",
+    },
+    "en": {
+      "description": "Free loan amortization calculator. Enter the principal, interest rate, and term to see your monthly payment and a complete month-by-month breakdown of principal, interest, and balance.",
+      "errors": {
+        "principalRange": "Loan amount must be between $100 and $10,000,000.",
+        "rateRange": "Annual rate must be between 0% and 50%.",
+        "termRange": "Loan term must be between 1 and 600 months.",
+      },
+      "faq": [
+        {
+          "a": "An amortization schedule is a detailed table of periodic loan payments showing the amount of principal and interest that comprise each payment until the loan is paid off at the end of its term.",
+          "q": "What is an amortization schedule?",
+        },
+        {
+          "a": "Because interest is calculated on the outstanding balance, and the balance is largest at the start of the loan. As you pay down the principal, the interest charge shrinks and more of each payment reduces the balance.",
+          "q": "Why does more of my payment go to interest early on?",
+        },
+        {
+          "a": "Extra principal payments reduce your outstanding balance immediately, lowering the interest charged in all future months and effectively shortening the loan term.",
+          "q": "How does making extra payments affect amortization?",
+        },
+      ],
+      "inputs": {
+        "annualRate": {
+          "help": "The yearly interest rate on the loan.",
+          "label": "Annual Interest Rate (%)",
+        },
+        "principal": {
+          "help": "The total amount borrowed.",
+          "label": "Loan Amount",
+        },
+        "startDate": {
+          "help": "If provided, dates are shown in the amortization schedule.",
+          "label": "Start Date (optional)",
+        },
+        "termMonths": {
+          "help": "Total number of months to repay the loan.",
+          "label": "Loan Term (months)",
+        },
+      },
+      "keywords": [
+        "loan amortization schedule",
+        "amortization table",
+        "loan payment calculator",
+        "monthly payment breakdown",
+        "debt payoff schedule",
+        "loan interest calculator",
+        "principal vs interest",
+      ],
+      "outputs": {
+        "amortizationSchedule": {
+          "help": "Month-by-month breakdown of payment, principal, interest, and remaining balance.",
+          "label": "Amortization Schedule",
+        },
+        "monthlyPayment": {
+          "help": "Fixed payment made each month.",
+          "label": "Monthly Payment",
+        },
+        "totalInterest": {
+          "help": "Total interest paid over the life of the loan.",
+          "label": "Total Interest",
+        },
+        "totalPayment": {
+          "help": "Sum of all monthly payments.",
+          "label": "Total Payment",
+        },
+      },
+      "short": "Generate a full amortization table for any loan with monthly payment, interest, and balance breakdown.",
+      "title": "Loan Amortization Schedule",
+    },
+    "es": {
+      "description": "Calculadora de amortización de préstamo gratuita. Introduce el capital, el tipo y el plazo para ver tu cuota mensual y un desglose mensual completo.",
+      "errors": {
+        "principalRange": "El importe debe estar entre 100 y 10.000.000.",
+        "rateRange": "El tipo anual debe estar entre 0 % y 50 %.",
+        "termRange": "El plazo debe estar entre 1 y 600 meses.",
+      },
+      "faq": [
+        {
+          "a": "Es una tabla que muestra, mes a mes, cómo se divide cada cuota entre amortización del capital e intereses hasta saldar el préstamo.",
+          "q": "¿Qué es un cuadro de amortización?",
+        },
+      ],
+      "inputs": {
+        "annualRate": {
+          "help": "El tipo de interés anual del préstamo.",
+          "label": "Tipo de interés anual (%)",
+        },
+        "principal": {
+          "help": "El importe total solicitado.",
+          "label": "Importe del préstamo",
+        },
+        "startDate": {
+          "help": "Si se indica, las fechas aparecen en el cuadro de amortización.",
+          "label": "Fecha de inicio (opcional)",
+        },
+        "termMonths": {
+          "help": "Número total de meses para amortizar el préstamo.",
+          "label": "Plazo (meses)",
+        },
+      },
+      "keywords": [
+        "tabla amortización préstamo",
+        "cuadro amortización",
+        "calculadora cuota préstamo",
+        "desglose cuota",
+        "plan de pagos",
+        "intereses préstamo",
+        "saldo pendiente",
+      ],
+      "outputs": {
+        "amortizationSchedule": {
+          "help": "Desglose mensual de cuota, capital, intereses y saldo pendiente.",
+          "label": "Cuadro de amortización",
+        },
+        "monthlyPayment": {
+          "help": "Pago fijo mensual.",
+          "label": "Cuota mensual",
+        },
+        "totalInterest": {
+          "help": "Total de intereses pagados durante el préstamo.",
+          "label": "Intereses totales",
+        },
+        "totalPayment": {
+          "help": "Suma de todas las cuotas mensuales.",
+          "label": "Coste total",
+        },
+      },
+      "short": "Genera un cuadro de amortización completo con cuota, intereses y saldo mes a mes.",
+      "title": "Tabla de Amortización de Préstamo",
+    },
+    "fr": {
+      "description": "Calculateur de tableau d'amortissement gratuit. Entrez le capital, le taux et la durée pour obtenir votre mensualité et un détail mensuel complet.",
+      "errors": {
+        "principalRange": "Le montant doit être compris entre 100 et 10 000 000.",
+        "rateRange": "Le taux annuel doit être entre 0 % et 50 %.",
+        "termRange": "La durée doit être entre 1 et 600 mois.",
+      },
+      "faq": [
+        {
+          "a": "C'est un tableau détaillant, mois par mois, la part de la mensualité affectée aux intérêts et celle affectée au remboursement du capital.",
+          "q": "Qu'est-ce qu'un tableau d'amortissement ?",
+        },
+      ],
+      "inputs": {
+        "annualRate": {
+          "help": "Le taux d'intérêt annuel du prêt.",
+          "label": "Taux annuel (%)",
+        },
+        "principal": {
+          "help": "Le montant total du prêt.",
+          "label": "Montant emprunté",
+        },
+        "startDate": {
+          "help": "Si renseigné, les dates apparaissent dans le tableau.",
+          "label": "Date de début (optionnel)",
+        },
+        "termMonths": {
+          "help": "Nombre total de mois pour rembourser le prêt.",
+          "label": "Durée (mois)",
+        },
+      },
+      "keywords": [
+        "tableau amortissement prêt",
+        "calcul amortissement",
+        "mensualité prêt",
+        "détail mensualité",
+        "remboursement prêt",
+        "intérêts prêt",
+        "capital restant dû",
+      ],
+      "outputs": {
+        "amortizationSchedule": {
+          "help": "Détail mensuel de la mensualité, du capital, des intérêts et du solde.",
+          "label": "Tableau d'amortissement",
+        },
+        "monthlyPayment": {
+          "help": "Paiement fixe effectué chaque mois.",
+          "label": "Mensualité",
+        },
+        "totalInterest": {
+          "help": "Total des intérêts payés sur la durée du prêt.",
+          "label": "Intérêts totaux",
+        },
+        "totalPayment": {
+          "help": "Somme de toutes les mensualités.",
+          "label": "Coût total",
+        },
+      },
+      "short": "Générez un tableau d'amortissement complet pour tout prêt avec mensualité, intérêts et solde.",
+      "title": "Tableau d'Amortissement de Prêt",
+    },
+    "hi": {
+      "description": "मुफ़्त लोन एमोर्टाइजेशन कैलकुलेटर। मूलधन, ब्याज दर और अवधि दर्ज करें और मासिक EMI व पूर्ण मासिक विवरण देखें।",
+      "errors": {
+        "principalRange": "लोन राशि 100 से 10,000,000 के बीच होनी चाहिए।",
+        "rateRange": "वार्षिक ब्याज दर 0% से 50% के बीच होनी चाहिए।",
+        "termRange": "लोन अवधि 1 से 600 महीनों के बीच होनी चाहिए।",
+      },
+      "faq": [
+        {
+          "a": "एमोर्टाइजेशन शेड्यूल एक विस्तृत तालिका है जो प्रत्येक मासिक किस्त में मूलधन और ब्याज के बीच विभाजन को महीने दर महीने दिखाती है।",
+          "q": "एमोर्टाइजेशन शेड्यूल क्या होता है?",
+        },
+      ],
+      "inputs": {
+        "annualRate": {
+          "help": "लोन की वार्षिक ब्याज दर।",
+          "label": "वार्षिक ब्याज दर (%)",
+        },
+        "principal": {
+          "help": "कुल उधार ली गई राशि।",
+          "label": "लोन राशि",
+        },
+        "startDate": {
+          "help": "दर्ज करने पर एमोर्टाइजेशन शेड्यूल में तारीखें दिखाई जाएंगी।",
+          "label": "प्रारंभ तिथि (वैकल्पिक)",
+        },
+        "termMonths": {
+          "help": "लोन चुकाने के लिए कुल महीनों की संख्या।",
+          "label": "लोन अवधि (महीने)",
+        },
+      },
+      "keywords": [
+        "लोन एमोर्टाइजेशन शेड्यूल",
+        "एमोर्टाइजेशन तालिका",
+        "लोन भुगतान कैलकुलेटर",
+        "मासिक EMI विवरण",
+        "ऋण चुकौती योजना",
+        "लोन ब्याज कैलकुलेटर",
+        "मूलधन और ब्याज",
+      ],
+      "outputs": {
+        "amortizationSchedule": {
+          "help": "प्रत्येक माह की EMI, मूलधन, ब्याज और शेष राशि का विवरण।",
+          "label": "एमोर्टाइजेशन शेड्यूल",
+        },
+        "monthlyPayment": {
+          "help": "हर महीने भुगतान की जाने वाली निश्चित राशि।",
+          "label": "मासिक EMI",
+        },
+        "totalInterest": {
+          "help": "लोन की पूरी अवधि में चुकाया गया कुल ब्याज।",
+          "label": "कुल ब्याज",
+        },
+        "totalPayment": {
+          "help": "सभी मासिक किस्तों का योग।",
+          "label": "कुल भुगतान",
+        },
+      },
+      "short": "किसी भी लोन के लिए मासिक EMI, ब्याज और शेष राशि के साथ पूर्ण एमोर्टाइजेशन तालिका बनाएं।",
+      "title": "लोन एमोर्टाइजेशन शेड्यूल",
+    },
+    "it": {
+      "description": "Calcolatore gratuito del piano di ammortamento. Inserisci capitale, tasso e durata per ottenere la rata mensile e un dettaglio mensile completo.",
+      "errors": {
+        "principalRange": "L'importo deve essere compreso tra 100 e 10.000.000.",
+        "rateRange": "Il tasso annuo deve essere tra 0% e 50%.",
+        "termRange": "La durata deve essere tra 1 e 600 mesi.",
+      },
+      "faq": [
+        {
+          "a": "È una tabella che mostra, mese per mese, come si divide ogni rata tra rimborso del capitale e pagamento degli interessi.",
+          "q": "Che cos'è un piano di ammortamento?",
+        },
+      ],
+      "inputs": {
+        "annualRate": {
+          "help": "Il tasso di interesse annuo del prestito.",
+          "label": "Tasso annuo (%)",
+        },
+        "principal": {
+          "help": "L'importo totale preso in prestito.",
+          "label": "Importo del prestito",
+        },
+        "startDate": {
+          "help": "Se inserita, le date compaiono nel piano di ammortamento.",
+          "label": "Data di inizio (facoltativo)",
+        },
+        "termMonths": {
+          "help": "Numero totale di mesi per rimborsare il prestito.",
+          "label": "Durata (mesi)",
+        },
+      },
+      "keywords": [
+        "piano ammortamento prestito",
+        "tabella ammortamento",
+        "calcolo rata prestito",
+        "dettaglio rata",
+        "piano rimborso",
+        "interessi prestito",
+        "debito residuo",
+      ],
+      "outputs": {
+        "amortizationSchedule": {
+          "help": "Dettaglio mensile di rata, capitale, interessi e saldo residuo.",
+          "label": "Piano di ammortamento",
+        },
+        "monthlyPayment": {
+          "help": "Pagamento fisso mensile.",
+          "label": "Rata mensile",
+        },
+        "totalInterest": {
+          "help": "Totale degli interessi pagati nel corso del prestito.",
+          "label": "Interessi totali",
+        },
+        "totalPayment": {
+          "help": "Somma di tutte le rate mensili.",
+          "label": "Costo totale",
+        },
+      },
+      "short": "Genera un piano di ammortamento completo con rata, interessi e saldo mese per mese.",
+      "title": "Piano di Ammortamento del Prestito",
+    },
+    "ja": {
+      "description": "無料のローン返済計画計算機です。元本・金利・返済期間を入力するだけで、毎月の返済額と詳細な月別明細を確認できます。",
+      "errors": {
+        "principalRange": "借入金額は 100 ～ 10,000,000 の範囲で入力してください。",
+        "rateRange": "年利は 0% ～ 50% の範囲で入力してください。",
+        "termRange": "返済期間は 1 ～ 600 ヶ月の範囲で入力してください。",
+      },
+      "faq": [
+        {
+          "a": "返済計画表は、毎月の返済額が元本と利息にどのように分配されるかを示す詳細な表です。",
+          "q": "返済計画表とは何ですか？",
+        },
+      ],
+      "inputs": {
+        "annualRate": {
+          "help": "ローンの年間利率。",
+          "label": "年利 (%)",
+        },
+        "principal": {
+          "help": "借り入れる総額。",
+          "label": "借入金額",
+        },
+        "startDate": {
+          "help": "入力した場合、返済計画表に日付が表示されます。",
+          "label": "開始日（任意）",
+        },
+        "termMonths": {
+          "help": "ローンを返済する総月数。",
+          "label": "返済期間（ヶ月）",
+        },
+      },
+      "keywords": [
+        "ローン返済計画表",
+        "返済スケジュール",
+        "ローン計算機",
+        "毎月の返済額",
+        "残高明細",
+        "利息計算",
+        "元本と利息",
+      ],
+      "outputs": {
+        "amortizationSchedule": {
+          "help": "毎月の返済額・元本・利息・残高の明細。",
+          "label": "返済計画表",
+        },
+        "monthlyPayment": {
+          "help": "毎月支払う固定額。",
+          "label": "毎月の返済額",
+        },
+        "totalInterest": {
+          "help": "ローン期間全体で支払う利息の合計。",
+          "label": "総支払利息",
+        },
+        "totalPayment": {
+          "help": "すべての月次返済額の合計。",
+          "label": "総返済額",
+        },
+      },
+      "short": "任意のローンの完全な返済計画を生成し、毎月の返済額・利息・残高を確認できます。",
+      "title": "ローン返済計画表",
+    },
+    "ko": {
+      "description": "무료 대출 상환 계산기입니다. 원금, 금리, 기간을 입력하면 월 상환액과 완전한 월별 원금, 이자, 잔액 내역을 확인할 수 있습니다.",
+      "errors": {
+        "principalRange": "대출 금액은 100 ~ 10,000,000 사이여야 합니다.",
+        "rateRange": "연이율은 0% ~ 50% 사이여야 합니다.",
+        "termRange": "대출 기간은 1 ~ 600개월 사이여야 합니다.",
+      },
+      "faq": [
+        {
+          "a": "상환 스케줄은 대출 만기까지 각 월 상환액이 원금과 이자로 어떻게 나뉘는지 보여주는 상세 표입니다.",
+          "q": "상환 스케줄이란 무엇인가요?",
+        },
+      ],
+      "inputs": {
+        "annualRate": {
+          "help": "대출의 연간 이자율.",
+          "label": "연이율 (%)",
+        },
+        "principal": {
+          "help": "총 대출 금액.",
+          "label": "대출 금액",
+        },
+        "startDate": {
+          "help": "입력 시 상환 스케줄에 날짜가 표시됩니다.",
+          "label": "시작일 (선택 사항)",
+        },
+        "termMonths": {
+          "help": "대출을 상환하는 총 개월 수.",
+          "label": "대출 기간 (개월)",
+        },
+      },
+      "keywords": [
+        "대출 상환 스케줄",
+        "원리금 상환표",
+        "대출 계산기",
+        "월 상환액 내역",
+        "부채 상환 계획",
+        "대출 이자 계산",
+        "원금과 이자",
+      ],
+      "outputs": {
+        "amortizationSchedule": {
+          "help": "월별 상환액, 원금, 이자 및 잔액의 세부 내역.",
+          "label": "상환 스케줄",
+        },
+        "monthlyPayment": {
+          "help": "매달 납부하는 고정 금액.",
+          "label": "월 상환액",
+        },
+        "totalInterest": {
+          "help": "대출 기간 동안 납부하는 이자 총액.",
+          "label": "총 이자",
+        },
+        "totalPayment": {
+          "help": "모든 월 상환액의 합계.",
+          "label": "총 상환액",
+        },
+      },
+      "short": "모든 대출에 대한 월 상환액, 이자, 잔액이 포함된 완전한 상환 스케줄을 생성하세요.",
+      "title": "대출 상환 스케줄",
+    },
+    "ru": {
+      "description": "Бесплатный калькулятор графика погашения. Введите сумму, ставку и срок — получите ежемесячный платёж и полную разбивку по месяцам.",
+      "errors": {
+        "principalRange": "Сумма кредита должна быть от 100 до 10 000 000.",
+        "rateRange": "Годовая ставка должна быть от 0 % до 50 %.",
+        "termRange": "Срок должен быть от 1 до 600 месяцев.",
+      },
+      "faq": [
+        {
+          "a": "График погашения — это подробная таблица, показывающая, какая часть каждого платежа идёт на погашение основного долга, а какая — на проценты.",
+          "q": "Что такое график погашения кредита?",
+        },
+      ],
+      "inputs": {
+        "annualRate": {
+          "help": "Годовая процентная ставка по кредиту.",
+          "label": "Годовая ставка (%)",
+        },
+        "principal": {
+          "help": "Общая сумма займа.",
+          "label": "Сумма кредита",
+        },
+        "startDate": {
+          "help": "Если указана, даты отображаются в графике погашения.",
+          "label": "Дата начала (необязательно)",
+        },
+        "termMonths": {
+          "help": "Общее количество месяцев для погашения кредита.",
+          "label": "Срок (месяцев)",
+        },
+      },
+      "keywords": [
+        "график погашения кредита",
+        "таблица амортизации",
+        "калькулятор кредита",
+        "ежемесячный платёж",
+        "остаток долга",
+        "проценты по кредиту",
+        "план погашения",
+      ],
+      "outputs": {
+        "amortizationSchedule": {
+          "help": "Ежемесячная разбивка платежа, основного долга, процентов и остатка.",
+          "label": "График погашения",
+        },
+        "monthlyPayment": {
+          "help": "Фиксированный ежемесячный платёж.",
+          "label": "Ежемесячный платёж",
+        },
+        "totalInterest": {
+          "help": "Итоговая сумма процентов за весь срок.",
+          "label": "Переплата по процентам",
+        },
+        "totalPayment": {
+          "help": "Сумма всех ежемесячных платежей.",
+          "label": "Общая сумма выплат",
+        },
+      },
+      "short": "Сформируйте полный график погашения для любого кредита с разбивкой по месяцам.",
+      "title": "График погашения кредита",
+    },
+    "tr": {
+      "description": "Ücretsiz kredi itfa planı hesaplayıcısı. Anapara, faiz oranı ve vadeyi girerek aylık taksidinizi ve aylık bazda tam anapara, faiz ve bakiye dökümünü görün.",
+      "errors": {
+        "principalRange": "Kredi tutarı 100 ile 10.000.000 arasında olmalıdır.",
+        "rateRange": "Yıllık faiz oranı %0 ile %50 arasında olmalıdır.",
+        "termRange": "Kredi vadesi 1 ile 600 ay arasında olmalıdır.",
+      },
+      "faq": [
+        {
+          "a": "İtfa planı, her ödemenin ne kadarının anaparaya ne kadarının faize gittiğini ay ay gösteren ayrıntılı bir tablodur.",
+          "q": "İtfa planı nedir?",
+        },
+        {
+          "a": "Faiz, kalan bakiye üzerinden hesaplandığından, bakiye en büyük olduğunda faiz de en yüksektir. Anapara azaldıkça faiz yükü de azalır ve taksitlerin daha büyük bölümü anaparayı kapatmaya başlar.",
+          "q": "Neden erken ödemelerde daha fazla faiz ödüyorum?",
+        },
+      ],
+      "inputs": {
+        "annualRate": {
+          "help": "Kredinin yıllık faiz oranı.",
+          "label": "Yıllık Faiz Oranı (%)",
+        },
+        "principal": {
+          "help": "Toplam borçlanılan tutar.",
+          "label": "Kredi Tutarı",
+        },
+        "startDate": {
+          "help": "Girilirse itfa planında tarihler gösterilir.",
+          "label": "Başlangıç Tarihi (isteğe bağlı)",
+        },
+        "termMonths": {
+          "help": "Krediyi geri ödemek için toplam ay sayısı.",
+          "label": "Kredi Vadesi (ay)",
+        },
+      },
+      "keywords": [
+        "kredi itfa planı",
+        "itfa tablosu",
+        "kredi taksit hesaplayıcı",
+        "aylık taksit dökümü",
+        "borç ödeme planı",
+        "kredi faiz hesaplayıcı",
+        "anapara faiz ayrımı",
+      ],
+      "outputs": {
+        "amortizationSchedule": {
+          "help": "Aylık taksit, anapara, faiz ve kalan bakiyenin ay ay dökümü.",
+          "label": "İtfa Planı",
+        },
+        "monthlyPayment": {
+          "help": "Her ay ödenen sabit tutar.",
+          "label": "Aylık Taksit",
+        },
+        "totalInterest": {
+          "help": "Kredi vadesi boyunca ödenen toplam faiz.",
+          "label": "Toplam Faiz",
+        },
+        "totalPayment": {
+          "help": "Tüm aylık ödemelerin toplamı.",
+          "label": "Toplam Ödeme",
+        },
+      },
+      "short": "Herhangi bir kredi için aylık taksit, faiz ve bakiye dökümüyle tam itfa tablosu oluşturun.",
+      "title": "Kredi İtfa Planı",
+    },
+    "zh": {
+      "description": "免费贷款摊销计算器。输入本金、利率和期限，即可查看月供及完整的逐月本金、利息和余额明细。",
+      "errors": {
+        "principalRange": "贷款金额必须在 100 至 10,000,000 之间。",
+        "rateRange": "年利率必须在 0% 至 50% 之间。",
+        "termRange": "贷款期限必须在 1 至 600 个月之间。",
+      },
+      "faq": [
+        {
+          "a": "还款计划表是一份详细表格，逐月显示每笔还款中用于偿还本金和利息的金额，直至贷款还清。",
+          "q": "什么是还款计划表？",
+        },
+      ],
+      "inputs": {
+        "annualRate": {
+          "help": "贷款的年利率。",
+          "label": "年利率 (%)",
+        },
+        "principal": {
+          "help": "借入的总金额。",
+          "label": "贷款金额",
+        },
+        "startDate": {
+          "help": "如填写，还款计划中将显示日期。",
+          "label": "开始日期（可选）",
+        },
+        "termMonths": {
+          "help": "偿还贷款的总月数。",
+          "label": "贷款期限（月）",
+        },
+      },
+      "keywords": [
+        "贷款还款计划表",
+        "摊销表",
+        "贷款月供计算器",
+        "月供明细",
+        "债务还款计划",
+        "贷款利息计算",
+        "本金与利息",
+      ],
+      "outputs": {
+        "amortizationSchedule": {
+          "help": "月供、本金、利息及剩余余额的逐月明细。",
+          "label": "还款计划表",
+        },
+        "monthlyPayment": {
+          "help": "每月支付的固定金额。",
+          "label": "月还款额",
+        },
+        "totalInterest": {
+          "help": "贷款期内支付的利息总额。",
+          "label": "总利息",
+        },
+        "totalPayment": {
+          "help": "所有月还款额之和。",
+          "label": "还款总额",
+        },
+      },
+      "short": "生成任意贷款的完整还款计划，包含月供、利息和余额的逐月明细。",
+      "title": "贷款还款计划表",
+    },
+  },
+  "icon": Any<String>,
+  "inputSchema": ZodObject {
+    "_cached": {
+      "keys": [
+        "principal",
+        "annualRate",
+        "termMonths",
+        "startDate",
+      ],
+      "shape": {
+        "annualRate": ZodNumber {
+          "_def": {
+            "checks": [
+              {
+                "inclusive": true,
+                "kind": "min",
+                "message": undefined,
+                "value": 0,
+              },
+              {
+                "inclusive": true,
+                "kind": "max",
+                "message": undefined,
+                "value": 50,
+              },
+            ],
+            "coerce": false,
+            "typeName": "ZodNumber",
+          },
+          "and": [Function],
+          "array": [Function],
+          "brand": [Function],
+          "catch": [Function],
+          "default": [Function],
+          "describe": [Function],
+          "isNullable": [Function],
+          "isOptional": [Function],
+          "max": [Function],
+          "min": [Function],
+          "nullable": [Function],
+          "nullish": [Function],
+          "optional": [Function],
+          "or": [Function],
+          "parse": [Function],
+          "parseAsync": [Function],
+          "pipe": [Function],
+          "promise": [Function],
+          "readonly": [Function],
+          "refine": [Function],
+          "refinement": [Function],
+          "safeParse": [Function],
+          "safeParseAsync": [Function],
+          "spa": [Function],
+          "step": [Function],
+          "superRefine": [Function],
+          "transform": [Function],
+          "~standard": {
+            "validate": [Function],
+            "vendor": "zod",
+            "version": 1,
+          },
+        },
+        "principal": ZodNumber {
+          "_def": {
+            "checks": [
+              {
+                "inclusive": true,
+                "kind": "min",
+                "message": undefined,
+                "value": 100,
+              },
+              {
+                "inclusive": true,
+                "kind": "max",
+                "message": undefined,
+                "value": 10000000,
+              },
+            ],
+            "coerce": false,
+            "typeName": "ZodNumber",
+          },
+          "and": [Function],
+          "array": [Function],
+          "brand": [Function],
+          "catch": [Function],
+          "default": [Function],
+          "describe": [Function],
+          "isNullable": [Function],
+          "isOptional": [Function],
+          "max": [Function],
+          "min": [Function],
+          "nullable": [Function],
+          "nullish": [Function],
+          "optional": [Function],
+          "or": [Function],
+          "parse": [Function],
+          "parseAsync": [Function],
+          "pipe": [Function],
+          "promise": [Function],
+          "readonly": [Function],
+          "refine": [Function],
+          "refinement": [Function],
+          "safeParse": [Function],
+          "safeParseAsync": [Function],
+          "spa": [Function],
+          "step": [Function],
+          "superRefine": [Function],
+          "transform": [Function],
+          "~standard": {
+            "validate": [Function],
+            "vendor": "zod",
+            "version": 1,
+          },
+        },
+        "startDate": ZodOptional {
+          "_def": {
+            "description": undefined,
+            "errorMap": [Function],
+            "innerType": ZodString {
+              "_def": {
+                "checks": [],
+                "coerce": false,
+                "typeName": "ZodString",
+              },
+              "and": [Function],
+              "array": [Function],
+              "brand": [Function],
+              "catch": [Function],
+              "default": [Function],
+              "describe": [Function],
+              "isNullable": [Function],
+              "isOptional": [Function],
+              "nullable": [Function],
+              "nullish": [Function],
+              "optional": [Function],
+              "or": [Function],
+              "parse": [Function],
+              "parseAsync": [Function],
+              "pipe": [Function],
+              "promise": [Function],
+              "readonly": [Function],
+              "refine": [Function],
+              "refinement": [Function],
+              "safeParse": [Function],
+              "safeParseAsync": [Function],
+              "spa": [Function],
+              "superRefine": [Function],
+              "transform": [Function],
+              "~standard": {
+                "validate": [Function],
+                "vendor": "zod",
+                "version": 1,
+              },
+            },
+            "typeName": "ZodOptional",
+          },
+          "and": [Function],
+          "array": [Function],
+          "brand": [Function],
+          "catch": [Function],
+          "default": [Function],
+          "describe": [Function],
+          "isNullable": [Function],
+          "isOptional": [Function],
+          "nullable": [Function],
+          "nullish": [Function],
+          "optional": [Function],
+          "or": [Function],
+          "parse": [Function],
+          "parseAsync": [Function],
+          "pipe": [Function],
+          "promise": [Function],
+          "readonly": [Function],
+          "refine": [Function],
+          "refinement": [Function],
+          "safeParse": [Function],
+          "safeParseAsync": [Function],
+          "spa": [Function],
+          "superRefine": [Function],
+          "transform": [Function],
+          "~standard": {
+            "validate": [Function],
+            "vendor": "zod",
+            "version": 1,
+          },
+        },
+        "termMonths": ZodNumber {
+          "_def": {
+            "checks": [
+              {
+                "kind": "int",
+                "message": undefined,
+              },
+              {
+                "inclusive": true,
+                "kind": "min",
+                "message": undefined,
+                "value": 1,
+              },
+              {
+                "inclusive": true,
+                "kind": "max",
+                "message": undefined,
+                "value": 600,
+              },
+            ],
+            "coerce": false,
+            "typeName": "ZodNumber",
+          },
+          "and": [Function],
+          "array": [Function],
+          "brand": [Function],
+          "catch": [Function],
+          "default": [Function],
+          "describe": [Function],
+          "isNullable": [Function],
+          "isOptional": [Function],
+          "max": [Function],
+          "min": [Function],
+          "nullable": [Function],
+          "nullish": [Function],
+          "optional": [Function],
+          "or": [Function],
+          "parse": [Function],
+          "parseAsync": [Function],
+          "pipe": [Function],
+          "promise": [Function],
+          "readonly": [Function],
+          "refine": [Function],
+          "refinement": [Function],
+          "safeParse": [Function],
+          "safeParseAsync": [Function],
+          "spa": [Function],
+          "step": [Function],
+          "superRefine": [Function],
+          "transform": [Function],
+          "~standard": {
+            "validate": [Function],
+            "vendor": "zod",
+            "version": 1,
+          },
+        },
+      },
+    },
+    "_def": {
+      "catchall": ZodNever {
+        "_def": {
+          "typeName": "ZodNever",
+        },
+        "and": [Function],
+        "array": [Function],
+        "brand": [Function],
+        "catch": [Function],
+        "default": [Function],
+        "describe": [Function],
+        "isNullable": [Function],
+        "isOptional": [Function],
+        "nullable": [Function],
+        "nullish": [Function],
+        "optional": [Function],
+        "or": [Function],
+        "parse": [Function],
+        "parseAsync": [Function],
+        "pipe": [Function],
+        "promise": [Function],
+        "readonly": [Function],
+        "refine": [Function],
+        "refinement": [Function],
+        "safeParse": [Function],
+        "safeParseAsync": [Function],
+        "spa": [Function],
+        "superRefine": [Function],
+        "transform": [Function],
+        "~standard": {
+          "validate": [Function],
+          "vendor": "zod",
+          "version": 1,
+        },
+      },
+      "shape": [Function],
+      "typeName": "ZodObject",
+      "unknownKeys": "strip",
+    },
+    "and": [Function],
+    "array": [Function],
+    "augment": [Function],
+    "brand": [Function],
+    "catch": [Function],
+    "default": [Function],
+    "describe": [Function],
+    "isNullable": [Function],
+    "isOptional": [Function],
+    "nonstrict": [Function],
+    "nullable": [Function],
+    "nullish": [Function],
+    "optional": [Function],
+    "or": [Function],
+    "parse": [Function],
+    "parseAsync": [Function],
+    "pipe": [Function],
+    "promise": [Function],
+    "readonly": [Function],
+    "refine": [Function],
+    "refinement": [Function],
+    "safeParse": [Function],
+    "safeParseAsync": [Function],
+    "spa": [Function],
+    "superRefine": [Function],
+    "transform": [Function],
+    "~standard": {
+      "validate": [Function],
+      "vendor": "zod",
+      "version": 1,
+    },
+  },
+  "inputs": [
+    {
+      "defaultValue": 10000,
+      "id": "principal",
+      "required": true,
+      "type": {
+        "kind": "number",
+        "max": 10000000,
+        "min": 100,
+        "step": 100,
+        "unit": "usd",
+      },
+    },
+    {
+      "defaultValue": 5,
+      "id": "annualRate",
+      "required": true,
+      "type": {
+        "kind": "number",
+        "max": 50,
+        "min": 0,
+        "step": 0.01,
+        "unit": "percent",
+      },
+    },
+    {
+      "defaultValue": 60,
+      "id": "termMonths",
+      "required": true,
+      "type": {
+        "integer": true,
+        "kind": "number",
+        "max": 600,
+        "min": 1,
+        "step": 1,
+        "unit": "month",
+      },
+    },
+    {
+      "defaultValue": "",
+      "id": "startDate",
+      "required": false,
+      "type": {
+        "kind": "date",
+      },
+    },
+  ],
+  "meta": {
+    "disclaimer": "This calculator provides estimates for principal and interest only. Actual loan costs depend on lender fees, insurance, and other factors.",
+    "formulaLatex": "M = P \\cdot \\frac{r(1+r)^n}{(1+r)^n - 1}",
+    "references": [
+      {
+        "authority": "Investopedia",
+        "title": "Amortization",
+        "url": "https://www.investopedia.com/terms/a/amortization.asp",
+      },
+      {
+        "authority": "Consumer Financial Protection Bureau (CFPB)",
+        "title": "Loan Amortization Schedule",
+        "url": "https://www.consumerfinance.gov/",
+      },
+    ],
+  },
+  "outputs": [
+    {
+      "format": "currency",
+      "highlight": true,
+      "id": "monthlyPayment",
+      "precision": 2,
+    },
+    {
+      "format": "currency",
+      "id": "totalPayment",
+      "precision": 2,
+    },
+    {
+      "format": "currency",
+      "id": "totalInterest",
+      "precision": 2,
+    },
+    {
+      "format": "list",
+      "id": "amortizationSchedule",
+    },
+  ],
+  "priority": Any<String>,
+  "related": [
+    "mortgage",
+    "auto-loan",
+    "compound-interest",
+  ],
+  "slug": Any<String>,
+  "tags": [
+    "loan",
+    "amortization",
+    "schedule",
+    "payment",
+    "finance",
+    "debt",
+  ],
+}
+`;
