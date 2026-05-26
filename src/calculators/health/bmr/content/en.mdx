@@ -1,0 +1,100 @@
+# BMR Calculator — Basal Metabolic Rate
+
+Your Basal Metabolic Rate (BMR) is the number of calories your body burns every day simply to stay alive — no movement required. It accounts for breathing, maintaining body temperature, circulating blood, repairing cells, and every other unconscious process that keeps you functioning. Understanding your BMR is the essential first step in managing your calorie intake, planning a diet, or losing, maintaining, or gaining weight.
+
+## What Is BMR?
+
+BMR stands for Basal Metabolic Rate. It represents the minimum energy your body needs at complete rest, measured in kilocalories per day (kcal/day). Think of it as the energy cost of simply existing. Even if you lay in bed all day without moving, your body would still burn these calories.
+
+BMR is different from Total Daily Energy Expenditure (TDEE), which multiplies BMR by an activity factor to account for exercise and movement. BMR is the foundation upon which all calorie calculations are built.
+
+## Mifflin-St Jeor vs Harris-Benedict
+
+This calculator supports two validated formulas:
+
+### Mifflin-St Jeor (1990) — Recommended
+Developed by Mifflin and St Jeor in 1990, this equation is widely considered the most accurate for most adults:
+
+- **Male:** BMR = 10 × weight(kg) + 6.25 × height(cm) − 5 × age + 5
+- **Female:** BMR = 10 × weight(kg) + 6.25 × height(cm) − 5 × age − 161
+
+A 2005 study published in the *Journal of the American Dietetic Association* found Mifflin-St Jeor to be the most accurate of four commonly used equations, correctly predicting within 10% of measured BMR in 82% of study subjects.
+
+### Harris-Benedict (Revised 1984)
+The original Harris-Benedict equation dates to 1919 and was revised by Roza and Shizgal in 1984:
+
+- **Male:** BMR = 88.362 + 13.397 × weight + 4.799 × height − 5.677 × age
+- **Female:** BMR = 447.593 + 9.247 × weight + 3.098 × height − 4.330 × age
+
+While slightly less accurate than Mifflin-St Jeor for modern populations, the Harris-Benedict formula remains widely used in clinical and research settings.
+
+## How to Use This Calculator
+
+1. **Select a formula** — choose Mifflin-St Jeor (recommended) or Harris-Benedict.
+2. **Enter your biological sex** — this affects the formula constants.
+3. **Enter your weight** in kilograms.
+4. **Enter your height** in centimetres.
+5. **Enter your age** in years.
+6. **Read your BMR** — this is your daily calorie burn at complete rest.
+
+## What Affects Your BMR?
+
+Several factors influence your metabolic rate:
+
+**Body composition:** Muscle tissue is metabolically active and burns more calories than fat tissue, even at rest. Two people of identical height and weight may have very different BMRs if their muscle-to-fat ratios differ significantly.
+
+**Age:** BMR typically declines by 1–2% per decade after age 20, largely because people tend to lose muscle mass as they age (a process called sarcopenia). Regular resistance training can slow or partially reverse this decline.
+
+**Sex:** Males generally have higher BMRs than females of the same age, height, and weight because they typically carry more muscle mass and less body fat.
+
+**Hormones:** Thyroid hormones (T3 and T4) are the primary regulators of metabolic rate. Hypothyroidism (underactive thyroid) can lower BMR significantly, while hyperthyroidism raises it. Other hormones such as cortisol, insulin, and sex hormones also play roles.
+
+**Genetics:** Some people are naturally "fast burners" or "slow burners" independent of their body composition, reflecting genetic variation in metabolic efficiency.
+
+**Climate:** People living in very cold environments burn more calories to maintain core body temperature.
+
+## How to Use Your BMR
+
+Your BMR alone does not tell you how many calories to eat — for that you need your TDEE. The most common method is the Harris-Benedict Activity Factor:
+
+| Activity Level | Description | Multiplier |
+|---|---|---|
+| Sedentary | Little or no exercise | BMR × 1.2 |
+| Lightly active | Light exercise 1–3 days/week | BMR × 1.375 |
+| Moderately active | Moderate exercise 3–5 days/week | BMR × 1.55 |
+| Very active | Hard exercise 6–7 days/week | BMR × 1.725 |
+| Extra active | Very hard exercise or physical job | BMR × 1.9 |
+
+Once you know your TDEE, you can adjust calorie intake according to your goal: eat at TDEE to maintain weight, below TDEE to lose weight, or above TDEE to gain weight.
+
+## Worked Example
+
+**Profile:** Female, age 35, weight 68 kg, height 165 cm
+
+**Mifflin-St Jeor:**
+BMR = 10 × 68 + 6.25 × 165 − 5 × 35 − 161 = 680 + 1031.25 − 175 − 161 = **1375.25 kcal/day**
+
+**With moderate activity (×1.55):**
+TDEE = 1375.25 × 1.55 ≈ **2132 kcal/day**
+
+To lose approximately 0.5 kg per week, she would aim for about 2132 − 500 = **1632 kcal/day**.
+
+## Frequently Asked Questions
+
+**Should I eat below my BMR?**
+Eating significantly below your BMR for extended periods forces the body to break down muscle tissue for energy, lowers thyroid output, and can cause nutrient deficiencies. Most health organisations advise against sustained intakes below 1200 kcal/day for women or 1500 kcal/day for men without medical supervision.
+
+**Why does my BMR calculator give a different number than another website?**
+Different calculators may use different formulas (Mifflin, Harris-Benedict, Katch-McArdle, etc.) and may round results differently. The difference between formulas is usually 50–150 kcal.
+
+**How accurate is BMR estimation?**
+Even the best formulas typically have an accuracy of ±10–15% compared to laboratory-measured resting metabolic rate (RMR). Factors like recent illness, medications, stress, and recent exercise can affect actual values.
+
+**Does BMR change when I diet?**
+Yes. Prolonged calorie restriction causes the body to adapt by lowering BMR — a phenomenon sometimes called "metabolic adaptation." This is one reason why weight loss can plateau after several weeks of dieting. Periodic diet breaks or refeeds may help counteract this adaptation.
+
+## References
+
+1. Mifflin MD et al. (1990). A new predictive equation for resting energy expenditure in healthy individuals. *Am J Clin Nutr.* [doi:10.1093/ajcn/51.2.241](https://doi.org/10.1093/ajcn/51.2.241)
+2. Roza AM, Shizgal HM (1984). The Harris Benedict equation reevaluated: resting energy requirements and the body cell mass. *Am J Clin Nutr.* [doi:10.1093/ajcn/40.1.168](https://doi.org/10.1093/ajcn/40.1.168)
+3. Frankenfield D et al. (2005). Comparison of predictive equations for resting metabolic rate in healthy nonobese and obese adults. *J Am Diet Assoc.*

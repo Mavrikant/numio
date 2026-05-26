@@ -1,0 +1,92 @@
+# Credit Card Payoff Calculator
+
+Credit card debt is among the most expensive forms of borrowing available to consumers. With average APRs in the United States hovering around 20–24 % as of 2024, even a moderate balance can take years — and cost thousands in interest — to eliminate if you only make minimum payments. This calculator shows you exactly what it costs to carry your balance and how much you can save by paying more than the minimum.
+
+## How the Calculator Works
+
+The calculator simulates month-by-month amortization of your credit card balance:
+
+1. **Interest accrual:** At the start of each billing cycle, interest is calculated on the current balance: `interest = balance × (APR ÷ 100 ÷ 12)`
+2. **Payment applied:** Your payment (minimum or fixed) is applied, first to interest and then to principal.
+3. **Balance update:** The remaining balance carries forward to the next month.
+4. **Repeat** until the balance reaches zero or 1,200 months (100-year cap) is reached.
+
+## Minimum Payment Mode
+
+The minimum payment each month is calculated as:
+
+`minimum = max($25, balance × minimumPaymentPct ÷ 100)`
+
+Where the default minimum payment percentage is 2 %. Most US credit cards calculate minimum payments as either a flat dollar amount ($25–$35) or a percentage of the balance (1–3 %), whichever is higher.
+
+The dangerous feature of minimum payments is that they **shrink as your balance shrinks**. This means your payoff speed slows over time, and the bulk of every payment goes to interest rather than principal — especially early in the payoff period.
+
+## Fixed Payment Mode
+
+When you set a fixed monthly payment, the same dollar amount is applied every month until the balance reaches zero. This is the most effective strategy because:
+
+- Principal decreases at a predictable rate
+- Interest charges shrink faster
+- Payoff date is deterministic
+
+**Important:** Your fixed payment must exceed the first month's interest charge, otherwise the balance will grow rather than shrink. For a $5,000 balance at 20 % APR, the first month's interest is $83.33 — so any fixed payment above $83.33 will make progress.
+
+## Example: $5,000 at 20 % APR
+
+**Minimum payment only (2 %):**
+- First payment: max($25, $5,000 × 2%) = $100
+- Month 1 interest: $83.33
+- Month 1 principal reduction: only $16.67
+- Time to pay off: approximately 90+ months (7+ years)
+- Total interest paid: approximately $2,500+
+
+**Fixed $200/month:**
+- Month 1 interest: $83.33
+- Month 1 principal reduction: $116.67
+- Time to pay off: approximately 32 months (2.7 years)
+- Total interest: approximately $1,200
+- **Interest savings vs. minimum: approximately $1,300+**
+
+This example illustrates the dramatic difference that even doubling the minimum payment can make.
+
+## How to Use This Calculator
+
+1. **Current Balance** — the total amount you owe.
+2. **APR** — your card's annual percentage rate. Check your card statement or the card issuer's website. If you have multiple cards, prioritize the highest APR.
+3. **Payment Strategy** — choose minimum (to see worst-case) or fixed (to plan your payoff).
+4. **Fixed Monthly Payment** — set an amount you can realistically sustain. Even $50 above the minimum makes a significant difference.
+5. **Minimum Payment %** — leave at 2 % unless your card uses a different percentage.
+
+## Strategies to Pay Off Credit Card Debt Faster
+
+**Avalanche method:** Pay off the card with the highest APR first while making minimum payments on others. Mathematically optimal — saves the most in interest.
+
+**Snowball method:** Pay off the smallest balance first regardless of APR. Psychologically motivating — the momentum of eliminating debts keeps you going.
+
+**Balance transfer:** Some issuers offer 0 % APR promotional periods (typically 12–21 months) for balance transfers. If you can pay off the balance within the promotional period, you save all interest. Be aware of the balance transfer fee (usually 3–5 %) and the post-promotional rate.
+
+**Increasing your payment:** Even an extra $50–$100 per month can save hundreds or thousands in interest. Use the calculator to see the exact impact.
+
+## Warning Signs
+
+- If your monthly interest charge equals or exceeds your minimum payment, your balance will never decrease. Increase your payment immediately.
+- Making only minimum payments on a 20 % APR card can mean paying 2–3× the original balance over the full payoff period.
+
+## Frequently Asked Questions
+
+**What if I have multiple credit cards?**
+Enter each card separately. Focus extra payments on the card with the highest APR (avalanche method). Make minimum payments on all others to avoid penalties.
+
+**Does this calculator include fees?**
+No. Annual fees, late fees, and penalty APRs are not included. In practice, these add to your cost.
+
+**Should I close the card once it is paid off?**
+Not necessarily. Closing a card reduces your available credit, which can hurt your credit utilization ratio. Keep the card open (and unused) unless it has an annual fee you can't justify.
+
+**What is the CFPB minimum payment warning?**
+Since 2009, US credit card statements are required to show how long it takes and how much it costs to pay off the balance with minimum payments only. This is designed to encourage consumers to pay more than the minimum.
+
+## References
+
+1. Consumer Financial Protection Bureau. *Credit Card Agreements.* [consumerfinance.gov](https://www.consumerfinance.gov/)
+2. Federal Reserve. *Consumer Credit Outstanding.* [federalreserve.gov](https://www.federalreserve.gov/releases/g19/)

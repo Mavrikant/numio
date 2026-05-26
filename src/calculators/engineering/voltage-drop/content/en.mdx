@@ -1,0 +1,86 @@
+# Voltage Drop Calculator
+
+When electrical current flows through a wire, it loses some voltage along the way due to the resistance of the conductor. This is called **voltage drop**. Understanding and controlling voltage drop is essential for safe, efficient, and code-compliant electrical installations. This calculator uses the NEC (National Electrical Code) 3% guideline and the fundamental physics of conductor resistance to determine whether your cable sizing is adequate.
+
+## Why Voltage Drop Matters
+
+Excessive voltage drop causes real problems:
+
+- **Equipment malfunction**: Motors running at reduced voltage draw higher current, overheat, and fail prematurely.
+- **Dimming and flickering lights**: Voltage-sensitive LEDs and fluorescent fixtures are noticeably affected at drops above 3–5%.
+- **Overheating conductors**: Undersized wires carry excess current (due to the load drawing more current at lower voltage), causing insulation damage and fire risk.
+- **Reduced efficiency**: Power lost as heat in conductors is wasted energy that adds to operating costs.
+
+The NEC recommends a maximum of **3% voltage drop** on branch circuits and a combined feeder + branch circuit drop of no more than **5%**.
+
+## The Formula
+
+For a single-phase AC or DC circuit, the voltage drop across both conductors (supply and return) is:
+
+**ΔV = (2 × ρ × I × L) / A**
+
+Where:
+- **ΔV** = voltage drop (V)
+- **ρ** = resistivity of conductor material (Ω·m): copper = 1.724×10⁻⁸, aluminum = 2.65×10⁻⁸
+- **I** = current (A)
+- **L** = one-way length (m)
+- **A** = cross-sectional area (m²)
+
+The **percentage drop** is: ΔV% = (ΔV / Vsource) × 100
+
+## AWG Wire Sizes
+
+American Wire Gauge (AWG) is the US standard for wire diameter. Lower numbers mean thicker wire. Common residential wire sizes:
+
+| AWG | Area (mm²) | Typical Use |
+|-----|-----------|-------------|
+| 14 | 2.08 | 15A branch circuits |
+| 12 | 3.31 | 20A branch circuits |
+| 10 | 5.26 | 30A dryer/AC circuits |
+| 8 | 8.37 | 40–50A range circuits |
+| 6 | 13.3 | 60A sub-panels |
+
+For metric installations, wire size is specified directly in mm².
+
+## Copper vs Aluminum
+
+Copper is the preferred conductor for most residential and commercial wiring because:
+- Higher conductivity (lower resistivity) means less voltage drop for the same wire size.
+- Better mechanical properties — easier to terminate and more resistant to vibration.
+
+Aluminum is used for:
+- Large-capacity feeders and service entrance conductors.
+- Overhead utility distribution lines.
+- Cost savings on very large conductors (aluminum is significantly cheaper than copper per kilogram, though requires a larger size for equivalent performance).
+
+Aluminum conductors require special connectors and anti-oxidant compound at terminations.
+
+## Worked Examples
+
+### Example 1 — 20A Branch Circuit
+
+A 20A kitchen circuit (AWG 12 copper) runs 25 m to a distant outlet. System voltage is 120 V.
+
+- A = 3.31 mm² = 3.31×10⁻⁶ m²
+- ΔV = (2 × 1.724×10⁻⁸ × 20 × 25) / 3.31×10⁻⁶
+- ΔV ≈ 5.21 V → **4.3%** drop → **Warning** (exceeds 3% NEC limit)
+- Solution: upgrade to AWG 10 (5.26 mm²) → ΔV ≈ 3.28 V → **2.7%** ✓
+
+### Example 2 — European 230 V Circuit
+
+A 6 mm² copper cable runs 50 m carrying 20A at 230 V.
+
+- ΔV = (2 × 1.724×10⁻⁸ × 20 × 50) / 6×10⁻⁶ ≈ 5.75 V → **2.5%** → OK
+
+## Three-Phase Circuits
+
+This calculator assumes single-phase (or DC) circuits. For balanced three-phase systems, the formula changes:
+
+**ΔV₃φ = (√3 × ρ × I × L) / A**
+
+The three-phase voltage drop is approximately 86.6% of the single-phase result for the same wire size, length, and current.
+
+## Reference
+
+National Electrical Code (NEC), NFPA 70, Article 210.19(A)(1) FPN No. 4.
+IEEE Std 399 — *Recommended Practice for Industrial and Commercial Power Systems Analysis.*

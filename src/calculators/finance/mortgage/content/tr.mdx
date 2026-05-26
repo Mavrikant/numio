@@ -1,0 +1,61 @@
+# Konut Kredisi Hesaplayıcı — Aylık Taksit ve İtfa Planı
+
+Konut kredisi, çoğu insanın hayatında atacağı en büyük mali adımdır. Her ay ne kadar ödeyeceğinizi, ödemenizin ne kadarının faize ne kadarının anaparaya gittiğini ve kredi bakiyenizin zaman içinde nasıl değiştiğini anlamak, hayatınızın en önemli kararlarından birini bilinçli bir şekilde vermenizi sağlar. Bu hesaplayıcı, bankalar ve finansal kuruluşlar tarafından kullanılan standart anüite formülünü esas alır.
+
+## Konut Kredisi Taksit Formülü
+
+Aylık taksit, standart anüite formülüyle hesaplanır:
+
+**M = P × [r(1+r)ⁿ] / [(1+r)ⁿ − 1]**
+
+Burada:
+- **P** = Anapara (kredi tutarı eksi peşinat)
+- **r** = Aylık faiz oranı (yıllık oran ÷ 12)
+- **n** = Toplam taksit sayısı (yıl × 12)
+- **M** = Aylık taksit tutarı
+
+Örnek: %6 yıllık faizle 30 yıl vadeli 500.000 TL kredi için:
+- Aylık oran r = 0,06 / 12 = 0,005
+- n = 360 taksit
+- M ≈ **2.998,57 TL**
+
+## İtfa Planını Anlamak
+
+Kredinin ilk aylarında ödemenizin büyük bölümü faize gider; anapara düşüşü çok yavaş olur. Bu, bileşik faizin doğal bir sonucudur: bakiye büyükken aylık faiz yükü de büyük olur ve anaparaya kalan pay azalır. Kredi ilerledikçe bu oran tersine döner; son yıllarda ödemenizin büyük kısmı artık anaparayı düşürür.
+
+| Ay | Taksit | Faiz | Anapara | Kalan Bakiye |
+|---|---|---|---|---|
+| 1 | 2.999 TL | 2.500 TL | 499 TL | 499.501 TL |
+| 60 | 2.999 TL | 2.354 TL | 645 TL | 470.438 TL |
+| 180 | 2.999 TL | 1.883 TL | 1.116 TL | 375.648 TL |
+| 360 | 2.999 TL | 15 TL | 2.984 TL | 0 TL |
+
+## Peşinatın Etkisi
+
+**%20'nin altında peşinat:** Bankaların çoğu, bu durumda ek sigorta veya kredi güvence fonu ücreti talep eder; bu da aylık maliyetinizi artırır.
+
+**%20 ve üzeri peşinat:** Ek güvence zorunluluklarını ortadan kaldırır ve kredi anapara tutarını önemli ölçüde düşürür.
+
+**Daha yüksek peşinat:** Borçlanılan tutarı, aylık taksiti ve toplam faizi azaltır; ancak özkaynak kullanımı konusundaki fırsat maliyetini de göz önünde bulundurun.
+
+## 15 Yıl mı, 30 Yıl mı?
+
+Kısa vadeli krediler daha yüksek aylık taksit anlamına gelir; ancak uzun vadeli kredilere kıyasla toplamda çok daha az faiz ödersiniz. 500.000 TL'lik krediyi %6 faizle düşünecek olursak:
+
+- **15 yıl:** Aylık ~4.219 TL, toplam faiz ~258.000 TL
+- **30 yıl:** Aylık ~2.999 TL, toplam faiz ~579.000 TL
+
+30 yıllık kredide nakit akışı avantajı sağlanır; ancak ödenen faiz iki kattan fazladır.
+
+## Sıkça Sorulan Sorular
+
+**Hesaplayıcıya vergi ve sigorta dahil mi?**
+Hayır. Bu hesaplayıcı yalnızca anapara ve faizi hesaplar. Gerçek aylık konut maliyetiniz emlak vergisi, konut sigortası ve varsa ipotek sigortasını da kapsar.
+
+**Erken ödeme yaparsam ne olur?**
+Ekstra anapara ödemeleri bakiyeyi daha hızlı düşürür, bu da gelecekteki faiz yükünü azaltır ve kredi vadesini kısaltır. Aylık 500 TL ekstra ödeme, 30 yıllık bir kredide yıllarca erken kapanmayı sağlayabilir.
+
+## Kaynaklar
+
+1. Tüketici Finansı Koruma Bürosu (CFPB). *Aylık Konut Kredisi Taksitini Nasıl Hesaplarsınız.* [consumerfinance.gov](https://www.consumerfinance.gov/ask-cfpb/how-do-i-calculate-my-monthly-mortgage-payment-en-1940/)
+2. Freddie Mac. *Mortgage Hesaplayıcı.* [freddiemac.com](https://www.freddiemac.com/tools/calculators/mortgage-calculator)

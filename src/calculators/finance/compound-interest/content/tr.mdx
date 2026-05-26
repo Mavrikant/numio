@@ -1,0 +1,55 @@
+# Bileşik Faiz Hesaplayıcı
+
+Bileşik faiz, finansın en güçlü kavramlarından biridir. Yatırımın erken başlanması ile geç başlanması arasındaki fark bazen şaşırtıcı olabilir; bu hesaplayıcı o farkı net olarak görmenizi sağlar.
+
+## Bileşik Faiz Nedir?
+
+Bileşik faiz, hem başlangıç anaparası hem de önceki dönemlerde biriken faiz üzerinden hesaplanan faizdir. Basit faizde yalnızca anapara üzerinden faiz işlerken, bileşik faizde kazanılan faiz de sonraki dönemde faiz kazanır.
+
+**Basit faiz örneği:** 10.000 TL × %5 × 10 yıl = 15.000 TL
+
+**Bileşik faiz örneği (yıllık):** 10.000 TL × (1,05)¹⁰ ≈ **16.289 TL**
+
+Fark mütevazı görünebilir; ancak 30 ya da 40 yıl gibi uzun dönemlerde bileşik faizin etkisi astronomik boyutlara ulaşır.
+
+## Bileşikleşme Formülü
+
+**Katkısız:**
+GD = A × (1 + r/n)^(n×t)
+
+**Aylık katkıyla:**
+GD = A × (1 + r/n)^(n×t) + AK × [(1 + r/12)^(12×t) − 1] / (r/12)
+
+(A = başlangıç tutarı, r = yıllık oran ondalık, n = yıllık bileşikleşme sayısı, t = yıl, AK = aylık katkı)
+
+## 72 Kuralı
+
+Yıllık getiri oranınızı 72'ye bölerek paranızın iki katına çıkması için gereken yaklaşık süreyi hesaplayabilirsiniz.
+
+- %6 getiri → 72 ÷ 6 = **12 yılda iki katına çıkar**
+- %9 getiri → 72 ÷ 9 = **8 yılda iki katına çıkar**
+
+## Erken Başlamanın Önemi
+
+300 TL/ay, %7 getiri ile 65 yaşına kadar yatırım yapıldığında:
+
+| Başlangıç Yaşı | Yatırım Süresi | Toplam Katkı | Nihai Değer |
+|---|---|---|---|
+| 25 | 40 yıl | 144.000 TL | ~798.000 TL |
+| 35 | 30 yıl | 108.000 TL | ~365.000 TL |
+| 45 | 20 yıl | 72.000 TL | ~156.000 TL |
+
+25 yaşında başlamak, 35 yaşında başlamaya kıyasla 36.000 TL daha fazla katkı gerektirirken 433.000 TL daha fazla birikim sağlar.
+
+## Sıkça Sorulan Sorular
+
+**%7 getiri gerçekçi mi?**
+ABD borsasının tarihsel uzun vadeli ortalama reel getirisi enflasyondan arındırılmış yaklaşık %7 düzeyindedir. Bu garanti değildir; planlama yaparken muhafazakâr varsayımlar kullanın.
+
+**Enflasyon bileşik büyümeyi nasıl etkiler?**
+Enflasyon da bileşik işler; satın alma gücünüzü ezer. %3 enflasyonda paranın alım gücü yaklaşık 24 yılda yarıya düşer. Gerçek getiriyi hesaplamak için: reel getiri ≈ nominal oran − enflasyon oranı.
+
+## Kaynaklar
+
+1. Investopedia. *Compound Interest.* [investopedia.com](https://www.investopedia.com/terms/c/compoundinterest.asp)
+2. ABD Menkul Kıymetler ve Borsa Komisyonu. *Compound Interest Calculator.* [investor.gov](https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator)

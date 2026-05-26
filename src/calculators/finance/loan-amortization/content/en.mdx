@@ -1,0 +1,127 @@
+# Loan Amortization Schedule Calculator
+
+An amortization schedule is one of the most powerful tools in personal finance. It transforms the abstract concept of "I owe money" into a precise, month-by-month roadmap showing exactly how much you owe, how much you are paying in interest, and when your debt will be eliminated. Whether you have a personal loan, a car loan, a student loan, or a business loan, this calculator gives you complete transparency into your debt repayment.
+
+## What Is Loan Amortization?
+
+Loan amortization is the process of paying off a debt through regular installment payments over a fixed period. Each payment is split into two components:
+
+- **Interest** — the cost of borrowing, calculated on your current outstanding balance
+- **Principal** — the portion that actually reduces what you owe
+
+The word "amortization" comes from the Old French *amortir* (to deaden or extinguish), reflecting how the debt is gradually extinguished over time.
+
+## The Annuity Formula
+
+The monthly payment for a standard amortizing loan is calculated with the annuity formula:
+
+**M = P × [r(1+r)ⁿ] / [(1+r)ⁿ − 1]**
+
+Where:
+- **P** = Principal (loan amount)
+- **r** = Monthly interest rate (annual rate ÷ 12)
+- **n** = Number of monthly payments (term in years × 12, or directly in months)
+- **M** = Monthly payment amount
+
+When the annual rate is 0%, the formula simplifies to: M = P ÷ n (equal principal payments with no interest).
+
+## How the Amortization Schedule Works
+
+For each month in the schedule:
+
+1. **Interest charge** = current balance × monthly rate
+2. **Principal reduction** = monthly payment − interest charge
+3. **New balance** = previous balance − principal reduction
+
+This process repeats until the balance reaches zero at the end of the term.
+
+**Example: $10,000 loan at 5% annual interest for 60 months**
+
+Monthly payment ≈ $188.71
+
+| Month | Payment | Interest | Principal | Balance |
+|---|---|---|---|---|
+| 1 | $188.71 | $41.67 | $147.04 | $9,852.96 |
+| 12 | $188.71 | $37.85 | $150.86 | $9,067.32 |
+| 30 | $188.71 | $31.27 | $157.44 | $7,429.07 |
+| 60 | $188.71 | $0.78 | $187.93 | $0.00 |
+
+Total interest paid: approximately $1,322.74
+
+## Why the Interest-to-Principal Ratio Changes Over Time
+
+The interest charge each month is based on your outstanding balance — and that balance shrinks with every payment. So:
+
+- **Month 1:** Your balance is at its maximum. The interest charge is highest.
+- **Final months:** Your balance is nearly zero. Almost all of your payment goes to principal.
+
+This is not a lender trick — it is the natural mathematics of compound interest. The practical implication: extra payments made early in the loan term have a disproportionately large impact because they reduce the balance that future interest is calculated on.
+
+## Using the Optional Start Date
+
+When you enter a start date, the amortization schedule displays the calendar date for each payment rather than just the month number. This helps you:
+
+- Plan cash flow month by month
+- Identify when the loan pays off (specific calendar date)
+- Match the schedule to your actual payment dates with your lender
+
+The date calculation is purely additive — each row is the start date plus the row's month count, keeping the computation deterministic and reproducible.
+
+## Real-World Applications
+
+**Personal loans:** Credit card consolidation loans, medical debt, home improvement financing.
+
+**Auto loans:** See the auto loan calculator for vehicle-specific inputs including trade-in value.
+
+**Student loans:** Federal and private student loan repayment planning.
+
+**Business loans:** Equipment financing, working capital loans, SBA loans.
+
+**Mortgage comparison:** Compare a 15-year versus 30-year mortgage amortization side by side.
+
+## Strategies to Pay Off Your Loan Faster
+
+**Bi-weekly payments:** Instead of 12 monthly payments, make 26 half-payments per year. This results in one extra full payment per year, reducing a 5-year loan term by approximately 5–6 months.
+
+**Round up your payment:** Rounding $188.71 up to $200 adds $11.29 to principal each month. Over 60 months, this saves several months of payments.
+
+**Lump sum payments:** Any lump sum applied directly to principal reduces future interest. Most loans allow prepayment without penalty — verify with your lender.
+
+**Refinancing:** If rates have dropped since you took out the loan, refinancing to a lower rate reduces both the monthly payment and total interest cost. Use this calculator to compare scenarios before refinancing.
+
+## Understanding Total Interest Cost
+
+The total interest you pay depends on three factors:
+
+1. **Loan amount (principal):** Larger loans cost more in absolute interest.
+2. **Interest rate:** The single biggest driver of total cost — even 1% makes a significant difference.
+3. **Loan term:** Longer terms mean lower monthly payments but substantially more total interest.
+
+| $10,000 at 8% | Term | Monthly Payment | Total Interest |
+|---|---|---|---|
+| | 24 months | $452.27 | $854.48 |
+| | 48 months | $244.13 | $1,718.24 |
+| | 60 months | $202.76 | $2,165.60 |
+| | 84 months | $155.87 | $3,093.08 |
+
+Doubling the term from 24 to 48 months cuts the monthly payment by roughly 46%, but increases total interest by more than 100%.
+
+## Frequently Asked Questions
+
+**Can I use this for a mortgage?**
+Yes, but the mortgage calculator offers additional features like down payment, P&I vs. PITI comparison, and 30-year maximum terms. For mortgages over 600 months (50 years), use the mortgage calculator.
+
+**What if my loan has variable interest?**
+This calculator assumes a fixed rate. For variable-rate loans, use the current rate to estimate near-term payments, then recalculate if the rate changes.
+
+**Is rounding error a problem in long schedules?**
+The calculator handles rounding by capping the balance at zero in the final month, preventing tiny negative balances from rounding issues.
+
+**What is the difference between simple and compound interest?**
+Standard amortizing loans use simple interest applied to the declining balance (not compound interest where interest accrues on previous interest). This calculator implements the standard amortization method used by banks and credit unions.
+
+## References
+
+1. Investopedia. *Amortization.* [investopedia.com](https://www.investopedia.com/terms/a/amortization.asp)
+2. Consumer Financial Protection Bureau. *What is amortization?* [consumerfinance.gov](https://www.consumerfinance.gov/)
+3. Federal Reserve. *Consumer Credit Outstanding.* [federalreserve.gov](https://www.federalreserve.gov/)

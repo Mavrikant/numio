@@ -1,0 +1,93 @@
+# Resistor Color Code Calculator
+
+Resistors are among the most common components in electronic circuits, and nearly all through-hole resistors are marked with colored bands that encode their resistance value and tolerance. Learning to read these bands — or using this calculator — saves time and prevents circuit errors.
+
+## How Resistor Color Coding Works
+
+The IEC 60062 standard defines the color coding system used worldwide. Each color corresponds to a digit (0–9), a multiplier, or a tolerance value. The bands are read from one end of the resistor to the other, starting from the end closer to a group of bands.
+
+### Color-to-Digit Mapping
+
+| Color | Digit | Multiplier | Tolerance |
+|-------|-------|-----------|-----------|
+| Black | 0 | ×1 | — |
+| Brown | 1 | ×10 | ±1% |
+| Red | 2 | ×100 | ±2% |
+| Orange | 3 | ×1k | — |
+| Yellow | 4 | ×10k | — |
+| Green | 5 | ×100k | ±0.5% |
+| Blue | 6 | ×1M | ±0.25% |
+| Violet | 7 | ×10M | ±0.1% |
+| Gray | 8 | ×100M | ±0.05% |
+| White | 9 | ×1G | — |
+| Gold | — | ×0.1 | ±5% |
+| Silver | — | ×0.01 | ±10% |
+
+## 4-Band Resistors
+
+A 4-band resistor has:
+1. **Band 1**: First significant digit
+2. **Band 2**: Second significant digit
+3. **Band 3**: Multiplier
+4. **Band 4**: Tolerance
+
+**Formula:** R = (Band1 × 10 + Band2) × Multiplier
+
+**Example:** Brown – Black – Red – Gold
+- Brown = 1, Black = 0 → 10
+- Red = ×100
+- Gold = ±5%
+- **R = 10 × 100 = 1,000 Ω = 1 kΩ ±5%**
+
+## 5-Band Resistors
+
+A 5-band resistor has:
+1. **Band 1**: First significant digit
+2. **Band 2**: Second significant digit
+3. **Band 3**: Third significant digit
+4. **Band 4**: Multiplier
+5. **Band 5**: Tolerance
+
+**Formula:** R = (Band1 × 100 + Band2 × 10 + Band3) × Multiplier
+
+**Example:** Brown – Green – Black – Brown – Brown
+- Brown = 1, Green = 5, Black = 0 → 150
+- Brown = ×10
+- Brown = ±1%
+- **R = 150 × 10 = 1,500 Ω = 1.5 kΩ ±1%**
+
+5-band resistors are used for precision components (usually ±1% or better tolerance).
+
+## Understanding Tolerance
+
+Tolerance tells you how much the actual resistance may deviate from the nominal value. For a 1 kΩ resistor:
+- Gold (±5%): actual range is 950–1,050 Ω
+- Silver (±10%): actual range is 900–1,100 Ω
+- Brown (±1%): actual range is 990–1,010 Ω
+
+For most digital logic circuits, ±5% resistors (gold band) are sufficient. For precision analog circuits, op-amp feedback networks, or ADC reference voltage dividers, use ±1% or better.
+
+## Practical Tips
+
+- **Identify orientation**: The tolerance band (gold/silver) is usually on one end, making it easy to determine reading direction.
+- **Verify with a multimeter**: Always measure critical resistors before installation in precision circuits.
+- **E-series values**: Resistors are only made in standard E-series values (E12, E24, E48, E96). A calculated "resistance" that doesn't match a standard value may indicate a reading error.
+- **Surface-mount (SMD) resistors**: SMD resistors use a 3-digit or 4-digit numerical code, not color bands. This calculator is for through-hole resistors only.
+
+## Common Resistor Values
+
+| Resistance | Code | Series |
+|-----------|------|--------|
+| 100 Ω | Brown-Black-Brown-Gold | E24 |
+| 220 Ω | Red-Red-Brown-Gold | E24 |
+| 330 Ω | Orange-Orange-Brown-Gold | E24 |
+| 470 Ω | Yellow-Violet-Brown-Gold | E24 |
+| 1 kΩ | Brown-Black-Red-Gold | E24 |
+| 10 kΩ | Brown-Black-Orange-Gold | E24 |
+| 100 kΩ | Brown-Black-Yellow-Gold | E24 |
+| 1 MΩ | Brown-Black-Green-Gold | E24 |
+
+## Reference
+
+IEC 60062:2016 — *Marking codes for resistors and capacitors*.
+International Electrotechnical Commission. Geneva, Switzerland.

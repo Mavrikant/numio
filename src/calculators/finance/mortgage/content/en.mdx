@@ -1,0 +1,108 @@
+# Mortgage Calculator — Monthly Payment & Amortization
+
+A mortgage is the most significant financial commitment most people will ever make. Understanding exactly how much you will pay each month, how much goes to interest versus principal, and how the loan balance changes over time puts you in control of one of life's biggest decisions. This mortgage calculator uses the standard annuity formula trusted by banks and financial institutions worldwide.
+
+## How the Mortgage Payment Formula Works
+
+The monthly mortgage payment is calculated using the standard annuity formula:
+
+**M = P × [r(1+r)ⁿ] / [(1+r)ⁿ − 1]**
+
+Where:
+- **P** = Principal (loan amount minus down payment)
+- **r** = Monthly interest rate (annual rate ÷ 12)
+- **n** = Total number of payments (years × 12)
+- **M** = Monthly payment
+
+For example, a $300,000 loan at 7% annual interest for 30 years:
+- Monthly rate r = 0.07 / 12 = 0.005833
+- n = 360 payments
+- M = $300,000 × [0.005833 × (1.005833)³⁶⁰] / [(1.005833)³⁶⁰ − 1] ≈ **$1,995.91**
+
+## What This Calculator Computes
+
+**Monthly Payment** — The fixed amount you pay each month. Unlike adjustable-rate mortgages, a fixed-rate mortgage keeps this number constant for the life of the loan.
+
+**Loan Principal** — Your home price minus the down payment. This is the amount you actually borrow from the lender.
+
+**Total Payment** — Monthly payment multiplied by the total number of months. This is the real cost of the loan in nominal dollars.
+
+**Total Interest** — Total payment minus principal. Often shockingly large — a $300,000 loan at 7% for 30 years costs over $418,000 in total interest alone.
+
+**Amortization Schedule** — A complete month-by-month table showing how each payment is split between reducing your balance (principal) and paying the lender's cost of lending (interest).
+
+## How to Use This Calculator
+
+1. **Enter the home price** — the full purchase price of the property.
+2. **Enter your down payment** — the amount you pay upfront. Zero is valid if you are exploring options.
+3. **Enter the annual interest rate** — check with multiple lenders and use the APR-equivalent for comparison.
+4. **Select the loan term** — 30-year is most common in the US; 15-year saves substantial interest.
+5. **Review the results** — pay particular attention to total interest, which is the true cost of borrowing.
+
+## Understanding the Amortization Schedule
+
+In the early months of a mortgage, most of your payment goes to interest. This is not a quirk or trick — it is the mathematical consequence of how compound interest works. When your balance is large, the interest charge each month is large, leaving little room for principal reduction.
+
+**Example with a $200,000 mortgage at 6% for 30 years (payment ≈ $1,199):**
+
+| Month | Payment | Interest | Principal | Balance |
+|---|---|---|---|---|
+| 1 | $1,199 | $1,000 | $199 | $199,801 |
+| 60 | $1,199 | $942 | $257 | $188,301 |
+| 180 | $1,199 | $754 | $445 | $150,212 |
+| 360 | $1,199 | $6 | $1,193 | $0 |
+
+Notice how in month 1, only $199 of the $1,199 payment reduces your balance. By month 360, almost the entire payment goes to principal.
+
+## Down Payment Strategies
+
+The down payment has a powerful effect on your mortgage economics:
+
+**Less than 20%:** You will typically be required to pay Private Mortgage Insurance (PMI), adding 0.5%–1.5% of the loan amount annually to your costs. PMI protects the lender — not you.
+
+**Exactly 20%:** Eliminates PMI requirement in most conventional loans, saving potentially hundreds of dollars per month.
+
+**More than 20%:** Further reduces your loan principal, monthly payment, and total interest, but ties up more capital that could potentially be invested.
+
+## 15-Year vs. 30-Year Mortgage Comparison
+
+| | 15-Year | 30-Year |
+|---|---|---|
+| Monthly payment (on $300k at 7%) | ~$2,696 | ~$1,996 |
+| Total interest paid | ~$185,000 | ~$419,000 |
+| Interest savings | $234,000 less | — |
+
+The 30-year mortgage frees up cash flow but costs roughly 2.3× more in interest over the life of the loan. Many financial advisors recommend the 30-year but making extra principal payments when possible, achieving a middle ground.
+
+## Impact of Interest Rate Changes
+
+Even small changes in interest rate have a large effect on total cost:
+
+| Rate | Monthly Payment ($300k, 30yr) | Total Interest |
+|---|---|---|
+| 5.0% | $1,610 | $279,767 |
+| 6.0% | $1,799 | $347,515 |
+| 7.0% | $1,996 | $418,527 |
+| 8.0% | $2,201 | $492,343 |
+
+A 1% rate increase on a $300,000 mortgage costs approximately $70,000 more in total interest over 30 years.
+
+## Frequently Asked Questions
+
+**Does this calculator include taxes and insurance?**
+No. This calculator computes principal and interest (P&I) only. Your actual monthly housing cost includes property taxes (typically 1%–2% of home value annually), homeowner's insurance (roughly 0.5% annually), and PMI if applicable. Add these to get your true total housing payment (PITI).
+
+**Can I use this for an adjustable-rate mortgage (ARM)?**
+This calculator assumes a fixed rate. For an ARM, use the initial rate to calculate your payment during the fixed period, then recalculate when the rate adjusts.
+
+**What happens if I make extra payments?**
+Extra principal payments reduce your balance faster, which reduces future interest charges and shortens your loan term. Even $100 extra per month on a $200,000 30-year mortgage at 6% saves approximately $26,000 in interest and cuts 4 years off the loan.
+
+**Should I pay points to lower my rate?**
+Mortgage points (prepaid interest) cost 1% of the loan amount each and typically reduce your rate by 0.25%. Divide the point cost by your monthly savings to find your break-even period. If you plan to stay in the home longer than the break-even, points are usually worth it.
+
+## References
+
+1. Consumer Financial Protection Bureau. *How to Calculate Your Monthly Mortgage Payment.* [consumerfinance.gov](https://www.consumerfinance.gov/ask-cfpb/how-do-i-calculate-my-monthly-mortgage-payment-en-1940/)
+2. Freddie Mac. *Mortgage Calculator.* [freddiemac.com](https://www.freddiemac.com/tools/calculators/mortgage-calculator)
+3. Investopedia. *Amortization.* [investopedia.com](https://www.investopedia.com/terms/a/amortization.asp)

@@ -1,0 +1,104 @@
+# Compound Interest Calculator
+
+Albert Einstein is often (perhaps apocryphally) credited with calling compound interest the "eighth wonder of the world." Whether or not he said it, the mathematics are undeniable: money invested at compound interest grows exponentially, and the difference between starting early and starting late is staggering.
+
+## What Is Compound Interest?
+
+Compound interest is interest calculated on both the initial principal **and** the accumulated interest from previous periods. This contrasts with simple interest, which is only ever calculated on the original principal.
+
+**Simple interest example:** $10,000 at 5% per year for 10 years = $10,000 + ($10,000 × 5% × 10) = $15,000
+
+**Compound interest example (annual):** $10,000 at 5% compounded annually for 10 years = $10,000 × (1.05)¹⁰ = **$16,288.95**
+
+The difference — $1,288.95 — is interest earned on interest. It seems modest at 10 years, but the gap becomes dramatic over longer periods.
+
+## The Compound Interest Formula
+
+**Without monthly contributions:**
+
+FV = P × (1 + r/n)^(n×t)
+
+**With monthly contributions (PMT):**
+
+FV = P × (1 + r/n)^(n×t) + PMT × [(1 + r/12)^(12×t) − 1] / (r/12)
+
+Where:
+- **P** = Principal (initial investment)
+- **r** = Annual interest rate as decimal (e.g., 7% = 0.07)
+- **n** = Compounding frequency per year (1=annually, 4=quarterly, 12=monthly, 365=daily)
+- **t** = Time in years
+- **PMT** = Monthly contribution
+
+When r = 0, FV = P + PMT × 12 × t (simple addition, no interest).
+
+## Compounding Frequency: Does It Matter?
+
+More frequent compounding generates slightly more wealth at the same annual rate. However, the difference between monthly and daily compounding is surprisingly small:
+
+| Frequency | $10,000 at 5% for 20 years |
+|---|---|
+| Annually | $26,532.98 |
+| Quarterly | $26,850.64 |
+| Monthly | $27,126.40 |
+| Daily | $27,179.84 |
+
+The difference between annual and daily compounding is about 2.4% over 20 years. The interest rate itself matters far more than the compounding frequency.
+
+## The Power of Time: Starting Early vs. Starting Late
+
+Nowhere does compound interest show its power more clearly than in the difference between starting early and starting late.
+
+**Scenario: $300/month invested at 7% until age 65**
+
+| Start Age | Years Invested | Total Contributed | Final Value |
+|---|---|---|---|
+| 25 | 40 years | $144,000 | ~$798,000 |
+| 35 | 30 years | $108,000 | ~$365,000 |
+| 45 | 20 years | $72,000 | ~$156,000 |
+
+Starting at 25 instead of 35 contributes only $36,000 more, but results in $433,000 more at retirement. The decade of early compounding more than doubles the outcome.
+
+## Monthly Contributions: The Wealth-Building Engine
+
+Regular contributions, even small ones, have an enormous impact over long periods:
+
+**$10,000 initial investment at 7% for 30 years:**
+- With $0/month: **$76,123**
+- With $200/month: **$319,995**
+- With $500/month: **$681,122**
+
+The $200/month adds $72,000 in contributions but creates over $243,000 in additional final value — the rest is pure compound growth.
+
+## The Rule of 72
+
+A quick mental shortcut: divide 72 by the annual interest rate to estimate years to double your money.
+
+- At 6%: doubles in 72 ÷ 6 = **12 years**
+- At 8%: doubles in 72 ÷ 8 = **9 years**
+- At 12%: doubles in 72 ÷ 12 = **6 years**
+
+## Inflation's Hidden Tax
+
+Compound growth applies to inflation too — in reverse. At 3% annual inflation, purchasing power halves in about 24 years. This is why beating inflation is essential: a 7% investment return with 3% inflation yields only about 4% real growth.
+
+The inflation-adjusted (real) return formula: real rate ≈ nominal rate − inflation rate. More precisely: (1 + nominal) / (1 + inflation) − 1.
+
+## Frequently Asked Questions
+
+**Can I use this calculator for savings accounts?**
+Yes. Enter your savings account annual interest rate (e.g., 4.5%) and select monthly compounding. The future value shows how your balance grows over time.
+
+**What compounding frequency do most accounts use?**
+Banks typically compound interest monthly or daily for savings accounts. Investment accounts (stocks, ETFs) effectively compound when dividends are reinvested — the rate varies with market returns.
+
+**Is the 7% return realistic?**
+The historical average annual return of the US stock market (S&P 500) has been approximately 10% nominal (7% after inflation) over long periods. Past performance does not guarantee future results. Use conservative assumptions for planning.
+
+**How does compound interest compare to compound losses?**
+Compound losses (negative returns) work the same way but in reverse. A 10% loss followed by a 10% gain does not return you to zero — you end up with 99% of your starting amount ($10,000 → $9,000 → $9,900). This is the mathematical basis for the importance of avoiding large losses.
+
+## References
+
+1. Investopedia. *Compound Interest.* [investopedia.com](https://www.investopedia.com/terms/c/compoundinterest.asp)
+2. U.S. Securities and Exchange Commission. *Compound Interest Calculator.* [investor.gov](https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator)
+3. Bengen, W.P. (1994). *Determining Withdrawal Rates Using Historical Data.* Journal of Financial Planning.

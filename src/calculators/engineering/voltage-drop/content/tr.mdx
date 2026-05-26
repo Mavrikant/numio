@@ -1,0 +1,24 @@
+# Gerilim Düşümü Hesaplayıcı
+
+Elektrik akımı bir iletken üzerinden geçerken, iletkenin direncinden dolayı bazı gerilim kaybolur. Buna **gerilim düşümü** denir. Bu hesaplayıcı, NEC (Ulusal Elektrik Kodu) %3 kılavuzunu ve iletken direncinin temel fiziksel yasalarını kullanarak kablo boyutlandırmanızın yeterli olup olmadığını belirler.
+
+## Gerilim Düşümü Neden Önemlidir?
+
+Aşırı gerilim düşümü gerçek sorunlara yol açar:
+- **Cihaz arızaları:** Düşük gerilimde çalışan motorlar daha fazla akım çeker, aşırı ısınır ve erken bozulur.
+- **Işık azalması ve titreşme:** Gerilime duyarlı LED ve flüoresan armatürler %3–5 üzerindeki düşümlerden etkilenir.
+- **Kablolarda ısınma:** Yetersiz kesitli kablolar, yangın riski oluşturabilecek şekilde ısınır.
+
+NEC, dallanma devrelerinde maksimum **%3 gerilim düşümü** ve besleme + dallanma devresi toplamında **%5'i** aşmamayı önerir.
+
+## Formül
+
+**ΔV = (2 × ρ × I × L) / A**
+
+- ρ = bakır 1,724×10⁻⁸ Ω·m, alüminyum 2,65×10⁻⁸ Ω·m
+- I = akım (A), L = tek yön uzunluk (m), A = kesit alanı (m²)
+
+## Referans
+
+Ulusal Elektrik Kodu (NEC), NFPA 70, Madde 210.19(A)(1).
+IEEE Std 399 — Endüstriyel ve Ticari Güç Sistemi Analizi için Tavsiye Edilen Uygulama.

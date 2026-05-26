@@ -1,0 +1,100 @@
+# Savings Goal Calculator
+
+Whether you are saving for a house down payment, an emergency fund, a vacation, or early retirement, the savings goal calculator tells you exactly how many months it will take to reach your target — and how much of that growth comes from compound interest rather than your own deposits.
+
+## How It Works
+
+The calculator simulates month-by-month growth of your savings using the compound interest formula. Each month, your current balance earns interest at the specified annual rate divided by twelve, and then your monthly contribution is added on top:
+
+**balance(n) = balance(n-1) × (1 + r) + PMT**
+
+where r = annualReturn ÷ 100 ÷ 12 and PMT = your monthly contribution.
+
+This process repeats until the balance reaches or exceeds your target amount. The calculator caps the search at 1,200 months (100 years) to handle extreme edge cases.
+
+## How to Use This Calculator
+
+1. **Target Amount** — enter the total you want to accumulate (e.g., $20,000 for a house down payment).
+2. **Current Savings** — enter what you already have set aside. If you are starting from scratch, enter 0.
+3. **Monthly Contribution** — the fixed amount you plan to save every month.
+4. **Annual Return** — the expected yearly interest or investment return rate. For a high-yield savings account, use 4–5 %. For a balanced investment portfolio, use 6–8 %. Default is 5 %.
+
+Results are shown instantly as you type.
+
+## Understanding the Results
+
+- **Months to Goal** — the number of full monthly contributions needed.
+- **Years to Goal** — the same period divided by 12, shown with two decimal places.
+- **Total Contributions** — your starting savings plus all monthly deposits. This is money you actually put in.
+- **Interest Earned** — the difference between your target balance and your total contributions. This is free money from compound growth.
+
+## Examples
+
+**Example 1 — Emergency fund**
+You have $1,000 already saved and want to reach $10,000. You can set aside $300 per month at a 4.5 % annual return.
+
+- Monthly rate: 4.5 ÷ 100 ÷ 12 = 0.375 %
+- Approximate months to goal: ~28 months (2.3 years)
+- Interest earned: roughly $300
+
+**Example 2 — House down payment**
+Target: $60,000. Current savings: $5,000. Monthly contribution: $1,000. Annual return: 5 %.
+
+- Approximate months: ~51 (4.3 years)
+- Interest earned: approximately $4,000
+
+**Example 3 — Zero interest (simple savings)**
+If you set the annual return to 0 %, the calculator performs a simple division: remaining amount ÷ monthly contribution = months needed. This is useful for non-interest-bearing accounts.
+
+## The Power of Compound Interest
+
+Compound interest means you earn interest on your interest. Over long periods, this dramatically accelerates wealth accumulation. Consider two savers:
+
+- **Saver A** saves $500/month at 6 % annual return for 20 years → balance: approximately $231,000 (total contributions: $120,000; interest earned: ~$111,000)
+- **Saver B** saves $500/month at 0 % for 20 years → balance: exactly $120,000
+
+The difference of $111,000 is entirely due to compound interest. This is why starting early — even with small amounts — has a disproportionately large impact on long-term outcomes.
+
+## Choosing the Right Annual Return
+
+The annual return you enter should reflect the account or investment vehicle you plan to use:
+
+| Account Type | Typical Return |
+|---|---|
+| Standard savings account | 0.5–1.5 % |
+| High-yield savings (HYSA) | 3.5–5 % (current rates vary) |
+| Certificates of Deposit (CD) | 3–5 % |
+| Balanced mutual fund | 5–7 % |
+| Stock index fund (long-term) | 7–10 % |
+
+Use more conservative estimates for short-term goals where you cannot afford market volatility.
+
+## Inflation Adjustment
+
+This calculator uses a nominal (not inflation-adjusted) return. To get real-terms results, subtract expected inflation from your annual return. If you expect 7 % nominal return and 3 % inflation, enter 4 % as your annual return. This ensures your target amount will have the same purchasing power in today's dollars.
+
+## Tips for Reaching Your Goal Faster
+
+1. **Increase your monthly contribution.** Even $50 more per month can shave months off your timeline due to compounding.
+2. **Start earlier.** Every month you delay is a month of compound growth you cannot recover.
+3. **Boost your return rate.** Moving cash from a low-yield savings account to a high-yield account or conservative investment can significantly reduce your savings timeline.
+4. **Revisit regularly.** Your income, expenses, and interest rates change over time. Recalculate every six months.
+
+## Frequently Asked Questions
+
+**What if I cannot save a fixed amount every month?**
+Enter your average monthly contribution. You can re-run the calculator whenever your financial situation changes.
+
+**Should I account for taxes on interest?**
+For taxable accounts, your effective return will be lower after taxes. If you are in a 22 % tax bracket and earn 5 % gross, your after-tax return is roughly 3.9 %. Use tax-advantaged accounts (401k, IRA, Roth IRA) where possible to defer or eliminate taxes on growth.
+
+**The calculator shows more than 100 years — is that an error?**
+No. It means your goal is mathematically unreachable with the current inputs within the 100-year window. Try increasing your monthly contribution or annual return.
+
+**Can I use this for retirement planning?**
+Yes, as a rough estimate. For detailed retirement planning, factor in Social Security benefits, required minimum distributions, and inflation-adjusted withdrawal rates.
+
+## References
+
+1. FINRA. *Savings Calculator.* [tools.finra.org](https://tools.finra.org/)
+2. SEC Investor.gov. *Compound Interest Calculator.* [investor.gov](https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator)

@@ -1,0 +1,80 @@
+# Concrete Volume Calculator
+
+Accurately estimating the volume of concrete needed for a construction project is essential to avoid costly under-ordering or wasteful over-ordering. This calculator supports four common concrete element shapes — slabs, rectangular columns, cylinders, and footings — and provides the volume in both cubic metres and cubic yards, plus an estimate of the cement bags required.
+
+## Why Concrete Volume Matters
+
+Concrete is typically purchased by the cubic metre (m³) from a ready-mix supplier, or by the number of pre-mixed bags from a hardware store. Under-estimating means stopping work mid-pour — a serious problem because a cold joint between two pours weakens the structure. Over-estimating wastes material and money. A reliable estimate before ordering prevents both problems.
+
+## Supported Shapes
+
+### Slab
+A horizontal concrete slab is the most common element: driveways, patios, floor slabs, and walkways. The volume is simply length × width × thickness.
+
+**Formula:** V = L × W × T
+
+**Example:** A patio 5 m long, 3 m wide, and 150 mm (0.15 m) thick:
+V = 5 × 3 × 0.15 = **2.25 m³**
+
+### Rectangular Column / Pier
+A rectangular column or pier is described by its cross-section (length × width) and its height.
+
+**Formula:** V = L × W × H
+
+**Example:** A 300 mm × 300 mm column, 3 m tall:
+V = 0.3 × 0.3 × 3 = **0.27 m³**
+
+### Cylinder / Round Column
+Circular columns, round piers, and drilled footings are calculated using the cylinder formula. The radius is half the diameter.
+
+**Formula:** V = π × (D/2)² × H
+
+**Example:** A 400 mm diameter column, 3 m tall:
+V = π × (0.2)² × 3 = π × 0.04 × 3 ≈ **0.377 m³**
+
+### Rectangular Footing
+A spread footing under a wall or column is rectangular in plan, with a specified depth. It uses the same formula as a slab.
+
+**Formula:** V = L × W × D
+
+## Cement Bags Required
+
+This calculator estimates the number of cement bags needed using a standard **1:2:3 mix** (1 part cement : 2 parts sand : 3 parts coarse aggregate) which yields approximately **8 bags of 40 kg** cement per cubic metre of finished concrete.
+
+For US users, the equivalent in **60 lb bags** is approximately **7.2 bags per m³** (or about 5.5 bags per cubic yard).
+
+> **Important:** Always order 5–10% more concrete than the calculated volume to account for spillage, uneven sub-base, and form irregularities. For complex pours, some contractors add up to 15%.
+
+## Imperial Inputs
+
+When the imperial unit system is selected, all dimensions are entered in **feet**. The calculator converts them to metres internally and returns:
+- Volume in m³ (converted from ft³)
+- Volume in yd³ (since ready-mix concrete in the US is sold by the cubic yard)
+
+## How to Use This Calculator
+
+1. Select the **shape** of the concrete element.
+2. Select **metric** or **imperial** units.
+3. Enter the required dimensions for your chosen shape.
+4. Read the volume and bag estimates from the output panel.
+
+## Practical Tips
+
+- **Driveways:** A standard residential driveway is 100–125 mm thick. Use 125–150 mm for heavier vehicles.
+- **Floor slabs:** Residential floor slabs are typically 100–150 mm. Industrial floors may be 150–200 mm or more.
+- **Foundations:** Always consult a structural engineer for load-bearing foundation design. The volume formula provides a material estimate only.
+- **Column reinforcement:** Steel reinforcement (rebar) displaces a small volume of concrete — typically less than 3% — which is usually ignored in volume estimates.
+- **Shrinkage:** Fresh concrete shrinks slightly as it cures (about 0.04–0.06%). This is not significant for ordering purposes.
+
+## Mix Design Reference
+
+The 1:2:3 mix used for bag estimates in this calculator corresponds to approximately:
+- Concrete compressive strength: 20–25 MPa (after 28 days)
+- Water/cement ratio: ≈ 0.55
+
+For structural applications requiring higher strength (30+ MPa), a richer mix or admixtures may be required. Consult a concrete technologist or your ready-mix supplier for project-specific mix designs.
+
+## Reference
+
+Portland Cement Association. *Design and Control of Concrete Mixtures*, 16th edition. Skokie, IL.
+ACI 318 — *Building Code Requirements for Structural Concrete*. American Concrete Institute.

@@ -1,0 +1,99 @@
+# Ohm's Law Calculator
+
+Ohm's Law is one of the most fundamental principles in electrical engineering and electronics. This calculator lets you solve for any two of the four core electrical quantities — voltage (V), current (I), resistance (R), and power (P) — when you know the other two. Simply select which two quantities you know, enter their values, and the calculator does the rest.
+
+## What is Ohm's Law?
+
+Ohm's Law was formulated by the German physicist Georg Simon Ohm in 1827. He discovered that, at a constant temperature, the voltage across a conductor is directly proportional to the current flowing through it. This relationship is captured in the famous equation:
+
+**V = I × R**
+
+Where:
+- **V** is the voltage in volts (V)
+- **I** is the current in amperes (A)
+- **R** is the resistance in ohms (Ω)
+
+From this single equation, a rich family of formulas can be derived, including the power equations. Electrical power is the rate at which energy is transferred or consumed, and it is related to the other three quantities as:
+
+**P = V × I = I² × R = V² / R**
+
+These four equations — two for voltage/current/resistance and three for power — allow you to solve for any unknown given any two knowns.
+
+## How to Use This Calculator
+
+1. **Select the first known quantity** from the dropdown — voltage, current, resistance, or power.
+2. **Enter the value** for that quantity in the appropriate unit.
+3. **Select the second known quantity** (it must be different from the first).
+4. **Enter the value** for the second quantity.
+5. **Read the results** — all four quantities are displayed simultaneously.
+
+All calculations happen instantly in your browser with no data sent to any server.
+
+## Worked Examples
+
+### Example 1 — Finding Resistance and Power
+
+A 12 V battery powers a lamp. The measured current through the circuit is 2 A. What is the lamp's resistance, and how much power does it consume?
+
+- V = 12 V, I = 2 A
+- R = V / I = 12 / 2 = **6 Ω**
+- P = V × I = 12 × 2 = **24 W**
+
+### Example 2 — Finding Voltage and Power
+
+A resistor of 100 Ω carries a current of 0.5 A. What voltage is applied across it, and how much power is dissipated?
+
+- I = 0.5 A, R = 100 Ω
+- V = I × R = 0.5 × 100 = **50 V**
+- P = I² × R = 0.25 × 100 = **25 W**
+
+### Example 3 — Finding Current and Resistance from Power
+
+An electric heater consumes 1,500 W on a 230 V mains supply. What is the current drawn and the effective resistance of the heating element?
+
+- V = 230 V, P = 1500 W
+- I = P / V = 1500 / 230 ≈ **6.52 A**
+- R = V² / P = 52900 / 1500 ≈ **35.3 Ω**
+
+## Real-World Applications
+
+Ohm's Law underpins virtually every area of electrical engineering:
+
+- **Circuit design**: selecting resistor values to set bias points in transistor amplifiers.
+- **Power supply design**: determining current ratings for cables and connectors.
+- **Automotive electronics**: diagnosing faults by measuring voltage drops across components.
+- **Home wiring**: calculating whether a circuit breaker is appropriately rated for the connected load.
+- **LED lighting**: calculating the correct current-limiting resistor for an LED.
+
+## Limitations of Ohm's Law
+
+Ohm's Law applies to **ohmic conductors** — materials whose resistance remains constant regardless of the applied voltage. Many real-world components are non-ohmic:
+
+- **Diodes** and **transistors** have non-linear I–V characteristics.
+- **Filament lamps** have resistance that increases significantly as the filament heats up.
+- **Thermistors** change resistance with temperature by design.
+- **Electrolytes** and **plasma** do not obey simple linear relationships.
+
+For AC circuits containing capacitors or inductors, resistance is replaced by **impedance** (Z), which is frequency-dependent. At a single frequency, a modified form of Ohm's Law still applies: V = I × Z, where Z is a complex number.
+
+## Formula Reference
+
+| Given | Find | Formula |
+|-------|------|---------|
+| V, I | R | R = V / I |
+| V, I | P | P = V × I |
+| V, R | I | I = V / R |
+| V, R | P | P = V² / R |
+| V, P | I | I = P / V |
+| V, P | R | R = V² / P |
+| I, R | V | V = I × R |
+| I, R | P | P = I² × R |
+| I, P | V | V = P / I |
+| I, P | R | R = P / I² |
+| R, P | V | V = √(P × R) |
+| R, P | I | I = √(P / R) |
+
+## Reference
+
+Ohm, G.S. (1827). *Die galvanische Kette, mathematisch bearbeitet.* Berlin: T.H. Riemann.
+IEEE Standard 100 — *The Authoritative Dictionary of IEEE Standards Terms*, 7th edition.

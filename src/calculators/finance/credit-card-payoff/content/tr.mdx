@@ -1,0 +1,42 @@
+# Kredi Kartı Borç Ödeme Hesaplayıcısı
+
+Kredi kartı borcu, tüketicilerin başvurduğu en pahalı borçlanma biçimlerinden biridir. Yüksek yıllık faiz oranlarıyla yalnızca minimum ödeme yapıldığında orta düzeyde bir bakiye bile yıllarca sürebilir ve binlerce lira faize mal olabilir. Bu hesaplayıcı, borcunuzu taşımanın size tam maliyetini ve minimum ödemenin üzerinde ödeme yaparak ne kadar tasarruf edebileceğinizi gösterir.
+
+## Hesaplayıcı Nasıl Çalışır?
+
+Hesaplayıcı, kredi kartı bakiyenizin ay ay amortismanını simüle eder:
+
+1. Her dönemin başında faiz hesaplanır: `faiz = bakiye × (Yıllık Faiz ÷ 100 ÷ 12)`
+2. Ödemeniz önce faize, ardından anapara borcu azaltmaya uygulanır.
+3. Kalan bakiye bir sonraki aya devredilir.
+
+## Minimum Ödeme Neden Tehlikeli?
+
+Minimum ödemeler, bakiye azaldıkça küçülür. Bu, her ödemenin büyük bölümünün anaparaya değil faize gitmesi anlamına gelir. 20.000 TL bakiyeyi yalnızca minimum ödemelerle kapatmak 5–7 yıl sürebilir ve faiz olarak 10.000 TL'yi aşabilir.
+
+## Örnek: 10.000 TL, %30 Yıllık Faiz
+
+**Yalnızca minimum ödeme (%2):**
+- Aylık faiz: 10.000 × 0.30/12 = 250 TL
+- Minimum ödeme: max(50, 200) = 200 TL → faizi karşılamıyor!
+- Sabit 500 TL ödemeye geçmek kaçınılmaz.
+
+**Sabit 500 TL/ay:**
+- Ödeme süresi: yaklaşık 28 ay
+- Toplam faiz: yaklaşık 3.900 TL
+
+**Sabit 1.000 TL/ay:**
+- Ödeme süresi: yaklaşık 12 ay
+- Toplam faiz: yaklaşık 1.700 TL
+
+Fark, ödemeleri iki katına çıkarmak ödeme süresini 2,5'ten fazla kısaltıyor ve faizi yarıya indiriyor.
+
+## Borç Ödeme Stratejileri
+
+- **Çığ yöntemi:** En yüksek faiz oranlı kartı önce ödeyin. Matematiksel olarak en iyi strateji.
+- **Kartopu yöntemi:** En düşük bakiyeli kartı önce ödeyin. Psikolojik motivasyon sağlar.
+- **Denge transferi:** Bazı bankalar 0 faizli geçiş dönemleri sunar — bakiyeyi bu sürede kapatabilirseniz tüm faizden kurtulursunuz.
+
+## Kaynaklar
+
+1. Consumer Financial Protection Bureau. *Kredi Kartları.* [consumerfinance.gov](https://www.consumerfinance.gov/)
