@@ -44,7 +44,10 @@ const {
   robots = "index,follow",
 } = Astro.props;
 
-const ogLocale = LOCALE_HTML_LANG[locale];
+// Open Graph spec wants language_TERRITORY (underscore), e.g. en_US, zh_Hans.
+// LOCALE_HTML_LANG uses BCP 47 (hyphen) for HTML lang / hreflang, so we
+// translate hyphens to underscores here for og:locale only.
+const ogLocale = LOCALE_HTML_LANG[locale].replace(/-/g, "_");
 
 // Resolve OG image: prefer explicit prop, fall back to site-wide placeholder.
 const resolvedOgImage = ogImage ?? defaultOgImageUrl;
