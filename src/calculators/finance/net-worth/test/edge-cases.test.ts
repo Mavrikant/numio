@@ -1,5 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { assertSchemaValidates, assertComputeIsPure } from "@/test-utils";
+import type { AnyCalculatorDefinition } from "@/types/calculator";
 import calculator from "../definition";
 
 describe("net-worth edge cases", () => {
@@ -19,7 +20,7 @@ describe("net-worth edge cases", () => {
   };
 
   it("schema accepts valid input", () => {
-    assertSchemaValidates(calculator, validInput, { ...validInput, cashAndSavings: -1 });
+    assertSchemaValidates(calculator as unknown as AnyCalculatorDefinition, validInput, { ...validInput, cashAndSavings: -1 });
   });
 
   it("compute is pure", () => {

@@ -13,7 +13,7 @@ export interface NetWorthInput {
   otherDebts: number;
 }
 
-export interface NetWorthOutput {
+export interface NetWorthOutput extends Record<string, unknown> {
   totalAssets: number;
   totalLiabilities: number;
   netWorth: number;

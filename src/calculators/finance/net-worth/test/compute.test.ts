@@ -137,6 +137,6 @@ describe("net-worth compute — numeric correctness", () => {
         otherDebts: 5000,
       }),
     );
-    expect(result.liquidAssets + result.illiquidAssets).toBeCloseTo(result.totalAssets, 5);
+    expect((result.liquidAssets as number) + (result.illiquidAssets as number)).toBeCloseTo(result.totalAssets as number, 5);
   });
 });

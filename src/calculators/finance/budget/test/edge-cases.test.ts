@@ -1,5 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { assertSchemaValidates, assertComputeIsPure } from "@/test-utils";
+import type { AnyCalculatorDefinition } from "@/types/calculator";
 import calculator from "../definition";
 
 describe("budget edge cases", () => {
@@ -11,7 +12,7 @@ describe("budget edge cases", () => {
   };
 
   it("schema accepts valid input", () => {
-    assertSchemaValidates(calculator, validInput, { monthlyIncome: -1, needsPct: 50, wantsPct: 30, savingsPct: 20 });
+    assertSchemaValidates(calculator as unknown as AnyCalculatorDefinition, validInput, { monthlyIncome: -1, needsPct: 50, wantsPct: 30, savingsPct: 20 });
   });
 
   it("compute is pure", () => {
@@ -41,8 +42,8 @@ describe("budget edge cases", () => {
     const result = calculator.compute(
       calculator.inputSchema.parse({ monthlyIncome: 5000, needsPct: 0, wantsPct: 0, savingsPct: 100 }),
     );
-    expect(result.savingsAmount).toBeCloseTo(5000, 0);
-    expect(result.needsAmount).toBe(0);
+    expect((result.savingsAmount as number)).toBeCloseTo(5000, 0);
+    expect((result.needsAmount as number)).toBe(0);
     expect(result.monthlyEmergencyFund).toBe(0);
   });
 
@@ -62,12 +63,12 @@ describe("budget edge cases", () => {
 
   it("monthlyEmergencyFund is 3x needsAmount", () => {
     const result = calculator.compute(calculator.inputSchema.parse(validInput));
-    expect(result.monthlyEmergencyFund).toBeCloseTo(result.needsAmount * 3, 5);
+    expect(result.monthlyEmergencyFund).toBeCloseTo((result.needsAmount as number) * 3, 5);
   });
 
   it("annualSavings equals savingsAmount × 12", () => {
     const result = calculator.compute(calculator.inputSchema.parse(validInput));
-    expect(result.annualSavings).toBeCloseTo(result.savingsAmount * 12, 5);
+    expect(result.annualSavings).toBeCloseTo((result.savingsAmount as number) * 12, 5);
   });
 
   it("accepts zero income", () => {

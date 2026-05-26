@@ -5,7 +5,7 @@ export interface BudgetInput {
   savingsPct: number;
 }
 
-export interface BudgetOutput {
+export interface BudgetOutput extends Record<string, unknown> {
   needsAmount: number;
   wantsAmount: number;
   savingsAmount: number;

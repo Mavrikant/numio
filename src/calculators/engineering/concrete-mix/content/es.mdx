@@ -1,0 +1,100 @@
+# Calculadora de Mezcla de Hormigón
+
+La calculadora de mezcla de hormigón le ayuda a determinar las cantidades exactas de cemento, arena, árido grueso y agua necesarias para cualquier volumen de hormigón. Tanto si trabaja con dosificaciones estándar (M10 a M30) como con una proporción personalizada, esta herramienta calcula los pesos de los materiales en kilogramos y el número de sacos de cemento requeridos.
+
+## Clases de Dosificación del Hormigón
+
+Las clases de hormigón utilizan la designación M, donde M significa "Mix" (mezcla) y el número indica la resistencia característica a compresión en N/mm² (MPa) a 28 días.
+
+### Proporciones Nominales Estándar (volumétricas)
+
+| Clase | Cemento : Arena : Árido | Uso Típico |
+|---|---|---|
+| M10 | 1 : 3 : 6 | Limpieza, relleno no estructural |
+| M15 | 1 : 2 : 4 | Cimentaciones en masa, pavimentos |
+| M20 | 1 : 1,5 : 3 | Hormigón armado general |
+| M25 | 1 : 1 : 2 | Vigas y pilares de hormigón armado |
+| M30 | 1 : 0,75 : 1,5 | Elementos estructurales de alta resistencia |
+
+## Método de Cálculo
+
+### Paso 1: Conversión al Volumen Seco
+
+El hormigón recién mezclado contiene agua y huecos. El volumen real de materiales secos necesario es mayor que el volumen de hormigón fresco:
+
+**Volumen Seco = Volumen Húmedo × 1,54**
+
+Este factor tiene en cuenta los huecos en los áridos y la compactación durante el mezclado.
+
+### Paso 2: Proporción de Cada Material
+
+Para cemento : arena : árido = C : S : A, el total es (C + S + A). Cada material ocupa su fracción proporcional del volumen seco:
+
+- Volumen cemento = [C / (C + S + A)] × Volumen seco (m³)
+- Volumen arena = [S / (C + S + A)] × Volumen seco (m³)
+- Volumen árido = [A / (C + S + A)] × Volumen seco (m³)
+
+### Paso 3: Conversión Volumen–Peso
+
+- Cemento: 1440 kg/m³
+- Arena (árido fino): 1600 kg/m³
+- Árido grueso: 1500 kg/m³
+
+### Paso 4: Cantidad de Agua
+
+**Agua (kg) = relación a/c × Cemento (kg)**
+
+Como 1 kg de agua = 1 litro, la cantidad en litros iguala el peso en kg.
+
+### Paso 5: Sacos de Cemento
+
+Un saco estándar contiene 50 kg. Número de sacos = peso total de cemento / 50 (redondear hacia arriba).
+
+## Ejemplo Práctico: 1 m³ de Hormigón M20
+
+**Datos:** Volumen = 1 m³, Mezcla = M20 (1:1,5:3), a/c = 0,50
+
+- Volumen seco = 1 × 1,54 = 1,54 m³
+- Total de partes = 5,5
+- Cemento: (1/5,5) × 1,54 × 1440 = **403 kg**
+- Arena: (1,5/5,5) × 1,54 × 1600 = **672 kg**
+- Árido: (3/5,5) × 1,54 × 1500 = **1260 kg**
+- Agua: 0,50 × 403 = **201,5 litros**
+- Sacos de cemento: 403 / 50 = **8,06 → 9 sacos**
+
+## Relación Agua/Cemento (a/c)
+
+La relación a/c es uno de los parámetros más críticos de la tecnología del hormigón:
+
+- **Resistencia:** a/c baja → mayor resistencia
+- **Durabilidad:** a/c baja reduce la permeabilidad
+- **Trabajabilidad:** a/c alta facilita la puesta en obra pero reduce resistencia y durabilidad
+
+**Valores máximos recomendados:**
+- M20 uso general: 0,55
+- M25 hormigón armado: 0,50
+- M30 alta resistencia: 0,45
+- Exposición severa (ambiente marino): 0,40
+
+## Densidades Aparentes Utilizadas
+
+| Material | Densidad Aparente (kg/m³) |
+|---|---|
+| Cemento Portland | 1440 |
+| Arena de río (seca) | 1600 |
+| Árido machacado 20 mm | 1500 |
+| Agua | 1000 |
+
+## Consejos Prácticos
+
+La **dosificación en peso** es más precisa que la volumétrica, ya que la arena húmeda se esponja y puede introducir errores del 10-20 %.
+
+**Margen de desperdicio:** Añada entre un 5 y un 10 % a las cantidades calculadas para compensar derrames e irregularidades del encofrado.
+
+**Curado:** El hormigón alcanza el 70 % de su resistencia a 28 días en los primeros 7 días. Mantenga la superficie húmeda al menos 7 días (14 días para altas prestaciones).
+
+## Referencias
+
+- EHE-08 — Instrucción de Hormigón Estructural (España)
+- EN 206:2013 — Hormigón: Especificación, prestaciones, producción y conformidad
+- ACI 211.1 — Selección de proporciones para hormigón normal

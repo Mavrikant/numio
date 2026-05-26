@@ -26,7 +26,7 @@ export default defineCalculator({
     },
     {
       id: "volumeM3",
-      type: { kind: "number", min: 0.01, max: 10000, step: 0.1, unit: "m3" },
+      type: { kind: "number", min: 0.01, max: 10000, step: 0.1 },
       defaultValue: 1,
       required: true,
     },
