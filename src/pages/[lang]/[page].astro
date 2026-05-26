@@ -1,0 +1,176 @@
+---
+/**
+ * Static page route — /calculators/{lang}/{about|contact|privacy}/
+ *
+ * Renders the markdown body from src/content/static-pages.ts as HTML.
+ * Pages are generated for every (locale × static-page) combination.
+ */
+import Base from "@/layouts/Base.astro";
+import { LOCALES, isLocale, type Locale, SITE_NAME } from "@/config/site";
+import { t, buildAbsoluteUrl } from "@/lib/i18n";
+import Sidebar from "@/components/chrome/Sidebar.astro";
+import {
+  STATIC_PAGE_SLUGS,
+  getStaticPage,
+  isStaticPageSlug,
+} from "@/content/static-pages";
+
+export async function getStaticPaths() {
+  const paths: Array<{ params: { lang: string; page: string } }> = [];
+  for (const lang of LOCALES) {
+    for (const page of STATIC_PAGE_SLUGS) {
+      paths.push({ params: { lang, page } });
+    }
+  }
+  return paths;
+}
+
+const { lang, page } = Astro.params;
+
+if (!lang || !isLocale(lang)) {
+  return Astro.redirect("/calculators/en/");
+}
+if (!page || !isStaticPageSlug(page)) {
+  return Astro.redirect("/404");
+}
+
+const locale = lang as Locale;
+const content = getStaticPage(page, locale);
+const canonical = buildAbsoluteUrl(locale, page);
+
+// ─── Minimal Markdown → HTML renderer ──────────────────────────────────────
+// Handles: # / ## headings, paragraphs, bullet lists, **bold**, *italic*,
+// [text](url) links, inline `code`. Enough for the in-source static pages.
+
+function escapeHtml(s: string): string {
+  return s
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+function renderInline(s: string): string {
+  let out = escapeHtml(s);
+  // Links: [text](url)
+  out = out.replace(
+    /\[([^\]]+)\]\(([^)]+)\)/g,
+    (_m, text: string, url: string) => {
+      const safeUrl = url.startsWith("http") || url.startsWith("mailto:") || url.startsWith("/")
+        ? url
+        : "#";
+      const target = safeUrl.startsWith("http") ? ' target="_blank" rel="noopener noreferrer"' : "";
+      return `<a href="${safeUrl}"${target}>${text}</a>`;
+    },
+  );
+  // Bold: **text**
+  out = out.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
+  // Italic: *text*
+  out = out.replace(/(?<!\*)\*([^*\n]+)\*(?!\*)/g, "<em>$1</em>");
+  // Inline code: `code`
+  out = out.replace(/`([^`]+)`/g, "<code>$1</code>");
+  return out;
+}
+
+function renderMarkdown(md: string): string {
+  const lines = md.split("\n");
+  const out: string[] = [];
+  let inList = false;
+  let paragraphBuf: string[] = [];
+
+  const flushParagraph = () => {
+    if (paragraphBuf.length > 0) {
+      out.push(`<p>${renderInline(paragraphBuf.join(" "))}</p>`);
+      paragraphBuf = [];
+    }
+  };
+  const flushList = () => {
+    if (inList) {
+      out.push("</ul>");
+      inList = false;
+    }
+  };
+
+  for (const raw of lines) {
+    const line = raw.trim();
+    if (line === "") {
+      flushParagraph();
+      flushList();
+      continue;
+    }
+    const h2Match = line.match(/^##\s+(.+)$/);
+    const h1Match = line.match(/^#\s+(.+)$/);
+    const listMatch = line.match(/^[-*]\s+(.+)$/);
+    const olMatch = line.match(/^\d+\.\s+(.+)$/);
+
+    if (h2Match) {
+      flushParagraph();
+      flushList();
+      out.push(`<h2>${renderInline(h2Match[1]!)}</h2>`);
+    } else if (h1Match) {
+      flushParagraph();
+      flushList();
+      out.push(`<h1>${renderInline(h1Match[1]!)}</h1>`);
+    } else if (listMatch || olMatch) {
+      flushParagraph();
+      if (!inList) {
+        out.push("<ul>");
+        inList = true;
+      }
+      out.push(`<li>${renderInline((listMatch ?? olMatch)![1]!)}</li>`);
+    } else {
+      flushList();
+      paragraphBuf.push(line);
+    }
+  }
+  flushParagraph();
+  flushList();
+  return out.join("\n");
+}
+
+const bodyHtml = renderMarkdown(content.body);
+---
+
+<Base
+  locale={locale}
+  title={content.title}
+  description={content.title + " — " + SITE_NAME}
+  canonical={canonical}
+>
+  <main class="container-page py-8 lg:flex lg:gap-8">
+    <Sidebar locale={locale} />
+
+    <div class="mt-6 flex-1 min-w-0 lg:mt-0">
+      <nav aria-label="Breadcrumb" class="mb-6 text-sm text-slate-500 dark:text-slate-400">
+        <ol class="flex items-center gap-2">
+          <li>
+            <a
+              href={`${import.meta.env.BASE_URL}${locale}/`}
+              class="hover:text-slate-800 dark:hover:text-slate-200"
+            >
+              {t(locale, "nav.home")}
+            </a>
+          </li>
+          <li aria-hidden="true">/</li>
+          <li>
+            <span class="font-medium text-slate-900 dark:text-slate-100" aria-current="page">
+              {content.title}
+            </span>
+          </li>
+        </ol>
+      </nav>
+
+      <header class="mb-8">
+        <h1 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-100 sm:text-4xl">
+          {content.title}
+        </h1>
+      </header>
+
+      <article
+        class="prose prose-slate dark:prose-invert max-w-3xl"
+        set:html={bodyHtml}
+      />
+    </div>
+  </main>
+</Base>

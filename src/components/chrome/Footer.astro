@@ -96,6 +96,30 @@ const buildIsoForAttr = BUILD_TIME;
         <ul class="flex flex-col gap-2" role="list">
           <li>
             <a
+              href={buildPath(locale, "about")}
+              class="text-sm text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-100 transition-colors"
+            >
+              {t(locale, "nav.about")}
+            </a>
+          </li>
+          <li>
+            <a
+              href={buildPath(locale, "contact")}
+              class="text-sm text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-100 transition-colors"
+            >
+              {t(locale, "nav.contact")}
+            </a>
+          </li>
+          <li>
+            <a
+              href={buildPath(locale, "privacy")}
+              class="text-sm text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-100 transition-colors"
+            >
+              {t(locale, "nav.privacy")}
+            </a>
+          </li>
+          <li>
+            <a
               href="https://github.com/mserdarkaraman"
               rel="noopener noreferrer"
               target="_blank"
