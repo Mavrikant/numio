@@ -8,7 +8,11 @@
     "home": "Ana Sayfa",
     "categories": "Kategoriler",
     "search": "Ara",
-    "about": "Hakkında"
+    "about": "Hakkında",
+    "openMenu": "Menüyü aç",
+    "closeMenu": "Menüyü kapat",
+    "skipToContent": "İçeriğe geç",
+    "mainNavigation": "Ana gezinti"
   },
   "actions": {
     "calculate": "Hesapla",
@@ -38,7 +42,35 @@
   },
   "footer": {
     "copyright": "© Karaman Hesaplayıcılar",
-    "disclaimer": "Sonuçlar yalnızca bilgilendirme amaçlıdır. Kritik kararlarda doğrulayın."
+    "disclaimer": "Sonuçlar yalnızca bilgilendirme amaçlıdır. Kritik kararlarda doğrulayın.",
+    "sourceCode": "Kaynak kod",
+    "links": "Bağlantılar"
+  },
+  "theme": {
+    "toggle": "Tema değiştir",
+    "light": "Açık",
+    "dark": "Koyu",
+    "auto": "Otomatik",
+    "switchToLight": "Açık moda geç",
+    "switchToDark": "Koyu moda geç",
+    "switchToAuto": "Sistem temasına geç"
+  },
+  "lang": {
+    "switchLanguage": "Dil değiştir",
+    "currentLanguage": "Mevcut dil",
+    "selectLanguage": "Dil seçin"
+  },
+  "breadcrumb": {
+    "home": "Ana Sayfa",
+    "navigation": "Gezinti izi"
+  },
+  "categories": {
+    "health": "Sağlık",
+    "finance": "Finans",
+    "engineering": "Mühendislik",
+    "math": "Matematik",
+    "conversion": "Dönüşüm",
+    "all": "Tüm Kategoriler"
   },
   "consent": {
     "title": "Gizliliğinize değer veriyoruz",

@@ -7,12 +7,20 @@ import {
   type Locale,
 } from "@/config/site";
 import { t } from "@/lib/i18n";
+import Header from "@/components/chrome/Header.astro";
+import Footer from "@/components/chrome/Footer.astro";
 
 export interface Props {
   locale?: Locale;
   title?: string;
   description?: string;
   canonical?: string;
+  /** Active category for header nav highlight */
+  activeCategory?: string;
+  /** Hide the standard header (e.g. for error pages) */
+  noHeader?: boolean;
+  /** Hide the standard footer */
+  noFooter?: boolean;
 }
 
 const {
@@ -20,6 +28,9 @@ const {
   title,
   description,
   canonical,
+  activeCategory,
+  noHeader = false,
+  noFooter = false,
 } = Astro.props;
 
 const htmlLang = LOCALE_HTML_LANG[locale];
@@ -30,7 +41,7 @@ const desc = description ?? t(locale, "site.description");
 ---
 
 <!doctype html>
-<html lang={htmlLang} dir={dir} class="h-full">
+<html lang={htmlLang} dir={dir} class="h-full scroll-smooth">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -38,14 +49,61 @@ const desc = description ?? t(locale, "site.description");
     {canonical && <link rel="canonical" href={canonical} />}
     <title>{fullTitle}</title>
     <link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}favicon.svg`} />
+
+    {/* Open Graph */}
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={desc} />
     <meta property="og:type" content="website" />
     {canonical && <meta property="og:url" content={canonical} />}
+
+    {/* Twitter */}
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="generator" content={Astro.generator} />
+
+    {/* Hreflang slot — S-seo will inject <link rel="alternate"> tags here */}
+    <slot name="hreflang" />
+
+    {/* JSON-LD slot — S-seo will inject structured data here */}
+    <slot name="jsonld" />
+
+    {/* Inline script: apply theme BEFORE first paint to avoid FOUC */}
+    <script is:inline>
+      (function () {
+        try {
+          var theme = localStorage.getItem("theme");
+          var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+          var shouldBeDark =
+            theme === "dark" || ((!theme || theme === "auto") && prefersDark);
+          if (shouldBeDark) {
+            document.documentElement.classList.add("dark");
+          }
+        } catch (e) {
+          // localStorage may be unavailable (private mode, etc.)
+        }
+      })();
+    </script>
   </head>
-  <body class="min-h-full bg-white text-slate-900 dark:bg-slate-900 dark:text-slate-100">
-    <slot />
+
+  <body class="flex min-h-full flex-col bg-white text-slate-900 dark:bg-slate-900 dark:text-slate-100">
+    {/* Skip-to-content link — a11y */}
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:absolute focus:start-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:text-sm focus:font-medium focus:text-slate-900 focus:shadow-lg focus:ring-2 focus:ring-brand-500 dark:focus:bg-slate-900 dark:focus:text-slate-100"
+    >
+      {t(locale, "nav.skipToContent")}
+    </a>
+
+    {!noHeader && (
+      <Header locale={locale} activeCategory={activeCategory} />
+    )}
+
+    {/* Page content */}
+    <main id="main-content" class="flex-1">
+      <slot />
+    </main>
+
+    {!noFooter && (
+      <Footer locale={locale} />
+    )}
   </body>
 </html>

@@ -1,0 +1,186 @@
+---
+import { LOCALES, LOCALE_NATIVE_NAMES, type Locale } from "@/config/site";
+import { t } from "@/lib/i18n";
+
+export interface Props {
+  locale: Locale;
+  /** compact: renders just a short label + dropdown arrow (for footer use) */
+  compact?: boolean;
+  class?: string;
+}
+
+const { locale, compact = false, class: className } = Astro.props;
+
+const currentNative = LOCALE_NATIVE_NAMES[locale];
+---
+
+<div
+  class:list={["lang-switcher relative", className]}
+  data-current-locale={locale}
+>
+  <button
+    type="button"
+    aria-haspopup="listbox"
+    aria-expanded="false"
+    aria-label={`${t(locale, "lang.switchLanguage")} — ${currentNative}`}
+    class:list={[
+      "lang-switcher-btn inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1.5",
+      "text-sm font-medium text-slate-700 dark:text-slate-300",
+      "hover:bg-slate-100 dark:hover:bg-slate-800",
+      "transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500",
+    ]}
+  >
+    {/* Globe icon */}
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="h-4 w-4 shrink-0"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      aria-hidden="true"
+    >
+      <circle cx="12" cy="12" r="10" />
+      <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+    </svg>
+    {compact ? locale.toUpperCase() : currentNative}
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="lang-switcher-chevron h-3.5 w-3.5 shrink-0 transition-transform"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M6 9l6 6 6-6" />
+    </svg>
+  </button>
+
+  <ul
+    role="listbox"
+    aria-label={t(locale, "lang.selectLanguage")}
+    class:list={[
+      "lang-switcher-dropdown absolute z-50 mt-1 hidden",
+      "min-w-[10rem] rounded-xl border border-slate-200 bg-white py-1 shadow-lg",
+      "dark:border-slate-700 dark:bg-slate-800",
+      // Align to end (RTL-safe): end-0 keeps it to the right in LTR, left in RTL
+      "end-0",
+    ]}
+  >
+    {
+      LOCALES.map((lang) => {
+        const native = LOCALE_NATIVE_NAMES[lang];
+        const isCurrent = lang === locale;
+        return (
+          <li role="option" aria-selected={isCurrent}>
+            <a
+              href={`/calculators/${lang}/`}
+              data-locale-target={lang}
+              hreflang={lang}
+              class:list={[
+                "lang-switcher-option flex w-full items-center gap-2 px-3 py-2 text-sm",
+                "hover:bg-slate-50 dark:hover:bg-slate-700",
+                isCurrent
+                  ? "font-semibold text-brand-600 dark:text-brand-400"
+                  : "text-slate-700 dark:text-slate-300",
+              ]}
+            >
+              {isCurrent && (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-3.5 w-3.5 shrink-0"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+              )}
+              {!isCurrent && <span class="h-3.5 w-3.5 shrink-0" aria-hidden="true" />}
+              {native}
+            </a>
+          </li>
+        );
+      })
+    }
+  </ul>
+</div>
+
+<script>
+  // Language switcher dropdown — vanilla JS
+  // When a locale option is clicked, swap the locale segment in the current URL
+  // keeping the rest of the path the same (slug stays; Phase 3 will enrich with real slugs).
+
+  function swapLocaleInPath(href: string, targetLocale: string): string {
+    // Pattern: /calculators/<locale>/...
+    return href.replace(
+      /^(\/calculators\/)([a-z]{2})(\/.*)?$/,
+      (_match, prefix, _oldLocale, rest) =>
+        `${prefix}${targetLocale}${rest ?? "/"}`,
+    );
+  }
+
+  function initLangSwitcher(switcher: HTMLElement) {
+    const btn = switcher.querySelector<HTMLButtonElement>(".lang-switcher-btn");
+    const dropdown = switcher.querySelector<HTMLElement>(".lang-switcher-dropdown");
+    const chevron = switcher.querySelector<SVGElement>(".lang-switcher-chevron");
+    if (!btn || !dropdown) return;
+
+    function open() {
+      dropdown!.classList.remove("hidden");
+      btn!.setAttribute("aria-expanded", "true");
+      chevron?.classList.add("rotate-180");
+      // Focus first item
+      const first = dropdown!.querySelector<HTMLAnchorElement>("a");
+      first?.focus();
+    }
+
+    function close() {
+      dropdown!.classList.add("hidden");
+      btn!.setAttribute("aria-expanded", "false");
+      chevron?.classList.remove("rotate-180");
+    }
+
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const isOpen = btn.getAttribute("aria-expanded") === "true";
+      isOpen ? close() : open();
+    });
+
+    // Update hrefs to swap locale in current pathname
+    const currentPath = window.location.pathname;
+    dropdown.querySelectorAll<HTMLAnchorElement>("a[data-locale-target]").forEach((a) => {
+      const targetLocale = a.dataset.localeTarget;
+      if (targetLocale) {
+        a.href = swapLocaleInPath(currentPath, targetLocale);
+      }
+    });
+
+    // Close on outside click
+    document.addEventListener("click", (e) => {
+      if (!switcher.contains(e.target as Node)) {
+        close();
+      }
+    });
+
+    // Close on Escape
+    switcher.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        close();
+        btn.focus();
+      }
+    });
+  }
+
+  // Init all switchers on the page
+  document.querySelectorAll<HTMLElement>(".lang-switcher").forEach(initLangSwitcher);
+</script>

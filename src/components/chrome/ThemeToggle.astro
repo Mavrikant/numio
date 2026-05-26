@@ -1,0 +1,155 @@
+---
+import { t, type Locale } from "@/lib/i18n";
+
+export interface Props {
+  locale?: Locale;
+  class?: string;
+}
+
+const { locale = "en", class: className } = Astro.props;
+---
+
+<button
+  id="theme-toggle"
+  type="button"
+  aria-label={t(locale, "theme.toggle")}
+  title={t(locale, "theme.toggle")}
+  class:list={[
+    "relative inline-flex h-9 w-9 items-center justify-center rounded-lg",
+    "text-slate-600 hover:bg-slate-100 hover:text-slate-900",
+    "dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-100",
+    "transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500",
+    className,
+  ]}
+>
+  {/* Sun icon — shown in dark mode (click → switch to light) */}
+  <svg
+    id="theme-icon-sun"
+    xmlns="http://www.w3.org/2000/svg"
+    class="hidden h-5 w-5"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+  >
+    <circle cx="12" cy="12" r="4" />
+    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+  </svg>
+
+  {/* Moon icon — shown in light mode (click → switch to dark) */}
+  <svg
+    id="theme-icon-moon"
+    xmlns="http://www.w3.org/2000/svg"
+    class="hidden h-5 w-5"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+  >
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+  </svg>
+
+  {/* Auto / system icon */}
+  <svg
+    id="theme-icon-auto"
+    xmlns="http://www.w3.org/2000/svg"
+    class="hidden h-5 w-5"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+  >
+    <rect x="2" y="3" width="20" height="14" rx="2" />
+    <path d="M8 21h8M12 17v4" />
+  </svg>
+</button>
+
+<script>
+  // Theme cycle: light → dark → auto → light ...
+  type Theme = "light" | "dark" | "auto";
+  const STORAGE_KEY = "theme";
+
+  function getStoredTheme(): Theme {
+    const stored = localStorage.getItem(STORAGE_KEY);
+    if (stored === "light" || stored === "dark" || stored === "auto") {
+      return stored;
+    }
+    return "auto";
+  }
+
+  function resolveTheme(theme: Theme): "light" | "dark" {
+    if (theme === "auto") {
+      return window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light";
+    }
+    return theme;
+  }
+
+  function applyTheme(theme: Theme) {
+    const resolved = resolveTheme(theme);
+    const root = document.documentElement;
+
+    if (resolved === "dark") {
+      root.classList.add("dark");
+    } else {
+      root.classList.remove("dark");
+    }
+
+    // Update button icon
+    const sun = document.getElementById("theme-icon-sun");
+    const moon = document.getElementById("theme-icon-moon");
+    const auto = document.getElementById("theme-icon-auto");
+    if (!sun || !moon || !auto) return;
+
+    sun.classList.add("hidden");
+    moon.classList.add("hidden");
+    auto.classList.add("hidden");
+
+    // Icon shows CURRENT state so user knows what they're on:
+    // light → show sun, dark → show moon, auto → show monitor
+    if (theme === "light") {
+      sun.classList.remove("hidden");
+    } else if (theme === "dark") {
+      moon.classList.remove("hidden");
+    } else {
+      auto.classList.remove("hidden");
+    }
+  }
+
+  function nextTheme(current: Theme): Theme {
+    const cycle: Theme[] = ["light", "dark", "auto"];
+    const idx = cycle.indexOf(current);
+    return cycle[(idx + 1) % cycle.length]!;
+  }
+
+  // Init on load
+  let currentTheme = getStoredTheme();
+  applyTheme(currentTheme);
+
+  // Handle button click
+  const btn = document.getElementById("theme-toggle");
+  btn?.addEventListener("click", () => {
+    currentTheme = nextTheme(currentTheme);
+    localStorage.setItem(STORAGE_KEY, currentTheme);
+    applyTheme(currentTheme);
+  });
+
+  // React to system preference changes when in "auto" mode
+  window
+    .matchMedia("(prefers-color-scheme: dark)")
+    .addEventListener("change", () => {
+      if (getStoredTheme() === "auto") {
+        applyTheme("auto");
+      }
+    });
+</script>

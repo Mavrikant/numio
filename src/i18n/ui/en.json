@@ -8,7 +8,11 @@
     "home": "Home",
     "categories": "Categories",
     "search": "Search",
-    "about": "About"
+    "about": "About",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "skipToContent": "Skip to content",
+    "mainNavigation": "Main navigation"
   },
   "actions": {
     "calculate": "Calculate",
@@ -38,7 +42,35 @@
   },
   "footer": {
     "copyright": "© Karaman Calculators",
-    "disclaimer": "Results are for informational purposes only. Verify before using for critical decisions."
+    "disclaimer": "Results are for informational purposes only. Verify before using for critical decisions.",
+    "sourceCode": "Source code",
+    "links": "Links"
+  },
+  "theme": {
+    "toggle": "Toggle theme",
+    "light": "Light",
+    "dark": "Dark",
+    "auto": "Auto",
+    "switchToLight": "Switch to light mode",
+    "switchToDark": "Switch to dark mode",
+    "switchToAuto": "Switch to system theme"
+  },
+  "lang": {
+    "switchLanguage": "Switch language",
+    "currentLanguage": "Current language",
+    "selectLanguage": "Select language"
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "navigation": "Breadcrumb"
+  },
+  "categories": {
+    "health": "Health",
+    "finance": "Finance",
+    "engineering": "Engineering",
+    "math": "Math",
+    "conversion": "Conversion",
+    "all": "All Categories"
   },
   "consent": {
     "title": "We value your privacy",

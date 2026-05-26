@@ -1,0 +1,88 @@
+---
+import { t, type Locale } from "@/lib/i18n";
+
+export interface BreadcrumbItem {
+  label: string;
+  href?: string;
+}
+
+export interface Props {
+  locale: Locale;
+  items: BreadcrumbItem[];
+}
+
+const { locale, items } = Astro.props;
+
+// JSON-LD BreadcrumbList structured data
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: items.map((item, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    name: item.label,
+    ...(item.href ? { item: item.href } : {}),
+  })),
+};
+---
+
+<nav aria-label={t(locale, "breadcrumb.navigation")}>
+  <ol
+    class="flex flex-wrap items-center gap-1 text-sm text-slate-500 dark:text-slate-400"
+    itemscope
+    itemtype="https://schema.org/BreadcrumbList"
+  >
+    {
+      items.map((item, index) => {
+        const isLast = index === items.length - 1;
+        return (
+          <li
+            class="flex items-center gap-1"
+            itemprop="itemListElement"
+            itemscope
+            itemtype="https://schema.org/ListItem"
+          >
+            {index > 0 && (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-3.5 w-3.5 shrink-0 rtl:rotate-180"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            )}
+
+            {isLast || !item.href ? (
+              <span
+                class="font-medium text-slate-900 dark:text-slate-100"
+                aria-current={isLast ? "page" : undefined}
+                itemprop="name"
+              >
+                {item.label}
+              </span>
+            ) : (
+              <a
+                href={item.href}
+                class="hover:text-slate-700 dark:hover:text-slate-200 transition-colors"
+                itemprop="item"
+              >
+                <span itemprop="name">{item.label}</span>
+              </a>
+            )}
+
+            <meta itemprop="position" content={String(index + 1)} />
+          </li>
+        );
+      })
+    }
+  </ol>
+</nav>
+
+{/* JSON-LD slot — S-seo will integrate this */}
+<script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbJsonLd)} />
