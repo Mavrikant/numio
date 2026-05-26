@@ -1,0 +1,97 @@
+{
+  "site": {
+    "name": "Karaman Calculators",
+    "tagline": "حاسبات مجانية للحياة اليومية — المالية والصحة والهندسة والرياضيات.",
+    "description": "استخدم حاسبات مجانية ودقيقة بـ12 لغة. بدون تسجيل، بدون تتبع، نتائج فورية."
+  },
+  "nav": {
+    "home": "الرئيسية",
+    "categories": "الفئات",
+    "search": "بحث",
+    "about": "حول",
+    "contact": "اتصل بنا",
+    "privacy": "سياسة الخصوصية",
+    "openMenu": "فتح القائمة",
+    "closeMenu": "إغلاق القائمة",
+    "skipToContent": "تخطّ إلى المحتوى",
+    "mainNavigation": "التنقل الرئيسي"
+  },
+  "actions": {
+    "calculate": "احسب",
+    "reset": "إعادة تعيين",
+    "copy": "نسخ",
+    "share": "مشاركة",
+    "print": "طباعة",
+    "save": "حفظ"
+  },
+  "labels": {
+    "result": "النتيجة",
+    "results": "النتائج",
+    "inputs": "المدخلات",
+    "settings": "الإعدادات",
+    "formula": "الصيغة",
+    "references": "المراجع",
+    "related": "حاسبات ذات صلة",
+    "loading": "جارٍ التحميل…",
+    "noResults": "لا توجد نتائج"
+  },
+  "errors": {
+    "required": "هذا الحقل مطلوب",
+    "invalid": "قيمة غير صالحة",
+    "outOfRange": "القيمة خارج النطاق",
+    "tooSmall": "القيمة صغيرة جداً",
+    "tooLarge": "القيمة كبيرة جداً"
+  },
+  "footer": {
+    "copyright": "© Karaman Calculators",
+    "disclaimer": "النتائج لأغراض إعلامية فقط. تحقق منها قبل استخدامها في القرارات المهمة.",
+    "sourceCode": "الكود المصدري",
+    "links": "روابط",
+    "lastUpdated": "آخر تحديث",
+    "allCalculators": "جميع الحاسبات",
+    "comingSoon": "قريباً"
+  },
+  "theme": {
+    "toggle": "تبديل المظهر",
+    "light": "فاتح",
+    "dark": "داكن",
+    "auto": "تلقائي",
+    "switchToLight": "التبديل إلى الوضع الفاتح",
+    "switchToDark": "التبديل إلى الوضع الداكن",
+    "switchToAuto": "استخدام مظهر النظام"
+  },
+  "lang": {
+    "switchLanguage": "تغيير اللغة",
+    "currentLanguage": "اللغة الحالية",
+    "selectLanguage": "اختر اللغة"
+  },
+  "breadcrumb": {
+    "home": "الرئيسية",
+    "navigation": "مسار التنقل"
+  },
+  "categories": {
+    "health": "الصحة",
+    "finance": "المالية",
+    "engineering": "الهندسة",
+    "math": "الرياضيات",
+    "conversion": "التحويل",
+    "all": "جميع الفئات"
+  },
+  "consent": {
+    "title": "نحن نقدّر خصوصيتك",
+    "description": "نستخدم ملفات تعريف الارتباط والتقنيات المشابهة لتحسين تجربتك وتحليل حركة المرور وعرض إعلانات ذات صلة. يمكنك اختيار الفئات التي تريد قبولها.",
+    "accept": "قبول الكل",
+    "reject": "رفض الكل",
+    "customize": "تخصيص",
+    "privacyPolicy": "سياسة الخصوصية",
+    "customizeTitle": "تفضيلات ملفات تعريف الارتباط",
+    "savePreferences": "حفظ التفضيلات",
+    "back": "رجوع",
+    "essential": "ضرورية",
+    "essentialDesc": "مطلوبة لعمل الموقع. نشطة دائماً.",
+    "analytics": "التحليلات",
+    "analyticsDesc": "تساعدنا على فهم كيفية استخدام الزوار للموقع (مجهول الهوية).",
+    "ads": "الإعلانات",
+    "adsDesc": "تتيح لنا عرض إعلانات ذات صلة ودعم الوصول المجاني إلى الحاسبات."
+  }
+}

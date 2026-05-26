@@ -1,0 +1,97 @@
+{
+  "site": {
+    "name": "Karaman Calculators",
+    "tagline": "日常生活のための無料計算ツール — 金融、健康、工学、数学。",
+    "description": "12言語で無料かつ正確な計算ツールをご利用ください。ログイン不要、追跡なし、即時結果。"
+  },
+  "nav": {
+    "home": "ホーム",
+    "categories": "カテゴリ",
+    "search": "検索",
+    "about": "概要",
+    "contact": "お問い合わせ",
+    "privacy": "プライバシーポリシー",
+    "openMenu": "メニューを開く",
+    "closeMenu": "メニューを閉じる",
+    "skipToContent": "コンテンツへスキップ",
+    "mainNavigation": "メインナビゲーション"
+  },
+  "actions": {
+    "calculate": "計算する",
+    "reset": "リセット",
+    "copy": "コピー",
+    "share": "シェア",
+    "print": "印刷",
+    "save": "保存"
+  },
+  "labels": {
+    "result": "結果",
+    "results": "結果一覧",
+    "inputs": "入力",
+    "settings": "設定",
+    "formula": "計算式",
+    "references": "参考資料",
+    "related": "関連する計算ツール",
+    "loading": "読み込み中…",
+    "noResults": "結果なし"
+  },
+  "errors": {
+    "required": "このフィールドは必須です",
+    "invalid": "無効な値です",
+    "outOfRange": "値が範囲外です",
+    "tooSmall": "値が小さすぎます",
+    "tooLarge": "値が大きすぎます"
+  },
+  "footer": {
+    "copyright": "© Karaman Calculators",
+    "disclaimer": "結果は情報提供のみを目的としています。重要な決定に使用する前に確認してください。",
+    "sourceCode": "ソースコード",
+    "links": "リンク",
+    "lastUpdated": "最終更新",
+    "allCalculators": "すべての計算ツール",
+    "comingSoon": "近日公開"
+  },
+  "theme": {
+    "toggle": "テーマを切り替え",
+    "light": "ライト",
+    "dark": "ダーク",
+    "auto": "自動",
+    "switchToLight": "ライトモードに切り替え",
+    "switchToDark": "ダークモードに切り替え",
+    "switchToAuto": "システムテーマを使用"
+  },
+  "lang": {
+    "switchLanguage": "言語を切り替え",
+    "currentLanguage": "現在の言語",
+    "selectLanguage": "言語を選択"
+  },
+  "breadcrumb": {
+    "home": "ホーム",
+    "navigation": "パンくずリスト"
+  },
+  "categories": {
+    "health": "健康",
+    "finance": "金融",
+    "engineering": "工学",
+    "math": "数学",
+    "conversion": "換算",
+    "all": "すべてのカテゴリ"
+  },
+  "consent": {
+    "title": "プライバシーを大切にしています",
+    "description": "私たちはクッキーと類似の技術を使用して、エクスペリエンスの向上、トラフィックの分析、関連広告の表示を行っています。受け入れるカテゴリを選択できます。",
+    "accept": "すべて承認",
+    "reject": "すべて拒否",
+    "customize": "カスタマイズ",
+    "privacyPolicy": "プライバシーポリシー",
+    "customizeTitle": "クッキーの設定",
+    "savePreferences": "設定を保存",
+    "back": "戻る",
+    "essential": "必須",
+    "essentialDesc": "サイトの機能に必要です。常に有効。",
+    "analytics": "分析",
+    "analyticsDesc": "訪問者がサイトをどのように使用しているかを理解するのに役立ちます（匿名）。",
+    "ads": "広告",
+    "adsDesc": "関連広告を表示し、計算ツールへの無料アクセスを支援します。"
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "site": {
+    "name": "Karaman Calculators",
+    "tagline": "Calculateurs gratuits pour la vie quotidienne — finances, santé, ingénierie, mathématiques.",
+    "description": "Utilisez des calculateurs gratuits et précis en 12 langues. Sans connexion, sans suivi, résultats immédiats."
+  },
+  "nav": {
+    "home": "Accueil",
+    "categories": "Catégories",
+    "search": "Rechercher",
+    "about": "À propos",
+    "contact": "Contact",
+    "privacy": "Politique de confidentialité",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "skipToContent": "Aller au contenu",
+    "mainNavigation": "Navigation principale"
+  },
+  "actions": {
+    "calculate": "Calculer",
+    "reset": "Réinitialiser",
+    "copy": "Copier",
+    "share": "Partager",
+    "print": "Imprimer",
+    "save": "Enregistrer"
+  },
+  "labels": {
+    "result": "Résultat",
+    "results": "Résultats",
+    "inputs": "Saisies",
+    "settings": "Paramètres",
+    "formula": "Formule",
+    "references": "Références",
+    "related": "Calculateurs associés",
+    "loading": "Chargement…",
+    "noResults": "Aucun résultat"
+  },
+  "errors": {
+    "required": "Ce champ est obligatoire",
+    "invalid": "Valeur invalide",
+    "outOfRange": "La valeur est hors plage",
+    "tooSmall": "La valeur est trop petite",
+    "tooLarge": "La valeur est trop grande"
+  },
+  "footer": {
+    "copyright": "© Karaman Calculators",
+    "disclaimer": "Les résultats sont fournis à titre informatif uniquement. Vérifiez avant de les utiliser pour des décisions importantes.",
+    "sourceCode": "Code source",
+    "links": "Liens",
+    "lastUpdated": "Dernière mise à jour",
+    "allCalculators": "Tous les calculateurs",
+    "comingSoon": "Bientôt disponible"
+  },
+  "theme": {
+    "toggle": "Changer de thème",
+    "light": "Clair",
+    "dark": "Sombre",
+    "auto": "Automatique",
+    "switchToLight": "Passer en mode clair",
+    "switchToDark": "Passer en mode sombre",
+    "switchToAuto": "Utiliser le thème système"
+  },
+  "lang": {
+    "switchLanguage": "Changer de langue",
+    "currentLanguage": "Langue actuelle",
+    "selectLanguage": "Sélectionner la langue"
+  },
+  "breadcrumb": {
+    "home": "Accueil",
+    "navigation": "Fil d'Ariane"
+  },
+  "categories": {
+    "health": "Santé",
+    "finance": "Finances",
+    "engineering": "Ingénierie",
+    "math": "Mathématiques",
+    "conversion": "Conversion",
+    "all": "Toutes les catégories"
+  },
+  "consent": {
+    "title": "Nous respectons votre vie privée",
+    "description": "Nous utilisons des cookies et des technologies similaires pour améliorer votre expérience, analyser le trafic et afficher des publicités pertinentes. Vous pouvez choisir les catégories à accepter.",
+    "accept": "Tout accepter",
+    "reject": "Tout refuser",
+    "customize": "Personnaliser",
+    "privacyPolicy": "Politique de confidentialité",
+    "customizeTitle": "Préférences de cookies",
+    "savePreferences": "Enregistrer les préférences",
+    "back": "Retour",
+    "essential": "Essentiel",
+    "essentialDesc": "Requis pour le fonctionnement du site. Toujours actif.",
+    "analytics": "Analytique",
+    "analyticsDesc": "Nous aide à comprendre comment les visiteurs utilisent le site (anonyme).",
+    "ads": "Publicité",
+    "adsDesc": "Nous permet d'afficher des publicités pertinentes et de soutenir l'accès gratuit aux calculateurs."
+  }
+}

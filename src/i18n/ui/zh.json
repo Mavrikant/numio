@@ -1,0 +1,97 @@
+{
+  "site": {
+    "name": "Karaman Calculators",
+    "tagline": "免费计算器，服务日常生活 — 金融、健康、工程、数学。",
+    "description": "以12种语言使用免费、精准的计算器。无需登录，不跟踪用户，即时获得结果。"
+  },
+  "nav": {
+    "home": "首页",
+    "categories": "分类",
+    "search": "搜索",
+    "about": "关于",
+    "contact": "联系我们",
+    "privacy": "隐私政策",
+    "openMenu": "打开菜单",
+    "closeMenu": "关闭菜单",
+    "skipToContent": "跳转至内容",
+    "mainNavigation": "主导航"
+  },
+  "actions": {
+    "calculate": "计算",
+    "reset": "重置",
+    "copy": "复制",
+    "share": "分享",
+    "print": "打印",
+    "save": "保存"
+  },
+  "labels": {
+    "result": "结果",
+    "results": "结果",
+    "inputs": "输入",
+    "settings": "设置",
+    "formula": "公式",
+    "references": "参考资料",
+    "related": "相关计算器",
+    "loading": "加载中…",
+    "noResults": "无结果"
+  },
+  "errors": {
+    "required": "此字段为必填项",
+    "invalid": "无效值",
+    "outOfRange": "值超出范围",
+    "tooSmall": "值过小",
+    "tooLarge": "值过大"
+  },
+  "footer": {
+    "copyright": "© Karaman Calculators",
+    "disclaimer": "结果仅供参考。在做出重要决定之前请先核实。",
+    "sourceCode": "源代码",
+    "links": "链接",
+    "lastUpdated": "最后更新",
+    "allCalculators": "所有计算器",
+    "comingSoon": "即将推出"
+  },
+  "theme": {
+    "toggle": "切换主题",
+    "light": "浅色",
+    "dark": "深色",
+    "auto": "自动",
+    "switchToLight": "切换到浅色模式",
+    "switchToDark": "切换到深色模式",
+    "switchToAuto": "使用系统主题"
+  },
+  "lang": {
+    "switchLanguage": "切换语言",
+    "currentLanguage": "当前语言",
+    "selectLanguage": "选择语言"
+  },
+  "breadcrumb": {
+    "home": "首页",
+    "navigation": "面包屑导航"
+  },
+  "categories": {
+    "health": "健康",
+    "finance": "金融",
+    "engineering": "工程",
+    "math": "数学",
+    "conversion": "换算",
+    "all": "所有分类"
+  },
+  "consent": {
+    "title": "我们重视您的隐私",
+    "description": "我们使用Cookie和类似技术来改善您的体验、分析流量并展示相关广告。您可以选择接受哪些类别。",
+    "accept": "全部接受",
+    "reject": "全部拒绝",
+    "customize": "自定义",
+    "privacyPolicy": "隐私政策",
+    "customizeTitle": "Cookie偏好设置",
+    "savePreferences": "保存偏好",
+    "back": "返回",
+    "essential": "必要",
+    "essentialDesc": "网站正常运行所必需。始终启用。",
+    "analytics": "分析",
+    "analyticsDesc": "帮助我们了解访客如何使用网站（匿名）。",
+    "ads": "广告",
+    "adsDesc": "使我们能够展示相关广告并支持对计算器的免费访问。"
+  }
+}

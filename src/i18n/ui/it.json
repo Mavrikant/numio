@@ -1,0 +1,97 @@
+{
+  "site": {
+    "name": "Karaman Calculators",
+    "tagline": "Calcolatori gratuiti per la vita quotidiana — finanza, salute, ingegneria, matematica.",
+    "description": "Usa calcolatori gratuiti e accurati in 12 lingue. Nessun accesso, nessun tracciamento, risultati istantanei."
+  },
+  "nav": {
+    "home": "Home",
+    "categories": "Categorie",
+    "search": "Cerca",
+    "about": "Chi siamo",
+    "contact": "Contatti",
+    "privacy": "Informativa sulla privacy",
+    "openMenu": "Apri menu",
+    "closeMenu": "Chiudi menu",
+    "skipToContent": "Vai al contenuto",
+    "mainNavigation": "Navigazione principale"
+  },
+  "actions": {
+    "calculate": "Calcola",
+    "reset": "Reimposta",
+    "copy": "Copia",
+    "share": "Condividi",
+    "print": "Stampa",
+    "save": "Salva"
+  },
+  "labels": {
+    "result": "Risultato",
+    "results": "Risultati",
+    "inputs": "Input",
+    "settings": "Impostazioni",
+    "formula": "Formula",
+    "references": "Riferimenti",
+    "related": "Calcolatori correlati",
+    "loading": "Caricamento…",
+    "noResults": "Nessun risultato"
+  },
+  "errors": {
+    "required": "Questo campo è obbligatorio",
+    "invalid": "Valore non valido",
+    "outOfRange": "Il valore è fuori dall'intervallo",
+    "tooSmall": "Il valore è troppo piccolo",
+    "tooLarge": "Il valore è troppo grande"
+  },
+  "footer": {
+    "copyright": "© Karaman Calculators",
+    "disclaimer": "I risultati sono solo a scopo informativo. Verificare prima di utilizzarli per decisioni importanti.",
+    "sourceCode": "Codice sorgente",
+    "links": "Link",
+    "lastUpdated": "Ultimo aggiornamento",
+    "allCalculators": "Tutti i calcolatori",
+    "comingSoon": "Prossimamente"
+  },
+  "theme": {
+    "toggle": "Cambia tema",
+    "light": "Chiaro",
+    "dark": "Scuro",
+    "auto": "Automatico",
+    "switchToLight": "Passa alla modalità chiara",
+    "switchToDark": "Passa alla modalità scura",
+    "switchToAuto": "Usa il tema di sistema"
+  },
+  "lang": {
+    "switchLanguage": "Cambia lingua",
+    "currentLanguage": "Lingua corrente",
+    "selectLanguage": "Seleziona lingua"
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "navigation": "Percorso di navigazione"
+  },
+  "categories": {
+    "health": "Salute",
+    "finance": "Finanza",
+    "engineering": "Ingegneria",
+    "math": "Matematica",
+    "conversion": "Conversione",
+    "all": "Tutte le categorie"
+  },
+  "consent": {
+    "title": "Rispettiamo la tua privacy",
+    "description": "Utilizziamo cookie e tecnologie simili per migliorare la tua esperienza, analizzare il traffico e mostrare annunci pertinenti. Puoi scegliere quali categorie accettare.",
+    "accept": "Accetta tutto",
+    "reject": "Rifiuta tutto",
+    "customize": "Personalizza",
+    "privacyPolicy": "Informativa sulla privacy",
+    "customizeTitle": "Preferenze cookie",
+    "savePreferences": "Salva preferenze",
+    "back": "Indietro",
+    "essential": "Essenziali",
+    "essentialDesc": "Necessari per il funzionamento del sito. Sempre attivi.",
+    "analytics": "Analisi",
+    "analyticsDesc": "Ci aiuta a capire come i visitatori usano il sito (anonimo).",
+    "ads": "Pubblicità",
+    "adsDesc": "Ci consente di mostrare annunci pertinenti e supportare l'accesso gratuito ai calcolatori."
+  }
+}

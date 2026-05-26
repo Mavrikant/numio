@@ -1,0 +1,97 @@
+{
+  "site": {
+    "name": "Karaman Calculators",
+    "tagline": "일상생활을 위한 무료 계산기 — 금융, 건강, 공학, 수학.",
+    "description": "12개 언어로 무료 정확한 계산기를 사용하세요. 로그인 없음, 추적 없음, 즉시 결과."
+  },
+  "nav": {
+    "home": "홈",
+    "categories": "카테고리",
+    "search": "검색",
+    "about": "소개",
+    "contact": "문의",
+    "privacy": "개인정보처리방침",
+    "openMenu": "메뉴 열기",
+    "closeMenu": "메뉴 닫기",
+    "skipToContent": "본문으로 건너뛰기",
+    "mainNavigation": "주요 내비게이션"
+  },
+  "actions": {
+    "calculate": "계산",
+    "reset": "초기화",
+    "copy": "복사",
+    "share": "공유",
+    "print": "인쇄",
+    "save": "저장"
+  },
+  "labels": {
+    "result": "결과",
+    "results": "결과 목록",
+    "inputs": "입력값",
+    "settings": "설정",
+    "formula": "공식",
+    "references": "참고 자료",
+    "related": "관련 계산기",
+    "loading": "로딩 중…",
+    "noResults": "결과 없음"
+  },
+  "errors": {
+    "required": "이 필드는 필수입니다",
+    "invalid": "유효하지 않은 값",
+    "outOfRange": "값이 범위를 벗어났습니다",
+    "tooSmall": "값이 너무 작습니다",
+    "tooLarge": "값이 너무 큽니다"
+  },
+  "footer": {
+    "copyright": "© Karaman Calculators",
+    "disclaimer": "결과는 정보 제공 목적으로만 사용됩니다. 중요한 결정에 사용하기 전에 확인하세요.",
+    "sourceCode": "소스 코드",
+    "links": "링크",
+    "lastUpdated": "마지막 업데이트",
+    "allCalculators": "모든 계산기",
+    "comingSoon": "곧 출시"
+  },
+  "theme": {
+    "toggle": "테마 전환",
+    "light": "밝게",
+    "dark": "어둡게",
+    "auto": "자동",
+    "switchToLight": "라이트 모드로 전환",
+    "switchToDark": "다크 모드로 전환",
+    "switchToAuto": "시스템 테마 사용"
+  },
+  "lang": {
+    "switchLanguage": "언어 변경",
+    "currentLanguage": "현재 언어",
+    "selectLanguage": "언어 선택"
+  },
+  "breadcrumb": {
+    "home": "홈",
+    "navigation": "이동 경로"
+  },
+  "categories": {
+    "health": "건강",
+    "finance": "금융",
+    "engineering": "공학",
+    "math": "수학",
+    "conversion": "변환",
+    "all": "모든 카테고리"
+  },
+  "consent": {
+    "title": "개인정보를 소중히 여깁니다",
+    "description": "경험 개선, 트래픽 분석, 관련 광고 표시를 위해 쿠키 및 유사 기술을 사용합니다. 수락할 카테고리를 선택할 수 있습니다.",
+    "accept": "전체 동의",
+    "reject": "전체 거부",
+    "customize": "맞춤 설정",
+    "privacyPolicy": "개인정보처리방침",
+    "customizeTitle": "쿠키 설정",
+    "savePreferences": "설정 저장",
+    "back": "뒤로",
+    "essential": "필수",
+    "essentialDesc": "사이트 기능에 필요합니다. 항상 활성화됩니다.",
+    "analytics": "분석",
+    "analyticsDesc": "방문자가 사이트를 어떻게 이용하는지 이해하는 데 도움이 됩니다 (익명).",
+    "ads": "광고",
+    "adsDesc": "관련 광고를 표시하고 계산기에 대한 무료 접근을 지원합니다."
+  }
+}
