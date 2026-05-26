@@ -1,0 +1,93 @@
+---
+title: "Calculadora de Deflexión de Viga"
+description: "Calcula la deflexión máxima, el momento flector y las reacciones en apoyos para vigas biapoyadas y en voladizo según la teoría de Euler-Bernoulli."
+---
+
+## Introducción
+
+La deflexión de vigas es uno de los cálculos más fundamentales en la ingeniería estructural. Cuando una viga soporta cargas, se flexiona, y esa deformación debe controlarse para garantizar la integridad estructural y la comodidad de los usuarios. Una deflexión excesiva puede agrietar revestimientos, desalinear maquinaria y provocar acumulación de agua en cubiertas.
+
+## Tipos de viga
+
+**Viga biapoyada:** Ambos extremos descansan sobre apoyos articulados o rodantes. Es la configuración más común en vigas de forjado de acero o madera.
+
+**Viga en voladizo:** Un extremo está completamente empotrado y el otro es libre. Típico en balcones, aleros de cubierta y alas de aeronaves.
+
+## Tipos de carga
+
+- Carga puntual en el centro del vano
+- Carga puntual en el extremo libre (solo voladizo)
+- Carga distribuida uniforme (CDU)
+
+## Fórmulas de deflexión
+
+Derivadas de la ecuación diferencial de Euler-Bernoulli EI(d²y/dx²) = M:
+
+| Configuración | Fórmula |
+|---|---|
+| Biapoyada, carga puntual centro | δ = FL³ / (48EI) |
+| Biapoyada, CDU | δ = 5wL⁴ / (384EI) |
+| Voladizo, carga puntual extremo libre | δ = FL³ / (3EI) |
+| Voladizo, CDU | δ = wL⁴ / (8EI) |
+
+## Módulo de Young
+
+| Material | E (GPa) |
+|---|---|
+| Acero estructural | 200–210 |
+| Aleación de aluminio | 68–72 |
+| Hormigón armado | 25–35 |
+| Madera blanda (fibra) | 8–12 |
+| Madera dura | 10–20 |
+
+## Momento de inercia de la sección
+
+El momento de inercia I mide la resistencia a la flexión de la sección transversal. Una viga más alta es dramáticamente más rígida porque I varía con el cubo del canto.
+
+**Sección rectangular:** I = (b × h³) / 12
+
+**Sección circular:** I = π × d⁴ / 64
+
+Para perfiles de acero normalizados (HEA, IPE, HEB), los valores de I se encuentran en tablas de fabricantes.
+
+## Límites de deformación
+
+Los códigos estructurales establecen límites de deflexión bajo cargas variables:
+
+| Elemento | Límite |
+|---|---|
+| Vigas de forjado | L/300 a L/360 |
+| Vigas de cubierta (sin enlucido) | L/200 |
+| Vigas de cubierta (con enlucido) | L/360 |
+| Voladizos | L/180 |
+
+## Momento flector y cortante
+
+La calculadora también calcula el momento flector máximo y la fuerza cortante máxima, necesarios para las **comprobaciones de resistencia**:
+
+- El **momento flector** determina el módulo resistente necesario
+- El **cortante** es determinante para la comprobación del alma
+
+Las reacciones en los apoyos son esenciales para diseñar la estructura soporte.
+
+## Hipótesis y limitaciones
+
+Este calculador se basa en la teoría de Euler-Bernoulli:
+
+1. Material elástico lineal (sin plastificación)
+2. Pequeñas deformaciones (δ << L)
+3. Viga homogénea de sección constante
+4. Deformación por cortante despreciable
+5. Sin esfuerzo axial
+
+**Todo proyecto estructural debe ser verificado por un ingeniero habilitado.**
+
+## Preguntas frecuentes
+
+**¿Por qué el voladizo se deflexiona mucho más que la viga biapoyada?**
+
+Bajo la misma carga y luz, un voladizo se deflexiona 16 veces más que una viga biapoyada (FL³/3EI frente a FL³/48EI). Esta diferencia se debe a las condiciones de contorno: el voladizo no tiene restricción de giro en el extremo libre ni el beneficio de un segundo apoyo.
+
+**¿Qué es la rigidez a flexión EI?**
+
+EI es el producto del módulo de Young (E) y el momento de inercia (I). Es la única medida de rigidez en todas las fórmulas de deflexión. Para reducir la deflexión a la mitad, hay que duplicar EI.

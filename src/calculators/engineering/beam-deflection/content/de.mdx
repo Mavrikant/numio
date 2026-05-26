@@ -1,0 +1,96 @@
+---
+title: "Balkendurchbiegung Rechner"
+description: "Berechnen Sie Durchbiegung, Biegemoment und Auflagerreaktionen für einfach gelagerte Balken und Kragbalken mit der Euler-Bernoulli-Theorie."
+---
+
+## Einführung
+
+Die Balkendurchbiegung ist eine der grundlegendsten Berechnungen im Stahlbau und Holzbau. Wenn ein Balken eine Last trägt, biegt er sich durch — und diese Durchbiegung muss für Gebrauchstauglichkeit und Tragfähigkeit kontrolliert werden. Übermäßige Durchbiegung kann Beläge beschädigen, Maschinen ausrichten, Wasserpfannen auf Dächern verursachen und Gebrauchstauglichkeitsprobleme hervorrufen, bevor die Traglast erreicht wird.
+
+## Balkentypen und Lastbilder
+
+**Einfach gelagerter Balken:** Beide Enden liegen auf Gelenk- oder Rollenlagerungen. Der häufigste Fall bei Deckenträgern aus Stahl oder Holz.
+
+**Kragbalken (Konsole):** Ein Ende ist vollständig eingespannt, das andere Ende ist frei. Typisch bei Balkonen, Dachüberständen und Flügelkonstruktionen.
+
+**Belastungsarten:**
+- Einzellast in Feldmitte
+- Einzellast am freien Ende (nur Kragbalken)
+- Gleichmäßig verteilte Last (gv. Last)
+
+## Berechnungsformeln
+
+Die Formeln basieren auf der Euler-Bernoulli-Balkentheorie (EI·d²y/dx² = M):
+
+| Konfiguration | Formel |
+|---|---|
+| Einfach gelagert, Einzellast Mitte | δ = FL³ / (48EI) |
+| Einfach gelagert, gv. Last | δ = 5wL⁴ / (384EI) |
+| Kragbalken, Einzellast freies Ende | δ = FL³ / (3EI) |
+| Kragbalken, gv. Last | δ = wL⁴ / (8EI) |
+
+## Materialkennwerte: Elastizitätsmodul
+
+| Werkstoff | E (GPa) |
+|---|---|
+| Baustahl S235/S355 | 200–210 |
+| Aluminiumlegierung | 68–72 |
+| Stahlbeton | 25–35 |
+| Nadelholz (längs) | 8–12 |
+| Laubholz | 10–20 |
+
+## Querschnittswerte: Flächenträgheitsmoment
+
+Das Flächenträgheitsmoment (I) misst, wie die Querschnittsfläche um die neutrale Achse verteilt ist. Ein tieferer Querschnitt ist dramatisch steifer, weil I mit der dritten Potenz der Höhe skaliert.
+
+**Rechteckquerschnitt:** I = (b × h³) / 12
+
+**Kreisquerschnitt:** I = π × d⁴ / 64
+
+Für Normstahlprofile (IPE, HEA, HEB) sind die I-Werte in Stahlbautabellen gelistet. Typische Werte reichen von ca. 500 cm⁴ (IPE200) bis über 100.000 cm⁴ (HEA700).
+
+## Gebrauchstauglichkeitsnachweise
+
+Die Normen legen Grenzwerte für die Durchbiegung fest:
+
+| Bauteile | Grenzwert |
+|---|---|
+| Deckenträger allgemein | L/300 bis L/360 |
+| Dachträger ohne Verputz | L/200 |
+| Dachträger mit Verputz | L/360 |
+| Kragbalken | L/180 |
+
+## Biegemoment und Querkraft
+
+Der Rechner gibt auch das maximale Biegemoment und die maximale Querkraft aus. Diese Werte werden für **Festigkeitsnachweise** verwendet:
+
+- Das **Biegemoment** bestimmt den benötigten Querschnittswiderstand (Wpl oder Wel)
+- Die **Querkraft** ist maßgebend für den Stegschubnachweis
+
+Die Auflagerreaktionen (A und B) sind Grundlagen für die Bemessung der tragenden Konstruktion.
+
+## Voraussetzungen
+
+Dieser Rechner basiert auf folgenden Annahmen:
+
+1. Linear elastisches Materialverhalten (keine Plastizierung)
+2. Kleine Verformungen (δ << L)
+3. Homogener, konstanter Querschnitt über die Länge
+4. Vernachlässigung der Schubverformung
+5. Kein Normalkrafteinfluss
+
+**Strukturelle Entwürfe müssen stets von einem zugelassenen Tragwerksplaner geprüft werden.**
+
+## Häufige Fragen
+
+**Warum biegt sich ein Kragbalken viel stärker durch als ein einfach gelagerter Balken?**
+
+Unter einer Einzellast biegt sich ein Kragbalken 16-mal mehr durch als ein einfach gelagerter Balken gleicher Spannweite (FL³/3EI gegenüber FL³/48EI). Der Faktor 16 ergibt sich aus den unterschiedlichen Randbedingungen.
+
+**Was ist die Biegesteifigkeit EI?**
+
+EI ist das Produkt aus Elastizitätsmodul (E) und Flächenträgheitsmoment (I). Es erscheint in allen Durchbiegungsformeln als einziges Maß für die Steifigkeit. Um die Durchbiegung zu halbieren, muss EI verdoppelt werden.
+
+**Welche Einheiten soll ich verwenden?**
+
+E in GPa (z.B. 200 für Stahl), I in cm⁴ (aus Profilstahltabellen), L in Metern, F in kN oder w in kN/m. Der Rechner gibt die Durchbiegung in mm aus.

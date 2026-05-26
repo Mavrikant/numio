@@ -1,0 +1,93 @@
+---
+title: "Calcolatore Deflessione Trave"
+description: "Calcola deflessione massima, momento flettente e reazioni vincolari per travi appoggiate e a mensola secondo la teoria di Eulero-Bernoulli."
+---
+
+## Introduzione
+
+La deflessione delle travi è uno dei calcoli più fondamentali nell'ingegneria strutturale. Quando una trave porta un carico, si deflette — e questa deformazione deve essere controllata per garantire l'integrità strutturale e il comfort degli occupanti. Una deflessione eccessiva può causare fessurazioni nei rivestimenti, disallineamento delle apparecchiature e ristagni d'acqua sulle coperture.
+
+## Tipi di trave
+
+**Trave semplicemente appoggiata:** Entrambe le estremità poggiano su supporti a cerniera o rullo. La configurazione più comune per le travi di solaio in acciaio o legno.
+
+**Trave a mensola (incastro-libera):** Un'estremità è completamente incastrata, l'altra è libera. Tipica in balconi, aggetti di copertura e ali di aeromobili.
+
+## Tipi di carico
+
+- Carico concentrato in mezzeria
+- Carico concentrato all'estremità libera (solo mensola)
+- Carico distribuito uniforme (CDU)
+
+## Formule di deflessione
+
+Derivate dall'equazione differenziale di Eulero-Bernoulli EI(d²y/dx²) = M:
+
+| Configurazione | Formula |
+|---|---|
+| Semplicemente appoggiata, concentrato centro | δ = FL³ / (48EI) |
+| Semplicemente appoggiata, CDU | δ = 5wL⁴ / (384EI) |
+| Mensola, concentrato estremità libera | δ = FL³ / (3EI) |
+| Mensola, CDU | δ = wL⁴ / (8EI) |
+
+## Modulo di Young
+
+| Materiale | E (GPa) |
+|---|---|
+| Acciaio strutturale | 200–210 |
+| Lega di alluminio | 68–72 |
+| Calcestruzzo armato | 25–35 |
+| Legno resinoso (lungo fibra) | 8–12 |
+| Legno duro | 10–20 |
+
+## Momento di inerzia della sezione
+
+Il momento di inerzia I misura la resistenza alla flessione della sezione trasversale. Una trave più alta è molto più rigida perché I varia con il cubo dell'altezza.
+
+**Sezione rettangolare:** I = (b × h³) / 12
+
+**Sezione circolare:** I = π × d⁴ / 64
+
+Per i profilati d'acciaio normali (IPE, HEA, HEB), i valori di I si trovano nelle tabelle dei produttori.
+
+## Limiti di deformazione
+
+Le norme stabiliscono limiti di deflessione sotto i carichi variabili:
+
+| Elemento | Limite |
+|---|---|
+| Travi di solaio | L/300 ÷ L/360 |
+| Travi di copertura (senza intonaco) | L/200 |
+| Travi di copertura (con intonaco) | L/360 |
+| Mensole | L/180 |
+
+## Momento flettente e taglio
+
+Il calcolatore fornisce anche il momento flettente massimo e la forza di taglio massima per le **verifiche di resistenza**:
+
+- Il **momento flettente** determina il modulo resistente necessario
+- Il **taglio** è determinante per la verifica dell'anima
+
+Le reazioni vincolari sono essenziali per progettare la struttura di supporto.
+
+## Ipotesi e limitazioni
+
+Il calcolatore si basa sulle ipotesi di Eulero-Bernoulli:
+
+1. Materiale elastico lineare (senza plastificazione)
+2. Piccole deformazioni (δ << L)
+3. Trave omogenea a sezione costante
+4. Deformazione di taglio trascurabile
+5. Senza sforzo normale
+
+**Ogni progetto strutturale deve essere verificato da un ingegnere abilitato.**
+
+## Domande frequenti
+
+**Perché la mensola si deflette molto di più della trave appoggiata?**
+
+Sotto lo stesso carico e la stessa luce, una mensola si deflette 16 volte di più di una trave semplicemente appoggiata (FL³/3EI rispetto a FL³/48EI). Questa differenza deriva dalle condizioni al contorno: la mensola non ha alcun vincolo di rotazione all'estremità libera.
+
+**Cos'è la rigidezza flessionale EI?**
+
+EI è il prodotto del modulo di Young (E) e del momento di inerzia (I). È l'unica misura di rigidezza in tutte le formule di deflessione. Per dimezzare la deflessione è necessario raddoppiare EI.

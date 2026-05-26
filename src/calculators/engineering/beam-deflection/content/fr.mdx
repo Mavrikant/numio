@@ -1,0 +1,93 @@
+---
+title: "Calculateur de Flèche de Poutre"
+description: "Calculez la flèche maximale, le moment fléchissant et les réactions d'appui pour poutres simplement appuyées et en console selon la théorie d'Euler-Bernoulli."
+---
+
+## Introduction
+
+La flèche d'une poutre est l'un des calculs les plus fondamentaux en ingénierie des structures. Lorsqu'une poutre supporte une charge, elle se défléchit — et cette déformation doit être maîtrisée pour garantir l'intégrité structurale et le confort des occupants. Une flèche excessive peut fissurer les finitions, désaligner les équipements et provoquer des infiltrations d'eau sur les toitures.
+
+## Types de poutres
+
+**Poutre simplement appuyée :** Deux appuis, l'un rotulé et l'autre glissant. Configuration la plus fréquente pour les poutres de plancher en acier ou en bois.
+
+**Poutre en console (encastrée-libre) :** Un bout encastré, un bout libre. Typique des balcons, des avant-toits et des ailes d'aéronefs.
+
+## Types de charges
+
+- Charge ponctuelle en travée (milieu de portée)
+- Charge ponctuelle à l'extrémité libre (console uniquement)
+- Charge uniformément répartie (CUR)
+
+## Formules de flèche
+
+Dérivées de l'équation différentielle d'Euler-Bernoulli EI(d²y/dx²) = M :
+
+| Configuration | Formule |
+|---|---|
+| Simplement appuyée, charge ponctuelle centre | δ = FL³ / (48EI) |
+| Simplement appuyée, CUR | δ = 5wL⁴ / (384EI) |
+| Console, charge ponctuelle bout libre | δ = FL³ / (3EI) |
+| Console, CUR | δ = wL⁴ / (8EI) |
+
+## Module de Young
+
+| Matériau | E (GPa) |
+|---|---|
+| Acier de construction | 200–210 |
+| Alliage d'aluminium | 68–72 |
+| Béton armé | 25–35 |
+| Bois résineux (fil) | 8–12 |
+| Bois feuillus | 10–20 |
+
+## Moment d'inertie de section
+
+Le moment d'inertie I mesure la résistance à la flexion de la section transversale. Une poutre plus haute est beaucoup plus rigide car I varie avec le cube de la hauteur.
+
+**Section rectangulaire :** I = (b × h³) / 12
+
+**Section circulaire :** I = π × d⁴ / 64
+
+Pour les profilés acier normalisés (IPE, HEA, HEB), les valeurs de I sont disponibles dans les tables de profilés.
+
+## Limites de déformation
+
+Les normes définissent des limites pour la flèche sous charges variables :
+
+| Élément | Limite |
+|---|---|
+| Poutres de plancher | L/300 à L/360 |
+| Poutres de toiture (sans plâtre) | L/200 |
+| Poutres de toiture (avec plâtre) | L/360 |
+| Consoles | L/180 |
+
+## Moment fléchissant et effort tranchant
+
+Le calculateur fournit également le moment fléchissant maximal et l'effort tranchant maximal pour les **vérifications de résistance** :
+
+- Le **moment fléchissant** détermine le module de résistance nécessaire
+- L'**effort tranchant** est déterminant pour la vérification de l'âme
+
+Les réactions d'appui sont indispensables pour la conception des éléments porteurs.
+
+## Hypothèses et limites
+
+Ce calculateur repose sur les hypothèses d'Euler-Bernoulli :
+
+1. Matériau linéaire élastique (pas de plasticité)
+2. Petites déformations (δ << L)
+3. Poutre homogène à section constante
+4. Déformation de cisaillement négligée
+5. Pas d'effort axial
+
+**Tout projet de structure doit être vérifié par un ingénieur habilité.**
+
+## Questions fréquentes
+
+**Pourquoi la console se défléchit-elle bien plus qu'une poutre simplement appuyée ?**
+
+Sous une charge identique et une portée identique, une console se défléchit 16 fois plus (FL³/3EI vs FL³/48EI). Cet écart découle des conditions aux limites : la console n'a pas de contrainte de rotation à l'extrémité libre et ne bénéficie pas du renfort d'un deuxième appui.
+
+**Qu'est-ce que la rigidité en flexion EI ?**
+
+EI est le produit du module de Young (E) et du moment d'inertie (I). C'est l'unique mesure de rigidité dans toutes les formules de flèche. Pour réduire la flèche de moitié, il faut doubler EI.

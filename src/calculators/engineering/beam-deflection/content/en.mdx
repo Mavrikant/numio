@@ -1,0 +1,128 @@
+---
+title: "Beam Deflection Calculator"
+description: "Calculate maximum deflection, bending moment, and support reactions for simply supported and cantilever beams using Euler-Bernoulli beam theory."
+---
+
+## Introduction
+
+Beam deflection is one of the most fundamental calculations in structural engineering. Whenever a beam carries a load, it bends — and that bending must be controlled to ensure both structural integrity and user comfort. Excessive deflection can crack finishes, misalign machinery, create ponding on roofs, and trigger serviceability failures long before any strength limit is reached.
+
+This calculator uses **Euler-Bernoulli beam theory** to compute the maximum deflection (in mm), maximum bending moment (in N·m), maximum shear force (in N), and support reactions (in N) for the two most common beam configurations — simply supported and cantilever — under three common load patterns.
+
+## Supported Beam Types
+
+**Simply Supported Beam:** Both ends rest on pin or roller supports. The beam can rotate freely at each support but cannot translate vertically. This is the most common configuration in steel and timber floor beams.
+
+**Cantilever Beam:** One end is fully fixed (built-in), while the other end is free to deflect. Cantilevers appear in balconies, overhanging roof structures, retaining walls, and aircraft wings.
+
+## Load Types
+
+**Point Load at Centre (Simply Supported) / at Midspan (Cantilever):** A concentrated force applied at a single point. The most straightforward load case and the most conservative for checking deflection at the midpoint.
+
+**Point Load at Free End (Cantilever only):** A concentrated force at the free tip of a cantilever. This produces the largest possible deflection for a given load and span — use it for worst-case checks such as a person standing at the end of a balcony.
+
+**Uniform Distributed Load (UDL):** A load spread evenly along the entire span, expressed in kN/m. This models self-weight, floor loading, snow, or any area load that can be converted to a line load by multiplying by tributary width.
+
+## Deflection Formulas
+
+The formulas below are derived from the Euler-Bernoulli differential equation EI(d²y/dx²) = M(x), integrated twice with appropriate boundary conditions.
+
+**Simply Supported, Point Load at Centre:**
+δ_max = FL³ / (48EI)  — occurs at midspan
+
+**Simply Supported, Uniform Distributed Load:**
+δ_max = 5wL⁴ / (384EI)  — occurs at midspan
+
+**Cantilever, Point Load at Free End:**
+δ_max = FL³ / (3EI)  — occurs at the free end
+
+**Cantilever, Uniform Distributed Load:**
+δ_max = wL⁴ / (8EI)  — occurs at the free end
+
+Where:
+- **F** = concentrated force (N)
+- **w** = distributed load intensity (N/m)
+- **L** = beam span (m)
+- **E** = Young's modulus (Pa)
+- **I** = second moment of area (m⁴)
+
+The calculator handles unit conversions automatically: enter E in GPa and I in cm⁴, and deflection is returned in mm.
+
+## Material Properties: Young's Modulus
+
+Young's modulus (E) quantifies a material's stiffness — its resistance to elastic deformation. Higher E means less deflection for the same load.
+
+| Material | E (GPa) |
+|---|---|
+| Structural steel (S275/S355) | 200–210 |
+| Stainless steel | 193–200 |
+| Aluminium alloy | 68–72 |
+| Reinforced concrete | 25–35 |
+| Timber (softwood, along grain) | 8–12 |
+| Timber (hardwood) | 10–20 |
+| Glass fibre reinforced plastic | 15–45 |
+
+## Section Properties: Second Moment of Area
+
+The second moment of area (I), also called the moment of inertia of the cross-section, measures how the cross-sectional area is distributed about the neutral axis. A deeper beam is dramatically stiffer because I scales with the cube of depth.
+
+**Rectangular section:** I = (b × h³) / 12
+
+**Circular section:** I = π × d⁴ / 64
+
+For standard steel sections (I-beams, channels, tubes), I is tabulated in structural engineering handbooks and manufacturer data sheets. Typical IPE/HEA steel sections range from around 500 cm⁴ (IPE200) to over 100,000 cm⁴ (HEA700).
+
+## Serviceability Limits
+
+Design codes specify deflection limits to protect finishes and ensure comfort. Common limits for the maximum deflection under imposed (live) loading are:
+
+| Element | Typical Limit |
+|---|---|
+| General floor beams | L/300 to L/360 |
+| Roof beams (no plaster) | L/200 |
+| Roof beams (with plaster) | L/360 |
+| Cantilever beams | L/180 |
+| Industrial gantry beams | L/600 |
+
+For example, a 6 m floor beam should deflect no more than 6000/360 = 16.7 mm under imposed load.
+
+## Bending Moment and Shear Force
+
+The calculator also outputs maximum bending moment and maximum shear force, which are used in **strength checks** (as opposed to serviceability checks for deflection):
+
+- **Bending moment** drives the choice of section modulus (Z = I/y) and determines if the beam will yield in bending
+- **Shear force** drives web shear capacity checks, particularly important in short, heavily loaded beams
+
+Support reactions (Reaction A and Reaction B) indicate the forces that the beam imposes on its supports — critical input for designing the supporting structure.
+
+## Assumptions and Limitations
+
+This calculator uses the following assumptions inherent to Euler-Bernoulli beam theory:
+
+1. **Linear elastic material:** stress is proportional to strain; no yielding
+2. **Small deflections:** deflection is much smaller than the span (typically δ < L/10)
+3. **Homogeneous, prismatic beam:** uniform cross-section and material along the length
+4. **Plane sections remain plane:** shear deformation is neglected (Bernoulli hypothesis)
+5. **No axial loading:** the formulas do not account for axial force effects
+
+These assumptions are valid for typical structural steel and timber beams. For deep beams (span/depth < 10), concrete members, or beams with significant axial loads, more advanced methods are required.
+
+**Always verify structural designs with a licensed structural engineer.** This calculator is intended for educational and preliminary design purposes.
+
+## FAQ
+
+**Why does the cantilever deflect so much more than the simply supported beam?**
+
+For the same load and span, a cantilever beam deflects 16 times more than a simply supported beam under a point load at the same position (comparing FL³/3EI to FL³/48EI). The factor of 16 arises from the different boundary conditions: the cantilever has no rotational restraint at the free end and no bending stiffness contribution from a second support. This is why cantilever spans are typically much shorter than simply supported spans for the same section size.
+
+**What is EI (flexural rigidity)?**
+
+EI is the product of Young's modulus (E) and second moment of area (I), and it is called the **flexural rigidity** of the beam. It appears in every deflection formula as the sole measure of stiffness. To halve the deflection, you must double EI — achieved by either using a stiffer material or a deeper section.
+
+**What units should I use?**
+
+Enter Young's modulus in GPa (e.g., 200 for steel), second moment of area in cm⁴ (from section tables), span in metres, and load in kN (point load) or kN/m (UDL). The calculator converts everything internally and returns deflection in mm.
+
+**Can I use this for concrete beams?**
+
+For preliminary checks, yes. Use E ≈ 30 GPa and calculate I from the gross cross-section. However, concrete beam behaviour is complicated by cracking (which reduces effective I by 2–5×), creep (which increases long-term deflection by 2–3×), and reinforcement. Always use a specialist concrete design tool or code procedure for final concrete design.

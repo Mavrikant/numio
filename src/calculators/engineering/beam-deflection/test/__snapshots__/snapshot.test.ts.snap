@@ -1,0 +1,1532 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Beam Deflection definition — shape snapshot > snapshot: cantilever point-end result 1`] = `
+{
+  "maxBendingMoment": 30000,
+  "maxDeflection": 22.499999999999996,
+  "maxShear": 10000,
+  "reactionA": 10000,
+  "reactionB": 0,
+}
+`;
+
+exports[`Beam Deflection definition — shape snapshot > snapshot: definition shape 1`] = `
+{
+  "category": Any<String>,
+  "compute": [Function],
+  "i18n": {
+    "ar": {
+      "description": "حاسبة مجانية لانحراف العتبات الإنشائية. أدخل نوع العتبة والحمل والامتداد ومعامل المرونة وعزم المساحة الثاني.",
+      "errors": {
+        "invalidCombination": "الحمل النقطي عند الطرف الحر صالح فقط للعتبات الكابولية.",
+      },
+      "faq": [
+        {
+          "a": "تستخدم نظرية أويلر-برنولي: مادة مرنة خطياً، انحرافات صغيرة، عتبة متجانسة منشورية، بدون تشوه قصي.",
+          "q": "ما الافتراضات التي تستخدمها هذه الحاسبة؟",
+        },
+      ],
+      "inputs": {
+        "E": {
+          "help": "الفولاذ ≈ 200 جيجاباسكال، الخرسانة ≈ 30 جيجاباسكال، الخشب ≈ 10 جيجاباسكال.",
+          "label": "معامل المرونة (جيجاباسكال)",
+        },
+        "I": {
+          "help": "عزم القصور الذاتي للمقطع العرضي، من جداول خصائص المقاطع.",
+          "label": "عزم المساحة الثاني (سم⁴)",
+        },
+        "beamType": {
+          "help": "مدعومة بسيطاً (دعمان) أو كابولية (تثبيت من طرف واحد).",
+          "label": "نوع العتبة",
+        },
+        "load": {
+          "help": "للأحمال النقطية: الحمل الكلي بكيلونيوتن؛ للحمل الموزع: كثافة الحمل بكيلونيوتن/م.",
+          "label": "الحمل (كيلونيوتن أو كيلونيوتن/م)",
+        },
+        "loadType": {
+          "help": "حمل نقطي في المنتصف، حمل نقطي عند الطرف الحر (كابولية فقط)، أو حمل موزع منتظم.",
+          "label": "نوع الحمل",
+        },
+        "span": {
+          "help": "الطول الكلي للعتبة بالأمتار.",
+          "label": "الامتداد (م)",
+        },
+      },
+      "keywords": [
+        "حاسبة انحراف العتبة",
+        "عتبة مدعومة بسيطاً",
+        "عتبة كابولية",
+        "حاسبة عزم الانحناء",
+        "حسابات إنشائية",
+      ],
+      "options": {
+        "beamType": {
+          "cantilever": "كابولية",
+          "simplySupported": "مدعومة بسيطاً",
+        },
+        "loadType": {
+          "pointCenter": "حمل نقطي في المنتصف",
+          "pointEnd": "حمل نقطي عند الطرف الحر (كابولية)",
+          "udl": "حمل موزع منتظم",
+        },
+      },
+      "outputs": {
+        "maxBendingMoment": {
+          "help": "أقصى عزم انحناء على طول العتبة.",
+          "label": "أقصى عزم انحناء (ن·م)",
+        },
+        "maxDeflection": {
+          "help": "الإزاحة العرضية القصوى للعتبة.",
+          "label": "أقصى انحراف (مم)",
+        },
+        "maxShear": {
+          "help": "أقصى قوة قص على طول العتبة.",
+          "label": "أقصى قوة قص (ن)",
+        },
+        "reactionA": {
+          "help": "ردة فعل الدعامة عند الطرف الأيسر.",
+          "label": "ردة فعل A (ن)",
+        },
+        "reactionB": {
+          "help": "ردة فعل الدعامة عند الطرف الأيمن (0 للكابولية).",
+          "label": "ردة فعل B (ن)",
+        },
+      },
+      "short": "احسب انحراف العتبة وعزم الانحناء وردود الأفعال للعتبات المدعومة بسيطاً والكابولية.",
+      "title": "حاسبة انحراف العتبة",
+    },
+    "de": {
+      "description": "Kostenloser struktureller Balkendurchbiegungsrechner. Geben Sie Balkentyp, Belastung, Spannweite, Elastizitätsmodul und Flächenträgheitsmoment ein.",
+      "errors": {
+        "invalidCombination": "Einzellast am freien Ende ist nur für Kragbalken gültig.",
+      },
+      "faq": [
+        {
+          "a": "Es wird die Euler-Bernoulli-Balkentheorie verwendet: lineares elastisches Material, kleine Durchbiegungen, homogener Querschnitt, keine Schubverformung.",
+          "q": "Welche Annahmen trifft dieser Rechner?",
+        },
+      ],
+      "inputs": {
+        "E": {
+          "help": "Stahl ≈ 200 GPa, Beton ≈ 30 GPa, Holz ≈ 10 GPa.",
+          "label": "Elastizitätsmodul (GPa)",
+        },
+        "I": {
+          "help": "Trägheitsmoment des Querschnitts, aus Profilstahltabellen.",
+          "label": "Flächenträgheitsmoment (cm⁴)",
+        },
+        "beamType": {
+          "help": "Einfach gelagert (beidseitig aufgelagert) oder Kragbalken (einseitig eingespannt).",
+          "label": "Balkentyp",
+        },
+        "load": {
+          "help": "Für Einzellasten: Gesamtlast in kN; für verteilte Last: Lastintensität in kN/m.",
+          "label": "Last (kN oder kN/m)",
+        },
+        "loadType": {
+          "help": "Einzellast in Feldmitte, Einzellast am freien Ende (nur Kragbalken) oder gleichmäßig verteilte Last.",
+          "label": "Belastungsart",
+        },
+        "span": {
+          "help": "Gesamtlänge des Balkens in Metern.",
+          "label": "Spannweite (m)",
+        },
+      },
+      "keywords": [
+        "Balkendurchbiegung Rechner",
+        "einfach gelagerter Balken",
+        "Kragbalken",
+        "Biegemoment Rechner",
+        "Baustatik Rechner",
+      ],
+      "options": {
+        "beamType": {
+          "cantilever": "Kragbalken",
+          "simplySupported": "Einfach gelagert",
+        },
+        "loadType": {
+          "pointCenter": "Einzellast in Feldmitte",
+          "pointEnd": "Einzellast am freien Ende (Kragbalken)",
+          "udl": "Gleichmäßig verteilte Last",
+        },
+      },
+      "outputs": {
+        "maxBendingMoment": {
+          "help": "Maximales Biegemoment entlang des Balkens.",
+          "label": "Max. Biegemoment (N·m)",
+        },
+        "maxDeflection": {
+          "help": "Maximale Querverschiebung des Balkens.",
+          "label": "Max. Durchbiegung (mm)",
+        },
+        "maxShear": {
+          "help": "Maximale Querkraft entlang des Balkens.",
+          "label": "Max. Querkraft (N)",
+        },
+        "reactionA": {
+          "help": "Auflagerkraft am linken Ende.",
+          "label": "Auflagerkraft A (N)",
+        },
+        "reactionB": {
+          "help": "Auflagerkraft am rechten Ende (0 für Kragbalken).",
+          "label": "Auflagerkraft B (N)",
+        },
+      },
+      "short": "Berechnen Sie Durchbiegung, Biegemoment und Auflagerreaktionen für einfach gelagerte Balken und Kragbalken.",
+      "title": "Balkendurchbiegung Rechner",
+    },
+    "en": {
+      "description": "Free structural beam deflection calculator. Enter beam type, load configuration, span, Young's modulus, and second moment of area to get maximum deflection (mm), bending moment (N·m), shear force (N), and support reactions.",
+      "errors": {
+        "invalidCombination": "Point load at free end is only valid for cantilever beams.",
+      },
+      "faq": [
+        {
+          "a": "This calculator uses Euler-Bernoulli beam theory, which assumes: linear elastic material, small deflections (deflection << span), homogeneous prismatic beam, and no shear deformation. These assumptions are valid for most practical steel and timber beam designs.",
+          "q": "What assumptions does this calculator make?",
+        },
+        {
+          "a": "The second moment of area (also called moment of inertia) measures the beam cross-section's resistance to bending. It is found in structural section tables. For a rectangular section: I = (b × h³) / 12, where b is width and h is depth in the direction of bending.",
+          "q": "What is the second moment of area (I)?",
+        },
+        {
+          "a": "Common values: structural steel = 200 GPa, reinforced concrete = 25–30 GPa, timber = 8–12 GPa, aluminum = 70 GPa. Use the value for the beam's primary material.",
+          "q": "What Young's modulus should I use?",
+        },
+      ],
+      "inputs": {
+        "E": {
+          "help": "Modulus of elasticity. Steel ≈ 200 GPa, concrete ≈ 30 GPa, timber ≈ 10 GPa.",
+          "label": "Young's modulus (GPa)",
+        },
+        "I": {
+          "help": "Moment of inertia of the beam cross-section. Found in section property tables.",
+          "label": "Second moment of area (cm⁴)",
+        },
+        "beamType": {
+          "help": "Simply supported (both ends pinned/rolled) or cantilever (one end fixed).",
+          "label": "Beam type",
+        },
+        "load": {
+          "help": "For point loads, enter total load in kN. For UDL, enter load intensity in kN/m.",
+          "label": "Load (kN or kN/m)",
+        },
+        "loadType": {
+          "help": "Point load at center, point load at free end (cantilever only), or uniform distributed load (UDL).",
+          "label": "Load type",
+        },
+        "span": {
+          "help": "Total length of the beam in metres.",
+          "label": "Span (m)",
+        },
+      },
+      "keywords": [
+        "beam deflection calculator",
+        "simply supported beam calculator",
+        "cantilever beam calculator",
+        "bending moment calculator",
+        "structural beam calculator",
+        "Euler-Bernoulli beam",
+        "beam shear force",
+      ],
+      "options": {
+        "beamType": {
+          "cantilever": "Cantilever",
+          "simplySupported": "Simply Supported",
+        },
+        "loadType": {
+          "pointCenter": "Point Load at Centre",
+          "pointEnd": "Point Load at Free End (cantilever)",
+          "udl": "Uniform Distributed Load (UDL)",
+        },
+      },
+      "outputs": {
+        "maxBendingMoment": {
+          "help": "Maximum bending moment along the beam.",
+          "label": "Max bending moment (N·m)",
+        },
+        "maxDeflection": {
+          "help": "Maximum transverse displacement of the beam.",
+          "label": "Max deflection (mm)",
+        },
+        "maxShear": {
+          "help": "Maximum shear force along the beam.",
+          "label": "Max shear force (N)",
+        },
+        "reactionA": {
+          "help": "Support reaction at left end (fixed end for cantilever).",
+          "label": "Reaction A (N)",
+        },
+        "reactionB": {
+          "help": "Support reaction at right end (0 for cantilever).",
+          "label": "Reaction B (N)",
+        },
+      },
+      "short": "Calculate beam deflection, bending moment, and reactions for simply supported and cantilever beams.",
+      "title": "Beam Deflection Calculator",
+    },
+    "es": {
+      "description": "Calculadora gratuita de deflexión de viga estructural. Introduce el tipo de viga, carga, luz, módulo de Young y momento de inercia.",
+      "errors": {
+        "invalidCombination": "La carga puntual en extremo libre solo es válida para vigas en voladizo.",
+      },
+      "faq": [
+        {
+          "a": "Utiliza la teoría de Euler-Bernoulli: material linealmente elástico, pequeñas deflexiones, viga homogénea prismática, sin deformación por cortante.",
+          "q": "¿Qué hipótesis utiliza esta calculadora?",
+        },
+      ],
+      "inputs": {
+        "E": {
+          "help": "Acero ≈ 200 GPa, hormigón ≈ 30 GPa, madera ≈ 10 GPa.",
+          "label": "Módulo de Young (GPa)",
+        },
+        "I": {
+          "help": "Segundo momento de área de la sección transversal.",
+          "label": "Momento de inercia (cm⁴)",
+        },
+        "beamType": {
+          "help": "Biapoyada (dos apoyos) o en voladizo (un empotramiento).",
+          "label": "Tipo de viga",
+        },
+        "load": {
+          "help": "Para cargas puntuales: carga total en kN; para carga distribuida: intensidad en kN/m.",
+          "label": "Carga (kN o kN/m)",
+        },
+        "loadType": {
+          "help": "Carga puntual en el centro, en el extremo libre (voladizo) o carga distribuida uniforme.",
+          "label": "Tipo de carga",
+        },
+        "span": {
+          "help": "Longitud total de la viga en metros.",
+          "label": "Luz (m)",
+        },
+      },
+      "keywords": [
+        "calculadora deflexión viga",
+        "viga biapoyada",
+        "viga en voladizo",
+        "calculadora momento flector",
+        "cálculo estructural",
+      ],
+      "options": {
+        "beamType": {
+          "cantilever": "Voladizo",
+          "simplySupported": "Biapoyada",
+        },
+        "loadType": {
+          "pointCenter": "Carga puntual en el centro",
+          "pointEnd": "Carga puntual en extremo libre (voladizo)",
+          "udl": "Carga distribuida uniforme",
+        },
+      },
+      "outputs": {
+        "maxBendingMoment": {
+          "help": "Momento flector máximo a lo largo de la viga.",
+          "label": "Momento flector máx (N·m)",
+        },
+        "maxDeflection": {
+          "help": "Desplazamiento transversal máximo de la viga.",
+          "label": "Deflexión máx (mm)",
+        },
+        "maxShear": {
+          "help": "Fuerza cortante máxima a lo largo de la viga.",
+          "label": "Cortante máx (N)",
+        },
+        "reactionA": {
+          "help": "Reacción en el apoyo izquierdo.",
+          "label": "Reacción A (N)",
+        },
+        "reactionB": {
+          "help": "Reacción en el apoyo derecho (0 para voladizo).",
+          "label": "Reacción B (N)",
+        },
+      },
+      "short": "Calcula la deflexión, momento flector y reacciones en vigas biapoyadas y en voladizo.",
+      "title": "Calculadora de Deflexión de Viga",
+    },
+    "fr": {
+      "description": "Calculateur gratuit de flèche de poutre structurelle. Entrez le type de poutre, la charge, la portée, le module de Young et le moment d'inertie.",
+      "errors": {
+        "invalidCombination": "La charge ponctuelle en bout libre n'est valide que pour les poutres en console.",
+      },
+      "faq": [
+        {
+          "a": "Il utilise la théorie d'Euler-Bernoulli : matériau linéaire élastique, petites déformations, poutre homogène prismatique, sans déformation de cisaillement.",
+          "q": "Quelles hypothèses ce calculateur adopte-t-il ?",
+        },
+      ],
+      "inputs": {
+        "E": {
+          "help": "Acier ≈ 200 GPa, béton ≈ 30 GPa, bois ≈ 10 GPa.",
+          "label": "Module de Young (GPa)",
+        },
+        "I": {
+          "help": "Moment d'inertie de la section transversale, dans les tables de profilés.",
+          "label": "Moment d'inertie (cm⁴)",
+        },
+        "beamType": {
+          "help": "Simplement appuyée (deux appuis) ou en console (un encastrement).",
+          "label": "Type de poutre",
+        },
+        "load": {
+          "help": "Pour charges ponctuelles : charge totale en kN ; pour charge répartie : intensité en kN/m.",
+          "label": "Charge (kN ou kN/m)",
+        },
+        "loadType": {
+          "help": "Charge ponctuelle en travée, charge ponctuelle en bout libre (console) ou charge uniformément répartie.",
+          "label": "Type de charge",
+        },
+        "span": {
+          "help": "Longueur totale de la poutre en mètres.",
+          "label": "Portée (m)",
+        },
+      },
+      "keywords": [
+        "calculateur flèche poutre",
+        "poutre simplement appuyée",
+        "poutre en console",
+        "calculateur moment fléchissant",
+        "calcul structurel",
+      ],
+      "options": {
+        "beamType": {
+          "cantilever": "Console",
+          "simplySupported": "Simplement appuyée",
+        },
+        "loadType": {
+          "pointCenter": "Charge ponctuelle en travée",
+          "pointEnd": "Charge en bout libre (console)",
+          "udl": "Charge uniformément répartie",
+        },
+      },
+      "outputs": {
+        "maxBendingMoment": {
+          "help": "Moment fléchissant maximal le long de la poutre.",
+          "label": "Moment fléchissant max (N·m)",
+        },
+        "maxDeflection": {
+          "help": "Déplacement transversal maximal de la poutre.",
+          "label": "Flèche max (mm)",
+        },
+        "maxShear": {
+          "help": "Effort tranchant maximal le long de la poutre.",
+          "label": "Effort tranchant max (N)",
+        },
+        "reactionA": {
+          "help": "Réaction d'appui à l'extrémité gauche.",
+          "label": "Réaction A (N)",
+        },
+        "reactionB": {
+          "help": "Réaction d'appui à l'extrémité droite (0 pour console).",
+          "label": "Réaction B (N)",
+        },
+      },
+      "short": "Calculez la flèche, le moment fléchissant et les réactions d'appui pour poutres simplement appuyées et en console.",
+      "title": "Calculateur de Flèche de Poutre",
+    },
+    "hi": {
+      "description": "निःशुल्क संरचनात्मक बीम विक्षेपण कैलकुलेटर। बीम प्रकार, भार, स्पैन, यंग मॉड्यूलस और क्षेत्र का दूसरा क्षण दर्ज करके अधिकतम विक्षेपण (mm), झुकाव क्षण (N·m), अपरूपण बल (N) और समर्थन प्रतिक्रियाएं प्राप्त करें।",
+      "errors": {
+        "invalidCombination": "मुक्त छोर पर बिंदु भार केवल कैंटिलीवर बीम के लिए मान्य है।",
+      },
+      "faq": [
+        {
+          "a": "यह कैलकुलेटर ऑयलर-बर्नौली बीम सिद्धांत का उपयोग करता है: रैखिक लोचदार सामग्री, छोटे विक्षेपण, सजातीय प्रिज्मीय बीम, अपरूपण विरूपण की उपेक्षा।",
+          "q": "यह कैलकुलेटर कौन से मान्यताओं का उपयोग करता है?",
+        },
+      ],
+      "inputs": {
+        "E": {
+          "help": "स्टील ≈ 200 GPa, कंक्रीट ≈ 30 GPa, लकड़ी ≈ 10 GPa।",
+          "label": "यंग मॉड्यूलस (GPa)",
+        },
+        "I": {
+          "help": "बीम क्रॉस-सेक्शन का जड़त्व का क्षण। अनुभाग गुण तालिकाओं से प्राप्त करें।",
+          "label": "क्षेत्र का दूसरा क्षण (cm⁴)",
+        },
+        "beamType": {
+          "help": "सिम्पली सपोर्टेड (दोनों छोर पिन) या कैंटिलीवर (एक छोर स्थिर)।",
+          "label": "बीम का प्रकार",
+        },
+        "load": {
+          "help": "बिंदु भार के लिए कुल भार (kN); समान वितरित भार के लिए भार तीव्रता (kN/m)।",
+          "label": "भार (kN या kN/m)",
+        },
+        "loadType": {
+          "help": "केंद्र पर बिंदु भार, मुक्त छोर पर बिंदु भार (केवल कैंटिलीवर), या समान वितरित भार।",
+          "label": "भार का प्रकार",
+        },
+        "span": {
+          "help": "बीम की कुल लंबाई (मीटर में)।",
+          "label": "स्पैन (m)",
+        },
+      },
+      "keywords": [
+        "बीम विक्षेपण कैलकुलेटर",
+        "सिम्पली सपोर्टेड बीम",
+        "कैंटिलीवर बीम",
+        "झुकाव क्षण कैलकुलेटर",
+        "संरचनात्मक बीम कैलकुलेटर",
+      ],
+      "options": {
+        "beamType": {
+          "cantilever": "कैंटिलीवर",
+          "simplySupported": "सिम्पली सपोर्टेड",
+        },
+        "loadType": {
+          "pointCenter": "केंद्र पर बिंदु भार",
+          "pointEnd": "मुक्त छोर पर बिंदु भार (कैंटिलीवर)",
+          "udl": "समान वितरित भार",
+        },
+      },
+      "outputs": {
+        "maxBendingMoment": {
+          "help": "बीम के साथ अधिकतम झुकाव क्षण।",
+          "label": "अधिकतम झुकाव क्षण (N·m)",
+        },
+        "maxDeflection": {
+          "help": "बीम का अधिकतम अनुप्रस्थ विस्थापन।",
+          "label": "अधिकतम विक्षेपण (mm)",
+        },
+        "maxShear": {
+          "help": "बीम के साथ अधिकतम अपरूपण बल।",
+          "label": "अधिकतम अपरूपण बल (N)",
+        },
+        "reactionA": {
+          "help": "बाएं छोर पर समर्थन प्रतिक्रिया (कैंटिलीवर के लिए स्थिर छोर)।",
+          "label": "प्रतिक्रिया A (N)",
+        },
+        "reactionB": {
+          "help": "दाएं छोर पर समर्थन प्रतिक्रिया (कैंटिलीवर के लिए 0)।",
+          "label": "प्रतिक्रिया B (N)",
+        },
+      },
+      "short": "सिम्पली सपोर्टेड और कैंटिलीवर बीम के लिए विक्षेपण, झुकाव क्षण और समर्थन प्रतिक्रियाएं गणना करें।",
+      "title": "बीम विक्षेपण कैलकुलेटर",
+    },
+    "it": {
+      "description": "Calcolatore gratuito di deflessione trave strutturale. Inserisci tipo di trave, carico, luce, modulo di Young e momento di inerzia.",
+      "errors": {
+        "invalidCombination": "Il carico all'estremità libera è valido solo per le travi a mensola.",
+      },
+      "faq": [
+        {
+          "a": "Si basa sulla teoria di Eulero-Bernoulli: materiale linearmente elastico, piccole deflessioni, trave omogenea prismatica, senza deformazione da taglio.",
+          "q": "Quali ipotesi utilizza questo calcolatore?",
+        },
+      ],
+      "inputs": {
+        "E": {
+          "help": "Acciaio ≈ 200 GPa, calcestruzzo ≈ 30 GPa, legno ≈ 10 GPa.",
+          "label": "Modulo di Young (GPa)",
+        },
+        "I": {
+          "help": "Secondo momento di area della sezione trasversale.",
+          "label": "Momento di inerzia (cm⁴)",
+        },
+        "beamType": {
+          "help": "Semplicemente appoggiata (due appoggi) o a mensola (un incastro).",
+          "label": "Tipo di trave",
+        },
+        "load": {
+          "help": "Per carichi concentrati: carico totale in kN; per carico distribuito: intensità in kN/m.",
+          "label": "Carico (kN o kN/m)",
+        },
+        "loadType": {
+          "help": "Carico concentrato in mezzeria, carico all'estremità libera (mensola) o carico distribuito uniforme.",
+          "label": "Tipo di carico",
+        },
+        "span": {
+          "help": "Lunghezza totale della trave in metri.",
+          "label": "Luce (m)",
+        },
+      },
+      "keywords": [
+        "calcolatore deflessione trave",
+        "trave semplicemente appoggiata",
+        "trave a mensola",
+        "calcolatore momento flettente",
+        "calcolo strutturale",
+      ],
+      "options": {
+        "beamType": {
+          "cantilever": "A mensola",
+          "simplySupported": "Semplicemente appoggiata",
+        },
+        "loadType": {
+          "pointCenter": "Carico concentrato in mezzeria",
+          "pointEnd": "Carico all'estremità libera (mensola)",
+          "udl": "Carico distribuito uniforme",
+        },
+      },
+      "outputs": {
+        "maxBendingMoment": {
+          "help": "Momento flettente massimo lungo la trave.",
+          "label": "Momento flettente max (N·m)",
+        },
+        "maxDeflection": {
+          "help": "Spostamento trasversale massimo della trave.",
+          "label": "Deflessione max (mm)",
+        },
+        "maxShear": {
+          "help": "Forza di taglio massima lungo la trave.",
+          "label": "Taglio max (N)",
+        },
+        "reactionA": {
+          "help": "Reazione vincolare all'estremità sinistra.",
+          "label": "Reazione A (N)",
+        },
+        "reactionB": {
+          "help": "Reazione vincolare all'estremità destra (0 per mensola).",
+          "label": "Reazione B (N)",
+        },
+      },
+      "short": "Calcola la deflessione, il momento flettente e le reazioni vincolari per travi appoggiate e a mensola.",
+      "title": "Calcolatore Deflessione Trave",
+    },
+    "ja": {
+      "description": "無料の構造梁たわみ計算機。梁の種類、荷重、スパン、ヤング率、断面2次モーメントを入力して最大たわみ（mm）、曲げモーメント（N·m）、せん断力（N）、支点反力を求めます。",
+      "errors": {
+        "invalidCombination": "自由端の集中荷重は片持ち梁にのみ適用できます。",
+      },
+      "faq": [
+        {
+          "a": "オイラー・ベルヌーイ梁理論を使用：線形弾性材料、小たわみ（たわみ<<スパン）、均質な角柱形梁、せん断変形は無視。",
+          "q": "この計算機はどのような仮定を用いていますか？",
+        },
+      ],
+      "inputs": {
+        "E": {
+          "help": "鋼材 ≈ 200 GPa、コンクリート ≈ 30 GPa、木材 ≈ 10 GPa。",
+          "label": "ヤング率（GPa）",
+        },
+        "I": {
+          "help": "断面の断面2次モーメント。鋼材表から参照。",
+          "label": "断面2次モーメント（cm⁴）",
+        },
+        "beamType": {
+          "help": "単純支持梁（両端ピン）または片持ち梁（一端固定）。",
+          "label": "梁の種類",
+        },
+        "load": {
+          "help": "集中荷重は総荷重（kN）、等分布荷重は荷重強度（kN/m）を入力。",
+          "label": "荷重（kN または kN/m）",
+        },
+        "loadType": {
+          "help": "中央集中荷重、自由端集中荷重（片持ち梁のみ）、または等分布荷重。",
+          "label": "荷重の種類",
+        },
+        "span": {
+          "help": "梁の全長（メートル）。",
+          "label": "スパン（m）",
+        },
+      },
+      "keywords": [
+        "梁たわみ計算機",
+        "単純支持梁計算機",
+        "片持ち梁計算機",
+        "曲げモーメント計算機",
+        "構造梁計算機",
+      ],
+      "options": {
+        "beamType": {
+          "cantilever": "片持ち梁",
+          "simplySupported": "単純支持梁",
+        },
+        "loadType": {
+          "pointCenter": "中央集中荷重",
+          "pointEnd": "自由端集中荷重（片持ち梁）",
+          "udl": "等分布荷重",
+        },
+      },
+      "outputs": {
+        "maxBendingMoment": {
+          "help": "梁に沿った最大曲げモーメント。",
+          "label": "最大曲げモーメント（N·m）",
+        },
+        "maxDeflection": {
+          "help": "梁の最大横変位。",
+          "label": "最大たわみ（mm）",
+        },
+        "maxShear": {
+          "help": "梁に沿った最大せん断力。",
+          "label": "最大せん断力（N）",
+        },
+        "reactionA": {
+          "help": "左端（片持ち梁の固定端）の支点反力。",
+          "label": "支点反力A（N）",
+        },
+        "reactionB": {
+          "help": "右端の支点反力（片持ち梁は0）。",
+          "label": "支点反力B（N）",
+        },
+      },
+      "short": "単純支持梁と片持ち梁のたわみ、曲げモーメント、支点反力を計算します。",
+      "title": "梁のたわみ計算機",
+    },
+    "ko": {
+      "description": "무료 구조 보 처짐 계산기. 보 유형, 하중, 경간, 탄성계수, 단면 2차 모멘트를 입력하면 최대 처짐(mm), 휨 모멘트(N·m), 전단력(N), 지점 반력을 구할 수 있습니다.",
+      "errors": {
+        "invalidCombination": "자유단 집중하중은 캔틸레버보에만 적용됩니다.",
+      },
+      "faq": [
+        {
+          "a": "오일러-베르누이 보 이론을 사용합니다: 선형 탄성 재료, 소변형(처짐 << 경간), 균질한 각기둥형 보, 전단 변형 무시.",
+          "q": "이 계산기는 어떤 가정을 사용하나요?",
+        },
+      ],
+      "inputs": {
+        "E": {
+          "help": "강재 ≈ 200 GPa, 콘크리트 ≈ 30 GPa, 목재 ≈ 10 GPa.",
+          "label": "탄성계수(GPa)",
+        },
+        "I": {
+          "help": "보 단면의 단면 2차 모멘트. 단면 특성표에서 확인.",
+          "label": "단면 2차 모멘트(cm⁴)",
+        },
+        "beamType": {
+          "help": "단순지지보(양단 핀/롤러) 또는 캔틸레버보(일단 고정).",
+          "label": "보 유형",
+        },
+        "load": {
+          "help": "집중하중은 총 하중(kN), 등분포하중은 하중 강도(kN/m) 입력.",
+          "label": "하중(kN 또는 kN/m)",
+        },
+        "loadType": {
+          "help": "중앙 집중하중, 자유단 집중하중(캔틸레버만), 또는 등분포하중.",
+          "label": "하중 유형",
+        },
+        "span": {
+          "help": "보의 전체 길이(미터).",
+          "label": "경간(m)",
+        },
+      },
+      "keywords": [
+        "보 처짐 계산기",
+        "단순지지보 계산기",
+        "캔틸레버보 계산기",
+        "휨 모멘트 계산기",
+        "구조 보 계산기",
+      ],
+      "options": {
+        "beamType": {
+          "cantilever": "캔틸레버보",
+          "simplySupported": "단순지지보",
+        },
+        "loadType": {
+          "pointCenter": "중앙 집중하중",
+          "pointEnd": "자유단 집중하중(캔틸레버)",
+          "udl": "등분포하중",
+        },
+      },
+      "outputs": {
+        "maxBendingMoment": {
+          "help": "보를 따라 최대 휨 모멘트.",
+          "label": "최대 휨 모멘트(N·m)",
+        },
+        "maxDeflection": {
+          "help": "보의 최대 횡방향 변위.",
+          "label": "최대 처짐(mm)",
+        },
+        "maxShear": {
+          "help": "보를 따라 최대 전단력.",
+          "label": "최대 전단력(N)",
+        },
+        "reactionA": {
+          "help": "좌단(캔틸레버보의 고정단)의 지점 반력.",
+          "label": "반력 A(N)",
+        },
+        "reactionB": {
+          "help": "우단의 지점 반력(캔틸레버보는 0).",
+          "label": "반력 B(N)",
+        },
+      },
+      "short": "단순지지보와 캔틸레버보의 처짐, 휨 모멘트, 지점 반력을 계산합니다.",
+      "title": "보 처짐 계산기",
+    },
+    "ru": {
+      "description": "Бесплатный калькулятор прогиба строительной балки. Введите тип балки, нагрузку, пролёт, модуль Юнга и момент инерции.",
+      "errors": {
+        "invalidCombination": "Нагрузка на свободном конце допустима только для консольных балок.",
+      },
+      "faq": [
+        {
+          "a": "Используется теория Эйлера-Бернулли: линейно упругий материал, малые прогибы, однородная призматическая балка, без учёта сдвиговой деформации.",
+          "q": "Какие допущения делает этот калькулятор?",
+        },
+      ],
+      "inputs": {
+        "E": {
+          "help": "Сталь ≈ 200 ГПа, бетон ≈ 30 ГПа, древесина ≈ 10 ГПа.",
+          "label": "Модуль Юнга (ГПа)",
+        },
+        "I": {
+          "help": "Момент инерции поперечного сечения из таблиц сортамента.",
+          "label": "Момент инерции (см⁴)",
+        },
+        "beamType": {
+          "help": "Просто опёртая (две опоры) или консольная (одна заделка).",
+          "label": "Тип балки",
+        },
+        "load": {
+          "help": "Для сосредоточенных нагрузок — в кН; для распределённых — интенсивность в кН/м.",
+          "label": "Нагрузка (кН или кН/м)",
+        },
+        "loadType": {
+          "help": "Сосредоточенная нагрузка в середине пролёта, на свободном конце (консоль) или равномерно распределённая нагрузка.",
+          "label": "Тип нагрузки",
+        },
+        "span": {
+          "help": "Общая длина балки в метрах.",
+          "label": "Пролёт (м)",
+        },
+      },
+      "keywords": [
+        "калькулятор прогиба балки",
+        "просто опёртая балка",
+        "консольная балка",
+        "калькулятор изгибающего момента",
+        "строительный расчёт",
+      ],
+      "options": {
+        "beamType": {
+          "cantilever": "Консольная",
+          "simplySupported": "Просто опёртая",
+        },
+        "loadType": {
+          "pointCenter": "Сосредоточенная нагрузка в середине",
+          "pointEnd": "Нагрузка на свободном конце (консоль)",
+          "udl": "Равномерно распределённая нагрузка",
+        },
+      },
+      "outputs": {
+        "maxBendingMoment": {
+          "help": "Максимальный изгибающий момент по длине балки.",
+          "label": "Макс. изгибающий момент (Н·м)",
+        },
+        "maxDeflection": {
+          "help": "Максимальное поперечное смещение балки.",
+          "label": "Макс. прогиб (мм)",
+        },
+        "maxShear": {
+          "help": "Максимальная поперечная сила по длине балки.",
+          "label": "Макс. перерезывающая сила (Н)",
+        },
+        "reactionA": {
+          "help": "Реакция опоры на левом конце.",
+          "label": "Реакция A (Н)",
+        },
+        "reactionB": {
+          "help": "Реакция опоры на правом конце (0 для консоли).",
+          "label": "Реакция B (Н)",
+        },
+      },
+      "short": "Рассчитайте прогиб, изгибающий момент и реакции опор для просто опёртых и консольных балок.",
+      "title": "Калькулятор прогиба балки",
+    },
+    "tr": {
+      "description": "Ücretsiz yapısal kiriş sehimi hesaplayıcısı. Kiriş türünü, yük düzenini, açıklığı, elastisite modülünü ve atalet momentini girerek maksimum sehimi (mm), eğilme momentini (N·m) ve mesnet tepkilerini elde edin.",
+      "errors": {
+        "invalidCombination": "Serbest uçta nokta yük yalnızca konsol kirişler için geçerlidir.",
+      },
+      "faq": [
+        {
+          "a": "Euler-Bernoulli kiriş teorisi kullanılır: doğrusal elastik malzeme, küçük sehimler (sehim << açıklık), homojen prizmatik kiriş ve kayma deformasyonunun ihmal edilmesi.",
+          "q": "Bu hesaplayıcı hangi varsayımları yapar?",
+        },
+      ],
+      "inputs": {
+        "E": {
+          "help": "Çelik ≈ 200 GPa, beton ≈ 30 GPa, ahşap ≈ 10 GPa.",
+          "label": "Elastisite modülü (GPa)",
+        },
+        "I": {
+          "help": "Kiriş kesitinin atalet momenti. Profil tablolarından bulunur.",
+          "label": "İkinci alan momenti (cm⁴)",
+        },
+        "beamType": {
+          "help": "Basit mesnetli (her iki ucu tutturulmuş) veya konsol (bir ucu sabit).",
+          "label": "Kiriş tipi",
+        },
+        "load": {
+          "help": "Nokta yükler için toplam yük (kN), yayılı yük için yük yoğunluğu (kN/m).",
+          "label": "Yük (kN veya kN/m)",
+        },
+        "loadType": {
+          "help": "Ortada nokta yük, serbest uçta nokta yük (yalnızca konsol) veya düzgün yayılı yük.",
+          "label": "Yük tipi",
+        },
+        "span": {
+          "help": "Kirişin toplam uzunluğu (metre).",
+          "label": "Açıklık (m)",
+        },
+      },
+      "keywords": [
+        "kiriş sehimi hesaplayıcı",
+        "basit mesnetli kiriş",
+        "konsol kiriş",
+        "eğilme momenti",
+        "yapısal kiriş hesabı",
+      ],
+      "options": {
+        "beamType": {
+          "cantilever": "Konsol",
+          "simplySupported": "Basit Mesnetli",
+        },
+        "loadType": {
+          "pointCenter": "Ortada Nokta Yük",
+          "pointEnd": "Serbest Uçta Nokta Yük (konsol)",
+          "udl": "Düzgün Yayılı Yük",
+        },
+      },
+      "outputs": {
+        "maxBendingMoment": {
+          "help": "Kiriş boyunca maksimum eğilme momenti.",
+          "label": "Maks eğilme momenti (N·m)",
+        },
+        "maxDeflection": {
+          "help": "Kirişin maksimum yanal yerdeğiştirmesi.",
+          "label": "Maks sehim (mm)",
+        },
+        "maxShear": {
+          "help": "Kiriş boyunca maksimum kesme kuvveti.",
+          "label": "Maks kesme kuvveti (N)",
+        },
+        "reactionA": {
+          "help": "Sol uçtaki mesnet tepkisi.",
+          "label": "A mesnet tepkisi (N)",
+        },
+        "reactionB": {
+          "help": "Sağ uçtaki mesnet tepkisi (konsol için 0).",
+          "label": "B mesnet tepkisi (N)",
+        },
+      },
+      "short": "Basit mesnetli ve konsol kirişler için sehim, eğilme momenti ve mesnet tepkilerini hesaplayın.",
+      "title": "Kiriş Sehimi Hesaplayıcı",
+    },
+    "zh": {
+      "description": "免费结构梁挠度计算器。输入梁类型、荷载、跨度、杨氏模量和截面惯性矩，获得最大挠度（mm）、弯矩（N·m）、剪力（N）和支座反力。",
+      "errors": {
+        "invalidCombination": "自由端集中荷载仅适用于悬臂梁。",
+      },
+      "faq": [
+        {
+          "a": "使用欧拉-伯努利梁理论：线弹性材料、小变形（挠度远小于跨度）、均质棱柱形梁、不计剪切变形。",
+          "q": "本计算器采用哪些假设？",
+        },
+      ],
+      "inputs": {
+        "E": {
+          "help": "钢材≈200GPa，混凝土≈30GPa，木材≈10GPa。",
+          "label": "杨氏模量（GPa）",
+        },
+        "I": {
+          "help": "梁截面的第二面积矩，可从截面属性表中查取。",
+          "label": "截面惯性矩（cm⁴）",
+        },
+        "beamType": {
+          "help": "简支梁（两端铰支）或悬臂梁（一端固定）。",
+          "label": "梁类型",
+        },
+        "load": {
+          "help": "集中荷载输入总荷载（kN）；均布荷载输入荷载强度（kN/m）。",
+          "label": "荷载（kN或kN/m）",
+        },
+        "loadType": {
+          "help": "跨中集中荷载、自由端集中荷载（仅悬臂梁）或均布荷载。",
+          "label": "荷载类型",
+        },
+        "span": {
+          "help": "梁的总长度（米）。",
+          "label": "跨度（m）",
+        },
+      },
+      "keywords": [
+        "梁挠度计算器",
+        "简支梁计算器",
+        "悬臂梁计算器",
+        "弯矩计算器",
+        "结构梁计算器",
+      ],
+      "options": {
+        "beamType": {
+          "cantilever": "悬臂梁",
+          "simplySupported": "简支梁",
+        },
+        "loadType": {
+          "pointCenter": "跨中集中荷载",
+          "pointEnd": "自由端集中荷载（悬臂梁）",
+          "udl": "均布荷载",
+        },
+      },
+      "outputs": {
+        "maxBendingMoment": {
+          "help": "梁上的最大弯矩。",
+          "label": "最大弯矩（N·m）",
+        },
+        "maxDeflection": {
+          "help": "梁的最大横向位移。",
+          "label": "最大挠度（mm）",
+        },
+        "maxShear": {
+          "help": "梁上的最大剪切力。",
+          "label": "最大剪力（N）",
+        },
+        "reactionA": {
+          "help": "左端（悬臂梁固定端）的支座反力。",
+          "label": "支座A反力（N）",
+        },
+        "reactionB": {
+          "help": "右端的支座反力（悬臂梁为0）。",
+          "label": "支座B反力（N）",
+        },
+      },
+      "short": "计算简支梁和悬臂梁的挠度、弯矩和支座反力。",
+      "title": "梁挠度计算器",
+    },
+  },
+  "icon": Any<String>,
+  "inputSchema": ZodEffects {
+    "_def": {
+      "effect": {
+        "refinement": [Function],
+        "type": "refinement",
+      },
+      "schema": ZodObject {
+        "_cached": {
+          "keys": [
+            "beamType",
+            "loadType",
+            "load",
+            "span",
+            "E",
+            "I",
+          ],
+          "shape": {
+            "E": ZodNumber {
+              "_def": {
+                "checks": [
+                  {
+                    "inclusive": false,
+                    "kind": "min",
+                    "message": undefined,
+                    "value": 0,
+                  },
+                ],
+                "coerce": false,
+                "typeName": "ZodNumber",
+              },
+              "and": [Function],
+              "array": [Function],
+              "brand": [Function],
+              "catch": [Function],
+              "default": [Function],
+              "describe": [Function],
+              "isNullable": [Function],
+              "isOptional": [Function],
+              "max": [Function],
+              "min": [Function],
+              "nullable": [Function],
+              "nullish": [Function],
+              "optional": [Function],
+              "or": [Function],
+              "parse": [Function],
+              "parseAsync": [Function],
+              "pipe": [Function],
+              "promise": [Function],
+              "readonly": [Function],
+              "refine": [Function],
+              "refinement": [Function],
+              "safeParse": [Function],
+              "safeParseAsync": [Function],
+              "spa": [Function],
+              "step": [Function],
+              "superRefine": [Function],
+              "transform": [Function],
+              "~standard": {
+                "validate": [Function],
+                "vendor": "zod",
+                "version": 1,
+              },
+            },
+            "I": ZodNumber {
+              "_def": {
+                "checks": [
+                  {
+                    "inclusive": false,
+                    "kind": "min",
+                    "message": undefined,
+                    "value": 0,
+                  },
+                ],
+                "coerce": false,
+                "typeName": "ZodNumber",
+              },
+              "and": [Function],
+              "array": [Function],
+              "brand": [Function],
+              "catch": [Function],
+              "default": [Function],
+              "describe": [Function],
+              "isNullable": [Function],
+              "isOptional": [Function],
+              "max": [Function],
+              "min": [Function],
+              "nullable": [Function],
+              "nullish": [Function],
+              "optional": [Function],
+              "or": [Function],
+              "parse": [Function],
+              "parseAsync": [Function],
+              "pipe": [Function],
+              "promise": [Function],
+              "readonly": [Function],
+              "refine": [Function],
+              "refinement": [Function],
+              "safeParse": [Function],
+              "safeParseAsync": [Function],
+              "spa": [Function],
+              "step": [Function],
+              "superRefine": [Function],
+              "transform": [Function],
+              "~standard": {
+                "validate": [Function],
+                "vendor": "zod",
+                "version": 1,
+              },
+            },
+            "beamType": ZodEnum {
+              "_cache": Set {
+                "simply-supported",
+                "cantilever",
+              },
+              "_def": {
+                "typeName": "ZodEnum",
+                "values": [
+                  "simply-supported",
+                  "cantilever",
+                ],
+              },
+              "and": [Function],
+              "array": [Function],
+              "brand": [Function],
+              "catch": [Function],
+              "default": [Function],
+              "describe": [Function],
+              "isNullable": [Function],
+              "isOptional": [Function],
+              "nullable": [Function],
+              "nullish": [Function],
+              "optional": [Function],
+              "or": [Function],
+              "parse": [Function],
+              "parseAsync": [Function],
+              "pipe": [Function],
+              "promise": [Function],
+              "readonly": [Function],
+              "refine": [Function],
+              "refinement": [Function],
+              "safeParse": [Function],
+              "safeParseAsync": [Function],
+              "spa": [Function],
+              "superRefine": [Function],
+              "transform": [Function],
+              "~standard": {
+                "validate": [Function],
+                "vendor": "zod",
+                "version": 1,
+              },
+            },
+            "load": ZodNumber {
+              "_def": {
+                "checks": [
+                  {
+                    "inclusive": false,
+                    "kind": "min",
+                    "message": undefined,
+                    "value": 0,
+                  },
+                ],
+                "coerce": false,
+                "typeName": "ZodNumber",
+              },
+              "and": [Function],
+              "array": [Function],
+              "brand": [Function],
+              "catch": [Function],
+              "default": [Function],
+              "describe": [Function],
+              "isNullable": [Function],
+              "isOptional": [Function],
+              "max": [Function],
+              "min": [Function],
+              "nullable": [Function],
+              "nullish": [Function],
+              "optional": [Function],
+              "or": [Function],
+              "parse": [Function],
+              "parseAsync": [Function],
+              "pipe": [Function],
+              "promise": [Function],
+              "readonly": [Function],
+              "refine": [Function],
+              "refinement": [Function],
+              "safeParse": [Function],
+              "safeParseAsync": [Function],
+              "spa": [Function],
+              "step": [Function],
+              "superRefine": [Function],
+              "transform": [Function],
+              "~standard": {
+                "validate": [Function],
+                "vendor": "zod",
+                "version": 1,
+              },
+            },
+            "loadType": ZodEnum {
+              "_cache": Set {
+                "point-center",
+                "point-end",
+                "udl",
+              },
+              "_def": {
+                "typeName": "ZodEnum",
+                "values": [
+                  "point-center",
+                  "point-end",
+                  "udl",
+                ],
+              },
+              "and": [Function],
+              "array": [Function],
+              "brand": [Function],
+              "catch": [Function],
+              "default": [Function],
+              "describe": [Function],
+              "isNullable": [Function],
+              "isOptional": [Function],
+              "nullable": [Function],
+              "nullish": [Function],
+              "optional": [Function],
+              "or": [Function],
+              "parse": [Function],
+              "parseAsync": [Function],
+              "pipe": [Function],
+              "promise": [Function],
+              "readonly": [Function],
+              "refine": [Function],
+              "refinement": [Function],
+              "safeParse": [Function],
+              "safeParseAsync": [Function],
+              "spa": [Function],
+              "superRefine": [Function],
+              "transform": [Function],
+              "~standard": {
+                "validate": [Function],
+                "vendor": "zod",
+                "version": 1,
+              },
+            },
+            "span": ZodNumber {
+              "_def": {
+                "checks": [
+                  {
+                    "inclusive": false,
+                    "kind": "min",
+                    "message": undefined,
+                    "value": 0,
+                  },
+                ],
+                "coerce": false,
+                "typeName": "ZodNumber",
+              },
+              "and": [Function],
+              "array": [Function],
+              "brand": [Function],
+              "catch": [Function],
+              "default": [Function],
+              "describe": [Function],
+              "isNullable": [Function],
+              "isOptional": [Function],
+              "max": [Function],
+              "min": [Function],
+              "nullable": [Function],
+              "nullish": [Function],
+              "optional": [Function],
+              "or": [Function],
+              "parse": [Function],
+              "parseAsync": [Function],
+              "pipe": [Function],
+              "promise": [Function],
+              "readonly": [Function],
+              "refine": [Function],
+              "refinement": [Function],
+              "safeParse": [Function],
+              "safeParseAsync": [Function],
+              "spa": [Function],
+              "step": [Function],
+              "superRefine": [Function],
+              "transform": [Function],
+              "~standard": {
+                "validate": [Function],
+                "vendor": "zod",
+                "version": 1,
+              },
+            },
+          },
+        },
+        "_def": {
+          "catchall": ZodNever {
+            "_def": {
+              "typeName": "ZodNever",
+            },
+            "and": [Function],
+            "array": [Function],
+            "brand": [Function],
+            "catch": [Function],
+            "default": [Function],
+            "describe": [Function],
+            "isNullable": [Function],
+            "isOptional": [Function],
+            "nullable": [Function],
+            "nullish": [Function],
+            "optional": [Function],
+            "or": [Function],
+            "parse": [Function],
+            "parseAsync": [Function],
+            "pipe": [Function],
+            "promise": [Function],
+            "readonly": [Function],
+            "refine": [Function],
+            "refinement": [Function],
+            "safeParse": [Function],
+            "safeParseAsync": [Function],
+            "spa": [Function],
+            "superRefine": [Function],
+            "transform": [Function],
+            "~standard": {
+              "validate": [Function],
+              "vendor": "zod",
+              "version": 1,
+            },
+          },
+          "shape": [Function],
+          "typeName": "ZodObject",
+          "unknownKeys": "strip",
+        },
+        "and": [Function],
+        "array": [Function],
+        "augment": [Function],
+        "brand": [Function],
+        "catch": [Function],
+        "default": [Function],
+        "describe": [Function],
+        "isNullable": [Function],
+        "isOptional": [Function],
+        "nonstrict": [Function],
+        "nullable": [Function],
+        "nullish": [Function],
+        "optional": [Function],
+        "or": [Function],
+        "parse": [Function],
+        "parseAsync": [Function],
+        "pipe": [Function],
+        "promise": [Function],
+        "readonly": [Function],
+        "refine": [Function],
+        "refinement": [Function],
+        "safeParse": [Function],
+        "safeParseAsync": [Function],
+        "spa": [Function],
+        "superRefine": [Function],
+        "transform": [Function],
+        "~standard": {
+          "validate": [Function],
+          "vendor": "zod",
+          "version": 1,
+        },
+      },
+      "typeName": "ZodEffects",
+    },
+    "and": [Function],
+    "array": [Function],
+    "brand": [Function],
+    "catch": [Function],
+    "default": [Function],
+    "describe": [Function],
+    "isNullable": [Function],
+    "isOptional": [Function],
+    "nullable": [Function],
+    "nullish": [Function],
+    "optional": [Function],
+    "or": [Function],
+    "parse": [Function],
+    "parseAsync": [Function],
+    "pipe": [Function],
+    "promise": [Function],
+    "readonly": [Function],
+    "refine": [Function],
+    "refinement": [Function],
+    "safeParse": [Function],
+    "safeParseAsync": [Function],
+    "spa": [Function],
+    "superRefine": [Function],
+    "transform": [Function],
+    "~standard": {
+      "validate": [Function],
+      "vendor": "zod",
+      "version": 1,
+    },
+  },
+  "inputs": [
+    {
+      "defaultValue": "simply-supported",
+      "id": "beamType",
+      "required": true,
+      "type": {
+        "kind": "select",
+        "options": [
+          {
+            "i18nKey": "simplySupported",
+            "value": "simply-supported",
+          },
+          {
+            "i18nKey": "cantilever",
+            "value": "cantilever",
+          },
+        ],
+      },
+    },
+    {
+      "defaultValue": "point-center",
+      "id": "loadType",
+      "required": true,
+      "type": {
+        "kind": "select",
+        "options": [
+          {
+            "i18nKey": "pointCenter",
+            "value": "point-center",
+          },
+          {
+            "i18nKey": "pointEnd",
+            "value": "point-end",
+          },
+          {
+            "i18nKey": "udl",
+            "value": "udl",
+          },
+        ],
+      },
+    },
+    {
+      "defaultValue": 10,
+      "id": "load",
+      "required": true,
+      "type": {
+        "kind": "number",
+        "min": 0.001,
+        "step": 0.1,
+      },
+    },
+    {
+      "defaultValue": 5,
+      "id": "span",
+      "required": true,
+      "type": {
+        "kind": "number",
+        "min": 0.01,
+        "step": 0.1,
+        "unit": "m",
+      },
+    },
+    {
+      "defaultValue": 200,
+      "id": "E",
+      "required": true,
+      "type": {
+        "kind": "number",
+        "min": 0.001,
+        "step": 1,
+      },
+    },
+    {
+      "defaultValue": 1000,
+      "id": "I",
+      "required": true,
+      "type": {
+        "kind": "number",
+        "min": 0.001,
+        "step": 100,
+      },
+    },
+  ],
+  "meta": {
+    "disclaimer": "This calculator assumes linearly elastic, homogeneous, prismatic beams with small deflections. Results do not account for shear deformation, self-weight, or pre-stress. Always verify structural designs with a licensed engineer.",
+    "formulaLatex": "\\delta_{\\text{max}} = \\frac{FL^3}{48EI} \\text{ (SS point)}, \\quad \\delta_{\\text{max}} = \\frac{5wL^4}{384EI} \\text{ (SS UDL)}",
+    "references": [
+      {
+        "authority": "Young, W.C. & Budynas, R.G. (McGraw-Hill, 2011)",
+        "title": "Roark's Formulas for Stress and Strain, 8th edition",
+      },
+      {
+        "authority": "Hibbeler, R.C. (Pearson)",
+        "title": "Mechanics of Materials",
+      },
+    ],
+  },
+  "outputs": [
+    {
+      "format": "number",
+      "highlight": true,
+      "id": "maxDeflection",
+      "precision": 3,
+      "unit": "mm",
+    },
+    {
+      "format": "number",
+      "id": "maxBendingMoment",
+      "precision": 1,
+    },
+    {
+      "format": "number",
+      "id": "maxShear",
+      "precision": 1,
+    },
+    {
+      "format": "number",
+      "id": "reactionA",
+      "precision": 1,
+    },
+    {
+      "format": "number",
+      "id": "reactionB",
+      "precision": 1,
+    },
+  ],
+  "priority": Any<String>,
+  "related": [
+    "concrete",
+  ],
+  "slug": Any<String>,
+  "tags": [
+    "beam",
+    "deflection",
+    "structural",
+    "bending moment",
+    "shear force",
+    "Euler-Bernoulli",
+  ],
+}
+`;
+
+exports[`Beam Deflection definition — shape snapshot > snapshot: simply-supported point-center result 1`] = `
+{
+  "maxBendingMoment": 12500,
+  "maxDeflection": 13.020833333333332,
+  "maxShear": 5000,
+  "reactionA": 5000,
+  "reactionB": 5000,
+}
+`;

@@ -1,0 +1,108 @@
+---
+title: "Kiriş Sehimi Hesaplayıcı"
+description: "Euler-Bernoulli kiriş teorisini kullanarak basit mesnetli ve konsol kirişler için maksimum sehim, eğilme momenti ve mesnet tepkilerini hesaplayın."
+---
+
+## Giriş
+
+Kiriş sehimi, yapısal mühendisliğin en temel hesaplamalarından biridir. Bir kiriş yük taşıdığında eğilir ve bu eğilme hem yapısal bütünlük hem de kullanıcı konforu açısından kontrol altında tutulmalıdır. Aşırı sehim, kaplamalarda çatlak oluşturabilir, makine hizasını bozabilir, çatılarda su birikintisi yaratabilir ve dayanım sınırına ulaşılmadan çok önce kullanılabilirlik sorunlarına yol açabilir.
+
+Bu hesaplayıcı, iki en yaygın kiriş konfigürasyonu — basit mesnetli ve konsol — için üç yaygın yük düzeninde maksimum sehimi (mm), maksimum eğilme momentini (N·m), maksimum kesme kuvvetini (N) ve mesnet tepkilerini (N) hesaplamak için **Euler-Bernoulli kiriş teorisini** kullanır.
+
+## Kiriş Türleri
+
+**Basit Mesnetli Kiriş:** Her iki uç, pim veya makaralı mesnetler üzerinde durur. Kiriş, her mesnet noktasında serbestçe dönebilir ancak düşey olarak hareket edemez. Çelik ve ahşap döşeme kirişlerinde en yaygın konfigürasyondur.
+
+**Konsol Kiriş:** Bir uç tamamen sabitlenmiş (ankastre), diğer uç serbestçe sehim yapabilir. Konsollar balkonda, çıkma çatı yapılarında, istinat duvarlarında ve uçak kanatlarında görülür.
+
+## Yük Türleri
+
+**Ortada Nokta Yük:** Tek bir noktaya uygulanan konsantre kuvvet.
+
+**Serbest Uçta Nokta Yük (Yalnızca Konsol):** Konsolun serbest ucuna uygulanan konsantre kuvvet. Bu, verilen yük ve açıklık için mümkün olan en büyük sehimi üretir.
+
+**Düzgün Yayılı Yük (DYY):** Tüm açıklık boyunca eşit şekilde dağılmış yük, kN/m cinsinden ifade edilir.
+
+## Sehim Formülleri
+
+Euler-Bernoulli diferansiyel denklemi EI(d²y/dx²) = M(x) entegrasyonundan türetilen formüller:
+
+**Basit Mesnetli, Ortada Nokta Yük:** δ_max = FL³ / (48EI)
+
+**Basit Mesnetli, Düzgün Yayılı Yük:** δ_max = 5wL⁴ / (384EI)
+
+**Konsol, Serbest Uçta Nokta Yük:** δ_max = FL³ / (3EI)
+
+**Konsol, Düzgün Yayılı Yük:** δ_max = wL⁴ / (8EI)
+
+Burada F = konsantre kuvvet (N), w = yük yoğunluğu (N/m), L = açıklık (m), E = elastisite modülü (Pa), I = ikinci alan momenti (m⁴).
+
+## Malzeme Özellikleri: Elastisite Modülü
+
+| Malzeme | E (GPa) |
+|---|---|
+| Yapı çeliği | 200–210 |
+| Alüminyum alaşım | 68–72 |
+| Betonarme | 25–35 |
+| Yumuşak ahşap | 8–12 |
+| Sert ahşap | 10–20 |
+
+## Kesit Özellikleri: İkinci Alan Momenti
+
+**Dikdörtgen kesit:** I = (b × h³) / 12
+
+**Dairesel kesit:** I = π × d⁴ / 64
+
+Standart çelik profiller için (I-kirişler, kanallar, tüpler) I değerleri, yapısal mühendislik el kitaplarında ve üretici veri tablolarında listelenmiştir.
+
+## Kullanılabilirlik Sınırları
+
+Tasarım yönetmelikleri, kaplamaları korumak ve konforu sağlamak için sehim sınırları belirler:
+
+| Eleman | Tipik Sınır |
+|---|---|
+| Genel döşeme kirişleri | L/300 ile L/360 |
+| Çatı kirişleri (sıvasız) | L/200 |
+| Çatı kirişleri (sıvalı) | L/360 |
+| Konsol kirişler | L/180 |
+
+Örneğin, 6 m'lik bir döşeme kirişi, zorunlu yük altında 6000/360 = 16,7 mm'den fazla sehim yapmamalıdır.
+
+## Eğilme Momenti ve Kesme Kuvveti
+
+Hesaplayıcı ayrıca **dayanım kontrollerinde** kullanılan maksimum eğilme momenti ve kesme kuvvetini de çıktılar:
+
+- **Eğilme momenti:** kesit modülü seçimini (Z = I/y) yönetir ve kirişin eğilmede akma yapıp yapmayacağını belirler
+- **Kesme kuvveti:** gövde kesme kapasitesi kontrollerini yönetir
+
+Mesnet tepkileri (A ve B tepkileri), kirişin desteklerine uyguladığı kuvvetleri gösterir ve destekleyici yapının tasarımı için kritik girdi oluşturur.
+
+## Varsayımlar ve Sınırlamalar
+
+Bu hesaplayıcı aşağıdaki varsayımları kullanır:
+
+1. **Doğrusal elastik malzeme:** Gerilme, birim şekil değiştirmeyle orantılıdır; akma yok
+2. **Küçük sehimler:** Sehim, açıklıktan çok küçüktür (genellikle δ < L/10)
+3. **Homojen, prizmatik kiriş:** Uzunluk boyunca tek tip kesit ve malzeme
+4. **Kayma deformasyonu ihmal edilir:** Bernoulli hipotezi
+5. **Eksenel yükleme yok**
+
+**Yapısal tasarımları her zaman lisanslı bir yapı mühendisiyle doğrulayın.**
+
+## Sık Sorulan Sorular
+
+**Konsol neden basit mesnetli kirişten çok daha fazla sehim yapar?**
+
+Aynı yük ve açıklık için, bir konsol kiriş, aynı konumdaki nokta yük altında basit mesnetli kirişten 16 kat daha fazla sehim yapar (FL³/3EI ile FL³/48EI karşılaştırıldığında). 16 katlık fark, farklı sınır koşullarından kaynaklanır: konsolun serbest ucunda dönme kısıtı yoktur ve ikinci bir mesnetden gelen katkı eğilme rijitliği bulunmaz.
+
+**EI (eğilme rijitliği) nedir?**
+
+EI, elastisite modülü (E) ile ikinci alan momentinin (I) çarpımıdır ve kirişin **eğilme rijitliği** olarak adlandırılır. Her sehim formülünde rijitliğin tek ölçüsü olarak yer alır.
+
+**Hangi birimleri kullanmalıyım?**
+
+Elastisite modülünü GPa cinsinden (örn. çelik için 200), ikinci alan momentini cm⁴ cinsinden, açıklığı metrede ve yükü kN (nokta yükü) veya kN/m (DYY) cinsinden girin. Hesaplayıcı her şeyi dahili olarak dönüştürür ve sehimi mm cinsinden döndürür.
+
+**Beton kirişler için kullanabilir miyim?**
+
+Ön kontroller için evet. E ≈ 30 GPa kullanın ve brüt kesit üzerinden I hesaplayın. Ancak, çatlama (etkin I'yı 2-5 kat azaltır) ve sünme (uzun vadeli sehimi 2-3 kat artırır) nedeniyle nihai beton tasarımı için mutlaka uzman bir tasarım aracı veya yönetmelik prosedürü kullanın.

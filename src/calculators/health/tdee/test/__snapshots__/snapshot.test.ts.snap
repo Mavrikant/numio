@@ -1,0 +1,1538 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`TDEE definition — shape snapshot > snapshot: definition shape 1`] = `
+{
+  "category": Any<String>,
+  "compute": [Function],
+  "i18n": {
+    "ar": {
+      "description": "حاسبة TDEE مجانية. أدخل وزنك وطولك وعمرك وجنسك ومستوى نشاطك للحصول على معدل الأيض الأساسي وإجمالي السعرات الحرارية اليومية وأهداف المغذيات الكبرى.",
+      "errors": {
+        "ageOutOfRange": "يجب أن يكون العمر بين 15 و100 سنة.",
+        "heightOutOfRange": "يجب أن يكون الطول بين 100 و250 سم.",
+        "weightOutOfRange": "يجب أن يكون الوزن بين 20 و300 كجم.",
+      },
+      "faq": [
+        {
+          "a": "طُوِّرت عام 1990: للذكور BMR = 10×الوزن + 6.25×الطول − 5×العمر + 5؛ للإناث BMR = 10×الوزن + 6.25×الطول − 5×العمر − 161.",
+          "q": "ما هي معادلة Mifflin-St Jeor؟",
+        },
+      ],
+      "inputs": {
+        "activityLevel": {
+          "help": "اختر المستوى الأقرب لروتينك الأسبوعي.",
+          "label": "مستوى النشاط",
+        },
+        "age": {
+          "help": "عمرك الحالي.",
+          "label": "العمر (سنوات)",
+        },
+        "gender": {
+          "help": "تستخدم معادلة Mifflin-St Jeor ثوابت مختلفة للذكور والإناث.",
+          "label": "الجنس البيولوجي",
+        },
+        "height": {
+          "help": "طولك بالسنتيمتر.",
+          "label": "الطول (سم)",
+        },
+        "weight": {
+          "help": "وزنك الحالي.",
+          "label": "الوزن (كجم)",
+        },
+      },
+      "keywords": [
+        "حاسبة TDEE",
+        "إجمالي إنفاق الطاقة اليومي",
+        "حاسبة السعرات الحرارية",
+        "معدل الأيض الأساسي",
+        "Mifflin St Jeor",
+        "الاحتياجات اليومية",
+        "حاسبة المغذيات",
+      ],
+      "options": {
+        "activityLevel": {
+          "athlete": "رياضي محترف (تدريبان يومياً)",
+          "extraActive": "نشاط مفرط (رياضة مكثفة جداً + عمل جسدي)",
+          "lightlyActive": "خفيف النشاط (رياضة 1–3 أيام/أسبوع)",
+          "moderatelyActive": "متوسط النشاط (رياضة 3–5 أيام/أسبوع)",
+          "sedentary": "خامل (عمل مكتبي، بدون رياضة)",
+          "veryActive": "عالي النشاط (رياضة مكثفة 6–7 أيام/أسبوع)",
+        },
+        "gender": {
+          "female": "أنثى",
+          "male": "ذكر",
+        },
+      },
+      "outputs": {
+        "bmr": {
+          "help": "السعرات التي يحرقها جسمك في حالة الراحة التامة.",
+          "label": "معدل الأيض الأساسي (سعرة/يوم)",
+        },
+        "carbTarget": {
+          "help": "السعرات المتبقية بعد البروتين والدهون، مقسّمة على 4 سعرة/جم.",
+          "label": "هدف الكربوهيدرات (جم/يوم)",
+        },
+        "fatTarget": {
+          "help": "30% من إجمالي السعرات اليومية، مقسّمة على 9 سعرة/جم.",
+          "label": "هدف الدهون (جم/يوم)",
+        },
+        "proteinTarget": {
+          "help": "1.6 جم/كجم للنشطين، 0.8 جم/كجم للخاملين.",
+          "label": "هدف البروتين (جم/يوم)",
+        },
+        "tdee": {
+          "help": "إجمالي إنفاق الطاقة اليومي عند مستوى نشاطك الحالي.",
+          "label": "TDEE (سعرة/يوم)",
+        },
+      },
+      "short": "احسب إجمالي إنفاق الطاقة اليومي باستخدام معادلة Mifflin-St Jeor ومستويات النشاط المفصّلة.",
+      "title": "حاسبة TDEE — احتياجات السعرات الحرارية اليومية",
+    },
+    "de": {
+      "description": "Kostenloser TDEE-Rechner. Geben Sie Gewicht, Größe, Alter, Geschlecht und Aktivitätsniveau ein, um Ihren BMR, täglichen Kalorienbedarf und Makronährstoffziele zu berechnen.",
+      "errors": {
+        "ageOutOfRange": "Das Alter muss zwischen 15 und 100 Jahren liegen.",
+        "heightOutOfRange": "Die Körpergröße muss zwischen 100 und 250 cm liegen.",
+        "weightOutOfRange": "Das Gewicht muss zwischen 20 und 300 kg liegen.",
+      },
+      "faq": [
+        {
+          "a": "Entwickelt von Mifflin et al. (1990): Männer BMR = 10×Gewicht + 6,25×Größe − 5×Alter + 5; Frauen BMR = 10×Gewicht + 6,25×Größe − 5×Alter − 161.",
+          "q": "Was ist die Mifflin-St-Jeor-Formel?",
+        },
+      ],
+      "inputs": {
+        "activityLevel": {
+          "help": "Wählen Sie das Niveau, das Ihrer typischen Wochenroutine am besten entspricht.",
+          "label": "Aktivitätsniveau",
+        },
+        "age": {
+          "help": "Ihr aktuelles Alter.",
+          "label": "Alter (Jahre)",
+        },
+        "gender": {
+          "help": "Die Mifflin-St-Jeor-Formel verwendet unterschiedliche Konstanten für Männer und Frauen.",
+          "label": "Biologisches Geschlecht",
+        },
+        "height": {
+          "help": "Ihre Körpergröße in Zentimetern.",
+          "label": "Körpergröße (cm)",
+        },
+        "weight": {
+          "help": "Ihr aktuelles Körpergewicht.",
+          "label": "Gewicht (kg)",
+        },
+      },
+      "keywords": [
+        "TDEE-Rechner",
+        "Gesamtenergiehaushalt",
+        "Kalorienrechner",
+        "BMR-Rechner",
+        "Mifflin St Jeor",
+        "Tageskalorienbedarf",
+        "Makrorechner",
+      ],
+      "options": {
+        "activityLevel": {
+          "athlete": "Sportler (zweimaliges Training pro Tag)",
+          "extraActive": "Extrem aktiv (intensiver Sport + körperliche Arbeit)",
+          "lightlyActive": "Wenig aktiv (Sport 1–3 Tage/Woche)",
+          "moderatelyActive": "Mäßig aktiv (Sport 3–5 Tage/Woche)",
+          "sedentary": "Sitzend (Bürojob, kein Sport)",
+          "veryActive": "Sehr aktiv (intensiver Sport 6–7 Tage/Woche)",
+        },
+        "gender": {
+          "female": "Weiblich",
+          "male": "Männlich",
+        },
+      },
+      "outputs": {
+        "bmr": {
+          "help": "Kalorien, die Ihr Körper in völliger Ruhe verbraucht.",
+          "label": "Grundumsatz (kcal/Tag)",
+        },
+        "carbTarget": {
+          "help": "Verbleibende Kalorien nach Protein und Fett, dividiert durch 4 kcal/g.",
+          "label": "Kohlenhydratziel (g/Tag)",
+        },
+        "fatTarget": {
+          "help": "30% der täglichen Gesamtkalorien, dividiert durch 9 kcal/g.",
+          "label": "Fettziel (g/Tag)",
+        },
+        "proteinTarget": {
+          "help": "1,6 g/kg für aktive Personen, 0,8 g/kg für Inaktive.",
+          "label": "Proteinziel (g/Tag)",
+        },
+        "tdee": {
+          "help": "Gesamter täglicher Energieverbrauch bei Ihrem Aktivitätsniveau.",
+          "label": "TDEE (kcal/Tag)",
+        },
+      },
+      "short": "Berechnen Sie Ihren gesamten täglichen Energieverbrauch mit der Mifflin-St-Jeor-Formel und detaillierten Aktivitätsstufen.",
+      "title": "TDEE-Rechner — Täglicher Kalorienbedarf",
+    },
+    "en": {
+      "description": "Free TDEE calculator. Enter your weight, height, age, gender, and activity level to get your BMR, total daily calories, and macro targets (protein, carbs, fat) at maintenance.",
+      "errors": {
+        "ageOutOfRange": "Age must be between 15 and 100 years.",
+        "heightOutOfRange": "Height must be between 100 and 250 cm.",
+        "weightOutOfRange": "Weight must be between 20 and 300 kg.",
+      },
+      "faq": [
+        {
+          "a": "Developed by Mifflin et al. in 1990, it estimates basal metabolic rate: Male BMR = 10×weight(kg) + 6.25×height(cm) − 5×age + 5; Female BMR = 10×weight(kg) + 6.25×height(cm) − 5×age − 161. It is widely considered the most accurate formula for most adults.",
+          "q": "What is the Mifflin-St Jeor formula?",
+        },
+        {
+          "a": "TDEE (Total Daily Energy Expenditure) is the total number of calories you burn in a day, combining your BMR with the energy cost of your daily activities and exercise.",
+          "q": "What is TDEE?",
+        },
+        {
+          "a": "For most adults, the Mifflin-St Jeor equation predicts resting energy expenditure within 10% of measured values. TDEE adds an activity multiplier, which adds further uncertainty. Use these figures as starting estimates and adjust based on real-world weight trends over 2–4 weeks.",
+          "q": "How accurate is this calculator?",
+        },
+        {
+          "a": "Yes. Eating at TDEE means consuming the same number of calories as you burn, resulting in weight maintenance over time. For fat loss, a deficit of 300–500 kcal/day is commonly recommended.",
+          "q": "Should I eat at my TDEE to maintain weight?",
+        },
+      ],
+      "inputs": {
+        "activityLevel": {
+          "help": "Choose the level that best matches your typical weekly routine.",
+          "label": "Activity level",
+        },
+        "age": {
+          "help": "Your current age.",
+          "label": "Age (years)",
+        },
+        "gender": {
+          "help": "Used for the Mifflin-St Jeor formula which has different constants for males and females.",
+          "label": "Biological sex",
+        },
+        "height": {
+          "help": "Your height in centimetres.",
+          "label": "Height (cm)",
+        },
+        "weight": {
+          "help": "Your current body weight in kilograms.",
+          "label": "Weight (kg)",
+        },
+      },
+      "keywords": [
+        "TDEE calculator",
+        "total daily energy expenditure",
+        "calorie calculator",
+        "BMR calculator",
+        "Mifflin St Jeor",
+        "daily calorie needs",
+        "macro calculator",
+      ],
+      "options": {
+        "activityLevel": {
+          "athlete": "Athlete (twice-daily training)",
+          "extraActive": "Extra active (very hard exercise + physical job)",
+          "lightlyActive": "Lightly active (exercise 1–3 days/week)",
+          "moderatelyActive": "Moderately active (exercise 3–5 days/week)",
+          "sedentary": "Sedentary (desk job, no exercise)",
+          "veryActive": "Very active (hard exercise 6–7 days/week)",
+        },
+        "gender": {
+          "female": "Female",
+          "male": "Male",
+        },
+      },
+      "outputs": {
+        "bmr": {
+          "help": "Calories your body burns at complete rest — breathing, circulation, and cell maintenance.",
+          "label": "Basal Metabolic Rate (kcal/day)",
+        },
+        "carbTarget": {
+          "help": "Remaining calories after protein and fat, divided by 4 kcal/g.",
+          "label": "Carbohydrate target (g/day)",
+        },
+        "fatTarget": {
+          "help": "30% of total daily calories, divided by 9 kcal/g.",
+          "label": "Fat target (g/day)",
+        },
+        "proteinTarget": {
+          "help": "1.6 g/kg for active individuals, 0.8 g/kg for sedentary.",
+          "label": "Protein target (g/day)",
+        },
+        "tdee": {
+          "help": "Total Daily Energy Expenditure — your maintenance calories at your current activity level.",
+          "label": "TDEE (kcal/day)",
+        },
+      },
+      "short": "Calculate your Total Daily Energy Expenditure using the Mifflin-St Jeor formula with detailed activity levels.",
+      "title": "TDEE Calculator — Daily Calorie Needs",
+    },
+    "es": {
+      "description": "Calculadora TDEE gratuita. Introduce tu peso, talla, edad, sexo y nivel de actividad para obtener tu TMB, calorías diarias y objetivos de macros.",
+      "errors": {
+        "ageOutOfRange": "La edad debe estar entre 15 y 100 años.",
+        "heightOutOfRange": "La altura debe estar entre 100 y 250 cm.",
+        "weightOutOfRange": "El peso debe estar entre 20 y 300 kg.",
+      },
+      "faq": [
+        {
+          "a": "Desarrollada en 1990: TMB hombres = 10×peso + 6,25×altura − 5×edad + 5; TMB mujeres = 10×peso + 6,25×altura − 5×edad − 161.",
+          "q": "¿Qué es la fórmula Mifflin-St Jeor?",
+        },
+      ],
+      "inputs": {
+        "activityLevel": {
+          "help": "Elige el nivel que mejor describa tu rutina semanal.",
+          "label": "Nivel de actividad",
+        },
+        "age": {
+          "help": "Tu edad actual.",
+          "label": "Edad (años)",
+        },
+        "gender": {
+          "help": "La fórmula Mifflin-St Jeor usa constantes diferentes para hombres y mujeres.",
+          "label": "Sexo biológico",
+        },
+        "height": {
+          "help": "Tu altura en centímetros.",
+          "label": "Altura (cm)",
+        },
+        "weight": {
+          "help": "Tu peso corporal actual.",
+          "label": "Peso (kg)",
+        },
+      },
+      "keywords": [
+        "calculadora TDEE",
+        "gasto energético total",
+        "calculadora calorías",
+        "calculadora TMB",
+        "Mifflin St Jeor",
+        "calorías diarias",
+        "calculadora macros",
+      ],
+      "options": {
+        "activityLevel": {
+          "athlete": "Atleta (entrenamiento dos veces al día)",
+          "extraActive": "Extra activo (ejercicio intenso + trabajo físico)",
+          "lightlyActive": "Ligeramente activo (ejercicio 1–3 días/semana)",
+          "moderatelyActive": "Moderadamente activo (ejercicio 3–5 días/semana)",
+          "sedentary": "Sedentario (trabajo de escritorio, sin ejercicio)",
+          "veryActive": "Muy activo (ejercicio intenso 6–7 días/semana)",
+        },
+        "gender": {
+          "female": "Femenino",
+          "male": "Masculino",
+        },
+      },
+      "outputs": {
+        "bmr": {
+          "help": "Calorías que quema tu cuerpo en reposo completo.",
+          "label": "Tasa metabólica basal (kcal/día)",
+        },
+        "carbTarget": {
+          "help": "Calorías restantes tras proteína y grasa, divididas por 4 kcal/g.",
+          "label": "Objetivo carbohidratos (g/día)",
+        },
+        "fatTarget": {
+          "help": "30% de las calorías totales, dividido por 9 kcal/g.",
+          "label": "Objetivo grasa (g/día)",
+        },
+        "proteinTarget": {
+          "help": "1,6 g/kg para activos, 0,8 g/kg para sedentarios.",
+          "label": "Objetivo proteína (g/día)",
+        },
+        "tdee": {
+          "help": "Gasto energético total en tu nivel de actividad actual.",
+          "label": "TDEE (kcal/día)",
+        },
+      },
+      "short": "Calcula tu gasto energético total diario con la fórmula Mifflin-St Jeor y niveles de actividad detallados.",
+      "title": "Calculadora TDEE — Necesidades calóricas diarias",
+    },
+    "fr": {
+      "description": "Calculateur TDEE gratuit. Entrez votre poids, taille, âge, sexe et niveau d'activité pour obtenir votre MB, vos calories journalières et vos objectifs macro.",
+      "errors": {
+        "ageOutOfRange": "L'âge doit être compris entre 15 et 100 ans.",
+        "heightOutOfRange": "La taille doit être comprise entre 100 et 250 cm.",
+        "weightOutOfRange": "Le poids doit être compris entre 20 et 300 kg.",
+      },
+      "faq": [
+        {
+          "a": "Développée en 1990 par Mifflin et al. : Hommes MB = 10×poids + 6,25×taille − 5×âge + 5 ; Femmes MB = 10×poids + 6,25×taille − 5×âge − 161.",
+          "q": "Qu'est-ce que la formule Mifflin-St Jeor ?",
+        },
+      ],
+      "inputs": {
+        "activityLevel": {
+          "help": "Choisissez le niveau correspondant à votre routine hebdomadaire.",
+          "label": "Niveau d'activité",
+        },
+        "age": {
+          "help": "Votre âge actuel.",
+          "label": "Âge (années)",
+        },
+        "gender": {
+          "help": "La formule Mifflin-St Jeor utilise des constantes différentes selon le sexe.",
+          "label": "Sexe biologique",
+        },
+        "height": {
+          "help": "Votre taille en centimètres.",
+          "label": "Taille (cm)",
+        },
+        "weight": {
+          "help": "Votre poids corporel actuel.",
+          "label": "Poids (kg)",
+        },
+      },
+      "keywords": [
+        "calculateur TDEE",
+        "dépense énergétique totale",
+        "calculateur calories",
+        "calculateur MB",
+        "Mifflin St Jeor",
+        "besoins caloriques",
+        "calculateur macros",
+      ],
+      "options": {
+        "activityLevel": {
+          "athlete": "Athlète (entraînement deux fois par jour)",
+          "extraActive": "Extrêmement actif (exercice intense + travail physique)",
+          "lightlyActive": "Peu actif (exercice 1–3 jours/semaine)",
+          "moderatelyActive": "Modérément actif (exercice 3–5 jours/semaine)",
+          "sedentary": "Sédentaire (travail de bureau, sans exercice)",
+          "veryActive": "Très actif (exercice intense 6–7 jours/semaine)",
+        },
+        "gender": {
+          "female": "Féminin",
+          "male": "Masculin",
+        },
+      },
+      "outputs": {
+        "bmr": {
+          "help": "Calories brûlées au repos complet.",
+          "label": "Métabolisme de base (kcal/jour)",
+        },
+        "carbTarget": {
+          "help": "Calories restantes après protéines et graisses, divisées par 4 kcal/g.",
+          "label": "Objectif glucides (g/jour)",
+        },
+        "fatTarget": {
+          "help": "30% des calories totales, divisées par 9 kcal/g.",
+          "label": "Objectif lipides (g/jour)",
+        },
+        "proteinTarget": {
+          "help": "1,6 g/kg pour les actifs, 0,8 g/kg pour les sédentaires.",
+          "label": "Objectif protéines (g/jour)",
+        },
+        "tdee": {
+          "help": "Dépense énergétique totale à votre niveau d'activité.",
+          "label": "TDEE (kcal/jour)",
+        },
+      },
+      "short": "Calculez votre dépense énergétique totale quotidienne avec la formule Mifflin-St Jeor et des niveaux d'activité détaillés.",
+      "title": "Calculateur TDEE — Besoins caloriques journaliers",
+    },
+    "hi": {
+      "description": "मुफ़्त TDEE कैलकुलेटर। वजन, ऊंचाई, आयु, लिंग और गतिविधि स्तर दर्ज करें और बेसल मेटाबॉलिक रेट, दैनिक कुल कैलोरी और मैक्रो लक्ष्य प्राप्त करें।",
+      "errors": {
+        "ageOutOfRange": "आयु 15 से 100 वर्ष के बीच होनी चाहिए।",
+        "heightOutOfRange": "ऊंचाई 100 से 250 सेमी के बीच होनी चाहिए।",
+        "weightOutOfRange": "वजन 20 से 300 किग्रा के बीच होना चाहिए।",
+      },
+      "faq": [
+        {
+          "a": "1990 में विकसित: पुरुष BMR = 10×वजन + 6.25×ऊंचाई − 5×आयु + 5; महिला BMR = 10×वजन + 6.25×ऊंचाई − 5×आयु − 161।",
+          "q": "Mifflin-St Jeor सूत्र क्या है?",
+        },
+      ],
+      "inputs": {
+        "activityLevel": {
+          "help": "अपनी साप्ताहिक दिनचर्या के सबसे करीब स्तर चुनें।",
+          "label": "गतिविधि स्तर",
+        },
+        "age": {
+          "help": "आपकी वर्तमान आयु।",
+          "label": "आयु (वर्ष)",
+        },
+        "gender": {
+          "help": "Mifflin-St Jeor सूत्र पुरुषों और महिलाओं के लिए अलग-अलग स्थिरांक का उपयोग करता है।",
+          "label": "जैविक लिंग",
+        },
+        "height": {
+          "help": "आपकी ऊंचाई सेंटीमीटर में।",
+          "label": "ऊंचाई (सेमी)",
+        },
+        "weight": {
+          "help": "आपका वर्तमान शारीरिक वजन।",
+          "label": "वजन (किग्रा)",
+        },
+      },
+      "keywords": [
+        "TDEE कैलकुलेटर",
+        "कुल दैनिक ऊर्जा व्यय",
+        "कैलोरी कैलकुलेटर",
+        "BMR कैलकुलेटर",
+        "Mifflin St Jeor",
+        "दैनिक कैलोरी आवश्यकता",
+        "मैक्रो कैलकुलेटर",
+      ],
+      "options": {
+        "activityLevel": {
+          "athlete": "एथलीट (दिन में दो बार प्रशिक्षण)",
+          "extraActive": "अत्यधिक सक्रिय (बहुत कड़ी कसरत + शारीरिक श्रम)",
+          "lightlyActive": "हल्का सक्रिय (सप्ताह में 1–3 दिन व्यायाम)",
+          "moderatelyActive": "मध्यम सक्रिय (सप्ताह में 3–5 दिन व्यायाम)",
+          "sedentary": "निष्क्रिय (डेस्क जॉब, कोई व्यायाम नहीं)",
+          "veryActive": "बहुत सक्रिय (सप्ताह में 6–7 दिन कड़ी कसरत)",
+        },
+        "gender": {
+          "female": "महिला",
+          "male": "पुरुष",
+        },
+      },
+      "outputs": {
+        "bmr": {
+          "help": "पूर्ण विश्राम में आपके शरीर द्वारा जलाई जाने वाली कैलोरी।",
+          "label": "बेसल मेटाबॉलिक रेट (kcal/दिन)",
+        },
+        "carbTarget": {
+          "help": "प्रोटीन और वसा के बाद शेष कैलोरी, 4 kcal/ग्राम से विभाजित।",
+          "label": "कार्बोहाइड्रेट लक्ष्य (ग्राम/दिन)",
+        },
+        "fatTarget": {
+          "help": "कुल दैनिक कैलोरी का 30%, 9 kcal/ग्राम से विभाजित।",
+          "label": "वसा लक्ष्य (ग्राम/दिन)",
+        },
+        "proteinTarget": {
+          "help": "सक्रिय लोगों के लिए 1.6 ग्राम/किग्रा, निष्क्रिय के लिए 0.8 ग्राम/किग्रा।",
+          "label": "प्रोटीन लक्ष्य (ग्राम/दिन)",
+        },
+        "tdee": {
+          "help": "आपके वर्तमान गतिविधि स्तर पर कुल दैनिक ऊर्जा व्यय।",
+          "label": "TDEE (kcal/दिन)",
+        },
+      },
+      "short": "Mifflin-St Jeor सूत्र और विस्तृत गतिविधि स्तरों के साथ कुल दैनिक ऊर्जा व्यय की गणना करें।",
+      "title": "TDEE कैलकुलेटर — दैनिक कैलोरी आवश्यकता",
+    },
+    "it": {
+      "description": "Calcolatore TDEE gratuito. Inserisci peso, altezza, età, sesso e livello di attività per ottenere il tuo MB, le calorie giornaliere e gli obiettivi macronutrienti.",
+      "errors": {
+        "ageOutOfRange": "L'età deve essere compresa tra 15 e 100 anni.",
+        "heightOutOfRange": "L'altezza deve essere compresa tra 100 e 250 cm.",
+        "weightOutOfRange": "Il peso deve essere compreso tra 20 e 300 kg.",
+      },
+      "faq": [
+        {
+          "a": "Sviluppata nel 1990: MB uomini = 10×peso + 6,25×altezza − 5×età + 5; MB donne = 10×peso + 6,25×altezza − 5×età − 161.",
+          "q": "Cos'è la formula Mifflin-St Jeor?",
+        },
+      ],
+      "inputs": {
+        "activityLevel": {
+          "help": "Scegli il livello che meglio corrisponde alla tua routine settimanale.",
+          "label": "Livello di attività",
+        },
+        "age": {
+          "help": "La tua età attuale.",
+          "label": "Età (anni)",
+        },
+        "gender": {
+          "help": "La formula Mifflin-St Jeor usa costanti diverse per maschi e femmine.",
+          "label": "Sesso biologico",
+        },
+        "height": {
+          "help": "La tua altezza in centimetri.",
+          "label": "Altezza (cm)",
+        },
+        "weight": {
+          "help": "Il tuo peso corporeo attuale.",
+          "label": "Peso (kg)",
+        },
+      },
+      "keywords": [
+        "calcolatore TDEE",
+        "dispendio energetico totale",
+        "calcolatore calorie",
+        "calcolatore MB",
+        "Mifflin St Jeor",
+        "calorie giornaliere",
+        "calcolatore macro",
+      ],
+      "options": {
+        "activityLevel": {
+          "athlete": "Atleta (allenamento due volte al giorno)",
+          "extraActive": "Extra attivo (esercizio molto intenso + lavoro fisico)",
+          "lightlyActive": "Poco attivo (esercizio 1–3 giorni/settimana)",
+          "moderatelyActive": "Moderatamente attivo (esercizio 3–5 giorni/settimana)",
+          "sedentary": "Sedentario (lavoro d'ufficio, nessun esercizio)",
+          "veryActive": "Molto attivo (esercizio intenso 6–7 giorni/settimana)",
+        },
+        "gender": {
+          "female": "Femmina",
+          "male": "Maschio",
+        },
+      },
+      "outputs": {
+        "bmr": {
+          "help": "Calorie bruciate in completo riposo.",
+          "label": "Metabolismo basale (kcal/giorno)",
+        },
+        "carbTarget": {
+          "help": "Calorie rimanenti dopo proteine e grassi, divise per 4 kcal/g.",
+          "label": "Obiettivo carboidrati (g/giorno)",
+        },
+        "fatTarget": {
+          "help": "30% delle calorie totali, divise per 9 kcal/g.",
+          "label": "Obiettivo grassi (g/giorno)",
+        },
+        "proteinTarget": {
+          "help": "1,6 g/kg per i soggetti attivi, 0,8 g/kg per i sedentari.",
+          "label": "Obiettivo proteine (g/giorno)",
+        },
+        "tdee": {
+          "help": "Dispendio energetico totale al tuo livello di attività.",
+          "label": "TDEE (kcal/giorno)",
+        },
+      },
+      "short": "Calcola il tuo dispendio energetico totale giornaliero con la formula Mifflin-St Jeor e livelli di attività dettagliati.",
+      "title": "Calcolatore TDEE — Fabbisogno calorico giornaliero",
+    },
+    "ja": {
+      "description": "無料TDEEカロリー計算機。体重、身長、年齢、性別、活動レベルを入力して基礎代謝量、1日の総カロリー、マクロ栄養素目標を確認しましょう。",
+      "errors": {
+        "ageOutOfRange": "年齢は15〜100歳の範囲で入力してください。",
+        "heightOutOfRange": "身長は100〜250cmの範囲で入力してください。",
+        "weightOutOfRange": "体重は20〜300kgの範囲で入力してください。",
+      },
+      "faq": [
+        {
+          "a": "1990年に開発された式：男性BMR = 10×体重 + 6.25×身長 − 5×年齢 + 5；女性BMR = 10×体重 + 6.25×身長 − 5×年齢 − 161。",
+          "q": "ミフリン・セント・ジョー式とは何ですか？",
+        },
+      ],
+      "inputs": {
+        "activityLevel": {
+          "help": "週間の典型的なルーティンに最も近いレベルを選んでください。",
+          "label": "活動レベル",
+        },
+        "age": {
+          "help": "現在の年齢。",
+          "label": "年齢（歳）",
+        },
+        "gender": {
+          "help": "ミフリン・セント・ジョー式では男女で異なる定数を使用します。",
+          "label": "生物学的性別",
+        },
+        "height": {
+          "help": "身長（センチメートル）。",
+          "label": "身長（cm）",
+        },
+        "weight": {
+          "help": "現在の体重。",
+          "label": "体重（kg）",
+        },
+      },
+      "keywords": [
+        "TDEE計算機",
+        "1日の総エネルギー消費量",
+        "カロリー計算機",
+        "基礎代謝量計算機",
+        "ミフリン式",
+        "1日のカロリー必要量",
+        "マクロ計算機",
+      ],
+      "options": {
+        "activityLevel": {
+          "athlete": "アスリート（1日2回トレーニング）",
+          "extraActive": "超高活動（非常にハードな運動+肉体労働）",
+          "lightlyActive": "軽度に活動的（週1〜3日運動）",
+          "moderatelyActive": "中程度に活動的（週3〜5日運動）",
+          "sedentary": "座りがち（デスクワーク、運動なし）",
+          "veryActive": "非常に活動的（週6〜7日ハードな運動）",
+        },
+        "gender": {
+          "female": "女性",
+          "male": "男性",
+        },
+      },
+      "outputs": {
+        "bmr": {
+          "help": "完全な安静状態で消費するカロリー。",
+          "label": "基礎代謝量（kcal/日）",
+        },
+        "carbTarget": {
+          "help": "タンパク質と脂質を除いた残りのカロリーを4kcal/gで割った値。",
+          "label": "炭水化物目標（g/日）",
+        },
+        "fatTarget": {
+          "help": "1日の総カロリーの30%を9kcal/gで割った値。",
+          "label": "脂質目標（g/日）",
+        },
+        "proteinTarget": {
+          "help": "活動的な方は1.6g/kg、座りがちな方は0.8g/kg。",
+          "label": "タンパク質目標（g/日）",
+        },
+        "tdee": {
+          "help": "現在の活動レベルでの1日の総エネルギー消費量。",
+          "label": "TDEE（kcal/日）",
+        },
+      },
+      "short": "ミフリン・セント・ジョー式と詳細な活動レベルで1日の総エネルギー消費量を計算します。",
+      "title": "TDEEカロリー計算機",
+    },
+    "ko": {
+      "description": "무료 TDEE 계산기. 체중, 키, 나이, 성별, 활동 수준을 입력하여 기초대사량, 일일 총 칼로리 및 매크로 목표치를 확인하세요.",
+      "errors": {
+        "ageOutOfRange": "나이는 15~100세 사이여야 합니다.",
+        "heightOutOfRange": "키는 100~250cm 사이여야 합니다.",
+        "weightOutOfRange": "체중은 20~300kg 사이여야 합니다.",
+      },
+      "faq": [
+        {
+          "a": "1990년 개발된 공식: 남성 BMR = 10×체중 + 6.25×키 − 5×나이 + 5; 여성 BMR = 10×체중 + 6.25×키 − 5×나이 − 161.",
+          "q": "Mifflin-St Jeor 공식이란 무엇인가요?",
+        },
+      ],
+      "inputs": {
+        "activityLevel": {
+          "help": "주간 일과에 가장 잘 맞는 수준을 선택하세요.",
+          "label": "활동 수준",
+        },
+        "age": {
+          "help": "현재 나이.",
+          "label": "나이 (세)",
+        },
+        "gender": {
+          "help": "Mifflin-St Jeor 공식은 남성과 여성에 다른 상수를 사용합니다.",
+          "label": "생물학적 성별",
+        },
+        "height": {
+          "help": "키(센티미터).",
+          "label": "키 (cm)",
+        },
+        "weight": {
+          "help": "현재 체중.",
+          "label": "체중 (kg)",
+        },
+      },
+      "keywords": [
+        "TDEE 계산기",
+        "일일 총 에너지 소비량",
+        "칼로리 계산기",
+        "기초대사량 계산기",
+        "Mifflin St Jeor",
+        "일일 칼로리 필요량",
+        "매크로 계산기",
+      ],
+      "options": {
+        "activityLevel": {
+          "athlete": "운동선수 (하루 2회 훈련)",
+          "extraActive": "극도로 활동적 (매우 고강도 운동 + 육체 노동)",
+          "lightlyActive": "가볍게 활동적 (주 1–3일 운동)",
+          "moderatelyActive": "보통으로 활동적 (주 3–5일 운동)",
+          "sedentary": "비활동적 (사무직, 운동 없음)",
+          "veryActive": "매우 활동적 (주 6–7일 고강도 운동)",
+        },
+        "gender": {
+          "female": "여성",
+          "male": "남성",
+        },
+      },
+      "outputs": {
+        "bmr": {
+          "help": "완전한 안정 상태에서 소비하는 칼로리.",
+          "label": "기초대사량 (kcal/일)",
+        },
+        "carbTarget": {
+          "help": "단백질과 지방 후 남은 칼로리를 4kcal/g으로 나눈 값.",
+          "label": "탄수화물 목표 (g/일)",
+        },
+        "fatTarget": {
+          "help": "일일 총 칼로리의 30%를 9kcal/g으로 나눈 값.",
+          "label": "지방 목표 (g/일)",
+        },
+        "proteinTarget": {
+          "help": "활동적인 사람은 1.6g/kg, 비활동적인 사람은 0.8g/kg.",
+          "label": "단백질 목표 (g/일)",
+        },
+        "tdee": {
+          "help": "현재 활동 수준에서의 1일 총 에너지 소비량.",
+          "label": "TDEE (kcal/일)",
+        },
+      },
+      "short": "Mifflin-St Jeor 공식과 세부 활동 수준으로 1일 총 에너지 소비량을 계산합니다.",
+      "title": "TDEE 계산기 — 일일 칼로리 필요량",
+    },
+    "ru": {
+      "description": "Бесплатный калькулятор TDEE. Введите вес, рост, возраст, пол и уровень активности для расчёта основного обмена, суточного калоража и макросов.",
+      "errors": {
+        "ageOutOfRange": "Возраст должен быть от 15 до 100 лет.",
+        "heightOutOfRange": "Рост должен быть от 100 до 250 см.",
+        "weightOutOfRange": "Вес должен быть от 20 до 300 кг.",
+      },
+      "faq": [
+        {
+          "a": "Разработана в 1990 году: мужчины ОО = 10×вес + 6,25×рост − 5×возраст + 5; женщины ОО = 10×вес + 6,25×рост − 5×возраст − 161.",
+          "q": "Что такое формула Миффлина-Сен Жора?",
+        },
+      ],
+      "inputs": {
+        "activityLevel": {
+          "help": "Выберите уровень, наиболее соответствующий вашей еженедельной рутине.",
+          "label": "Уровень активности",
+        },
+        "age": {
+          "help": "Ваш текущий возраст.",
+          "label": "Возраст (лет)",
+        },
+        "gender": {
+          "help": "Формула Миффлина-Сен Жора использует разные константы для мужчин и женщин.",
+          "label": "Биологический пол",
+        },
+        "height": {
+          "help": "Ваш рост в сантиметрах.",
+          "label": "Рост (см)",
+        },
+        "weight": {
+          "help": "Ваш текущий вес.",
+          "label": "Вес (кг)",
+        },
+      },
+      "keywords": [
+        "калькулятор TDEE",
+        "суточный расход энергии",
+        "калькулятор калорий",
+        "основной обмен",
+        "Миффлин Сен Жор",
+        "суточная потребность в калориях",
+        "калькулятор макросов",
+      ],
+      "options": {
+        "activityLevel": {
+          "athlete": "Атлет (тренировки дважды в день)",
+          "extraActive": "Очень активный (очень интенсивные тренировки + физ. работа)",
+          "lightlyActive": "Слабо активный (тренировки 1–3 раза/нед.)",
+          "moderatelyActive": "Умеренно активный (тренировки 3–5 раз/нед.)",
+          "sedentary": "Малоподвижный (офисная работа, нет тренировок)",
+          "veryActive": "Высоко активный (интенсивные тренировки 6–7 раз/нед.)",
+        },
+        "gender": {
+          "female": "Женский",
+          "male": "Мужской",
+        },
+      },
+      "outputs": {
+        "bmr": {
+          "help": "Калории, сжигаемые в полном покое.",
+          "label": "Основной обмен (ккал/день)",
+        },
+        "carbTarget": {
+          "help": "Оставшиеся калории после белков и жиров, делённые на 4 ккал/г.",
+          "label": "Цель по углеводам (г/день)",
+        },
+        "fatTarget": {
+          "help": "30% от суточного калоража, делённые на 9 ккал/г.",
+          "label": "Цель по жирам (г/день)",
+        },
+        "proteinTarget": {
+          "help": "1,6 г/кг для активных, 0,8 г/кг для малоподвижных.",
+          "label": "Цель по белку (г/день)",
+        },
+        "tdee": {
+          "help": "Общий суточный расход энергии при вашем уровне активности.",
+          "label": "TDEE (ккал/день)",
+        },
+      },
+      "short": "Рассчитайте общий суточный расход энергии по формуле Миффлина-Сен Жора с детальными уровнями активности.",
+      "title": "Калькулятор TDEE — Суточная потребность в калориях",
+    },
+    "tr": {
+      "description": "Ücretsiz TDEE hesaplayıcı. Kilo, boy, yaş, cinsiyet ve aktivite düzeyinizi girerek bazal metabolizma hızınızı, toplam günlük kalori ve makro hedeflerinizi öğrenin.",
+      "errors": {
+        "ageOutOfRange": "Yaş 15 ile 100 yıl arasında olmalıdır.",
+        "heightOutOfRange": "Boy 100 ile 250 cm arasında olmalıdır.",
+        "weightOutOfRange": "Kilo 20 ile 300 kg arasında olmalıdır.",
+      },
+      "faq": [
+        {
+          "a": "1990 yılında Mifflin ve arkadaşları tarafından geliştirilen bu formül, bazal metabolizma hızını tahmin eder: Erkek BMH = 10×ağırlık + 6,25×boy − 5×yaş + 5; Kadın BMH = 10×ağırlık + 6,25×boy − 5×yaş − 161.",
+          "q": "Mifflin-St Jeor formülü nedir?",
+        },
+      ],
+      "inputs": {
+        "activityLevel": {
+          "help": "Haftalık rutininize en uygun düzeyi seçin.",
+          "label": "Aktivite düzeyi",
+        },
+        "age": {
+          "help": "Mevcut yaşınız.",
+          "label": "Yaş (yıl)",
+        },
+        "gender": {
+          "help": "Mifflin-St Jeor formülü erkek ve kadın için farklı sabitler kullanır.",
+          "label": "Biyolojik cinsiyet",
+        },
+        "height": {
+          "help": "Santimetre cinsinden boyunuz.",
+          "label": "Boy (cm)",
+        },
+        "weight": {
+          "help": "Mevcut vücut ağırlığınız.",
+          "label": "Kilo (kg)",
+        },
+      },
+      "keywords": [
+        "TDEE hesaplayıcı",
+        "günlük enerji harcaması",
+        "kalori hesaplayıcı",
+        "BMR hesaplayıcı",
+        "Mifflin St Jeor",
+        "günlük kalori ihtiyacı",
+        "makro hesaplayıcı",
+      ],
+      "options": {
+        "activityLevel": {
+          "athlete": "Atlet (günde iki antrenman)",
+          "extraActive": "Aşırı aktif (yoğun egzersiz + fiziksel iş)",
+          "lightlyActive": "Az aktif (haftada 1–3 gün egzersiz)",
+          "moderatelyActive": "Orta aktif (haftada 3–5 gün egzersiz)",
+          "sedentary": "Hareketsiz (masa başı iş, egzersiz yok)",
+          "veryActive": "Çok aktif (haftada 6–7 gün yoğun egzersiz)",
+        },
+        "gender": {
+          "female": "Kadın",
+          "male": "Erkek",
+        },
+      },
+      "outputs": {
+        "bmr": {
+          "help": "Tam dinlenme halinde vücudunuzun harcadığı kalori.",
+          "label": "Bazal Metabolizma Hızı (kcal/gün)",
+        },
+        "carbTarget": {
+          "help": "Protein ve yağdan sonra kalan kalori, 4 kcal/g'a bölünür.",
+          "label": "Karbonhidrat hedefi (g/gün)",
+        },
+        "fatTarget": {
+          "help": "Toplam günlük kalorinin %30'u, 9 kcal/g'a bölünür.",
+          "label": "Yağ hedefi (g/gün)",
+        },
+        "proteinTarget": {
+          "help": "Aktif bireyler için 1,6 g/kg, hareketsiz bireyler için 0,8 g/kg.",
+          "label": "Protein hedefi (g/gün)",
+        },
+        "tdee": {
+          "help": "Günlük toplam enerji harcaması — mevcut aktivite düzeyindeki bakım kalorisi.",
+          "label": "TDEE (kcal/gün)",
+        },
+      },
+      "short": "Mifflin-St Jeor formülü ile günlük toplam enerji harcamanızı detaylı aktivite seviyeleriyle hesaplayın.",
+      "title": "TDEE Hesaplayıcı — Günlük Kalori İhtiyacı",
+    },
+    "zh": {
+      "description": "免费TDEE计算器。输入体重、身高、年龄、性别和活动水平，获取基础代谢率、每日总卡路里和宏量营养素目标。",
+      "errors": {
+        "ageOutOfRange": "年龄必须在15至100岁之间。",
+        "heightOutOfRange": "身高必须在100至250厘米之间。",
+        "weightOutOfRange": "体重必须在20至300千克之间。",
+      },
+      "faq": [
+        {
+          "a": "1990年开发：男性BMR = 10×体重 + 6.25×身高 − 5×年龄 + 5；女性BMR = 10×体重 + 6.25×身高 − 5×年龄 − 161。",
+          "q": "什么是Mifflin-St Jeor公式？",
+        },
+      ],
+      "inputs": {
+        "activityLevel": {
+          "help": "选择最符合您每周日常生活的级别。",
+          "label": "活动水平",
+        },
+        "age": {
+          "help": "您的当前年龄。",
+          "label": "年龄（岁）",
+        },
+        "gender": {
+          "help": "Mifflin-St Jeor公式对男性和女性使用不同的常数。",
+          "label": "生理性别",
+        },
+        "height": {
+          "help": "您的身高（厘米）。",
+          "label": "身高（厘米）",
+        },
+        "weight": {
+          "help": "您当前的体重。",
+          "label": "体重（千克）",
+        },
+      },
+      "keywords": [
+        "TDEE计算器",
+        "每日总能量消耗",
+        "卡路里计算器",
+        "基础代谢率计算器",
+        "Mifflin St Jeor",
+        "每日热量需求",
+        "宏量营养素计算器",
+      ],
+      "options": {
+        "activityLevel": {
+          "athlete": "运动员（每天训练两次）",
+          "extraActive": "极度活跃（高强度运动+体力劳动）",
+          "lightlyActive": "轻度活跃（每周运动1–3天）",
+          "moderatelyActive": "中度活跃（每周运动3–5天）",
+          "sedentary": "久坐不动（办公室工作，无运动）",
+          "veryActive": "高度活跃（每周高强度运动6–7天）",
+        },
+        "gender": {
+          "female": "女性",
+          "male": "男性",
+        },
+      },
+      "outputs": {
+        "bmr": {
+          "help": "您的身体在完全休息状态下消耗的卡路里。",
+          "label": "基础代谢率（千卡/天）",
+        },
+        "carbTarget": {
+          "help": "蛋白质和脂肪后剩余的卡路里除以4千卡/克。",
+          "label": "碳水化合物目标（克/天）",
+        },
+        "fatTarget": {
+          "help": "每日总卡路里的30%，除以9千卡/克。",
+          "label": "脂肪目标（克/天）",
+        },
+        "proteinTarget": {
+          "help": "活跃人群1.6克/千克，久坐人群0.8克/千克。",
+          "label": "蛋白质目标（克/天）",
+        },
+        "tdee": {
+          "help": "当前活动水平下的每日总能量消耗。",
+          "label": "TDEE（千卡/天）",
+        },
+      },
+      "short": "使用Mifflin-St Jeor公式和详细活动水平计算您的每日总能量消耗。",
+      "title": "TDEE计算器 — 每日卡路里需求",
+    },
+  },
+  "icon": Any<String>,
+  "inputSchema": ZodObject {
+    "_cached": {
+      "keys": [
+        "weight",
+        "height",
+        "age",
+        "gender",
+        "activityLevel",
+      ],
+      "shape": {
+        "activityLevel": ZodEnum {
+          "_cache": Set {
+            "sedentary",
+            "lightlyActive",
+            "moderatelyActive",
+            "veryActive",
+            "extraActive",
+            "athlete",
+          },
+          "_def": {
+            "typeName": "ZodEnum",
+            "values": [
+              "sedentary",
+              "lightlyActive",
+              "moderatelyActive",
+              "veryActive",
+              "extraActive",
+              "athlete",
+            ],
+          },
+          "and": [Function],
+          "array": [Function],
+          "brand": [Function],
+          "catch": [Function],
+          "default": [Function],
+          "describe": [Function],
+          "isNullable": [Function],
+          "isOptional": [Function],
+          "nullable": [Function],
+          "nullish": [Function],
+          "optional": [Function],
+          "or": [Function],
+          "parse": [Function],
+          "parseAsync": [Function],
+          "pipe": [Function],
+          "promise": [Function],
+          "readonly": [Function],
+          "refine": [Function],
+          "refinement": [Function],
+          "safeParse": [Function],
+          "safeParseAsync": [Function],
+          "spa": [Function],
+          "superRefine": [Function],
+          "transform": [Function],
+          "~standard": {
+            "validate": [Function],
+            "vendor": "zod",
+            "version": 1,
+          },
+        },
+        "age": ZodNumber {
+          "_def": {
+            "checks": [
+              {
+                "kind": "int",
+                "message": undefined,
+              },
+              {
+                "inclusive": true,
+                "kind": "min",
+                "message": undefined,
+                "value": 15,
+              },
+              {
+                "inclusive": true,
+                "kind": "max",
+                "message": undefined,
+                "value": 100,
+              },
+            ],
+            "coerce": false,
+            "typeName": "ZodNumber",
+          },
+          "and": [Function],
+          "array": [Function],
+          "brand": [Function],
+          "catch": [Function],
+          "default": [Function],
+          "describe": [Function],
+          "isNullable": [Function],
+          "isOptional": [Function],
+          "max": [Function],
+          "min": [Function],
+          "nullable": [Function],
+          "nullish": [Function],
+          "optional": [Function],
+          "or": [Function],
+          "parse": [Function],
+          "parseAsync": [Function],
+          "pipe": [Function],
+          "promise": [Function],
+          "readonly": [Function],
+          "refine": [Function],
+          "refinement": [Function],
+          "safeParse": [Function],
+          "safeParseAsync": [Function],
+          "spa": [Function],
+          "step": [Function],
+          "superRefine": [Function],
+          "transform": [Function],
+          "~standard": {
+            "validate": [Function],
+            "vendor": "zod",
+            "version": 1,
+          },
+        },
+        "gender": ZodEnum {
+          "_cache": Set {
+            "male",
+            "female",
+          },
+          "_def": {
+            "typeName": "ZodEnum",
+            "values": [
+              "male",
+              "female",
+            ],
+          },
+          "and": [Function],
+          "array": [Function],
+          "brand": [Function],
+          "catch": [Function],
+          "default": [Function],
+          "describe": [Function],
+          "isNullable": [Function],
+          "isOptional": [Function],
+          "nullable": [Function],
+          "nullish": [Function],
+          "optional": [Function],
+          "or": [Function],
+          "parse": [Function],
+          "parseAsync": [Function],
+          "pipe": [Function],
+          "promise": [Function],
+          "readonly": [Function],
+          "refine": [Function],
+          "refinement": [Function],
+          "safeParse": [Function],
+          "safeParseAsync": [Function],
+          "spa": [Function],
+          "superRefine": [Function],
+          "transform": [Function],
+          "~standard": {
+            "validate": [Function],
+            "vendor": "zod",
+            "version": 1,
+          },
+        },
+        "height": ZodNumber {
+          "_def": {
+            "checks": [
+              {
+                "inclusive": false,
+                "kind": "min",
+                "message": undefined,
+                "value": 0,
+              },
+              {
+                "inclusive": true,
+                "kind": "min",
+                "message": undefined,
+                "value": 100,
+              },
+              {
+                "inclusive": true,
+                "kind": "max",
+                "message": undefined,
+                "value": 250,
+              },
+            ],
+            "coerce": false,
+            "typeName": "ZodNumber",
+          },
+          "and": [Function],
+          "array": [Function],
+          "brand": [Function],
+          "catch": [Function],
+          "default": [Function],
+          "describe": [Function],
+          "isNullable": [Function],
+          "isOptional": [Function],
+          "max": [Function],
+          "min": [Function],
+          "nullable": [Function],
+          "nullish": [Function],
+          "optional": [Function],
+          "or": [Function],
+          "parse": [Function],
+          "parseAsync": [Function],
+          "pipe": [Function],
+          "promise": [Function],
+          "readonly": [Function],
+          "refine": [Function],
+          "refinement": [Function],
+          "safeParse": [Function],
+          "safeParseAsync": [Function],
+          "spa": [Function],
+          "step": [Function],
+          "superRefine": [Function],
+          "transform": [Function],
+          "~standard": {
+            "validate": [Function],
+            "vendor": "zod",
+            "version": 1,
+          },
+        },
+        "weight": ZodNumber {
+          "_def": {
+            "checks": [
+              {
+                "inclusive": false,
+                "kind": "min",
+                "message": undefined,
+                "value": 0,
+              },
+              {
+                "inclusive": true,
+                "kind": "min",
+                "message": undefined,
+                "value": 20,
+              },
+              {
+                "inclusive": true,
+                "kind": "max",
+                "message": undefined,
+                "value": 300,
+              },
+            ],
+            "coerce": false,
+            "typeName": "ZodNumber",
+          },
+          "and": [Function],
+          "array": [Function],
+          "brand": [Function],
+          "catch": [Function],
+          "default": [Function],
+          "describe": [Function],
+          "isNullable": [Function],
+          "isOptional": [Function],
+          "max": [Function],
+          "min": [Function],
+          "nullable": [Function],
+          "nullish": [Function],
+          "optional": [Function],
+          "or": [Function],
+          "parse": [Function],
+          "parseAsync": [Function],
+          "pipe": [Function],
+          "promise": [Function],
+          "readonly": [Function],
+          "refine": [Function],
+          "refinement": [Function],
+          "safeParse": [Function],
+          "safeParseAsync": [Function],
+          "spa": [Function],
+          "step": [Function],
+          "superRefine": [Function],
+          "transform": [Function],
+          "~standard": {
+            "validate": [Function],
+            "vendor": "zod",
+            "version": 1,
+          },
+        },
+      },
+    },
+    "_def": {
+      "catchall": ZodNever {
+        "_def": {
+          "typeName": "ZodNever",
+        },
+        "and": [Function],
+        "array": [Function],
+        "brand": [Function],
+        "catch": [Function],
+        "default": [Function],
+        "describe": [Function],
+        "isNullable": [Function],
+        "isOptional": [Function],
+        "nullable": [Function],
+        "nullish": [Function],
+        "optional": [Function],
+        "or": [Function],
+        "parse": [Function],
+        "parseAsync": [Function],
+        "pipe": [Function],
+        "promise": [Function],
+        "readonly": [Function],
+        "refine": [Function],
+        "refinement": [Function],
+        "safeParse": [Function],
+        "safeParseAsync": [Function],
+        "spa": [Function],
+        "superRefine": [Function],
+        "transform": [Function],
+        "~standard": {
+          "validate": [Function],
+          "vendor": "zod",
+          "version": 1,
+        },
+      },
+      "shape": [Function],
+      "typeName": "ZodObject",
+      "unknownKeys": "strip",
+    },
+    "and": [Function],
+    "array": [Function],
+    "augment": [Function],
+    "brand": [Function],
+    "catch": [Function],
+    "default": [Function],
+    "describe": [Function],
+    "isNullable": [Function],
+    "isOptional": [Function],
+    "nonstrict": [Function],
+    "nullable": [Function],
+    "nullish": [Function],
+    "optional": [Function],
+    "or": [Function],
+    "parse": [Function],
+    "parseAsync": [Function],
+    "pipe": [Function],
+    "promise": [Function],
+    "readonly": [Function],
+    "refine": [Function],
+    "refinement": [Function],
+    "safeParse": [Function],
+    "safeParseAsync": [Function],
+    "spa": [Function],
+    "superRefine": [Function],
+    "transform": [Function],
+    "~standard": {
+      "validate": [Function],
+      "vendor": "zod",
+      "version": 1,
+    },
+  },
+  "inputs": [
+    {
+      "defaultValue": 70,
+      "id": "weight",
+      "required": true,
+      "type": {
+        "kind": "number",
+        "max": 300,
+        "min": 20,
+        "step": 0.5,
+        "unit": "kg",
+      },
+    },
+    {
+      "defaultValue": 170,
+      "id": "height",
+      "required": true,
+      "type": {
+        "kind": "number",
+        "max": 250,
+        "min": 100,
+        "step": 1,
+        "unit": "cm",
+      },
+    },
+    {
+      "defaultValue": 30,
+      "id": "age",
+      "required": true,
+      "type": {
+        "integer": true,
+        "kind": "number",
+        "max": 100,
+        "min": 15,
+        "step": 1,
+        "unit": "year",
+      },
+    },
+    {
+      "defaultValue": "male",
+      "id": "gender",
+      "required": true,
+      "type": {
+        "kind": "select",
+        "options": [
+          {
+            "i18nKey": "male",
+            "value": "male",
+          },
+          {
+            "i18nKey": "female",
+            "value": "female",
+          },
+        ],
+      },
+    },
+    {
+      "defaultValue": "moderatelyActive",
+      "id": "activityLevel",
+      "required": true,
+      "type": {
+        "kind": "select",
+        "options": [
+          {
+            "i18nKey": "sedentary",
+            "value": "sedentary",
+          },
+          {
+            "i18nKey": "lightlyActive",
+            "value": "lightlyActive",
+          },
+          {
+            "i18nKey": "moderatelyActive",
+            "value": "moderatelyActive",
+          },
+          {
+            "i18nKey": "veryActive",
+            "value": "veryActive",
+          },
+          {
+            "i18nKey": "extraActive",
+            "value": "extraActive",
+          },
+          {
+            "i18nKey": "athlete",
+            "value": "athlete",
+          },
+        ],
+      },
+    },
+  ],
+  "meta": {
+    "disclaimer": "TDEE estimates are population-level averages. Individual metabolic rates can vary by 10–20%. Use as a starting point and adjust based on real-world weight trends.",
+    "formulaLatex": "\\text{BMR}_{\\text{male}} = 10w + 6.25h - 5a + 5 \\quad \\text{TDEE} = \\text{BMR} \\times \\text{PAL}",
+    "references": [
+      {
+        "authority": "Mifflin MD, St Jeor ST et al. (1990) — American Journal of Clinical Nutrition",
+        "title": "A new predictive equation for resting energy expenditure in healthy individuals",
+        "url": "https://doi.org/10.1093/ajcn/51.2.241",
+      },
+      {
+        "authority": "FAO/WHO/UNU Expert Consultation (2001)",
+        "title": "Energy requirements of adults",
+        "url": "https://www.fao.org/3/y5686e/y5686e.pdf",
+      },
+    ],
+  },
+  "outputs": [
+    {
+      "format": "number",
+      "id": "bmr",
+      "precision": 0,
+      "unit": "kcal",
+    },
+    {
+      "format": "number",
+      "highlight": true,
+      "id": "tdee",
+      "precision": 0,
+      "unit": "kcal",
+    },
+    {
+      "format": "number",
+      "id": "proteinTarget",
+      "precision": 0,
+    },
+    {
+      "format": "number",
+      "id": "carbTarget",
+      "precision": 0,
+    },
+    {
+      "format": "number",
+      "id": "fatTarget",
+      "precision": 0,
+    },
+  ],
+  "priority": Any<String>,
+  "related": [
+    "bmi",
+    "heart-rate",
+    "blood-pressure",
+  ],
+  "slug": Any<String>,
+  "tags": [
+    "TDEE",
+    "calories",
+    "Mifflin-St Jeor",
+    "BMR",
+    "nutrition",
+    "weight management",
+  ],
+}
+`;
+
+exports[`TDEE definition — shape snapshot > snapshot: female moderately active 1`] = `
+{
+  "bmr": 1345,
+  "carbTarget": 268,
+  "fatTarget": 70,
+  "proteinTarget": 96,
+  "tdee": 2085,
+}
+`;
+
+exports[`TDEE definition — shape snapshot > snapshot: male sedentary 1`] = `
+{
+  "bmr": 1649,
+  "carbTarget": 290,
+  "fatTarget": 66,
+  "proteinTarget": 56,
+  "tdee": 1979,
+}
+`;
