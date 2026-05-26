@@ -25,7 +25,7 @@ describe("bac snapshot", () => {
   });
 
   it("compute is pure", () => {
-    assertComputeIsPure(compute, {
+    assertComputeIsPure(definition as AnyCalculatorDefinition, {
       drinks: 2,
       weightKg: 70,
       sex: "male",

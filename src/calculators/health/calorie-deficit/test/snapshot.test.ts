@@ -25,7 +25,7 @@ describe("calorie-deficit snapshot", () => {
   });
 
   it("compute is pure", () => {
-    assertComputeIsPure(compute, {
+    assertComputeIsPure(definition as AnyCalculatorDefinition, {
       currentWeight: 80,
       targetWeight: 70,
       unit: "metric",
