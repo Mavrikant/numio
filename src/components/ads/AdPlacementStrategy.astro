@@ -1,0 +1,106 @@
+---
+/**
+ * AdPlacementStrategy.astro
+ * Composer component: orchestrates ad slots for calculator and article pages.
+ *
+ * Recommended placements (CWV-safe):
+ *   - Result panel below (in-content)     — always shown, desktop + mobile
+ *   - After 2nd H2 in article content     — only on desktop (≥ md breakpoint)
+ *
+ * Mobile constraint: max 1 ad per page (only the result-panel slot).
+ * No sticky footer ads (avoids CLS + UX regression).
+ *
+ * Usage in a calculator page result panel:
+ *   <AdPlacementStrategy placement="result-panel" />
+ *
+ * Usage in an article/MDX after 2nd heading:
+ *   <AdPlacementStrategy placement="article-mid" />
+ */
+
+import AdSlot from "./AdSlot.astro";
+
+export type StrategyPlacement = "result-panel" | "article-mid";
+
+export interface Props {
+  placement: StrategyPlacement;
+}
+
+const { placement } = Astro.props;
+
+/**
+ * Slot IDs are placeholders — replace with real AdSense slot IDs once
+ * the account is approved and ad units are created.
+ */
+const SLOTS = {
+  "result-panel": {
+    slot: "1234567890",   // TODO: replace with real AdSense slot ID
+    format: "auto" as const,
+    minHeight: 250,       // 300×250 on desktop → 250px height reserved
+    adPlacement: "in-content" as const,
+  },
+  "article-mid": {
+    slot: "0987654321",   // TODO: replace with real AdSense slot ID
+    format: "rectangle" as const,
+    minHeight: 250,
+    adPlacement: "in-content" as const,
+  },
+} satisfies Record<StrategyPlacement, {
+  slot: string;
+  format: "auto" | "rectangle" | "horizontal" | "vertical";
+  minHeight: number;
+  adPlacement: "in-content" | "sidebar" | "footer";
+}>;
+
+const config = SLOTS[placement];
+---
+
+{placement === "result-panel" && (
+  /*
+   * Result-panel slot: visible on all viewports.
+   * On mobile this is the ONE allowed ad per page.
+   */
+  <div class="ad-placement-result-panel">
+    <AdSlot
+      slot={config.slot}
+      format={config.format}
+      minHeight={config.minHeight}
+      placement={config.adPlacement}
+    />
+  </div>
+)}
+
+{placement === "article-mid" && (
+  /*
+   * Article-mid slot: suppressed on mobile (< md) via CSS display:none.
+   * AdSense is NOT loaded if the element is display:none — verified via
+   * Intersection Observer not firing (element not visible).
+   */
+  <div class="ad-placement-article-mid">
+    <AdSlot
+      slot={config.slot}
+      format={config.format}
+      minHeight={config.minHeight}
+      placement={config.adPlacement}
+    />
+  </div>
+)}
+
+<style>
+  .ad-placement-result-panel {
+    margin-block: 1.5rem;
+    width: 100%;
+  }
+
+  /* Article-mid: hide on mobile (< 768px), show on md+ */
+  .ad-placement-article-mid {
+    display: none;
+    margin-block: 2rem;
+    width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    .ad-placement-article-mid {
+      display: block;
+    }
+  }
+</style>

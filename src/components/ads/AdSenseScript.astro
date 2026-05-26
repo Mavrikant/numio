@@ -1,0 +1,65 @@
+---
+/**
+ * AdSenseScript.astro
+ * Place inside <head>. Injects the AdSense base script only when:
+ *   1. PUBLIC_ADS_ENABLED === "true"  (build-time gate)
+ *   2. The user has accepted ads consent (runtime gate, checked via inline JS)
+ *
+ * The script itself is loaded async + defer (post-LCP friendly).
+ * A CustomEvent "adsense-ready" is dispatched once the script loads
+ * so AdSlot instances can push ads if they are already in view.
+ */
+
+const adsEnabled = import.meta.env.PUBLIC_ADS_ENABLED === "true";
+const AD_CLIENT = "ca-pub-XXXXXXXXXXXXXXXX";
+---
+
+{adsEnabled && (
+  <script is:inline define:vars={{ AD_CLIENT }}>
+    (function () {
+      const CONSENT_KEY = "ads-consent";
+      const CONSENT_TTL_KEY = "ads-consent-ttl";
+
+      function isConsentAccepted() {
+        try {
+          const ttl = parseInt(localStorage.getItem(CONSENT_TTL_KEY) || "0", 10);
+          if (Date.now() > ttl) return false;
+          return localStorage.getItem(CONSENT_KEY) === "accepted";
+        } catch {
+          return false;
+        }
+      }
+
+      function injectAdSense() {
+        // Guard against double-injection
+        if (document.querySelector('script[data-adsense-injected]')) return;
+
+        const script = document.createElement("script");
+        script.src =
+          "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=" +
+          AD_CLIENT;
+        script.async = true;
+        script.defer = true;
+        script.crossOrigin = "anonymous";
+        script.dataset.adClient = AD_CLIENT;
+        script.dataset.adsenseInjected = "true";
+
+        script.addEventListener("load", function () {
+          window.dispatchEvent(new CustomEvent("adsense-ready"));
+        });
+
+        document.head.appendChild(script);
+      }
+
+      // Inject now if consent already given
+      if (isConsentAccepted()) {
+        injectAdSense();
+      }
+
+      // Or inject when user accepts later (ConsentBanner fires this event)
+      window.addEventListener("ads-consent-accepted", function () {
+        injectAdSense();
+      });
+    })();
+  </script>
+)}

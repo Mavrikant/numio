@@ -39,5 +39,22 @@
   "footer": {
     "copyright": "© Karaman Hesaplayıcılar",
     "disclaimer": "Sonuçlar yalnızca bilgilendirme amaçlıdır. Kritik kararlarda doğrulayın."
+  },
+  "consent": {
+    "title": "Gizliliğinize değer veriyoruz",
+    "description": "Deneyiminizi iyileştirmek, trafiği analiz etmek ve ilgili reklamlar göstermek için çerezler ve benzer teknolojiler kullanıyoruz. Hangi kategorileri kabul edeceğinizi seçebilirsiniz.",
+    "accept": "Tümünü kabul et",
+    "reject": "Tümünü reddet",
+    "customize": "Özelleştir",
+    "privacyPolicy": "Gizlilik Politikası",
+    "customizeTitle": "Çerez tercihleri",
+    "savePreferences": "Tercihleri kaydet",
+    "back": "Geri",
+    "essential": "Zorunlu",
+    "essentialDesc": "Sitenin çalışması için gereklidir. Her zaman etkin.",
+    "analytics": "Analitik",
+    "analyticsDesc": "Ziyaretçilerin siteyi nasıl kullandığını anlamamıza yardımcı olur (anonim).",
+    "ads": "Reklam",
+    "adsDesc": "İlgili reklamlar göstermemize ve hesaplayıcılara ücretsiz erişimi sürdürmemize olanak tanır."
   }
 }

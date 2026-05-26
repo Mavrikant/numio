@@ -39,5 +39,22 @@
   "footer": {
     "copyright": "© Karaman Calculators",
     "disclaimer": "Results are for informational purposes only. Verify before using for critical decisions."
+  },
+  "consent": {
+    "title": "We value your privacy",
+    "description": "We use cookies and similar technologies to improve your experience, analyze traffic, and show relevant ads. You can choose which categories to accept.",
+    "accept": "Accept all",
+    "reject": "Reject all",
+    "customize": "Customize",
+    "privacyPolicy": "Privacy Policy",
+    "customizeTitle": "Cookie preferences",
+    "savePreferences": "Save preferences",
+    "back": "Back",
+    "essential": "Essential",
+    "essentialDesc": "Required for the site to function. Always active.",
+    "analytics": "Analytics",
+    "analyticsDesc": "Helps us understand how visitors use the site (anonymous).",
+    "ads": "Advertising",
+    "adsDesc": "Allows us to show relevant ads and support free access to calculators."
   }
 }

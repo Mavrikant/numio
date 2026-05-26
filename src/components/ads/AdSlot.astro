@@ -1,0 +1,154 @@
+---
+/**
+ * AdSlot.astro
+ * CLS=0 guaranteed: reserves space via min-height before ad loads.
+ * Lazy: uses IntersectionObserver — AdSense ins tag is only activated
+ *       when the slot enters the viewport (±200 px root margin).
+ * Consent-aware: checks localStorage `ads-consent` at runtime.
+ * Disabled mode: if PUBLIC_ADS_ENABLED !== "true" nothing is rendered.
+ */
+
+export interface Props {
+  /** AdSense data-ad-slot value */
+  slot: string;
+  format?: "auto" | "rectangle" | "horizontal" | "vertical";
+  /** Minimum height in px to reserve — prevents CLS */
+  minHeight: number;
+  placement: "in-content" | "sidebar" | "footer";
+}
+
+const {
+  slot,
+  format = "auto",
+  minHeight,
+  placement,
+} = Astro.props;
+
+const adsEnabled = import.meta.env.PUBLIC_ADS_ENABLED === "true";
+
+/* Derive sensible default widths per placement for the placeholder */
+const widthMap: Record<NonNullable<Props["placement"]>, string> = {
+  "in-content": "100%",
+  "sidebar": "300px",
+  "footer": "100%",
+};
+const placeholderWidth = widthMap[placement];
+
+/* Unique id so multiple slots on the same page don't collide */
+const uid = `ad-slot-${Math.random().toString(36).slice(2, 9)}`;
+---
+
+{adsEnabled && (
+  <div
+    id={uid}
+    class="ad-slot-wrapper"
+    data-placement={placement}
+    data-ad-slot={slot}
+    data-ad-format={format}
+    style={`min-height:${minHeight}px; width:${placeholderWidth}; contain:layout size;`}
+    aria-hidden="true"
+  >
+    {/* Placeholder shown until ad fills in — background keeps layout stable */}
+    <div class="ad-slot-placeholder" style={`min-height:${minHeight}px; width:100%;`}></div>
+  </div>
+
+  <script define:vars={{ uid, slot, format, minHeight }}>
+    (function () {
+      const CONSENT_KEY = "ads-consent";
+      const CONSENT_TTL_KEY = "ads-consent-ttl";
+
+      function isConsentAccepted() {
+        try {
+          const ttl = parseInt(localStorage.getItem(CONSENT_TTL_KEY) || "0", 10);
+          if (Date.now() > ttl) return false;
+          return localStorage.getItem(CONSENT_KEY) === "accepted";
+        } catch {
+          return false;
+        }
+      }
+
+      function loadAd(wrapper) {
+        if (!isConsentAccepted()) return;
+        if (wrapper.dataset.adLoaded === "true") return;
+        wrapper.dataset.adLoaded = "true";
+
+        // Remove placeholder
+        const placeholder = wrapper.querySelector(".ad-slot-placeholder");
+        if (placeholder) placeholder.remove();
+
+        // Create the ins element AdSense requires
+        const ins = document.createElement("ins");
+        ins.className = "adsbygoogle";
+        ins.style.cssText = "display:block;width:100%;";
+        ins.dataset.adClient = "ca-pub-XXXXXXXXXXXXXXXX";
+        ins.dataset.adSlot = slot;
+        ins.dataset.adFormat = format;
+        ins.dataset.fullWidthResponsive = "true";
+        wrapper.appendChild(ins);
+
+        // Push to AdSense queue
+        try {
+          (window.adsbygoogle = window.adsbygoogle || []).push({});
+        } catch (e) {
+          // AdSense not yet loaded — it will auto-fill once script runs
+        }
+      }
+
+      function init() {
+        const wrapper = document.getElementById(uid);
+        if (!wrapper) return;
+
+        // IntersectionObserver — activate when 200 px away from viewport
+        if ("IntersectionObserver" in window) {
+          const obs = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  loadAd(wrapper);
+                  obs.disconnect();
+                }
+              });
+            },
+            { rootMargin: "200px" }
+          );
+          obs.observe(wrapper);
+        } else {
+          // Fallback for browsers without IO support
+          loadAd(wrapper);
+        }
+
+        // Also react if user accepts consent after page load
+        window.addEventListener("ads-consent-accepted", () => {
+          loadAd(wrapper);
+        });
+      }
+
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", init);
+      } else {
+        init();
+      }
+    })();
+  </script>
+)}
+
+<style>
+  .ad-slot-wrapper {
+    display: block;
+    overflow: hidden;
+    /* contain:layout size is set inline to use the dynamic minHeight */
+  }
+
+  .ad-slot-placeholder {
+    background-color: rgb(var(--border) / 0.4);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ad-slot-placeholder::after {
+    content: "";
+    display: block;
+  }
+</style>
