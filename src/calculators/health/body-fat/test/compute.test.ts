@@ -3,16 +3,16 @@ import { runNumericTests } from "@/test-utils";
 import calculator from "../definition";
 
 describe("Body Fat — US Navy method numeric correctness", () => {
-  it("male: height 175cm, waist 85cm, neck 37cm → ~17.3%", () => {
-    // %BF = 86.010 × log10(85-37) - 70.041 × log10(175) + 36.76
-    // = 86.01 × log10(48) - 70.041 × log10(175) + 36.76
-    // = 86.01 × 1.68124 - 70.041 × 2.24304 + 36.76
-    // = 144.596 - 157.115 + 36.76 ≈ 24.24
+  it("male: height 175cm, waist 85cm, neck 37cm → ~17.8%", () => {
+    // Cm-adapted formula: 86.010 × log10(85−37) − 70.041 × log10(175) + 30.295
+    // = 86.010 × log10(48) − 70.041 × log10(175) + 30.295
+    // = 86.010 × 1.68124 − 70.041 × 2.24304 + 30.295
+    // = 144.60 − 157.12 + 30.295 ≈ 17.77
     runNumericTests(calculator, [
       {
-        inputs: { gender: "male", height: 175, weight: 80, waist: 90, neck: 37 },
-        expected: { bodyFatPct: 24 },
-        tolerance: 1,
+        inputs: { gender: "male", height: 175, weight: 80, waist: 85, neck: 37 },
+        expected: { bodyFatPct: 17.8 },
+        tolerance: 0.5,
       },
     ]);
   });

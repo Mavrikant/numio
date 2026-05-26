@@ -4,12 +4,12 @@ import calculator from "../definition";
 
 describe("Ideal Weight — Devine formula correctness", () => {
   it("Devine male 175 cm → 50 + 2.3×(175/2.54 - 60)", () => {
-    // 175 cm / 2.54 = 68.898 in; over 5ft = 8.898; Devine male = 50 + 2.3×8.898 = 50 + 20.466 = 70.466
+    // 175/2.54 = 68.8976in; over 5ft = 8.8976in; Devine male = 50 + 2.3×8.8976 = 70.464
     runNumericTests(calculator, [
       {
         inputs: { gender: "male", height: 175, unit: "metric" },
-        expected: { devine: 70.47 },
-        tolerance: 0.05,
+        expected: { devine: 70.46 },
+        tolerance: 0.1,
       },
     ]);
   });

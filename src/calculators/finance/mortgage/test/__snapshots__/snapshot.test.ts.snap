@@ -1,0 +1,1335 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Mortgage definition — shape snapshot > snapshot: definition shape matches expectations 1`] = `
+{
+  "category": Any<String>,
+  "compute": [Function],
+  "i18n": {
+    "ar": {
+      "description": "حاسبة رهن عقاري مجانية تستخدم معادلة الإيرادات السنوية القياسية. أدخل مبلغ القرض والفائدة والمدة للحصول على القسط الشهري والتكلفة الإجمالية وجدول الإطفاء.",
+      "errors": {
+        "downPaymentExceedsLoan": "لا يمكن أن تتجاوز الدفعة المقدمة سعر العقار.",
+        "loanAmountRange": "يجب أن يكون سعر العقار بين 1,000 و10,000,000.",
+        "rateRange": "يجب أن يكون معدل الفائدة السنوي بين 0% و30%.",
+        "termRange": "يجب أن تكون مدة القرض بين سنة واحدة و30 سنة.",
+      },
+      "faq": [
+        {
+          "a": "جدول الإطفاء هو جدول يوضح كيف يُقسَّم كل قسط شهري بين رأس المال والفوائد على مدار حياة القرض. في البداية تذهب معظم الدفعة للفوائد، وتزداد حصة رأس المال تدريجياً مع مرور الوقت.",
+          "q": "ما هو جدول الإطفاء؟",
+        },
+        {
+          "a": "دفعة مقدمة أكبر تعني مبلغاً مقترضاً أقل، مما يُخفض القسط الشهري وإجمالي الفوائد المدفوعة.",
+          "q": "كيف تؤثر الدفعة المقدمة على الرهن العقاري؟",
+        },
+      ],
+      "inputs": {
+        "annualRate": {
+          "help": "معدل الفائدة السنوي الذي تقدمه جهة الإقراض.",
+          "label": "معدل الفائدة السنوي (%)",
+        },
+        "downPayment": {
+          "help": "المبلغ المدفوع مسبقاً؛ يُقلل من رأس مال القرض.",
+          "label": "الدفعة المقدمة",
+        },
+        "loanAmount": {
+          "help": "إجمالي سعر شراء العقار.",
+          "label": "سعر العقار",
+        },
+        "termYears": {
+          "help": "عدد السنوات التي ستسدد خلالها القرض.",
+          "label": "مدة القرض (سنوات)",
+        },
+      },
+      "keywords": [
+        "حاسبة رهن عقاري",
+        "قسط شهري عقاري",
+        "تمويل عقاري",
+        "جدول إطفاء",
+        "فائدة عقارية",
+        "قرض سكني",
+        "حساب الرهن",
+      ],
+      "outputs": {
+        "amortizationSchedule": {
+          "help": "تفصيل شهري للقسط والأصل والفائدة والرصيد المتبقي.",
+          "label": "جدول الإطفاء",
+        },
+        "monthlyPayment": {
+          "help": "المبلغ الثابت المدفوع كل شهر (رأس المال + الفائدة).",
+          "label": "القسط الشهري",
+        },
+        "principalAmount": {
+          "help": "سعر العقار ناقص الدفعة المقدمة — المبلغ الفعلي المقترض.",
+          "label": "رأس المال المقترض",
+        },
+        "totalInterest": {
+          "help": "مجموع الفوائد المدفوعة على مدار حياة القرض.",
+          "label": "إجمالي الفوائد",
+        },
+        "totalPayment": {
+          "help": "مجموع جميع الأقساط الشهرية طوال مدة القرض.",
+          "label": "إجمالي المدفوعات",
+        },
+      },
+      "short": "احسب قسطك الشهري وإجمالي الفوائد وجدول السداد الكامل لقرضك العقاري.",
+      "title": "حاسبة الرهن العقاري",
+    },
+    "de": {
+      "description": "Kostenloser Hypothekenrechner mit der Standard-Annuitätenformel. Geben Sie Darlehensbetrag, Zinssatz und Laufzeit ein und erhalten Sie Ihre Monatsrate und einen vollständigen Tilgungsplan.",
+      "errors": {
+        "downPaymentExceedsLoan": "Das Eigenkapital darf den Kaufpreis nicht überschreiten.",
+        "loanAmountRange": "Der Kaufpreis muss zwischen 1.000 und 10.000.000 liegen.",
+        "rateRange": "Der Zinssatz muss zwischen 0 % und 30 % liegen.",
+        "termRange": "Die Laufzeit muss zwischen 1 und 30 Jahren liegen.",
+      },
+      "faq": [
+        {
+          "a": "Ein Tilgungsplan zeigt monatlich auf, wie viel Ihrer Rate auf Zinsen und wie viel auf die Tilgung des Darlehens entfällt. In den ersten Jahren überwiegt der Zinsanteil; mit der Zeit steigt der Tilgungsanteil.",
+          "q": "Was ist ein Tilgungsplan?",
+        },
+        {
+          "a": "Ein höheres Eigenkapital reduziert den Kreditbetrag, was sowohl die Monatsrate als auch die Gesamtzinsen senkt.",
+          "q": "Wie wirkt sich das Eigenkapital auf die Monatsrate aus?",
+        },
+      ],
+      "inputs": {
+        "annualRate": {
+          "help": "Der von Ihrer Bank angebotene Jahreszinssatz.",
+          "label": "Jährlicher Zinssatz (%)",
+        },
+        "downPayment": {
+          "help": "Sofort gezahlter Betrag; reduziert den Kreditbetrag.",
+          "label": "Eigenkapital / Anzahlung",
+        },
+        "loanAmount": {
+          "help": "Gesamtkaufpreis der Immobilie.",
+          "label": "Kaufpreis",
+        },
+        "termYears": {
+          "help": "Anzahl der Jahre, über die Sie das Darlehen zurückzahlen.",
+          "label": "Laufzeit (Jahre)",
+        },
+      },
+      "keywords": [
+        "Hypothekenrechner",
+        "Baufinanzierung",
+        "Monatsrate berechnen",
+        "Immobilienkredit",
+        "Tilgungsplan",
+        "Hypothek",
+        "Wohnkredit",
+      ],
+      "outputs": {
+        "amortizationSchedule": {
+          "help": "Monatliche Aufschlüsselung von Rate, Tilgung, Zinsen und Restschuld.",
+          "label": "Tilgungsplan",
+        },
+        "monthlyPayment": {
+          "help": "Monatlich fällige feste Rate (Tilgung + Zinsen).",
+          "label": "Monatliche Rate",
+        },
+        "principalAmount": {
+          "help": "Kaufpreis abzüglich Eigenkapital — der tatsächlich geliehene Betrag.",
+          "label": "Kreditbetrag",
+        },
+        "totalInterest": {
+          "help": "Über die gesamte Laufzeit gezahlte Zinsen.",
+          "label": "Gesamtzinsen",
+        },
+        "totalPayment": {
+          "help": "Summe aller Monatszahlungen über die gesamte Laufzeit.",
+          "label": "Gesamtzahlung",
+        },
+      },
+      "short": "Berechnen Sie Ihre monatliche Hypothekenrate, Gesamtzinsen und den vollständigen Tilgungsplan.",
+      "title": "Hypothekenrechner",
+    },
+    "en": {
+      "description": "Free mortgage calculator using the standard annuity formula. Enter your loan amount, interest rate, and term to get your monthly payment, total cost, and a complete amortization table.",
+      "errors": {
+        "downPaymentExceedsLoan": "Down payment cannot exceed the home price.",
+        "loanAmountRange": "Home price must be between $1,000 and $10,000,000.",
+        "rateRange": "Annual rate must be between 0% and 30%.",
+        "termRange": "Loan term must be between 1 and 30 years.",
+      },
+      "faq": [
+        {
+          "a": "This calculator computes principal and interest only. Your actual monthly payment will also include property taxes, homeowner's insurance, and possibly private mortgage insurance (PMI) if your down payment is less than 20%.",
+          "q": "What is included in a monthly mortgage payment?",
+        },
+        {
+          "a": "A larger down payment reduces your loan principal, which lowers your monthly payment and total interest paid. A 20% down payment also eliminates the requirement for PMI in most cases.",
+          "q": "How does the down payment affect my mortgage?",
+        },
+        {
+          "a": "A 15-year mortgage has higher monthly payments but significantly less total interest. A 30-year mortgage has lower monthly payments but you pay more interest over the life of the loan.",
+          "q": "What is the difference between a 15-year and 30-year mortgage?",
+        },
+        {
+          "a": "An amortization schedule is a table showing how each monthly payment is split between principal and interest over the life of the loan. In early payments, most goes to interest; over time, more goes to principal.",
+          "q": "What is an amortization schedule?",
+        },
+      ],
+      "inputs": {
+        "annualRate": {
+          "help": "The yearly interest rate offered by your lender.",
+          "label": "Annual Interest Rate (%)",
+        },
+        "downPayment": {
+          "help": "Amount paid upfront; reduces the loan principal.",
+          "label": "Down Payment",
+        },
+        "loanAmount": {
+          "help": "Total purchase price of the property.",
+          "label": "Home Price",
+        },
+        "termYears": {
+          "help": "Number of years over which you will repay the loan.",
+          "label": "Loan Term (years)",
+        },
+      },
+      "keywords": [
+        "mortgage calculator",
+        "monthly mortgage payment",
+        "home loan calculator",
+        "amortization schedule",
+        "mortgage interest",
+        "housing loan",
+        "PITI calculator",
+      ],
+      "outputs": {
+        "amortizationSchedule": {
+          "help": "Month-by-month breakdown of payment, principal, interest, and remaining balance.",
+          "label": "Amortization Schedule",
+        },
+        "monthlyPayment": {
+          "help": "Fixed amount paid each month (principal + interest).",
+          "label": "Monthly Payment",
+        },
+        "principalAmount": {
+          "help": "Home price minus down payment — the amount actually borrowed.",
+          "label": "Loan Principal",
+        },
+        "totalInterest": {
+          "help": "Total interest paid over the life of the loan.",
+          "label": "Total Interest",
+        },
+        "totalPayment": {
+          "help": "Sum of all monthly payments over the full term.",
+          "label": "Total Payment",
+        },
+      },
+      "short": "Calculate your monthly mortgage payment, total interest, and full amortization schedule.",
+      "title": "Mortgage Calculator",
+    },
+    "es": {
+      "description": "Calculadora de hipoteca gratuita con la fórmula de anualidad estándar. Introduce el importe del préstamo, el tipo de interés y el plazo para obtener tu cuota mensual y un cuadro de amortización completo.",
+      "errors": {
+        "downPaymentExceedsLoan": "La entrada no puede superar el precio del inmueble.",
+        "loanAmountRange": "El precio debe estar entre 1.000 y 10.000.000.",
+        "rateRange": "El tipo anual debe estar entre el 0 % y el 30 %.",
+        "termRange": "El plazo debe ser de 1 a 30 años.",
+      },
+      "faq": [
+        {
+          "a": "Es una tabla que muestra cómo se divide cada cuota mensual entre capital e intereses a lo largo de la vida del préstamo. Al principio, la mayor parte va a intereses; con el tiempo, más va a amortizar capital.",
+          "q": "¿Qué es un cuadro de amortización?",
+        },
+        {
+          "a": "Una entrada mayor reduce el capital prestado, lo que disminuye la cuota mensual y el total de intereses pagados.",
+          "q": "¿Cómo afecta la entrada a la hipoteca?",
+        },
+      ],
+      "inputs": {
+        "annualRate": {
+          "help": "El tipo de interés anual ofrecido por tu entidad financiera.",
+          "label": "Tipo de interés anual (%)",
+        },
+        "downPayment": {
+          "help": "Cantidad pagada por adelantado; reduce el capital del préstamo.",
+          "label": "Entrada",
+        },
+        "loanAmount": {
+          "help": "Precio total de compra de la propiedad.",
+          "label": "Precio del inmueble",
+        },
+        "termYears": {
+          "help": "Número de años durante los cuales amortizarás el préstamo.",
+          "label": "Plazo (años)",
+        },
+      },
+      "keywords": [
+        "calculadora hipoteca",
+        "cuota mensual hipoteca",
+        "simulador préstamo hipotecario",
+        "cuadro amortización",
+        "interés hipotecario",
+        "préstamo vivienda",
+        "financiación inmobiliaria",
+      ],
+      "outputs": {
+        "amortizationSchedule": {
+          "help": "Desglose mensual de cuota, capital, intereses y saldo pendiente.",
+          "label": "Cuadro de amortización",
+        },
+        "monthlyPayment": {
+          "help": "Importe fijo a pagar cada mes (capital + intereses).",
+          "label": "Cuota mensual",
+        },
+        "principalAmount": {
+          "help": "Precio menos entrada — el importe realmente financiado.",
+          "label": "Capital prestado",
+        },
+        "totalInterest": {
+          "help": "Total de intereses pagados durante la vida del préstamo.",
+          "label": "Intereses totales",
+        },
+        "totalPayment": {
+          "help": "Suma de todas las cuotas durante el plazo completo.",
+          "label": "Coste total",
+        },
+      },
+      "short": "Calcula tu cuota mensual, el interés total y el cuadro de amortización completo.",
+      "title": "Calculadora de Hipoteca",
+    },
+    "fr": {
+      "description": "Calculateur de prêt immobilier gratuit utilisant la formule d'annuité standard. Entrez le montant emprunté, le taux et la durée pour obtenir vos mensualités et un tableau d'amortissement complet.",
+      "errors": {
+        "downPaymentExceedsLoan": "L'apport ne peut pas dépasser le prix du bien.",
+        "loanAmountRange": "Le prix du bien doit être compris entre 1 000 et 10 000 000.",
+        "rateRange": "Le taux annuel doit être compris entre 0 % et 30 %.",
+        "termRange": "La durée doit être comprise entre 1 et 30 ans.",
+      },
+      "faq": [
+        {
+          "a": "C'est un tableau indiquant, pour chaque mois, la part de la mensualité consacrée aux intérêts et celle consacrée au remboursement du capital. En début de prêt, la part d'intérêts est plus élevée ; elle diminue progressivement au profit du capital.",
+          "q": "Qu'est-ce qu'un tableau d'amortissement ?",
+        },
+        {
+          "a": "Un apport plus élevé réduit le capital emprunté, ce qui diminue la mensualité et le coût total des intérêts.",
+          "q": "Comment l'apport personnel influence-t-il le prêt ?",
+        },
+      ],
+      "inputs": {
+        "annualRate": {
+          "help": "Le taux d'intérêt annuel proposé par votre banque.",
+          "label": "Taux annuel (%)",
+        },
+        "downPayment": {
+          "help": "Somme versée en avance; réduit le capital emprunté.",
+          "label": "Apport personnel",
+        },
+        "loanAmount": {
+          "help": "Prix d'achat total du bien immobilier.",
+          "label": "Prix du bien",
+        },
+        "termYears": {
+          "help": "Nombre d'années sur lequel vous remboursez le prêt.",
+          "label": "Durée (années)",
+        },
+      },
+      "keywords": [
+        "calculateur prêt immobilier",
+        "mensualité crédit immobilier",
+        "simulation hypothèque",
+        "tableau amortissement",
+        "taux immobilier",
+        "crédit immobilier",
+        "emprunt immobilier",
+      ],
+      "outputs": {
+        "amortizationSchedule": {
+          "help": "Détail mensuel de la mensualité, du capital, des intérêts et du solde restant.",
+          "label": "Tableau d'amortissement",
+        },
+        "monthlyPayment": {
+          "help": "Montant mensuel fixe (capital + intérêts).",
+          "label": "Mensualité",
+        },
+        "principalAmount": {
+          "help": "Prix du bien moins l'apport — le montant réellement emprunté.",
+          "label": "Capital emprunté",
+        },
+        "totalInterest": {
+          "help": "Total des intérêts payés sur toute la durée du prêt.",
+          "label": "Intérêts totaux",
+        },
+        "totalPayment": {
+          "help": "Somme de toutes les mensualités sur toute la durée.",
+          "label": "Coût total",
+        },
+      },
+      "short": "Calculez votre mensualité, les intérêts totaux et votre tableau d'amortissement.",
+      "title": "Calculateur de Prêt Immobilier",
+    },
+    "hi": {
+      "description": "मानक वार्षिकी सूत्र का उपयोग करने वाला मुफ़्त होम लोन कैलकुलेटर। ऋण राशि, ब्याज दर और अवधि दर्ज करें और मासिक EMI, कुल लागत और पूर्ण एमोर्टाइजेशन तालिका देखें।",
+      "errors": {
+        "downPaymentExceedsLoan": "डाउन पेमेंट संपत्ति मूल्य से अधिक नहीं हो सकती।",
+        "loanAmountRange": "संपत्ति मूल्य 1,000 से 10,000,000 के बीच होनी चाहिए।",
+        "rateRange": "वार्षिक ब्याज दर 0% से 30% के बीच होनी चाहिए।",
+        "termRange": "ऋण अवधि 1 से 30 वर्ष के बीच होनी चाहिए।",
+      },
+      "faq": [
+        {
+          "a": "एमोर्टाइजेशन शेड्यूल एक तालिका है जो दिखाती है कि प्रत्येक मासिक EMI को ऋण अवधि के दौरान मूलधन और ब्याज में कैसे विभाजित किया जाता है। शुरुआती किस्तों में ज़्यादा हिस्सा ब्याज में जाता है; समय के साथ मूलधन की हिस्सेदारी बढ़ती जाती है।",
+          "q": "एमोर्टाइजेशन शेड्यूल क्या होता है?",
+        },
+        {
+          "a": "अधिक डाउन पेमेंट से ऋण मूलधन कम होता है, जिससे मासिक EMI और कुल ब्याज दोनों घटते हैं।",
+          "q": "डाउन पेमेंट का होम लोन पर क्या प्रभाव पड़ता है?",
+        },
+      ],
+      "inputs": {
+        "annualRate": {
+          "help": "आपके ऋणदाता द्वारा दी जाने वाली वार्षिक ब्याज दर।",
+          "label": "वार्षिक ब्याज दर (%)",
+        },
+        "downPayment": {
+          "help": "पहले से भुगतान की गई राशि; ऋण मूलधन को कम करती है।",
+          "label": "डाउन पेमेंट",
+        },
+        "loanAmount": {
+          "help": "संपत्ति की कुल खरीद कीमत।",
+          "label": "संपत्ति मूल्य",
+        },
+        "termYears": {
+          "help": "जितने वर्षों में आप ऋण चुकाएंगे।",
+          "label": "ऋण अवधि (वर्ष)",
+        },
+      },
+      "keywords": [
+        "होम लोन कैलकुलेटर",
+        "EMI कैलकुलेटर",
+        "मासिक किस्त",
+        "एमोर्टाइजेशन शेड्यूल",
+        "गृह ऋण",
+        "ब्याज गणना",
+        "मॉर्टगेज कैलकुलेटर",
+      ],
+      "outputs": {
+        "amortizationSchedule": {
+          "help": "प्रत्येक माह की EMI, मूलधन, ब्याज और शेष राशि का विवरण।",
+          "label": "एमोर्टाइजेशन शेड्यूल",
+        },
+        "monthlyPayment": {
+          "help": "हर महीने भुगतान की जाने वाली निश्चित राशि (मूलधन + ब्याज)।",
+          "label": "मासिक EMI",
+        },
+        "principalAmount": {
+          "help": "संपत्ति मूल्य में से डाउन पेमेंट घटाने के बाद वास्तव में उधार ली गई राशि।",
+          "label": "ऋण मूलधन",
+        },
+        "totalInterest": {
+          "help": "ऋण की पूरी अवधि में चुकाया गया कुल ब्याज।",
+          "label": "कुल ब्याज",
+        },
+        "totalPayment": {
+          "help": "पूरी अवधि में सभी मासिक किस्तों का योग।",
+          "label": "कुल भुगतान",
+        },
+      },
+      "short": "अपनी मासिक EMI, कुल ब्याज और पूरा एमोर्टाइजेशन शेड्यूल जानें।",
+      "title": "होम लोन कैलकुलेटर",
+    },
+    "it": {
+      "description": "Calcolatore mutuo gratuito con la formula dell'annualità standard. Inserisci l'importo del prestito, il tasso e la durata per ottenere la rata mensile e un piano di ammortamento completo.",
+      "errors": {
+        "downPaymentExceedsLoan": "L'acconto non può superare il prezzo dell'immobile.",
+        "loanAmountRange": "Il prezzo deve essere compreso tra 1.000 e 10.000.000.",
+        "rateRange": "Il tasso annuo deve essere compreso tra 0% e 30%.",
+        "termRange": "La durata deve essere compresa tra 1 e 30 anni.",
+      },
+      "faq": [
+        {
+          "a": "È una tabella che mostra come ogni rata mensile viene suddivisa tra capitale e interessi nel corso del mutuo. All'inizio la quota interessi è maggiore; col tempo la quota capitale aumenta progressivamente.",
+          "q": "Che cos'è un piano di ammortamento?",
+        },
+        {
+          "a": "Un acconto maggiore riduce il capitale finanziato, abbassando la rata mensile e il totale degli interessi.",
+          "q": "Come influisce l'acconto sul mutuo?",
+        },
+      ],
+      "inputs": {
+        "annualRate": {
+          "help": "Il tasso d'interesse annuo offerto dalla tua banca.",
+          "label": "Tasso annuo (%)",
+        },
+        "downPayment": {
+          "help": "Importo pagato in anticipo; riduce il capitale del prestito.",
+          "label": "Acconto",
+        },
+        "loanAmount": {
+          "help": "Prezzo totale di acquisto dell'immobile.",
+          "label": "Prezzo dell'immobile",
+        },
+        "termYears": {
+          "help": "Numero di anni in cui rimborserai il mutuo.",
+          "label": "Durata (anni)",
+        },
+      },
+      "keywords": [
+        "calcolatore mutuo",
+        "rata mensile mutuo",
+        "simulatore mutuo",
+        "piano ammortamento",
+        "tasso mutuo",
+        "prestito casa",
+        "finanziamento immobiliare",
+      ],
+      "outputs": {
+        "amortizationSchedule": {
+          "help": "Dettaglio mensile di rata, capitale, interessi e saldo residuo.",
+          "label": "Piano di ammortamento",
+        },
+        "monthlyPayment": {
+          "help": "Importo fisso pagato ogni mese (capitale + interessi).",
+          "label": "Rata mensile",
+        },
+        "principalAmount": {
+          "help": "Prezzo meno acconto — l'importo effettivamente preso in prestito.",
+          "label": "Capitale finanziato",
+        },
+        "totalInterest": {
+          "help": "Interessi complessivi pagati nel corso del mutuo.",
+          "label": "Interessi totali",
+        },
+        "totalPayment": {
+          "help": "Somma di tutte le rate per l'intera durata.",
+          "label": "Costo totale",
+        },
+      },
+      "short": "Calcola la rata mensile del mutuo, gli interessi totali e il piano di ammortamento.",
+      "title": "Calcolatore Mutuo",
+    },
+    "ja": {
+      "description": "標準的な元利均等返済方式を使用した無料の住宅ローン計算機です。ローン金額、金利、返済期間を入力するだけで、毎月の返済額と詳細な返済計画表を確認できます。",
+      "errors": {
+        "downPaymentExceedsLoan": "頭金は物件価格を超えることはできません。",
+        "loanAmountRange": "物件価格は 1,000 ～ 10,000,000 の範囲で入力してください。",
+        "rateRange": "年利は 0% ～ 30% の範囲で入力してください。",
+        "termRange": "返済期間は 1 ～ 30 年の範囲で入力してください。",
+      },
+      "faq": [
+        {
+          "a": "返済計画表は、毎月の返済額がどのように元本と利息に分配されるかを示す表です。返済初期は利息の割合が高く、返済が進むにつれて元本の割合が増えていきます。",
+          "q": "返済計画表とは何ですか？",
+        },
+        {
+          "a": "頭金が多いほど借入元本が減り、毎月の返済額と総支払利息が低くなります。",
+          "q": "頭金はローンにどう影響しますか？",
+        },
+      ],
+      "inputs": {
+        "annualRate": {
+          "help": "金融機関が提示する年間の利率。",
+          "label": "年利 (%)",
+        },
+        "downPayment": {
+          "help": "最初に支払う金額。ローン元本を減らします。",
+          "label": "頭金",
+        },
+        "loanAmount": {
+          "help": "購入する不動産の総額。",
+          "label": "物件価格",
+        },
+        "termYears": {
+          "help": "ローンを返済する年数。",
+          "label": "返済期間（年）",
+        },
+      },
+      "keywords": [
+        "住宅ローン計算機",
+        "毎月の返済額",
+        "ローンシミュレーター",
+        "返済計画表",
+        "住宅ローン金利",
+        "モーゲージ計算",
+        "元利均等返済",
+      ],
+      "outputs": {
+        "amortizationSchedule": {
+          "help": "毎月の返済額・元本・利息・残高の明細。",
+          "label": "返済計画表",
+        },
+        "monthlyPayment": {
+          "help": "毎月支払う固定額（元本 + 利息）。",
+          "label": "毎月の返済額",
+        },
+        "principalAmount": {
+          "help": "物件価格から頭金を引いた実際の借入金額。",
+          "label": "借入元本",
+        },
+        "totalInterest": {
+          "help": "ローン期間全体で支払う利息の合計。",
+          "label": "総支払利息",
+        },
+        "totalPayment": {
+          "help": "全返済期間における月々の返済額の合計。",
+          "label": "総返済額",
+        },
+      },
+      "short": "毎月の住宅ローン返済額、総利息、および返済計画表を計算します。",
+      "title": "住宅ローン計算機",
+    },
+    "ko": {
+      "description": "표준 원리금균등상환 공식을 사용한 무료 주택담보대출 계산기입니다. 대출 금액, 금리, 대출 기간을 입력하면 월 상환액과 상세한 상환 스케줄을 확인할 수 있습니다.",
+      "errors": {
+        "downPaymentExceedsLoan": "계약금은 주택 가격을 초과할 수 없습니다.",
+        "loanAmountRange": "주택 가격은 1,000 ~ 10,000,000 사이여야 합니다.",
+        "rateRange": "연이율은 0% ~ 30% 사이여야 합니다.",
+        "termRange": "대출 기간은 1 ~ 30년 사이여야 합니다.",
+      },
+      "faq": [
+        {
+          "a": "원리금 상환 스케줄은 각 월 상환액이 대출 기간 동안 원금과 이자로 어떻게 나뉘는지 보여주는 표입니다. 초기에는 이자 비율이 높고, 시간이 지남에 따라 원금 비율이 높아집니다.",
+          "q": "원리금 상환 스케줄이란 무엇인가요?",
+        },
+        {
+          "a": "계약금이 클수록 대출 원금이 줄어들어 월 상환액과 총 이자 부담이 감소합니다.",
+          "q": "계약금은 대출에 어떤 영향을 미치나요?",
+        },
+      ],
+      "inputs": {
+        "annualRate": {
+          "help": "금융기관이 제시하는 연간 이자율.",
+          "label": "연이율 (%)",
+        },
+        "downPayment": {
+          "help": "미리 납부하는 금액으로, 대출 원금을 줄입니다.",
+          "label": "계약금",
+        },
+        "loanAmount": {
+          "help": "부동산의 총 구입 가격.",
+          "label": "주택 가격",
+        },
+        "termYears": {
+          "help": "대출을 상환하는 데 걸리는 연수.",
+          "label": "대출 기간 (년)",
+        },
+      },
+      "keywords": [
+        "주택담보대출 계산기",
+        "월 상환액 계산",
+        "모기지 계산기",
+        "원리금 상환표",
+        "부동산 대출",
+        "주택 융자",
+        "이자 계산",
+      ],
+      "outputs": {
+        "amortizationSchedule": {
+          "help": "월별 상환액, 원금, 이자 및 잔액의 세부 내역.",
+          "label": "원리금 상환 스케줄",
+        },
+        "monthlyPayment": {
+          "help": "매달 납부하는 고정 금액 (원금 + 이자).",
+          "label": "월 상환액",
+        },
+        "principalAmount": {
+          "help": "주택 가격에서 계약금을 뺀 실제 대출 금액.",
+          "label": "대출 원금",
+        },
+        "totalInterest": {
+          "help": "대출 기간 동안 납부하는 이자 총액.",
+          "label": "총 이자",
+        },
+        "totalPayment": {
+          "help": "전체 대출 기간 동안 지불하는 월 상환액의 합계.",
+          "label": "총 상환액",
+        },
+      },
+      "short": "월 상환액, 총 이자 및 원리금 상환 스케줄을 계산하세요.",
+      "title": "주택담보대출 계산기",
+    },
+    "ru": {
+      "description": "Бесплатный ипотечный калькулятор по стандартной аннуитетной формуле. Введите сумму кредита, ставку и срок — получите ежемесячный платёж и полный график погашения.",
+      "errors": {
+        "downPaymentExceedsLoan": "Первоначальный взнос не может превышать стоимость недвижимости.",
+        "loanAmountRange": "Стоимость недвижимости должна быть от 1 000 до 10 000 000.",
+        "rateRange": "Годовая ставка должна быть от 0 % до 30 %.",
+        "termRange": "Срок кредита должен быть от 1 до 30 лет.",
+      },
+      "faq": [
+        {
+          "a": "Аннуитетный платёж — это фиксированная ежемесячная сумма, включающая часть основного долга и начисленные проценты. В начале срока большая доля идёт на проценты, со временем доля основного долга растёт.",
+          "q": "Что такое аннуитетный платёж?",
+        },
+        {
+          "a": "Чем больше первоначальный взнос, тем меньше основной долг, а значит, ниже ежемесячный платёж и общая переплата по кредиту.",
+          "q": "Как первоначальный взнос влияет на ипотеку?",
+        },
+      ],
+      "inputs": {
+        "annualRate": {
+          "help": "Годовая процентная ставка, предложенная банком.",
+          "label": "Годовая ставка (%)",
+        },
+        "downPayment": {
+          "help": "Сумма, уплачиваемая сразу; снижает основной долг.",
+          "label": "Первоначальный взнос",
+        },
+        "loanAmount": {
+          "help": "Полная стоимость приобретаемой недвижимости.",
+          "label": "Стоимость недвижимости",
+        },
+        "termYears": {
+          "help": "Количество лет, на которые берётся ипотека.",
+          "label": "Срок кредита (лет)",
+        },
+      },
+      "keywords": [
+        "ипотечный калькулятор",
+        "ежемесячный платёж по ипотеке",
+        "ипотека расчёт",
+        "график погашения",
+        "ипотека",
+        "жилищный кредит",
+        "аннуитетный платёж",
+      ],
+      "outputs": {
+        "amortizationSchedule": {
+          "help": "Ежемесячная разбивка платежа, основного долга, процентов и остатка.",
+          "label": "График погашения",
+        },
+        "monthlyPayment": {
+          "help": "Фиксированная сумма, выплачиваемая каждый месяц (долг + проценты).",
+          "label": "Ежемесячный платёж",
+        },
+        "principalAmount": {
+          "help": "Стоимость недвижимости минус первоначальный взнос — фактически занятая сумма.",
+          "label": "Сумма кредита",
+        },
+        "totalInterest": {
+          "help": "Общая сумма процентов, уплачиваемых за весь срок кредита.",
+          "label": "Сумма переплаты",
+        },
+        "totalPayment": {
+          "help": "Сумма всех ежемесячных платежей за весь срок.",
+          "label": "Общая сумма выплат",
+        },
+      },
+      "short": "Рассчитайте ежемесячный платёж по ипотеке, общую сумму процентов и график погашения.",
+      "title": "Ипотечный калькулятор",
+    },
+    "tr": {
+      "description": "Standart anüite formülü kullanan ücretsiz konut kredisi hesaplayıcı. Kredi tutarı, faiz oranı ve vade girerek aylık taksitinizi, toplam maliyetinizi ve tam bir itfa tablosunu görün.",
+      "errors": {
+        "downPaymentExceedsLoan": "Peşinat, ev fiyatını aşamaz.",
+        "loanAmountRange": "Ev fiyatı 1.000 ile 10.000.000 arasında olmalıdır.",
+        "rateRange": "Yıllık faiz oranı %0 ile %30 arasında olmalıdır.",
+        "termRange": "Kredi vadesi 1 ile 30 yıl arasında olmalıdır.",
+      },
+      "faq": [
+        {
+          "a": "Bu hesaplayıcı yalnızca anapara ve faizi hesaplar. Gerçek aylık ödemeniz ayrıca emlak vergisi, konut sigortası ve peşinatınız %20'nin altındaysa özel ipotek sigortasını (PMI) da içerebilir.",
+          "q": "Aylık konut kredisi taksidine neler dahildir?",
+        },
+        {
+          "a": "Daha yüksek peşinat kredi anapara tutarını düşürür, bu da aylık taksiti ve toplam faizi azaltır. %20 peşinat çoğu durumda PMI zorunluluğunu da ortadan kaldırır.",
+          "q": "Peşinat miktarı krediyi nasıl etkiler?",
+        },
+        {
+          "a": "İtfa planı, her aylık ödemenin kredi vadesi boyunca anapara ve faiz olarak nasıl bölündüğünü gösteren bir tablodur. İlk ödemelerde büyük pay faize gider; zamanla daha büyük pay anaparaya aktarılır.",
+          "q": "İtfa planı nedir?",
+        },
+      ],
+      "inputs": {
+        "annualRate": {
+          "help": "Bankanızın sunduğu yıllık faiz oranı.",
+          "label": "Yıllık Faiz Oranı (%)",
+        },
+        "downPayment": {
+          "help": "Başlangıçta ödenen tutar; kredi anapara miktarını azaltır.",
+          "label": "Peşinat",
+        },
+        "loanAmount": {
+          "help": "Mülkün toplam satın alma bedeli.",
+          "label": "Ev Fiyatı",
+        },
+        "termYears": {
+          "help": "Krediyi geri ödeyeceğiniz yıl sayısı.",
+          "label": "Kredi Vadesi (yıl)",
+        },
+      },
+      "keywords": [
+        "konut kredisi hesaplayıcı",
+        "mortgage hesaplama",
+        "aylık taksit hesaplama",
+        "ev kredisi",
+        "itfa planı",
+        "konut finansmanı",
+        "faiz hesaplama",
+      ],
+      "outputs": {
+        "amortizationSchedule": {
+          "help": "Aylık ödeme, anapara, faiz ve kalan bakiyenin ay ay dökümü.",
+          "label": "İtfa Planı",
+        },
+        "monthlyPayment": {
+          "help": "Her ay ödenen sabit tutar (anapara + faiz).",
+          "label": "Aylık Taksit",
+        },
+        "principalAmount": {
+          "help": "Ev fiyatından peşinat düşüldükten sonra kalan, gerçekte borçlanılan tutar.",
+          "label": "Kredi Anaparası",
+        },
+        "totalInterest": {
+          "help": "Kredi süresince ödenen toplam faiz tutarı.",
+          "label": "Toplam Faiz",
+        },
+        "totalPayment": {
+          "help": "Vade boyunca yapılan tüm aylık ödemelerin toplamı.",
+          "label": "Toplam Ödeme",
+        },
+      },
+      "short": "Aylık konut kredisi taksitinizi, toplam faizi ve itfa planını hesaplayın.",
+      "title": "Konut Kredisi Hesaplayıcı",
+    },
+    "zh": {
+      "description": "免费房贷计算器，采用标准年金公式。输入贷款金额、利率和期限，即可获得每月还款额、总费用及完整的还款计划表。",
+      "errors": {
+        "downPaymentExceedsLoan": "首付款不能超过房屋价格。",
+        "loanAmountRange": "房屋价格必须在 1,000 至 10,000,000 之间。",
+        "rateRange": "年利率必须在 0% 至 30% 之间。",
+        "termRange": "贷款期限必须在 1 至 30 年之间。",
+      },
+      "faq": [
+        {
+          "a": "还款计划表是显示每月还款额如何在贷款期内分配给本金和利息的表格。早期还款中大部分用于支付利息，随着时间推移，本金比例逐渐增加。",
+          "q": "什么是还款计划表？",
+        },
+        {
+          "a": "首付款越高，贷款本金越低，从而降低月还款额和总利息支出。",
+          "q": "首付款如何影响房贷？",
+        },
+      ],
+      "inputs": {
+        "annualRate": {
+          "help": "贷款机构提供的年利率。",
+          "label": "年利率 (%)",
+        },
+        "downPayment": {
+          "help": "预先支付的金额，用于减少贷款本金。",
+          "label": "首付款",
+        },
+        "loanAmount": {
+          "help": "房产的总购买价格。",
+          "label": "房屋价格",
+        },
+        "termYears": {
+          "help": "偿还贷款所需的年数。",
+          "label": "贷款期限（年）",
+        },
+      },
+      "keywords": [
+        "房贷计算器",
+        "每月还款额",
+        "按揭计算",
+        "还款计划表",
+        "房屋贷款",
+        "贷款利率",
+        "抵押贷款",
+      ],
+      "outputs": {
+        "amortizationSchedule": {
+          "help": "每月还款额、本金、利息及剩余余额的详细分解。",
+          "label": "还款计划表",
+        },
+        "monthlyPayment": {
+          "help": "每月支付的固定金额（本金 + 利息）。",
+          "label": "月还款额",
+        },
+        "principalAmount": {
+          "help": "房价减去首付款后实际借入的金额。",
+          "label": "贷款本金",
+        },
+        "totalInterest": {
+          "help": "贷款期内支付的利息总额。",
+          "label": "总利息",
+        },
+        "totalPayment": {
+          "help": "整个贷款期内所有月还款额的总和。",
+          "label": "还款总额",
+        },
+      },
+      "short": "计算您的每月房贷还款额、总利息及完整还款计划。",
+      "title": "房贷计算器",
+    },
+  },
+  "icon": Any<String>,
+  "inputSchema": ZodEffects {
+    "_def": {
+      "effect": {
+        "refinement": [Function],
+        "type": "refinement",
+      },
+      "schema": ZodObject {
+        "_cached": {
+          "keys": [
+            "loanAmount",
+            "annualRate",
+            "termYears",
+            "downPayment",
+          ],
+          "shape": {
+            "annualRate": ZodNumber {
+              "_def": {
+                "checks": [
+                  {
+                    "inclusive": true,
+                    "kind": "min",
+                    "message": undefined,
+                    "value": 0,
+                  },
+                  {
+                    "inclusive": true,
+                    "kind": "max",
+                    "message": undefined,
+                    "value": 30,
+                  },
+                ],
+                "coerce": false,
+                "typeName": "ZodNumber",
+              },
+              "and": [Function],
+              "array": [Function],
+              "brand": [Function],
+              "catch": [Function],
+              "default": [Function],
+              "describe": [Function],
+              "isNullable": [Function],
+              "isOptional": [Function],
+              "max": [Function],
+              "min": [Function],
+              "nullable": [Function],
+              "nullish": [Function],
+              "optional": [Function],
+              "or": [Function],
+              "parse": [Function],
+              "parseAsync": [Function],
+              "pipe": [Function],
+              "promise": [Function],
+              "readonly": [Function],
+              "refine": [Function],
+              "refinement": [Function],
+              "safeParse": [Function],
+              "safeParseAsync": [Function],
+              "spa": [Function],
+              "step": [Function],
+              "superRefine": [Function],
+              "transform": [Function],
+              "~standard": {
+                "validate": [Function],
+                "vendor": "zod",
+                "version": 1,
+              },
+            },
+            "downPayment": ZodDefault {
+              "_def": {
+                "defaultValue": [Function],
+                "description": undefined,
+                "errorMap": [Function],
+                "innerType": ZodNumber {
+                  "_def": {
+                    "checks": [
+                      {
+                        "inclusive": true,
+                        "kind": "min",
+                        "message": undefined,
+                        "value": 0,
+                      },
+                    ],
+                    "coerce": false,
+                    "typeName": "ZodNumber",
+                  },
+                  "and": [Function],
+                  "array": [Function],
+                  "brand": [Function],
+                  "catch": [Function],
+                  "default": [Function],
+                  "describe": [Function],
+                  "isNullable": [Function],
+                  "isOptional": [Function],
+                  "max": [Function],
+                  "min": [Function],
+                  "nullable": [Function],
+                  "nullish": [Function],
+                  "optional": [Function],
+                  "or": [Function],
+                  "parse": [Function],
+                  "parseAsync": [Function],
+                  "pipe": [Function],
+                  "promise": [Function],
+                  "readonly": [Function],
+                  "refine": [Function],
+                  "refinement": [Function],
+                  "safeParse": [Function],
+                  "safeParseAsync": [Function],
+                  "spa": [Function],
+                  "step": [Function],
+                  "superRefine": [Function],
+                  "transform": [Function],
+                  "~standard": {
+                    "validate": [Function],
+                    "vendor": "zod",
+                    "version": 1,
+                  },
+                },
+                "typeName": "ZodDefault",
+              },
+              "and": [Function],
+              "array": [Function],
+              "brand": [Function],
+              "catch": [Function],
+              "default": [Function],
+              "describe": [Function],
+              "isNullable": [Function],
+              "isOptional": [Function],
+              "nullable": [Function],
+              "nullish": [Function],
+              "optional": [Function],
+              "or": [Function],
+              "parse": [Function],
+              "parseAsync": [Function],
+              "pipe": [Function],
+              "promise": [Function],
+              "readonly": [Function],
+              "refine": [Function],
+              "refinement": [Function],
+              "safeParse": [Function],
+              "safeParseAsync": [Function],
+              "spa": [Function],
+              "superRefine": [Function],
+              "transform": [Function],
+              "~standard": {
+                "validate": [Function],
+                "vendor": "zod",
+                "version": 1,
+              },
+            },
+            "loanAmount": ZodNumber {
+              "_def": {
+                "checks": [
+                  {
+                    "inclusive": true,
+                    "kind": "min",
+                    "message": undefined,
+                    "value": 1000,
+                  },
+                  {
+                    "inclusive": true,
+                    "kind": "max",
+                    "message": undefined,
+                    "value": 10000000,
+                  },
+                ],
+                "coerce": false,
+                "typeName": "ZodNumber",
+              },
+              "and": [Function],
+              "array": [Function],
+              "brand": [Function],
+              "catch": [Function],
+              "default": [Function],
+              "describe": [Function],
+              "isNullable": [Function],
+              "isOptional": [Function],
+              "max": [Function],
+              "min": [Function],
+              "nullable": [Function],
+              "nullish": [Function],
+              "optional": [Function],
+              "or": [Function],
+              "parse": [Function],
+              "parseAsync": [Function],
+              "pipe": [Function],
+              "promise": [Function],
+              "readonly": [Function],
+              "refine": [Function],
+              "refinement": [Function],
+              "safeParse": [Function],
+              "safeParseAsync": [Function],
+              "spa": [Function],
+              "step": [Function],
+              "superRefine": [Function],
+              "transform": [Function],
+              "~standard": {
+                "validate": [Function],
+                "vendor": "zod",
+                "version": 1,
+              },
+            },
+            "termYears": ZodNumber {
+              "_def": {
+                "checks": [
+                  {
+                    "kind": "int",
+                    "message": undefined,
+                  },
+                  {
+                    "inclusive": true,
+                    "kind": "min",
+                    "message": undefined,
+                    "value": 1,
+                  },
+                  {
+                    "inclusive": true,
+                    "kind": "max",
+                    "message": undefined,
+                    "value": 30,
+                  },
+                ],
+                "coerce": false,
+                "typeName": "ZodNumber",
+              },
+              "and": [Function],
+              "array": [Function],
+              "brand": [Function],
+              "catch": [Function],
+              "default": [Function],
+              "describe": [Function],
+              "isNullable": [Function],
+              "isOptional": [Function],
+              "max": [Function],
+              "min": [Function],
+              "nullable": [Function],
+              "nullish": [Function],
+              "optional": [Function],
+              "or": [Function],
+              "parse": [Function],
+              "parseAsync": [Function],
+              "pipe": [Function],
+              "promise": [Function],
+              "readonly": [Function],
+              "refine": [Function],
+              "refinement": [Function],
+              "safeParse": [Function],
+              "safeParseAsync": [Function],
+              "spa": [Function],
+              "step": [Function],
+              "superRefine": [Function],
+              "transform": [Function],
+              "~standard": {
+                "validate": [Function],
+                "vendor": "zod",
+                "version": 1,
+              },
+            },
+          },
+        },
+        "_def": {
+          "catchall": ZodNever {
+            "_def": {
+              "typeName": "ZodNever",
+            },
+            "and": [Function],
+            "array": [Function],
+            "brand": [Function],
+            "catch": [Function],
+            "default": [Function],
+            "describe": [Function],
+            "isNullable": [Function],
+            "isOptional": [Function],
+            "nullable": [Function],
+            "nullish": [Function],
+            "optional": [Function],
+            "or": [Function],
+            "parse": [Function],
+            "parseAsync": [Function],
+            "pipe": [Function],
+            "promise": [Function],
+            "readonly": [Function],
+            "refine": [Function],
+            "refinement": [Function],
+            "safeParse": [Function],
+            "safeParseAsync": [Function],
+            "spa": [Function],
+            "superRefine": [Function],
+            "transform": [Function],
+            "~standard": {
+              "validate": [Function],
+              "vendor": "zod",
+              "version": 1,
+            },
+          },
+          "shape": [Function],
+          "typeName": "ZodObject",
+          "unknownKeys": "strip",
+        },
+        "and": [Function],
+        "array": [Function],
+        "augment": [Function],
+        "brand": [Function],
+        "catch": [Function],
+        "default": [Function],
+        "describe": [Function],
+        "isNullable": [Function],
+        "isOptional": [Function],
+        "nonstrict": [Function],
+        "nullable": [Function],
+        "nullish": [Function],
+        "optional": [Function],
+        "or": [Function],
+        "parse": [Function],
+        "parseAsync": [Function],
+        "pipe": [Function],
+        "promise": [Function],
+        "readonly": [Function],
+        "refine": [Function],
+        "refinement": [Function],
+        "safeParse": [Function],
+        "safeParseAsync": [Function],
+        "spa": [Function],
+        "superRefine": [Function],
+        "transform": [Function],
+        "~standard": {
+          "validate": [Function],
+          "vendor": "zod",
+          "version": 1,
+        },
+      },
+      "typeName": "ZodEffects",
+    },
+    "and": [Function],
+    "array": [Function],
+    "brand": [Function],
+    "catch": [Function],
+    "default": [Function],
+    "describe": [Function],
+    "isNullable": [Function],
+    "isOptional": [Function],
+    "nullable": [Function],
+    "nullish": [Function],
+    "optional": [Function],
+    "or": [Function],
+    "parse": [Function],
+    "parseAsync": [Function],
+    "pipe": [Function],
+    "promise": [Function],
+    "readonly": [Function],
+    "refine": [Function],
+    "refinement": [Function],
+    "safeParse": [Function],
+    "safeParseAsync": [Function],
+    "spa": [Function],
+    "superRefine": [Function],
+    "transform": [Function],
+    "~standard": {
+      "validate": [Function],
+      "vendor": "zod",
+      "version": 1,
+    },
+  },
+  "inputs": [
+    {
+      "defaultValue": 300000,
+      "id": "loanAmount",
+      "required": true,
+      "type": {
+        "kind": "number",
+        "max": 10000000,
+        "min": 1000,
+        "step": 1000,
+        "unit": "usd",
+      },
+    },
+    {
+      "defaultValue": 0,
+      "id": "downPayment",
+      "required": false,
+      "type": {
+        "kind": "number",
+        "max": 10000000,
+        "min": 0,
+        "step": 1000,
+        "unit": "usd",
+      },
+    },
+    {
+      "defaultValue": 6.5,
+      "id": "annualRate",
+      "required": true,
+      "type": {
+        "kind": "number",
+        "max": 30,
+        "min": 0,
+        "step": 0.01,
+        "unit": "percent",
+      },
+    },
+    {
+      "defaultValue": 30,
+      "id": "termYears",
+      "required": true,
+      "type": {
+        "integer": true,
+        "kind": "number",
+        "max": 30,
+        "min": 1,
+        "step": 1,
+        "unit": "year",
+      },
+    },
+  ],
+  "meta": {
+    "disclaimer": "This calculator provides estimates only. Actual payments may vary based on lender fees, insurance, property taxes, and other factors. Consult a licensed mortgage professional before making financial decisions.",
+    "formulaLatex": "M = P \\cdot \\frac{r(1+r)^n}{(1+r)^n - 1}",
+    "references": [
+      {
+        "authority": "Consumer Financial Protection Bureau (CFPB)",
+        "title": "How to Calculate Your Monthly Mortgage Payment",
+        "url": "https://www.consumerfinance.gov/ask-cfpb/how-do-i-calculate-my-monthly-mortgage-payment-en-1940/",
+      },
+      {
+        "authority": "Freddie Mac",
+        "title": "Mortgage Calculator",
+        "url": "https://www.freddiemac.com/tools/calculators/mortgage-calculator",
+      },
+    ],
+  },
+  "outputs": [
+    {
+      "format": "currency",
+      "highlight": true,
+      "id": "monthlyPayment",
+      "precision": 2,
+    },
+    {
+      "format": "currency",
+      "id": "totalPayment",
+      "precision": 2,
+    },
+    {
+      "format": "currency",
+      "id": "totalInterest",
+      "precision": 2,
+    },
+    {
+      "format": "currency",
+      "id": "principalAmount",
+      "precision": 2,
+    },
+    {
+      "format": "list",
+      "id": "amortizationSchedule",
+    },
+  ],
+  "priority": Any<String>,
+  "related": [
+    "loan-amortization",
+    "auto-loan",
+    "compound-interest",
+  ],
+  "slug": Any<String>,
+  "tags": [
+    "mortgage",
+    "home loan",
+    "monthly payment",
+    "amortization",
+    "real estate",
+    "finance",
+  ],
+}
+`;

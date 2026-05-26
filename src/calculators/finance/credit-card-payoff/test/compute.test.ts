@@ -5,7 +5,10 @@ describe("credit-card-payoff compute — numeric correctness", () => {
   const parse = (inputs: Record<string, unknown>) =>
     calculator.compute(calculator.inputSchema.parse(inputs));
 
-  it("$5,000 at 20% APR, fixed $200/month → payoff in ~32 months", () => {
+  it("$5,000 at 20% APR, fixed $200/month → payoff in ~33 months", () => {
+    // r=20/1200=0.01667, formula: n = -log(1-r×P/PMT)/log(1+r)
+    // = -log(1 - 0.01667×5000/200) / log(1.01667)
+    // = -log(0.5833) / 0.007247 = 0.2341/0.007247 ≈ 32.3 → 33 months
     const result = parse({
       balance: 5000,
       apr: 20,
@@ -13,7 +16,7 @@ describe("credit-card-payoff compute — numeric correctness", () => {
       fixedPayment: 200,
       minimumPaymentPct: 2,
     });
-    expect(result.monthsToPayoff).toBeCloseTo(32, 0);
+    expect(result.monthsToPayoff).toBeCloseTo(33, 0);
   });
 
   it("schedule has at most 12 entries", () => {

@@ -77,9 +77,10 @@ export function assertI18nComplete(calc: AnyCalculatorDefinition): void {
     const forbiddenValues = ["TODO", "FIXME", "XXX", "PLACEHOLDER"];
     const stringValues = collectStringValues(bundle);
     for (const forbidden of forbiddenValues) {
-      const offender = stringValues.find((v) =>
-        v.toUpperCase().includes(forbidden),
-      );
+      // Case-sensitive word-boundary regex: only matches uppercase "TODO", "FIXME" etc.
+      // Spanish "todo/todos/Método" won't match since they're lowercase/mixed-case.
+      const forbiddenRegex = new RegExp(`\\b${forbidden}\\b`);
+      const offender = stringValues.find((v) => forbiddenRegex.test(v));
       expect(
         offender,
         `${calc.slug}.${locale} value contains forbidden token "${forbidden}": ${offender}`,

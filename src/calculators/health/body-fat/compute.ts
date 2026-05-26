@@ -88,16 +88,20 @@ export function compute(inputs: BodyFatInputs): BodyFatResult {
 
   let bodyFatPct: number;
   if (gender === "male") {
+    // Cm-adapted Hodgdon & Beckett formula.
+    // Original inches constants (36.76) adjusted for log10(cm) = log10(in) + log10(2.54):
+    // intercept shifts by (70.041 - 86.010) × log10(2.54) ≈ −6.47 → 36.76 − 6.47 = 30.29
     bodyFatPct =
-      86.01 * Math.log10(waist - neck) -
+      86.010 * Math.log10(waist - neck) -
       70.041 * Math.log10(height) +
-      36.76;
+      30.295;
   } else {
+    // Female cm intercept: −78.387 + (97.684 − 163.205) × log10(2.54) ≈ −78.387 − 26.52 = −104.91
     const hipVal = hip ?? 0;
     bodyFatPct =
       163.205 * Math.log10(waist + hipVal - neck) -
       97.684 * Math.log10(height) -
-      78.387;
+      104.911;
   }
 
   // Clamp to [1, 70]

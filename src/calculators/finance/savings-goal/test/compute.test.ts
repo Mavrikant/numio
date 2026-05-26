@@ -12,9 +12,9 @@ describe("savings-goal compute — numeric correctness", () => {
           monthlyContribution: 200,
           annualReturn: 5,
         },
-        expected: { monthsToGoal: 44 },
+        expected: { monthsToGoal: 46 },
         tolerance: 1,
-        description: "$0 start, $200/mo, 5% — ~44 months",
+        description: "$0 start, $200/mo, 5% — ~46 months (FV annuity formula: n≈45.5 → 46)",
       },
     ]);
   });

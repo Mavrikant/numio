@@ -59,7 +59,7 @@ export function compute(inputs: SavingsGoalInputs): SavingsGoalResult {
     const remaining = targetAmount - currentSavings;
     months = Math.ceil(remaining / monthlyContribution);
     if (months > MAX_MONTHS) months = MAX_MONTHS;
-    const totalContributions = months * monthlyContribution;
+    const totalContributions = currentSavings + months * monthlyContribution;
     return {
       monthsToGoal: months,
       yearsToGoal: Math.round((months / 12) * 100) / 100,

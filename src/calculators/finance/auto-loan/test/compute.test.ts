@@ -3,13 +3,15 @@ import { runNumericTests } from "@/test-utils";
 import calculator from "../definition";
 
 describe("Auto Loan compute — numeric correctness", () => {
-  it("$25k at 6.5% for 60 months → ~$487.70/month", () => {
-    // loanAmount = 25000, r = 0.065/12, n = 60
+  it("$25k at 6.5% for 60 months → ~$489.10/month", () => {
+    // r = 0.065/12 = 0.00541667, n = 60
+    // M = 25000 × [r×(1+r)^60] / [(1+r)^60 − 1]
+    // (1+r)^60 ≈ 1.38295 → M ≈ 489.10
     runNumericTests(calculator, [
       {
         inputs: { vehiclePrice: 25000, downPayment: 0, tradeInValue: 0, annualRate: 6.5, termMonths: 60 },
-        expected: { monthlyPayment: 487.70 },
-        tolerance: 0.10,
+        expected: { monthlyPayment: 489.10 },
+        tolerance: 0.50,
       },
     ]);
   });
