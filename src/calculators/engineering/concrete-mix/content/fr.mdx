@@ -1,0 +1,100 @@
+# Calculateur de Dosage du Béton
+
+Le calculateur de dosage du béton vous aide à déterminer les quantités exactes de ciment, sable, granulats grossiers et eau nécessaires pour tout volume de béton. Que vous travailliez avec des classes de dosage standard (M10 à M30) ou un rapport personnalisé, cet outil calcule les poids des matériaux en kilogrammes et le nombre de sacs de ciment requis.
+
+## Classes de Dosage du Béton
+
+Les classes de béton utilisent la désignation M, où M signifie « Mix » (mélange) et le chiffre indique la résistance caractéristique à la compression en N/mm² (MPa) à 28 jours.
+
+### Proportions Nominales Standard (volumétriques)
+
+| Classe | Ciment : Sable : Granulats | Utilisation Typique |
+|---|---|---|
+| M10 | 1 : 3 : 6 | Béton de propreté, remplissage |
+| M15 | 1 : 2 : 4 | Fondations non armées, dallages |
+| M20 | 1 : 1,5 : 3 | Béton armé général |
+| M25 | 1 : 1 : 2 | Poutres et poteaux en béton armé |
+| M30 | 1 : 0,75 : 1,5 | Éléments structurels haute résistance |
+
+## Méthode de Calcul
+
+### Étape 1 : Conversion du Volume Sec
+
+Le béton fraîchement malaxé contient de l'eau et des vides. Le volume réel de matériaux secs nécessaire est supérieur au volume de béton frais :
+
+**Volume Sec = Volume Humide × 1,54**
+
+Ce facteur tient compte des vides dans les granulats et de la compaction lors du malaxage.
+
+### Étape 2 : Proportionnement de Chaque Matériau
+
+Pour ciment : sable : granulats = C : S : A, le total est (C + S + A). Chaque matériau occupe sa fraction proportionnelle du volume sec :
+
+- Volume ciment = [C / (C + S + A)] × Volume sec (m³)
+- Volume sable = [S / (C + S + A)] × Volume sec (m³)
+- Volume granulats = [A / (C + S + A)] × Volume sec (m³)
+
+### Étape 3 : Conversion Volume–Poids
+
+- Ciment : 1440 kg/m³
+- Sable (granulat fin) : 1600 kg/m³
+- Granulats grossiers : 1500 kg/m³
+
+### Étape 4 : Quantité d'Eau
+
+**Eau (kg) = rapport e/c × Ciment (kg)**
+
+Comme 1 kg d'eau = 1 litre, la quantité en litres égale la masse en kg.
+
+### Étape 5 : Sacs de Ciment
+
+Un sac standard contient 50 kg. Nombre de sacs = masse totale de ciment / 50 (arrondir au sac supérieur).
+
+## Exemple Pratique : 1 m³ de Béton M20
+
+**Données :** Volume = 1 m³, Dosage = M20 (1:1,5:3), e/c = 0,50
+
+- Volume sec = 1 × 1,54 = 1,54 m³
+- Total des parties = 5,5
+- Ciment : (1/5,5) × 1,54 × 1440 = **403 kg**
+- Sable : (1,5/5,5) × 1,54 × 1600 = **672 kg**
+- Granulats : (3/5,5) × 1,54 × 1500 = **1260 kg**
+- Eau : 0,50 × 403 = **201,5 litres**
+- Sacs de ciment : 403 / 50 = **8,06 → 9 sacs**
+
+## Rapport Eau/Ciment (e/c)
+
+Le rapport e/c est l'un des paramètres les plus critiques de la technologie du béton :
+
+- **Résistance :** e/c faible → résistance élevée
+- **Durabilité :** e/c faible réduit la perméabilité
+- **Maniabilité :** e/c élevé facilite la mise en œuvre mais réduit la résistance
+
+**Valeurs maximales recommandées :**
+- M20 usage général : 0,55
+- M25 béton armé : 0,50
+- M30 haute performance : 0,45
+- Exposition sévère (milieu marin) : 0,40
+
+## Masses Volumiques Apparentes
+
+| Matériau | Masse volumique (kg/m³) |
+|---|---|
+| Ciment CEM I | 1440 |
+| Sable de rivière (sec) | 1600 |
+| Granulats concassés 20 mm | 1500 |
+| Eau | 1000 |
+
+## Conseils Pratiques
+
+Le **dosage pondéral** est plus précis que le dosage volumétrique, car le sable humide gonfle et peut entraîner des erreurs de 10 à 20 %.
+
+**Marge de gaspillage :** Ajoutez 5 à 10 % aux quantités calculées pour tenir compte des pertes et des irrégularités du coffrage.
+
+**Cure humide :** Le béton atteint 70 % de sa résistance à 28 jours en 7 jours. Maintenez la surface humide pendant au moins 7 jours (14 jours pour les hautes performances).
+
+## Références
+
+- NF EN 206:2014 — Béton : Spécification, performance, production et conformité
+- DTU 21 — Exécution des travaux en béton
+- ACI 211.1 — Dosage du béton ordinaire
