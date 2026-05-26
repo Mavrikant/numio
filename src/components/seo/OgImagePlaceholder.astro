@@ -1,0 +1,15 @@
+---
+/**
+ * OgImagePlaceholder.astro
+ * Returns the site-wide default Open Graph image URL (1200×630).
+ * The actual image (og-default.png) will be added in Faz 7.
+ * This component is not rendered directly — it exports the URL as a
+ * named export so SeoHead and other components can import it.
+ *
+ * Usage (in another .astro file):
+ *   import { defaultOgImageUrl } from "@/components/seo/OgImagePlaceholder.astro";
+ */
+
+export const defaultOgImageUrl: string =
+  `${import.meta.env.BASE_URL}og-default.png`;
+---

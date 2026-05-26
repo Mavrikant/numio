@@ -1,0 +1,18 @@
+---
+/**
+ * Hreflang.astro
+ * Renders <link rel="alternate" hreflang="..." href="..." /> tags for each
+ * locale alternate, including the x-default entry.
+ */
+import type { HreflangEntry } from "@/lib/seo";
+
+export interface Props {
+  entries: HreflangEntry[];
+}
+
+const { entries } = Astro.props;
+---
+
+{entries.map((entry) => (
+  <link rel="alternate" hreflang={entry.hreflang} href={entry.href} />
+))}

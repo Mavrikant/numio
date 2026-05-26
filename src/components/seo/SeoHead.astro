@@ -1,0 +1,82 @@
+---
+/**
+ * SeoHead.astro — SEO head composer
+ *
+ * Renders all SEO-relevant <head> tags based on a PageSeoMeta object:
+ *   - <title>
+ *   - <meta name="description">
+ *   - <link rel="canonical">
+ *   - <meta name="robots"> (default: index,follow)
+ *   - Open Graph tags (og:title / description / type / url / image / locale)
+ *   - Twitter Card (summary_large_image)
+ *   - <link rel="alternate" hreflang> via Hreflang component
+ *   - JSON-LD via JsonLd component (when jsonLd prop is set)
+ *
+ * Intended to be placed inside <head> — typically via a layout slot.
+ *
+ * Note: Base.astro already renders a <title>, <meta description>, canonical
+ * and basic OG tags when its own props are provided. SeoHead is the richer
+ * alternative for calculator pages; use one or the other, not both.
+ */
+import type { PageSeoMeta } from "@/lib/seo";
+import { LOCALE_HTML_LANG } from "@/config/site";
+import Hreflang from "./Hreflang.astro";
+import JsonLd from "./JsonLd.astro";
+import { defaultOgImageUrl } from "./OgImagePlaceholder.astro";
+
+export interface Props extends PageSeoMeta {
+  /**
+   * Override the robots meta directive.
+   * Defaults to "index,follow".
+   */
+  robots?: string;
+}
+
+const {
+  title,
+  description,
+  canonical,
+  locale,
+  hreflangs,
+  jsonLd,
+  ogImage,
+  keywords,
+  robots = "index,follow",
+} = Astro.props;
+
+const ogLocale = LOCALE_HTML_LANG[locale];
+
+// Resolve OG image: prefer explicit prop, fall back to site-wide placeholder.
+const resolvedOgImage = ogImage ?? defaultOgImageUrl;
+---
+
+<!-- Primary meta -->
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonical} />
+<meta name="robots" content={robots} />
+{keywords && keywords.length > 0 && (
+  <meta name="keywords" content={keywords.join(", ")} />
+)}
+
+<!-- Open Graph -->
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:type" content="website" />
+<meta property="og:url" content={canonical} />
+<meta property="og:locale" content={ogLocale} />
+<meta property="og:image" content={resolvedOgImage} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={resolvedOgImage} />
+
+<!-- Hreflang alternates -->
+<Hreflang entries={hreflangs} />
+
+<!-- JSON-LD structured data -->
+{jsonLd && <JsonLd data={jsonLd} />}

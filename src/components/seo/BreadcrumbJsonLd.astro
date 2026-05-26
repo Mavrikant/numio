@@ -1,0 +1,34 @@
+---
+/**
+ * BreadcrumbJsonLd.astro
+ * Wraps JsonLd with a Schema.org BreadcrumbList payload.
+ *
+ * Props:
+ *   items — ordered list of { name, url } pairs from root → current page.
+ */
+import JsonLd from "./JsonLd.astro";
+
+export interface BreadcrumbItem {
+  name: string;
+  url: string;
+}
+
+export interface Props {
+  items: BreadcrumbItem[];
+}
+
+const { items } = Astro.props;
+
+const breadcrumbData: Record<string, unknown> = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: items.map((item, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    name: item.name,
+    item: item.url,
+  })),
+};
+---
+
+<JsonLd data={breadcrumbData} />
