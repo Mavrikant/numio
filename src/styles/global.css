@@ -71,4 +71,14 @@
   .text-balance {
     text-wrap: balance;
   }
+
+  /* Hide scrollbars while preserving scroll behavior — used in horizontal
+     pill nav bars (CategoryNav on mobile). */
+  .scrollbar-none {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
 }

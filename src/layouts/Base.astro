@@ -60,6 +60,11 @@ const desc = description ?? t(locale, "site.description");
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="generator" content={Astro.generator} />
 
+    {/* Generic head slot — pages can inject arbitrary <head> children
+        (hreflang <link>s, <meta>, ad-hoc <link>s, etc.). Used by routing
+        pages that pass slot="head" content directly. */}
+    <slot name="head" />
+
     {/* Hreflang slot — S-seo will inject <link rel="alternate"> tags here */}
     <slot name="hreflang" />
 
