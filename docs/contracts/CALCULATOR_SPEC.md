@@ -75,7 +75,12 @@ Her dil için bundle:
 
 ### 2.4 `content/{locale}.mdx` (12 dosya)
 
-Her dil ayrı MDX dosyası, 500+ kelime özgün içerik. EN ve TR önce sıfırdan yazılır, diğer 10 dil natural çevirisi sonra. Çeviri "literal MT" değil "natural" olmalı.
+Her dil ayrı MDX dosyası, özgün içerik. EN ve TR önce sıfırdan yazılır, diğer 10 dil natural çevirisi sonra. Çeviri "literal MT" değil "natural" olmalı.
+
+**Boyut hedefi:**
+- **Latin alfabesi dilleri** (en, tr, de, fr, es, it, ru, hi): **500+ kelime** (`wc -w`)
+- **CJK dilleri** (zh, ja, ko): word-count uygulanmaz (whitespace tokenization yanıltıcı). Bunun yerine **yapısal parity**: EN ile aynı H2 sayısı, aynı örnek sayısı, aynı FAQ sayısı, ve EN'in karakter sayısının ≥%60'ı
+- **AR**: Latin gibi kelime sayar, 500+ hedefi geçerli
 
 **Neden 12 ayrı dosya** (golden reference kararı): editör araçları, diff'ler, lazy loading hepsi temiz; tek dosyada export bloklarıyla çoklu locale Astro MDX pattern'ını zorlaştırırdı.
 

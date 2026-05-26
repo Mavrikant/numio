@@ -79,8 +79,9 @@ Her hesaplayıcı için:
 
 ### 2.4 SEO içeriği (ÖNEMİ: ⭐⭐⭐)
 
-`content.mdx` per-locale:
-- **Word count**: EN+TR ≥500 kelime (`wc -w`)
+`content/{locale}.mdx` per-locale:
+- **Word count** (Latin + AR): ≥500 kelime (`wc -w`)
+- **CJK dilleri** (zh/ja/ko): word-count yanıltıcı, yapısal parity kontrolü: EN ile aynı H2 sayısı + aynı örnek/FAQ sayısı + ≥%60 karakter sayısı
 - **Heading structure**: H1 tek, H2/H3 hiyerarşik
 - **Keyword density**: doğal, stuffing yok (%2-4 aralığı)
 - **Unique content**: 12 dil birbirinin literal çevirisi değil, lokal idiomatic
