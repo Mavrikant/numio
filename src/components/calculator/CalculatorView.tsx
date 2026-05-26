@@ -19,6 +19,7 @@
 import React, { useState, useMemo, useEffect, useCallback, useRef } from "react";
 import type { AnyCalculatorDefinition } from "@/types/calculator";
 import type { Locale } from "@/config/site";
+import { getCalculatorBySlug } from "@/lib/registry";
 import { InputField } from "./InputField";
 import { ResultPanel } from "./ResultPanel";
 import { ChartPanel } from "./ChartPanel";
@@ -477,5 +478,35 @@ export function CalculatorViewWithViz({
         </div>
       )}
     </div>
+  );
+}
+
+// ─── Island wrapper: looks up `calc` from the registry on the client ─────────
+// Astro can't serialize functions (compute, inputSchema.parse, visualizations.build)
+// across the SSR → client boundary, so we accept only the serializable `slug` and
+// resolve the full CalculatorDefinition via the registry, which Vite bundles for
+// both server and client.
+
+interface CalculatorIslandProps {
+  readonly slug: string;
+  readonly locale: Locale;
+  readonly initialInputs?: Record<string, unknown>;
+}
+
+export function CalculatorIsland({ slug, locale, initialInputs }: CalculatorIslandProps) {
+  const calc = useMemo(() => getCalculatorBySlug(slug), [slug]);
+  if (!calc) {
+    return (
+      <div className="mx-auto max-w-4xl px-4 py-12 text-center text-slate-500">
+        Calculator &quot;{slug}&quot; not found.
+      </div>
+    );
+  }
+  return (
+    <CalculatorViewWithViz
+      calc={calc}
+      locale={locale}
+      {...(initialInputs ? { initialInputs } : {})}
+    />
   );
 }

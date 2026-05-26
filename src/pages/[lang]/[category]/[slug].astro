@@ -32,7 +32,7 @@ import {
   buildHreflang,
 } from "@/lib/seo";
 import type { CalculatorCategory } from "@/types/calculator";
-import { CalculatorViewWithViz } from "@/components/calculator/CalculatorView";
+import { CalculatorIsland } from "@/components/calculator/CalculatorView";
 
 // ─── Static path generation ────────────────────────────────────────────────────
 
@@ -195,9 +195,9 @@ const Content = mdxModule
 
     <!-- CalculatorView island: client:visible defers hydration until scroll -->
     <div class="bg-slate-50 dark:bg-slate-900/50 py-4">
-      <CalculatorViewWithViz
-        client:visible
-        calc={calc}
+      <CalculatorIsland
+        client:only="react"
+        slug={calc.slug}
         locale={locale}
       />
     </div>
