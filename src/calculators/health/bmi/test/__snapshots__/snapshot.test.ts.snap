@@ -1,0 +1,1218 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`BMI definition — shape snapshot > snapshot: definition shape matches expectations 1`] = `
+{
+  "category": Any<String>,
+  "compute": [Function],
+  "i18n": {
+    "ar": {
+      "description": "حاسبة مؤشر كتلة الجسم المجانية وفق إرشادات منظمة الصحة العالمية. أدخل طولك ووزنك للحصول على قيمة المؤشر وتصنيف وزنك ونطاق الوزن الصحي.",
+      "errors": {
+        "heightOutOfRange": "يجب أن يكون الطول بين 50 و250 سم (أو 20–100 بوصة).",
+        "weightOutOfRange": "يجب أن يكون الوزن بين 1 و500 كجم (أو 2–1100 رطل).",
+      },
+      "faq": [
+        {
+          "a": "لا يميز مؤشر كتلة الجسم بين الكتلة العضلية والدهون. قد يُصنَّف الرياضيون ذوو الكتلة العضلية العالية على أنهم يعانون زيادة في الوزن رغم صحتهم الأيضية الجيدة. استخدم المؤشر أداةً للفحص لا تشخيصًا نهائيًا.",
+          "q": "هل مؤشر كتلة الجسم دقيق للرياضيين؟",
+        },
+        {
+          "a": "وفقًا لمنظمة الصحة العالمية، يُعدّ مؤشر كتلة الجسم بين 18.5 و24.9 وزنًا طبيعيًا للبالغين.",
+          "q": "ما مؤشر كتلة الجسم الصحي؟",
+        },
+        {
+          "a": "لا تنطبق عتبات مؤشر كتلة الجسم القياسية للبالغين على الأطفال والمراهقين. يعتمد تقييم الأطفال على منحنيات النسب المئوية الخاصة بالعمر والجنس. استشر طبيب الأطفال للتقييم الدقيق.",
+          "q": "هل يناسب المؤشر الأطفال؟",
+        },
+      ],
+      "inputs": {
+        "height": {
+          "help": "طولك بالسنتيمتر (متري) أو البوصة (إمبراطوري).",
+          "label": "الطول",
+        },
+        "unit": {
+          "help": "اختر بين الوحدات المترية (كجم/سم) أو الإمبراطورية (رطل/بوصة).",
+          "label": "نظام الوحدات",
+        },
+        "weight": {
+          "help": "وزنك الحالي.",
+          "label": "الوزن",
+        },
+      },
+      "keywords": [
+        "حاسبة مؤشر كتلة الجسم",
+        "مؤشر كتلة الجسم",
+        "الوزن المثالي",
+        "الوزن الصحي",
+        "السمنة",
+        "زيادة الوزن",
+        "حساب مؤشر الجسم",
+      ],
+      "options": {
+        "unit": {
+          "imperial": "إمبراطوري (رطل، بوصة)",
+          "metric": "متري (كجم، سم)",
+        },
+      },
+      "outputs": {
+        "bmi": {
+          "help": "وزنك مقسومًا على مربع طولك.",
+          "label": "مؤشر كتلة الجسم",
+        },
+        "category": {
+          "help": "تصنيف الوزن وفق منظمة الصحة العالمية لقيمة مؤشرك.",
+          "label": "التصنيف",
+        },
+        "healthyMaxWeight": {
+          "help": "الحد الأقصى للوزن لتحقيق مؤشر صحي (24.9) عند طولك.",
+          "label": "الحد الأقصى للوزن الصحي",
+        },
+        "healthyMinWeight": {
+          "help": "الحد الأدنى للوزن لتحقيق مؤشر صحي (18.5) عند طولك.",
+          "label": "الحد الأدنى للوزن الصحي",
+        },
+      },
+      "short": "احسب مؤشر كتلة جسمك واكتشف نطاق وزنك الصحي المثالي.",
+      "title": "حاسبة مؤشر كتلة الجسم",
+    },
+    "de": {
+      "description": "Kostenloser BMI-Rechner nach WHO-Richtlinien. Geben Sie Größe und Gewicht ein und erhalten Sie Ihren BMI, die Gewichtskategorie und den idealen Gewichtsbereich.",
+      "errors": {
+        "heightOutOfRange": "Die Größe muss zwischen 50 und 250 cm (oder 20–100 Zoll) liegen.",
+        "weightOutOfRange": "Das Gewicht muss zwischen 1 und 500 kg (oder 2–1100 lb) liegen.",
+      },
+      "faq": [
+        {
+          "a": "Der BMI unterscheidet nicht zwischen Muskel- und Fettmasse. Sportler mit hoher Muskelmasse können als übergewichtig eingestuft werden, obwohl sie metabolisch gesund sind. Verwenden Sie den BMI als Screening-Instrument, nicht als abschließende Diagnose.",
+          "q": "Ist der BMI für Sportler aussagekräftig?",
+        },
+        {
+          "a": "Die Weltgesundheitsorganisation klassifiziert einen BMI zwischen 18,5 und 24,9 bei Erwachsenen als Normalgewicht.",
+          "q": "Welcher BMI gilt als gesund?",
+        },
+        {
+          "a": "Die Standardgrenzwerte für Erwachsene gelten nicht für Kinder und Jugendliche. Bei Kindern wird der BMI anhand altersspezifischer Perzentilkurven bewertet. Wenden Sie sich an Ihren Kinderarzt.",
+          "q": "Ist der BMI bei Kindern verlässlich?",
+        },
+      ],
+      "inputs": {
+        "height": {
+          "help": "Ihre Körpergröße in Zentimetern (metrisch) oder Zoll (imperial).",
+          "label": "Größe",
+        },
+        "unit": {
+          "help": "Wählen Sie zwischen metrischen Einheiten (kg/cm) und imperialen Einheiten (lb/in).",
+          "label": "Einheitensystem",
+        },
+        "weight": {
+          "help": "Ihr aktuelles Körpergewicht.",
+          "label": "Gewicht",
+        },
+      },
+      "keywords": [
+        "BMI-Rechner",
+        "Body-Mass-Index",
+        "Normalgewicht",
+        "Gewichtsrechner",
+        "Idealgewicht",
+        "Adipositas",
+        "BMI berechnen",
+      ],
+      "options": {
+        "unit": {
+          "imperial": "Imperial (lb, Zoll)",
+          "metric": "Metrisch (kg, cm)",
+        },
+      },
+      "outputs": {
+        "bmi": {
+          "help": "Body-Mass-Index — Ihr Gewicht geteilt durch Ihre Körpergröße zum Quadrat.",
+          "label": "BMI",
+        },
+        "category": {
+          "help": "WHO-Gewichtsklassifikation für Ihren BMI-Wert.",
+          "label": "Kategorie",
+        },
+        "healthyMaxWeight": {
+          "help": "Höchstgewicht für einen gesunden BMI (24,9) bei Ihrer Körpergröße.",
+          "label": "Gesundes Gewicht (Maximum)",
+        },
+        "healthyMinWeight": {
+          "help": "Mindestgewicht für einen gesunden BMI (18,5) bei Ihrer Körpergröße.",
+          "label": "Gesundes Gewicht (Minimum)",
+        },
+      },
+      "short": "Berechnen Sie Ihren Body-Mass-Index und finden Sie Ihren gesunden Gewichtsbereich.",
+      "title": "BMI-Rechner",
+    },
+    "en": {
+      "description": "Free BMI calculator based on WHO guidelines. Enter your height and weight to get your BMI, category, and ideal weight range.",
+      "errors": {
+        "heightOutOfRange": "Height must be between 50 and 250 cm (or 20–100 in).",
+        "weightOutOfRange": "Weight must be between 1 and 500 kg (or 2–1100 lb).",
+      },
+      "faq": [
+        {
+          "a": "BMI does not distinguish between muscle and fat mass, so athletes with high muscle mass may be classified as overweight even though they are metabolically healthy. Use BMI as a screening tool, not a definitive diagnosis.",
+          "q": "Is BMI accurate for athletes?",
+        },
+        {
+          "a": "Standard adult BMI thresholds do not apply to children and adolescents. Pediatric BMI uses age- and sex-specific percentile charts. Consult a paediatrician for accurate assessment.",
+          "q": "Is BMI reliable for children?",
+        },
+        {
+          "a": "Research suggests slightly higher BMI values (up to 27) may be associated with better outcomes in adults over 65 due to increased muscle and bone mass reserves. Always discuss results with your doctor.",
+          "q": "Should older adults be concerned about BMI?",
+        },
+        {
+          "a": "According to the World Health Organization, a BMI between 18.5 and 24.9 is considered normal weight for adults.",
+          "q": "What BMI is considered healthy?",
+        },
+        {
+          "a": "No. BMI is a population-level screening tool and does not measure where fat is stored. Central (abdominal) obesity is a better predictor of metabolic risk. Waist circumference measurements complement BMI.",
+          "q": "Does BMI account for body shape or fat distribution?",
+        },
+      ],
+      "inputs": {
+        "height": {
+          "help": "Your height in centimeters (metric) or inches (imperial).",
+          "label": "Height",
+        },
+        "unit": {
+          "help": "Choose between metric (kg/cm) or imperial (lb/in) units.",
+          "label": "Unit system",
+        },
+        "weight": {
+          "help": "Your current body weight.",
+          "label": "Weight",
+        },
+      },
+      "keywords": [
+        "BMI calculator",
+        "body mass index",
+        "healthy weight",
+        "BMI chart",
+        "weight calculator",
+        "obesity calculator",
+        "ideal weight",
+      ],
+      "options": {
+        "unit": {
+          "imperial": "Imperial (lb, in)",
+          "metric": "Metric (kg, cm)",
+        },
+      },
+      "outputs": {
+        "bmi": {
+          "help": "Body Mass Index — your weight divided by height squared.",
+          "label": "BMI",
+        },
+        "category": {
+          "help": "WHO weight classification for your BMI value.",
+          "label": "Category",
+        },
+        "healthyMaxWeight": {
+          "help": "Maximum weight for a healthy BMI (24.9) at your height.",
+          "label": "Healthy weight (max)",
+        },
+        "healthyMinWeight": {
+          "help": "Minimum weight for a healthy BMI (18.5) at your height.",
+          "label": "Healthy weight (min)",
+        },
+      },
+      "short": "Calculate your Body Mass Index and find your healthy weight range.",
+      "title": "BMI Calculator",
+    },
+    "es": {
+      "description": "Calculadora de IMC gratuita basada en las directrices de la OMS. Introduce tu altura y peso para obtener tu IMC, categoría y rango de peso ideal.",
+      "errors": {
+        "heightOutOfRange": "La altura debe estar entre 50 y 250 cm (o 20–100 in).",
+        "weightOutOfRange": "El peso debe estar entre 1 y 500 kg (o 2–1100 lb).",
+      },
+      "faq": [
+        {
+          "a": "El IMC no distingue entre masa muscular y masa grasa. Los deportistas con mucha masa muscular pueden clasificarse como sobrepeso aunque estén metabólicamente sanos. Úsalo como herramienta de cribado, no como diagnóstico definitivo.",
+          "q": "¿Es el IMC preciso para deportistas?",
+        },
+        {
+          "a": "Según la Organización Mundial de la Salud, un IMC entre 18,5 y 24,9 se considera peso normal para adultos.",
+          "q": "¿Qué IMC se considera saludable?",
+        },
+        {
+          "a": "Los umbrales estándar de IMC para adultos no se aplican a niños y adolescentes. El IMC pediátrico utiliza curvas de percentiles específicas por edad y sexo. Consulta a un pediatra.",
+          "q": "¿Es el IMC adecuado para niños?",
+        },
+      ],
+      "inputs": {
+        "height": {
+          "help": "Tu altura en centímetros (métrico) o pulgadas (imperial).",
+          "label": "Altura",
+        },
+        "unit": {
+          "help": "Elige entre unidades métricas (kg/cm) o imperiales (lb/in).",
+          "label": "Sistema de unidades",
+        },
+        "weight": {
+          "help": "Tu peso corporal actual.",
+          "label": "Peso",
+        },
+      },
+      "keywords": [
+        "calculadora IMC",
+        "índice de masa corporal",
+        "peso saludable",
+        "peso ideal",
+        "obesidad",
+        "sobrepeso",
+        "calcular IMC",
+      ],
+      "options": {
+        "unit": {
+          "imperial": "Imperial (lb, in)",
+          "metric": "Métrico (kg, cm)",
+        },
+      },
+      "outputs": {
+        "bmi": {
+          "help": "Índice de masa corporal — tu peso dividido entre tu altura al cuadrado.",
+          "label": "IMC",
+        },
+        "category": {
+          "help": "Clasificación del peso según la OMS para tu valor de IMC.",
+          "label": "Categoría",
+        },
+        "healthyMaxWeight": {
+          "help": "Peso máximo para un IMC saludable (24,9) con tu altura.",
+          "label": "Peso saludable (máximo)",
+        },
+        "healthyMinWeight": {
+          "help": "Peso mínimo para un IMC saludable (18,5) con tu altura.",
+          "label": "Peso saludable (mínimo)",
+        },
+      },
+      "short": "Calcula tu índice de masa corporal y descubre tu rango de peso saludable.",
+      "title": "Calculadora de IMC",
+    },
+    "fr": {
+      "description": "Calculateur d'IMC gratuit selon les recommandations de l'OMS. Entrez votre taille et votre poids pour obtenir votre IMC, votre catégorie et la fourchette de poids santé.",
+      "errors": {
+        "heightOutOfRange": "La taille doit être comprise entre 50 et 250 cm (ou 20–100 po).",
+        "weightOutOfRange": "Le poids doit être compris entre 1 et 500 kg (ou 2–1100 lb).",
+      },
+      "faq": [
+        {
+          "a": "L'IMC ne fait pas la différence entre la masse musculaire et la masse grasse. Les sportifs avec une forte masse musculaire peuvent être classés en surpoids même s'ils sont en bonne santé. Utilisez l'IMC comme outil de dépistage, non comme diagnostic définitif.",
+          "q": "L'IMC est-il fiable pour les sportifs ?",
+        },
+        {
+          "a": "Selon l'Organisation mondiale de la santé, un IMC compris entre 18,5 et 24,9 est considéré comme un poids normal pour les adultes.",
+          "q": "Quel IMC est considéré comme normal ?",
+        },
+        {
+          "a": "Les seuils IMC standards pour adultes ne s'appliquent pas aux enfants. L'IMC pédiatrique utilise des courbes de percentiles spécifiques à l'âge et au sexe. Consultez un pédiatre pour une évaluation précise.",
+          "q": "L'IMC est-il adapté aux enfants ?",
+        },
+      ],
+      "inputs": {
+        "height": {
+          "help": "Votre taille en centimètres (métrique) ou en pouces (impérial).",
+          "label": "Taille",
+        },
+        "unit": {
+          "help": "Choisissez entre les unités métriques (kg/cm) ou impériales (lb/po).",
+          "label": "Système d'unités",
+        },
+        "weight": {
+          "help": "Votre poids corporel actuel.",
+          "label": "Poids",
+        },
+      },
+      "keywords": [
+        "calculateur IMC",
+        "indice de masse corporelle",
+        "poids santé",
+        "poids idéal",
+        "obésité",
+        "surpoids",
+        "IMC calcul",
+      ],
+      "options": {
+        "unit": {
+          "imperial": "Impérial (lb, po)",
+          "metric": "Métrique (kg, cm)",
+        },
+      },
+      "outputs": {
+        "bmi": {
+          "help": "Indice de masse corporelle — votre poids divisé par le carré de votre taille.",
+          "label": "IMC",
+        },
+        "category": {
+          "help": "Classification du poids selon l'OMS pour votre valeur d'IMC.",
+          "label": "Catégorie",
+        },
+        "healthyMaxWeight": {
+          "help": "Poids maximum pour un IMC sain (24,9) à votre taille.",
+          "label": "Poids santé (maximum)",
+        },
+        "healthyMinWeight": {
+          "help": "Poids minimum pour un IMC sain (18,5) à votre taille.",
+          "label": "Poids santé (minimum)",
+        },
+      },
+      "short": "Calculez votre indice de masse corporelle et découvrez votre fourchette de poids idéale.",
+      "title": "Calculateur d'IMC",
+    },
+    "hi": {
+      "description": "WHO दिशानिर्देशों पर आधारित मुफ़्त BMI कैलकुलेटर। अपनी लंबाई और वज़न दर्ज करें और अपना BMI, श्रेणी, तथा स्वास्थ्य वज़न सीमा जानें।",
+      "errors": {
+        "heightOutOfRange": "लंबाई 50 से 250 cm (या 20–100 in) के बीच होनी चाहिए।",
+        "weightOutOfRange": "वज़न 1 से 500 kg (या 2–1100 lb) के बीच होना चाहिए।",
+      },
+      "faq": [
+        {
+          "a": "BMI मांसपेशियों और वसा में अंतर नहीं करता। अधिक मांसपेशी वाले एथलीट मेटाबॉलिक रूप से स्वस्थ होने के बावजूद 'अधिक वज़न' की श्रेणी में आ सकते हैं। BMI को एक स्क्रीनिंग उपकरण के रूप में उपयोग करें, न कि अंतिम निदान के रूप में।",
+          "q": "क्या BMI एथलीटों के लिए सटीक है?",
+        },
+        {
+          "a": "विश्व स्वास्थ्य संगठन (WHO) के अनुसार, वयस्कों के लिए 18.5 से 24.9 के बीच BMI सामान्य वज़न माना जाता है।",
+          "q": "स्वस्थ BMI मान क्या है?",
+        },
+        {
+          "a": "वयस्कों के लिए मानक BMI सीमाएँ बच्चों और किशोरों पर लागू नहीं होतीं। बच्चों का BMI उम्र और लिंग के अनुसार पर्सेंटाइल चार्ट से मापा जाता है। सटीक मूल्यांकन के लिए बाल रोग विशेषज्ञ से परामर्श लें।",
+          "q": "क्या बच्चों के लिए BMI उपयुक्त है?",
+        },
+      ],
+      "inputs": {
+        "height": {
+          "help": "आपकी लंबाई सेंटीमीटर (मेट्रिक) या इंच (इम्पीरियल) में।",
+          "label": "लंबाई",
+        },
+        "unit": {
+          "help": "मेट्रिक (kg/cm) या इम्पीरियल (lb/in) में से चुनें।",
+          "label": "माप प्रणाली",
+        },
+        "weight": {
+          "help": "आपका वर्तमान शारीरिक वज़न।",
+          "label": "वज़न",
+        },
+      },
+      "keywords": [
+        "BMI कैलकुलेटर",
+        "बॉडी मास इंडेक्स",
+        "स्वस्थ वज़न",
+        "आदर्श वज़न",
+        "मोटापा कैलकुलेटर",
+        "BMI गणना",
+        "वज़न सूचकांक",
+      ],
+      "options": {
+        "unit": {
+          "imperial": "इम्पीरियल (lb, in)",
+          "metric": "मेट्रिक (kg, cm)",
+        },
+      },
+      "outputs": {
+        "bmi": {
+          "help": "बॉडी मास इंडेक्स — वज़न (kg) को लंबाई (m) के वर्ग से भाग देने पर प्राप्त मान।",
+          "label": "BMI",
+        },
+        "category": {
+          "help": "आपके BMI मान के लिए WHO का वज़न वर्गीकरण।",
+          "label": "श्रेणी",
+        },
+        "healthyMaxWeight": {
+          "help": "आपकी लंबाई के लिए स्वस्थ BMI (24.9) बनाए रखने के लिए अधिकतम वज़न।",
+          "label": "स्वस्थ वज़न (अधिकतम)",
+        },
+        "healthyMinWeight": {
+          "help": "आपकी लंबाई के लिए स्वस्थ BMI (18.5) बनाए रखने के लिए न्यूनतम वज़न।",
+          "label": "स्वस्थ वज़न (न्यूनतम)",
+        },
+      },
+      "short": "अपना बॉडी मास इंडेक्स (BMI) जानें और स्वस्थ वज़न की सीमा पता करें।",
+      "title": "BMI कैलकुलेटर",
+    },
+    "it": {
+      "description": "Calcolatore BMI gratuito basato sulle linee guida dell'OMS. Inserisci altezza e peso per ottenere il tuo BMI, la categoria di peso e l'intervallo di peso salutare.",
+      "errors": {
+        "heightOutOfRange": "L'altezza deve essere compresa tra 50 e 250 cm (o 20–100 in).",
+        "weightOutOfRange": "Il peso deve essere compreso tra 1 e 500 kg (o 2–1100 lb).",
+      },
+      "faq": [
+        {
+          "a": "Il BMI non distingue tra massa muscolare e massa grassa. Gli atleti con molta massa muscolare possono essere classificati in sovrappeso pur essendo metabolicamente sani. Usa il BMI come strumento di screening, non come diagnosi definitiva.",
+          "q": "Il BMI è accurato per gli sportivi?",
+        },
+        {
+          "a": "Secondo l'Organizzazione Mondiale della Sanità, un BMI compreso tra 18,5 e 24,9 è considerato normopeso per gli adulti.",
+          "q": "Quale BMI è considerato sano?",
+        },
+        {
+          "a": "Le soglie BMI standard per adulti non si applicano a bambini e adolescenti. Il BMI pediatrico utilizza curve percentili specifiche per età e sesso. Consulta un pediatra.",
+          "q": "Il BMI è adatto ai bambini?",
+        },
+      ],
+      "inputs": {
+        "height": {
+          "help": "La tua altezza in centimetri (metrico) o pollici (imperiale).",
+          "label": "Altezza",
+        },
+        "unit": {
+          "help": "Scegli tra unità metriche (kg/cm) o imperiali (lb/in).",
+          "label": "Sistema di unità",
+        },
+        "weight": {
+          "help": "Il tuo peso corporeo attuale.",
+          "label": "Peso",
+        },
+      },
+      "keywords": [
+        "calcolatore BMI",
+        "indice di massa corporea",
+        "peso ideale",
+        "peso sano",
+        "obesità",
+        "sovrappeso",
+        "calcolo BMI",
+      ],
+      "options": {
+        "unit": {
+          "imperial": "Imperiale (lb, in)",
+          "metric": "Metrico (kg, cm)",
+        },
+      },
+      "outputs": {
+        "bmi": {
+          "help": "Indice di massa corporea — il tuo peso diviso per il quadrato della tua altezza.",
+          "label": "BMI",
+        },
+        "category": {
+          "help": "Classificazione del peso secondo l'OMS per il tuo valore BMI.",
+          "label": "Categoria",
+        },
+        "healthyMaxWeight": {
+          "help": "Peso massimo per un BMI sano (24,9) alla tua altezza.",
+          "label": "Peso sano (massimo)",
+        },
+        "healthyMinWeight": {
+          "help": "Peso minimo per un BMI sano (18,5) alla tua altezza.",
+          "label": "Peso sano (minimo)",
+        },
+      },
+      "short": "Calcola il tuo indice di massa corporea e scopri il tuo intervallo di peso ideale.",
+      "title": "Calcolatore BMI",
+    },
+    "ja": {
+      "description": "WHO（世界保健機関）のガイドラインに基づく無料のBMI計算機です。身長と体重を入力するだけで、BMI値・体重区分・健康的な体重の範囲が分かります。",
+      "errors": {
+        "heightOutOfRange": "身長は50〜250 cm（または20〜100 in）の範囲で入力してください。",
+        "weightOutOfRange": "体重は1〜500 kg（または2〜1100 lb）の範囲で入力してください。",
+      },
+      "faq": [
+        {
+          "a": "BMIは筋肉量と脂肪量を区別しません。筋肉量の多いアスリートは代謝的に健康であっても「過体重」に分類されることがあります。BMIはあくまでスクリーニングの目安として活用し、確定診断には用いないでください。",
+          "q": "アスリートにとってBMIは正確な指標ですか？",
+        },
+        {
+          "a": "世界保健機関（WHO）の基準では、成人のBMIが18.5〜24.9の範囲であれば「普通体重」とされています。",
+          "q": "健康的なBMIの値はどのくらいですか？",
+        },
+        {
+          "a": "成人向けの標準BMI閾値は、子どもや青少年には適用できません。小児のBMIは年齢・性別別のパーセンタイル曲線で評価します。正確な判定は小児科医にご相談ください。",
+          "q": "子どもにBMIを使えますか？",
+        },
+      ],
+      "inputs": {
+        "height": {
+          "help": "身長をセンチメートル（メートル法）またはインチ（ヤード・ポンド法）で入力してください。",
+          "label": "身長",
+        },
+        "unit": {
+          "help": "メートル法（kg・cm）またはヤード・ポンド法（lb・in）を選択してください。",
+          "label": "単位系",
+        },
+        "weight": {
+          "help": "現在の体重を入力してください。",
+          "label": "体重",
+        },
+      },
+      "keywords": [
+        "BMI計算機",
+        "体格指数",
+        "健康体重",
+        "理想体重",
+        "肥満計算",
+        "BMI計算",
+        "標準体重",
+      ],
+      "options": {
+        "unit": {
+          "imperial": "ヤード・ポンド法（lb・in）",
+          "metric": "メートル法（kg・cm）",
+        },
+      },
+      "outputs": {
+        "bmi": {
+          "help": "体格指数——体重（kg）÷身長（m）の2乗で算出されます。",
+          "label": "BMI",
+        },
+        "category": {
+          "help": "あなたのBMI値に基づくWHOの体重分類です。",
+          "label": "体重区分",
+        },
+        "healthyMaxWeight": {
+          "help": "あなたの身長で健康的なBMI（24.9）を維持するための最高体重です。",
+          "label": "健康体重（上限）",
+        },
+        "healthyMinWeight": {
+          "help": "あなたの身長で健康的なBMI（18.5）を維持するための最低体重です。",
+          "label": "健康体重（下限）",
+        },
+      },
+      "short": "体格指数（BMI）を計算し、健康的な体重の範囲を確認しましょう。",
+      "title": "BMI計算機",
+    },
+    "ko": {
+      "description": "WHO 지침에 기반한 무료 BMI 계산기입니다. 키와 체중을 입력하면 BMI 값, 체중 분류, 건강 체중 범위를 바로 확인할 수 있습니다.",
+      "errors": {
+        "heightOutOfRange": "키는 50~250 cm(또는 20~100 in) 범위 내여야 합니다.",
+        "weightOutOfRange": "체중은 1~500 kg(또는 2~1100 lb) 범위 내여야 합니다.",
+      },
+      "faq": [
+        {
+          "a": "BMI는 근육량과 체지방을 구별하지 못합니다. 근육량이 많은 운동선수는 대사 건강이 좋음에도 '과체중'으로 분류될 수 있습니다. BMI는 선별 검사 도구로만 활용하고, 최종 진단 기준으로 삼지 마세요.",
+          "q": "운동선수에게 BMI는 정확한 지표인가요?",
+        },
+        {
+          "a": "세계보건기구(WHO) 기준에 따르면, 성인의 BMI가 18.5~24.9 범위이면 정상 체중으로 분류됩니다.",
+          "q": "건강한 BMI 수치는 얼마인가요?",
+        },
+        {
+          "a": "성인용 표준 BMI 기준값은 어린이와 청소년에게 적용할 수 없습니다. 소아 BMI는 연령·성별 백분위 곡선으로 평가합니다. 정확한 평가를 위해 소아과 의사와 상담하세요.",
+          "q": "어린이에게도 BMI를 적용할 수 있나요?",
+        },
+      ],
+      "inputs": {
+        "height": {
+          "help": "키를 센티미터(미터법) 또는 인치(야드파운드법)로 입력하세요.",
+          "label": "키",
+        },
+        "unit": {
+          "help": "미터법(kg/cm) 또는 야드파운드법(lb/in)을 선택하세요.",
+          "label": "단위 시스템",
+        },
+        "weight": {
+          "help": "현재 체중을 입력하세요.",
+          "label": "체중",
+        },
+      },
+      "keywords": [
+        "BMI 계산기",
+        "체질량지수",
+        "건강 체중",
+        "이상 체중",
+        "비만 계산",
+        "BMI 계산",
+        "표준 체중",
+      ],
+      "options": {
+        "unit": {
+          "imperial": "야드파운드법 (lb, in)",
+          "metric": "미터법 (kg, cm)",
+        },
+      },
+      "outputs": {
+        "bmi": {
+          "help": "체질량지수 — 체중(kg)을 키(m)의 제곱으로 나눈 값입니다.",
+          "label": "BMI",
+        },
+        "category": {
+          "help": "귀하의 BMI 값에 따른 WHO 체중 분류입니다.",
+          "label": "체중 분류",
+        },
+        "healthyMaxWeight": {
+          "help": "귀하의 키에서 건강한 BMI(24.9)를 유지하기 위한 최대 체중입니다.",
+          "label": "건강 체중 (최댓값)",
+        },
+        "healthyMinWeight": {
+          "help": "귀하의 키에서 건강한 BMI(18.5)를 유지하기 위한 최소 체중입니다.",
+          "label": "건강 체중 (최솟값)",
+        },
+      },
+      "short": "체질량지수(BMI)를 계산하고 건강 체중 범위를 확인하세요.",
+      "title": "BMI 계산기",
+    },
+    "ru": {
+      "description": "Бесплатный калькулятор ИМТ по рекомендациям ВОЗ. Введите рост и вес, чтобы получить значение ИМТ, категорию и диапазон здорового веса.",
+      "errors": {
+        "heightOutOfRange": "Рост должен быть от 50 до 250 см (или от 20 до 100 дюймов).",
+        "weightOutOfRange": "Вес должен быть от 1 до 500 кг (или от 2 до 1100 фунтов).",
+      },
+      "faq": [
+        {
+          "a": "ИМТ не различает мышечную и жировую массу. Спортсмены с высокой мышечной массой могут быть классифицированы как имеющие избыточный вес, несмотря на хорошее метаболическое здоровье. Используйте ИМТ как инструмент скрининга, а не окончательный диагноз.",
+          "q": "Точен ли ИМТ для спортсменов?",
+        },
+        {
+          "a": "По классификации Всемирной организации здравоохранения, ИМТ от 18,5 до 24,9 соответствует нормальному весу у взрослых.",
+          "q": "Какой ИМТ считается нормальным?",
+        },
+        {
+          "a": "Стандартные пороговые значения ИМТ для взрослых не применяются к детям и подросткам. Детский ИМТ оценивается по центильным кривым с учётом возраста и пола. Проконсультируйтесь с педиатром.",
+          "q": "Применим ли ИМТ для детей?",
+        },
+      ],
+      "inputs": {
+        "height": {
+          "help": "Ваш рост в сантиметрах (метрическая система) или дюймах (имперская).",
+          "label": "Рост",
+        },
+        "unit": {
+          "help": "Выберите метрическую систему (кг/см) или имперскую (фунт/дюйм).",
+          "label": "Система единиц",
+        },
+        "weight": {
+          "help": "Ваш текущий вес.",
+          "label": "Масса тела",
+        },
+      },
+      "keywords": [
+        "калькулятор ИМТ",
+        "индекс массы тела",
+        "нормальный вес",
+        "идеальный вес",
+        "ожирение",
+        "избыточный вес",
+        "рассчитать ИМТ",
+      ],
+      "options": {
+        "unit": {
+          "imperial": "Имперская (фунт, дюйм)",
+          "metric": "Метрическая (кг, см)",
+        },
+      },
+      "outputs": {
+        "bmi": {
+          "help": "Индекс массы тела — вес делённый на квадрат роста.",
+          "label": "ИМТ",
+        },
+        "category": {
+          "help": "Классификация веса по ВОЗ для вашего значения ИМТ.",
+          "label": "Категория",
+        },
+        "healthyMaxWeight": {
+          "help": "Максимальный вес для здорового ИМТ (24,9) при вашем росте.",
+          "label": "Здоровый вес (максимум)",
+        },
+        "healthyMinWeight": {
+          "help": "Минимальный вес для здорового ИМТ (18,5) при вашем росте.",
+          "label": "Здоровый вес (минимум)",
+        },
+      },
+      "short": "Рассчитайте индекс массы тела и узнайте ваш оптимальный диапазон веса.",
+      "title": "Калькулятор ИМТ",
+    },
+    "tr": {
+      "description": "WHO kriterlerine dayalı ücretsiz VKİ hesaplayıcı. Boy ve kilonuzu girerek VKİ değerinizi, kategorinizi ve ideal kilo aralığınızı öğrenin.",
+      "errors": {
+        "heightOutOfRange": "Boy 50 ile 250 cm (veya 20–100 inç) arasında olmalıdır.",
+        "weightOutOfRange": "Kilo 1 ile 500 kg (veya 2–1100 lb) arasında olmalıdır.",
+      },
+      "faq": [
+        {
+          "a": "VKİ, kas ve yağ kütlesini birbirinden ayırt edemez. Bu nedenle yüksek kas kitlesine sahip sporcular metabolik açıdan sağlıklı olmalarına rağmen 'fazla kilolu' kategorisine düşebilir. VKİ'yi kesin tanı değil, bir tarama aracı olarak kullanın.",
+          "q": "Sporcular için VKİ doğru bir ölçüt müdür?",
+        },
+        {
+          "a": "Yetişkinler için geçerli standart VKİ eşikleri çocuk ve ergenlere uygulanamaz. Çocuk VKİ'si yaşa ve cinsiyete özgü persentil grafikleri kullanır. Doğru değerlendirme için bir çocuk hekimine danışın.",
+          "q": "Çocuklar için VKİ güvenilir midir?",
+        },
+        {
+          "a": "Dünya Sağlık Örgütü'ne göre, yetişkinlerde 18,5 ile 24,9 arasındaki VKİ değeri normal kilo olarak kabul edilmektedir.",
+          "q": "Sağlıklı VKİ değeri nedir?",
+        },
+        {
+          "a": "Araştırmalar, 65 yaş üstü bireylerde biraz daha yüksek VKİ değerlerinin (27'ye kadar) kas ve kemik kitlesi rezervleri nedeniyle daha iyi sonuçlarla ilişkilendirilebileceğini göstermektedir. Sonuçlarınızı her zaman doktorunuzla değerlendirin.",
+          "q": "Yaşlı bireyler VKİ'ye dikkat etmeli mi?",
+        },
+        {
+          "a": "Hayır. VKİ popülasyon düzeyinde bir tarama aracıdır ve yağın nerede biriktiğini ölçmez. Karın bölgesi yağlanması, metabolik risk açısından daha güçlü bir göstergedir; bel çevresi ölçümleri VKİ'yi tamamlar.",
+          "q": "VKİ vücut şeklini veya yağ dağılımını hesaba katar mı?",
+        },
+      ],
+      "inputs": {
+        "height": {
+          "help": "Boyunuzu santimetre (metrik) veya inç (İngiliz birimi) cinsinden girin.",
+          "label": "Boy",
+        },
+        "unit": {
+          "help": "Metrik (kg/cm) veya İngiliz birimleri (lb/inç) arasından seçin.",
+          "label": "Birim sistemi",
+        },
+        "weight": {
+          "help": "Mevcut vücut ağırlığınız.",
+          "label": "Kilo",
+        },
+      },
+      "keywords": [
+        "VKİ hesaplayıcı",
+        "vücut kitle indeksi",
+        "sağlıklı kilo",
+        "ideal kilo",
+        "obezite hesaplayıcı",
+        "BMI hesaplama",
+        "kilo indeksi",
+      ],
+      "options": {
+        "unit": {
+          "imperial": "İngiliz birimi (lb, inç)",
+          "metric": "Metrik (kg, cm)",
+        },
+      },
+      "outputs": {
+        "bmi": {
+          "help": "Vücut Kitle İndeksi — ağırlığınızın boy karenize bölümü.",
+          "label": "VKİ",
+        },
+        "category": {
+          "help": "VKİ değeriniz için WHO kilo sınıflandırması.",
+          "label": "Kategori",
+        },
+        "healthyMaxWeight": {
+          "help": "Boyunuz için sağlıklı VKİ değerinin (24,9) gerektirdiği maksimum ağırlık.",
+          "label": "Sağlıklı kilo (üst sınır)",
+        },
+        "healthyMinWeight": {
+          "help": "Boyunuz için sağlıklı VKİ değerinin (18,5) gerektirdiği minimum ağırlık.",
+          "label": "Sağlıklı kilo (alt sınır)",
+        },
+      },
+      "short": "Vücut Kitle İndeksinizi hesaplayın ve sağlıklı kilo aralığınızı öğrenin.",
+      "title": "VKİ Hesaplayıcı",
+    },
+    "zh": {
+      "description": "基于世界卫生组织指南的免费BMI计算器。输入您的身高和体重，获取BMI值、体重分类及健康体重范围。",
+      "errors": {
+        "heightOutOfRange": "身高必须在50至250厘米（或20至100英寸）之间。",
+        "weightOutOfRange": "体重必须在1至500千克（或2至1100磅）之间。",
+      },
+      "faq": [
+        {
+          "a": "BMI无法区分肌肉质量和脂肪质量。肌肉量较高的运动员可能被归类为超重，但其代谢健康状况良好。请将BMI作为筛查工具，而非最终诊断依据。",
+          "q": "BMI对运动员准确吗？",
+        },
+        {
+          "a": "根据世界卫生组织的标准，成年人BMI在18.5至24.9之间属于正常体重。",
+          "q": "什么BMI值算健康？",
+        },
+        {
+          "a": "成人标准BMI阈值不适用于儿童和青少年。儿童BMI需使用按年龄和性别划分的百分位曲线进行评估。请咨询儿科医生。",
+          "q": "BMI适用于儿童吗？",
+        },
+      ],
+      "inputs": {
+        "height": {
+          "help": "您的身高，以厘米（公制）或英寸（英制）为单位。",
+          "label": "身高",
+        },
+        "unit": {
+          "help": "选择公制（千克/厘米）或英制（磅/英寸）。",
+          "label": "单位制",
+        },
+        "weight": {
+          "help": "您当前的体重。",
+          "label": "体重",
+        },
+      },
+      "keywords": [
+        "BMI计算器",
+        "身体质量指数",
+        "健康体重",
+        "理想体重",
+        "肥胖计算",
+        "体重指数",
+        "BMI计算",
+      ],
+      "options": {
+        "unit": {
+          "imperial": "英制（磅、英寸）",
+          "metric": "公制（千克、厘米）",
+        },
+      },
+      "outputs": {
+        "bmi": {
+          "help": "身体质量指数——体重（千克）除以身高（米）的平方。",
+          "label": "BMI",
+        },
+        "category": {
+          "help": "世界卫生组织对您BMI值的体重分类。",
+          "label": "分类",
+        },
+        "healthyMaxWeight": {
+          "help": "您身高对应的健康BMI最高值（24.9）所需的最高体重。",
+          "label": "健康体重（最高）",
+        },
+        "healthyMinWeight": {
+          "help": "您身高对应的健康BMI最低值（18.5）所需的最低体重。",
+          "label": "健康体重（最低）",
+        },
+      },
+      "short": "计算您的身体质量指数，了解您的健康体重范围。",
+      "title": "BMI计算器",
+    },
+  },
+  "icon": Any<String>,
+  "inputSchema": ZodEffects {
+    "_def": {
+      "effect": {
+        "refinement": [Function],
+        "type": "refinement",
+      },
+      "schema": ZodObject {
+        "_cached": {
+          "keys": [
+            "unit",
+            "weight",
+            "height",
+          ],
+          "shape": {
+            "height": ZodNumber {
+              "_def": {
+                "checks": [
+                  {
+                    "inclusive": false,
+                    "kind": "min",
+                    "message": undefined,
+                    "value": 0,
+                  },
+                ],
+                "coerce": false,
+                "typeName": "ZodNumber",
+              },
+              "and": [Function],
+              "array": [Function],
+              "brand": [Function],
+              "catch": [Function],
+              "default": [Function],
+              "describe": [Function],
+              "isNullable": [Function],
+              "isOptional": [Function],
+              "max": [Function],
+              "min": [Function],
+              "nullable": [Function],
+              "nullish": [Function],
+              "optional": [Function],
+              "or": [Function],
+              "parse": [Function],
+              "parseAsync": [Function],
+              "pipe": [Function],
+              "promise": [Function],
+              "readonly": [Function],
+              "refine": [Function],
+              "refinement": [Function],
+              "safeParse": [Function],
+              "safeParseAsync": [Function],
+              "spa": [Function],
+              "step": [Function],
+              "superRefine": [Function],
+              "transform": [Function],
+              "~standard": {
+                "validate": [Function],
+                "vendor": "zod",
+                "version": 1,
+              },
+            },
+            "unit": ZodEnum {
+              "_cache": Set {
+                "metric",
+                "imperial",
+              },
+              "_def": {
+                "typeName": "ZodEnum",
+                "values": [
+                  "metric",
+                  "imperial",
+                ],
+              },
+              "and": [Function],
+              "array": [Function],
+              "brand": [Function],
+              "catch": [Function],
+              "default": [Function],
+              "describe": [Function],
+              "isNullable": [Function],
+              "isOptional": [Function],
+              "nullable": [Function],
+              "nullish": [Function],
+              "optional": [Function],
+              "or": [Function],
+              "parse": [Function],
+              "parseAsync": [Function],
+              "pipe": [Function],
+              "promise": [Function],
+              "readonly": [Function],
+              "refine": [Function],
+              "refinement": [Function],
+              "safeParse": [Function],
+              "safeParseAsync": [Function],
+              "spa": [Function],
+              "superRefine": [Function],
+              "transform": [Function],
+              "~standard": {
+                "validate": [Function],
+                "vendor": "zod",
+                "version": 1,
+              },
+            },
+            "weight": ZodNumber {
+              "_def": {
+                "checks": [
+                  {
+                    "inclusive": false,
+                    "kind": "min",
+                    "message": undefined,
+                    "value": 0,
+                  },
+                ],
+                "coerce": false,
+                "typeName": "ZodNumber",
+              },
+              "and": [Function],
+              "array": [Function],
+              "brand": [Function],
+              "catch": [Function],
+              "default": [Function],
+              "describe": [Function],
+              "isNullable": [Function],
+              "isOptional": [Function],
+              "max": [Function],
+              "min": [Function],
+              "nullable": [Function],
+              "nullish": [Function],
+              "optional": [Function],
+              "or": [Function],
+              "parse": [Function],
+              "parseAsync": [Function],
+              "pipe": [Function],
+              "promise": [Function],
+              "readonly": [Function],
+              "refine": [Function],
+              "refinement": [Function],
+              "safeParse": [Function],
+              "safeParseAsync": [Function],
+              "spa": [Function],
+              "step": [Function],
+              "superRefine": [Function],
+              "transform": [Function],
+              "~standard": {
+                "validate": [Function],
+                "vendor": "zod",
+                "version": 1,
+              },
+            },
+          },
+        },
+        "_def": {
+          "catchall": ZodNever {
+            "_def": {
+              "typeName": "ZodNever",
+            },
+            "and": [Function],
+            "array": [Function],
+            "brand": [Function],
+            "catch": [Function],
+            "default": [Function],
+            "describe": [Function],
+            "isNullable": [Function],
+            "isOptional": [Function],
+            "nullable": [Function],
+            "nullish": [Function],
+            "optional": [Function],
+            "or": [Function],
+            "parse": [Function],
+            "parseAsync": [Function],
+            "pipe": [Function],
+            "promise": [Function],
+            "readonly": [Function],
+            "refine": [Function],
+            "refinement": [Function],
+            "safeParse": [Function],
+            "safeParseAsync": [Function],
+            "spa": [Function],
+            "superRefine": [Function],
+            "transform": [Function],
+            "~standard": {
+              "validate": [Function],
+              "vendor": "zod",
+              "version": 1,
+            },
+          },
+          "shape": [Function],
+          "typeName": "ZodObject",
+          "unknownKeys": "strip",
+        },
+        "and": [Function],
+        "array": [Function],
+        "augment": [Function],
+        "brand": [Function],
+        "catch": [Function],
+        "default": [Function],
+        "describe": [Function],
+        "isNullable": [Function],
+        "isOptional": [Function],
+        "nonstrict": [Function],
+        "nullable": [Function],
+        "nullish": [Function],
+        "optional": [Function],
+        "or": [Function],
+        "parse": [Function],
+        "parseAsync": [Function],
+        "pipe": [Function],
+        "promise": [Function],
+        "readonly": [Function],
+        "refine": [Function],
+        "refinement": [Function],
+        "safeParse": [Function],
+        "safeParseAsync": [Function],
+        "spa": [Function],
+        "superRefine": [Function],
+        "transform": [Function],
+        "~standard": {
+          "validate": [Function],
+          "vendor": "zod",
+          "version": 1,
+        },
+      },
+      "typeName": "ZodEffects",
+    },
+    "and": [Function],
+    "array": [Function],
+    "brand": [Function],
+    "catch": [Function],
+    "default": [Function],
+    "describe": [Function],
+    "isNullable": [Function],
+    "isOptional": [Function],
+    "nullable": [Function],
+    "nullish": [Function],
+    "optional": [Function],
+    "or": [Function],
+    "parse": [Function],
+    "parseAsync": [Function],
+    "pipe": [Function],
+    "promise": [Function],
+    "readonly": [Function],
+    "refine": [Function],
+    "refinement": [Function],
+    "safeParse": [Function],
+    "safeParseAsync": [Function],
+    "spa": [Function],
+    "superRefine": [Function],
+    "transform": [Function],
+    "~standard": {
+      "validate": [Function],
+      "vendor": "zod",
+      "version": 1,
+    },
+  },
+  "inputs": [
+    {
+      "defaultValue": "metric",
+      "id": "unit",
+      "required": true,
+      "type": {
+        "kind": "select",
+        "options": [
+          {
+            "i18nKey": "metric",
+            "value": "metric",
+          },
+          {
+            "i18nKey": "imperial",
+            "value": "imperial",
+          },
+        ],
+      },
+    },
+    {
+      "defaultValue": 70,
+      "id": "weight",
+      "required": true,
+      "type": {
+        "kind": "number",
+        "max": 500,
+        "min": 1,
+        "step": 0.1,
+        "unit": "kg",
+      },
+    },
+    {
+      "defaultValue": 170,
+      "id": "height",
+      "required": true,
+      "type": {
+        "kind": "number",
+        "max": 250,
+        "min": 50,
+        "step": 1,
+        "unit": "cm",
+      },
+    },
+  ],
+  "meta": {
+    "disclaimer": "BMI is a population-level screening tool. It does not diagnose body fatness or health. Consult a healthcare professional for individual assessment.",
+    "formulaLatex": "\\text{BMI} = \\frac{\\text{weight (kg)}}{\\text{height (m)}^2}",
+    "references": [
+      {
+        "authority": "World Health Organization (WHO)",
+        "title": "A healthy lifestyle — WHO recommendations",
+        "url": "https://www.who.int/europe/news-room/fact-sheets/item/a-healthy-lifestyle---who-recommendations",
+      },
+      {
+        "authority": "Centers for Disease Control and Prevention (CDC)",
+        "title": "About Adult BMI",
+        "url": "https://www.cdc.gov/healthyweight/assessing/bmi/",
+      },
+    ],
+  },
+  "outputs": [
+    {
+      "format": "number",
+      "highlight": true,
+      "id": "bmi",
+      "precision": 1,
+    },
+    {
+      "format": "text",
+      "id": "category",
+    },
+    {
+      "format": "number",
+      "id": "healthyMinWeight",
+      "precision": 2,
+      "unit": "kg",
+    },
+    {
+      "format": "number",
+      "id": "healthyMaxWeight",
+      "precision": 2,
+      "unit": "kg",
+    },
+  ],
+  "priority": Any<String>,
+  "related": [
+    "body-fat-percentage",
+    "ideal-weight",
+    "calorie-calculator",
+  ],
+  "slug": Any<String>,
+  "tags": [
+    "health",
+    "weight",
+    "bmi",
+    "obesity",
+    "fitness",
+  ],
+}
+`;
