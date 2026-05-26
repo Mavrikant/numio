@@ -12,6 +12,19 @@ export interface Props {
 const { locale, compact = false, class: className } = Astro.props;
 
 const currentNative = LOCALE_NATIVE_NAMES[locale];
+
+// Build a per-locale slug alias map so the client-side switcher can swap
+// the calculator slug along with the locale (e.g. /tr/health/vucut-kitle-indeksi/
+// → /en/health/bmi/) instead of producing a 404.
+const slugFiles = import.meta.glob<{ default: Record<string, string> }>(
+  "/src/i18n/slugs/*.json",
+  { eager: true },
+);
+const slugMaps: Record<string, Record<string, string>> = {};
+for (const [path, mod] of Object.entries(slugFiles)) {
+  const m = path.match(/\/slugs\/([a-z]{2})\.json$/);
+  if (m && m[1]) slugMaps[m[1]] = mod.default;
+}
 ---
 
 <div
@@ -115,50 +128,65 @@ const currentNative = LOCALE_NATIVE_NAMES[locale];
   </ul>
 </div>
 
-<script>
+<script is:inline define:vars={{ slugMaps }}>
   // Language switcher dropdown — vanilla JS
-  // When a locale option is clicked, swap the locale segment in the current URL
-  // keeping the rest of the path the same (slug stays; Phase 3 will enrich with real slugs).
+  // Slug-aware swap: when the current path ends with a calculator slug,
+  // translate the slug into the target locale's alias (canonical fallback if missing).
+  // slugMaps is injected from frontmatter as { [locale]: { canonical: localized } }.
 
-  function swapLocaleInPath(href: string, targetLocale: string): string {
-    // Pattern: /calculators/<locale>/...
-    return href.replace(
-      /^(\/calculators\/)([a-z]{2})(\/.*)?$/,
-      (_match, prefix, _oldLocale, rest) =>
-        `${prefix}${targetLocale}${rest ?? "/"}`,
-    );
+  function findCanonical(localeSlugMap, localizedSlug) {
+    if (!localeSlugMap) return null;
+    for (const [canonical, localized] of Object.entries(localeSlugMap)) {
+      if (localized === localizedSlug) return canonical;
+    }
+    return null;
   }
 
-  function initLangSwitcher(switcher: HTMLElement) {
-    const btn = switcher.querySelector<HTMLButtonElement>(".lang-switcher-btn");
-    const dropdown = switcher.querySelector<HTMLElement>(".lang-switcher-dropdown");
-    const chevron = switcher.querySelector<SVGElement>(".lang-switcher-chevron");
+  function swapLocaleInPath(href, targetLocale) {
+    // /calculators/<locale>/[<category>/[<slug>/]]
+    const m = href.match(
+      /^(\/calculators\/)([a-z]{2})(?:\/([^/]+)(?:\/([^/]+))?)?\/?$/,
+    );
+    if (!m) return href;
+    const [, prefix, oldLocale, category, slug] = m;
+    if (!category) return `${prefix}${targetLocale}/`;
+    if (!slug) return `${prefix}${targetLocale}/${category}/`;
+    // Slug present — translate via canonical
+    const canonical =
+      findCanonical(slugMaps[oldLocale], slug) ?? slug;
+    const targetSlug = slugMaps[targetLocale]?.[canonical] ?? canonical;
+    return `${prefix}${targetLocale}/${category}/${targetSlug}/`;
+  }
+
+  function initLangSwitcher(switcher) {
+    const btn = switcher.querySelector(".lang-switcher-btn");
+    const dropdown = switcher.querySelector(".lang-switcher-dropdown");
+    const chevron = switcher.querySelector(".lang-switcher-chevron");
     if (!btn || !dropdown) return;
 
     function open() {
-      dropdown!.classList.remove("hidden");
-      btn!.setAttribute("aria-expanded", "true");
-      chevron?.classList.add("rotate-180");
-      // Focus first item
-      const first = dropdown!.querySelector<HTMLAnchorElement>("a");
-      first?.focus();
+      dropdown.classList.remove("hidden");
+      btn.setAttribute("aria-expanded", "true");
+      if (chevron) chevron.classList.add("rotate-180");
+      const first = dropdown.querySelector("a");
+      if (first) first.focus();
     }
 
     function close() {
-      dropdown!.classList.add("hidden");
-      btn!.setAttribute("aria-expanded", "false");
-      chevron?.classList.remove("rotate-180");
+      dropdown.classList.add("hidden");
+      btn.setAttribute("aria-expanded", "false");
+      if (chevron) chevron.classList.remove("rotate-180");
     }
 
     btn.addEventListener("click", (e) => {
       e.stopPropagation();
       const isOpen = btn.getAttribute("aria-expanded") === "true";
-      isOpen ? close() : open();
+      if (isOpen) close(); else open();
     });
 
     // Update hrefs to swap locale in current pathname
     const currentPath = window.location.pathname;
-    dropdown.querySelectorAll<HTMLAnchorElement>("a[data-locale-target]").forEach((a) => {
+    dropdown.querySelectorAll("a[data-locale-target]").forEach((a) => {
       const targetLocale = a.dataset.localeTarget;
       if (targetLocale) {
         a.href = swapLocaleInPath(currentPath, targetLocale);
@@ -167,7 +195,7 @@ const currentNative = LOCALE_NATIVE_NAMES[locale];
 
     // Close on outside click
     document.addEventListener("click", (e) => {
-      if (!switcher.contains(e.target as Node)) {
+      if (!switcher.contains(e.target)) {
         close();
       }
     });
@@ -182,5 +210,5 @@ const currentNative = LOCALE_NATIVE_NAMES[locale];
   }
 
   // Init all switchers on the page
-  document.querySelectorAll<HTMLElement>(".lang-switcher").forEach(initLangSwitcher);
+  document.querySelectorAll(".lang-switcher").forEach(initLangSwitcher);
 </script>

@@ -44,7 +44,10 @@
     "copyright": "© Karaman Hesaplayıcılar",
     "disclaimer": "Sonuçlar yalnızca bilgilendirme amaçlıdır. Kritik kararlarda doğrulayın.",
     "sourceCode": "Kaynak kod",
-    "links": "Bağlantılar"
+    "links": "Bağlantılar",
+    "lastUpdated": "Son güncelleme",
+    "allCalculators": "Tüm hesaplayıcılar",
+    "comingSoon": "Yakında"
   },
   "theme": {
     "toggle": "Tema değiştir",

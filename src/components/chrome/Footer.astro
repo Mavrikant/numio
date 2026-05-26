@@ -1,6 +1,8 @@
 ---
 import { t, buildPath, getCategoryLabel, type Locale } from "@/lib/i18n";
 import { getAvailableCategories } from "@/lib/registry";
+import { BUILD_TIME } from "@/config/build";
+import { formatDate, bcp47 } from "@/lib/format";
 import LanguageSwitcher from "./LanguageSwitcher.astro";
 
 export interface Props {
@@ -10,6 +12,17 @@ export interface Props {
 const { locale } = Astro.props;
 const categories = getAvailableCategories();
 const currentYear = new Date().getFullYear();
+
+const buildDate = new Date(BUILD_TIME);
+const buildHuman = formatDate(buildDate, locale, {
+  year: "numeric",
+  month: "short",
+  day: "numeric",
+  hour: "2-digit",
+  minute: "2-digit",
+  hour12: false,
+});
+const buildIsoForAttr = BUILD_TIME;
 ---
 
 <footer
@@ -113,6 +126,12 @@ const currentYear = new Date().getFullYear();
     <div class="mt-8 flex flex-col items-center justify-between gap-4 border-t border-slate-200 pt-6 text-xs text-slate-500 dark:border-slate-800 dark:text-slate-400 sm:flex-row">
       <p>
         {t(locale, "footer.copyright")} {currentYear}
+      </p>
+      <p>
+        {t(locale, "footer.lastUpdated")}:{" "}
+        <time datetime={buildIsoForAttr} lang={bcp47(locale)}>
+          {buildHuman}
+        </time>
       </p>
     </div>
   </div>

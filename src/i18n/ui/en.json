@@ -44,7 +44,10 @@
     "copyright": "© Karaman Calculators",
     "disclaimer": "Results are for informational purposes only. Verify before using for critical decisions.",
     "sourceCode": "Source code",
-    "links": "Links"
+    "links": "Links",
+    "lastUpdated": "Last updated",
+    "allCalculators": "All calculators",
+    "comingSoon": "Coming soon"
   },
   "theme": {
     "toggle": "Toggle theme",
