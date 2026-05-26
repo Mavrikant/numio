@@ -1,0 +1,43 @@
+{
+  "site": {
+    "name": "Karaman Calculators",
+    "tagline": "Free calculators for everyday life — finance, health, engineering, math.",
+    "description": "Use free, accurate calculators in 12 languages. No login, no tracking, instant results."
+  },
+  "nav": {
+    "home": "Home",
+    "categories": "Categories",
+    "search": "Search",
+    "about": "About"
+  },
+  "actions": {
+    "calculate": "Calculate",
+    "reset": "Reset",
+    "copy": "Copy",
+    "share": "Share",
+    "print": "Print",
+    "save": "Save"
+  },
+  "labels": {
+    "result": "Result",
+    "results": "Results",
+    "inputs": "Inputs",
+    "settings": "Settings",
+    "formula": "Formula",
+    "references": "References",
+    "related": "Related calculators",
+    "loading": "Loading…",
+    "noResults": "No results"
+  },
+  "errors": {
+    "required": "This field is required",
+    "invalid": "Invalid value",
+    "outOfRange": "Value is out of range",
+    "tooSmall": "Value is too small",
+    "tooLarge": "Value is too large"
+  },
+  "footer": {
+    "copyright": "© Karaman Calculators",
+    "disclaimer": "Results are for informational purposes only. Verify before using for critical decisions."
+  }
+}

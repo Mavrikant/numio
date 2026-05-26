@@ -1,0 +1,43 @@
+{
+  "site": {
+    "name": "Karaman Hesaplayıcılar",
+    "tagline": "Günlük hayat için ücretsiz hesaplayıcılar — finans, sağlık, mühendislik, matematik.",
+    "description": "12 dilde ücretsiz ve doğru hesaplayıcılar. Giriş gerekmez, takip yok, anında sonuç."
+  },
+  "nav": {
+    "home": "Ana Sayfa",
+    "categories": "Kategoriler",
+    "search": "Ara",
+    "about": "Hakkında"
+  },
+  "actions": {
+    "calculate": "Hesapla",
+    "reset": "Sıfırla",
+    "copy": "Kopyala",
+    "share": "Paylaş",
+    "print": "Yazdır",
+    "save": "Kaydet"
+  },
+  "labels": {
+    "result": "Sonuç",
+    "results": "Sonuçlar",
+    "inputs": "Girdiler",
+    "settings": "Ayarlar",
+    "formula": "Formül",
+    "references": "Kaynaklar",
+    "related": "İlgili hesaplayıcılar",
+    "loading": "Yükleniyor…",
+    "noResults": "Sonuç yok"
+  },
+  "errors": {
+    "required": "Bu alan zorunlu",
+    "invalid": "Geçersiz değer",
+    "outOfRange": "Değer aralık dışı",
+    "tooSmall": "Değer çok küçük",
+    "tooLarge": "Değer çok büyük"
+  },
+  "footer": {
+    "copyright": "© Karaman Hesaplayıcılar",
+    "disclaimer": "Sonuçlar yalnızca bilgilendirme amaçlıdır. Kritik kararlarda doğrulayın."
+  }
+}
