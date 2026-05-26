@@ -1,0 +1,92 @@
+# Student Loan Payoff Calculator
+
+Managing student loan debt is one of the most significant financial challenges for recent graduates. The Student Loan Payoff Calculator helps you understand exactly how much you will pay each month, how much interest accumulates over the life of your loan, and how making extra payments dramatically reduces your total cost and repayment timeline.
+
+## What Is a Student Loan Payoff Calculator?
+
+A student loan payoff calculator uses the standard loan amortization formula to determine your required monthly payment based on three key factors: your outstanding principal balance, your annual interest rate (APR), and your repayment term in years.
+
+The core formula is:
+
+**M = P × [r(1+r)^n] / [(1+r)^n − 1]**
+
+Where:
+- **M** = monthly payment
+- **P** = loan principal (balance after grace period)
+- **r** = monthly interest rate (APR ÷ 12 ÷ 100)
+- **n** = total number of monthly payments (years × 12)
+
+### The Grace Period Effect
+
+Most federal student loans include a six-month grace period after graduation during which no payments are required. However, for unsubsidized federal loans and private student loans, interest continues to accrue during this period. The calculator accounts for this by computing your balance after the grace period before applying the amortization formula:
+
+**Balance after grace = P × (1 + r)^graceMonths**
+
+For subsidized federal loans, the government covers this interest, so your balance remains unchanged during the grace period.
+
+### Extra Payments
+
+When you pay more than the minimum required monthly payment, the extra amount is applied directly to your principal. A lower principal means less interest accrues each month, accelerating your payoff timeline and reducing total interest paid. The calculator simulates this month-by-month to show exactly how many months you will save and how much total interest you avoid.
+
+## How to Use This Calculator
+
+1. **Enter your loan balance** — The current outstanding principal of your student loan, typically between $1,000 and $200,000 for federal loans.
+2. **Enter your APR** — The annual interest rate on your loan. Federal direct subsidized and unsubsidized loans for undergraduates are fixed by Congress each year (currently around 5–7%). Private loan rates vary by lender and creditworthiness.
+3. **Set your loan term** — Standard federal repayment is 10 years; income-driven plans may extend to 20–25 years.
+4. **Set the grace period** — Most federal loans have a 6-month grace period; private loans vary.
+5. **Add extra monthly payment** (optional) — Enter any amount you can afford beyond the minimum to see how it reduces your payoff time and total interest.
+
+The calculator instantly shows your monthly payment, total amount paid, total interest, and (with extra payments) how many months you save.
+
+## Examples
+
+### Example 1: Standard Federal Loan Repayment
+
+A borrower has $35,000 in federal unsubsidized student loans at a 6.54% APR with a standard 10-year repayment plan and a 6-month grace period.
+
+**Calculation:**
+- Grace balance: $35,000 × (1 + 0.00545)^6 ≈ $35,963
+- Monthly rate: 6.54% ÷ 12 = 0.545%
+- Monthly payment: $35,963 × [0.00545 × (1.00545)^120] / [(1.00545)^120 − 1] ≈ **$403/month**
+- Total paid: $403 × 120 ≈ $48,360
+- Total interest: $48,360 − $35,963 ≈ **$12,397**
+
+### Example 2: Paying Extra to Save Thousands
+
+Using the same loan above, the borrower adds $150/month in extra payments:
+
+- New payoff time: approximately **84 months** (7 years instead of 10)
+- Total interest paid: approximately **$7,800**
+- **Interest saved: ~$4,600** and 3 years of payments eliminated
+
+### Example 3: Private Student Loan
+
+A graduate student borrows $20,000 from a private lender at 9.5% APR with a 5-year term and no grace period.
+
+- Monthly rate: 9.5% ÷ 12 = 0.792%
+- Monthly payment: $20,000 × [0.00792 × (1.00792)^60] / [(1.00792)^60 − 1] ≈ **$419/month**
+- Total paid: $419 × 60 ≈ $25,140
+- Total interest: ≈ **$5,140**
+
+## FAQ
+
+**Q: What is the difference between subsidized and unsubsidized federal loans?**
+A: Subsidized loans are awarded based on financial need, and the government pays the interest while you are in school and during the 6-month grace period. Unsubsidized loans accrue interest immediately from disbursement, including during the grace period. This calculator models unsubsidized behavior by default, as it is the more common scenario.
+
+**Q: Should I make extra payments or invest the difference?**
+A: This depends on your interest rate and expected investment returns. If your student loan APR is 5%, and you expect 7–10% annual returns investing in index funds, the math favors investing. However, paying off debt provides a guaranteed "return" equal to your interest rate, and many people value the psychological benefit of being debt-free. A common strategy is to do both: make extra loan payments while contributing to a tax-advantaged retirement account.
+
+**Q: What is income-driven repayment (IDR)?**
+A: IDR plans cap your monthly payment at a percentage (typically 5–10%) of your discretionary income, with forgiveness of remaining balances after 10–25 years depending on the plan. This calculator models standard amortization repayment only. If you are enrolled in an IDR plan, your actual payments will differ.
+
+**Q: Can I deduct student loan interest on my taxes?**
+A: In the United States, you can deduct up to $2,500 of student loan interest per year if your income falls below certain thresholds (phase-out begins around $75,000 for single filers as of 2024). This effectively reduces the after-tax cost of your loan interest.
+
+**Q: What happens if I miss a payment?**
+A: Missing a federal loan payment triggers delinquency after one day and default after 270 days of non-payment. Default has severe consequences: credit score damage, wage garnishment, and loss of eligibility for future federal student aid. If you cannot make payments, contact your loan servicer to explore deferment, forbearance, or income-driven repayment options.
+
+## References
+
+- [Federal Student Aid — Repayment Plans](https://studentaid.gov/manage-loans/repayment/plans) — U.S. Department of Education
+- [Student Loan Repayment Information](https://www.consumerfinance.gov/paying-for-college/repay-student-debt/) — Consumer Financial Protection Bureau (CFPB)
+- [Student Loan Interest Deduction](https://www.irs.gov/taxtopics/tc456) — Internal Revenue Service (IRS)

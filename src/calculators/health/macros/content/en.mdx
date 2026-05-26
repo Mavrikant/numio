@@ -1,0 +1,81 @@
+# Macro Calculator
+
+Knowing exactly how much protein, fat, and carbohydrate to eat each day is one of the most powerful tools in any nutrition plan. This calculator converts your Total Daily Energy Expenditure (TDEE) and fitness goal into precise macronutrient targets in grams and calories.
+
+## What Are Macronutrients?
+
+Macronutrients — commonly called "macros" — are the three categories of nutrients that provide energy to the body:
+
+- **Protein** — 4 kcal per gram. The building block of muscle tissue, enzymes, and hormones. Essential for tissue repair and immune function.
+- **Fat** — 9 kcal per gram. Critical for hormone synthesis, fat-soluble vitamin absorption (A, D, E, K), and cell membrane integrity.
+- **Carbohydrates** — 4 kcal per gram. The body's preferred fuel for high-intensity exercise and brain function.
+
+The ratio in which you consume these three macros significantly influences body composition, energy levels, recovery, and athletic performance. The International Society of Sports Nutrition (ISSN) Position Stand is the leading evidence-based framework for macro recommendations.
+
+## How the Calculator Works
+
+This calculator uses three inputs:
+
+1. **TDEE** — your total daily calorie burn (basal metabolism + activity). Estimate this using a BMR/TDEE calculator.
+2. **Goal** — cutting (fat loss), maintenance, or bulking (muscle gain). Each goal presets research-backed default percentages.
+3. **Protein % and Fat %** — adjust these sliders if the defaults don't suit your preferences. Carbs are calculated as the remainder.
+
+**Default splits by goal:**
+| Goal | Protein | Fat | Carbs |
+|------|---------|-----|-------|
+| Cutting | 40% | 30% | 30% |
+| Maintenance | 30% | 30% | 40% |
+| Bulking | 25% | 25% | 50% |
+
+The constraint is that Protein % + Fat % ≤ 90%, ensuring carbohydrates represent at least 10% of total calories.
+
+## Examples
+
+**Example 1 — Maintenance at 2,000 kcal (30/30/40 split):**
+- Protein: 30% × 2,000 / 4 = **150 g** (600 kcal)
+- Fat: 30% × 2,000 / 9 = **66.7 g** (600 kcal)
+- Carbs: 40% × 2,000 / 4 = **200 g** (800 kcal)
+- Total: 2,000 kcal
+
+**Example 2 — Cutting at 2,500 kcal (40/30/30 split):**
+- Protein: 40% × 2,500 / 4 = **250 g** (1,000 kcal)
+- Fat: 30% × 2,500 / 9 = **83.3 g** (750 kcal)
+- Carbs: 30% × 2,500 / 4 = **187.5 g** (750 kcal)
+- Total: 2,500 kcal
+
+**Example 3 — Bulking at 3,000 kcal (25/25/50 split):**
+- Protein: 25% × 3,000 / 4 = **187.5 g** (750 kcal)
+- Fat: 25% × 3,000 / 9 = **83.3 g** (750 kcal)
+- Carbs: 50% × 3,000 / 4 = **375 g** (1,500 kcal)
+- Total: 3,000 kcal
+
+## Protein Targets in Context
+
+The ISSN recommends 1.4–2.0 g of protein per kilogram of body weight for active individuals, and up to 2.3–3.1 g/kg during aggressive caloric restriction to maximise muscle retention. For a 70 kg person training 4–5 days per week, this typically translates to 98–220 g of protein per day — a range this calculator helps you target precisely.
+
+## Tracking Your Macros
+
+Once you have your targets, tracking them is easiest with a food diary app that shows macronutrient breakdowns. Weigh food on a kitchen scale during the learning phase. Over time, most people develop accurate visual portion estimation. Prioritise hitting protein targets first; fat and carbs can flex more freely once protein is met.
+
+## Frequently Asked Questions
+
+**Do I need to hit my macros exactly every day?**
+No. Research supports looking at averages over several days rather than daily precision. Hitting your targets within ±10 g of protein and ±15 g of carbs on most days is sufficient for consistent progress.
+
+**Is very high protein intake safe?**
+For healthy adults without pre-existing kidney disease, protein intakes up to 3 g/kg per day have not been shown to cause harm in multiple studies. Those with kidney conditions should consult a physician.
+
+**Can I use this calculator if I follow a specific diet (keto, vegan, etc.)?**
+Yes. Adjust the fat and protein percentages to match your diet's structure. For a ketogenic approach, set fat at 70–75% and protein at 20–25%, keeping carbs at 5–10% (the minimum of 10% shown here is the constraint for general use).
+
+**How do I find my TDEE?**
+Use our BMR calculator to find your basal metabolic rate, then multiply by your activity factor: sedentary (×1.2), light activity (×1.375), moderate (×1.55), active (×1.725), very active (×1.9).
+
+**Should I eat more on training days?**
+Nutrient timing and day-to-day variation ("carb cycling") can benefit advanced athletes, but for most people the same daily target averaged over the week produces equivalent results with far less complexity.
+
+## References
+
+1. Kerksick CM et al. (2017). *International Society of Sports Nutrition Position Stand: Nutrient Timing.* Journal of the International Society of Sports Nutrition. [ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6566799/)
+2. Stokes T et al. (2018). *Recent Perspectives Regarding the Role of Dietary Protein for the Promotion of Muscle Hypertrophy.* Nutrients.
+3. Helms ER et al. (2014). *A systematic review of dietary protein during caloric restriction in resistance trained lean athletes.* Journal of the International Society of Sports Nutrition.

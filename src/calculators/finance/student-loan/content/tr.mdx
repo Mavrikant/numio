@@ -1,0 +1,90 @@
+# Öğrenci Kredisi Geri Ödeme Hesaplayıcısı
+
+Öğrenci kredisi borcu, yeni mezunlar için en önemli finansal zorluklardan biridir. Öğrenci Kredisi Geri Ödeme Hesaplayıcısı, her ay ne kadar ödeyeceğinizi, kredinizin ömrü boyunca ne kadar faiz biriktiğini ve ekstra ödemeler yapmanın toplam maliyetinizi ve geri ödeme sürenizi nasıl önemli ölçüde azalttığını anlamanıza yardımcı olur.
+
+## Öğrenci Kredisi Geri Ödeme Hesaplayıcısı Nedir?
+
+Bu hesaplayıcı, standart kredi amortismanı formülünü kullanarak üç temel faktöre göre zorunlu aylık ödemenizi hesaplar: mevcut ana para bakiyeniz, yıllık faiz oranınız (APR) ve yıl cinsinden geri ödeme vadeniz.
+
+Temel formül şudur:
+
+**M = P × [r(1+r)^n] / [(1+r)^n − 1]**
+
+Burada:
+- **M** = aylık ödeme
+- **P** = kredi anapara (erteleme sonrası bakiye)
+- **r** = aylık faiz oranı (APR ÷ 12 ÷ 100)
+- **n** = toplam aylık ödeme sayısı (yıl × 12)
+
+### Erteleme Süresinin Etkisi
+
+Federal öğrenci kredilerinin büyük çoğunluğu, mezuniyetin ardından altı aylık bir erteleme süresini kapsar; bu süre zarfında ödeme yapılması gerekmez. Ancak sübvansiyonsuz federal kredilerde ve özel öğrenci kredilerinde erteleme süresinde faiz işlemeye devam eder. Hesaplayıcı, amortismanı uygulamadan önce erteleme sonrası bakiyeyi şu şekilde hesaplar:
+
+**Erteleme sonrası bakiye = P × (1 + r)^ertelemeSüresi**
+
+Sübvansiyonlu federal kredilerde ise devlet bu faizi karşılar, dolayısıyla erteleme süresinde bakiyeniz değişmez.
+
+### Ekstra Ödemeler
+
+Zorunlu asgari aylık ödemenin üzerinde ödeme yaptığınızda, fazla tutar doğrudan anaparanıza uygulanır. Daha düşük bir anapara, her ay daha az faiz birikmesi anlamına gelir; bu da geri ödeme sürenizi kısaltır ve ödenen toplam faizi azaltır.
+
+## Bu Hesaplayıcı Nasıl Kullanılır?
+
+1. **Kredi bakiyenizi girin** — Öğrenci kredinizin mevcut ödenmemiş anapara miktarı.
+2. **APR değerinizi girin** — Kredinizin yıllık faiz oranı.
+3. **Kredi vadenizi belirleyin** — Standart federal geri ödeme 10 yıldır; gelire dayalı planlar 20–25 yıla kadar uzayabilir.
+4. **Erteleme süresini ayarlayın** — Federal kredilerin büyük çoğunluğunda altı aylık erteleme süresi mevcuttur.
+5. **Ek aylık ödeme ekleyin** (isteğe bağlı) — Ödeme sürenizi ve toplam faizinizi azaltmak için asgari ödemenin üzerinde yatırabileceğiniz tutarı girin.
+
+Hesaplayıcı, aylık ödemenizi, toplam ödenen tutarı, toplam faizi ve (ekstra ödemelerle) kaç ay tasarruf ettiğinizi anında gösterir.
+
+## Örnekler
+
+### Örnek 1: Standart Federal Kredi Geri Ödemesi
+
+Bir borçlunun %6,54 APR ile 10 yıllık standart geri ödeme planında ve altı aylık erteleme süresiyle 35.000 dolarlık sübvansiyonsuz federal öğrenci kredisi bulunmaktadır.
+
+**Hesaplama:**
+- Erteleme sonrası bakiye: $35.000 × (1 + 0,00545)^6 ≈ $35.963
+- Aylık oran: %6,54 ÷ 12 = %0,545
+- Aylık ödeme: ≈ **$403/ay**
+- Toplam ödenen: $403 × 120 ≈ $48.360
+- Toplam faiz: ≈ **$12.397**
+
+### Örnek 2: Ekstra Ödemelerle Binlerce Dolar Tasarruf
+
+Aynı kredi için borçlu ayda 150 dolar fazladan ödeme yaparsa:
+- Yeni geri ödeme süresi: yaklaşık **84 ay** (10 yerine 7 yıl)
+- Ödenen toplam faiz: yaklaşık **$7.800**
+- **Faiz tasarrufu: ~$4.600** ve 3 yıllık ödeme ortadan kalkar
+
+### Örnek 3: Özel Öğrenci Kredisi
+
+Bir yüksek lisans öğrencisi, %9,5 APR ile 5 yıllık vade ve sıfır erteleme süresiyle özel bir borç vereninden 20.000 dolar borç almaktadır.
+
+- Aylık oran: %9,5 ÷ 12 = %0,792
+- Aylık ödeme: ≈ **$419/ay**
+- Toplam ödenen: $419 × 60 ≈ $25.140
+- Toplam faiz: ≈ **$5.140**
+
+## Sıkça Sorulan Sorular
+
+**S: Sübvansiyonlu ve sübvansiyonsuz federal krediler arasındaki fark nedir?**
+C: Sübvansiyonlu krediler mali ihtiyaca göre verilir ve öğrencinin okul sırasında ve altı aylık erteleme süresinde hükümet faizi karşılar. Sübvansiyonsuz kredilerde faiz, ödeme yapılmaya başlanmasından itibaren değil, kredinin dağıtıldığı andan itibaren işlemeye başlar.
+
+**S: Ekstra ödeme mi yapmalıyım, yoksa farkı yatırıma mı yönlendirmeliyim?**
+C: Bu karar büyük ölçüde faiz oranınıza ve beklenen yatırım getirinize bağlıdır. Faiz oranınız %5 ise ve endeks fonlarında %7–10 yıllık getiri bekliyorsanız, matematik yatırım lehine işler. Ancak borç ödemek, faiz oranınıza eşit garantili bir "getiri" sağlar.
+
+**S: Gelire dayalı geri ödeme (IDR) nedir?**
+C: IDR planları, aylık ödemenizi isteğe bağlı gelirinizin belirli bir yüzdesiyle sınırlar ve 10–25 yıl sonra kalan bakiyeleri siler. Bu hesaplayıcı yalnızca standart amortismanı modellemektedir.
+
+**S: Öğrenci kredisi faizini vergiden düşebilir miyim?**
+C: Amerika Birleşik Devletleri'nde gelir belirli eşiklerin altında kalıyorsa yılda 2.500 dolara kadar öğrenci kredisi faizi indirilebilir; bu da kredinizin vergi sonrası maliyetini azaltır.
+
+**S: Ödeme kaçırırsam ne olur?**
+C: Federal kredide ödeme kaçırmak, bir gün sonra gecikmeye ve 270 günlük ödeme yapılmamasının ardından temerrüde yol açar. Temerrüt; kredi puanı hasarı, ücret haczi ve gelecekteki federal öğrenci yardımına uygunluğun kaybı gibi ağır sonuçlar doğurur.
+
+## Kaynaklar
+
+- [Federal Student Aid — Geri Ödeme Planları](https://studentaid.gov/manage-loans/repayment/plans) — ABD Eğitim Bakanlığı
+- [Öğrenci Kredisi Geri Ödeme Bilgileri](https://www.consumerfinance.gov/paying-for-college/repay-student-debt/) — Tüketici Finansal Koruma Bürosu (CFPB)

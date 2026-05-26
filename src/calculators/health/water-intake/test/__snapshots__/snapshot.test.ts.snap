@@ -1,0 +1,1618 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Water Intake definition — shape snapshot > snapshot: definition shape 1`] = `
+{
+  "category": Any<String>,
+  "compute": [Function],
+  "i18n": {
+    "ar": {
+      "description": "حاسبة مجانية للاحتياج اليومي من الماء. أدخل وزنك ومستوى نشاطك والمناخ لمعرفة الكمية الدقيقة من الماء التي يجب شربها يومياً.",
+      "errors": {
+        "weightOutOfRange": "يجب أن يكون الوزن بين 1 و300 كيلوغرام.",
+      },
+      "faq": [
+        {
+          "a": "الحساب الأساسي هو 35 مل لكل كيلوغرام من وزن الجسم، ويُضاف إليه مقادير إضافية بحسب مستوى النشاط (حتى +1400 مل للأشخاص شديدي النشاط) والمناخ (حتى +700 مل في الطقس الحار جداً) والحمل (+300 مل) والرضاعة (+700 مل).",
+          "q": "كيف يُحسب الاحتياج اليومي من الماء؟",
+        },
+        {
+          "a": "لا. تُقدّر هذه الحاسبة كمية السوائل من المشروبات فقط. في الواقع، نحو 20% من الاحتياج اليومي للماء يأتي من الطعام.",
+          "q": "هل يشمل الحساب الماء من الطعام؟",
+        },
+        {
+          "a": "هذه القاعدة تبسيط شائع، لكن الاحتياجات الفردية تتفاوت تبعاً للوزن والنشاط والمناخ. الصيغة القائمة على الوزن تُقدّم تقديراً أكثر دقةً وتخصيصاً.",
+          "q": "هل قاعدة 8 أكواب يومياً صحيحة؟",
+        },
+        {
+          "a": "نعم، تُسهم المشروبات المحتوية على الكافيين في الترطيب، غير أن الاستهلاك المفرط للكافيين له تأثير مُدرّ خفيف للبول. يُفضَّل الماء والأعشاب لأفضل ترطيب.",
+          "q": "هل القهوة والشاي يُحسبان ضمن كمية الماء اليومية؟",
+        },
+        {
+          "a": "تشمل العلامات الشائعة اللون الأصفر الغامق للبول، وجفاف الفم، والصداع، والدوخة، والإرهاق. يستلزم الجفاف الشديد تدخلاً طبياً فورياً.",
+          "q": "ما علامات الجفاف؟",
+        },
+      ],
+      "inputs": {
+        "activityLevel": {
+          "help": "مستوى نشاطك البدني اليومي المعتاد.",
+          "label": "مستوى النشاط",
+        },
+        "climate": {
+          "help": "المناخ العام لمنطقة معيشتك أو قضاء معظم وقتك فيها.",
+          "label": "المناخ",
+        },
+        "isBreastfeeding": {
+          "help": "حدد إذا كنتِ مرضعةً (+700 مل/يوم موصى به).",
+          "label": "مرضعة",
+        },
+        "isPregnant": {
+          "help": "حدد إذا كنتِ حاملاً (+300 مل/يوم موصى به).",
+          "label": "حامل",
+        },
+        "weight": {
+          "help": "وزنك الحالي بالكيلوغرام.",
+          "label": "وزن الجسم",
+        },
+      },
+      "keywords": [
+        "حاسبة شرب الماء",
+        "الاحتياج اليومي من الماء",
+        "كم لتر ماء أشرب يومياً",
+        "حاسبة الترطيب",
+        "استهلاك الماء اليومي",
+        "كمية الماء اليومية",
+        "ترطيب الجسم",
+      ],
+      "options": {
+        "activityLevel": {
+          "active": "نشيط (6–7 أيام/أسبوع)",
+          "light": "خفيف (1–3 أيام/أسبوع)",
+          "moderate": "معتدل (3–5 أيام/أسبوع)",
+          "sedentary": "خامل (لا تمارين أو قليلة جداً)",
+          "very_active": "نشيط جداً (تمارين مكثفة، عمل جسدي)",
+        },
+        "climate": {
+          "hot": "حار (مناخ دافئ/رطب)",
+          "temperate": "معتدل (طقس لطيف)",
+          "very_hot": "حار جداً (صحراء، حرارة استوائية)",
+        },
+      },
+      "outputs": {
+        "dailyWaterCups": {
+          "help": "الكمية اليومية الموصى بها من الماء بأكواب سعة 240 مل.",
+          "label": "الماء اليومي (كوب)",
+          "suffix": "كوب",
+        },
+        "dailyWaterL": {
+          "help": "الكمية اليومية الموصى بها من الماء باللتر.",
+          "label": "الماء اليومي (لتر)",
+          "suffix": "L",
+        },
+        "dailyWaterMl": {
+          "help": "الكمية اليومية الموصى بها من الماء بالمليلتر.",
+          "label": "الاحتياج اليومي من الماء",
+          "suffix": "مل",
+        },
+        "dailyWaterOz": {
+          "help": "الكمية اليومية الموصى بها من الماء بالأونصة السائلة.",
+          "label": "الماء اليومي (أونصة سائلة)",
+          "suffix": "fl oz",
+        },
+        "glassesOf250ml": {
+          "help": "عدد أكواب 250 مل التي يجب شربها يومياً.",
+          "label": "أكواب (250 مل)",
+          "suffix": "كوب",
+        },
+      },
+      "short": "احسب احتياجك اليومي من الماء بناءً على وزنك ومستوى نشاطك والمناخ.",
+      "title": "حاسبة الاحتياج اليومي من الماء",
+    },
+    "de": {
+      "description": "Kostenloser Rechner für den täglichen Wasserbedarf. Geben Sie Ihr Gewicht, Ihre Aktivität und Ihr Klima ein, um zu erfahren, wie viel Wasser Sie täglich trinken sollten.",
+      "errors": {
+        "weightOutOfRange": "Das Gewicht muss zwischen 1 und 300 kg liegen.",
+      },
+      "faq": [
+        {
+          "a": "Die Basisberechnung beträgt 35 ml pro Kilogramm Körpergewicht. Hinzu kommen Zuschläge für Aktivitätsniveau (bis +1.400 ml bei sehr aktiven Personen), Klima (bis +700 ml bei sehr heißem Wetter), Schwangerschaft (+300 ml) und Stillen (+700 ml).",
+          "q": "Wie wird der tägliche Wasserbedarf berechnet?",
+        },
+        {
+          "a": "Nein. Dieser Rechner schätzt die Flüssigkeitszufuhr aus Getränken. In der Praxis kommen etwa 20 % des täglichen Wasserbedarfs aus Lebensmitteln.",
+          "q": "Ist Wasser aus Lebensmitteln enthalten?",
+        },
+        {
+          "a": "Die Regel '8×8' ist eine populäre Vereinfachung, aber der individuelle Bedarf variiert stark nach Körpergewicht, Aktivität und Klima. Eine gewichtsbasierte Formel liefert eine personalisiertere Schätzung.",
+          "q": "Ist die 8-Gläser-Regel korrekt?",
+        },
+        {
+          "a": "Ja. Koffeinhaltige Getränke tragen zur Flüssigkeitszufuhr bei, obwohl hoher Koffeinkonsum eine leicht harntreibende Wirkung hat. Für optimale Hydration sind Wasser und Kräutertees am besten geeignet.",
+          "q": "Zählen Kaffee und Tee zur täglichen Wasserzufuhr?",
+        },
+      ],
+      "inputs": {
+        "activityLevel": {
+          "help": "Ihr typisches tägliches körperliches Aktivitätsniveau.",
+          "label": "Aktivitätsniveau",
+        },
+        "climate": {
+          "help": "Das allgemeine Klima an Ihrem Wohn- oder Aufenthaltsort.",
+          "label": "Klima",
+        },
+        "isBreastfeeding": {
+          "help": "Aktivieren, wenn Sie stillen (+700 ml/Tag empfohlen).",
+          "label": "Stillend",
+        },
+        "isPregnant": {
+          "help": "Aktivieren, wenn Sie schwanger sind (+300 ml/Tag empfohlen).",
+          "label": "Schwanger",
+        },
+        "weight": {
+          "help": "Ihr aktuelles Körpergewicht in Kilogramm.",
+          "label": "Körpergewicht",
+        },
+      },
+      "keywords": [
+        "Wasserbedarf Rechner",
+        "täglicher Wasserbedarf",
+        "Hydrations-Rechner",
+        "wie viel Wasser täglich",
+        "Wasserkonsum berechnen",
+        "Flüssigkeitsbedarf",
+        "Wasserzufuhr",
+      ],
+      "options": {
+        "activityLevel": {
+          "active": "Aktiv (6–7 Tage/Woche)",
+          "light": "Leicht (1–3 Tage/Woche)",
+          "moderate": "Moderat (3–5 Tage/Woche)",
+          "sedentary": "Sitzend (kaum oder keine Bewegung)",
+          "very_active": "Sehr Aktiv (intensives Training, körperliche Arbeit)",
+        },
+        "climate": {
+          "hot": "Heiß (warmes/feuchtes Klima)",
+          "temperate": "Gemäßigt (mildes Wetter)",
+          "very_hot": "Sehr Heiß (Wüste, tropische Hitze)",
+        },
+      },
+      "outputs": {
+        "dailyWaterCups": {
+          "help": "Ihr empfohlener täglicher Wasserkonsum in 240-ml-Tassen.",
+          "label": "Tageswasser (Tassen)",
+          "suffix": "Tassen",
+        },
+        "dailyWaterL": {
+          "help": "Ihr empfohlener täglicher Wasserkonsum in Litern.",
+          "label": "Tageswasser (Liter)",
+          "suffix": "L",
+        },
+        "dailyWaterMl": {
+          "help": "Ihr empfohlener täglicher Wasserkonsum in Millilitern.",
+          "label": "Täglicher Wasserbedarf",
+          "suffix": "ml",
+        },
+        "dailyWaterOz": {
+          "help": "Ihr empfohlener täglicher Wasserkonsum in Flüssigunzen.",
+          "label": "Tageswasser (Flüssigunzen)",
+          "suffix": "fl oz",
+        },
+        "glassesOf250ml": {
+          "help": "Anzahl der 250-ml-Gläser, die Sie täglich trinken sollten.",
+          "label": "Gläser (250 ml)",
+          "suffix": "Gläser",
+        },
+      },
+      "short": "Berechnen Sie Ihren täglichen Wasserbedarf nach Gewicht, Aktivität und Klima.",
+      "title": "Täglicher Wasserbedarf-Rechner",
+    },
+    "en": {
+      "description": "Free daily water intake calculator. Enter your weight, activity level, and climate to find out exactly how much water you should drink each day.",
+      "errors": {
+        "weightOutOfRange": "Weight must be between 1 and 300 kg.",
+      },
+      "faq": [
+        {
+          "a": "The base calculation is 35 ml per kilogram of body weight. Additional amounts are added for activity level (up to +1,400 ml for very active individuals), climate (up to +700 ml in very hot conditions), pregnancy (+300 ml), and breastfeeding (+700 ml).",
+          "q": "How is daily water intake calculated?",
+        },
+        {
+          "a": "No. This calculator estimates total fluid intake from drinks. In practice, roughly 20% of daily water intake comes from food — so your actual drinking target may be slightly lower if you eat plenty of fruits and vegetables.",
+          "q": "Does this include water from food?",
+        },
+        {
+          "a": "The '8×8' rule (eight 8-ounce glasses) is a popular simplification, but individual needs vary widely based on body weight, activity, and climate. Using a weight-based formula provides a more personalised estimate.",
+          "q": "Is the 8-glasses-a-day rule accurate?",
+        },
+        {
+          "a": "Yes. Caffeinated beverages do contribute to fluid intake, although high caffeine consumption has a mild diuretic effect. Plain water, herbal teas, and non-caffeinated drinks are the best choices for hydration.",
+          "q": "Does coffee or tea count toward daily water intake?",
+        },
+        {
+          "a": "Common signs include dark yellow urine, dry mouth, headache, dizziness, and fatigue. Severe dehydration requires immediate medical attention.",
+          "q": "What are the signs of dehydration?",
+        },
+      ],
+      "inputs": {
+        "activityLevel": {
+          "help": "Your typical daily physical activity level.",
+          "label": "Activity Level",
+        },
+        "climate": {
+          "help": "The general climate of where you live or spend most of your time.",
+          "label": "Climate",
+        },
+        "isBreastfeeding": {
+          "help": "Check if you are currently breastfeeding (+700 ml/day recommended).",
+          "label": "Breastfeeding",
+        },
+        "isPregnant": {
+          "help": "Check if you are currently pregnant (+300 ml/day recommended).",
+          "label": "Pregnant",
+        },
+        "weight": {
+          "help": "Your current body weight in kilograms.",
+          "label": "Body Weight",
+        },
+      },
+      "keywords": [
+        "water intake calculator",
+        "daily water needs",
+        "hydration calculator",
+        "how much water should I drink",
+        "water per day",
+        "daily hydration",
+        "water consumption",
+      ],
+      "options": {
+        "activityLevel": {
+          "active": "Active (6–7 days/week)",
+          "light": "Light (1–3 days/week)",
+          "moderate": "Moderate (3–5 days/week)",
+          "sedentary": "Sedentary (little or no exercise)",
+          "very_active": "Very Active (hard exercise, physical job)",
+        },
+        "climate": {
+          "hot": "Hot (warm/humid climate)",
+          "temperate": "Temperate (mild weather)",
+          "very_hot": "Very Hot (desert, tropical heat)",
+        },
+      },
+      "outputs": {
+        "dailyWaterCups": {
+          "help": "Your recommended daily water intake in standard 240 ml cups.",
+          "label": "Daily Water (Cups)",
+          "suffix": "cups",
+        },
+        "dailyWaterL": {
+          "help": "Your recommended daily water intake in litres.",
+          "label": "Daily Water (Litres)",
+          "suffix": "L",
+        },
+        "dailyWaterMl": {
+          "help": "Your recommended daily water intake in millilitres.",
+          "label": "Daily Water Intake",
+          "suffix": "ml",
+        },
+        "dailyWaterOz": {
+          "help": "Your recommended daily water intake in fluid ounces.",
+          "label": "Daily Water (Fluid Ounces)",
+          "suffix": "fl oz",
+        },
+        "glassesOf250ml": {
+          "help": "Number of 250 ml glasses you should drink per day.",
+          "label": "Glasses (250 ml)",
+          "suffix": "glasses",
+        },
+      },
+      "short": "Calculate your daily water needs based on weight, activity level, and climate.",
+      "title": "Daily Water Intake Calculator",
+    },
+    "es": {
+      "description": "Calculadora gratuita de ingesta de agua diaria. Introduce tu peso, nivel de actividad y clima para saber exactamente cuánta agua debes beber cada día.",
+      "errors": {
+        "weightOutOfRange": "El peso debe estar entre 1 y 300 kg.",
+      },
+      "faq": [
+        {
+          "a": "El cálculo base es de 35 ml por kilogramo de peso corporal. Se añaden cantidades adicionales por nivel de actividad (hasta +1.400 ml para personas muy activas), clima (hasta +700 ml en condiciones muy calurosas), embarazo (+300 ml) y lactancia (+700 ml).",
+          "q": "¿Cómo se calcula la ingesta diaria de agua?",
+        },
+        {
+          "a": "No. Esta calculadora estima la ingesta de líquidos proveniente de bebidas. En la práctica, aproximadamente el 20% de la ingesta diaria de agua proviene de los alimentos.",
+          "q": "¿Se incluye el agua de los alimentos?",
+        },
+        {
+          "a": "Esa regla es una simplificación popular, pero las necesidades individuales varían mucho según el peso, la actividad y el clima. Una fórmula basada en el peso ofrece una estimación más personalizada.",
+          "q": "¿Es correcta la regla de los 8 vasos al día?",
+        },
+        {
+          "a": "Sí. Las bebidas con cafeína contribuyen a la hidratación, aunque el consumo elevado de cafeína tiene un leve efecto diurético. El agua y las infusiones son las mejores opciones.",
+          "q": "¿Cuentan el café o el té como ingesta de agua?",
+        },
+      ],
+      "inputs": {
+        "activityLevel": {
+          "help": "Tu nivel de actividad física diaria habitual.",
+          "label": "Nivel de actividad",
+        },
+        "climate": {
+          "help": "El clima general del lugar donde vives o pasas más tiempo.",
+          "label": "Clima",
+        },
+        "isBreastfeeding": {
+          "help": "Marca si estás amamantando (+700 ml/día recomendado).",
+          "label": "Lactancia",
+        },
+        "isPregnant": {
+          "help": "Marca si estás embarazada (+300 ml/día recomendado).",
+          "label": "Embarazada",
+        },
+        "weight": {
+          "help": "Tu peso corporal actual en kilogramos.",
+          "label": "Peso corporal",
+        },
+      },
+      "keywords": [
+        "calculadora ingesta agua",
+        "necesidad diaria de agua",
+        "cuánta agua beber al día",
+        "calculadora hidratación",
+        "consumo de agua diario",
+        "agua por día",
+        "hidratación diaria",
+      ],
+      "options": {
+        "activityLevel": {
+          "active": "Activo (6–7 días/semana)",
+          "light": "Ligero (1–3 días/semana)",
+          "moderate": "Moderado (3–5 días/semana)",
+          "sedentary": "Sedentario (poco o nada de ejercicio)",
+          "very_active": "Muy activo (ejercicio intenso, trabajo físico)",
+        },
+        "climate": {
+          "hot": "Caluroso (clima cálido/húmedo)",
+          "temperate": "Templado (clima suave)",
+          "very_hot": "Muy caluroso (desierto, calor tropical)",
+        },
+      },
+      "outputs": {
+        "dailyWaterCups": {
+          "help": "Tu ingesta diaria de agua recomendada en tazas de 240 ml.",
+          "label": "Agua diaria (Tazas)",
+          "suffix": "tazas",
+        },
+        "dailyWaterL": {
+          "help": "Tu ingesta diaria de agua recomendada en litros.",
+          "label": "Agua diaria (Litros)",
+          "suffix": "L",
+        },
+        "dailyWaterMl": {
+          "help": "Tu ingesta diaria de agua recomendada en mililitros.",
+          "label": "Ingesta diaria de agua",
+          "suffix": "ml",
+        },
+        "dailyWaterOz": {
+          "help": "Tu ingesta diaria de agua recomendada en onzas líquidas.",
+          "label": "Agua diaria (Onzas líquidas)",
+          "suffix": "fl oz",
+        },
+        "glassesOf250ml": {
+          "help": "Número de vasos de 250 ml que debes beber al día.",
+          "label": "Vasos (250 ml)",
+          "suffix": "vasos",
+        },
+      },
+      "short": "Calcula tu necesidad diaria de agua según tu peso, actividad y clima.",
+      "title": "Calculadora de ingesta diaria de agua",
+    },
+    "fr": {
+      "description": "Calculateur gratuit de besoin en eau quotidien. Entrez votre poids, niveau d'activité et climat pour savoir exactement combien d'eau vous devez boire chaque jour.",
+      "errors": {
+        "weightOutOfRange": "Le poids doit être compris entre 1 et 300 kg.",
+      },
+      "faq": [
+        {
+          "a": "Le calcul de base est de 35 ml par kilogramme de poids corporel. Des suppléments sont ajoutés selon le niveau d'activité (jusqu'à +1 400 ml pour les très actifs), le climat (jusqu'à +700 ml en condition très chaude), la grossesse (+300 ml) et l'allaitement (+700 ml).",
+          "q": "Comment l'apport hydrique quotidien est-il calculé ?",
+        },
+        {
+          "a": "Non. Ce calculateur estime l'apport liquide provenant des boissons. En pratique, environ 20 % de l'apport hydrique quotidien provient des aliments.",
+          "q": "L'eau des aliments est-elle incluse ?",
+        },
+        {
+          "a": "Cette règle est une simplification populaire, mais les besoins individuels varient selon le poids, l'activité et le climat. Une formule basée sur le poids fournit une estimation plus personnalisée.",
+          "q": "La règle des 8 verres par jour est-elle exacte ?",
+        },
+        {
+          "a": "Oui. Les boissons caféinées contribuent à l'hydratation, bien qu'une consommation élevée de caféine ait un léger effet diurétique. L'eau et les tisanes restent les meilleurs choix.",
+          "q": "Le café ou le thé comptent-ils dans l'apport hydrique ?",
+        },
+      ],
+      "inputs": {
+        "activityLevel": {
+          "help": "Votre niveau d'activité physique quotidien habituel.",
+          "label": "Niveau d'activité",
+        },
+        "climate": {
+          "help": "Le climat général de votre lieu de vie ou de travail.",
+          "label": "Climat",
+        },
+        "isBreastfeeding": {
+          "help": "Cochez si vous allaitez (+700 ml/jour recommandés).",
+          "label": "Allaitement",
+        },
+        "isPregnant": {
+          "help": "Cochez si vous êtes enceinte (+300 ml/jour recommandés).",
+          "label": "Enceinte",
+        },
+        "weight": {
+          "help": "Votre poids actuel en kilogrammes.",
+          "label": "Poids corporel",
+        },
+      },
+      "keywords": [
+        "calculateur hydratation",
+        "besoin en eau quotidien",
+        "quantité eau par jour",
+        "combien d'eau boire",
+        "hydratation journalière",
+        "calculateur eau",
+        "apport hydrique",
+      ],
+      "options": {
+        "activityLevel": {
+          "active": "Actif (6–7 jours/semaine)",
+          "light": "Léger (1–3 jours/semaine)",
+          "moderate": "Modéré (3–5 jours/semaine)",
+          "sedentary": "Sédentaire (peu ou pas d'exercice)",
+          "very_active": "Très actif (entraînement intense, travail physique)",
+        },
+        "climate": {
+          "hot": "Chaud (climat chaud/humide)",
+          "temperate": "Tempéré (météo douce)",
+          "very_hot": "Très chaud (désert, chaleur tropicale)",
+        },
+      },
+      "outputs": {
+        "dailyWaterCups": {
+          "help": "Votre apport hydrique journalier recommandé en tasses de 240 ml.",
+          "label": "Eau par jour (Tasses)",
+          "suffix": "tasses",
+        },
+        "dailyWaterL": {
+          "help": "Votre apport hydrique journalier recommandé en litres.",
+          "label": "Eau par jour (Litres)",
+          "suffix": "L",
+        },
+        "dailyWaterMl": {
+          "help": "Votre apport hydrique journalier recommandé en millilitres.",
+          "label": "Apport hydrique journalier",
+          "suffix": "ml",
+        },
+        "dailyWaterOz": {
+          "help": "Votre apport hydrique journalier recommandé en onces liquides.",
+          "label": "Eau par jour (Onces liquides)",
+          "suffix": "fl oz",
+        },
+        "glassesOf250ml": {
+          "help": "Nombre de verres de 250 ml à boire par jour.",
+          "label": "Verres (250 ml)",
+          "suffix": "verres",
+        },
+      },
+      "short": "Calculez votre apport hydrique quotidien selon votre poids, votre activité et le climat.",
+      "title": "Calculateur de besoin journalier en eau",
+    },
+    "hi": {
+      "description": "मुफ़्त दैनिक जल सेवन कैलकुलेटर। अपना वज़न, गतिविधि स्तर और जलवायु दर्ज करें और जानें कि आपको प्रतिदिन कितना पानी पीना चाहिए।",
+      "errors": {
+        "weightOutOfRange": "वज़न 1 से 300 kg के बीच होना चाहिए।",
+      },
+      "faq": [
+        {
+          "a": "आधार गणना प्रति किलोग्राम शरीर के वज़न पर 35 ml है। इसमें गतिविधि स्तर (अत्यधिक सक्रिय व्यक्तियों के लिए +1,400 ml तक), जलवायु (बहुत गर्म परिस्थितियों में +700 ml तक), गर्भावस्था (+300 ml) और स्तनपान (+700 ml) के लिए अतिरिक्त मात्रा जोड़ी जाती है।",
+          "q": "दैनिक जल आवश्यकता कैसे गणना की जाती है?",
+        },
+        {
+          "a": "नहीं। यह कैलकुलेटर पेय पदार्थों से मिलने वाले तरल की गणना करता है। व्यवहार में, दैनिक जल आवश्यकता का लगभग 20% भोजन से मिलता है।",
+          "q": "क्या इसमें भोजन से मिलने वाला पानी शामिल है?",
+        },
+        {
+          "a": "यह एक लोकप्रिय सरलीकरण है, लेकिन व्यक्तिगत ज़रूरतें वज़न, गतिविधि और जलवायु के आधार पर भिन्न होती हैं। वज़न-आधारित सूत्र अधिक व्यक्तिगत अनुमान प्रदान करता है।",
+          "q": "क्या दिन में 8 गिलास पानी का नियम सही है?",
+        },
+        {
+          "a": "हाँ। कैफ़ीनयुक्त पेय भी जलयोजन में योगदान देते हैं, हालाँकि अत्यधिक कैफ़ीन का सेवन हल्के मूत्रवर्धक प्रभाव डाल सकता है। बेहतर जलयोजन के लिए सादा पानी और हर्बल चाय सर्वोत्तम विकल्प हैं।",
+          "q": "क्या चाय या कॉफ़ी दैनिक जल सेवन में गिनी जाती है?",
+        },
+      ],
+      "inputs": {
+        "activityLevel": {
+          "help": "आपकी सामान्य दैनिक शारीरिक गतिविधि का स्तर।",
+          "label": "गतिविधि स्तर",
+        },
+        "climate": {
+          "help": "आप जहाँ रहते हैं या अधिकतर समय बिताते हैं, उस स्थान की सामान्य जलवायु।",
+          "label": "जलवायु",
+        },
+        "isBreastfeeding": {
+          "help": "यदि आप स्तनपान करा रही हैं तो चुनें (प्रतिदिन +700 ml अनुशंसित)।",
+          "label": "स्तनपान करा रही हैं",
+        },
+        "isPregnant": {
+          "help": "यदि आप गर्भवती हैं तो चुनें (प्रतिदिन +300 ml अनुशंसित)।",
+          "label": "गर्भवती",
+        },
+        "weight": {
+          "help": "किलोग्राम में आपका वर्तमान शारीरिक वज़न।",
+          "label": "शरीर का वज़न",
+        },
+      },
+      "keywords": [
+        "दैनिक जल सेवन कैलकुलेटर",
+        "रोज़ कितना पानी पीना चाहिए",
+        "हाइड्रेशन कैलकुलेटर",
+        "पानी की ज़रूरत",
+        "जल सेवन गणना",
+        "प्रतिदिन पानी की मात्रा",
+        "जलयोजन",
+      ],
+      "options": {
+        "activityLevel": {
+          "active": "सक्रिय (सप्ताह में 6–7 दिन)",
+          "light": "हल्का (सप्ताह में 1–3 दिन)",
+          "moderate": "मध्यम (सप्ताह में 3–5 दिन)",
+          "sedentary": "निष्क्रिय (बहुत कम या कोई व्यायाम नहीं)",
+          "very_active": "अत्यधिक सक्रिय (कठिन व्यायाम, शारीरिक कार्य)",
+        },
+        "climate": {
+          "hot": "गर्म (गर्म/आर्द्र जलवायु)",
+          "temperate": "समशीतोष्ण (हल्का मौसम)",
+          "very_hot": "बहुत गर्म (रेगिस्तान, उष्णकटिबंधीय गर्मी)",
+        },
+      },
+      "outputs": {
+        "dailyWaterCups": {
+          "help": "240 ml कप के हिसाब से अनुशंसित दैनिक जल सेवन।",
+          "label": "दैनिक पानी (कप)",
+          "suffix": "कप",
+        },
+        "dailyWaterL": {
+          "help": "लीटर में अनुशंसित दैनिक जल सेवन।",
+          "label": "दैनिक पानी (लीटर)",
+          "suffix": "L",
+        },
+        "dailyWaterMl": {
+          "help": "मिलीलीटर में अनुशंसित दैनिक जल सेवन।",
+          "label": "दैनिक जल सेवन",
+          "suffix": "ml",
+        },
+        "dailyWaterOz": {
+          "help": "फ़्लूइड आउंस में अनुशंसित दैनिक जल सेवन।",
+          "label": "दैनिक पानी (फ़्लूइड आउंस)",
+          "suffix": "fl oz",
+        },
+        "glassesOf250ml": {
+          "help": "प्रतिदिन पीने के लिए 250 ml गिलास की संख्या।",
+          "label": "गिलास (250 ml)",
+          "suffix": "गिलास",
+        },
+      },
+      "short": "अपने वज़न, गतिविधि स्तर और जलवायु के आधार पर दैनिक जल आवश्यकता की गणना करें।",
+      "title": "दैनिक जल सेवन कैलकुलेटर",
+    },
+    "it": {
+      "description": "Calcolatore gratuito del fabbisogno di acqua giornaliero. Inserisci peso, livello di attività e clima per sapere esattamente quanta acqua dovresti bere ogni giorno.",
+      "errors": {
+        "weightOutOfRange": "Il peso deve essere compreso tra 1 e 300 kg.",
+      },
+      "faq": [
+        {
+          "a": "Il calcolo base è di 35 ml per chilogrammo di peso corporeo. Si aggiungono quantità extra per il livello di attività (fino a +1.400 ml per i molto attivi), il clima (fino a +700 ml in condizioni molto calde), la gravidanza (+300 ml) e l'allattamento (+700 ml).",
+          "q": "Come viene calcolato il fabbisogno idrico giornaliero?",
+        },
+        {
+          "a": "No. Questo calcolatore stima l'apporto di liquidi dalle bevande. In pratica, circa il 20% dell'apporto idrico giornaliero proviene dagli alimenti.",
+          "q": "L'acqua dagli alimenti è inclusa?",
+        },
+        {
+          "a": "Questa regola è una semplificazione popolare, ma i bisogni individuali variano in base al peso, all'attività e al clima. Una formula basata sul peso offre una stima più personalizzata.",
+          "q": "La regola degli 8 bicchieri al giorno è corretta?",
+        },
+      ],
+      "inputs": {
+        "activityLevel": {
+          "help": "Il tuo tipico livello di attività fisica quotidiana.",
+          "label": "Livello di attività",
+        },
+        "climate": {
+          "help": "Il clima generale del luogo in cui vivi o trascorri più tempo.",
+          "label": "Clima",
+        },
+        "isBreastfeeding": {
+          "help": "Seleziona se stai allattando (+700 ml/giorno raccomandati).",
+          "label": "In allattamento",
+        },
+        "isPregnant": {
+          "help": "Seleziona se sei incinta (+300 ml/giorno raccomandati).",
+          "label": "In gravidanza",
+        },
+        "weight": {
+          "help": "Il tuo peso corporeo attuale in chilogrammi.",
+          "label": "Peso corporeo",
+        },
+      },
+      "keywords": [
+        "calcolatore acqua giornaliera",
+        "fabbisogno idrico giornaliero",
+        "quanta acqua bere al giorno",
+        "calcolatore idratazione",
+        "consumo acqua quotidiano",
+        "acqua al giorno",
+        "idratazione giornaliera",
+      ],
+      "options": {
+        "activityLevel": {
+          "active": "Attivo (6–7 giorni/settimana)",
+          "light": "Leggero (1–3 giorni/settimana)",
+          "moderate": "Moderato (3–5 giorni/settimana)",
+          "sedentary": "Sedentario (poco o nessun esercizio)",
+          "very_active": "Molto attivo (allenamento intenso, lavoro fisico)",
+        },
+        "climate": {
+          "hot": "Caldo (clima caldo/umido)",
+          "temperate": "Temperato (clima mite)",
+          "very_hot": "Molto caldo (deserto, calore tropicale)",
+        },
+      },
+      "outputs": {
+        "dailyWaterCups": {
+          "help": "Il tuo fabbisogno idrico giornaliero in tazze da 240 ml.",
+          "label": "Acqua giornaliera (Tazze)",
+          "suffix": "tazze",
+        },
+        "dailyWaterL": {
+          "help": "Il tuo fabbisogno idrico giornaliero raccomandato in litri.",
+          "label": "Acqua giornaliera (Litri)",
+          "suffix": "L",
+        },
+        "dailyWaterMl": {
+          "help": "Il tuo fabbisogno idrico giornaliero raccomandato in millilitri.",
+          "label": "Fabbisogno idrico giornaliero",
+          "suffix": "ml",
+        },
+        "dailyWaterOz": {
+          "help": "Il tuo fabbisogno idrico giornaliero raccomandato in once liquide.",
+          "label": "Acqua giornaliera (Once liquide)",
+          "suffix": "fl oz",
+        },
+        "glassesOf250ml": {
+          "help": "Numero di bicchieri da 250 ml da bere al giorno.",
+          "label": "Bicchieri (250 ml)",
+          "suffix": "bicchieri",
+        },
+      },
+      "short": "Calcola il tuo fabbisogno giornaliero di acqua in base a peso, attività e clima.",
+      "title": "Calcolatore del fabbisogno giornaliero di acqua",
+    },
+    "ja": {
+      "description": "無料の水分摂取量計算機です。体重・活動レベル・気候を入力して、1日に飲むべき水の量を正確に把握しましょう。",
+      "errors": {
+        "weightOutOfRange": "体重は1〜300 kgの範囲で入力してください。",
+      },
+      "faq": [
+        {
+          "a": "基本計算は体重1 kgあたり35 mlです。これに、活動レベル（非常に活発な方は最大+1,400 ml）、気候（非常に暑い場合は最大+700 ml）、妊娠中（+300 ml）、授乳中（+700 ml）のボーナスが加算されます。",
+          "q": "1日の水分必要量はどのように計算されますか？",
+        },
+        {
+          "a": "いいえ。この計算機は飲み物からの水分摂取量を推定します。実際には、1日の水分の約20%が食事から摂取されます。",
+          "q": "食事から摂る水分は含まれますか？",
+        },
+        {
+          "a": "これはよく知られた目安ですが、個人差があります。体重を基準にした計算式の方が、より個人に合った推定値を得られます。",
+          "q": "「1日8杯」のルールは正確ですか？",
+        },
+      ],
+      "inputs": {
+        "activityLevel": {
+          "help": "日常的な身体活動のレベルを選択してください。",
+          "label": "活動レベル",
+        },
+        "climate": {
+          "help": "お住まいや主な活動場所の気候を選択してください。",
+          "label": "気候",
+        },
+        "isBreastfeeding": {
+          "help": "授乳中の場合はオンにしてください（+700 ml/日が推奨されます）。",
+          "label": "授乳中",
+        },
+        "isPregnant": {
+          "help": "妊娠中の場合はオンにしてください（+300 ml/日が推奨されます）。",
+          "label": "妊娠中",
+        },
+        "weight": {
+          "help": "現在の体重（kg）を入力してください。",
+          "label": "体重",
+        },
+      },
+      "keywords": [
+        "水分摂取量計算機",
+        "1日の水分量",
+        "水分補給計算",
+        "1日何リットル飲むべきか",
+        "水分需要量",
+        "水分計算",
+        "水の摂取量",
+      ],
+      "options": {
+        "activityLevel": {
+          "active": "活発（週6〜7日）",
+          "light": "軽い（週1〜3日）",
+          "moderate": "中程度（週3〜5日）",
+          "sedentary": "座りがち（ほぼ運動なし）",
+          "very_active": "非常に活発（激しい運動・肉体労働）",
+        },
+        "climate": {
+          "hot": "暑い（温暖・湿潤な気候）",
+          "temperate": "温暖（穏やかな気候）",
+          "very_hot": "非常に暑い（砂漠・熱帯気候）",
+        },
+      },
+      "outputs": {
+        "dailyWaterCups": {
+          "help": "推奨される1日の水分摂取量（240 mlカップ単位）です。",
+          "label": "1日の水分量（カップ）",
+          "suffix": "カップ",
+        },
+        "dailyWaterL": {
+          "help": "推奨される1日の水分摂取量（リットル）です。",
+          "label": "1日の水分量（リットル）",
+          "suffix": "L",
+        },
+        "dailyWaterMl": {
+          "help": "推奨される1日の水分摂取量（ml）です。",
+          "label": "1日の推奨水分摂取量",
+          "suffix": "ml",
+        },
+        "dailyWaterOz": {
+          "help": "推奨される1日の水分摂取量（液量オンス）です。",
+          "label": "1日の水分量（液量オンス）",
+          "suffix": "fl oz",
+        },
+        "glassesOf250ml": {
+          "help": "1日に飲むべき250 mlグラスの数です。",
+          "label": "グラス数（250 ml）",
+          "suffix": "杯",
+        },
+      },
+      "short": "体重・活動量・気候から、1日に必要な水分量を計算します。",
+      "title": "1日の水分摂取量計算機",
+    },
+    "ko": {
+      "description": "무료 일일 수분 섭취량 계산기입니다. 체중, 활동 수준, 기후를 입력하면 하루에 얼마나 마셔야 하는지 정확히 알 수 있습니다.",
+      "errors": {
+        "weightOutOfRange": "체중은 1~300 kg 범위 내여야 합니다.",
+      },
+      "faq": [
+        {
+          "a": "기본 계산식은 체중 1kg당 35ml입니다. 여기에 활동 수준(매우 활발한 경우 최대 +1,400ml), 기후(매우 더운 경우 최대 +700ml), 임신 (+300ml), 모유 수유 (+700ml)에 따른 추가량이 더해집니다.",
+          "q": "일일 수분 섭취량은 어떻게 계산되나요?",
+        },
+        {
+          "a": "아니요. 이 계산기는 음료에서 오는 수분만 추정합니다. 실제로는 일일 수분의 약 20%가 음식에서 섭취됩니다.",
+          "q": "음식에서 오는 수분도 포함되나요?",
+        },
+        {
+          "a": "이 규칙은 널리 알려진 단순화된 지침이지만, 개인마다 체중·활동량·기후에 따라 필요량이 크게 다릅니다. 체중 기반 공식이 더 개인화된 추정치를 제공합니다.",
+          "q": "하루 8잔 규칙이 정확한가요?",
+        },
+      ],
+      "inputs": {
+        "activityLevel": {
+          "help": "일상적인 신체 활동 수준을 선택하세요.",
+          "label": "활동 수준",
+        },
+        "climate": {
+          "help": "거주하거나 주로 활동하는 지역의 기후를 선택하세요.",
+          "label": "기후",
+        },
+        "isBreastfeeding": {
+          "help": "모유 수유 중이라면 선택하세요(하루 +700 ml 권장).",
+          "label": "모유 수유 중",
+        },
+        "isPregnant": {
+          "help": "임신 중이라면 선택하세요(하루 +300 ml 권장).",
+          "label": "임신 중",
+        },
+        "weight": {
+          "help": "현재 체중(킬로그램)을 입력하세요.",
+          "label": "체중",
+        },
+      },
+      "keywords": [
+        "수분 섭취량 계산기",
+        "일일 수분 필요량",
+        "하루 물 섭취량",
+        "수화 계산기",
+        "물 얼마나 마셔야 하나",
+        "물 섭취량 계산",
+        "일일 수분량",
+      ],
+      "options": {
+        "activityLevel": {
+          "active": "활발한 활동 (주 6–7일)",
+          "light": "가벼운 활동 (주 1–3일)",
+          "moderate": "보통 활동 (주 3–5일)",
+          "sedentary": "좌식 생활 (운동 거의 없음)",
+          "very_active": "매우 활발 (고강도 운동·육체 노동)",
+        },
+        "climate": {
+          "hot": "더운 기후 (따뜻하고 습함)",
+          "temperate": "온화한 기후",
+          "very_hot": "매우 더운 기후 (사막·열대)",
+        },
+      },
+      "outputs": {
+        "dailyWaterCups": {
+          "help": "권장 일일 수분 섭취량(240ml 컵 기준)입니다.",
+          "label": "일일 수분량 (컵)",
+          "suffix": "컵",
+        },
+        "dailyWaterL": {
+          "help": "권장 일일 수분 섭취량(리터)입니다.",
+          "label": "일일 수분량 (리터)",
+          "suffix": "L",
+        },
+        "dailyWaterMl": {
+          "help": "권장 일일 수분 섭취량(밀리리터)입니다.",
+          "label": "일일 수분 섭취량",
+          "suffix": "ml",
+        },
+        "dailyWaterOz": {
+          "help": "권장 일일 수분 섭취량(액체 온스)입니다.",
+          "label": "일일 수분량 (액체 온스)",
+          "suffix": "fl oz",
+        },
+        "glassesOf250ml": {
+          "help": "하루에 마셔야 할 250ml 잔의 수입니다.",
+          "label": "잔 수 (250ml)",
+          "suffix": "잔",
+        },
+      },
+      "short": "체중, 활동량, 기후에 따른 일일 수분 필요량을 계산하세요.",
+      "title": "일일 수분 섭취량 계산기",
+    },
+    "ru": {
+      "description": "Бесплатный калькулятор суточной нормы воды. Введите вес, уровень активности и климат, чтобы узнать, сколько воды нужно пить каждый день.",
+      "errors": {
+        "weightOutOfRange": "Вес должен быть от 1 до 300 кг.",
+      },
+      "faq": [
+        {
+          "a": "Базовый расчёт — 35 мл на килограмм массы тела. К нему добавляются надбавки за уровень активности (до +1 400 мл для очень активных), климат (до +700 мл в очень жарком климате), беременность (+300 мл) и кормление грудью (+700 мл).",
+          "q": "Как рассчитывается суточная норма воды?",
+        },
+        {
+          "a": "Нет. Калькулятор оценивает жидкость из напитков. На практике около 20% суточной потребности в воде поступает из пищи.",
+          "q": "Учитывается ли вода из продуктов питания?",
+        },
+        {
+          "a": "Это популярное упрощение, но индивидуальные потребности сильно варьируются в зависимости от веса, активности и климата. Формула на основе веса даёт более точную оценку.",
+          "q": "Верно ли правило «8 стаканов в день»?",
+        },
+        {
+          "a": "Да, кофеинсодержащие напитки также способствуют гидратации, хотя избыток кофеина обладает лёгким мочегонным эффектом. Для оптимальной гидратации лучше всего подходят вода и травяные чаи.",
+          "q": "Учитываются ли кофе и чай в норме воды?",
+        },
+      ],
+      "inputs": {
+        "activityLevel": {
+          "help": "Ваш типичный уровень ежедневной физической активности.",
+          "label": "Уровень активности",
+        },
+        "climate": {
+          "help": "Общий климат места вашего проживания или основного нахождения.",
+          "label": "Климат",
+        },
+        "isBreastfeeding": {
+          "help": "Включите, если вы кормите грудью (+700 мл/день рекомендуется).",
+          "label": "Кормление грудью",
+        },
+        "isPregnant": {
+          "help": "Включите, если вы беременны (+300 мл/день рекомендуется).",
+          "label": "Беременность",
+        },
+        "weight": {
+          "help": "Ваш текущий вес в килограммах.",
+          "label": "Масса тела",
+        },
+      },
+      "keywords": [
+        "калькулятор воды",
+        "суточная норма воды",
+        "сколько воды пить в день",
+        "калькулятор гидратации",
+        "потребление воды",
+        "норма воды в день",
+        "водный баланс",
+      ],
+      "options": {
+        "activityLevel": {
+          "active": "Активный (6–7 дней/нед.)",
+          "light": "Лёгкий (1–3 дня/нед.)",
+          "moderate": "Умеренный (3–5 дней/нед.)",
+          "sedentary": "Малоподвижный (почти без нагрузок)",
+          "very_active": "Очень активный (интенсивные тренировки, физический труд)",
+        },
+        "climate": {
+          "hot": "Жаркий (тёплый/влажный климат)",
+          "temperate": "Умеренный (мягкая погода)",
+          "very_hot": "Очень жаркий (пустыня, тропическая жара)",
+        },
+      },
+      "outputs": {
+        "dailyWaterCups": {
+          "help": "Рекомендуемое суточное потребление воды в стаканах по 240 мл.",
+          "label": "Вода в сутки (стаканы 240 мл)",
+          "suffix": "стак.",
+        },
+        "dailyWaterL": {
+          "help": "Рекомендуемое суточное потребление воды в литрах.",
+          "label": "Вода в сутки (литры)",
+          "suffix": "л",
+        },
+        "dailyWaterMl": {
+          "help": "Рекомендуемое суточное потребление воды в миллилитрах.",
+          "label": "Суточная норма воды",
+          "suffix": "мл",
+        },
+        "dailyWaterOz": {
+          "help": "Рекомендуемое суточное потребление воды в жидких унциях.",
+          "label": "Вода в сутки (жидк. унции)",
+          "suffix": "fl oz",
+        },
+        "glassesOf250ml": {
+          "help": "Количество стаканов по 250 мл, которые нужно выпивать в день.",
+          "label": "Стаканы (250 мл)",
+          "suffix": "стак.",
+        },
+      },
+      "short": "Рассчитайте дневную потребность в воде с учётом веса, активности и климата.",
+      "title": "Калькулятор суточной нормы воды",
+    },
+    "tr": {
+      "description": "Ücretsiz günlük su ihtiyacı hesaplayıcı. Kilonuzu, aktivite düzeyinizi ve yaşadığınız iklimi girerek her gün ne kadar su içmeniz gerektiğini öğrenin.",
+      "errors": {
+        "weightOutOfRange": "Kilo 1 ile 300 kg arasında olmalıdır.",
+      },
+      "faq": [
+        {
+          "a": "Temel hesaplama, vücut ağırlığının kilogram başına 35 ml'dir. Buna aktivite düzeyi (çok aktif bireyler için +1.400 ml'ye kadar), iklim (çok sıcak koşullarda +700 ml'ye kadar), gebelik (+300 ml) ve emzirme (+700 ml) için ek miktarlar eklenir.",
+          "q": "Günlük su ihtiyacı nasıl hesaplanır?",
+        },
+        {
+          "a": "Hayır. Bu hesaplayıcı içeceklerden alınan toplam sıvı miktarını tahmin eder. Pratikte günlük su alımının yaklaşık %20'si besinlerden gelir.",
+          "q": "Bu hesap besinlerden alınan suyu içeriyor mu?",
+        },
+        {
+          "a": "Bu kural popüler bir basitleştirmedir; bireysel ihtiyaçlar vücut ağırlığına, aktiviteye ve iklime göre büyük farklılıklar gösterir. Ağırlığa dayalı bir formül daha kişiselleştirilmiş bir tahmin sunar.",
+          "q": "Günde 8 bardak su kuralı doğru mu?",
+        },
+        {
+          "a": "Evet, kafeinli içecekler de sıvı alımına katkıda bulunur; ancak yüksek kafein tüketiminin hafif idrar söktürücü etkisi vardır. En iyi hidrasyon için sade su ve bitkisel çaylar tercih edilmelidir.",
+          "q": "Kahve veya çay günlük su alımına sayılır mı?",
+        },
+        {
+          "a": "Koyu sarı idrar, ağız kuruluğu, baş ağrısı, baş dönmesi ve yorgunluk yaygın belirtilerdir. Şiddetli dehidrasyon acil tıbbi müdahale gerektirir.",
+          "q": "Dehidrasyonun belirtileri nelerdir?",
+        },
+      ],
+      "inputs": {
+        "activityLevel": {
+          "help": "Tipik günlük fiziksel aktivite düzeyiniz.",
+          "label": "Aktivite Düzeyi",
+        },
+        "climate": {
+          "help": "Yaşadığınız veya zamanınızın büyük bölümünü geçirdiğiniz yerin genel iklimi.",
+          "label": "İklim",
+        },
+        "isBreastfeeding": {
+          "help": "Şu an emziriyorsanız işaretleyin (günde +700 ml önerilir).",
+          "label": "Emziriyor",
+        },
+        "isPregnant": {
+          "help": "Şu an hamileyseniz işaretleyin (günde +300 ml önerilir).",
+          "label": "Gebe",
+        },
+        "weight": {
+          "help": "Kilogram cinsinden mevcut vücut ağırlığınız.",
+          "label": "Vücut Ağırlığı",
+        },
+      },
+      "keywords": [
+        "su ihtiyacı hesaplayıcı",
+        "günlük su miktarı",
+        "hidrasyon hesaplayıcı",
+        "günde ne kadar su içmeliyim",
+        "su tüketimi",
+        "günlük su ihtiyacı",
+        "sıvı alımı",
+      ],
+      "options": {
+        "activityLevel": {
+          "active": "Aktif (haftada 6–7 gün)",
+          "light": "Hafif (haftada 1–3 gün)",
+          "moderate": "Orta (haftada 3–5 gün)",
+          "sedentary": "Hareketsiz (egzersiz yok veya çok az)",
+          "very_active": "Çok Aktif (yoğun egzersiz, fiziksel iş)",
+        },
+        "climate": {
+          "hot": "Sıcak (sıcak/nemli iklim)",
+          "temperate": "Ilıman (ılımlı hava)",
+          "very_hot": "Çok Sıcak (çöl, tropikal sıcaklık)",
+        },
+      },
+      "outputs": {
+        "dailyWaterCups": {
+          "help": "Standart 240 ml bardak cinsinden önerilen günlük su alımınız.",
+          "label": "Günlük Su (Bardak)",
+          "suffix": "bardak",
+        },
+        "dailyWaterL": {
+          "help": "Litre cinsinden önerilen günlük su alımınız.",
+          "label": "Günlük Su (Litre)",
+          "suffix": "L",
+        },
+        "dailyWaterMl": {
+          "help": "Mililitre cinsinden önerilen günlük su alımınız.",
+          "label": "Günlük Su İhtiyacı",
+          "suffix": "ml",
+        },
+        "dailyWaterOz": {
+          "help": "Sıvı ons cinsinden önerilen günlük su alımınız.",
+          "label": "Günlük Su (Sıvı Ons)",
+          "suffix": "fl oz",
+        },
+        "glassesOf250ml": {
+          "help": "Günde içmeniz gereken 250 ml bardak sayısı.",
+          "label": "Bardak Sayısı (250 ml)",
+          "suffix": "bardak",
+        },
+      },
+      "short": "Kilo, aktivite düzeyi ve iklime göre günlük su ihtiyacınızı hesaplayın.",
+      "title": "Günlük Su İhtiyacı Hesaplayıcı",
+    },
+    "zh": {
+      "description": "免费每日饮水量计算器。输入体重、活动水平和气候，精确了解您每天应该喝多少水。",
+      "errors": {
+        "weightOutOfRange": "体重必须在1至300千克之间。",
+      },
+      "faq": [
+        {
+          "a": "基础计算为每千克体重35毫升。此外，根据活动水平（非常活跃者可多+1400毫升）、气候（极热环境可多+700毫升）、妊娠期（+300毫升）和哺乳期（+700毫升）分别增加相应的量。",
+          "q": "每日饮水量如何计算？",
+        },
+        {
+          "a": "不包括。本计算器仅估算来自饮料的液体摄入量。实际上，每日约有20%的水分来自食物。",
+          "q": "计算是否包括食物中的水分？",
+        },
+        {
+          "a": "这是一种广泛流传的简化说法，但个人需求因体重、活动量和气候差异而有很大不同。基于体重的计算公式能给出更个性化的建议。",
+          "q": "每天喝8杯水的说法准确吗？",
+        },
+      ],
+      "inputs": {
+        "activityLevel": {
+          "help": "您日常的体力活动水平。",
+          "label": "活动水平",
+        },
+        "climate": {
+          "help": "您居住或主要活动地区的气候类型。",
+          "label": "气候",
+        },
+        "isBreastfeeding": {
+          "help": "如果您目前处于哺乳期，请勾选（建议每日多+700毫升）。",
+          "label": "哺乳期",
+        },
+        "isPregnant": {
+          "help": "如果您目前处于妊娠期，请勾选（建议每日多+300毫升）。",
+          "label": "妊娠期",
+        },
+        "weight": {
+          "help": "您目前的体重（千克）。",
+          "label": "体重",
+        },
+      },
+      "keywords": [
+        "每日饮水量计算器",
+        "日常饮水需求",
+        "每天喝多少水",
+        "水分补充计算",
+        "日饮水量",
+        "补水计算器",
+        "每日水摄入量",
+      ],
+      "options": {
+        "activityLevel": {
+          "active": "积极（每周6–7天）",
+          "light": "轻度（每周1–3天）",
+          "moderate": "中度（每周3–5天）",
+          "sedentary": "久坐（几乎不运动）",
+          "very_active": "非常积极（高强度训练/体力劳动）",
+        },
+        "climate": {
+          "hot": "炎热（温暖/潮湿气候）",
+          "temperate": "温和（气候宜人）",
+          "very_hot": "极热（沙漠、热带高温）",
+        },
+      },
+      "outputs": {
+        "dailyWaterCups": {
+          "help": "建议每日饮水量（240毫升/杯）。",
+          "label": "每日饮水量（杯）",
+          "suffix": "杯",
+        },
+        "dailyWaterL": {
+          "help": "建议每日饮水量（升）。",
+          "label": "每日饮水量（升）",
+          "suffix": "升",
+        },
+        "dailyWaterMl": {
+          "help": "建议每日饮水量（毫升）。",
+          "label": "每日饮水量",
+          "suffix": "毫升",
+        },
+        "dailyWaterOz": {
+          "help": "建议每日饮水量（液体盎司）。",
+          "label": "每日饮水量（液体盎司）",
+          "suffix": "fl oz",
+        },
+        "glassesOf250ml": {
+          "help": "每天应喝的250毫升杯数。",
+          "label": "杯数（250毫升）",
+          "suffix": "杯",
+        },
+      },
+      "short": "根据体重、活动量和气候计算您的每日饮水需求。",
+      "title": "每日饮水量计算器",
+    },
+  },
+  "icon": Any<String>,
+  "inputSchema": ZodObject {
+    "_cached": {
+      "keys": [
+        "weight",
+        "activityLevel",
+        "climate",
+        "isPregnant",
+        "isBreastfeeding",
+      ],
+      "shape": {
+        "activityLevel": ZodEnum {
+          "_cache": Set {
+            "sedentary",
+            "light",
+            "moderate",
+            "active",
+            "very_active",
+          },
+          "_def": {
+            "typeName": "ZodEnum",
+            "values": [
+              "sedentary",
+              "light",
+              "moderate",
+              "active",
+              "very_active",
+            ],
+          },
+          "and": [Function],
+          "array": [Function],
+          "brand": [Function],
+          "catch": [Function],
+          "default": [Function],
+          "describe": [Function],
+          "isNullable": [Function],
+          "isOptional": [Function],
+          "nullable": [Function],
+          "nullish": [Function],
+          "optional": [Function],
+          "or": [Function],
+          "parse": [Function],
+          "parseAsync": [Function],
+          "pipe": [Function],
+          "promise": [Function],
+          "readonly": [Function],
+          "refine": [Function],
+          "refinement": [Function],
+          "safeParse": [Function],
+          "safeParseAsync": [Function],
+          "spa": [Function],
+          "superRefine": [Function],
+          "transform": [Function],
+          "~standard": {
+            "validate": [Function],
+            "vendor": "zod",
+            "version": 1,
+          },
+        },
+        "climate": ZodEnum {
+          "_cache": Set {
+            "temperate",
+            "hot",
+            "very_hot",
+          },
+          "_def": {
+            "typeName": "ZodEnum",
+            "values": [
+              "temperate",
+              "hot",
+              "very_hot",
+            ],
+          },
+          "and": [Function],
+          "array": [Function],
+          "brand": [Function],
+          "catch": [Function],
+          "default": [Function],
+          "describe": [Function],
+          "isNullable": [Function],
+          "isOptional": [Function],
+          "nullable": [Function],
+          "nullish": [Function],
+          "optional": [Function],
+          "or": [Function],
+          "parse": [Function],
+          "parseAsync": [Function],
+          "pipe": [Function],
+          "promise": [Function],
+          "readonly": [Function],
+          "refine": [Function],
+          "refinement": [Function],
+          "safeParse": [Function],
+          "safeParseAsync": [Function],
+          "spa": [Function],
+          "superRefine": [Function],
+          "transform": [Function],
+          "~standard": {
+            "validate": [Function],
+            "vendor": "zod",
+            "version": 1,
+          },
+        },
+        "isBreastfeeding": ZodBoolean {
+          "_def": {
+            "coerce": false,
+            "typeName": "ZodBoolean",
+          },
+          "and": [Function],
+          "array": [Function],
+          "brand": [Function],
+          "catch": [Function],
+          "default": [Function],
+          "describe": [Function],
+          "isNullable": [Function],
+          "isOptional": [Function],
+          "nullable": [Function],
+          "nullish": [Function],
+          "optional": [Function],
+          "or": [Function],
+          "parse": [Function],
+          "parseAsync": [Function],
+          "pipe": [Function],
+          "promise": [Function],
+          "readonly": [Function],
+          "refine": [Function],
+          "refinement": [Function],
+          "safeParse": [Function],
+          "safeParseAsync": [Function],
+          "spa": [Function],
+          "superRefine": [Function],
+          "transform": [Function],
+          "~standard": {
+            "validate": [Function],
+            "vendor": "zod",
+            "version": 1,
+          },
+        },
+        "isPregnant": ZodBoolean {
+          "_def": {
+            "coerce": false,
+            "typeName": "ZodBoolean",
+          },
+          "and": [Function],
+          "array": [Function],
+          "brand": [Function],
+          "catch": [Function],
+          "default": [Function],
+          "describe": [Function],
+          "isNullable": [Function],
+          "isOptional": [Function],
+          "nullable": [Function],
+          "nullish": [Function],
+          "optional": [Function],
+          "or": [Function],
+          "parse": [Function],
+          "parseAsync": [Function],
+          "pipe": [Function],
+          "promise": [Function],
+          "readonly": [Function],
+          "refine": [Function],
+          "refinement": [Function],
+          "safeParse": [Function],
+          "safeParseAsync": [Function],
+          "spa": [Function],
+          "superRefine": [Function],
+          "transform": [Function],
+          "~standard": {
+            "validate": [Function],
+            "vendor": "zod",
+            "version": 1,
+          },
+        },
+        "weight": ZodNumber {
+          "_def": {
+            "checks": [
+              {
+                "inclusive": true,
+                "kind": "min",
+                "message": undefined,
+                "value": 1,
+              },
+              {
+                "inclusive": true,
+                "kind": "max",
+                "message": undefined,
+                "value": 300,
+              },
+            ],
+            "coerce": false,
+            "typeName": "ZodNumber",
+          },
+          "and": [Function],
+          "array": [Function],
+          "brand": [Function],
+          "catch": [Function],
+          "default": [Function],
+          "describe": [Function],
+          "isNullable": [Function],
+          "isOptional": [Function],
+          "max": [Function],
+          "min": [Function],
+          "nullable": [Function],
+          "nullish": [Function],
+          "optional": [Function],
+          "or": [Function],
+          "parse": [Function],
+          "parseAsync": [Function],
+          "pipe": [Function],
+          "promise": [Function],
+          "readonly": [Function],
+          "refine": [Function],
+          "refinement": [Function],
+          "safeParse": [Function],
+          "safeParseAsync": [Function],
+          "spa": [Function],
+          "step": [Function],
+          "superRefine": [Function],
+          "transform": [Function],
+          "~standard": {
+            "validate": [Function],
+            "vendor": "zod",
+            "version": 1,
+          },
+        },
+      },
+    },
+    "_def": {
+      "catchall": ZodNever {
+        "_def": {
+          "typeName": "ZodNever",
+        },
+        "and": [Function],
+        "array": [Function],
+        "brand": [Function],
+        "catch": [Function],
+        "default": [Function],
+        "describe": [Function],
+        "isNullable": [Function],
+        "isOptional": [Function],
+        "nullable": [Function],
+        "nullish": [Function],
+        "optional": [Function],
+        "or": [Function],
+        "parse": [Function],
+        "parseAsync": [Function],
+        "pipe": [Function],
+        "promise": [Function],
+        "readonly": [Function],
+        "refine": [Function],
+        "refinement": [Function],
+        "safeParse": [Function],
+        "safeParseAsync": [Function],
+        "spa": [Function],
+        "superRefine": [Function],
+        "transform": [Function],
+        "~standard": {
+          "validate": [Function],
+          "vendor": "zod",
+          "version": 1,
+        },
+      },
+      "shape": [Function],
+      "typeName": "ZodObject",
+      "unknownKeys": "strip",
+    },
+    "and": [Function],
+    "array": [Function],
+    "augment": [Function],
+    "brand": [Function],
+    "catch": [Function],
+    "default": [Function],
+    "describe": [Function],
+    "isNullable": [Function],
+    "isOptional": [Function],
+    "nonstrict": [Function],
+    "nullable": [Function],
+    "nullish": [Function],
+    "optional": [Function],
+    "or": [Function],
+    "parse": [Function],
+    "parseAsync": [Function],
+    "pipe": [Function],
+    "promise": [Function],
+    "readonly": [Function],
+    "refine": [Function],
+    "refinement": [Function],
+    "safeParse": [Function],
+    "safeParseAsync": [Function],
+    "spa": [Function],
+    "superRefine": [Function],
+    "transform": [Function],
+    "~standard": {
+      "validate": [Function],
+      "vendor": "zod",
+      "version": 1,
+    },
+  },
+  "inputs": [
+    {
+      "defaultValue": 70,
+      "id": "weight",
+      "required": true,
+      "type": {
+        "kind": "number",
+        "max": 300,
+        "min": 1,
+        "step": 0.5,
+        "unit": "kg",
+      },
+    },
+    {
+      "defaultValue": "moderate",
+      "id": "activityLevel",
+      "required": true,
+      "type": {
+        "kind": "select",
+        "options": [
+          {
+            "i18nKey": "sedentary",
+            "value": "sedentary",
+          },
+          {
+            "i18nKey": "light",
+            "value": "light",
+          },
+          {
+            "i18nKey": "moderate",
+            "value": "moderate",
+          },
+          {
+            "i18nKey": "active",
+            "value": "active",
+          },
+          {
+            "i18nKey": "very_active",
+            "value": "very_active",
+          },
+        ],
+      },
+    },
+    {
+      "defaultValue": "temperate",
+      "id": "climate",
+      "required": true,
+      "type": {
+        "kind": "select",
+        "options": [
+          {
+            "i18nKey": "temperate",
+            "value": "temperate",
+          },
+          {
+            "i18nKey": "hot",
+            "value": "hot",
+          },
+          {
+            "i18nKey": "very_hot",
+            "value": "very_hot",
+          },
+        ],
+      },
+    },
+    {
+      "defaultValue": false,
+      "id": "isPregnant",
+      "required": false,
+      "type": {
+        "kind": "toggle",
+      },
+    },
+    {
+      "defaultValue": false,
+      "id": "isBreastfeeding",
+      "required": false,
+      "type": {
+        "kind": "toggle",
+      },
+    },
+  ],
+  "meta": {
+    "disclaimer": "Individual water needs vary based on health conditions, medications, and other factors. Consult a healthcare professional for personalised hydration advice.",
+    "formulaLatex": "\\text{Water (ml)} = \\text{weight (kg)} \\times 35 + \\text{activity bonus} + \\text{climate bonus} + \\text{pregnancy bonus}",
+    "references": [
+      {
+        "authority": "National Academies of Sciences, Engineering, and Medicine",
+        "title": "Dietary Reference Intakes for Water, Potassium, Sodium, Chloride, and Sulfate",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK541077/",
+      },
+    ],
+  },
+  "outputs": [
+    {
+      "format": "number",
+      "highlight": true,
+      "id": "dailyWaterMl",
+      "precision": 0,
+      "unit": "ml",
+    },
+    {
+      "format": "number",
+      "id": "dailyWaterL",
+      "precision": 2,
+      "unit": "l",
+    },
+    {
+      "format": "number",
+      "id": "dailyWaterOz",
+      "precision": 1,
+      "unit": "floz",
+    },
+    {
+      "format": "number",
+      "id": "dailyWaterCups",
+      "precision": 1,
+    },
+    {
+      "format": "number",
+      "id": "glassesOf250ml",
+      "precision": 0,
+    },
+  ],
+  "priority": Any<String>,
+  "related": [
+    "bmr",
+    "bmi",
+    "calorie-deficit",
+  ],
+  "slug": Any<String>,
+  "tags": [
+    "health",
+    "hydration",
+    "water",
+    "wellness",
+    "nutrition",
+  ],
+}
+`;

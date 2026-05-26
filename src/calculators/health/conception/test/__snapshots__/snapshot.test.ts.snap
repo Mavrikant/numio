@@ -1,0 +1,1209 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Conception definition — shape snapshot > snapshot: definition shape 1`] = `
+{
+  "category": Any<String>,
+  "compute": [Function],
+  "i18n": {
+    "ar": {
+      "description": "حاسبة مجانية لتاريخ الحمل. أدخلي تاريخ آخر دورة شهرية أو تاريخ الولادة المتوقع لتقدير متى حدث الحمل ومعرفة فترة الخصوبة لديكِ.",
+      "errors": {
+        "cycleLengthOutOfRange": "يجب أن يكون طول الدورة بين 21 و35 يومًا.",
+        "invalidDate": "يرجى إدخال تاريخ صحيح بصيغة YYYY-MM-DD.",
+      },
+      "faq": [
+        {
+          "a": "يحدث التبويض — وبالتالي الحمل — عادةً بعد 14 يومًا من أول يوم في آخر دورة شهرية لدورة مدتها 28 يومًا. وللدورات الأقصر أو الأطول، يتغير يوم التبويض وفقًا لذلك. تضيف هذه الحاسبة (طول الدورة − 14) يومًا إلى تاريخ آخر دورة شهرية.",
+          "q": "كيف يُحسب تاريخ الحمل من آخر دورة شهرية؟",
+        },
+        {
+          "a": "تمتد نافذة الخصوبة نحو 6 أيام: الأيام الخمسة التي تسبق التبويض ويوم التبويض نفسه. يمكن للحيوانات المنوية البقاء حتى 5 أيام في الجهاز التناسلي الأنثوي.",
+          "q": "ما هي نافذة الخصوبة؟",
+        },
+        {
+          "a": "النتائج تقديرية مبنية على متوسط الدورة الشهرية. يتفاوت يوم التبويض الفعلي من امرأة لأخرى ومن دورة لأخرى. لمتابعة أدق، يُنصح باستخدام أجهزة قياس درجة حرارة الجسم الأساسية أو مجموعات اختبار التبويض.",
+          "q": "ما مدى دقة هذه الحاسبة؟",
+        },
+      ],
+      "inputs": {
+        "cycleLength": {
+          "help": "متوسط طول دورتك الشهرية. النطاق المعتاد 21–35 يومًا؛ والمتوسط 28 يومًا.",
+          "label": "طول الدورة الشهرية (أيام)",
+        },
+        "dateInput": {
+          "help": "أدخلي تاريخ آخر دورة شهرية أو تاريخ الولادة المتوقع.",
+          "label": "التاريخ",
+        },
+        "mode": {
+          "help": "احسبي من تاريخ آخر دورة شهرية أو من تاريخ الولادة المتوقع.",
+          "label": "طريقة الحساب",
+        },
+      },
+      "keywords": [
+        "حاسبة تاريخ الحمل",
+        "متى حملت",
+        "نافذة الخصوبة",
+        "حاسبة التبويض",
+        "تاريخ الولادة المتوقع",
+        "آخر دورة شهرية",
+        "حساب الحمل",
+      ],
+      "options": {
+        "mode": {
+          "from_duedate": "من تاريخ الولادة المتوقع",
+          "from_lmp": "من تاريخ آخر دورة شهرية",
+        },
+      },
+      "outputs": {
+        "conceptionDate": {
+          "help": "التاريخ التقريبي الذي يُرجَّح فيه حدوث التلقيح.",
+          "label": "تاريخ الحمل المقدّر",
+        },
+        "estimatedDueDate": {
+          "help": "موعد الولادة المتوقع، نحو 266 يومًا (38 أسبوعًا) بعد الحمل.",
+          "label": "تاريخ الولادة المتوقع",
+        },
+        "fertileWindowEnd": {
+          "help": "5 أيام بعد تاريخ الحمل المقدَّر — نهاية الفترة الخصبة.",
+          "label": "نهاية نافذة الخصوبة",
+        },
+        "fertileWindowStart": {
+          "help": "5 أيام قبل تاريخ الحمل المقدَّر — بداية الفترة الخصبة.",
+          "label": "بداية نافذة الخصوبة",
+        },
+      },
+      "short": "احسبي تاريخ الحمل المقدّر انطلاقًا من آخر دورة شهرية أو تاريخ الولادة المتوقع.",
+      "title": "حاسبة تاريخ الحمل",
+    },
+    "de": {
+      "description": "Kostenloser Empfängnisdatum-Rechner. Geben Sie Ihre letzte Periode oder Ihren Geburtstermin ein, um den Zeitpunkt der Empfängnis und Ihr fruchtbares Fenster zu ermitteln.",
+      "errors": {
+        "cycleLengthOutOfRange": "Die Zykluslänge muss zwischen 21 und 35 Tagen liegen.",
+        "invalidDate": "Bitte geben Sie ein gültiges Datum im Format JJJJ-MM-TT ein.",
+      },
+      "faq": [
+        {
+          "a": "Der Eisprung und damit die Empfängnis erfolgen bei einem 28-Tage-Zyklus typischerweise 14 Tage nach dem ersten Tag der letzten Regelblutung. Bei kürzeren oder längeren Zyklen verschiebt sich der Ovulationstag entsprechend. Dieser Rechner addiert (Zykluslänge − 14) Tage zum LMB-Datum.",
+          "q": "Wie wird das Empfängnisdatum aus der letzten Regelblutung berechnet?",
+        },
+        {
+          "a": "Das fruchtbare Fenster umfasst rund 6 Tage: die 5 Tage vor der Ovulation und den Ovulationstag selbst. Spermien können bis zu 5 Tage in den Eileitern überleben, weshalb auch Geschlechtsverkehr vor dem Eisprung zu einer Schwangerschaft führen kann.",
+          "q": "Was ist das fruchtbare Fenster?",
+        },
+        {
+          "a": "Die Ergebnisse sind Schätzwerte auf Basis durchschnittlicher Zyklusverläufe. Der tatsächliche Ovulationstag variiert von Person zu Person und von Zyklus zu Zyklus. Für präzisere Ergebnisse eignen sich Basaltemperaturmessungen oder Ovulationstests.",
+          "q": "Wie genau ist dieser Rechner?",
+        },
+      ],
+      "inputs": {
+        "cycleLength": {
+          "help": "Durchschnittliche Länge Ihres Menstruationszyklus. Typisch sind 21–35 Tage; 28 Tage ist der Durchschnitt.",
+          "label": "Zykluslänge (Tage)",
+        },
+        "dateInput": {
+          "help": "Geben Sie das Datum Ihrer letzten Regelblutung oder Ihren errechneten Geburtstermin ein.",
+          "label": "Datum",
+        },
+        "mode": {
+          "help": "Berechnen Sie ab dem letzten Menstruationsbeginn (LMB) oder ab dem bekannten Geburtstermin.",
+          "label": "Berechnungsmodus",
+        },
+      },
+      "keywords": [
+        "Empfängnisdatum Rechner",
+        "wann wurde ich schwanger",
+        "fruchtbares Fenster",
+        "Ovulationsrechner",
+        "Geburtstermin berechnen",
+        "letzte Monatsblutung",
+        "Schwangerschaft berechnen",
+      ],
+      "options": {
+        "mode": {
+          "from_duedate": "Ab Geburtstermin",
+          "from_lmp": "Ab letzter Menstruationsblutung (LMB)",
+        },
+      },
+      "outputs": {
+        "conceptionDate": {
+          "help": "Das ungefähre Datum, an dem die Befruchtung wahrscheinlich stattgefunden hat.",
+          "label": "Geschätztes Empfängnisdatum",
+        },
+        "estimatedDueDate": {
+          "help": "Erwarteter Entbindungstermin, ca. 266 Tage (38 Wochen) nach der Empfängnis.",
+          "label": "Errechneter Geburtstermin",
+        },
+        "fertileWindowEnd": {
+          "help": "5 Tage nach dem geschätzten Empfängnisdatum — Ende der fruchtbaren Phase.",
+          "label": "Ende des fruchtbaren Fensters",
+        },
+        "fertileWindowStart": {
+          "help": "5 Tage vor dem geschätzten Empfängnisdatum — Beginn der fruchtbaren Phase.",
+          "label": "Beginn des fruchtbaren Fensters",
+        },
+      },
+      "short": "Schätzen Sie Ihr Empfängnisdatum anhand der letzten Regelblutung oder des errechneten Geburtstermins.",
+      "title": "Empfängnisdatum-Rechner",
+    },
+    "en": {
+      "description": "Free conception date calculator. Enter your last menstrual period or due date to estimate when conception occurred and your fertile window.",
+      "errors": {
+        "cycleLengthOutOfRange": "Cycle length must be between 21 and 35 days.",
+        "invalidDate": "Please enter a valid date in YYYY-MM-DD format.",
+      },
+      "faq": [
+        {
+          "a": "Ovulation — and thus conception — typically occurs 14 days before the end of a 28-day menstrual cycle, or equivalently about 14 days after the start of the LMP for a standard cycle. For cycles longer or shorter than 28 days, the ovulation day shifts accordingly. This calculator adds (cycle length − 14) days to your LMP date to estimate conception.",
+          "q": "How is the conception date calculated from the LMP?",
+        },
+        {
+          "a": "The fertile window spans roughly 6 days: the 5 days before ovulation and the day of ovulation itself. Sperm can survive up to 5 days in the female reproductive tract, so intercourse before ovulation can still result in pregnancy. This calculator shows ±5 days around the estimated conception date as an approximation of this window.",
+          "q": "What is the fertile window?",
+        },
+        {
+          "a": "These are estimates based on average cycle timing. Actual ovulation day varies from person to person and from cycle to cycle. For precise tracking, methods like basal body temperature (BBT) charting, ovulation predictor kits (OPKs), or ultrasound dating are more reliable.",
+          "q": "How accurate is this calculator?",
+        },
+        {
+          "a": "Human gestation is approximately 38 weeks (266 days) from the date of conception, or 40 weeks (280 days) from the last menstrual period. The standard Naegele's rule adds 280 days to the LMP, which is equivalent to adding 266 days to the conception date when ovulation occurs at day 14 of a 28-day cycle.",
+          "q": "Why is the due date 266 days after conception?",
+        },
+        {
+          "a": "This calculator provides an estimated conception window, not a precise moment. Conception can occur several days after intercourse because sperm can survive in the reproductive tract. For medical or legal questions about paternity, consult a healthcare professional.",
+          "q": "Can I use this to determine paternity timing?",
+        },
+      ],
+      "inputs": {
+        "cycleLength": {
+          "help": "Average length of your menstrual cycle. Typical range is 21–35 days; 28 days is average.",
+          "label": "Menstrual cycle length (days)",
+        },
+        "dateInput": {
+          "help": "Enter the date of your last menstrual period (LMP) or your estimated due date.",
+          "label": "Date",
+        },
+        "mode": {
+          "help": "Calculate from last menstrual period (LMP) or from the known due date.",
+          "label": "Calculation mode",
+        },
+      },
+      "keywords": [
+        "conception date calculator",
+        "when did I conceive",
+        "fertile window calculator",
+        "ovulation calculator",
+        "due date calculator",
+        "last menstrual period",
+        "pregnancy conception",
+      ],
+      "options": {
+        "mode": {
+          "from_duedate": "From due date",
+          "from_lmp": "From last menstrual period (LMP)",
+        },
+      },
+      "outputs": {
+        "conceptionDate": {
+          "help": "The approximate date when fertilisation most likely occurred.",
+          "label": "Estimated conception date",
+        },
+        "estimatedDueDate": {
+          "help": "Expected delivery date, approximately 266 days (38 weeks) after conception.",
+          "label": "Estimated due date",
+        },
+        "fertileWindowEnd": {
+          "help": "End of the likely fertile period (5 days after estimated conception).",
+          "label": "Fertile window end",
+        },
+        "fertileWindowStart": {
+          "help": "Beginning of the likely fertile period (5 days before estimated conception).",
+          "label": "Fertile window start",
+        },
+      },
+      "short": "Estimate your conception date from your last menstrual period or due date.",
+      "title": "Conception Date Calculator",
+    },
+    "es": {
+      "description": "Calculadora gratuita de fecha de concepción. Introduce la fecha de tu última menstruación o tu fecha probable de parto para estimar cuándo ocurrió la concepción y tu ventana fértil.",
+      "errors": {
+        "cycleLengthOutOfRange": "La duración del ciclo debe estar entre 21 y 35 días.",
+        "invalidDate": "Por favor introduce una fecha válida en formato AAAA-MM-DD.",
+      },
+      "faq": [
+        {
+          "a": "La ovulación y, por tanto, la concepción suelen ocurrir 14 días después del primer día de la última menstruación en un ciclo de 28 días. Para ciclos más cortos o más largos, el día de ovulación se ajusta en consecuencia. Esta calculadora suma (duración del ciclo − 14) días a la FUM.",
+          "q": "¿Cómo se calcula la fecha de concepción desde la última menstruación?",
+        },
+        {
+          "a": "La ventana fértil abarca aproximadamente 6 días: los 5 días anteriores a la ovulación y el día de la ovulación. Los espermatozoides pueden sobrevivir hasta 5 días en el tracto reproductor femenino.",
+          "q": "¿Qué es la ventana fértil?",
+        },
+        {
+          "a": "Son estimaciones basadas en un ciclo promedio. El día real de ovulación varía de persona a persona y de ciclo a ciclo. Para un seguimiento más preciso, utiliza el método de temperatura basal corporal o kits de detección de ovulación.",
+          "q": "¿Qué tan precisa es esta calculadora?",
+        },
+      ],
+      "inputs": {
+        "cycleLength": {
+          "help": "Duración promedio de tu ciclo. El rango típico es de 21 a 35 días; 28 días es el promedio.",
+          "label": "Duración del ciclo menstrual (días)",
+        },
+        "dateInput": {
+          "help": "Introduce la fecha de tu última menstruación o tu fecha probable de parto.",
+          "label": "Fecha",
+        },
+        "mode": {
+          "help": "Calcula desde la fecha de última menstruación (FUM) o desde la fecha probable de parto (FPP).",
+          "label": "Modo de cálculo",
+        },
+      },
+      "keywords": [
+        "calculadora fecha de concepción",
+        "cuándo concebí",
+        "ventana fértil",
+        "calculadora ovulación",
+        "fecha probable de parto",
+        "última menstruación",
+        "embarazo concepción",
+      ],
+      "options": {
+        "mode": {
+          "from_duedate": "Desde la fecha probable de parto",
+          "from_lmp": "Desde la última menstruación (FUM)",
+        },
+      },
+      "outputs": {
+        "conceptionDate": {
+          "help": "La fecha aproximada en que probablemente ocurrió la fecundación.",
+          "label": "Fecha de concepción estimada",
+        },
+        "estimatedDueDate": {
+          "help": "Fecha esperada de parto, aproximadamente 266 días (38 semanas) después de la concepción.",
+          "label": "Fecha probable de parto",
+        },
+        "fertileWindowEnd": {
+          "help": "5 días después de la fecha de concepción estimada — fin del período fértil.",
+          "label": "Fin de la ventana fértil",
+        },
+        "fertileWindowStart": {
+          "help": "5 días antes de la fecha de concepción estimada — inicio del período fértil.",
+          "label": "Inicio de la ventana fértil",
+        },
+      },
+      "short": "Estima tu fecha de concepción a partir de tu última menstruación o fecha probable de parto.",
+      "title": "Calculadora de fecha de concepción",
+    },
+    "fr": {
+      "description": "Calculateur gratuit de date de conception. Saisissez la date de vos dernières règles ou votre terme prévu pour estimer quand la conception a eu lieu et votre fenêtre de fertilité.",
+      "errors": {
+        "cycleLengthOutOfRange": "La durée du cycle doit être comprise entre 21 et 35 jours.",
+        "invalidDate": "Veuillez saisir une date valide au format AAAA-MM-JJ.",
+      },
+      "faq": [
+        {
+          "a": "L'ovulation — et donc la conception — survient généralement 14 jours après le premier jour des dernières règles pour un cycle de 28 jours. Pour des cycles plus courts ou plus longs, le jour d'ovulation est ajusté en conséquence. Ce calculateur ajoute (durée du cycle − 14) jours à la DDR.",
+          "q": "Comment la date de conception est-elle calculée à partir des dernières règles ?",
+        },
+        {
+          "a": "La fenêtre fertile s'étend sur environ 6 jours : les 5 jours précédant l'ovulation et le jour de l'ovulation lui-même. Les spermatozoïdes peuvent survivre jusqu'à 5 jours dans les voies génitales féminines.",
+          "q": "Qu'est-ce que la fenêtre fertile ?",
+        },
+        {
+          "a": "Ces résultats sont des estimations basées sur un cycle moyen. Le jour réel d'ovulation varie d'une personne à l'autre et d'un cycle à l'autre. Pour un suivi précis, la courbe de température ou les tests d'ovulation sont plus fiables.",
+          "q": "Quelle est la précision de ce calculateur ?",
+        },
+      ],
+      "inputs": {
+        "cycleLength": {
+          "help": "Durée moyenne de votre cycle. La plage normale est de 21 à 35 jours ; 28 jours est la moyenne.",
+          "label": "Durée du cycle menstruel (jours)",
+        },
+        "dateInput": {
+          "help": "Saisissez la date de vos dernières règles ou votre date prévue d'accouchement.",
+          "label": "Date",
+        },
+        "mode": {
+          "help": "Calculez à partir des dernières règles (DDR) ou de la date prévue d'accouchement (DPA).",
+          "label": "Mode de calcul",
+        },
+      },
+      "keywords": [
+        "calculateur date de conception",
+        "quand ai-je conçu",
+        "fenêtre fertile",
+        "calculateur ovulation",
+        "date accouchement prévue",
+        "dernières règles",
+        "grossesse conception",
+      ],
+      "options": {
+        "mode": {
+          "from_duedate": "À partir de la date d'accouchement prévue",
+          "from_lmp": "À partir des dernières règles (DDR)",
+        },
+      },
+      "outputs": {
+        "conceptionDate": {
+          "help": "La date approximative à laquelle la fécondation a le plus probablement eu lieu.",
+          "label": "Date de conception estimée",
+        },
+        "estimatedDueDate": {
+          "help": "Date prévue d'accouchement, environ 266 jours (38 semaines) après la conception.",
+          "label": "Date prévue d'accouchement",
+        },
+        "fertileWindowEnd": {
+          "help": "5 jours après la date de conception estimée — fin de la période féconde.",
+          "label": "Fin de la fenêtre fertile",
+        },
+        "fertileWindowStart": {
+          "help": "5 jours avant la date de conception estimée — début de la période féconde.",
+          "label": "Début de la fenêtre fertile",
+        },
+      },
+      "short": "Estimez votre date de conception à partir de vos dernières règles ou de la date prévue d'accouchement.",
+      "title": "Calculateur de date de conception",
+    },
+    "hi": {
+      "description": "निःशुल्क गर्भधारण तिथि कैलकुलेटर। अपनी अंतिम माहवारी की तिथि या अपेक्षित प्रसव तिथि दर्ज करें और जानें कि गर्भधारण कब हुआ तथा आपकी उपजाऊ अवधि क्या है।",
+      "errors": {
+        "cycleLengthOutOfRange": "चक्र की लंबाई 21 से 35 दिन के बीच होनी चाहिए।",
+        "invalidDate": "कृपया YYYY-MM-DD प्रारूप में एक मान्य तिथि दर्ज करें।",
+      },
+      "faq": [
+        {
+          "a": "28 दिन के चक्र में ओव्यूलेशन — और इसलिए गर्भधारण — अंतिम माहवारी के पहले दिन से लगभग 14 दिन बाद होता है। छोटे या लंबे चक्रों में, ओव्यूलेशन का दिन तदनुसार बदल जाता है। यह कैलकुलेटर LMP में (चक्र की लंबाई − 14) दिन जोड़ता है।",
+          "q": "अंतिम माहवारी से गर्भधारण तिथि कैसे गणना की जाती है?",
+        },
+        {
+          "a": "उपजाऊ अवधि लगभग 6 दिन होती है: ओव्यूलेशन से 5 दिन पहले और ओव्यूलेशन का दिन स्वयं। शुक्राणु महिला प्रजनन पथ में 5 दिन तक जीवित रह सकते हैं।",
+          "q": "उपजाऊ अवधि क्या है?",
+        },
+        {
+          "a": "परिणाम औसत चक्र पर आधारित अनुमान हैं। वास्तविक ओव्यूलेशन का दिन व्यक्ति से व्यक्ति और चक्र से चक्र में भिन्न हो सकता है। अधिक सटीक अनुवर्ती के लिए बेसल बॉडी टेम्परेचर चार्टिंग या ओव्यूलेशन परीक्षण किट का उपयोग करें।",
+          "q": "यह कैलकुलेटर कितना सटीक है?",
+        },
+      ],
+      "inputs": {
+        "cycleLength": {
+          "help": "आपके माहवारी चक्र की औसत अवधि। सामान्य सीमा 21–35 दिन है; औसत 28 दिन है।",
+          "label": "माहवारी चक्र की लंबाई (दिन)",
+        },
+        "dateInput": {
+          "help": "अपनी अंतिम माहवारी की तिथि या अपेक्षित प्रसव तिथि दर्ज करें।",
+          "label": "तिथि",
+        },
+        "mode": {
+          "help": "अंतिम माहवारी तिथि (LMP) या अपेक्षित प्रसव तिथि से गणना करें।",
+          "label": "गणना विधि",
+        },
+      },
+      "keywords": [
+        "गर्भधारण तिथि कैलकुलेटर",
+        "गर्भधारण कब हुआ",
+        "उपजाऊ अवधि",
+        "ओव्यूलेशन कैलकुलेटर",
+        "प्रसव तिथि कैलकुलेटर",
+        "अंतिम माहवारी",
+        "गर्भावस्था गणना",
+      ],
+      "options": {
+        "mode": {
+          "from_duedate": "अपेक्षित प्रसव तिथि से",
+          "from_lmp": "अंतिम माहवारी तिथि से (LMP)",
+        },
+      },
+      "outputs": {
+        "conceptionDate": {
+          "help": "वह तिथि जिस पर गर्भाधान होने की सबसे अधिक संभावना है।",
+          "label": "अनुमानित गर्भधारण तिथि",
+        },
+        "estimatedDueDate": {
+          "help": "गर्भधारण के लगभग 266 दिन (38 सप्ताह) बाद की अपेक्षित प्रसव तिथि।",
+          "label": "अपेक्षित प्रसव तिथि",
+        },
+        "fertileWindowEnd": {
+          "help": "अनुमानित गर्भधारण तिथि से 5 दिन बाद — उपजाऊ अवधि का समाप्ति।",
+          "label": "उपजाऊ अवधि का अंत",
+        },
+        "fertileWindowStart": {
+          "help": "अनुमानित गर्भधारण तिथि से 5 दिन पहले — उपजाऊ अवधि का आरंभ।",
+          "label": "उपजाऊ अवधि की शुरुआत",
+        },
+      },
+      "short": "अपनी अंतिम माहवारी या प्रसव तिथि से गर्भधारण की संभावित तिथि जानें।",
+      "title": "गर्भधारण तिथि कैलकुलेटर",
+    },
+    "it": {
+      "description": "Calcolatore gratuito della data di concepimento. Inserisci la data dell'ultima mestruazione o la data presunta del parto per stimare quando è avvenuto il concepimento e la tua finestra fertile.",
+      "errors": {
+        "cycleLengthOutOfRange": "La durata del ciclo deve essere compresa tra 21 e 35 giorni.",
+        "invalidDate": "Inserisci una data valida nel formato AAAA-MM-GG.",
+      },
+      "faq": [
+        {
+          "a": "L'ovulazione — e quindi il concepimento — si verifica tipicamente 14 giorni dopo il primo giorno dell'ultima mestruazione per un ciclo di 28 giorni. Per cicli più corti o più lunghi, il giorno dell'ovulazione si sposta di conseguenza. Questo calcolatore aggiunge (durata del ciclo − 14) giorni alla data dell'UM.",
+          "q": "Come si calcola la data di concepimento dall'ultima mestruazione?",
+        },
+        {
+          "a": "La finestra fertile si estende per circa 6 giorni: i 5 giorni precedenti l'ovulazione e il giorno dell'ovulazione stesso. Gli spermatozoi possono sopravvivere fino a 5 giorni nell'apparato riproduttivo femminile.",
+          "q": "Cos'è la finestra fertile?",
+        },
+        {
+          "a": "I risultati sono stime basate su un ciclo medio. Il giorno effettivo dell'ovulazione varia da persona a persona e da ciclo a ciclo. Per un monitoraggio più preciso, si consigliano la curva della temperatura basale o i test di ovulazione.",
+          "q": "Quanto è accurato questo calcolatore?",
+        },
+      ],
+      "inputs": {
+        "cycleLength": {
+          "help": "Durata media del tuo ciclo. L'intervallo tipico è 21–35 giorni; 28 giorni è la media.",
+          "label": "Durata del ciclo mestruale (giorni)",
+        },
+        "dateInput": {
+          "help": "Inserisci la data dell'ultima mestruazione o la data presunta del parto.",
+          "label": "Data",
+        },
+        "mode": {
+          "help": "Calcola dall'ultima mestruazione (UM) o dalla data presunta del parto (DPP).",
+          "label": "Modalità di calcolo",
+        },
+      },
+      "keywords": [
+        "calcolatore data concepimento",
+        "quando ho concepito",
+        "finestra fertile",
+        "calcolatore ovulazione",
+        "data presunta del parto",
+        "ultima mestruazione",
+        "gravidanza concepimento",
+      ],
+      "options": {
+        "mode": {
+          "from_duedate": "Dalla data presunta del parto",
+          "from_lmp": "Dall'ultima mestruazione (UM)",
+        },
+      },
+      "outputs": {
+        "conceptionDate": {
+          "help": "La data approssimativa in cui la fecondazione ha probabilmente avuto luogo.",
+          "label": "Data di concepimento stimata",
+        },
+        "estimatedDueDate": {
+          "help": "Data prevista del parto, circa 266 giorni (38 settimane) dopo il concepimento.",
+          "label": "Data presunta del parto",
+        },
+        "fertileWindowEnd": {
+          "help": "5 giorni dopo la data di concepimento stimata — fine del periodo fertile.",
+          "label": "Fine della finestra fertile",
+        },
+        "fertileWindowStart": {
+          "help": "5 giorni prima della data di concepimento stimata — inizio del periodo fertile.",
+          "label": "Inizio della finestra fertile",
+        },
+      },
+      "short": "Stima la tua data di concepimento dall'ultima mestruazione o dalla data presunta del parto.",
+      "title": "Calcolatore della data di concepimento",
+    },
+    "ja": {
+      "description": "無料の受精日計算機。最終月経日または分娩予定日を入力するだけで、受精が起きた日付と妊娠可能窓（フェーティル・ウィンドウ）を推定できます。",
+      "errors": {
+        "cycleLengthOutOfRange": "月経周期は21〜35日の範囲で入力してください。",
+        "invalidDate": "YYYY-MM-DD形式で有効な日付を入力してください。",
+      },
+      "faq": [
+        {
+          "a": "28日周期の場合、排卵（＝受精）は最終月経開始日から14日後に起こると推定されます。周期が長短の場合は、排卵日が前後します。本計算機は（周期長−14）日を最終月経日に加算して受精推定日を算出します。",
+          "q": "最終月経日から受精日はどう計算されますか？",
+        },
+        {
+          "a": "妊娠可能窓は約6日間：排卵前5日間と排卵当日です。精子は女性の生殖路内で最大5日間生存できるため、排卵前の性交でも妊娠の可能性があります。",
+          "q": "妊娠可能窓とは何ですか？",
+        },
+        {
+          "a": "結果は平均的な月経周期に基づく推定値です。実際の排卵日は個人差や周期ごとのばらつきがあります。より正確な排卵日の把握には、基礎体温の計測や排卵検査薬の使用を推奨します。",
+          "q": "この計算機はどれくらい正確ですか？",
+        },
+      ],
+      "inputs": {
+        "cycleLength": {
+          "help": "月経周期の平均日数。通常は21〜35日で、平均は28日です。",
+          "label": "月経周期（日数）",
+        },
+        "dateInput": {
+          "help": "最終月経日または分娩予定日を入力してください。",
+          "label": "日付",
+        },
+        "mode": {
+          "help": "最終月経日（LMP）から計算するか、分娩予定日から計算するかを選んでください。",
+          "label": "計算モード",
+        },
+      },
+      "keywords": [
+        "受精日計算機",
+        "いつ妊娠したか",
+        "妊娠可能期間",
+        "排卵日計算機",
+        "分娩予定日計算",
+        "最終月経日",
+        "妊娠計算",
+      ],
+      "options": {
+        "mode": {
+          "from_duedate": "分娩予定日から",
+          "from_lmp": "最終月経日（LMP）から",
+        },
+      },
+      "outputs": {
+        "conceptionDate": {
+          "help": "受精が最も起こりやすかったと推定される日付。",
+          "label": "推定受精日",
+        },
+        "estimatedDueDate": {
+          "help": "受精から約266日（38週）後の出産予定日。",
+          "label": "分娩予定日",
+        },
+        "fertileWindowEnd": {
+          "help": "推定受精日の5日後——妊娠可能期間の終わり。",
+          "label": "妊娠可能窓の終了日",
+        },
+        "fertileWindowStart": {
+          "help": "推定受精日の5日前——妊娠可能期間の始まり。",
+          "label": "妊娠可能窓の開始日",
+        },
+      },
+      "short": "最終月経日または分娩予定日から受精日と妊娠可能な期間を推定します。",
+      "title": "受精日計算機",
+    },
+    "ko": {
+      "description": "무료 수정일 계산기. 마지막 월경일이나 출산 예정일을 입력하면 수정 시기와 가임 가능 기간을 추정할 수 있습니다.",
+      "errors": {
+        "cycleLengthOutOfRange": "월경 주기는 21~35일 사이여야 합니다.",
+        "invalidDate": "YYYY-MM-DD 형식의 유효한 날짜를 입력하세요.",
+      },
+      "faq": [
+        {
+          "a": "28일 주기의 경우, 배란(즉 수정)은 마지막 월경 시작일로부터 약 14일 후에 일어납니다. 주기가 더 짧거나 길면 배란일도 그에 맞춰 이동합니다. 이 계산기는 마지막 월경일에 (주기 길이−14)일을 더해 수정 추정일을 산출합니다.",
+          "q": "마지막 월경일로 수정일을 어떻게 계산하나요?",
+        },
+        {
+          "a": "가임기는 약 6일로, 배란 5일 전과 배란 당일을 포함합니다. 정자는 여성의 생식 기관 내에서 최대 5일간 생존할 수 있으므로, 배란 전 성관계도 임신으로 이어질 수 있습니다.",
+          "q": "가임기란 무엇인가요?",
+        },
+        {
+          "a": "결과는 평균 월경 주기를 기반으로 한 추정치입니다. 실제 배란일은 개인마다 다르고 주기마다 다를 수 있습니다. 더 정확한 추적을 위해서는 기초 체온 측정이나 배란 테스트기를 사용하는 것이 좋습니다.",
+          "q": "이 계산기는 얼마나 정확한가요?",
+        },
+      ],
+      "inputs": {
+        "cycleLength": {
+          "help": "평균 월경 주기 일수. 일반적으로 21~35일이며 평균은 28일입니다.",
+          "label": "월경 주기 (일)",
+        },
+        "dateInput": {
+          "help": "마지막 월경 시작일 또는 출산 예정일을 입력하세요.",
+          "label": "날짜",
+        },
+        "mode": {
+          "help": "마지막 월경일(LMP) 또는 출산 예정일을 기준으로 계산합니다.",
+          "label": "계산 방식",
+        },
+      },
+      "keywords": [
+        "수정일 계산기",
+        "언제 임신했는지",
+        "가임기 계산기",
+        "배란일 계산기",
+        "출산 예정일",
+        "마지막 월경일",
+        "임신 계산",
+      ],
+      "options": {
+        "mode": {
+          "from_duedate": "출산 예정일 기준",
+          "from_lmp": "마지막 월경일(LMP) 기준",
+        },
+      },
+      "outputs": {
+        "conceptionDate": {
+          "help": "수정이 가장 가능성 높게 일어났다고 추정되는 날짜.",
+          "label": "추정 수정일",
+        },
+        "estimatedDueDate": {
+          "help": "수정 후 약 266일(38주) 뒤의 예상 출산일.",
+          "label": "출산 예정일",
+        },
+        "fertileWindowEnd": {
+          "help": "추정 수정일 5일 후 — 가임 가능 기간의 끝.",
+          "label": "가임기 종료일",
+        },
+        "fertileWindowStart": {
+          "help": "추정 수정일 5일 전 — 가임 가능 기간의 시작.",
+          "label": "가임기 시작일",
+        },
+      },
+      "short": "마지막 월경일 또는 출산 예정일을 기반으로 수정일과 가임기를 추정합니다.",
+      "title": "수정일 계산기",
+    },
+    "ru": {
+      "description": "Бесплатный калькулятор даты зачатия. Введите дату последней менструации или предполагаемую дату родов, чтобы оценить момент зачатия и благоприятное окно для беременности.",
+      "errors": {
+        "cycleLengthOutOfRange": "Длина цикла должна быть от 21 до 35 дней.",
+        "invalidDate": "Введите корректную дату в формате ГГГГ-ММ-ДД.",
+      },
+      "faq": [
+        {
+          "a": "Овуляция — и, следовательно, зачатие — происходит примерно на 14-й день после первого дня последней менструации при 28-дневном цикле. При более коротких или длинных циклах день овуляции смещается соответственно. Калькулятор прибавляет (длина цикла − 14) дней к дате последней менструации.",
+          "q": "Как рассчитывается дата зачатия по последней менструации?",
+        },
+        {
+          "a": "Фертильное окно охватывает около 6 дней: 5 дней до овуляции и сам день овуляции. Сперматозоиды могут выживать до 5 дней в женских половых путях, поэтому зачатие возможно и при половом акте до овуляции.",
+          "q": "Что такое фертильное окно?",
+        },
+        {
+          "a": "Результаты являются оценочными и основаны на среднем цикле. Фактический день овуляции варьируется от человека к человеку и от цикла к циклу. Для точного отслеживания рекомендуется измерять базальную температуру или использовать тесты на овуляцию.",
+          "q": "Насколько точен этот калькулятор?",
+        },
+      ],
+      "inputs": {
+        "cycleLength": {
+          "help": "Средняя продолжительность вашего цикла. Типичный диапазон: 21–35 дней; среднее — 28 дней.",
+          "label": "Длина менструального цикла (дни)",
+        },
+        "dateInput": {
+          "help": "Введите дату последней менструации или предполагаемую дату родов.",
+          "label": "Дата",
+        },
+        "mode": {
+          "help": "Рассчитать от первого дня последней менструации (ПМ) или от предполагаемой даты родов.",
+          "label": "Режим расчёта",
+        },
+      },
+      "keywords": [
+        "калькулятор даты зачатия",
+        "когда произошло зачатие",
+        "фертильное окно",
+        "калькулятор овуляции",
+        "дата родов",
+        "последняя менструация",
+        "расчёт беременности",
+      ],
+      "options": {
+        "mode": {
+          "from_duedate": "От предполагаемой даты родов",
+          "from_lmp": "От даты последней менструации",
+        },
+      },
+      "outputs": {
+        "conceptionDate": {
+          "help": "Приблизительная дата, когда наиболее вероятно произошло оплодотворение.",
+          "label": "Расчётная дата зачатия",
+        },
+        "estimatedDueDate": {
+          "help": "Ожидаемая дата родов: примерно 266 дней (38 недель) после зачатия.",
+          "label": "Предполагаемая дата родов",
+        },
+        "fertileWindowEnd": {
+          "help": "5 дней после расчётной даты зачатия — конец благоприятного периода.",
+          "label": "Конец фертильного окна",
+        },
+        "fertileWindowStart": {
+          "help": "За 5 дней до расчётной даты зачатия — начало благоприятного периода.",
+          "label": "Начало фертильного окна",
+        },
+      },
+      "short": "Определите дату зачатия по первому дню последней менструации или предполагаемой дате родов.",
+      "title": "Калькулятор даты зачатия",
+    },
+    "tr": {
+      "description": "Ücretsiz gebelik başlangıç tarihi hesaplayıcı. Son adet tarihinizi veya tahmini doğum tarihinizi girerek gebeliğin ne zaman oluştuğunu ve doğurgan pencerenizi öğrenin.",
+      "errors": {
+        "cycleLengthOutOfRange": "Döngü uzunluğu 21 ile 35 gün arasında olmalıdır.",
+        "invalidDate": "Lütfen YYYY-AA-GG formatında geçerli bir tarih girin.",
+      },
+      "faq": [
+        {
+          "a": "Yumurtlama (ovülasyon) ve dolayısıyla gebelik, 28 günlük bir adet döngüsünde SAT'tan yaklaşık 14 gün sonra gerçekleşir. Döngü 28 günden uzun veya kısa ise ovülasyon günü buna göre kayar. Bu hesaplayıcı, SAT'a (döngü uzunluğu − 14) gün ekleyerek gebelik tarihini tahmin eder.",
+          "q": "Gebelik tarihi son adet tarihinden nasıl hesaplanır?",
+        },
+        {
+          "a": "Doğurgan pencere yaklaşık 6 gün sürer: ovülasyondan önceki 5 gün ve ovülasyon günü. Spermler dişi üreme yolunda 5 güne kadar hayatta kalabildiğinden, ovülasyondan önce gerçekleşen ilişki de gebelikle sonuçlanabilir.",
+          "q": "Doğurgan pencere nedir?",
+        },
+        {
+          "a": "Bunlar ortalama döngü zamanlamasına dayalı tahminlerdir. Gerçek ovülasyon günü kişiden kişiye ve döngüden döngüye farklılık gösterir. Daha hassas takip için bazal vücut sıcaklığı (BVS) izleme veya ovülasyon test kitleri tercih edilebilir.",
+          "q": "Bu hesaplayıcı ne kadar doğru?",
+        },
+        {
+          "a": "İnsan gebeliği döllenme tarihinden itibaren yaklaşık 38 hafta (266 gün) ya da son adet tarihinden itibaren 40 hafta (280 gün) sürer. Standart Naegele kuralı SAT'a 280 gün ekler; bu, 28 günlük döngüde 14. günde ovülasyon olduğunda döllenme tarihine 266 gün eklemeye eşdeğerdir.",
+          "q": "Neden doğum tarihi döllenme tarihinden 266 gün sonradır?",
+        },
+      ],
+      "inputs": {
+        "cycleLength": {
+          "help": "Adet döngünüzün ortalama uzunluğu. Tipik aralık 21–35 gün; ortalama 28 gündür.",
+          "label": "Adet döngüsü uzunluğu (gün)",
+        },
+        "dateInput": {
+          "help": "Son adet tarihinizi (SAT) veya tahmini doğum tarihinizi girin.",
+          "label": "Tarih",
+        },
+        "mode": {
+          "help": "Son adet tarihinden (SAT) veya bilinen doğum tarihinden hesaplayın.",
+          "label": "Hesaplama modu",
+        },
+      },
+      "keywords": [
+        "hamilelik başlangıç tarihi",
+        "gebelik tarihi hesaplama",
+        "ovülasyon hesaplayıcı",
+        "doğum tarihi hesaplama",
+        "son adet tarihi",
+        "doğurgan dönem",
+        "ne zaman gebe kaldım",
+      ],
+      "options": {
+        "mode": {
+          "from_duedate": "Doğum tarihinden",
+          "from_lmp": "Son adet tarihinden (SAT)",
+        },
+      },
+      "outputs": {
+        "conceptionDate": {
+          "help": "Döllenmenin büyük olasılıkla gerçekleştiği yaklaşık tarih.",
+          "label": "Tahmini gebelik tarihi",
+        },
+        "estimatedDueDate": {
+          "help": "Döllenme tarihinden yaklaşık 266 gün (38 hafta) sonraki beklenen doğum tarihi.",
+          "label": "Tahmini doğum tarihi",
+        },
+        "fertileWindowEnd": {
+          "help": "Tahmini gebelik tarihinden 5 gün sonra; doğurgan dönemin sonu.",
+          "label": "Doğurgan dönem sonu",
+        },
+        "fertileWindowStart": {
+          "help": "Tahmini gebelik tarihinden 5 gün önce; doğurgan dönemin başlangıcı.",
+          "label": "Doğurgan dönem başlangıcı",
+        },
+      },
+      "short": "Son adet tarihinizden veya doğum tarihinizden gebelik başlangıç tarihini hesaplayın.",
+      "title": "Hamilelik Başlangıç Tarihi Hesaplayıcı",
+    },
+    "zh": {
+      "description": "免费受孕日期计算器。输入末次月经日期或预产期，估算受孕时间及可孕窗口期。",
+      "errors": {
+        "cycleLengthOutOfRange": "月经周期长度须在21至35天之间。",
+        "invalidDate": "请输入YYYY-MM-DD格式的有效日期。",
+      },
+      "faq": [
+        {
+          "a": "对于28天周期，排卵（即受孕）通常发生在末次月经首日后的第14天。周期较长或较短时，排卵日会相应前移或后移。本计算器将（周期长度−14）天加到末次月经日期上，得出受孕估算日期。",
+          "q": "如何从末次月经计算受孕日期？",
+        },
+        {
+          "a": "可孕窗口期约为6天：排卵前5天加上排卵当天。由于精子可在女性生殖道内存活最长5天，排卵前发生的性行为也可能导致怀孕。",
+          "q": "什么是可孕窗口期？",
+        },
+        {
+          "a": "结果是基于平均月经周期的估算。实际排卵日因人而异，也会因周期不同而变化。更精确的追踪方法包括基础体温监测或排卵试纸。",
+          "q": "这个计算器有多准确？",
+        },
+      ],
+      "inputs": {
+        "cycleLength": {
+          "help": "您月经周期的平均天数，正常范围为21–35天，平均28天。",
+          "label": "月经周期长度（天）",
+        },
+        "dateInput": {
+          "help": "输入末次月经日期或预产期。",
+          "label": "日期",
+        },
+        "mode": {
+          "help": "从末次月经（LMP）或已知预产期进行计算。",
+          "label": "计算方式",
+        },
+      },
+      "keywords": [
+        "受孕日期计算器",
+        "什么时候怀孕",
+        "排卵窗口期",
+        "排卵计算器",
+        "预产期计算",
+        "末次月经",
+        "怀孕计算",
+      ],
+      "options": {
+        "mode": {
+          "from_duedate": "从预产期",
+          "from_lmp": "从末次月经（LMP）",
+        },
+      },
+      "outputs": {
+        "conceptionDate": {
+          "help": "最可能发生受精的大致日期。",
+          "label": "估算受孕日期",
+        },
+        "estimatedDueDate": {
+          "help": "预计分娩日期，大约在受孕后266天（38周）。",
+          "label": "预产期",
+        },
+        "fertileWindowEnd": {
+          "help": "估算受孕日期后5天——可孕期结束。",
+          "label": "可孕窗口期结束",
+        },
+        "fertileWindowStart": {
+          "help": "估算受孕日期前5天——可孕期开始。",
+          "label": "可孕窗口期开始",
+        },
+      },
+      "short": "根据末次月经或预产期估算受孕日期和排卵窗口期。",
+      "title": "受孕日期计算器",
+    },
+  },
+  "icon": Any<String>,
+  "inputSchema": ZodObject {
+    "_cached": {
+      "keys": [
+        "mode",
+        "dateInput",
+        "cycleLength",
+      ],
+      "shape": {
+        "cycleLength": ZodDefault {
+          "_def": {
+            "defaultValue": [Function],
+            "description": undefined,
+            "errorMap": [Function],
+            "innerType": ZodNumber {
+              "_def": {
+                "checks": [
+                  {
+                    "kind": "int",
+                    "message": undefined,
+                  },
+                  {
+                    "inclusive": true,
+                    "kind": "min",
+                    "message": undefined,
+                    "value": 21,
+                  },
+                  {
+                    "inclusive": true,
+                    "kind": "max",
+                    "message": undefined,
+                    "value": 35,
+                  },
+                ],
+                "coerce": false,
+                "typeName": "ZodNumber",
+              },
+              "and": [Function],
+              "array": [Function],
+              "brand": [Function],
+              "catch": [Function],
+              "default": [Function],
+              "describe": [Function],
+              "isNullable": [Function],
+              "isOptional": [Function],
+              "max": [Function],
+              "min": [Function],
+              "nullable": [Function],
+              "nullish": [Function],
+              "optional": [Function],
+              "or": [Function],
+              "parse": [Function],
+              "parseAsync": [Function],
+              "pipe": [Function],
+              "promise": [Function],
+              "readonly": [Function],
+              "refine": [Function],
+              "refinement": [Function],
+              "safeParse": [Function],
+              "safeParseAsync": [Function],
+              "spa": [Function],
+              "step": [Function],
+              "superRefine": [Function],
+              "transform": [Function],
+              "~standard": {
+                "validate": [Function],
+                "vendor": "zod",
+                "version": 1,
+              },
+            },
+            "typeName": "ZodDefault",
+          },
+          "and": [Function],
+          "array": [Function],
+          "brand": [Function],
+          "catch": [Function],
+          "default": [Function],
+          "describe": [Function],
+          "isNullable": [Function],
+          "isOptional": [Function],
+          "nullable": [Function],
+          "nullish": [Function],
+          "optional": [Function],
+          "or": [Function],
+          "parse": [Function],
+          "parseAsync": [Function],
+          "pipe": [Function],
+          "promise": [Function],
+          "readonly": [Function],
+          "refine": [Function],
+          "refinement": [Function],
+          "safeParse": [Function],
+          "safeParseAsync": [Function],
+          "spa": [Function],
+          "superRefine": [Function],
+          "transform": [Function],
+          "~standard": {
+            "validate": [Function],
+            "vendor": "zod",
+            "version": 1,
+          },
+        },
+        "dateInput": ZodString {
+          "_def": {
+            "checks": [
+              {
+                "kind": "regex",
+                "message": "Date must be in YYYY-MM-DD format",
+                "regex": /\\^\\\\d\\{4\\}-\\\\d\\{2\\}-\\\\d\\{2\\}\\$/,
+              },
+            ],
+            "coerce": false,
+            "typeName": "ZodString",
+          },
+          "and": [Function],
+          "array": [Function],
+          "brand": [Function],
+          "catch": [Function],
+          "default": [Function],
+          "describe": [Function],
+          "isNullable": [Function],
+          "isOptional": [Function],
+          "nullable": [Function],
+          "nullish": [Function],
+          "optional": [Function],
+          "or": [Function],
+          "parse": [Function],
+          "parseAsync": [Function],
+          "pipe": [Function],
+          "promise": [Function],
+          "readonly": [Function],
+          "refine": [Function],
+          "refinement": [Function],
+          "safeParse": [Function],
+          "safeParseAsync": [Function],
+          "spa": [Function],
+          "superRefine": [Function],
+          "transform": [Function],
+          "~standard": {
+            "validate": [Function],
+            "vendor": "zod",
+            "version": 1,
+          },
+        },
+        "mode": ZodEnum {
+          "_cache": Set {
+            "from_lmp",
+            "from_duedate",
+          },
+          "_def": {
+            "typeName": "ZodEnum",
+            "values": [
+              "from_lmp",
+              "from_duedate",
+            ],
+          },
+          "and": [Function],
+          "array": [Function],
+          "brand": [Function],
+          "catch": [Function],
+          "default": [Function],
+          "describe": [Function],
+          "isNullable": [Function],
+          "isOptional": [Function],
+          "nullable": [Function],
+          "nullish": [Function],
+          "optional": [Function],
+          "or": [Function],
+          "parse": [Function],
+          "parseAsync": [Function],
+          "pipe": [Function],
+          "promise": [Function],
+          "readonly": [Function],
+          "refine": [Function],
+          "refinement": [Function],
+          "safeParse": [Function],
+          "safeParseAsync": [Function],
+          "spa": [Function],
+          "superRefine": [Function],
+          "transform": [Function],
+          "~standard": {
+            "validate": [Function],
+            "vendor": "zod",
+            "version": 1,
+          },
+        },
+      },
+    },
+    "_def": {
+      "catchall": ZodNever {
+        "_def": {
+          "typeName": "ZodNever",
+        },
+        "and": [Function],
+        "array": [Function],
+        "brand": [Function],
+        "catch": [Function],
+        "default": [Function],
+        "describe": [Function],
+        "isNullable": [Function],
+        "isOptional": [Function],
+        "nullable": [Function],
+        "nullish": [Function],
+        "optional": [Function],
+        "or": [Function],
+        "parse": [Function],
+        "parseAsync": [Function],
+        "pipe": [Function],
+        "promise": [Function],
+        "readonly": [Function],
+        "refine": [Function],
+        "refinement": [Function],
+        "safeParse": [Function],
+        "safeParseAsync": [Function],
+        "spa": [Function],
+        "superRefine": [Function],
+        "transform": [Function],
+        "~standard": {
+          "validate": [Function],
+          "vendor": "zod",
+          "version": 1,
+        },
+      },
+      "shape": [Function],
+      "typeName": "ZodObject",
+      "unknownKeys": "strip",
+    },
+    "and": [Function],
+    "array": [Function],
+    "augment": [Function],
+    "brand": [Function],
+    "catch": [Function],
+    "default": [Function],
+    "describe": [Function],
+    "isNullable": [Function],
+    "isOptional": [Function],
+    "nonstrict": [Function],
+    "nullable": [Function],
+    "nullish": [Function],
+    "optional": [Function],
+    "or": [Function],
+    "parse": [Function],
+    "parseAsync": [Function],
+    "pipe": [Function],
+    "promise": [Function],
+    "readonly": [Function],
+    "refine": [Function],
+    "refinement": [Function],
+    "safeParse": [Function],
+    "safeParseAsync": [Function],
+    "spa": [Function],
+    "superRefine": [Function],
+    "transform": [Function],
+    "~standard": {
+      "validate": [Function],
+      "vendor": "zod",
+      "version": 1,
+    },
+  },
+  "inputs": [
+    {
+      "defaultValue": "from_lmp",
+      "id": "mode",
+      "required": true,
+      "type": {
+        "kind": "select",
+        "options": [
+          {
+            "i18nKey": "from_lmp",
+            "value": "from_lmp",
+          },
+          {
+            "i18nKey": "from_duedate",
+            "value": "from_duedate",
+          },
+        ],
+      },
+    },
+    {
+      "defaultValue": "",
+      "id": "dateInput",
+      "required": true,
+      "type": {
+        "kind": "date",
+      },
+    },
+    {
+      "defaultValue": 28,
+      "id": "cycleLength",
+      "required": true,
+      "type": {
+        "integer": true,
+        "kind": "number",
+        "max": 35,
+        "min": 21,
+        "step": 1,
+        "unit": "day",
+      },
+    },
+  ],
+  "meta": {
+    "disclaimer": "This calculator provides estimates only. Actual conception date can vary. Consult a healthcare professional for clinical assessment.",
+    "references": [
+      {
+        "authority": "American College of Obstetricians and Gynecologists (ACOG)",
+        "title": "Methods for Estimating the Due Date — ACOG Committee Opinion 700",
+        "url": "https://www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2017/05/methods-for-estimating-the-due-date",
+      },
+      {
+        "authority": "NCBI StatPearls",
+        "title": "Calculating gestational age and due dates",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK442018/",
+      },
+    ],
+  },
+  "outputs": [
+    {
+      "format": "date",
+      "highlight": true,
+      "id": "conceptionDate",
+    },
+    {
+      "format": "date",
+      "id": "fertileWindowStart",
+    },
+    {
+      "format": "date",
+      "id": "fertileWindowEnd",
+    },
+    {
+      "format": "date",
+      "id": "estimatedDueDate",
+    },
+  ],
+  "priority": Any<String>,
+  "related": [
+    "pregnancy-weight",
+    "bmi-kids",
+  ],
+  "slug": Any<String>,
+  "tags": [
+    "pregnancy",
+    "conception",
+    "fertility",
+    "due date",
+    "health",
+  ],
+}
+`;

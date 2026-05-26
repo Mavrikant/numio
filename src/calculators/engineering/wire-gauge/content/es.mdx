@@ -1,0 +1,72 @@
+# Calculadora de sección de cable / Ampacity (AWG)
+
+## ¿Qué son AWG y ampacity?
+
+El sistema American Wire Gauge (AWG) es la norma de dimensionado de cables utilizada en EE. UU., Canadá y otros países. Los números AWG siguen una convención contraintuitiva: cuanto mayor es el número AWG, más delgado es el cable. El AWG 22 es un hilo fino para circuitos de señal de baja potencia, mientras que el AWG 4/0 es un cable de servicio pesado capaz de transportar cientos de amperios.
+
+**Ampacity** es la corriente eléctrica máxima continua que puede transportar un conductor sin superar su temperatura de operación segura. Los valores en esta calculadora proceden de la tabla NEC 310.15(B)(16) para conductores de cobre a 60°C en aire libre.
+
+**Diámetro (mm):** d = 0,127 × 92^((36 − AWG) / 39)
+
+**Sección (mm²):** A = π × (d/2)²
+
+**Resistencia CC por metro:** R/m = ρ / A, cobre: ρ = 1,724 × 10⁻⁸ Ω·m a 20°C
+
+**Caída de tensión (ida y vuelta):** V_caída = I × (R/m) × 2 × L
+
+Una caída de tensión superior al 3% en un circuito de derivación se considera excesiva según la NEC.
+
+## Cómo usar esta calculadora
+
+1. **Seleccionar calibre AWG**: De 22 AWG (más fino) a 4/0 AWG (más grueso).
+2. **Introducir corriente del circuito (A)**: Corriente nominal del circuito para el cálculo de caída de tensión.
+3. **Introducir longitud de ida (m)**: Distancia fuente-carga; la calculadora usa el doble automáticamente.
+4. **Introducir corriente de carga (A)** *(opcional)*: Para verificación de idoneidad si difiere de la corriente de circuito.
+5. **Leer los resultados**: Diámetro, sección, resistencia por metro, ampacity, caída de tensión y veredicto.
+
+## Ejemplos
+
+### Ejemplo 1 — Circuito de cocina 20 A residencial
+
+AWG 12, 15 m, 20 A.
+
+- Diámetro ≈ 2,053 mm, sección ≈ 3,309 mm²
+- Ampacity: **20 A**
+- Caída de tensión = 20 × 0,00521 × 2 × 15 = **3,13 V** (120 V → 2,6% — dentro del límite NEC)
+- Veredicto: **Adecuado**
+
+### Ejemplo 2 — Larga tirada a edificio auxiliar
+
+AWG 6, 60 m, alimentación 60 A.
+
+- Ampacity: **55 A** ← insuficiente para 60 A
+- Caída de tensión = 55 × 0,00130 × 2 × 60 = **8,57 V** (7,1% — demasiado alto)
+- Veredicto: **No adecuado** — cambiar a AWG 4
+
+### Ejemplo 3 — Tira LED de baja tensión
+
+AWG 18, 5 A, 10 m, 12 V.
+
+- Ampacity: **7 A** (suficiente para 5 A)
+- Caída de tensión = 5 × 0,02094 × 2 × 10 = **2,09 V** (17,4% de 12 V — ¡crítico!)
+- Veredicto: **No adecuado** — usar AWG 14 o acortar la tirada
+
+## Preguntas frecuentes
+
+### ¿Qué dice la NEC sobre el dimensionado de cables?
+La NEC (NFPA 70) exige que los conductores tengan una ampacity al menos igual a la carga no continua más el 125% de la carga continua.
+
+### ¿Por qué la numeración AWG parece invertida?
+El AWG se basa históricamente en el número de pasos de trefilado necesarios para producir un hilo de ese tamaño. Más trefilados = menor diámetro = mayor número AWG.
+
+### ¿Es necesario desclasificar para cables agrupados?
+Sí. Cuando varios conductores están agrupados en un conducto, la NEC Artículo 310 requiere un factor de corrección: 3-5 conductores = 80%, 6-8 conductores = 70%. Esta calculadora asume un solo conductor en aire libre.
+
+### ¿Cuál es la caída de tensión máxima recomendada?
+NEC recomienda: circuitos de derivación ≤ 3%; alimentador + derivación ≤ 5%.
+
+## Referencias
+
+- [NEC 310.15(B)(16) — Ampacidades permitidas](https://www.nfpa.org/codes-and-standards/all-codes-and-standards/list-of-codes-and-standards/detail?code=70) — NFPA 70
+- [Norma AWG hilo de cobre](https://www.astm.org/b0258-02r14.html) — ASTM B258
+- [Referencia calibre AWG](https://www.engineeringtoolbox.com/awg-wire-gauge-d_731.html) — Engineering Toolbox

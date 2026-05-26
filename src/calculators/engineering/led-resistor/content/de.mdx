@@ -1,0 +1,80 @@
+# LED-Vorwiderstand-Rechner
+
+## Was ist ein LED-Vorwiderstand?
+
+Eine LED (Leuchtdiode) ist ein Halbleiterbauelement, das bei Stromfluss Licht erzeugt. Im Gegensatz zu einem gewöhnlichen Widerstand oder einer Glühlampe besitzt eine LED keinen eingebauten Mechanismus zur Strombegrenzung. Ohne externen Vorwiderstand kann bereits eine geringfügige Erhöhung der Versorgungsspannung zu einem zerstörerischen Stromstoß führen, der die LED dauerhaft schädigt.
+
+Der in Reihe geschaltete Vorwiderstand ist die einfachste und zuverlässigste Lösung. Er nimmt die überschüssige Spannung (Differenz zwischen Versorgungsspannung und Flussspannung der LED) auf und wandelt sie in Wärme um, wodurch der LED-Strom auf einem sicheren Niveau gehalten wird.
+
+Die Grundformel ergibt sich direkt aus dem Ohmschen Gesetz:
+
+**R = (V_Versor − V_Fluss × n) / I_Fluss**
+
+Hierbei:
+- **R** = benötigter Widerstandswert in Ohm (Ω)
+- **V_Versor** = Gleichspannung der Versorgung (z. B. 5V, 12V)
+- **V_Fluss** = Flussspannung einer einzelnen LED in Volt (typisch 1,8V–3,6V je nach Farbe)
+- **n** = Anzahl der in Reihe geschalteten LEDs
+- **I_Fluss** = gewünschter LED-Strom in Ampere (z. B. 0,020A für 20mA)
+
+Die am Widerstand dissipierte Leistung berechnet sich zu:
+
+**P = (V_Versor − V_Fluss × n) × I_Fluss**
+
+## Bedienung des Rechners
+
+1. **Versorgungsspannung eingeben**: Gleichspannung der Stromquelle, z. B. 3,3V für Mikrocontroller-GPIO, 5V für USB, 12V für Kfz-Anwendungen.
+2. **LED-Flussspannung eingeben**: Entnehmen Sie V_f aus dem Datenblatt Ihrer LED. Rot/Gelb: ca. 2,0V; Blau/Weiß/Grün: ca. 3,0–3,4V.
+3. **Sollstrom in mA eingeben**: Standard-LEDs arbeiten typisch bei 20mA.
+4. **Anzahl der LEDs in Reihe eingeben**: Der Rechner multipliziert die Flussspannung einer LED mit dieser Anzahl.
+5. **Ergebnisse ablesen**: Genauer Widerstandswert, nächster E12-Normwert, Verlustleistung, tatsächlicher LED-Strom und Farbcode werden ausgegeben.
+
+## Rechenbeispiele
+
+### Beispiel 1 — LED an 5V
+
+Rote LED (V_f = 2,0V, I = 20mA) an 5V-Versorgung.
+
+- Spannung am Widerstand = 5,0 − 2,0 = 3,0V
+- R = 3,0 / 0,020 = **150Ω** (E12-Wert: 150Ω)
+- P = 3,0 × 0,020 = **0,060W** → 0,25-W-Widerstand verwenden
+- Farbcode: braun / grün / braun / gold
+
+### Beispiel 2 — Weiße LED an 12V
+
+Weiße LED (V_f = 3,2V, I = 20mA) an 12V.
+
+- R = (12,0 − 3,2) / 0,020 = **440Ω** → E12-Wert: 470Ω
+- P = 8,8 × 0,020 = **0,176W** → 0,5-W-Widerstand verwenden
+- Tatsächlicher Strom mit 470Ω: 8,8 / 470 = **18,7mA**
+
+### Beispiel 3 — Drei blaue LEDs in Reihe an 12V
+
+V_f je LED = 3,2V, Zielstrom = 20mA, Versorgung = 12V.
+
+- Gesamt-Flussspannung = 9,6V; Spannung am Widerstand = 2,4V
+- R = 2,4 / 0,020 = **120Ω** (E12-Wert: 120Ω)
+- P = 0,048W → 0,25-W-Widerstand ausreichend
+
+## Häufige Fragen
+
+### Warum benötigen LEDs einen Vorwiderstand?
+LEDs verhalten sich nicht linear: Ihr Strom steigt exponentiell mit der Spannung. Ohne Widerstand zerstört ein winziger Spannungsanstieg die LED innerhalb von Millisekunden.
+
+### Was ist die E12-Widerstandsreihe?
+E12 ist eine Norm der Electronic Industries Alliance (EIA) mit 12 bevorzugten Widerstandswerten pro Dekade: 10, 12, 15, 18, 22, 27, 33, 39, 47, 56, 68, 82 — und deren Dekadenmultiplikationen.
+
+### Warum wird auf den nächsten E12-Wert aufgerundet?
+Aufrunden ergibt einen höheren Widerstandswert, was den LED-Strom leicht reduziert. Das ist die sichere Richtung: Die LED bleibt innerhalb ihrer Nennstromgrenzen.
+
+### Welche Nennleistung soll der Widerstand haben?
+Mindestens das Doppelte der berechneten Verlustleistung. Bei 0,08W empfiehlt sich ein 0,25-W-Widerstand.
+
+### Kann man bei einem Konstantstromtreiber auf den Widerstand verzichten?
+Ja. Konstantstromtreiber regeln den Strom direkt und machen einen Vorwiderstand überflüssig. Für einfache Schaltungen mit fester Versorgungsspannung ist der Widerstand jedoch die kostengünstigste Lösung.
+
+## Referenzen
+
+- [Electronics Tutorials — LED-Vorwiderstand](https://www.electronics-tutorials.ws/demoboard/led-resistor.html) — Electronics Tutorials
+- [EIA E-Reihe Normwerte](https://www.eia.org/) — Electronic Industries Alliance
+- [LED Datenblatt — Flussspannung](https://www.vishay.com/leds/) — Vishay Intertechnology

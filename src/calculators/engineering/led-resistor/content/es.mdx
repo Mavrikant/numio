@@ -1,0 +1,80 @@
+# Calculadora de resistencia LED
+
+## ¿Qué es una resistencia limitadora de corriente para LED?
+
+Un LED (diodo emisor de luz) es un componente semiconductor que produce luz cuando la corriente lo atraviesa. A diferencia de una resistencia ordinaria o una bombilla incandescente, un LED no tiene un mecanismo incorporado para limitar la corriente. Sin una resistencia externa, incluso un pequeño aumento en la tensión de alimentación puede provocar una peligrosa sobrecorriente que destruye permanentemente el LED.
+
+La resistencia en serie es la solución más sencilla y fiable. Absorbe la tensión excedente (diferencia entre la tensión de alimentación y la tensión directa del LED) convirtiéndola en calor, manteniendo la corriente del LED en un nivel seguro.
+
+La fórmula fundamental se deriva directamente de la Ley de Ohm:
+
+**R = (V_aliment − V_directa × n) / I_directo**
+
+Donde:
+- **R** = resistencia requerida en ohmios (Ω)
+- **V_aliment** = tensión continua de alimentación (p. ej., 5V, 12V)
+- **V_directa** = tensión directa de un LED en voltios (típicamente 1,8V–3,6V según el color)
+- **n** = número de LEDs en serie
+- **I_directo** = corriente LED deseada en amperios (p. ej., 0,020A para 20mA)
+
+La potencia disipada por la resistencia es:
+
+**P = (V_aliment − V_directa × n) × I_directo**
+
+## Cómo usar esta calculadora
+
+1. **Introduce la tensión de alimentación**: Tensión continua de tu fuente de alimentación — 3,3V para GPIO de microcontrolador, 5V para USB, 12V para aplicaciones de automoción.
+2. **Introduce la tensión directa del LED**: Consulta la hoja de datos de tu LED. Valores comunes: rojo/amarillo ≈ 2,0V; azul/blanco/verde ≈ 3,0V–3,4V.
+3. **Introduce la corriente deseada en mA**: Los LEDs estándar funcionan típicamente a 20mA.
+4. **Introduce el número de LEDs en serie**: La calculadora multiplica la tensión directa de un LED por este número.
+5. **Lee los resultados**: Resistencia exacta, valor E12 estándar, potencia disipada, corriente LED real y código de colores.
+
+## Ejemplos
+
+### Ejemplo 1 — LED en 5V
+
+LED rojo (V_f = 2,0V, I = 20mA) con alimentación de 5V.
+
+- Tensión en la resistencia = 5,0 − 2,0 = 3,0V
+- R = 3,0 / 0,020 = **150Ω** (valor E12: 150Ω)
+- P = 3,0 × 0,020 = **0,060W** — resistencia de 1/4W es suficiente
+- Código de colores: marrón / verde / marrón / oro
+
+### Ejemplo 2 — LED blanco en 12V
+
+LED blanco (V_f = 3,2V, I = 20mA) en 12V.
+
+- R = (12,0 − 3,2) / 0,020 = **440Ω** → valor E12: 470Ω
+- P = 8,8 × 0,020 = **0,176W** — usar resistencia de 1/2W
+- Corriente real con 470Ω: 8,8 / 470 = **18,7mA**
+
+### Ejemplo 3 — Tres LEDs azules en serie en 12V
+
+V_f por LED = 3,2V, corriente objetivo = 20mA, alimentación = 12V.
+
+- Tensión directa total = 9,6V; tensión en la resistencia = 2,4V
+- R = 2,4 / 0,020 = **120Ω** (valor E12: 120Ω)
+- P = 0,048W — resistencia de 1/4W suficiente
+
+## Preguntas frecuentes
+
+### ¿Por qué los LEDs necesitan una resistencia limitadora de corriente?
+Los LEDs son componentes no lineales: su corriente aumenta exponencialmente con la tensión. Sin resistencia, un pequeño aumento de tensión destruye el LED en milisegundos.
+
+### ¿Qué es la serie de resistencias E12?
+E12 es un conjunto de 12 valores preferidos por década definido por la EIA: 10, 12, 15, 18, 22, 27, 33, 39, 47, 56, 68, 82 (y sus múltiplos de década).
+
+### ¿Por qué redondear al valor estándar superior?
+Redondear hacia arriba da una resistencia mayor, reduciendo ligeramente la corriente del LED. Es la dirección segura: el LED permanece dentro de su corriente nominal.
+
+### ¿Qué potencia nominal debo elegir?
+Siempre al menos el doble de la potencia disipada calculada. Para 0,08W, usa una resistencia de 0,25W.
+
+### ¿Puedo prescindir de la resistencia con un controlador de corriente constante?
+Sí. Los controladores de corriente constante regulan directamente la corriente y eliminan la necesidad de una resistencia. Para circuitos simples con tensión fija, la resistencia sigue siendo la solución más económica.
+
+## Referencias
+
+- [Electronics Tutorials — Resistencia LED](https://www.electronics-tutorials.ws/demoboard/led-resistor.html) — Electronics Tutorials
+- [Norma EIA Serie E de resistencias](https://www.eia.org/) — Electronic Industries Alliance
+- [Referencia tensión directa LED](https://www.vishay.com/leds/) — Vishay Intertechnology

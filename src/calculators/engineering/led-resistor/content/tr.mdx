@@ -1,0 +1,101 @@
+# LED Direnç Hesaplayıcı
+
+## LED Akım Sınırlama Direnci Nedir?
+
+LED (Işık Yayan Diyot), içinden akım geçtiğinde ışık üreten bir yarı iletken bileşendir. Normal bir direnç veya akkor ampulün aksine, LED kendi içinde akımı sınırlayan bir mekanizmaya sahip değildir. Bu nedenle dış bir akım sınırlama direnci olmadan, besleme gerilimindeki küçük bir artış bile LED'i kalıcı olarak tahrip edecek büyük bir akım sürüşüne yol açabilir.
+
+Seri bağlı akım sınırlama direnci en basit ve güvenilir çözümdür. Fazla gerilimi (besleme gerilimi ile LED ileri gerilimi arasındaki fark) ısıya dönüştürerek tüketen bu direnç, LED akımını güvenli ve öngörülebilir bir düzeyde tutar.
+
+Temel formül doğrudan Ohm Kanunu'ndan türetilir:
+
+**R = (V_besleme − V_ileri × n) / I_ileri**
+
+Burada:
+- **R** = gereken direnç, ohm cinsinden (Ω)
+- **V_besleme** = DC besleme gerilimi (örn. 5V, 12V)
+- **V_ileri** = tek bir LED'in ileri gerilimi (renke bağlı olarak tipik 1.8V–3.6V)
+- **n** = seri bağlı LED sayısı
+- **I_ileri** = istenen LED akımı, amper cinsinden (örn. 20mA için 0.020A)
+
+Dirençte harcanan güç şöyle hesaplanır:
+
+**P = (V_besleme − V_ileri × n) × I_ileri**
+
+Bu değer, doğru direnç watt sınıflamasını seçmek için kritiktir.
+
+## Nasıl Kullanılır?
+
+1. **Besleme Gerilimini Girin**: Güç kaynağınızın DC gerilimini girin — mikrodenetleyici GPIO pini için 3.3V, USB güç kaynağı için 5V veya otomotiv uygulamaları için 12V olabilir.
+
+2. **LED İleri Gerilimini Girin**: LED'inizin veri sayfasından V_f değerini kontrol edin. Kırmızı ve sarı LED'ler için yaklaşık 2.0V, mavi, beyaz ve yeşil LED'ler için 3.0V–3.4V tipik değerlerdir.
+
+3. **İstenen Akımı mA Cinsinden Girin**: Standart LED'ler genellikle 20mA'de çalışır. Yüksek parlaklıklı LED'ler daha az (1–5mA) gerektirebilir.
+
+4. **Seri LED Sayısını Girin**: Tek bir dirençten birden fazla LED sürüyorsanız bunları seri bağlayın. Hesaplayıcı, tek LED ileri gerilimini bu sayıyla çarpar.
+
+5. **Sonuçları Okuyun**: Hesaplayıcı şunları gösterir:
+   - Tam hesaplanan direnç değeri
+   - En yakın E12 standart değeri (güvenlik için yukarı yuvarlanmış)
+   - Dirençte harcanan güç
+   - Standart dirençle gerçek LED akımı
+   - Standart direnç için 4 bantlı renk kodu
+
+## Örnekler
+
+### Örnek 1 — Klasik 5V LED Devresi
+
+5V USB güç kaynağından kırmızı bir LED (V_f = 2.0V, I = 20mA) sürmek istiyorsunuz.
+
+**Hesaplama:**
+- Direnç üzerindeki gerilim = 5.0 − 2.0 = 3.0V
+- Tam R = 3.0 / 0.020 = **150Ω**
+- E12 standardı: 150Ω (E12 serisinde mevcut)
+- Güç: 3.0 × 0.020 = **0.060W**
+- Renk kodu: kahverengi / yeşil / kahverengi / altın
+
+Standart 150Ω, 1/4W direnç burada mükemmel çalışır.
+
+### Örnek 2 — 12V'ta Beyaz LED
+
+12V beslemeden beyaz LED (V_f = 3.2V, I = 20mA) çalıştırmak istiyorsunuz.
+
+**Hesaplama:**
+- Direnç üzerindeki gerilim = 12.0 − 3.2 = 8.8V
+- Tam R = 8.8 / 0.020 = **440Ω**
+- E12 standardı: 470Ω (bir sonraki yüksek değer)
+- Güç: 8.8 × 0.020 = **0.176W** — 0.5W direnç kullanın
+- 470Ω ile gerçek akım: 8.8 / 470 = **18.7mA** (güvenli aralıkta)
+
+### Örnek 3 — 12V'tan Seri Üç Mavi LED
+
+Seri üç mavi LED (her biri V_f = 3.2V), hedef I = 20mA, besleme = 12V.
+
+**Hesaplama:**
+- Toplam V_ileri = 3.2 × 3 = 9.6V
+- Direnç üzerindeki gerilim = 12.0 − 9.6 = 2.4V
+- Tam R = 2.4 / 0.020 = **120Ω**
+- E12 standardı: 120Ω (E12 serisinde)
+- Güç: 2.4 × 0.020 = **0.048W** — 1/4W direnç yeterli
+
+## Sıkça Sorulan Sorular
+
+### LED'ler neden akım sınırlama direncine ihtiyaç duyar?
+LED'ler doğrusal olmayan bileşenlerdir. Akımları gerilimle üstel olarak artar. Direnç olmadan, küçük bir gerilim artışı milisaniyeler içinde LED'i tahrip eden muazzam bir akım artışına neden olur. Direnç, akımı kontrol etmek için gereken lineer, kararlı gerilim düşümünü sağlar.
+
+### E12 direnç serisi nedir?
+E12, Elektronik Endüstriler Birliği (EIA) tarafından tanımlanan her dekad için 12 tercih edilen değer setidir: 10, 12, 15, 18, 22, 27, 33, 39, 47, 56, 68, 82 (ve onların dekad katları). Bunlar dünya genelinde elektronik tedarikçilerinde kolayca bulunabilen direnç değerleridir.
+
+### Neden en yakın standart değere yukarı yuvarlıyoruz?
+Hesaplanan tam direnç, standart bir direnç değeriyle nadiren örtüşür. Yukarı yuvarlamak daha yüksek direnç verir ve LED akımını hedefin biraz altına düşürür. Bu güvenli yöndür — LED korunur ve parlaklık pratikte neredeyse etkilenmez.
+
+### Çok düşük direnç kullanırsam ne olur?
+LED, maksimum rated değerinin üzerinde akım çekecektir. Bu, LED jonksiyonunda aşırı ısıya yol açar, bozulmayı hızlandırır ve anlık arızaya neden olabilir. Her zaman hesaplanan tam değere eşit veya daha büyük bir direnç kullanın.
+
+### Sabit akım sürücüsü kullanırsam direnci atlayabilir miyim?
+Evet — sabit akım sürücüleri, ayrı bir dirence gerek kalmadan akımı doğrudan düzenler. Ancak sabit besleme gerilimine sahip basit devreler için direnç en uygun maliyetli ve güvenilir çözüm olmaya devam eder.
+
+## Kaynaklar
+
+- [Electronics Tutorials — LED Direnç](https://www.electronics-tutorials.ws/demoboard/led-resistor.html) — Electronics Tutorials
+- [EIA Direnç Değerleri Standardı (E-serisi)](https://www.eia.org/) — Electronic Industries Alliance
+- [LED İleri Gerilim Referansı](https://www.vishay.com/leds/) — Vishay Intertechnology

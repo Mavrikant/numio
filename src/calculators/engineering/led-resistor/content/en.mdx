@@ -1,0 +1,101 @@
+# LED Resistor Calculator
+
+## What is an LED Current-Limiting Resistor?
+
+An LED (Light Emitting Diode) is a semiconductor device that produces light when current flows through it. Unlike a regular resistor or incandescent bulb, an LED does not have a built-in mechanism to limit the current flowing through it. This means that without an external current-limiting resistor, even a small increase in supply voltage can result in a rapid, destructive surge of current that permanently damages the LED.
+
+The current-limiting resistor — placed in series with the LED — is the simplest and most reliable solution. It works by consuming the excess voltage (the difference between the supply voltage and the LED's forward voltage) and converting it to heat, thereby keeping the LED current at a safe, predictable level.
+
+The governing formula is derived directly from Ohm's Law:
+
+**R = (V_supply − V_forward × n) / I_forward**
+
+Where:
+- **R** = required resistance in ohms (Ω)
+- **V_supply** = DC supply voltage (e.g., 5V, 12V)
+- **V_forward** = forward voltage of a single LED in volts (typically 1.8V–3.6V depending on color)
+- **n** = number of LEDs connected in series
+- **I_forward** = desired LED current in amperes (e.g., 0.020A for 20mA)
+
+The power dissipated by the resistor is given by:
+
+**P = (V_supply − V_forward × n) × I_forward**
+
+This power is important for selecting the correct resistor wattage.
+
+## How to Use This Calculator
+
+1. **Enter the Supply Voltage**: This is the DC voltage of your power source — for example, 3.3V for a microcontroller GPIO pin, 5V for a USB power source, or 12V for automotive applications.
+
+2. **Enter the LED Forward Voltage**: Check your LED's datasheet for the V_f specification. Common values are approximately 2.0V for red and yellow LEDs, and 3.0V–3.4V for blue, white, and green LEDs.
+
+3. **Enter the Desired Current in mA**: Standard LEDs typically operate at 20mA. High-brightness LEDs may require less (1–5mA for indicator duty). Infrared LEDs sometimes use 50–100mA in pulse mode.
+
+4. **Enter the Number of LEDs in Series**: If you are driving multiple LEDs from a single resistor, connect them in series. The calculator multiplies the single LED forward voltage by this count.
+
+5. **Read the Results**: The calculator shows:
+   - The exact calculated resistance
+   - The nearest E12 standard resistor value (rounded up for safety)
+   - Power dissipated by the resistor
+   - Actual LED current with the standard resistor
+   - The 4-band color code for the standard resistor
+
+## Examples
+
+### Example 1 — Classic 5V LED Circuit
+
+You want to drive a red LED (V_f = 2.0V, I = 20mA) from a 5V USB power supply.
+
+**Calculation:**
+- Voltage across resistor = 5.0 − 2.0 = 3.0V
+- Exact R = 3.0 / 0.020 = **150Ω**
+- E12 standard: 150Ω (already in E12 series)
+- Power: 3.0 × 0.020 = **0.060W**
+- Color code: brown / green / brown / gold
+
+A standard 150Ω, 1/4W resistor works perfectly here.
+
+### Example 2 — White LED on 12V
+
+You want to run a white LED (V_f = 3.2V, I = 20mA) from a 12V supply.
+
+**Calculation:**
+- Voltage across resistor = 12.0 − 3.2 = 8.8V
+- Exact R = 8.8 / 0.020 = **440Ω**
+- E12 standard: 470Ω (next higher value)
+- Power: 8.8 × 0.020 = **0.176W** — use a 0.5W resistor
+- Actual current with 470Ω: 8.8 / 470 = **18.7mA** (within safe range)
+
+### Example 3 — Three Blue LEDs in Series from 12V
+
+Three blue LEDs (V_f = 3.2V each) in series, target I = 20mA, supply = 12V.
+
+**Calculation:**
+- Total V_forward = 3.2 × 3 = 9.6V
+- Voltage across resistor = 12.0 − 9.6 = 2.4V
+- Exact R = 2.4 / 0.020 = **120Ω**
+- E12 standard: 120Ω (in E12 series)
+- Power: 2.4 × 0.020 = **0.048W** — use a 1/4W resistor
+
+## FAQ
+
+### Why do LEDs need a current-limiting resistor?
+LEDs are non-linear devices. Their current rises exponentially with voltage. Without a resistor, a tiny voltage increase causes an enormous current increase that destroys the LED within milliseconds. The resistor provides the linear, stable voltage drop needed to control current.
+
+### What is the E12 resistor series?
+E12 is a set of 12 preferred values per decade defined by the Electronic Industries Alliance (EIA): 10, 12, 15, 18, 22, 27, 33, 39, 47, 56, 68, 82 (and their decade multiples). These are the resistor values readily available at electronics suppliers worldwide.
+
+### Why round up to the nearest standard value?
+The exact calculated resistance rarely matches a standard resistor value. Rounding up gives a higher resistance, which reduces the LED current slightly below the target. This is the safe direction — the LED is protected, and brightness is barely affected in practice.
+
+### What happens if I use too low a resistance?
+The LED will draw more current than its rated maximum. This causes excess heat within the LED junction, accelerating degradation and potentially causing immediate failure. Always use a resistance equal to or greater than the calculated exact value.
+
+### Can I skip the resistor if I use a constant current driver?
+Yes — constant current drivers regulate the current directly, eliminating the need for a separate resistor. However, for simple circuits with a fixed supply voltage, a resistor remains the most cost-effective and reliable solution.
+
+## References
+
+- [Electronics Tutorials — LED Resistor](https://www.electronics-tutorials.ws/demoboard/led-resistor.html) — Electronics Tutorials
+- [EIA Standard for Resistor Values (E-series)](https://www.eia.org/) — Electronic Industries Alliance
+- [LED Forward Voltage Reference](https://www.vishay.com/leds/) — Vishay Intertechnology

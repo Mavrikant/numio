@@ -1,0 +1,95 @@
+# Lean Body Mass Calculator
+
+Your lean body mass (LBM) — also called fat-free mass (FFM) — is everything your body is made of except fat. It includes muscle tissue, bones, organs, blood, and water. Knowing your LBM is one of the most useful metrics for athletes, fitness enthusiasts, and anyone interested in understanding their body composition beyond a simple scale number or BMI.
+
+## What Is Lean Body Mass?
+
+Lean body mass is the component of your total body weight that is not fat. Mathematically:
+
+**LBM = Total Body Weight − Fat Mass**
+
+A person weighing 80 kg with 20% body fat has a fat mass of 16 kg and an LBM of 64 kg.
+
+LBM is important because it is the metabolically active component of your body. Muscle, liver, kidneys, and heart tissue burn many more calories at rest than fat tissue. This is why two people of identical weight can have very different calorie needs based on their body composition.
+
+### The Three Formulas
+
+This calculator supports three validated anthropometric LBM estimation formulas:
+
+**Boer (1984)** — Recommended for general use. Derived from a clinical study of intensive care patients (Boer P., *Critical Care Medicine*, 1984):
+- Male: LBM = 0.407 × W + 0.267 × H − 19.2
+- Female: LBM = 0.252 × W + 0.473 × H − 48.3
+
+Where W = weight in kg, H = height in cm.
+
+**James (1976)** — From the original HMSO research on obesity (James WPT, 1976):
+- Male: LBM = 1.1 × W − 128 × (W/H)²
+- Female: LBM = 1.07 × W − 148 × (W/H)²
+
+Note: The James formula can produce negative or unrealistic values for individuals with a very high weight-to-height ratio (i.e., very obese). Use with caution.
+
+**Hume (1966)** — One of the earliest validated formulas (Hume R., *J Clin Pathol*, 1966):
+- Male: LBM = 0.3281 × W + 0.33929 × H − 29.5336
+- Female: LBM = 0.29569 × W + 0.41813 × H − 43.2933
+
+## How to Use This Calculator
+
+1. **Select your biological sex** — this determines which formula constants apply.
+2. **Enter your weight** in kilograms. Accurate results require accurate input; weigh yourself in the morning before eating.
+3. **Enter your height** in centimetres.
+4. **Choose your formula** — Boer is recommended for most users. If you want to compare results, try all three.
+5. **Review your results** — the calculator shows your estimated LBM in kg and lb, estimated body fat mass, and body fat percentage.
+
+## Examples
+
+### Example 1: Male, 75 kg, 178 cm (Boer)
+
+LBM = 0.407 × 75 + 0.267 × 178 − 19.2
+= 30.525 + 47.526 − 19.2
+= **58.85 kg** (129.7 lb)
+
+Body fat mass = 75 − 58.85 = **16.15 kg**
+Body fat % = 16.15 / 75 × 100 = **21.5%**
+
+### Example 2: Female, 62 kg, 165 cm (Boer)
+
+LBM = 0.252 × 62 + 0.473 × 165 − 48.3
+= 15.624 + 78.045 − 48.3
+= **45.37 kg** (100.0 lb)
+
+Body fat mass = 62 − 45.37 = **16.63 kg**
+Body fat % = 16.63 / 62 × 100 = **26.8%**
+
+### Example 3: Formula Comparison (Male, 85 kg, 180 cm)
+
+| Formula | LBM (kg) |
+|---------|---------|
+| Boer    | 65.05   |
+| James   | 63.28   |
+| Hume    | 60.75   |
+
+Results vary between formulas because each was derived from a different study population. Use Boer as your baseline.
+
+## Frequently Asked Questions
+
+**Why is LBM more useful than total body weight?**
+Total body weight doesn't tell you what you're made of. Two people at 80 kg may be entirely different physically — one lean and muscular, another with high body fat. LBM gives you insight into what drives your metabolism. Tracking LBM over time tells you whether you're gaining muscle or losing it during a diet or training program.
+
+**Which formula should I use?**
+For most adults, use **Boer (1984)**. It performs well across a wide range of body compositions and heights. The James formula can give unreliable results in individuals with high BMI because the squared term amplifies errors. Hume is reliable but was derived from a relatively narrow clinical dataset.
+
+**How does LBM relate to my protein needs?**
+Nutritionists commonly recommend 1.6–2.2 g of protein per kg of LBM per day for people doing resistance training. If your LBM is 60 kg, that's 96–132 g of protein daily. Using LBM rather than total body weight prevents overestimation of protein needs in individuals with high body fat.
+
+**Can I increase my LBM?**
+Yes. Progressive resistance training (weightlifting, bodyweight exercises) stimulates muscle protein synthesis and increases LBM over time. Adequate protein intake and caloric surplus (or maintenance calories) are also needed. Conversely, severe caloric restriction without resistance training typically causes loss of both fat and LBM.
+
+**Is LBM the same as muscle mass?**
+No. LBM includes muscle but also bones, organs, connective tissue, blood, and water. Skeletal muscle mass alone is roughly 30–55% of total body weight in adults. You cannot separate these components with an anthropometric formula — only DXA scanning, bioelectrical impedance analysis (BIA), or similar techniques provide tissue-level breakdowns.
+
+## References
+
+1. Boer P. (1984). Estimated lean body mass as an index for normalization of body fluid volumes in humans. *Critical Care Medicine*, 12(3), 190–194. [doi:10.1097/00003246-198403000-00006](https://doi.org/10.1097/00003246-198403000-00006)
+2. Hume R. (1966). Prediction of lean body mass from height and weight. *Journal of Clinical Pathology*, 19(4), 389–391. [doi:10.1136/jcp.19.4.389](https://doi.org/10.1136/jcp.19.4.389)
+3. James WPT. (1976). Research on Obesity: A Report of the DHSS/MRC Group. HMSO, London.
+4. American Council on Exercise (ACE). Body Fat Classifications. [acefitness.org](https://www.acefitness.org/)

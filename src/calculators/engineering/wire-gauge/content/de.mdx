@@ -1,0 +1,72 @@
+# Kabelquerschnitt / Ampacity-Rechner (AWG)
+
+## Was sind AWG und Strombelastbarkeit?
+
+Das American Wire Gauge (AWG) System ist die standardisierte Leiterbemessungsnorm, die in den USA, Kanada und mehreren anderen Ländern verwendet wird. AWG-Nummern folgen einer kontraintuitiven Konvention: Je größer die AWG-Nummer, desto dünner der Leiter. AWG 22 ist ein feiner Draht für Niederspannungssignalkreise, AWG 4/0 ist ein Schwerlastkabel für hunderte Ampere.
+
+**Ampacity** bezeichnet den maximalen Dauerstrom, den ein Leiter tragen kann, ohne seine sichere Betriebstemperatur zu überschreiten. Die Werte in diesem Rechner stammen aus NEC-Tabelle 310.15(B)(16) für Kupferleiter in freier Luft bei 60°C.
+
+**Durchmesser (mm):** d = 0,127 × 92^((36 − AWG) / 39)
+
+**Querschnittsfläche (mm²):** A = π × (d/2)²
+
+**Gleichstromwiderstand je Meter:** R/m = ρ / A, Kupfer: ρ = 1,724 × 10⁻⁸ Ω·m bei 20°C
+
+**Spannungsfall (Hin- und Rückleiter):** V_fall = I × (R/m) × 2 × L
+
+Ein Spannungsfall über 3 % im Endstromkreis gilt nach NEC als übermäßig.
+
+## Bedienung des Rechners
+
+1. **Leitungsquerschnitt (AWG) wählen**: Von 22 AWG (feinst) bis 4/0 AWG (dickst).
+2. **Schaltungsstrom (A) eingeben**: Der vom Stromkreis zu tragende Nennstrom.
+3. **Einfache Leitungslänge (m) eingeben**: Entfernung von Quelle zu Last; der Rechner verdoppelt diesen Wert.
+4. **Laststrom (A) eingeben** *(optional)*: Für die Eignungsprüfung, wenn er vom Schaltungsstrom abweicht.
+5. **Ergebnisse ablesen**: Durchmesser, Querschnitt, Widerstand je Meter, Strombelastbarkeit, Spannungsfall und Eignungsurteil.
+
+## Rechenbeispiele
+
+### Beispiel 1 — Wohngebäude, 20-A-Küchenkreis
+
+AWG 12-Leiter, 15 m Leitungslänge, 20 A.
+
+- Durchmesser ≈ 2,053 mm, Fläche ≈ 3,309 mm²
+- Strombelastbarkeit: **20 A**
+- Spannungsfall = 20 × 0,00521 × 2 × 15 = **3,13 V** (120 V → 2,6 % — innerhalb des NEC-Limits)
+- Ergebnis: **Geeignet**
+
+### Beispiel 2 — Langer Zuleitungskreis
+
+AWG 6, 60 m, 60-A-Zuleitung.
+
+- Strombelastbarkeit: **55 A** ← für 60 A nicht ausreichend
+- Spannungsfall = 55 × 0,00130 × 2 × 60 = **8,57 V** (7,1 % — zu hoch)
+- Ergebnis: **Nicht geeignet** — auf AWG 4 aufwerten
+
+### Beispiel 3 — LED-Streifen 12 V
+
+AWG 18, 5 A, 10 m, 12-V-System.
+
+- Strombelastbarkeit: **7 A** (für 5 A ausreichend)
+- Spannungsfall = 5 × 0,02094 × 2 × 10 = **2,09 V** (17,4 % von 12 V — kritisch!)
+- Ergebnis: **Nicht geeignet** — AWG 14 verwenden oder Leitungslänge verkürzen
+
+## Häufige Fragen
+
+### Was schreibt die NEC zur Leitungsauswahl vor?
+NEC (NFPA 70) verlangt, dass Leiter so dimensioniert werden, dass ihre Strombelastbarkeit mindestens der Nicht-Dauerlast plus 125 % der Dauerlast entspricht.
+
+### Warum erscheint die AWG-Nummerierung umgekehrt?
+AWG basiert historisch auf der Anzahl der Ziehschritte zur Herstellung eines Leiters der entsprechenden Stärke. Mehr Züge = kleinerer Durchmesser = höhere AWG-Nummer.
+
+### Muss für gebündelte Kabel gedimmt werden?
+Ja. Sind mehrere stromführende Leiter in einem Rohr gebündelt, gilt nach NEC Artikel 310 ein Korrekturfaktor: 3–5 Leiter = 80 %, 6–8 Leiter = 70 % der Tabellen-Strombelastbarkeit. Dieser Rechner gilt für einen einzelnen Leiter in freier Luft.
+
+### Welchen maximalen Spannungsfall empfiehlt die NEC?
+Endstromkreise ≤ 3 %; Speise- und Endstromkreis kombiniert ≤ 5 %.
+
+## Referenzen
+
+- [NEC 310.15(B)(16) — Zulässige Strombelastbarkeit](https://www.nfpa.org/codes-and-standards/all-codes-and-standards/list-of-codes-and-standards/detail?code=70) — NFPA 70
+- [AWG Kupferleiter-Norm](https://www.astm.org/b0258-02r14.html) — ASTM B258
+- [AWG Leitungsreferenz](https://www.engineeringtoolbox.com/awg-wire-gauge-d_731.html) — Engineering Toolbox

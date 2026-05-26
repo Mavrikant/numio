@@ -1,0 +1,79 @@
+# Tel Kalınlığı / Ampacity Hesaplayıcı (AWG)
+
+## AWG ve Tel Ampacity'si Nedir?
+
+American Wire Gauge (AWG) sistemi, Amerika Birleşik Devletleri, Kanada ve diğer birçok ülkede kullanılan standart tel boyutlandırma sistemidir. AWG numaraları sezgiye aykırı bir kurala göre çalışır: AWG numarası ne kadar büyükse tel o kadar ince olur. AWG 22, düşük güçlü sinyal devreleri için ince bir teldir; AWG 4/0 ise yüzlerce amper taşıyabilen ağır hizmet kablosudur.
+
+**Ampacity** — "amper kapasitesi" kavramı — bir iletkenin güvenli çalışma sıcaklığını aşmadan taşıyabileceği maksimum sürekli akımdır. Ampacity'nin aşılması izolasyonun aşırı ısınmasına, bozulmasına ve potansiyel yangına neden olabilir. Bu hesaplayıcıdaki ampacity değerleri, 60°C'de serbest havadaki bakır iletkenler için NEC Tablo 310.15(B)(16)'dan alınmıştır.
+
+Yuvarlak bakır iletken için temel ilişkiler:
+
+**Çap (mm):** d = 0.127 × 92^((36 − AWG) / 39)
+
+**Kesit Alanı (mm²):** A = π × (d/2)²
+
+**Metre başına DC direnci:** R/m = ρ / A, bakır için ρ = 1.724 × 10⁻⁸ Ω·m (20°C'de)
+
+**Gerilim düşümü (gidiş-dönüş):** V_düşüm = I × (R/m) × 2 × L
+
+NEC'e göre şube devresinde %3'ten fazla gerilim düşümü aşırı kabul edilir. 120V sistem için bu 3.6V'a karşılık gelir.
+
+## Nasıl Kullanılır?
+
+1. **Tel Kalınlığı (AWG) Seçin**: 22 AWG (en ince) ile 4/0 AWG (en kalın) arasından seçin. Konut tesisatında 14 AWG ve 12 AWG en yaygındır.
+2. **Devre Akımı (A) Girin**: Devrenizin taşıması için tasarlandığı akım; gerilim düşümü hesabında kullanılır.
+3. **Tek Yön Uzunluğu (m) Girin**: Güç kaynağından yüke uzaklık. Gidiş-dönüş gerilim düşümü için otomatik olarak iki katı kullanılır.
+4. **Yük Akımı (A) Girin** *(isteğe bağlı)*: Gerçek yük akımınız farklıysa uygunluk kontrolü için girin.
+5. **Sonuçları Okuyun**: İletken çapı, kesit alanı, metre başına direnç, ampacity, gerilim düşümü ve uygunluk kararı.
+
+## Örnekler
+
+### Örnek 1 — Evsel 20A Mutfak Devresi
+
+20A mutfak devresi (AWG 12), mutfağın karşı ucuna 15 metre uzanıyor.
+
+- AWG 12 çapı ≈ 2.053mm, alan ≈ 3.309mm²
+- Ampacity: **20A** (devre kesicisiyle eşleşiyor)
+- R/m ≈ 0.00521 Ω/m
+- Gerilim düşümü = 20 × 0.00521 × 2 × 15 = **3.13V** (120V'da = %2.6 — NEC sınırı dahilinde)
+- Karar: **Uygun**
+
+### Örnek 2 — Müstakil Yapıya Uzun Devre
+
+60A pano beslemesi (AWG 6), müstakil garaja 60 metre uzanıyor.
+
+- Ampacity: **55A** ← 60A yük için yetersiz
+- Gerilim düşümü = 55 × 0.00130 × 2 × 60 = **8.57V** (120V'da = %7.1 — sınırı aşıyor)
+- Karar: **Uygun Değil** — AWG 4'e yükseltin veya daha büyük kesit kullanın
+
+### Örnek 3 — Düşük Gerilimli LED Şerit
+
+AWG 18 tel, 10 metre uzaktaki 5A LED şeridini 12V'dan besliyor.
+
+- Ampacity: **7A** (5A için yeterli)
+- R/m ≈ 0.02094 Ω/m
+- Gerilim düşümü = 5 × 0.02094 × 2 × 10 = **2.09V** (12V'da = %17.4 — kritik derecede yüksek!)
+- Karar: **Uygun Değil** — AWG 14 kullanın veya devre uzunluğunu kısaltın
+
+## Sıkça Sorulan Sorular
+
+### NEC tel boyutlandırma hakkında ne diyor?
+NEC (NFPA 70), iletkenlerin ampacity'sinin sürekli olmayan yüke eşit, sürekli yükün ise %125'ine eşit olmasını gerektirir. NEC 310.15(B)(16), serbest havadaki iletkenler için temel ampacity tablosunu sunar.
+
+### AWG numaralandırması neden ters gibi görünüyor?
+AWG, tarihsel olarak belirli bir boyutta tel üretmek için gereken çekme adımı sayısına dayanır. Daha fazla çekme = daha küçük çap = daha büyük AWG numarası. Sistem, modern mühendislik notasyonundan önce geliştirildiğinden ters ilişki oluşmuştur.
+
+### Paketlenmiş kablolar için derating gerekli mi?
+Evet. Birden fazla akım taşıyan iletken bir kondüit içinde paketlendiğinde, ısı o kadar serbestçe dağılamaz. NEC Madde 310, 3-5 iletken için %80, 6-8 iletken için %70 derating gerektirir. Bu hesaplayıcı serbest havadaki tek bir iletkeni varsayar.
+
+### Maksimum önerilen gerilim düşümü nedir?
+NEC şu değerleri önermektedir: şube devreleri (ışıklar, prizler) ≤ %3; kombine besleyici + şube ≤ %5.
+
+### 60°C ve 75°C ampacity arasındaki fark nedir?
+NEC, 60°C, 75°C ve 90°C dereceli izolasyon için ayrı ampacity sütunları sunar. Daha yüksek sıcaklık izolasyonu aynı iletken boyutu için daha fazla akıma izin verir. Ancak çoğu konut tesisatı cihazları ve bağlantılar yalnızca 60°C veya 75°C için derecelendirilmiştir.
+
+## Kaynaklar
+
+- [NEC 310.15(B)(16) — İzin Verilen Ampacity](https://www.nfpa.org/codes-and-standards/all-codes-and-standards/list-of-codes-and-standards/detail?code=70) — NFPA 70 (Ulusal Elektrik Kodu)
+- [AWG Bakır Tel Standardı](https://www.astm.org/b0258-02r14.html) — ASTM B258
+- [AWG Tel Kalınlığı Referansı](https://www.engineeringtoolbox.com/awg-wire-gauge-d_731.html) — Engineering Toolbox

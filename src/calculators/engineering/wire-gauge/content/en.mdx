@@ -1,0 +1,85 @@
+# Wire Gauge / Ampacity Calculator (AWG)
+
+## What is AWG and Wire Ampacity?
+
+The American Wire Gauge (AWG) system is the standard wire sizing specification used in the United States, Canada, and several other countries. AWG numbers follow a counterintuitive convention: the larger the AWG number, the smaller (thinner) the wire. AWG 22 is a fine wire used for low-power signal circuits, while AWG 4/0 is a heavy-duty cable capable of carrying hundreds of amperes.
+
+**Ampacity** — the portmanteau of "ampere capacity" — is the maximum continuous electrical current that a conductor can carry without exceeding its safe operating temperature. Exceeding the ampacity causes the insulation to overheat, degrade, and potentially start a fire. The ampacity values in this calculator are drawn from NEC Table 310.15(B)(16), which covers copper conductors in free air at 60°C.
+
+The fundamental relationships for a round copper conductor are:
+
+**Diameter (mm):** d = 0.127 × 92^((36 − AWG) / 39)
+
+**Cross-sectional area (mm²):** A = π × (d/2)²
+
+**DC resistance per meter:** R/m = ρ / A, where ρ (copper) = 1.724 × 10⁻⁸ Ω·m at 20°C
+
+**Voltage drop (round trip):** V_drop = I × (R/m) × 2 × L
+
+A voltage drop of more than 3% on a branch circuit is considered excessive by the NEC. For a 120V system, 3% equals 3.6V — beyond this, equipment efficiency decreases and motor life is shortened.
+
+## How to Use This Calculator
+
+1. **Select Wire Gauge (AWG)**: Choose from 22 AWG (finest) down to 4/0 AWG (thickest). For residential wiring, 14 AWG and 12 AWG are the most common.
+
+2. **Enter Circuit Current (A)**: The current your circuit is designed to carry. This is used for voltage drop calculation.
+
+3. **Enter One-Way Length (m)**: The distance from the power source to the load in meters. The calculator automatically uses twice this distance for the round-trip voltage drop.
+
+4. **Enter Load Current (A)** *(optional)*: If your actual load current differs from the circuit current, enter it here for the suitability check. The wire is suitable when load current does not exceed ampacity.
+
+5. **Read the Results**: You will see the conductor diameter, cross-sectional area, resistance per meter, ampacity, voltage drop, and a suitability verdict.
+
+## Examples
+
+### Example 1 — Residential 20A Kitchen Circuit
+
+A 20A kitchen circuit (AWG 12) runs 15 meters to the far end of the kitchen.
+
+- AWG 12 diameter ≈ 2.053mm, area ≈ 3.309mm²
+- Ampacity: **20A** (matches the circuit breaker)
+- R/m ≈ 0.00521 Ω/m
+- Voltage drop = 20 × 0.00521 × 2 × 15 = **3.13V** (at 120V = 2.6% — within NEC limit)
+- Verdict: **Suitable**
+
+### Example 2 — Long Run to Outbuilding
+
+A 60A subpanel feed (AWG 6) runs 60 meters to a detached garage.
+
+- AWG 6 diameter ≈ 4.115mm, area ≈ 13.30mm²
+- Ampacity: **55A** ← not sufficient for a 60A load
+- Voltage drop = 55 × 0.00130 × 2 × 60 = **8.57V** (at 120V = 7.1% — exceeds limit)
+- Verdict: **Not suitable** — upgrade to AWG 4 or use a larger gauge
+
+### Example 3 — Low-Voltage LED Strip
+
+AWG 18 wire powers a 5A LED strip 10 meters away (12V system).
+
+- AWG 18 diameter ≈ 1.024mm, area ≈ 0.823mm²
+- Ampacity: **7A** (sufficient for 5A load)
+- R/m ≈ 0.02094 Ω/m
+- Voltage drop = 5 × 0.02094 × 2 × 10 = **2.09V** (at 12V = 17.4% — critically high!)
+- Verdict: **Not suitable** — use AWG 14 or shorten the run
+
+## FAQ
+
+### What does the NEC say about wire sizing?
+The National Electrical Code (NFPA 70) requires that conductors be sized for the load they serve, with ampacity equal to or greater than the non-continuous load plus 125% of the continuous load. NEC 310.15(B)(16) provides the base ampacity table for conductors in free air.
+
+### Why does AWG numbering seem backwards?
+AWG is historically based on the number of drawing steps needed to produce a wire of that size. More draws = smaller diameter = larger AWG number. The system predates modern engineering notation, hence the inverse relationship.
+
+### What is the difference between 60°C and 75°C ampacity?
+The NEC provides separate ampacity columns for 60°C, 75°C, and 90°C rated insulation. Higher-temperature insulation allows more current for the same conductor size. However, most residential wiring devices and terminations are only rated for 60°C or 75°C, so the lower column must be used in practice.
+
+### Should I derate for bundled cables?
+Yes. When multiple current-carrying conductors are bundled together in a conduit, the heat cannot dissipate as freely. NEC Article 310 requires derating: 3–5 conductors = 80% of table ampacity, 6–8 conductors = 70%, etc. This calculator assumes a single conductor in free air.
+
+### What is the maximum recommended voltage drop?
+NEC recommends: branch circuits (lights, outlets) ≤ 3%; combined feeder + branch ≤ 5%. Some codes and jurisdictions have stricter requirements.
+
+## References
+
+- [NEC 310.15(B)(16) — Allowable Ampacities](https://www.nfpa.org/codes-and-standards/all-codes-and-standards/list-of-codes-and-standards/detail?code=70) — NFPA 70 (National Electrical Code)
+- [AWG Copper Wire Standard](https://www.astm.org/b0258-02r14.html) — ASTM B258
+- [AWG Wire Gauge Reference](https://www.engineeringtoolbox.com/awg-wire-gauge-d_731.html) — Engineering Toolbox
