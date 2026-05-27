@@ -2,7 +2,7 @@
 
 Static, client-side calculator site — Astro + TypeScript + Tailwind + Zod.
 
-- **Live URL**: https://karaman.dev/calculators/
+- **Live URL**: https://karaman.dev/numio/
 - **Hosting**: GitHub Pages (custom domain via CNAME)
 - **Languages**: 12 (en, tr, de, fr, es, it, ar, ru, zh, ja, ko, hi)
 - **Target**: 100+ calculators (health, finance, engineering, math, conversion)
@@ -12,7 +12,7 @@ Static, client-side calculator site — Astro + TypeScript + Tailwind + Zod.
 
 ```bash
 npm install
-npm run dev          # http://localhost:4321/calculators/
+npm run dev          # http://localhost:4321/numio/
 npm run typecheck
 npm test
 npm run build        # static export to ./dist
@@ -29,7 +29,7 @@ npm run new-calc -- --slug=my-calc --category=finance
 
 ## Project structure
 
-- `src/calculators/{category}/{slug}/` — one folder per calculator (definition, compute, i18n, content, tests)
+- `src/numio/{category}/{slug}/` — one folder per calculator (definition, compute, i18n, content, tests)
 - `src/lib/` — shared helpers (registry, i18n, seo, format, units) — **immutable contracts**
 - `src/types/` — TypeScript contracts (`CalculatorDefinition`, etc.)
 - `src/i18n/` — site-wide UI translations + slug aliases

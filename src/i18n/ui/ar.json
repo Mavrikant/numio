@@ -1,6 +1,6 @@
 {
   "site": {
-    "name": "numio",
+    "name": "Numio",
     "tagline": "حاسبات مجانية للحياة اليومية — المالية والصحة والهندسة والرياضيات.",
     "description": "استخدم حاسبات مجانية ودقيقة بـ12 لغة. بدون تسجيل، بدون تتبع، نتائج فورية."
   },
@@ -44,7 +44,7 @@
     "tooLarge": "القيمة كبيرة جداً"
   },
   "footer": {
-    "copyright": "© numio",
+    "copyright": "© Numio",
     "disclaimer": "النتائج لأغراض إعلامية فقط. تحقق منها قبل استخدامها في القرارات المهمة.",
     "sourceCode": "الكود المصدري",
     "links": "روابط",
@@ -106,7 +106,7 @@
     "accuracyNote": "ملاحظة الدقة",
     "disclaimer": "إخلاء المسؤولية",
     "lastReviewed": "آخر مراجعة",
-    "editorialTeam": "بواسطة فريق تحرير numio"
+    "editorialTeam": "بواسطة فريق تحرير Numio"
   },
   "seo": {
     "metaSuffix": "مجاني، فوري، بدون تسجيل."
@@ -122,7 +122,7 @@
   "pdf": {
     "print": "طباعة",
     "download": "تحميل PDF",
-    "generated": "تم الإنشاء بواسطة numio",
+    "generated": "تم الإنشاء بواسطة Numio",
     "title": "نتائج الحاسبة"
   },
   "pwa": {

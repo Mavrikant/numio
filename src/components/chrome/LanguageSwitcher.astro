@@ -92,7 +92,7 @@ for (const [path, mod] of Object.entries(slugFiles)) {
         return (
           <li role="option" aria-selected={isCurrent}>
             <a
-              href={`/calculators/${lang}/`}
+              href={`/numio/${lang}/`}
               data-locale-target={lang}
               hreflang={lang}
               class:list={[
@@ -143,9 +143,9 @@ for (const [path, mod] of Object.entries(slugFiles)) {
   }
 
   function swapLocaleInPath(href, targetLocale) {
-    // /calculators/<locale>/[<category>/[<slug>/]]
+    // /numio/<locale>/[<category>/[<slug>/]]
     const m = href.match(
-      /^(\/calculators\/)([a-z]{2})(?:\/([^/]+)(?:\/([^/]+))?)?\/?$/,
+      /^(\/numio\/)([a-z]{2})(?:\/([^/]+)(?:\/([^/]+))?)?\/?$/,
     );
     if (!m) return href;
     const [, prefix, oldLocale, category, slug] = m;

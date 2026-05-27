@@ -1,6 +1,6 @@
 ---
 /**
- * /calculators/api/ — Human-readable API documentation page
+ * /numio/api/ — Human-readable API documentation page
  *
  * Lists all public JSON endpoints, shows usage examples, and explains
  * why the API exists (LLMs, developers, embedding).
@@ -34,7 +34,7 @@ for (const cat of categories) {
   byCategory.set(cat, allCalcs.filter((c) => c.category === cat));
 }
 
-const pageTitle = "Public JSON API — numio";
+const pageTitle = "Public JSON API — Numio";
 const pageDescription =
   "Free, open JSON API for 90+ calculators across health, finance, engineering, math, and conversion. No API key required. Built for LLMs, developers, and embedding.";
 const canonical = `${SITE_URL}${BASE_PATH}/api/`;
@@ -57,7 +57,7 @@ const bmiApiUrl = apiUrl(bmiSlug);
         Public JSON API
       </h1>
       <p class="mx-auto max-w-2xl text-lg text-slate-600 dark:text-slate-300">
-        Every numio is available as a free, CORS-open JSON endpoint.
+        Every Numio is available as a free, CORS-open JSON endpoint.
         No API key. No rate limit. No sign-up.
         Designed for LLMs, developers, and embedding workflows.
       </p>
@@ -139,8 +139,8 @@ console.log(data.exampleResult);</code></pre>
   "related": ["ideal-weight", "calorie-calculator"],
   "tags": ["health", "weight", "bmi"],
   "endpoints": {
-    "json": "https://karaman.dev/calculators/api/bmi.json",
-    "page": "https://karaman.dev/calculators/en/health/bmi/"
+    "json": "https://karaman.dev/numio/api/bmi.json",
+    "page": "https://karaman.dev/numio/en/health/bmi/"
   },
   "schema": "https://schema.org/SoftwareApplication"
 }`}</code></pre>
@@ -172,7 +172,7 @@ console.log(data.exampleResult);</code></pre>
           <h3 class="mb-2 font-semibold text-slate-900 dark:text-white">Embedding</h3>
           <p class="text-sm text-slate-600 dark:text-slate-400">
             The JSON API powers our embeddable widgets. Third-party sites can embed any calculator and
-            the widget fetches its own schema — attribution back to numio included.
+            the widget fetches its own schema — attribution back to Numio included.
           </p>
         </div>
       </div>

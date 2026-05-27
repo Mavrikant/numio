@@ -28,3 +28,4 @@ src/lib/_generated/
 **/__snapshots__/
 **/__snapshots__/*.snap
 *.snap
+.claude/

@@ -1,5 +1,5 @@
 /**
- * Dynamic OG image route — /calculators/og/{category}/{slug}.svg
+ * Dynamic OG image route — /numio/og/{category}/{slug}.svg
  *
  * Returns a 1200×630 SVG suitable for use as an Open Graph image.
  * Uses the English i18n bundle for text content.

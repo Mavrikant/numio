@@ -1,6 +1,6 @@
 ---
 /**
- * Static page route — /calculators/{lang}/{about|contact|privacy}/
+ * Static page route — /numio/{lang}/{about|contact|privacy}/
  *
  * Renders the markdown body from src/content/static-pages.ts as HTML.
  * Pages are generated for every (locale × static-page) combination.
@@ -28,7 +28,7 @@ export async function getStaticPaths() {
 const { lang, page } = Astro.params;
 
 if (!lang || !isLocale(lang)) {
-  return Astro.redirect("/calculators/en/");
+  return Astro.redirect("/numio/en/");
 }
 if (!page || !isStaticPageSlug(page)) {
   return Astro.redirect("/404");

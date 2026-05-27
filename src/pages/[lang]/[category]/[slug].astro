@@ -1,6 +1,6 @@
 ---
 /**
- * Calculator detail page — /calculators/{lang}/{category}/{slug}/
+ * Calculator detail page — /numio/{lang}/{category}/{slug}/
  *
  * Slug is locale-localized (e.g. Turkish: "vucut-kitle-indeksi" → canonical "bmi").
  * We use getCanonicalSlugFromLocalized() to resolve back to the canonical slug,
@@ -77,7 +77,7 @@ const { canonicalSlug } = Astro.props;
 
 // Validate locale
 if (!lang || !isLocale(lang)) {
-  return Astro.redirect("/calculators/en/");
+  return Astro.redirect("/numio/en/");
 }
 const locale = lang as Locale;
 const cat = category as CalculatorCategory;

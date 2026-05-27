@@ -1,6 +1,6 @@
 {
   "site": {
-    "name": "numio",
+    "name": "Numio",
     "tagline": "Kostenlose Rechner für den Alltag — Finanzen, Gesundheit, Technik, Mathematik.",
     "description": "Nutzen Sie kostenlose, genaue Rechner in 12 Sprachen. Kein Login, kein Tracking, sofortige Ergebnisse."
   },
@@ -44,7 +44,7 @@
     "tooLarge": "Wert ist zu groß"
   },
   "footer": {
-    "copyright": "© numio",
+    "copyright": "© Numio",
     "disclaimer": "Ergebnisse dienen nur zu Informationszwecken. Bitte vor kritischen Entscheidungen überprüfen.",
     "sourceCode": "Quellcode",
     "links": "Links",
@@ -106,7 +106,7 @@
     "accuracyNote": "Genauigkeitshinweis",
     "disclaimer": "Haftungsausschluss",
     "lastReviewed": "Zuletzt geprüft",
-    "editorialTeam": "vom numio Redaktionsteam"
+    "editorialTeam": "vom Numio Redaktionsteam"
   },
   "seo": {
     "metaSuffix": "Kostenlos, sofort, ohne Anmeldung."
@@ -122,7 +122,7 @@
   "pdf": {
     "print": "Drucken",
     "download": "PDF herunterladen",
-    "generated": "Erstellt von numio",
+    "generated": "Erstellt von Numio",
     "title": "Rechnerergebnisse"
   },
   "pwa": {

@@ -25,7 +25,7 @@ const SUPPORT_EMAIL = "m.serdar.karaman@gmail.com";
 const about: StaticPageBundle = {
   en: {
     title: "About",
-    body: `numio is a free, multilingual collection of online calculators for everyday life — finance, health, engineering, math, and unit conversion.
+    body: `Numio is a free, multilingual collection of online calculators for everyday life — finance, health, engineering, math, and unit conversion.
 
 ## Our mission
 
@@ -48,7 +48,7 @@ We are growing from a single golden-reference calculator (BMI) to 100+ calculato
   },
   tr: {
     title: "Hakkında",
-    body: `numio, günlük hayat için ücretsiz, çok dilli bir çevrimiçi hesaplayıcı koleksiyonudur — finans, sağlık, mühendislik, matematik ve birim dönüşümü.
+    body: `Numio, günlük hayat için ücretsiz, çok dilli bir çevrimiçi hesaplayıcı koleksiyonudur — finans, sağlık, mühendislik, matematik ve birim dönüşümü.
 
 ## Misyonumuz
 
@@ -71,7 +71,7 @@ Tek bir altın referans hesaplayıcıdan (VKİ) başlayarak beş kategorinin tam
   },
   de: {
     title: "Über uns",
-    body: `numio ist eine kostenlose, mehrsprachige Sammlung von Online-Rechnern für den Alltag — Finanzen, Gesundheit, Technik, Mathematik und Einheitenumrechnung.
+    body: `Numio ist eine kostenlose, mehrsprachige Sammlung von Online-Rechnern für den Alltag — Finanzen, Gesundheit, Technik, Mathematik und Einheitenumrechnung.
 
 ## Unsere Mission
 
@@ -94,7 +94,7 @@ Wir wachsen von einem einzigen Goldstandard-Rechner (BMI) auf 100+ Rechner in al
   },
   fr: {
     title: "À propos",
-    body: `numio est une collection gratuite et multilingue de calculateurs en ligne pour la vie quotidienne — finances, santé, ingénierie, mathématiques et conversion d'unités.
+    body: `Numio est une collection gratuite et multilingue de calculateurs en ligne pour la vie quotidienne — finances, santé, ingénierie, mathématiques et conversion d'unités.
 
 ## Notre mission
 
@@ -117,7 +117,7 @@ Nous passons d'un seul calculateur de référence (IMC) à 100+ calculateurs dan
   },
   es: {
     title: "Acerca de",
-    body: `numio es una colección gratuita y multilingüe de calculadoras en línea para la vida cotidiana — finanzas, salud, ingeniería, matemáticas y conversión de unidades.
+    body: `Numio es una colección gratuita y multilingüe de calculadoras en línea para la vida cotidiana — finanzas, salud, ingeniería, matemáticas y conversión de unidades.
 
 ## Nuestra misión
 
@@ -140,7 +140,7 @@ Estamos creciendo desde una única calculadora de referencia dorada (IMC) hasta 
   },
   it: {
     title: "Chi siamo",
-    body: `numio è una raccolta gratuita e multilingue di calcolatori online per la vita quotidiana — finanza, salute, ingegneria, matematica e conversione di unità.
+    body: `Numio è una raccolta gratuita e multilingue di calcolatori online per la vita quotidiana — finanza, salute, ingegneria, matematica e conversione di unità.
 
 ## La nostra missione
 
@@ -163,7 +163,7 @@ Stiamo crescendo da un unico calcolatore di riferimento (IMC) a 100+ calcolatori
   },
   ar: {
     title: "حول",
-    body: `numio هو مجموعة مجانية متعددة اللغات من الآلات الحاسبة عبر الإنترنت للحياة اليومية — المالية والصحة والهندسة والرياضيات وتحويل الوحدات.
+    body: `Numio هو مجموعة مجانية متعددة اللغات من الآلات الحاسبة عبر الإنترنت للحياة اليومية — المالية والصحة والهندسة والرياضيات وتحويل الوحدات.
 
 ## مهمتنا
 
@@ -186,7 +186,7 @@ Stiamo crescendo da un unico calcolatore di riferimento (IMC) a 100+ calcolatori
   },
   ru: {
     title: "О нас",
-    body: `numio — это бесплатная многоязычная коллекция онлайн-калькуляторов для повседневной жизни — финансы, здоровье, инженерия, математика и конвертация единиц.
+    body: `Numio — это бесплатная многоязычная коллекция онлайн-калькуляторов для повседневной жизни — финансы, здоровье, инженерия, математика и конвертация единиц.
 
 ## Наша миссия
 
@@ -209,7 +209,7 @@ Stiamo crescendo da un unico calcolatore di riferimento (IMC) a 100+ calcolatori
   },
   zh: {
     title: "关于",
-    body: `numio 是一个免费的多语言在线计算器集合，服务于日常生活 — 金融、健康、工程、数学和单位换算。
+    body: `Numio 是一个免费的多语言在线计算器集合，服务于日常生活 — 金融、健康、工程、数学和单位换算。
 
 ## 我们的使命
 
@@ -232,7 +232,7 @@ Stiamo crescendo da un unico calcolatore di riferimento (IMC) a 100+ calcolatori
   },
   ja: {
     title: "概要",
-    body: `numio は、日常生活のための無料の多言語オンライン計算ツールのコレクションです — 金融、健康、工学、数学、単位換算。
+    body: `Numio は、日常生活のための無料の多言語オンライン計算ツールのコレクションです — 金融、健康、工学、数学、単位換算。
 
 ## 私たちのミッション
 
@@ -255,7 +255,7 @@ Stiamo crescendo da un unico calcolatore di riferimento (IMC) a 100+ calcolatori
   },
   ko: {
     title: "소개",
-    body: `numio는 일상생활을 위한 무료 다국어 온라인 계산기 모음입니다 — 금융, 건강, 공학, 수학, 단위 변환.
+    body: `Numio는 일상생활을 위한 무료 다국어 온라인 계산기 모음입니다 — 금융, 건강, 공학, 수학, 단위 변환.
 
 ## 우리의 사명
 
@@ -278,7 +278,7 @@ Stiamo crescendo da un unico calcolatore di riferimento (IMC) a 100+ calcolatori
   },
   hi: {
     title: "हमारे बारे में",
-    body: `numio रोज़मर्रा की ज़िंदगी के लिए मुफ़्त, बहुभाषी ऑनलाइन कैलकुलेटर का एक संग्रह है — वित्त, स्वास्थ्य, इंजीनियरिंग, गणित और इकाई रूपांतरण।
+    body: `Numio रोज़मर्रा की ज़िंदगी के लिए मुफ़्त, बहुभाषी ऑनलाइन कैलकुलेटर का एक संग्रह है — वित्त, स्वास्थ्य, इंजीनियरिंग, गणित और इकाई रूपांतरण।
 
 ## हमारा मिशन
 
