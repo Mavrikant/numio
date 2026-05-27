@@ -18,3 +18,4 @@ coverage/
 
 # Generated files
 src/lib/_generated/
+.claude/worktrees/agent-*/
