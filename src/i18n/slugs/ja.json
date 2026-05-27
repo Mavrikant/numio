@@ -1,4 +1,9 @@
 {
+  "data-transfer-time": "data-transfer-time",
+  "fuel-cost": "fuel-cost",
+  "aspect-ratio": "aspect-ratio",
+  "unit-price": "unit-price",
+  "average-speed": "average-speed",
   "rounding": "rounding",
   "modulo": "modulo",
   "fibonacci": "fibonacci",
