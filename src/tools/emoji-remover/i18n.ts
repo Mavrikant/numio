@@ -1,0 +1,26 @@
+import type { ToolI18n } from "@/types/tool";
+import { COMMON_UI } from "../_shared/ui";
+
+const data = {
+  en: { title: "Emoji Remover", short: "Strip emoji and pictographic symbols from your text.", description: "Free emoji remover. Delete all emoji, flags and pictographic symbols from text, leaving clean words and punctuation. Useful for cleaning up data, usernames and copy. Runs in your browser.", keywords: ["emoji remover", "remove emoji", "strip emoji", "delete emojis", "clean text from emoji"], placeholder: "Paste text with emoji…" },
+  tr: { title: "Emoji Kaldırıcı", short: "Metninizden emoji ve resimli sembolleri kaldırın.", description: "Ücretsiz emoji kaldırıcı. Metinden tüm emojileri, bayrakları ve resimli sembolleri silin; temiz kelimeler ve noktalama kalsın. Veri, kullanıcı adı ve metin temizliği için kullanışlı. Tarayıcınızda çalışır.", keywords: ["emoji kaldırıcı", "emoji kaldır", "emoji temizle", "emojileri sil", "metni emojiden temizle"], placeholder: "Emojili metni yapıştırın…" },
+  de: { title: "Emoji-Entferner", short: "Entfernen Sie Emoji und Piktogramme aus Ihrem Text.", description: "Kostenloser Emoji-Entferner. Löschen Sie alle Emoji, Flaggen und Piktogramme aus Text und behalten Sie saubere Wörter und Satzzeichen. Nützlich zum Bereinigen von Daten, Benutzernamen und Texten.", keywords: ["emoji entferner", "emoji entfernen", "emoji löschen", "emojis entfernen", "text bereinigen"], placeholder: "Text mit Emoji einfügen…" },
+  fr: { title: "Suppresseur d'Emoji", short: "Retirez les emoji et symboles pictographiques de votre texte.", description: "Suppresseur d'emoji gratuit. Supprimez tous les emoji, drapeaux et symboles pictographiques d'un texte, en gardant des mots et une ponctuation propres. Utile pour nettoyer données, pseudos et textes.", keywords: ["suppresseur d'emoji", "retirer emoji", "supprimer emoji", "enlever emojis", "nettoyer texte"], placeholder: "Collez du texte avec emoji…" },
+  es: { title: "Eliminador de Emojis", short: "Quita emojis y símbolos pictográficos de tu texto.", description: "Eliminador de emojis gratuito. Borra todos los emojis, banderas y símbolos pictográficos de un texto, dejando palabras y puntuación limpias. Útil para limpiar datos, nombres de usuario y textos.", keywords: ["eliminador de emojis", "quitar emoji", "eliminar emoji", "borrar emojis", "limpiar texto"], placeholder: "Pega texto con emojis…" },
+  it: { title: "Rimozione Emoji", short: "Rimuovi emoji e simboli pittografici dal tuo testo.", description: "Rimozione emoji gratuita. Elimina tutte le emoji, bandiere e simboli pittografici da un testo, lasciando parole e punteggiatura pulite. Utile per pulire dati, nomi utente e testi.", keywords: ["rimozione emoji", "rimuovi emoji", "elimina emoji", "togliere emoji", "pulisci testo"], placeholder: "Incolla testo con emoji…" },
+  ar: { title: "مزيل الرموز التعبيرية", short: "أزِل الرموز التعبيرية والرموز التصويرية من نصك.", description: "مزيل رموز تعبيرية مجاني. احذف كل الرموز التعبيرية والأعلام والرموز التصويرية من النص، مع الإبقاء على كلمات وعلامات ترقيم نظيفة. مفيد لتنظيف البيانات وأسماء المستخدمين والنصوص.", keywords: ["مزيل الرموز التعبيرية", "إزالة الإيموجي", "حذف الرموز التعبيرية", "تنظيف النص"], placeholder: "الصق نصًا يحتوي على رموز تعبيرية…" },
+  ru: { title: "Удаление Эмодзи", short: "Уберите эмодзи и пиктограммы из вашего текста.", description: "Бесплатное удаление эмодзи. Удалите все эмодзи, флаги и пиктограммы из текста, оставив чистые слова и пунктуацию. Полезно для очистки данных, имён пользователей и текстов.", keywords: ["удаление эмодзи", "убрать эмодзи", "удалить эмодзи", "очистить текст от эмодзи"], placeholder: "Вставьте текст с эмодзи…" },
+  zh: { title: "Emoji 移除器", short: "从文本中去除 emoji 和象形符号。", description: "免费的 emoji 移除器。删除文本中的所有 emoji、旗帜和象形符号，保留干净的文字和标点。适合清理数据、用户名和文案。在浏览器中运行。", keywords: ["emoji移除", "去除emoji", "删除表情", "清理表情符号", "清理文本"], placeholder: "粘贴含 emoji 的文本…" },
+  ja: { title: "絵文字リムーバー", short: "テキストから絵文字や絵記号を除去します。", description: "無料の絵文字リムーバー。テキストからすべての絵文字、旗、絵記号を削除し、きれいな単語と句読点を残します。データ、ユーザー名、コピーの整理に便利。ブラウザ内で動作します。", keywords: ["絵文字リムーバー", "絵文字 削除", "絵文字 除去", "絵文字を消す", "テキスト整理"], placeholder: "絵文字を含むテキストを貼り付け…" },
+  ko: { title: "이모지 제거기", short: "텍스트에서 이모지와 그림 기호를 제거합니다.", description: "무료 이모지 제거기. 텍스트에서 모든 이모지, 깃발, 그림 기호를 삭제하고 깔끔한 단어와 문장 부호를 남깁니다. 데이터, 사용자 이름, 카피 정리에 유용합니다. 브라우저에서 실행됩니다.", keywords: ["이모지 제거기", "이모지 제거", "이모지 삭제", "이모티콘 제거", "텍스트 정리"], placeholder: "이모지가 포함된 텍스트 붙여넣기…" },
+  hi: { title: "इमोजी रिमूवर", short: "अपने टेक्स्ट से इमोजी और चित्रात्मक प्रतीक हटाएं।", description: "मुफ्त इमोजी रिमूवर। टेक्स्ट से सभी इमोजी, झंडे और चित्रात्मक प्रतीक हटाएं, साफ शब्द और विराम चिह्न छोड़ते हुए। डेटा, यूज़रनेम और कॉपी साफ करने के लिए उपयोगी। ब्राउज़र में चलता है।", keywords: ["इमोजी रिमूवर", "इमोजी हटाएं", "इमोजी मिटाएं", "इमोजी साफ करें", "टेक्स्ट साफ करें"], placeholder: "इमोजी वाला टेक्स्ट पेस्ट करें…" },
+};
+
+const i18n = Object.fromEntries(
+  (Object.keys(data) as Array<keyof typeof data>).map((loc) => {
+    const { title, short, description, keywords, ...rest } = data[loc];
+    return [loc, { title, short, description, keywords, ui: { ...COMMON_UI[loc], ...rest } }];
+  }),
+) as unknown as ToolI18n;
+
+export default i18n;
