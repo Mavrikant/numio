@@ -80,9 +80,26 @@ export const GET: APIRoute = () => {
     lines.push("");
   }
 
-  // API placeholder (Wave 2 feature)
+  // API section — public JSON endpoints per calculator (B2 feature)
   lines.push("## API");
-  lines.push("(JSON API ships in a future release)");
+  lines.push(
+    `- [API documentation](${SITE_URL}${BASE_PATH}/api/) — public JSON endpoints, no key required.`,
+  );
+  for (const category of categories) {
+    const calcs = allCalcs
+      .filter((c) => c.category === category)
+      .sort((a, b) => {
+        const bundleA = a.i18n[EN];
+        const bundleB = b.i18n[EN];
+        return bundleA.title.localeCompare(bundleB.title, "en");
+      });
+    for (const calc of calcs) {
+      const bundle = calc.i18n[EN];
+      const url = `${SITE_URL}${BASE_PATH}/api/${calc.slug}.json`;
+      const short = bundle.short.replace(/\n/g, " ").trim();
+      lines.push(`- [${bundle.title} API](${url}): ${short}`);
+    }
+  }
   lines.push("");
 
   const body = lines.join("\n");
