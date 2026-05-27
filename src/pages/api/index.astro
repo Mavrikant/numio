@@ -1,0 +1,249 @@
+---
+/**
+ * /calculators/api/ — Human-readable API documentation page
+ *
+ * Lists all public JSON endpoints, shows usage examples, and explains
+ * why the API exists (LLMs, developers, embedding).
+ * Indexable — no robots noindex.
+ */
+
+import Base from "@/layouts/Base.astro";
+import { getAllCalculators, getAvailableCategories } from "@/lib/registry";
+import { SITE_URL, BASE_PATH } from "@/config/site";
+
+const EN = "en" as const;
+
+function apiUrl(slug: string): string {
+  return `${SITE_URL}${BASE_PATH}/api/${slug}.json`;
+}
+
+function calcPageUrl(category: string, slug: string): string {
+  return `${SITE_URL}${BASE_PATH}/en/${category}/${slug}/`;
+}
+
+function capitalize(s: string): string {
+  return s.charAt(0).toUpperCase() + s.slice(1);
+}
+
+const allCalcs = getAllCalculators();
+const categories = getAvailableCategories();
+
+// Group calcs by category
+const byCategory = new Map<string, typeof allCalcs>();
+for (const cat of categories) {
+  byCategory.set(cat, allCalcs.filter((c) => c.category === cat));
+}
+
+const pageTitle = "Public JSON API — Karaman Calculators";
+const pageDescription =
+  "Free, open JSON API for 90+ calculators across health, finance, engineering, math, and conversion. No API key required. Built for LLMs, developers, and embedding.";
+const canonical = `${SITE_URL}${BASE_PATH}/api/`;
+
+// Example using BMI
+const bmiSlug = "bmi";
+const bmiApiUrl = apiUrl(bmiSlug);
+---
+
+<Base
+  title={pageTitle}
+  description={pageDescription}
+  canonical={canonical}
+>
+  <div class="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">
+
+    <!-- Hero -->
+    <header class="mb-12 text-center">
+      <h1 class="mb-4 text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white sm:text-5xl">
+        Public JSON API
+      </h1>
+      <p class="mx-auto max-w-2xl text-lg text-slate-600 dark:text-slate-300">
+        Every Karaman Calculator is available as a free, CORS-open JSON endpoint.
+        No API key. No rate limit. No sign-up.
+        Designed for LLMs, developers, and embedding workflows.
+      </p>
+      <div class="mt-6 flex flex-wrap items-center justify-center gap-3">
+        <span class="inline-flex items-center gap-1.5 rounded-full bg-green-100 px-3 py-1 text-sm font-medium text-green-800 dark:bg-green-900/40 dark:text-green-300">
+          ✓ No API key
+        </span>
+        <span class="inline-flex items-center gap-1.5 rounded-full bg-blue-100 px-3 py-1 text-sm font-medium text-blue-800 dark:bg-blue-900/40 dark:text-blue-300">
+          ✓ CORS open
+        </span>
+        <span class="inline-flex items-center gap-1.5 rounded-full bg-purple-100 px-3 py-1 text-sm font-medium text-purple-800 dark:bg-purple-900/40 dark:text-purple-300">
+          ✓ Static — always fast
+        </span>
+        <span class="inline-flex items-center gap-1.5 rounded-full bg-orange-100 px-3 py-1 text-sm font-medium text-orange-800 dark:bg-orange-900/40 dark:text-orange-300">
+          ✓ {allCalcs.length} endpoints
+        </span>
+      </div>
+    </header>
+
+    <!-- Usage examples -->
+    <section class="mb-12" aria-labelledby="usage-heading">
+      <h2 id="usage-heading" class="mb-6 text-2xl font-bold text-slate-900 dark:text-white">
+        Usage Examples
+      </h2>
+
+      <div class="grid gap-6 md:grid-cols-2">
+        <!-- curl -->
+        <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-700 dark:bg-slate-800/60">
+          <h3 class="mb-3 text-sm font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+            curl
+          </h3>
+          <pre class="overflow-x-auto whitespace-pre-wrap break-all text-sm text-slate-800 dark:text-slate-200"><code>curl {bmiApiUrl}</code></pre>
+        </div>
+
+        <!-- JavaScript -->
+        <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-700 dark:bg-slate-800/60">
+          <h3 class="mb-3 text-sm font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+            JavaScript (fetch)
+          </h3>
+          <pre class="overflow-x-auto whitespace-pre-wrap break-all text-sm text-slate-800 dark:text-slate-200"><code>const res = await fetch(
+  "{bmiApiUrl}"
+);
+const data = await res.json();
+console.log(data.exampleResult);</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- Response shape -->
+    <section class="mb-12" aria-labelledby="shape-heading">
+      <h2 id="shape-heading" class="mb-6 text-2xl font-bold text-slate-900 dark:text-white">
+        Response Shape
+      </h2>
+      <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-700 dark:bg-slate-800/60">
+        <pre class="overflow-x-auto text-sm text-slate-800 dark:text-slate-200"><code>{`{
+  "slug": "bmi",
+  "category": "health",
+  "lang": "en",
+  "title": "BMI Calculator",
+  "description": "Free BMI calculator based on WHO guidelines...",
+  "short": "Calculate your Body Mass Index...",
+  "inputs": [
+    { "id": "weight", "label": "Weight", "type": "number",
+      "unit": "kg", "default": 70, "min": 1, "max": 500 },
+    ...
+  ],
+  "outputs": [
+    { "id": "bmi", "label": "BMI", "format": "number",
+      "highlight": true },
+    ...
+  ],
+  "exampleInputs": { "unit": "metric", "weight": 70, "height": 170 },
+  "exampleResult": { "bmi": 24.2, "category": "normal", ... },
+  "formula": "\\text{BMI} = \\frac{\\text{weight (kg)}}{\\text{height (m)}^2}",
+  "references": [
+    { "title": "...", "url": "...", "authority": "WHO" }
+  ],
+  "disclaimer": "...",
+  "related": ["ideal-weight", "calorie-calculator"],
+  "tags": ["health", "weight", "bmi"],
+  "endpoints": {
+    "json": "https://karaman.dev/calculators/api/bmi.json",
+    "page": "https://karaman.dev/calculators/en/health/bmi/"
+  },
+  "schema": "https://schema.org/SoftwareApplication"
+}`}</code></pre>
+      </div>
+    </section>
+
+    <!-- Why we offer this -->
+    <section class="mb-12 rounded-xl border border-slate-200 bg-white p-8 dark:border-slate-700 dark:bg-slate-800" aria-labelledby="why-heading">
+      <h2 id="why-heading" class="mb-4 text-2xl font-bold text-slate-900 dark:text-white">
+        Why We Offer This
+      </h2>
+      <div class="grid gap-6 sm:grid-cols-3">
+        <div>
+          <h3 class="mb-2 font-semibold text-slate-900 dark:text-white">LLMs & AI Assistants</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-400">
+            Claude, ChatGPT, Gemini, and Perplexity can call these endpoints as tools. The structured
+            JSON — including formula, references, and example results — gives AI models everything they
+            need to cite our calculators accurately.
+          </p>
+        </div>
+        <div>
+          <h3 class="mb-2 font-semibold text-slate-900 dark:text-white">Developers</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-400">
+            Building a health or finance app? Integrate our pre-computed examples and schemas directly.
+            The pure JavaScript <code class="rounded bg-slate-100 px-1 dark:bg-slate-700">compute()</code> functions are also open-source.
+          </p>
+        </div>
+        <div>
+          <h3 class="mb-2 font-semibold text-slate-900 dark:text-white">Embedding</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-400">
+            The JSON API powers our embeddable widgets. Third-party sites can embed any calculator and
+            the widget fetches its own schema — attribution back to karaman.dev included.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Endpoint table -->
+    <section aria-labelledby="endpoints-heading">
+      <h2 id="endpoints-heading" class="mb-6 text-2xl font-bold text-slate-900 dark:text-white">
+        All Endpoints ({allCalcs.length} calculators)
+      </h2>
+
+      {categories.map((cat) => {
+        const calcs = (byCategory.get(cat) ?? []).sort((a, b) =>
+          (a.i18n[EN]?.title ?? a.slug).localeCompare(b.i18n[EN]?.title ?? b.slug, "en")
+        );
+        if (calcs.length === 0) return null;
+        return (
+          <div class="mb-8">
+            <h3 class="mb-3 text-lg font-semibold capitalize text-slate-700 dark:text-slate-300">
+              {capitalize(cat)}
+            </h3>
+            <div class="overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-700">
+              <table class="min-w-full divide-y divide-slate-200 dark:divide-slate-700">
+                <thead class="bg-slate-50 dark:bg-slate-800">
+                  <tr>
+                    <th class="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+                      Calculator
+                    </th>
+                    <th class="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+                      Endpoint
+                    </th>
+                    <th class="hidden px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400 sm:table-cell">
+                      Description
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100 bg-white dark:divide-slate-800 dark:bg-slate-900">
+                  {calcs.map((calc) => {
+                    const bundle = calc.i18n[EN];
+                    const url = apiUrl(calc.slug);
+                    const pageUrl = calcPageUrl(calc.category, calc.slug);
+                    return (
+                      <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50">
+                        <td class="px-4 py-3 text-sm font-medium">
+                          <a
+                            href={pageUrl}
+                            class="text-brand-600 hover:underline dark:text-brand-400"
+                          >
+                            {bundle?.title ?? calc.slug}
+                          </a>
+                        </td>
+                        <td class="px-4 py-3 text-sm">
+                          <a
+                            href={url}
+                            class="break-all font-mono text-xs text-slate-600 hover:underline dark:text-slate-400"
+                          >
+                            /api/{calc.slug}.json
+                          </a>
+                        </td>
+                        <td class="hidden px-4 py-3 text-sm text-slate-600 dark:text-slate-400 sm:table-cell">
+                          {bundle?.short ?? ""}
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        );
+      })}
+    </section>
+  </div>
+</Base>
