@@ -159,6 +159,13 @@ for (const [path, mod] of Object.entries(slugFiles)) {
   }
 
   function initLangSwitcher(switcher) {
+    // The component's inline script is emitted once per instance on the page
+    // (header desktop + mobile + footer), so this init can run multiple times.
+    // Guard against binding duplicate listeners, which would otherwise cancel
+    // the open/close toggle out and leave the menu unopenable.
+    if (switcher.dataset.langInit === "true") return;
+    switcher.dataset.langInit = "true";
+
     const btn = switcher.querySelector(".lang-switcher-btn");
     const dropdown = switcher.querySelector(".lang-switcher-dropdown");
     const chevron = switcher.querySelector(".lang-switcher-chevron");
