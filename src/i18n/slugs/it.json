@@ -1,4 +1,9 @@
 {
+  "data-transfer-time": "tempo-download",
+  "fuel-cost": "costo-carburante",
+  "aspect-ratio": "rapporto-aspetto",
+  "unit-price": "prezzo-unitario",
+  "average-speed": "velocita-media",
   "rounding": "arrotondamento",
   "modulo": "modulo",
   "fibonacci": "fibonacci",

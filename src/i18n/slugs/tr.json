@@ -1,4 +1,9 @@
 {
+  "data-transfer-time": "indirme-suresi",
+  "fuel-cost": "yakit-maliyeti",
+  "aspect-ratio": "en-boy-orani",
+  "unit-price": "birim-fiyat",
+  "average-speed": "ortalama-hiz",
   "rounding": "yuvarlama",
   "modulo": "mod-hesaplama",
   "fibonacci": "fibonacci",
