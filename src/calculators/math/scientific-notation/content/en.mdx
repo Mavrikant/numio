@@ -1,3 +1,117 @@
-# scientific-notation Calculator
+# Scientific Notation Converter
 
-Simple scientific-notation calculator.
+The scientific notation converter transforms any number between its standard decimal form, scientific notation, and engineering notation in an instant. Whether you are working with the mass of an electron (9.109 × 10⁻³¹ kg), the distance to the nearest star (4.07 × 10¹⁶ m), or simply need to express a large financial figure more compactly, this tool handles the conversion accurately and immediately.
+
+## What Is Scientific Notation?
+
+Scientific notation is a standard way of expressing numbers as a product of a coefficient and a power of ten:
+
+**a × 10ⁿ**, where **1 ≤ a &lt; 10** and n is an integer
+
+The coefficient (also called the mantissa or significand) always contains exactly one non-zero digit to the left of the decimal point. The exponent n tells you how many places to move the decimal point.
+
+**Examples:**
+- 45,600 = 4.56 × 10⁴ (decimal moved 4 places left → positive exponent)
+- 0.000123 = 1.23 × 10⁻⁴ (decimal moved 4 places right → negative exponent)
+- 1 = 1 × 10⁰
+- Avogadro's number: 6.02214076 × 10²³
+
+Scientific notation is the universal standard in physics, chemistry, astronomy, and engineering because it makes the order of magnitude immediately apparent and eliminates tedious zero-counting.
+
+## What Is Engineering Notation?
+
+Engineering notation is a variant of scientific notation that restricts the exponent to **multiples of 3** (0, ±3, ±6, ±9, ±12, …). This aligns perfectly with SI prefixes:
+
+| Exponent | SI Prefix | Symbol |
+|---|---|---|
+| 10¹² | tera | T |
+| 10⁹ | giga | G |
+| 10⁶ | mega | M |
+| 10³ | kilo | k |
+| 10⁰ | — | — |
+| 10⁻³ | milli | m |
+| 10⁻⁶ | micro | μ |
+| 10⁻⁹ | nano | n |
+| 10⁻¹² | pico | p |
+
+In engineering notation, the coefficient can range from 1 to 999. For example:
+- 0.000123 = 123 × 10⁻⁶ (= 123 microunits, rather than 1.23 × 10⁻⁴)
+- 45,600 = 45.6 × 10³ (= 45.6 kilounit)
+
+This makes values directly expressible with SI prefix units, which is essential in electrical engineering, telecommunications, and metrology.
+
+## How to Use This Converter
+
+1. **Enter the number** — any real number, including very small or very large values.
+2. **Choose the conversion mode:**
+   - *To Scientific Notation*: convert standard decimal to a × 10ⁿ form.
+   - *To Standard Decimal*: expand the notation back to full decimal.
+   - *To Engineering Notation*: convert to a × 10^(3k) form aligned with SI prefixes.
+3. **Read the result** — the converted form is shown instantly, alongside the standard decimal representation.
+
+## Examples
+
+### Example 1 — From decimal to scientific
+
+Input: 0.000123, mode: To Scientific
+
+Result: **1.23 × 10⁻⁴**
+
+The decimal point moved 4 places to the right (making the number larger), so the exponent is −4.
+
+### Example 2 — From decimal to engineering
+
+Input: 0.000123, mode: To Engineering
+
+Result: **123 × 10⁻⁶**
+
+The exponent −6 corresponds to the SI prefix "micro," so this can be read as 123 microunits.
+
+### Example 3 — Speed of light
+
+The speed of light is 299,792,458 m/s.
+
+Scientific notation: **2.99792458 × 10⁸ m/s**
+Engineering notation: **299.792458 × 10⁶ m/s** (≈ 300 megametres per second)
+
+## Why Use Scientific Notation?
+
+**Compactness**: Writing 6.022 × 10²³ is far shorter than 602,200,000,000,000,000,000,000 and eliminates the risk of misplacing a zero.
+
+**Precision**: Scientific notation separates the significant figures (coefficient) from the magnitude (exponent), making it clear how many digits are meaningful.
+
+**Order-of-magnitude comparisons**: Comparing 10⁻¹⁵ m (femtometre, nuclear scale) with 10²⁶ m (observable universe) makes the difference of 41 orders of magnitude immediately visible.
+
+**Arithmetic with powers of ten**: Multiplying 3 × 10⁴ by 2 × 10³ = 6 × 10⁷ is straightforward; doing the same with 30,000 × 2,000 = 60,000,000 is error-prone.
+
+## Common Use Cases
+
+**Physics**: Planck's constant (6.626 × 10⁻³⁴ J·s), electron mass (9.109 × 10⁻³¹ kg), and the gravitational constant (6.674 × 10⁻¹¹ N·m²/kg²) are all expressed in scientific notation.
+
+**Chemistry**: Concentrations in moles per litre often span many orders of magnitude. A strong acid at 1 M contains 6.022 × 10²³ molecules per litre.
+
+**Computer science**: Memory sizes are often in engineering notation — 4 GB = 4 × 10⁹ bytes (or more precisely 4 × 2³⁰, but SI conventions are commonly used).
+
+**Finance**: Global GDP is approximately $100 trillion = $10¹⁴. National debts and market capitalisations are routinely compared on this scale.
+
+**Astronomy**: The distance from Earth to the Sun is 1.496 × 10¹¹ m (1 astronomical unit). The diameter of the Milky Way is roughly 9.5 × 10²⁰ m.
+
+## Frequently Asked Questions
+
+**How do I manually convert to scientific notation?**
+Count how many places you need to move the decimal point so that one non-zero digit remains to the left of it. If you moved left (made the number smaller), the exponent is positive. If you moved right (made the number larger), the exponent is negative. Example: 0.0456 → move 2 places right → 4.56 × 10⁻².
+
+**What is the difference between significant figures and decimal places?**
+Significant figures are the meaningful digits in a measurement. In 1.230 × 10⁴, there are 4 significant figures. Decimal places refer to digits after the decimal point in standard form. Scientific notation makes significant figures explicit.
+
+**Is 10⁰ = 1?**
+Yes. Any non-zero number raised to the power 0 equals 1. So 1 = 1.0 × 10⁰ and 9 = 9.0 × 10⁰.
+
+**Can scientific notation represent negative numbers?**
+Yes. A negative number is simply written with a minus sign in front of the coefficient: −3.5 × 10⁶. The exponent itself can also be negative (small numbers), but this is independent of the sign of the number itself.
+
+## References
+
+1. Wolfram MathWorld. *Scientific Notation.* [mathworld.wolfram.com/ScientificNotation.html](https://mathworld.wolfram.com/ScientificNotation.html)
+2. Khan Academy. *Scientific Notation Review.* [khanacademy.org](https://www.khanacademy.org/math/cc-eighth-grade-math/cc-8th-numbers-operations/cc-8th-scientific-notation/a/scientific-notation-review)
+3. NIST. *Guide to the SI.* [nist.gov](https://www.nist.gov/pml/special-publication-811)

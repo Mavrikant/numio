@@ -1,3 +1,91 @@
-# combinations Calculator
+# Combinations & Permutations Calculator
 
-Simple combinations calculator.
+The combinations and permutations calculator helps you instantly answer one of the most common questions in probability and statistics: in how many ways can you select or arrange a group of items from a larger set? Whether you are calculating lottery odds, figuring out team selections, or working through a combinatorics problem set, this tool does the heavy lifting so you can focus on the reasoning.
+
+## What Are Combinations and Permutations?
+
+**Combinations** count the number of ways to choose r items from a set of n items when the order of selection does not matter. The formula is:
+
+**C(n, r) = n! / (r! × (n − r)!)**
+
+For example, choosing 3 students from a class of 10 to form a study group is a combination problem. It does not matter whether Alice, Bob, and Carol are chosen in that order or in any other — the resulting group is the same.
+
+**Permutations** count the number of ways to choose and arrange r items from a set of n items when order does matter. The formula is:
+
+**P(n, r) = n! / (n − r)!**
+
+For example, awarding first, second, and third place medals to 3 of 10 runners is a permutation problem. Placing Alice first, Bob second, and Carol third is a different outcome from placing Carol first, Alice second, and Bob third.
+
+The key relationship between the two is: **P(n, r) = C(n, r) × r!**. Because each selection of r items can be arranged in r! ways, permutations always equal or exceed the corresponding combination count.
+
+## How to Use This Calculator
+
+1. **Enter n** — the total number of items in your set (0 to 1000).
+2. **Enter r** — the number of items you are selecting or arranging (must be between 0 and n).
+3. **Read the results** — C(n, r) gives combinations (order irrelevant); P(n, r) gives permutations (order matters).
+
+If r is greater than n, the result is 0 — you cannot choose more items than exist.
+
+## Examples
+
+### Example 1 — Lottery odds
+
+A lottery draws 6 numbers from a pool of 49. How many possible winning combinations are there?
+
+n = 49, r = 6
+
+C(49, 6) = 49! / (6! × 43!) = **13,983,816**
+
+There are nearly 14 million possible ticket combinations, which is why lottery jackpots are so rare.
+
+### Example 2 — Race podium
+
+In a race with 10 competitors, how many different 1st–2nd–3rd podium outcomes are possible?
+
+n = 10, r = 3
+
+P(10, 3) = 10! / 7! = 10 × 9 × 8 = **720**
+
+There are 720 different ordered outcomes for the top three places.
+
+### Example 3 — Committee selection
+
+From a group of 8 employees, a company needs to select 4 for a project committee. How many ways can the committee be formed?
+
+n = 8, r = 4
+
+C(8, 4) = 8! / (4! × 4!) = 70 / 1 = **70**
+
+There are 70 equally valid committees that could be formed.
+
+## Common Use Cases
+
+**Probability**: Combinations form the basis of calculating event probabilities. If 3 of 10 items are defective and you pick 2 at random, the probability that both are defective is C(3,2) / C(10,2) = 3/45 ≈ 6.7%.
+
+**Card games**: A standard 52-card deck produces C(52,5) = 2,598,960 possible 5-card poker hands. Specific hand probabilities (flush, full house, etc.) are computed as a ratio to this total.
+
+**Genetics and biology**: The binomial coefficient C(n,k) describes how many ways k alleles can be distributed among n offspring, underpinning Hardy–Weinberg equilibrium calculations.
+
+**Network design**: The number of possible direct connections (edges) between n nodes in a complete graph is C(n, 2) = n(n−1)/2.
+
+**Scheduling and assignment**: Permutations determine how many ways n tasks can be assigned to n workers in a one-to-one fashion (n! total assignments).
+
+## Frequently Asked Questions
+
+**Why is C(n, 0) = 1?**
+There is exactly one way to choose nothing from a set — the empty selection. Mathematically, 0! = 1 ensures the formula n!/(0! × n!) = 1 holds consistently.
+
+**What happens when r equals n?**
+C(n, n) = 1 and P(n, n) = n!. Choosing all items from the set can only be done one way (as a combination), but those items can be arranged in n! different orders.
+
+**Can I use this calculator for large numbers?**
+Yes, though results can grow extremely fast. C(1000, 500) has hundreds of digits. The calculator handles up to n = 1000.
+
+**Are C(n, r) and C(n, n−r) always equal?**
+Yes. Choosing r items to include is equivalent to choosing n−r items to exclude. This symmetry is sometimes called Pascal's identity complement and is a useful shortcut: C(100, 98) = C(100, 2) = 4950.
+
+## References
+
+1. Wolfram MathWorld. *Combination.* [mathworld.wolfram.com/Combination.html](https://mathworld.wolfram.com/Combination.html)
+2. Wolfram MathWorld. *Permutation.* [mathworld.wolfram.com/Permutation.html](https://mathworld.wolfram.com/Permutation.html)
+3. Khan Academy. *Permutations and Combinations.* [khanacademy.org](https://www.khanacademy.org/math/statistics-probability/counting-permutations-and-combinations)

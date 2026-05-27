@@ -1,3 +1,55 @@
-# combinations Calculator
+# 组合与排列计算器
 
-Simple combinations calculator.
+组合与排列计算器能即时回答概率论中最常见的问题：从一个集合中选取或排列元素有多少种方式？
+
+## 什么是组合与排列？
+
+**组合**计算从 n 个元素中选取 r 个（不考虑顺序）的方案数：
+
+**C(n, r) = n! / (r! × (n − r)!)**
+
+**排列**计算从 n 个元素中选取并排列 r 个（考虑顺序）的方案数：
+
+**P(n, r) = n! / (n − r)!**
+
+基本关系：**P(n, r) = C(n, r) × r!**
+
+## 使用方法
+
+1. **输入 n** — 元素总数（0–1000）。
+2. **输入 r** — 选取的元素数（0 至 n）。
+3. **读取结果** — C(n,r) 为组合数，P(n,r) 为排列数。
+
+## 示例
+
+### 示例 1 — 彩票
+
+从 49 个号码中选 6 个：C(49, 6) = **13,983,816**
+
+### 示例 2 — 比赛领奖台
+
+10 名选手，1–2–3 名：P(10, 3) = 10 × 9 × 8 = **720**
+
+### 示例 3 — 委员会
+
+从 8 人中选 4 人：C(8, 4) = **70**
+
+## 常见应用场景
+
+- **概率**：组合数是计算事件概率的基础。
+- **扑克牌**：C(52, 5) = 2,598,960 种 5 张手牌。
+- **遗传学**：二项式系数描述等位基因的分布。
+- **网络设计**：C(n, 2) = n(n−1)/2 条可能的直接连接。
+
+## 常见问题
+
+**为什么 C(n, 0) = 1？**
+只有一种方式什么都不选——空选择。
+
+**C(n, r) 与 C(n, n−r) 总是相等吗？**
+是的：C(100, 98) = C(100, 2) = 4950。
+
+## 参考资料
+
+1. Wolfram MathWorld. *Combination.* [mathworld.wolfram.com](https://mathworld.wolfram.com/Combination.html)
+2. Khan Academy. *Permutations and Combinations.* [khanacademy.org](https://www.khanacademy.org/math/statistics-probability/counting-permutations-and-combinations)

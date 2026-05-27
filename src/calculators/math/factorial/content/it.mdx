@@ -1,3 +1,54 @@
-# factorial Calculator
+# Calcolatore di Fattoriale — n! per qualsiasi intero
 
-Simple factorial calculator.
+Il calcolatore di fattoriale calcola n! — il prodotto di tutti gli interi positivi da 1 a n — per qualsiasi intero tra 0 e 170. I fattoriali crescono molto rapidamente: 5! = 120, 10! = 3.628.800. Per n &gt; 21 viene usata l'aritmetica BigInt.
+
+## Cos'è un fattoriale?
+
+Il fattoriale di un intero non negativo n, scritto n!, è definito come:
+
+**n! = n × (n − 1) × ⋯ × 2 × 1**, con **0! = 1**
+
+Esempi: 5! = 120, 10! = 3.628.800, 20! ≈ 2,43 × 10^18.
+
+### Perché 0! = 1?
+
+Il prodotto vuoto è definito come 1 (identità moltiplicativa). Inoltre C(n,0) = n!/(0!·n!) = 1 — c'è esattamente un modo per non scegliere nulla.
+
+## Come usare questo calcolatore
+
+1. **Inserire n** — intero non negativo (0–170).
+2. **Leggere il risultato** — valore esatto di n!.
+
+## Esempi
+
+### Esempio 1 — 7!
+
+7! = **5.040** — modi per ordinare 7 libri diversi.
+
+### Esempio 2 — 13!
+
+13! = **6.227.020.800**
+
+### Esempio 3 — 50!
+
+50! ha 65 cifre ed è calcolato in modo esatto con BigInt.
+
+## Applicazioni
+
+- **Combinatoria**: C(n,r) = n!/(r!(n−r)!), P(n,r) = n!/(n−r)!
+- **Probabilità**: distribuzioni binomiale e di Poisson.
+- **Serie di Taylor**: eˣ = Σ xⁿ/n!
+- **Fisica**: approssimazione di Stirling in meccanica statistica.
+
+## Domande frequenti
+
+**Perché il massimo è n = 170?**
+170! ≈ 7,26 × 10^306 è il fattoriale più grande contenibile in un float IEEE-754.
+
+**Cos'è l'approssimazione di Stirling?**
+Per n grande: ln(n!) ≈ n·ln(n) − n + ½·ln(2πn).
+
+## Riferimenti
+
+1. Wolfram MathWorld. *Factorial.* [mathworld.wolfram.com](https://mathworld.wolfram.com/Factorial.html)
+2. NIST DLMF. *§5.2.* [dlmf.nist.gov/5.2](https://dlmf.nist.gov/5.2)

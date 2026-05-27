@@ -1,3 +1,54 @@
-# factorial Calculator
+# Calculadora de Factorial — n! para cualquier entero
 
-Simple factorial calculator.
+La calculadora de factorial calcula n! — el producto de todos los enteros positivos de 1 a n — para cualquier entero entre 0 y 170. Los factoriales crecen muy rápido: 5! = 120, 10! = 3.628.800. Para n &gt; 21 se usa aritmética BigInt.
+
+## ¿Qué es un factorial?
+
+El factorial de un entero no negativo n, escrito n!, se define como:
+
+**n! = n × (n − 1) × ⋯ × 2 × 1**, con **0! = 1**
+
+Ejemplos: 5! = 120, 10! = 3.628.800, 20! ≈ 2,43 × 10^18.
+
+### ¿Por qué 0! = 1?
+
+El producto vacío se define como 1 (identidad multiplicativa). Además, C(n,0) = n!/(0!·n!) = 1 — solo hay una forma de elegir nada.
+
+## Cómo usar esta calculadora
+
+1. **Introducir n** — entero no negativo (0–170).
+2. **Leer el resultado** — valor exacto de n!.
+
+## Ejemplos
+
+### Ejemplo 1 — 7!
+
+7! = **5.040** — formas de ordenar 7 libros distintos.
+
+### Ejemplo 2 — 13!
+
+13! = **6.227.020.800**
+
+### Ejemplo 3 — 50!
+
+50! tiene 65 dígitos y se calcula de forma exacta con BigInt.
+
+## Aplicaciones
+
+- **Combinatoria**: C(n,r) = n!/(r!(n−r)!), P(n,r) = n!/(n−r)!
+- **Probabilidad**: distribuciones binomial y Poisson.
+- **Series de Taylor**: eˣ = Σ xⁿ/n!
+- **Física**: aproximación de Stirling en mecánica estadística.
+
+## Preguntas frecuentes
+
+**¿Por qué el máximo es n = 170?**
+170! ≈ 7,26 × 10^306 es el mayor factorial que cabe en un flotante IEEE-754. 171! sería infinito.
+
+**¿Qué es la aproximación de Stirling?**
+Para n grande: ln(n!) ≈ n·ln(n) − n + ½·ln(2πn).
+
+## Referencias
+
+1. Wolfram MathWorld. *Factorial.* [mathworld.wolfram.com](https://mathworld.wolfram.com/Factorial.html)
+2. NIST DLMF. *§5.2.* [dlmf.nist.gov/5.2](https://dlmf.nist.gov/5.2)

@@ -13,7 +13,14 @@ export default defineCalculator({
   ],
   outputs: [{ id: "nCr", format: "number", highlight: true }, { id: "nPr", format: "number" }],
   inputSchema, compute, i18n,
-  meta: { formulaLatex: "C(n,r) = \\frac{n!}{r!(n-r)!}", references: [{ title: "Combination", url: "https://en.wikipedia.org/wiki/Combination", authority: "Wikipedia" }] },
+  meta: {
+    formulaLatex: "C(n,r) = \\frac{n!}{r!(n-r)!} \\quad P(n,r) = \\frac{n!}{(n-r)!}",
+    references: [
+      { title: "Combination — Wolfram MathWorld", url: "https://mathworld.wolfram.com/Combination.html", authority: "Wolfram MathWorld" },
+      { title: "Permutation — Wolfram MathWorld", url: "https://mathworld.wolfram.com/Permutation.html", authority: "Wolfram MathWorld" },
+      { title: "Permutations and Combinations — Khan Academy", url: "https://www.khanacademy.org/math/statistics-probability/counting-permutations-and-combinations", authority: "Khan Academy" },
+    ]
+  },
   related: ["factorial"],
-  tags: ["combinations", "math"],
+  tags: ["combinations", "permutations", "combinatorics", "binomial", "math"],
 });

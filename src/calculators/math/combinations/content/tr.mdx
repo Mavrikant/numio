@@ -1,3 +1,91 @@
-# combinations Calculator
+# Kombinasyon ve Permütasyon Hesaplayıcı
 
-Simple combinations calculator.
+Kombinasyon ve permütasyon hesaplayıcı, olasılık ve istatistikte en sık sorulan sorulardan birine anında yanıt vermenizi sağlar: daha büyük bir kümeden bir grup öğeyi kaç farklı şekilde seçebilir ya da sıralayabilirsiniz? Piyango olasılıklarını hesaplıyor, takım seçimleri yapıyor ya da kombinatorik problem setleri üzerinde çalışıyor olun; bu araç ağır işi sizin yerinize yapar.
+
+## Kombinasyon ve Permütasyon Nedir?
+
+**Kombinasyonlar**, n elemanlı bir kümeden r eleman seçmenin kaç farklı yolu olduğunu sayar; seçim sırası önemsizdir. Formül şöyledir:
+
+**C(n, r) = n! / (r! × (n − r)!)**
+
+Örneğin, 10 kişilik bir sınıftan 3 öğrenciyi çalışma grubu oluşturmak için seçmek bir kombinasyon problemidir. Ali, Berk ve Cem'in bu sırayla mı yoksa başka bir sırayla mı seçildiği önemli değildir — ortaya çıkan grup aynıdır.
+
+**Permütasyonlar**, n elemanlı bir kümeden r elemanı seçip sıralamanın kaç farklı yolu olduğunu sayar; sıra önemlidir. Formül:
+
+**P(n, r) = n! / (n − r)!**
+
+Örneğin, 10 koşucudan 3'üne birinci, ikinci ve üçüncülük madalyası vermek bir permütasyon problemidir. Ali birinci, Berk ikinci, Cem üçüncü olması; Cem birinci, Ali ikinci, Berk üçüncü olmasından farklı bir sonuçtur.
+
+İki kavram arasındaki temel ilişki şudur: **P(n, r) = C(n, r) × r!**. Her r elemanlı seçim r! farklı biçimde sıralanabildiğinden, permütasyonlar her zaman en az kombinasyonlar kadar büyüktür.
+
+## Bu Hesaplayıcı Nasıl Kullanılır?
+
+1. **n değerini girin** — kümedeki toplam eleman sayısı (0 ile 1000 arasında).
+2. **r değerini girin** — seçilecek veya sıralanacak eleman sayısı (0 ile n arasında olmalıdır).
+3. **Sonuçları okuyun** — C(n, r) kombinasyon sayısını (sıra önemsiz), P(n, r) ise permütasyon sayısını (sıra önemli) verir.
+
+r, n'den büyük olursa sonuç 0'dır — var olandan fazla eleman seçilemez.
+
+## Örnekler
+
+### Örnek 1 — Piyango olasılığı
+
+Bir piyango, 49 sayı havuzundan 6 sayı çekiyor. Kaç farklı kazanma kombinasyonu vardır?
+
+n = 49, r = 6
+
+C(49, 6) = 49! / (6! × 43!) = **13.983.816**
+
+Yaklaşık 14 milyon farklı kombinasyon vardır; bu yüzden piyango büyük ikramiyeleri çok nadir çıkar.
+
+### Örnek 2 — Yarış podyumu
+
+10 yarışmacılı bir yarışta, 1.–2.–3. sıralar için kaç farklı podyum sonucu mümkündür?
+
+n = 10, r = 3
+
+P(10, 3) = 10! / 7! = 10 × 9 × 8 = **720**
+
+İlk üç sıra için 720 farklı sıralı sonuç vardır.
+
+### Örnek 3 — Komite seçimi
+
+8 çalışanın bulunduğu bir grupta, proje komitesi için 4 kişi seçilecek. Kaç farklı komite oluşturulabilir?
+
+n = 8, r = 4
+
+C(8, 4) = 8! / (4! × 4!) = **70**
+
+70 farklı geçerli komite oluşturulabilir.
+
+## Yaygın Kullanım Alanları
+
+**Olasılık**: Kombinasyonlar, olay olasılıklarının hesaplanmasında temel oluşturur. 10 öğeden 3'ü hatalıysa ve rastgele 2 öğe seçilirse, her ikisinin de hatalı olma olasılığı C(3,2) / C(10,2) = 3/45 ≈ %6,7'dir.
+
+**Kart oyunları**: 52 kartlık standart bir desteden C(52,5) = 2.598.960 farklı 5 kartlık poker eli oluşturulabilir. Her özel el olasılığı bu toplama bölünerek hesaplanır.
+
+**Genetik ve biyoloji**: C(n,k) binom katsayısı, k alelinin n yavru arasında kaç farklı biçimde dağılabileceğini açıklar ve Hardy–Weinberg dengesinin temelini oluşturur.
+
+**Ağ tasarımı**: n düğümlü tam grafikteki olası doğrudan bağlantı sayısı C(n, 2) = n(n−1)/2'dir.
+
+**Çizelgeleme ve atama**: Permütasyonlar, n görevin n işçiye bire bir kaç farklı biçimde atanabileceğini belirler (toplam n! atama).
+
+## Sıkça Sorulan Sorular
+
+**C(n, 0) neden 1'dir?**
+Bir kümeden hiçbir şey seçmemenin tam olarak bir yolu vardır: boş seçim. Matematiksel olarak 0! = 1 tanımı, n!/(0! × n!) = 1 formülünün tutarlı kalmasını sağlar.
+
+**r, n'e eşit olduğunda ne olur?**
+C(n, n) = 1 ve P(n, n) = n!. Kümedeki tüm elemanları seçmenin yalnızca bir yolu vardır (kombinasyon olarak), ancak bu elemanlar n! farklı sırada sıralanabilir.
+
+**Bu hesaplayıcıyı büyük sayılar için kullanabilir miyim?**
+Evet, ancak sonuçlar çok hızlı büyüyebilir. C(1000, 500) yüzlerce basamaklıdır. Hesaplayıcı n = 1000'e kadar çalışır.
+
+**C(n, r) ile C(n, n−r) her zaman eşit midir?**
+Evet. r eleman seçmek, n−r elemanı dışarıda bırakmakla eşdeğerdir. Bu simetri pratik bir kısayoldur: C(100, 98) = C(100, 2) = 4950.
+
+## Kaynaklar
+
+1. Wolfram MathWorld. *Combination.* [mathworld.wolfram.com/Combination.html](https://mathworld.wolfram.com/Combination.html)
+2. Wolfram MathWorld. *Permutation.* [mathworld.wolfram.com/Permutation.html](https://mathworld.wolfram.com/Permutation.html)
+3. Khan Academy. *Permutations and Combinations.* [khanacademy.org](https://www.khanacademy.org/math/statistics-probability/counting-permutations-and-combinations)

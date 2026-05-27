@@ -1,3 +1,55 @@
-# combinations Calculator
+# 조합 & 순열 계산기
 
-Simple combinations calculator.
+조합과 순열 계산기는 확률론에서 가장 자주 묻는 질문에 즉시 답합니다: 집합에서 요소를 선택하거나 배열하는 방법은 몇 가지인가?
+
+## 조합과 순열이란?
+
+**조합**은 n개의 요소에서 r개를 순서 없이 선택하는 방법의 수를 셉니다:
+
+**C(n, r) = n! / (r! × (n − r)!)**
+
+**순열**은 n개의 요소에서 r개를 순서 있게 배열하는 방법의 수를 셉니다:
+
+**P(n, r) = n! / (n − r)!**
+
+기본 관계: **P(n, r) = C(n, r) × r!**
+
+## 사용 방법
+
+1. **n 입력** — 전체 요소 수 (0–1000).
+2. **r 입력** — 선택할 요소 수 (0에서 n 사이).
+3. **결과 확인** — C(n, r)은 조합수, P(n, r)은 순열수.
+
+## 예시
+
+### 예시 1 — 복권
+
+49개 번호 중 6개 선택: C(49, 6) = **13,983,816**
+
+### 예시 2 — 경기 시상대
+
+10명 참가자, 1–2–3위: P(10, 3) = 10 × 9 × 8 = **720**
+
+### 예시 3 — 위원회
+
+8명 중 4명 선택: C(8, 4) = **70**
+
+## 주요 활용 분야
+
+- **확률론**: 사건 확률 계산의 기초.
+- **카드 게임**: C(52, 5) = 2,598,960가지 5장 포커 패.
+- **유전학**: 이항 계수가 대립유전자 분포를 기술.
+- **네트워크 설계**: C(n, 2) = n(n−1)/2개의 가능한 직접 연결.
+
+## 자주 묻는 질문
+
+**C(n, 0) = 1인 이유는?**
+아무것도 선택하지 않는 방법은 정확히 1가지입니다(빈 선택).
+
+**C(n, r)과 C(n, n−r)은 항상 같은가요?**
+예: C(100, 98) = C(100, 2) = 4950.
+
+## 참고 자료
+
+1. Wolfram MathWorld. *Combination.* [mathworld.wolfram.com](https://mathworld.wolfram.com/Combination.html)
+2. Khan Academy. *Permutations and Combinations.* [khanacademy.org](https://www.khanacademy.org/math/statistics-probability/counting-permutations-and-combinations)

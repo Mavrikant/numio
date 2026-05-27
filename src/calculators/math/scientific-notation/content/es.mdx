@@ -1,3 +1,66 @@
-# scientific-notation Calculator
+# Convertidor de Notación Científica
 
-Simple scientific-notation calculator.
+El convertidor de notación científica transforma instantáneamente cualquier número entre su forma decimal estándar, notación científica y notación ingenieril.
+
+## ¿Qué es la notación científica?
+
+La notación científica expresa un número como el producto de un coeficiente y una potencia de diez:
+
+**a × 10ⁿ**, donde **1 ≤ a &lt; 10**
+
+Ejemplos:
+- 45.600 = 4,56 × 10⁴
+- 0,000123 = 1,23 × 10⁻⁴
+- Número de Avogadro: 6,02214076 × 10²³
+
+## ¿Qué es la notación ingenieril?
+
+La notación ingenieril limita el exponente a múltiplos de 3, alineados con los prefijos SI:
+
+| Exponente | Prefijo | Símbolo |
+|---|---|---|
+| 10⁹ | giga | G |
+| 10⁶ | mega | M |
+| 10³ | kilo | k |
+| 10⁻³ | mili | m |
+| 10⁻⁶ | micro | μ |
+| 10⁻⁹ | nano | n |
+
+## Cómo usar este convertidor
+
+1. **Introducir el número** — cualquier número real.
+2. **Elegir el modo** — científico, ingenieril o decimal.
+3. **Leer el resultado** — conversión instantánea.
+
+## Ejemplos
+
+### Ejemplo 1 — Decimal → Científico
+
+Entrada: 0,000123 → **1,23 × 10⁻⁴**
+
+### Ejemplo 2 — Decimal → Ingenieril
+
+Entrada: 0,000123 → **123 × 10⁻⁶** (= 123 microunidades)
+
+### Ejemplo 3 — Velocidad de la luz
+
+299.792.458 m/s = **2,99792458 × 10⁸ m/s**
+
+## Casos de uso comunes
+
+- **Física**: constante de Planck (6,626 × 10⁻³⁴ J·s), masa del electrón (9,109 × 10⁻³¹ kg).
+- **Química**: concentraciones molares en muchos órdenes de magnitud.
+- **Astronomía**: distancia Tierra–Sol: 1,496 × 10¹¹ m.
+
+## Preguntas frecuentes
+
+**¿Cómo convierto manualmente a notación científica?**
+Mueve la coma decimal hasta que quede un solo dígito no nulo a su izquierda. Mover a la izquierda → exponente positivo; a la derecha → negativo. Ejemplo: 0,0456 → 4,56 × 10⁻².
+
+**¿Puede la notación científica representar números negativos?**
+Sí, con un signo menos ante el coeficiente: −3,5 × 10⁶.
+
+## Referencias
+
+1. Wolfram MathWorld. *Scientific Notation.* [mathworld.wolfram.com](https://mathworld.wolfram.com/ScientificNotation.html)
+2. Khan Academy. *Scientific Notation Review.* [khanacademy.org](https://www.khanacademy.org/math/cc-eighth-grade-math/cc-8th-numbers-operations/cc-8th-scientific-notation/a/scientific-notation-review)

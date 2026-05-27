@@ -1,3 +1,57 @@
-# combinations Calculator
+# Calculateur de Combinaisons et Permutations
 
-Simple combinations calculator.
+Le calculateur de combinaisons et permutations répond instantanément à l'une des questions les plus fréquentes en probabilités : de combien de façons peut-on sélectionner ou agencer des éléments d'un ensemble ?
+
+## Que sont les combinaisons et les permutations ?
+
+**Les combinaisons** comptent le nombre de façons de choisir r éléments parmi n sans tenir compte de l'ordre :
+
+**C(n, r) = n! / (r! × (n − r)!)**
+
+**Les permutations** comptent le nombre de façons de choisir et d'ordonner r éléments parmi n quand l'ordre importe :
+
+**P(n, r) = n! / (n − r)!**
+
+La relation fondamentale : **P(n, r) = C(n, r) × r!**
+
+## Comment utiliser ce calculateur
+
+1. **Saisir n** — nombre total d'éléments (0–1000).
+2. **Saisir r** — nombre d'éléments à choisir (0 à n).
+3. **Lire les résultats** — C(n, r) pour combinaisons, P(n, r) pour permutations.
+
+## Exemples
+
+### Exemple 1 — Loterie
+
+Une loterie tire 6 numéros sur 49. Combien de combinaisons gagnantes existent ?
+
+n = 49, r = 6 → C(49, 6) = **13 983 816**
+
+### Exemple 2 — Podium de course
+
+10 coureurs, podium 1er–2e–3e : P(10, 3) = 10 × 9 × 8 = **720**
+
+### Exemple 3 — Comité
+
+Choisir 4 personnes parmi 8 : C(8, 4) = **70**
+
+## Cas d'usage courants
+
+- **Probabilités** : base des calculs de probabilités d'événements.
+- **Jeux de cartes** : C(52, 5) = 2 598 960 mains de poker possibles.
+- **Génétique** : le coefficient binomial C(n,k) modélise la distribution des allèles.
+- **Réseaux** : C(n, 2) = n(n−1)/2 connexions directes possibles.
+
+## Foire aux questions
+
+**Pourquoi C(n, 0) = 1 ?**
+Il n'y a qu'une seule façon de ne rien choisir — la sélection vide.
+
+**C(n, r) et C(n, n−r) sont-ils toujours égaux ?**
+Oui : C(100, 98) = C(100, 2) = 4950.
+
+## Références
+
+1. Wolfram MathWorld. *Combination.* [mathworld.wolfram.com](https://mathworld.wolfram.com/Combination.html)
+2. Khan Academy. *Permutations and Combinations.* [khanacademy.org](https://www.khanacademy.org/math/statistics-probability/counting-permutations-and-combinations)

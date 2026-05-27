@@ -1,3 +1,66 @@
-# scientific-notation Calculator
+# Wissenschaftliche Notation Umrechner
 
-Simple scientific-notation calculator.
+Der Umrechner für wissenschaftliche Notation wandelt jede Zahl sofort zwischen Dezimalschreibweise, wissenschaftlicher Notation und technischer Notation um.
+
+## Was ist die wissenschaftliche Notation?
+
+Wissenschaftliche Notation schreibt eine Zahl als Produkt aus einem Koeffizienten und einer Zehnerpotenz:
+
+**a × 10ⁿ**, wobei **1 ≤ a &lt; 10**
+
+Beispiele:
+- 45.600 = 4,56 × 10⁴
+- 0,000123 = 1,23 × 10⁻⁴
+- Avogadro-Konstante: 6,02214076 × 10²³
+
+## Was ist die technische Notation?
+
+Die technische Notation beschränkt den Exponenten auf Vielfache von 3, die den SI-Präfixen entsprechen:
+
+| Exponent | Präfix | Symbol |
+|---|---|---|
+| 10⁹ | Giga | G |
+| 10⁶ | Mega | M |
+| 10³ | Kilo | k |
+| 10⁻³ | Milli | m |
+| 10⁻⁶ | Mikro | μ |
+| 10⁻⁹ | Nano | n |
+
+## Anleitung
+
+1. **Zahl eingeben** — beliebige reelle Zahl.
+2. **Modus wählen** — Wissenschaftlich, Technisch oder Dezimal.
+3. **Ergebnis lesen** — sofortige Konvertierung.
+
+## Beispiele
+
+### Beispiel 1 — Dezimal → Wissenschaftlich
+
+Eingabe: 0,000123 → **1,23 × 10⁻⁴**
+
+### Beispiel 2 — Dezimal → Technisch
+
+Eingabe: 0,000123 → **123 × 10⁻⁶** (= 123 Mikroeinheiten)
+
+### Beispiel 3 — Lichtgeschwindigkeit
+
+299.792.458 m/s = **2,99792458 × 10⁸ m/s**
+
+## Häufige Anwendungsgebiete
+
+- **Physik**: Plancksches Wirkungsquantum (6,626 × 10⁻³⁴ J·s), Elektronenmasse (9,109 × 10⁻³¹ kg).
+- **Chemie**: Molare Konzentrationen über viele Größenordnungen.
+- **Astronomie**: Entfernung Erde–Sonne: 1,496 × 10¹¹ m.
+
+## Häufig gestellte Fragen
+
+**Wie konvertiere ich manuell in wissenschaftliche Notation?**
+Verschieben Sie das Dezimalkomma so, dass links davon genau eine Ziffer steht. Linksverschiebung → positiver Exponent; Rechtsverschiebung → negativer Exponent. Beispiel: 0,0456 → 4,56 × 10⁻².
+
+**Kann die wissenschaftliche Notation negative Zahlen darstellen?**
+Ja, mit einem Minuszeichen vor dem Koeffizienten: −3,5 × 10⁶.
+
+## Quellen
+
+1. Wolfram MathWorld. *Scientific Notation.* [mathworld.wolfram.com](https://mathworld.wolfram.com/ScientificNotation.html)
+2. Khan Academy. *Scientific Notation Review.* [khanacademy.org](https://www.khanacademy.org/math/cc-eighth-grade-math/cc-8th-numbers-operations/cc-8th-scientific-notation/a/scientific-notation-review)

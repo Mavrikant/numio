@@ -1,3 +1,66 @@
-# scientific-notation Calculator
+# Convertisseur de Notation Scientifique
 
-Simple scientific-notation calculator.
+Le convertisseur de notation scientifique transforme instantanément n'importe quel nombre entre sa forme décimale standard, la notation scientifique et la notation d'ingénierie.
+
+## Qu'est-ce que la notation scientifique ?
+
+La notation scientifique exprime un nombre comme le produit d'un coefficient et d'une puissance de dix :
+
+**a × 10ⁿ**, où **1 ≤ a &lt; 10**
+
+Exemples :
+- 45 600 = 4,56 × 10⁴
+- 0,000123 = 1,23 × 10⁻⁴
+- Nombre d'Avogadro : 6,02214076 × 10²³
+
+## Qu'est-ce que la notation d'ingénierie ?
+
+La notation d'ingénierie limite l'exposant aux multiples de 3, alignés avec les préfixes SI :
+
+| Exposant | Préfixe | Symbole |
+|---|---|---|
+| 10⁹ | giga | G |
+| 10⁶ | méga | M |
+| 10³ | kilo | k |
+| 10⁻³ | milli | m |
+| 10⁻⁶ | micro | μ |
+| 10⁻⁹ | nano | n |
+
+## Comment utiliser ce convertisseur
+
+1. **Saisir le nombre** — tout nombre réel.
+2. **Choisir le mode** — scientifique, d'ingénierie ou décimal.
+3. **Lire le résultat** — conversion instantanée.
+
+## Exemples
+
+### Exemple 1 — Décimal → Scientifique
+
+Entrée : 0,000123 → **1,23 × 10⁻⁴**
+
+### Exemple 2 — Décimal → Ingénierie
+
+Entrée : 0,000123 → **123 × 10⁻⁶** (= 123 microunités)
+
+### Exemple 3 — Vitesse de la lumière
+
+299 792 458 m/s = **2,99792458 × 10⁸ m/s**
+
+## Cas d'usage courants
+
+- **Physique** : constante de Planck (6,626 × 10⁻³⁴ J·s), masse de l'électron (9,109 × 10⁻³¹ kg).
+- **Chimie** : concentrations molaires sur de nombreux ordres de grandeur.
+- **Astronomie** : distance Terre–Soleil : 1,496 × 10¹¹ m.
+
+## Foire aux questions
+
+**Comment convertir manuellement en notation scientifique ?**
+Déplacez la virgule jusqu'à ce qu'il n'y ait qu'un seul chiffre non nul à sa gauche. Déplacement à gauche → exposant positif ; à droite → exposant négatif. Exemple : 0,0456 → 4,56 × 10⁻².
+
+**La notation scientifique peut-elle représenter des nombres négatifs ?**
+Oui, avec un signe moins devant le coefficient : −3,5 × 10⁶.
+
+## Références
+
+1. Wolfram MathWorld. *Scientific Notation.* [mathworld.wolfram.com](https://mathworld.wolfram.com/ScientificNotation.html)
+2. Khan Academy. *Scientific Notation Review.* [khanacademy.org](https://www.khanacademy.org/math/cc-eighth-grade-math/cc-8th-numbers-operations/cc-8th-scientific-notation/a/scientific-notation-review)

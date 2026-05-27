@@ -1,3 +1,56 @@
-# factorial Calculator
+# Fakultätsrechner — n! für jede ganze Zahl
 
-Simple factorial calculator.
+Der Fakultätsrechner berechnet n! — das Produkt aller positiven ganzen Zahlen von 1 bis n — für jede ganze Zahl zwischen 0 und 170. Fakultäten wachsen sehr schnell: 5! = 120, 10! = 3.628.800. Für n &gt; 21 wird BigInt-Arithmetik verwendet.
+
+## Was ist eine Fakultät?
+
+Die Fakultät einer nicht-negativen ganzen Zahl n, geschrieben n!, ist:
+
+**n! = n × (n − 1) × ⋯ × 2 × 1**, mit **0! = 1**
+
+Beispiele: 5! = 120, 10! = 3.628.800, 20! = 2.432.902.008.176.640.000.
+
+### Warum gilt 0! = 1?
+
+Die leere Produktkonvention: Ein Produkt ohne Faktoren ist gleich der multiplikativen Einheit 1. Außerdem liefert C(n,0) = n!/(0!·n!) = 1 — es gibt genau eine Möglichkeit, nichts auszuwählen.
+
+## Anleitung
+
+1. **n eingeben** — nicht-negative ganze Zahl (0–170).
+2. **Ergebnis lesen** — der exakte Wert von n!.
+
+## Beispiele
+
+### Beispiel 1 — 7!
+
+7! = 7 × 6 × 5 × 4 × 3 × 2 × 1 = **5.040**
+
+Anzahl der Möglichkeiten, 7 verschiedene Bücher anzuordnen.
+
+### Beispiel 2 — 13!
+
+13! = **6.227.020.800**
+
+### Beispiel 3 — 50!
+
+50! hat 65 Stellen und wird dank BigInt-Arithmetik exakt berechnet.
+
+## Anwendungsgebiete
+
+- **Kombinatorik**: C(n,r) = n!/(r!(n−r)!), P(n,r) = n!/(n−r)!
+- **Wahrscheinlichkeit**: Binomial- und Poisson-Verteilung.
+- **Taylor-Reihen**: e^x = Σ xⁿ/n!, sin(x) = Σ (−1)ⁿx^(2n+1)/(2n+1)!
+- **Physik**: Stirling-Näherung ln(n!) ≈ n·ln(n)−n in der statistischen Mechanik.
+
+## Häufig gestellte Fragen
+
+**Warum ist das Maximum n = 170?**
+170! ≈ 7,26 × 10^306 ist die größte Fakultät, die in eine IEEE-754-Gleitkommazahl passt. 171! wäre Unendlich.
+
+**Was ist Stirlings Näherung?**
+Für große n gilt ln(n!) ≈ n·ln(n) − n + ½·ln(2πn).
+
+## Quellen
+
+1. Wolfram MathWorld. *Factorial.* [mathworld.wolfram.com](https://mathworld.wolfram.com/Factorial.html)
+2. NIST DLMF. *§5.2.* [dlmf.nist.gov/5.2](https://dlmf.nist.gov/5.2)

@@ -1,3 +1,105 @@
-# scientific-notation Calculator
+# Bilimsel Gösterim Dönüştürücü
 
-Simple scientific-notation calculator.
+Bilimsel gösterim dönüştürücü, herhangi bir sayıyı standart ondalık biçimi, bilimsel gösterim ve mühendislik gösterimi arasında anında dönüştürür. İster bir elektronun kütlesiyle (9,109 × 10⁻³¹ kg) çalışıyor olun, ister en yakın yıldıza olan mesafeyi (4,07 × 10¹⁶ m) ifade ediyor olun, bu araç dönüşümü doğru ve hızlı şekilde gerçekleştirir.
+
+## Bilimsel Gösterim Nedir?
+
+Bilimsel gösterim, sayıları bir katsayı ile 10'un bir kuvvetinin çarpımı olarak ifade etmenin standart yoludur:
+
+**a × 10ⁿ**, burada **1 ≤ a &lt; 10** ve n bir tamsayıdır
+
+Katsayı (mantis ya da significand de denir), ondalık virgülün solunda her zaman tam olarak bir sıfır olmayan basamak içerir. Üs n, ondalık virgülün kaç basamak kaydırılacağını gösterir.
+
+**Örnekler:**
+- 45.600 = 4,56 × 10⁴ (ondalık virgül 4 basamak sola → pozitif üs)
+- 0,000123 = 1,23 × 10⁻⁴ (ondalık virgül 4 basamak sağa → negatif üs)
+- Avogadro sayısı: 6,02214076 × 10²³
+
+Bilimsel gösterim; fizik, kimya, astronomi ve mühendislikte büyüklük mertebesini anında ortaya koyduğu ve sıfır sayma zahmetini ortadan kaldırdığı için evrensel standarttır.
+
+## Mühendislik Gösterimi Nedir?
+
+Mühendislik gösterimi, üssü **3'ün katlarıyla** (0, ±3, ±6, ±9, ±12…) sınırlayan bir bilimsel gösterim çeşididir. Bu, SI önekleriyle mükemmel biçimde örtüşür:
+
+| Üs | SI Öneki | Simge |
+|---|---|---|
+| 10¹² | tera | T |
+| 10⁹ | giga | G |
+| 10⁶ | mega | M |
+| 10³ | kilo | k |
+| 10⁻³ | mili | m |
+| 10⁻⁶ | mikro | μ |
+| 10⁻⁹ | nano | n |
+
+Mühendislik gösteriminde katsayı 1 ile 999 arasında olabilir. Örneğin:
+- 0,000123 = 123 × 10⁻⁶ (123 mikrobirim)
+- 45.600 = 45,6 × 10³ (45,6 kilo birim)
+
+## Bu Dönüştürücü Nasıl Kullanılır?
+
+1. **Sayıyı girin** — çok küçük ya da çok büyük değerler dahil herhangi bir gerçek sayı.
+2. **Dönüşüm modunu seçin:**
+   - *Bilimsel Gösterime*: standart ondalığı a × 10ⁿ biçimine dönüştürür.
+   - *Standart Ondalığa*: gösterimi tam ondalığa geri açar.
+   - *Mühendislik Gösterimine*: SI önekleriyle hizalı a × 10^(3k) biçimine dönüştürür.
+3. **Sonucu okuyun** — dönüştürülmüş biçim anında görüntülenir.
+
+## Örnekler
+
+### Örnek 1 — Ondalıktan bilimsel gösterime
+
+Giriş: 0,000123 | Mod: Bilimsel Gösterime
+
+Sonuç: **1,23 × 10⁻⁴**
+
+### Örnek 2 — Ondalıktan mühendislik gösterimine
+
+Giriş: 0,000123 | Mod: Mühendislik Gösterimine
+
+Sonuç: **123 × 10⁻⁶**
+
+Üs −6, SI öneki "mikro"ya karşılık gelir; bu nedenle değer 123 mikrobirim olarak okunabilir.
+
+### Örnek 3 — Işık hızı
+
+Işık hızı 299.792.458 m/s'dir.
+
+Bilimsel gösterim: **2,99792458 × 10⁸ m/s**
+Mühendislik gösterimi: **299,792458 × 10⁶ m/s** (≈ 300 megametre/saniye)
+
+## Bilimsel Gösterim Neden Kullanılır?
+
+**Özlülük**: 6,022 × 10²³ yazmak, 602.200.000.000.000.000.000.000 yazmaktan çok daha kısadır ve sıfır yerleştirme hatasını ortadan kaldırır.
+
+**Hassasiyet**: Bilimsel gösterim, anlamlı rakamları (katsayı) büyüklük mertebesinden (üs) ayırarak kaç basamağın anlamlı olduğunu açıkça gösterir.
+
+**Büyüklük mertebesi karşılaştırması**: 10⁻¹⁵ m (femtometre, nükleer ölçek) ile 10²⁶ m (gözlemlenebilir evren) arasındaki 41 büyüklük mertebesi farkı anında görünür hale gelir.
+
+**10 kuvvetleriyle aritmetik**: 3 × 10⁴ ile 2 × 10³ çarpımı = 6 × 10⁷ oldukça basittir; aynı işlemi 30.000 × 2.000 = 60.000.000 ile yapmak hata yapmaya açıktır.
+
+## Yaygın Kullanım Alanları
+
+**Fizik**: Planck sabiti (6,626 × 10⁻³⁴ J·s), elektron kütlesi (9,109 × 10⁻³¹ kg) ve evrensel çekim sabiti (6,674 × 10⁻¹¹ N·m²/kg²) bilimsel gösterimle ifade edilir.
+
+**Kimya**: Mol/litre cinsinden derişimler çoğunlukla birçok büyüklük mertebesini kapsar. 1 M'lik güçlü asit, litre başına 6,022 × 10²³ molekül içerir.
+
+**Bilgisayar bilimi**: Bellek boyutları genellikle mühendislik gösterimiyle ifade edilir — 4 GB = 4 × 10⁹ bayt.
+
+**Astronomi**: Dünya'dan Güneş'e uzaklık 1,496 × 10¹¹ m (1 astronomik birim). Samanyolu'nun çapı yaklaşık 9,5 × 10²⁰ m'dir.
+
+## Sıkça Sorulan Sorular
+
+**Bilimsel gösterime nasıl manuel dönüşüm yapılır?**
+Ondalık virgülün solunda bir sıfır olmayan basamak kalacak şekilde virgülü kaç basamak kaydırmanız gerektiğini sayın. Sola kaydırma (sayıyı küçülttüyseniz) pozitif üs verir; sağa kaydırma negatif üs. Örnek: 0,0456 → 2 basamak sağa → 4,56 × 10⁻².
+
+**Bilimsel gösterim negatif sayıları temsil edebilir mi?**
+Evet. Negatif bir sayı yalnızca katsayının önüne eksi işareti konularak yazılır: −3,5 × 10⁶.
+
+**10⁰ = 1 midir?**
+Evet. Sıfıra yükseltilen her sıfırdan farklı sayı 1'e eşittir: 1 = 1,0 × 10⁰.
+
+## Kaynaklar
+
+1. Wolfram MathWorld. *Scientific Notation.* [mathworld.wolfram.com](https://mathworld.wolfram.com/ScientificNotation.html)
+2. Khan Academy. *Scientific Notation Review.* [khanacademy.org](https://www.khanacademy.org/math/cc-eighth-grade-math/cc-8th-numbers-operations/cc-8th-scientific-notation/a/scientific-notation-review)
+3. NIST. *Guide to the SI.* [nist.gov](https://www.nist.gov/pml/special-publication-811)

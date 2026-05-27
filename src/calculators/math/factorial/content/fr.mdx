@@ -1,3 +1,54 @@
-# factorial Calculator
+# Calculateur de Factorielle — n! pour tout entier
 
-Simple factorial calculator.
+Le calculateur de factorielle calcule n! — le produit de tous les entiers positifs de 1 à n — pour tout entier entre 0 et 170. Les factorielles croissent très rapidement : 5! = 120, 10! = 3 628 800. Pour n &gt; 21, l'arithmétique BigInt est utilisée pour des résultats exacts.
+
+## Qu'est-ce qu'une factorielle ?
+
+La factorielle d'un entier non négatif n, notée n!, est définie par :
+
+**n! = n × (n − 1) × ⋯ × 2 × 1**, avec **0! = 1**
+
+Exemples : 5! = 120, 10! = 3 628 800, 20! ≈ 2,43 × 10^18.
+
+### Pourquoi 0! = 1 ?
+
+La convention du produit vide : tout produit sans facteur est égal à l'élément neutre multiplicatif 1. En outre, C(n,0) = n!/(0!·n!) = 1 — il n'y a qu'une façon de ne rien choisir.
+
+## Comment utiliser ce calculateur
+
+1. **Saisir n** — entier non négatif (0–170).
+2. **Lire le résultat** — la valeur exacte de n!.
+
+## Exemples
+
+### Exemple 1 — 7!
+
+7! = **5 040** — nombre de façons d'arranger 7 livres différents.
+
+### Exemple 2 — 13!
+
+13! = **6 227 020 800**
+
+### Exemple 3 — 50!
+
+50! a 65 chiffres et est calculé exactement grâce à l'arithmétique BigInt.
+
+## Applications
+
+- **Combinatoire** : C(n,r) = n!/(r!(n−r)!), P(n,r) = n!/(n−r)!
+- **Probabilités** : distributions binomiale et de Poisson.
+- **Séries de Taylor** : eˣ = Σ xⁿ/n!
+- **Physique** : approximation de Stirling en mécanique statistique.
+
+## Foire aux questions
+
+**Pourquoi le maximum est-il n = 170 ?**
+170! ≈ 7,26 × 10^306 est la plus grande factorielle tenant dans un flottant IEEE-754. 171! serait infini.
+
+**Qu'est-ce que l'approximation de Stirling ?**
+Pour n grand : ln(n!) ≈ n·ln(n) − n + ½·ln(2πn).
+
+## Références
+
+1. Wolfram MathWorld. *Factorial.* [mathworld.wolfram.com](https://mathworld.wolfram.com/Factorial.html)
+2. NIST DLMF. *§5.2.* [dlmf.nist.gov/5.2](https://dlmf.nist.gov/5.2)

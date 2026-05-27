@@ -1,3 +1,57 @@
-# combinations Calculator
+# Calcolatore di Combinazioni e Permutazioni
 
-Simple combinations calculator.
+Il calcolatore di combinazioni e permutazioni risponde istantaneamente a una delle domande più frequenti in probabilità: in quanti modi si possono selezionare o disporre elementi di un insieme?
+
+## Cosa sono le combinazioni e le permutazioni?
+
+**Le combinazioni** contano in quanti modi si possono scegliere r elementi da n senza considerare l'ordine:
+
+**C(n, r) = n! / (r! × (n − r)!)**
+
+**Le permutazioni** contano in quanti modi si possono scegliere e disporre r elementi da n quando l'ordine conta:
+
+**P(n, r) = n! / (n − r)!**
+
+La relazione fondamentale: **P(n, r) = C(n, r) × r!**
+
+## Come usare questo calcolatore
+
+1. **Inserire n** — totale degli elementi (0–1000).
+2. **Inserire r** — elementi da scegliere (0 a n).
+3. **Leggere i risultati** — C(n, r) per combinazioni, P(n, r) per permutazioni.
+
+## Esempi
+
+### Esempio 1 — Lotteria
+
+Una lotteria estrae 6 numeri su 49. Quante combinazioni vincenti esistono?
+
+n = 49, r = 6 → C(49, 6) = **13.983.816**
+
+### Esempio 2 — Podio di una gara
+
+10 concorrenti, podio 1°–2°–3°: P(10, 3) = 10 × 9 × 8 = **720**
+
+### Esempio 3 — Comitato
+
+Scegliere 4 persone su 8: C(8, 4) = **70**
+
+## Casi d'uso comuni
+
+- **Probabilità**: le combinazioni sono la base per calcolare le probabilità degli eventi.
+- **Giochi di carte**: C(52, 5) = 2.598.960 mani di poker possibili.
+- **Genetica**: il coefficiente binomiale C(n,k) modella la distribuzione degli alleli.
+- **Reti**: C(n, 2) = n(n−1)/2 connessioni dirette possibili.
+
+## Domande frequenti
+
+**Perché C(n, 0) = 1?**
+C'è esattamente un modo per non scegliere nulla: la selezione vuota.
+
+**C(n, r) e C(n, n−r) sono sempre uguali?**
+Sì: C(100, 98) = C(100, 2) = 4950.
+
+## Riferimenti
+
+1. Wolfram MathWorld. *Combination.* [mathworld.wolfram.com](https://mathworld.wolfram.com/Combination.html)
+2. Khan Academy. *Permutations and Combinations.* [khanacademy.org](https://www.khanacademy.org/math/statistics-probability/counting-permutations-and-combinations)

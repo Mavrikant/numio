@@ -1,3 +1,66 @@
-# scientific-notation Calculator
+# Convertitore di Notazione Scientifica
 
-Simple scientific-notation calculator.
+Il convertitore di notazione scientifica trasforma istantaneamente qualsiasi numero tra la sua forma decimale standard, la notazione scientifica e la notazione ingegneristica.
+
+## Cos'è la notazione scientifica?
+
+La notazione scientifica esprime un numero come prodotto di un coefficiente e una potenza di dieci:
+
+**a × 10ⁿ**, dove **1 ≤ a &lt; 10**
+
+Esempi:
+- 45.600 = 4,56 × 10⁴
+- 0,000123 = 1,23 × 10⁻⁴
+- Numero di Avogadro: 6,02214076 × 10²³
+
+## Cos'è la notazione ingegneristica?
+
+La notazione ingegneristica limita l'esponente ai multipli di 3, allineati con i prefissi SI:
+
+| Esponente | Prefisso | Simbolo |
+|---|---|---|
+| 10⁹ | giga | G |
+| 10⁶ | mega | M |
+| 10³ | chilo | k |
+| 10⁻³ | milli | m |
+| 10⁻⁶ | micro | μ |
+| 10⁻⁹ | nano | n |
+
+## Come usare questo convertitore
+
+1. **Inserire il numero** — qualsiasi numero reale.
+2. **Scegliere la modalità** — scientifica, ingegneristica o decimale.
+3. **Leggere il risultato** — conversione istantanea.
+
+## Esempi
+
+### Esempio 1 — Decimale → Scientifico
+
+Ingresso: 0,000123 → **1,23 × 10⁻⁴**
+
+### Esempio 2 — Decimale → Ingegneristico
+
+Ingresso: 0,000123 → **123 × 10⁻⁶** (= 123 microunità)
+
+### Esempio 3 — Velocità della luce
+
+299.792.458 m/s = **2,99792458 × 10⁸ m/s**
+
+## Casi d'uso comuni
+
+- **Fisica**: costante di Planck (6,626 × 10⁻³⁴ J·s), massa dell'elettrone (9,109 × 10⁻³¹ kg).
+- **Chimica**: concentrazioni molari su molti ordini di grandezza.
+- **Astronomia**: distanza Terra–Sole: 1,496 × 10¹¹ m.
+
+## Domande frequenti
+
+**Come si converte manualmente in notazione scientifica?**
+Sposta la virgola decimale finché rimane una sola cifra non nulla alla sua sinistra. Spostamento a sinistra → esponente positivo; a destra → negativo. Esempio: 0,0456 → 4,56 × 10⁻².
+
+**La notazione scientifica può rappresentare numeri negativi?**
+Sì, con un segno meno davanti al coefficiente: −3,5 × 10⁶.
+
+## Riferimenti
+
+1. Wolfram MathWorld. *Scientific Notation.* [mathworld.wolfram.com](https://mathworld.wolfram.com/ScientificNotation.html)
+2. Khan Academy. *Scientific Notation Review.* [khanacademy.org](https://www.khanacademy.org/math/cc-eighth-grade-math/cc-8th-numbers-operations/cc-8th-scientific-notation/a/scientific-notation-review)

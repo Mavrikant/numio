@@ -1,3 +1,87 @@
-# factorial Calculator
+# Faktöriyel Hesaplayıcı — Herhangi Bir Tamsayının n! Değeri
 
-Simple factorial calculator.
+Faktöriyel hesaplayıcı, 0'dan 170'e kadar herhangi bir tamsayı için n! değerini — yani 1'den n'e kadar tüm pozitif tamsayıların çarpımını — hesaplar. Faktöriyeller son derece hızlı büyür: 10! = 3.628.800, 20! ise yaklaşık 2,4 × 10^18'dir. Bu araç, 21!'in üzerindeki değerler için otomatik olarak BigInt gösterimine geçerek tüm hesapları kesin aritmetikle yapar.
+
+## Faktöriyel Nedir?
+
+Negatif olmayan bir n tamsayısının faktöriyeli, **n!** olarak yazılır ve şöyle tanımlanır:
+
+**n! = n × (n − 1) × (n − 2) × ⋯ × 2 × 1**
+
+Temel durum olarak **0! = 1** kabul edilir.
+
+Örnekler:
+
+- 0! = 1
+- 1! = 1
+- 5! = 5 × 4 × 3 × 2 × 1 = 120
+- 10! = 3.628.800
+- 20! = 2.432.902.008.176.640.000
+
+### Neden 0! = 1'dir?
+
+0! = 1 kuralı keyfi değildir; kombinatorik formüllerin tutarlı olmasını sağlar. Kombinasyon formülünü ele alalım: C(n, 0) = n! / (0! × n!). 0! 1'den farklı olsaydı bu ifade 1'e eşit olmazdı; oysa herhangi bir kümeden sıfır eleman seçmenin tek bir yolu olduğu açıktır. Hiçbir çarpanı olmayan çarpım (boş çarpım) her zaman çarpmaya ilişkin birim eleman olan 1'e tanımlanır.
+
+## Bu Hesaplayıcı Nasıl Kullanılır?
+
+1. **n değerini girin** — 0 ile 170 arasında bir negatif olmayan tamsayı.
+2. **Sonucu okuyun** — n!'nin kesin değeri gösterilir.
+3. **BigInt bayrağını kontrol edin** — 21!'in üzerindeki değerler JavaScript'in güvenli tamsayı aralığını (2^53 − 1) aşar. Hesaplayıcı kesin sonuçlar için BigInt aritmetiği kullanır.
+
+## Örnekler
+
+### Örnek 1 — Küçük faktöriyel: 7!
+
+7! = 7 × 6 × 5 × 4 × 3 × 2 × 1 = **5.040**
+
+7 farklı kitabı bir rafa dizmenin kaç farklı yolu olduğunu gösterir.
+
+### Örnek 2 — Orta boy faktöriyel: 13!
+
+13! = **6.227.020.800**
+
+Bu değer 6 milyarı aşmaktadır; faktöriyellerin ne kadar hızlı büyüdüğünü gösterir.
+
+### Örnek 3 — Büyük faktöriyel: 50!
+
+50! = **30.414.093.201.713.378.043.612.608.166.979.581.188.299.763.898.377.856.000.000.000.000**
+
+Bu 65 haneli sayı, hesaplayıcının n &gt; 21 için BigInt aritmetiği kullandığından kesin olarak döndürülür.
+
+## Faktöriyeller Nerede Kullanılır?
+
+**Kombinatorik**: n elemandan r eleman seçmenin yol sayısı C(n,r) = n! / (r! × (n−r)!). Sıralı düzenleme sayısı P(n,r) = n! / (n−r)!.
+
+**Olasılık**: Binom dağılımı ve Poisson dağılımı gibi birçok olasılık dağılımı faktöriyellere dayanır.
+
+**Taylor serileri**: e^x = Σ x^n/n!, sin(x) = Σ (−1)^n × x^(2n+1)/(2n+1)! gibi temel fonksiyonlar, paydaları faktöriyel olan sonsuz serilerle tanımlanır.
+
+**Sayı teorisi**: Wilson teoremi, (p−1)! ≡ −1 (mod p) koşulunun yalnızca p asal sayıysa sağlandığını belirtir.
+
+**Fizik ve kimya**: İstatistiksel mekanik, entropi hesaplamalarında faktöriyelleri yoğun biçimde kullanır. Stirling yaklaşımı ln(n!) ≈ n ln(n) − n, büyük faktöriyel hesaplamalarını pratik kılar.
+
+## Büyük Sayılar ve BigInt Hassasiyeti
+
+Standart çift duyarlıklı kayan noktalı sayılar (IEEE 754), en fazla 2^53 − 1 = 9.007.199.254.740.991'i tam olarak temsil edebilir. 21! = 51.090.942.171.709.440.000 bu sınırı aştığından, hesaplayıcı n &gt; 21 için JavaScript BigInt'e geçer. BigInt, keyfi hassasiyetli tam sayı aritmetiği kullandığından sonucun her basamağı, büyüklüğünden bağımsız olarak kesindir.
+
+Desteklenen maksimum n 170'tir; çünkü 170! ≈ 7.26 × 10^306, standart kayan noktalı çifte sığan en büyük faktöriyeldir.
+
+## Sıkça Sorulan Sorular
+
+**Bu hesaplayıcının hesaplayabileceği en büyük faktöriyel nedir?**
+Maksimum değer 170!'dir. Sonuç 307 basamaklıdır.
+
+**Stirling yaklaşımı nedir?**
+Büyük n için ln(n!) ≈ n·ln(n) − n + ½·ln(2πn). Bu yaklaşım fizik ve istatistikte kesin değere gerek duyulmadığında kullanılır ve n büyüdükçe daha isabetli hale gelir.
+
+**Faktöriyellerin sürekli bir genişlemesi var mı?**
+Evet. Gama fonksiyonu Γ(n) = (n−1)!, faktöriyeli kompleks sayılara genişletir. Örneğin (½)! = Γ(3/2) = √π/2 ≈ 0,886.
+
+**Faktöriyeller neden bu kadar hızlı büyür?**
+Her adımda kendisi de büyüyen bir sayıyla çarpım yapılır. n!'ten (n+1)!'e geçerken (n+1) ile çarpılır. Bu çarpımsal zincir, üstel büyümeden de hızlı bir artış yaratır.
+
+## Kaynaklar
+
+1. Wolfram MathWorld. *Factorial.* [mathworld.wolfram.com/Factorial.html](https://mathworld.wolfram.com/Factorial.html)
+2. NIST DLMF. *§5.2 Factorial and Gamma Function.* [dlmf.nist.gov/5.2](https://dlmf.nist.gov/5.2)
+3. Khan Academy. *Factorial review.* [khanacademy.org](https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:prob-comb/x9e81a4f98389efdf:factorial-counting-principle/a/factorial-review)

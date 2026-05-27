@@ -1,3 +1,89 @@
-# factorial Calculator
+# Factorial Calculator — n! for Any Integer
 
-Simple factorial calculator.
+The factorial calculator computes n! — the product of all positive integers from 1 to n — for any integer between 0 and 170. Factorials grow extraordinarily fast: 10! = 3,628,800 and 20! = 2,432,902,008,176,640,000. This tool handles them all with exact arithmetic, switching to BigInt representation automatically above 21!.
+
+## What Is a Factorial?
+
+The factorial of a non-negative integer n, written **n!**, is defined as:
+
+**n! = n × (n − 1) × (n − 2) × ⋯ × 2 × 1**
+
+with the special base case **0! = 1**.
+
+For example:
+
+- 0! = 1
+- 1! = 1
+- 5! = 5 × 4 × 3 × 2 × 1 = 120
+- 10! = 3,628,800
+- 20! = 2,432,902,008,176,640,000
+
+The factorial function is one of the most fundamental operations in mathematics. It arises everywhere from combinatorics and probability to calculus, number theory, and physics.
+
+### Why Is 0! = 1?
+
+The convention 0! = 1 is not arbitrary — it makes combinatorial formulas consistent. Consider the combination formula C(n, 0) = n! / (0! × n!). If 0! were anything other than 1, this would not equal 1, even though there is clearly exactly one way to choose zero items from any set. The empty product (a product with no factors) is always defined as the multiplicative identity, which is 1.
+
+## How to Use This Calculator
+
+1. **Enter n** — any non-negative integer from 0 to 170.
+2. **Read the result** — the exact value of n! is displayed.
+3. **Check the BigInt flag** — values above 21! exceed JavaScript's safe integer range (2^53 − 1). The calculator uses exact BigInt arithmetic to ensure precise results.
+
+## Examples
+
+### Example 1 — Small factorial: 7!
+
+7! = 7 × 6 × 5 × 4 × 3 × 2 × 1 = **5,040**
+
+This is the number of ways to arrange 7 different books on a shelf.
+
+### Example 2 — Medium factorial: 13!
+
+13! = **6,227,020,800**
+
+This exceeds 6 billion — illustrating how quickly factorials grow. A standard 52-card deck can be shuffled in 52! ≈ 8.07 × 10^67 different ways.
+
+### Example 3 — Large factorial: 50!
+
+50! = **30,414,093,201,713,378,043,612,608,166,979,581,188,299,763,898,377,856,000,000,000,000**
+
+This 65-digit number is returned exactly because the calculator uses BigInt arithmetic for n &gt; 21.
+
+## Where Are Factorials Used?
+
+**Combinatorics**: The number of ways to choose r items from n is C(n,r) = n! / (r! × (n−r)!). The number of ordered arrangements is P(n,r) = n! / (n−r)!.
+
+**Probability**: Many probability distributions depend on factorials. The binomial distribution P(k successes) = C(n,k) × p^k × (1−p)^(n−k) uses binomial coefficients built from factorials.
+
+**Taylor series**: The exponential function e^x = Σ x^n / n!, the sine function sin(x) = Σ (−1)^n × x^(2n+1) / (2n+1)!, and many other fundamental functions are defined by factorial-denominated infinite series.
+
+**Number theory**: Wilson's theorem states that (p−1)! ≡ −1 (mod p) if and only if p is prime — providing a primality criterion involving factorials.
+
+**Physics and chemistry**: Statistical mechanics uses factorials extensively in entropy calculations. Stirling's approximation ln(n!) ≈ n ln(n) − n makes large factorial computations tractable.
+
+## Large Numbers and BigInt Precision
+
+Standard double-precision floating-point numbers (IEEE 754) can exactly represent integers up to 2^53 − 1 = 9,007,199,254,740,991. Since 21! = 51,090,942,171,709,440,000 exceeds this limit, this calculator switches to JavaScript BigInt for n &gt; 21. BigInt uses arbitrary-precision integer arithmetic, so every digit of the result is exact regardless of magnitude.
+
+The maximum supported n is 170, because 170! ≈ 7.26 × 10^306 is the largest factorial that fits in a standard floating-point double. For n &gt; 170, the value would be astronomically large (171! ≈ 1.24 × 10^309).
+
+## Frequently Asked Questions
+
+**What is the largest factorial this calculator can compute?**
+170! is the maximum. The result has 307 digits.
+
+**What is Stirling's approximation?**
+For large n, ln(n!) ≈ n·ln(n) − n + ½·ln(2πn). This approximation is used in physics and statistics when the exact value is not needed. It becomes increasingly accurate as n grows.
+
+**Do factorials have a continuous extension?**
+Yes. The gamma function Γ(n) = (n−1)! extends the factorial to complex numbers. For non-integer values like ½!, the result involves π: (½)! = Γ(3/2) = √π/2 ≈ 0.886.
+
+**Why do factorials grow so fast?**
+Each step multiplies by a number that itself is growing. Going from n! to (n+1)! multiplies by (n+1). This multiplicative chain creates faster-than-exponential growth — faster than 2^n or even e^n.
+
+## References
+
+1. Wolfram MathWorld. *Factorial.* [mathworld.wolfram.com/Factorial.html](https://mathworld.wolfram.com/Factorial.html)
+2. NIST Digital Library of Mathematical Functions. *§5.2 Factorial and Gamma Function.* [dlmf.nist.gov/5.2](https://dlmf.nist.gov/5.2)
+3. Khan Academy. *Factorial review.* [khanacademy.org](https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:prob-comb/x9e81a4f98389efdf:factorial-counting-principle/a/factorial-review)
