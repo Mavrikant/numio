@@ -25,11 +25,13 @@ export function compute(inputs: BreakEvenInputs): BreakEvenResult {
     inputs.pricePerUnit - inputs.variableCostPerUnit;
   const contributionMarginPercent =
     (contributionMarginPerUnit / inputs.pricePerUnit) * 100;
-  const breakEvenUnits = inputs.fixedCosts / contributionMarginPerUnit;
+  const breakEvenUnits = Math.round(
+    (inputs.fixedCosts / contributionMarginPerUnit) * 100,
+  ) / 100;
   const breakEvenRevenue = breakEvenUnits * inputs.pricePerUnit;
 
   return {
-    breakEvenUnits: Math.round(breakEvenUnits * 100) / 100,
+    breakEvenUnits,
     breakEvenRevenue: Math.round(breakEvenRevenue * 100) / 100,
     contributionMarginPerUnit:
       Math.round(contributionMarginPerUnit * 100) / 100,

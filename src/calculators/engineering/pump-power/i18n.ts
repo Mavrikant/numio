@@ -146,7 +146,7 @@ const i18n: CalculatorI18n = {
       hydraulicPowerKw: { label: "Hydraulische Leistung", help: "An das Fluid abgegebene Nutzleistung: P = ρ·g·Q·H." },
       shaftPowerKw: { label: "Wellenleistung", help: "Vom Motor an die Pumpenwelle abzugebende mechanische Leistung." },
       electricalPowerKw: { label: "Elektrische Aufnahmeleistung", help: "Vom Motor aus dem Netz aufgenommene elektrische Leistung." },
-      overallEfficiency: { label: "Gesamtwirkungsgrad", help: "Wirkungsgrad „Netz bis Wasser" = η_Pumpe × η_Motor." },
+      overallEfficiency: { label: "Gesamtwirkungsgrad", help: "Wirkungsgrad „Netz bis Wasser\" = η_Pumpe × η_Motor." },
       annualEnergyKwh: { label: "Jährlicher Energieverbrauch", help: "Stromverbrauch pro Jahr bei den angegebenen Betriebsstunden." },
       annualCost: { label: "Jährliche Betriebskosten", help: "Jährliche Energiekosten beim angegebenen Strompreis." },
     },
