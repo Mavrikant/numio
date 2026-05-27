@@ -10,11 +10,7 @@ import Base from "@/layouts/Base.astro";
 import { LOCALES, isLocale, type Locale, SITE_URL } from "@/config/site";
 import { t, buildAbsoluteUrl } from "@/lib/i18n";
 import { getAllTools } from "@/lib/tools-registry";
-import HistogramTool from "@/tools/histogram/Tool";
-import ScatterTool from "@/tools/scatter-plot/Tool";
-import TimeSeriesTool from "@/tools/time-series/Tool";
-import StatsTool from "@/tools/stats-dashboard/Tool";
-import PasswordGeneratorTool from "@/tools/password-generator/Tool";
+import ToolHost from "@/components/tools/ToolHost";
 
 export async function getStaticPaths() {
   const tools = getAllTools();
@@ -118,11 +114,7 @@ const Content = mdxModule
 
     <div class="container-page py-6">
       <div class="rounded-xl border border-slate-200 bg-white p-4 dark:border-slate-700 dark:bg-slate-900 sm:p-6">
-        {tool.slug === "histogram" && <HistogramTool client:only="react" locale={locale} />}
-        {tool.slug === "scatter-plot" && <ScatterTool client:only="react" locale={locale} />}
-        {tool.slug === "time-series" && <TimeSeriesTool client:only="react" locale={locale} />}
-        {tool.slug === "stats-dashboard" && <StatsTool client:only="react" locale={locale} />}
-        {tool.slug === "password-generator" && <PasswordGeneratorTool client:only="react" locale={locale} />}
+        <ToolHost client:only="react" slug={tool.slug} locale={locale} />
       </div>
 
       {Content && (
