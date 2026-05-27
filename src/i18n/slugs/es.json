@@ -1,4 +1,9 @@
 {
+  "week-number": "numero-semana",
+  "day-of-year": "dia-del-ano",
+  "add-business-days": "sumar-dias-habiles",
+  "countdown": "cuenta-regresiva",
+  "leap-year": "ano-bisiesto",
   "age": "edad",
   "date-difference": "diferencia-fechas",
   "date-add": "sumar-fecha",

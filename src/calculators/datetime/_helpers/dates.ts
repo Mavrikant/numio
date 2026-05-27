@@ -121,3 +121,41 @@ export function businessDaysBetween(aTs: number, bTs: number): number {
   }
   return count;
 }
+
+export function isLeapYear(year: number): boolean {
+  return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
+}
+
+/** Day of the year (1–366) for a timestamp. */
+export function dayOfYear(ts: number): number {
+  const d = new Date(ts);
+  const start = Date.UTC(d.getUTCFullYear(), 0, 1);
+  return Math.floor((ts - start) / MS_PER_DAY) + 1;
+}
+
+/** ISO-8601 week number and the week-based year for a timestamp. */
+export function isoWeek(ts: number): { week: number; year: number } {
+  const d = new Date(ts);
+  // Shift to the Thursday of the current ISO week.
+  const day = (d.getUTCDay() + 6) % 7; // Mon=0 … Sun=6
+  const thursday = ts + (3 - day) * MS_PER_DAY;
+  const year = new Date(thursday).getUTCFullYear();
+  const firstThursday = Date.UTC(year, 0, 4);
+  const firstDay = (new Date(firstThursday).getUTCDay() + 6) % 7;
+  const week1Monday = firstThursday - firstDay * MS_PER_DAY;
+  const week = Math.floor((thursday - week1Monday) / (7 * MS_PER_DAY)) + 1;
+  return { week, year };
+}
+
+/** Add N business days (Mon–Fri) to a timestamp; returns the resulting timestamp. */
+export function addBusinessDays(ts: number, businessDays: number): number {
+  const step = businessDays >= 0 ? 1 : -1;
+  let remaining = Math.abs(businessDays);
+  let t = ts;
+  while (remaining > 0) {
+    t = addDays(t, step);
+    const dow = new Date(t).getUTCDay();
+    if (dow !== 0 && dow !== 6) remaining -= 1;
+  }
+  return t;
+}

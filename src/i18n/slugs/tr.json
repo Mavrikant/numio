@@ -1,4 +1,9 @@
 {
+  "week-number": "hafta-numarasi",
+  "day-of-year": "yilin-gunu",
+  "add-business-days": "is-gunu-ekle",
+  "countdown": "geri-sayim",
+  "leap-year": "artik-yil",
   "age": "yas",
   "date-difference": "tarih-farki",
   "date-add": "tarih-ekle",

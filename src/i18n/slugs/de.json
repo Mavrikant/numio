@@ -1,4 +1,9 @@
 {
+  "week-number": "kalenderwoche",
+  "day-of-year": "tag-des-jahres",
+  "add-business-days": "arbeitstage-addieren",
+  "countdown": "countdown",
+  "leap-year": "schaltjahr",
   "age": "alter",
   "date-difference": "datumsdifferenz",
   "date-add": "datum-addieren",
