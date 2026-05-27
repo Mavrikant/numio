@@ -1,0 +1,64 @@
+# Capacitor Calculator (es)
+
+A capacitor is a device that stores electrical energy. This calculator computes charge (Q), energy (E), capacitive reactance (Xc), and RC time constant based on capacitance and voltage.
+
+## Key Formulas
+
+- **Charge**: Q = C × V (Coulombs)
+- **Energy**: E = 0.5 × C × V² (Joules)
+- **Reactance** (AC): Xc = 1 / (2πfC) (Ohms)
+- **RC Time Constant**: τ = R × C (seconds)
+
+## Parameters
+
+- **Capacitance**: Stored charge per unit voltage (Farads). Common units: μF (1e-6 F), nF (1e-9 F), pF (1e-12 F)
+- **Voltage**: Potential difference across capacitor (Volts)
+- **Frequency**: AC frequency in Hz. Use 0 for DC.
+
+## How It Works
+
+1. Enter capacitance in Farads (use scientific notation or prefixes)
+2. Enter voltage applied to capacitor
+3. Optionally enter AC frequency (leave 0 for DC)
+4. Review charge, energy, reactance, and time constant
+
+## Common Values
+
+- **Electrolytic**: 1–100 μF (high capacitance, polarized)
+- **Ceramic**: 100 pF–100 μF (temperature-stable)
+- **Film**: 100 nF–100 μF (precise, low loss)
+
+## Applications
+
+- **Power supplies**: Filter ripple voltage
+- **Timing circuits**: RC time constant determines frequency
+- **AC coupling**: Block DC while passing AC
+- **Energy storage**: Flash photography, power backup
+- **Impedance matching**: AC networks
+
+## FAQ
+
+**Q: What does charge on a capacitor mean?**
+A: Charge is the amount of electrical energy stored. A 1 μF capacitor at 10 V stores 10 μC (microcoulombs) of charge.
+
+**Q: Why does energy increase with voltage?**
+A: Energy is proportional to V². Doubling voltage quadruples energy storage.
+
+**Q: What is capacitive reactance?**
+A: Reactance (Xc) is the "resistance" a capacitor presents to AC. Higher frequency → lower reactance → easier AC passes.
+
+**Q: What is RC time constant?**
+A: τ = R × C is the time for a capacitor to charge to 63% through a resistor R. Used in oscillators, timers, filters.
+
+**Q: Why use DC = 0 Hz?**
+A: Capacitors block DC (infinite reactance at f=0). Set frequency to 0 to skip reactance calculation.
+
+## References
+
+- MIT OpenCourseWare — Capacitance and Dielectrics
+- IEC 60062 — Electronic colour codes
+- Electronics tutorials (sparkfun, adafruit)
+
+---
+
+*Educational reference. Consult electrical engineers for critical applications.*
