@@ -1,7 +1,9 @@
 import { defineConfig } from "astro/config";
 import react from "@astrojs/react";
-import tailwind from "@astrojs/tailwind";
 import mdx from "@astrojs/mdx";
+import tailwindcss from "@tailwindcss/vite";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
 // @astrojs/sitemap is intentionally NOT used.
 // We ship a custom multi-sitemap suite under src/pages/sitemap-*.xml.ts with:
 //   - per-section split (calculators / tools / embed / api / pages)
@@ -18,12 +20,28 @@ export default defineConfig({
   build: {
     format: "directory",
   },
+  // Astro 6: integrations stay declarative; Tailwind v4 is now a Vite plugin,
+  // not an integration (the old @astrojs/tailwind never shipped an Astro-6
+  // compatible release — Tailwind has migrated to a first-class Vite plugin
+  // with a CSS-first config: `@import "tailwindcss";` in global.css).
+  // remark-math turns `$...$` / `$$...$$` in MDX into math nodes, then
+  // rehype-katex renders them via KaTeX (uses the same CSS we already
+  // import in AuthorityFooter/QuickAnswer for the inline server-rendered
+  // formulas). Without these, MDX tries to parse `$a_1$` as a JSX
+  // expression and crashes with `ReferenceError: a_1 is not defined`.
+  markdown: {
+    remarkPlugins: [remarkMath],
+    rehypePlugins: [rehypeKatex],
+  },
   integrations: [
     react(),
-    tailwind({ applyBaseStyles: false }),
-    mdx(),
+    mdx({
+      remarkPlugins: [remarkMath],
+      rehypePlugins: [rehypeKatex],
+    }),
   ],
   vite: {
+    plugins: [tailwindcss()],
     resolve: {
       alias: {
         "@": "/src",
