@@ -974,17 +974,3 @@ exports[`Percentage Calculator - Definition Snapshot > should match calculator d
   ],
 }
 `;
-
-exports[`percentage snapshot > matches snapshot for pct_change 1`] = `
-{
-  "absoluteDifference": 20,
-  "result": 25,
-}
-`;
-
-exports[`percentage snapshot > matches snapshot for what_is_x_pct_of_y 1`] = `
-{
-  "absoluteDifference": 30,
-  "result": 30,
-}
-`;
