@@ -1,4 +1,9 @@
 {
+  "week-number": "numero-semaine",
+  "day-of-year": "jour-annee",
+  "add-business-days": "ajouter-jours-ouvres",
+  "countdown": "compte-a-rebours",
+  "leap-year": "annee-bissextile",
   "age": "age",
   "date-difference": "difference-dates",
   "date-add": "ajouter-date",

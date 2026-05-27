@@ -1,4 +1,9 @@
 {
+  "week-number": "week-number",
+  "day-of-year": "day-of-year",
+  "add-business-days": "add-business-days",
+  "countdown": "countdown",
+  "leap-year": "leap-year",
   "age": "age",
   "date-difference": "date-difference",
   "date-add": "date-add",
