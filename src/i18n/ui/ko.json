@@ -99,5 +99,16 @@
     "description": "CSV 데이터를 업로드하고 인터랙티브 시각화 만들기 — 히스토그램, 산점도, 시계열 및 기술 통계.",
     "browseCatalog": "모든 도구 보기",
     "uploadData": "데이터 업로드"
+  },
+  "authority": {
+    "formula": "공식",
+    "sources": "출처 및 참고자료",
+    "accuracyNote": "정확도 안내",
+    "disclaimer": "면책 조항",
+    "lastReviewed": "최종 검토일",
+    "editorialTeam": "Karaman Calculators 편집팀 작성"
+  },
+  "seo": {
+    "metaSuffix": "무료, 즉시, 가입 불필요."
   }
 }

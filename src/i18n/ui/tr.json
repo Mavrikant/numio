@@ -99,5 +99,16 @@
     "description": "CSV veri yükleyin ve interaktif görselleştirmeler oluşturun — histogramlar, dağılım grafikleri, zaman serileri ve tanımlayıcı istatistikler.",
     "browseCatalog": "Tüm araçları gör",
     "uploadData": "Verinizi yükleyin"
+  },
+  "authority": {
+    "formula": "Formül",
+    "sources": "Kaynaklar ve Referanslar",
+    "accuracyNote": "Doğruluk notu",
+    "disclaimer": "Yasal Uyarı",
+    "lastReviewed": "Son inceleme",
+    "editorialTeam": "Karaman Calculators editör ekibi tarafından"
+  },
+  "seo": {
+    "metaSuffix": "Ücretsiz, anında, kayıt gerekmez."
   }
 }

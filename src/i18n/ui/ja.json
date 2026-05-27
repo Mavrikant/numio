@@ -99,5 +99,16 @@
     "description": "CSV データをアップロードしてインタラクティブな可視化を作成 — ヒストグラム、散布図、時系列、記述統計。",
     "browseCatalog": "すべてのツールを見る",
     "uploadData": "データをアップロード"
+  },
+  "authority": {
+    "formula": "計算式",
+    "sources": "出典・参考資料",
+    "accuracyNote": "精度に関する注記",
+    "disclaimer": "免責事項",
+    "lastReviewed": "最終確認日",
+    "editorialTeam": "Karaman Calculators 編集チームによる"
+  },
+  "seo": {
+    "metaSuffix": "無料・即時・登録不要。"
   }
 }

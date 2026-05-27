@@ -99,5 +99,16 @@
     "description": "CSV डेटा अपलोड करें और इंटरैक्टिव विज़ुअलाइज़ेशन बनाएं — हिस्टोग्राम, स्कैटर प्लॉट, समय श्रृंखला और वर्णनात्मक आंकड़े।",
     "browseCatalog": "सभी उपकरण देखें",
     "uploadData": "अपना डेटा अपलोड करें"
+  },
+  "authority": {
+    "formula": "सूत्र",
+    "sources": "स्रोत और संदर्भ",
+    "accuracyNote": "सटीकता नोट",
+    "disclaimer": "अस्वीकरण",
+    "lastReviewed": "अंतिम समीक्षा",
+    "editorialTeam": "Karaman Calculators संपादकीय टीम द्वारा"
+  },
+  "seo": {
+    "metaSuffix": "निःशुल्क, तत्काल, बिना साइनअप।"
   }
 }

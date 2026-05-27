@@ -99,5 +99,16 @@
     "description": "Upload CSV data and create interactive visualizations — histograms, scatter plots, time series, and descriptive statistics.",
     "browseCatalog": "Browse all tools",
     "uploadData": "Upload your data"
+  },
+  "authority": {
+    "formula": "Formula",
+    "sources": "Sources & References",
+    "accuracyNote": "Accuracy note",
+    "disclaimer": "Disclaimer",
+    "lastReviewed": "Last reviewed",
+    "editorialTeam": "by Karaman Calculators editorial team"
+  },
+  "seo": {
+    "metaSuffix": "Free, instant, no signup."
   }
 }

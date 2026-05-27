@@ -99,5 +99,16 @@
     "description": "上传 CSV 数据并创建交互式可视化 — 直方图、散点图、时间序列和描述性统计。",
     "browseCatalog": "查看所有工具",
     "uploadData": "上传您的数据"
+  },
+  "authority": {
+    "formula": "计算公式",
+    "sources": "来源与参考文献",
+    "accuracyNote": "精确度说明",
+    "disclaimer": "免责声明",
+    "lastReviewed": "最后审核",
+    "editorialTeam": "由 Karaman Calculators 编辑团队"
+  },
+  "seo": {
+    "metaSuffix": "免费、即时、无需注册。"
   }
 }

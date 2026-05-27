@@ -99,5 +99,16 @@
     "description": "Suba datos CSV y cree visualizaciones interactivas — histogramas, gráficos de dispersión, series temporales y estadísticas descriptivas.",
     "browseCatalog": "Ver todas las herramientas",
     "uploadData": "Suba sus datos"
+  },
+  "authority": {
+    "formula": "Fórmula",
+    "sources": "Fuentes y Referencias",
+    "accuracyNote": "Nota de precisión",
+    "disclaimer": "Aviso legal",
+    "lastReviewed": "Última revisión",
+    "editorialTeam": "por el equipo editorial de Karaman Calculators"
+  },
+  "seo": {
+    "metaSuffix": "Gratis, instantáneo, sin registro."
   }
 }

@@ -99,5 +99,16 @@
     "description": "Carica dati CSV e crea visualizzazioni interattive — istogrammi, grafici a dispersione, serie temporali e statistica descrittiva.",
     "browseCatalog": "Vedi tutti gli strumenti",
     "uploadData": "Carica i tuoi dati"
+  },
+  "authority": {
+    "formula": "Formula",
+    "sources": "Fonti e Riferimenti",
+    "accuracyNote": "Nota sulla precisione",
+    "disclaimer": "Avvertenza",
+    "lastReviewed": "Ultima revisione",
+    "editorialTeam": "dal team editoriale di Karaman Calculators"
+  },
+  "seo": {
+    "metaSuffix": "Gratuito, immediato, senza registrazione."
   }
 }

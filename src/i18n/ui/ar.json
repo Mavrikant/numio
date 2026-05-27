@@ -99,5 +99,16 @@
     "description": "ارفع بيانات CSV وأنشئ تصورات تفاعلية — مخططات تكرارية، مخططات تشتت، سلاسل زمنية وإحصاء وصفي.",
     "browseCatalog": "تصفح جميع الأدوات",
     "uploadData": "ارفع بياناتك"
+  },
+  "authority": {
+    "formula": "الصيغة الرياضية",
+    "sources": "المصادر والمراجع",
+    "accuracyNote": "ملاحظة الدقة",
+    "disclaimer": "إخلاء المسؤولية",
+    "lastReviewed": "آخر مراجعة",
+    "editorialTeam": "بواسطة فريق تحرير Karaman Calculators"
+  },
+  "seo": {
+    "metaSuffix": "مجاني، فوري، بدون تسجيل."
   }
 }

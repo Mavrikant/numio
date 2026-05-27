@@ -99,5 +99,16 @@
     "description": "Téléchargez des données CSV et créez des visualisations interactives — histogrammes, nuages de points, séries chronologiques et statistiques descriptives.",
     "browseCatalog": "Voir tous les outils",
     "uploadData": "Téléverser vos données"
+  },
+  "authority": {
+    "formula": "Formule",
+    "sources": "Sources et Références",
+    "accuracyNote": "Note de précision",
+    "disclaimer": "Avertissement",
+    "lastReviewed": "Dernière révision",
+    "editorialTeam": "par l'équipe éditoriale de Karaman Calculators"
+  },
+  "seo": {
+    "metaSuffix": "Gratuit, instantané, sans inscription."
   }
 }

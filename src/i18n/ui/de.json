@@ -99,5 +99,16 @@
     "description": "CSV-Daten hochladen und interaktive Visualisierungen erstellen — Histogramme, Streudiagramme, Zeitreihen und deskriptive Statistik.",
     "browseCatalog": "Alle Werkzeuge anzeigen",
     "uploadData": "Daten hochladen"
+  },
+  "authority": {
+    "formula": "Formel",
+    "sources": "Quellen & Referenzen",
+    "accuracyNote": "Genauigkeitshinweis",
+    "disclaimer": "Haftungsausschluss",
+    "lastReviewed": "Zuletzt geprüft",
+    "editorialTeam": "vom Karaman Calculators Redaktionsteam"
+  },
+  "seo": {
+    "metaSuffix": "Kostenlos, sofort, ohne Anmeldung."
   }
 }
