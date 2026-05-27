@@ -127,5 +127,12 @@
   },
   "pwa": {
     "install": "Installa app"
+  },
+  "nl": {
+    "toggle": "✨ Prova in linguaggio naturale",
+    "placeholder": "Esempio: ho 30 anni, peso 70 kg, sono alto 175 cm",
+    "fill": "Compila calcolatore",
+    "matched": "{n}/{total} campi riconosciuti",
+    "unmatched": "Non riconosciuti: {fields}"
   }
 }

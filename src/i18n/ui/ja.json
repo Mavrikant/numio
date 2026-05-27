@@ -127,5 +127,12 @@
   },
   "pwa": {
     "install": "アプリをインストール"
+  },
+  "nl": {
+    "toggle": "✨ 自然な日本語で試す",
+    "placeholder": "例: 30歳、70kg、175cm",
+    "fill": "計算機に入力",
+    "matched": "{n}/{total} フィールドを認識しました",
+    "unmatched": "認識できず: {fields}"
   }
 }

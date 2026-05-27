@@ -127,5 +127,12 @@
   },
   "pwa": {
     "install": "Installer l'app"
+  },
+  "nl": {
+    "toggle": "✨ Essayer en langage naturel",
+    "placeholder": "Exemple : J'ai 30 ans, 70 kg, je mesure 175 cm",
+    "fill": "Remplir le calculateur",
+    "matched": "{n}/{total} champs reconnus",
+    "unmatched": "Non reconnus : {fields}"
   }
 }

@@ -26,6 +26,7 @@ import { ChartPanel } from "./ChartPanel";
 import { PdfExport } from "./PdfExport";
 import { CompareMode } from "./CompareMode";
 import { EmbedDialog } from "./EmbedDialog";
+import NaturalLanguageInput, { type NlLabels } from "./NaturalLanguageInput";
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 
@@ -305,6 +306,8 @@ interface CalculatorViewWithVizProps extends CalculatorViewProps {
   >;
   readonly compareEnabled?: boolean;
   readonly compareLabels?: CompareModeLabels;
+  readonly nlEnabled?: boolean;
+  readonly nlLabels?: NlLabels;
 }
 
 export function CalculatorViewWithViz({
@@ -314,6 +317,8 @@ export function CalculatorViewWithViz({
   vizComponents: externalVizComponents,
   compareEnabled = false,
   compareLabels,
+  nlEnabled = false,
+  nlLabels,
 }: CalculatorViewWithVizProps) {
   const bundle = calc.i18n[locale] ?? calc.i18n["en"];
 
@@ -486,6 +491,22 @@ export function CalculatorViewWithViz({
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
         {/* Input panel */}
         <section aria-label="Inputs">
+          {nlEnabled && nlLabels && (
+            <NaturalLanguageInput
+              calc={calc}
+              locale={locale}
+              labels={nlLabels}
+              onParsed={(parsed) => {
+                setInputs((prev) => {
+                  const next: InputValues = { ...prev };
+                  for (const k of Object.keys(parsed)) {
+                    if (k in prev) next[k] = parsed[k]!;
+                  }
+                  return next;
+                });
+              }}
+            />
+          )}
           <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-700 dark:bg-slate-900">
             <h2 className="mb-4 text-base font-semibold text-slate-900 dark:text-slate-100">
               Inputs
@@ -590,9 +611,11 @@ interface CalculatorIslandProps {
   readonly initialInputs?: Record<string, unknown>;
   /** Translated labels for compare mode UI — passed from Astro page via t() */
   readonly compareLabels?: CompareModeLabels;
+  /** Translated labels for the natural-language-input UI */
+  readonly nlLabels?: NlLabels;
 }
 
-export function CalculatorIsland({ slug, locale, initialInputs, compareLabels }: CalculatorIslandProps) {
+export function CalculatorIsland({ slug, locale, initialInputs, compareLabels, nlLabels }: CalculatorIslandProps) {
   const calc = useMemo(() => getCalculatorBySlug(slug), [slug]);
   if (!calc) {
     return (
@@ -602,12 +625,15 @@ export function CalculatorIsland({ slug, locale, initialInputs, compareLabels }:
     );
   }
   const compareEnabled = Boolean(calc.meta.compareEnabled) && Boolean(compareLabels);
+  const nlEnabled = Boolean(calc.meta.nlEnabled) && Boolean(nlLabels);
   return (
     <CalculatorViewWithViz
       calc={calc}
       locale={locale}
       compareEnabled={compareEnabled}
+      nlEnabled={nlEnabled}
       {...(compareLabels ? { compareLabels } : {})}
+      {...(nlLabels ? { nlLabels } : {})}
       {...(initialInputs ? { initialInputs } : {})}
     />
   );

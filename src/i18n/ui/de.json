@@ -127,5 +127,12 @@
   },
   "pwa": {
     "install": "App installieren"
+  },
+  "nl": {
+    "toggle": "✨ In Alltagssprache probieren",
+    "placeholder": "Beispiel: Ich bin 30 Jahre alt, 70 kg, 175 cm groß",
+    "fill": "Rechner ausfüllen",
+    "matched": "{n} von {total} Feldern erkannt",
+    "unmatched": "Nicht erkannt: {fields}"
   }
 }

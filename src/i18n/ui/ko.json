@@ -127,5 +127,12 @@
   },
   "pwa": {
     "install": "앱 설치"
+  },
+  "nl": {
+    "toggle": "✨ 자연어로 시도",
+    "placeholder": "예: 30세, 70kg, 175cm",
+    "fill": "계산기 채우기",
+    "matched": "{total}개 중 {n}개 필드 인식",
+    "unmatched": "인식 못함: {fields}"
   }
 }

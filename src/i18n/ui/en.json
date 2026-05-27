@@ -127,5 +127,12 @@
   },
   "pwa": {
     "install": "Install app"
+  },
+  "nl": {
+    "toggle": "✨ Try in plain English",
+    "placeholder": "Example: I'm 30 years old, 70 kg, 175 cm tall",
+    "fill": "Fill calculator",
+    "matched": "Matched {n} of {total} fields",
+    "unmatched": "Couldn't match: {fields}"
   }
 }

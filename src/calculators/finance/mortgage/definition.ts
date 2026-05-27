@@ -58,6 +58,7 @@ export default defineCalculator({
   i18n,
   meta: {
     compareEnabled: true,
+    nlEnabled: true,
     formulaLatex:
       "M = P \\cdot \\frac{r(1+r)^n}{(1+r)^n - 1}",
     references: [

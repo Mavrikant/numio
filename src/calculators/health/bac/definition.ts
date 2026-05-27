@@ -77,6 +77,7 @@ export default defineCalculator({
   compute,
   i18n,
   meta: {
+    nlEnabled: true,
     formulaLatex: "\\text{BAC} = \\frac{\\text{alcohol (g)}}{\\text{weight (kg)} \\times r \\times 1000} \\times 100 - \\text{elimination rate} \\times t",
     references: [
       {

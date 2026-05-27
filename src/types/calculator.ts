@@ -152,6 +152,8 @@ export interface CalculatorMeta {
   readonly accuracyNote?: string;
   readonly disclaimer?: string;
   readonly compareEnabled?: boolean;
+  /** When true, show the NaturalLanguageInput component above the form. */
+  readonly nlEnabled?: boolean;
 }
 
 export interface CalculatorDefinition<

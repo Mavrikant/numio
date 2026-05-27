@@ -127,5 +127,12 @@
   },
   "pwa": {
     "install": "Uygulamayı yükle"
+  },
+  "nl": {
+    "toggle": "✨ Düz cümleyle dene",
+    "placeholder": "Örnek: 30 yaşındayım, 70 kg, boyum 175 cm",
+    "fill": "Hesaplayıcıyı doldur",
+    "matched": "{n}/{total} alan dolduruldu",
+    "unmatched": "Eşleşmeyen: {fields}"
   }
 }

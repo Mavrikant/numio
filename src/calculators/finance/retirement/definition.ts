@@ -77,6 +77,7 @@ export default defineCalculator({
   i18n,
   meta: {
     compareEnabled: true,
+    nlEnabled: true,
     formulaLatex: "FV = PV(1+r)^n + PMT \\cdot \\frac{(1+r)^n - 1}{r}",
     references: [
       {

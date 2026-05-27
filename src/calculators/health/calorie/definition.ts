@@ -116,6 +116,7 @@ export default defineCalculator({
   compute,
   i18n,
   meta: {
+    nlEnabled: true,
     formulaLatex: "\\text{TDEE} = \\text{BMR} \\times \\text{activity factor}",
     references: [
       {
