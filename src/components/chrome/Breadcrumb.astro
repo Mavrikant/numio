@@ -60,7 +60,10 @@ const breadcrumbJsonLd = {
 
             {isLast || !item.href ? (
               <span
-                class="font-medium text-slate-900 dark:text-slate-100"
+                class:list={[
+                  "font-medium text-slate-900 dark:text-slate-100",
+                  isLast && "truncate min-w-0",
+                ]}
                 aria-current={isLast ? "page" : undefined}
                 itemprop="name"
               >

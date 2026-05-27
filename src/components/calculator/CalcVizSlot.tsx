@@ -134,7 +134,7 @@ export default function CalcVizSlot({ slug, locale }: Props) {
     <div className="mt-6">
       <Suspense
         fallback={
-          <div className="h-48 animate-pulse rounded-xl border border-slate-200 bg-slate-50 dark:border-slate-700 dark:bg-slate-900/50" />
+          <div className="aspect-[16/9] w-full max-h-72 animate-pulse rounded-xl border border-slate-200 bg-slate-50 dark:border-slate-700 dark:bg-slate-900/50" />
         }
       >
         <Comp inputs={inputs} result={result} locale={locale} />

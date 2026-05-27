@@ -35,7 +35,6 @@ import {
 } from "@/lib/seo";
 import type { CalculatorCategory } from "@/types/calculator";
 import { CalculatorIsland } from "@/components/calculator/CalculatorView";
-import Sidebar from "@/components/chrome/Sidebar.astro";
 import QuickAnswer from "@/components/calculator/QuickAnswer.astro";
 import AuthorityFooter from "@/components/calculator/AuthorityFooter.astro";
 // Universal per-calc viz loader (auto-discovers visualizations.tsx files via
@@ -202,7 +201,7 @@ const Content = mdxModule
           </ol>
         </nav>
 
-        <h1 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-100 sm:text-3xl">
+        <h1 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-100 sm:text-3xl break-words">
           {bundle.title}
         </h1>
         {bundle.description && (
@@ -213,11 +212,12 @@ const Content = mdxModule
       </div>
     </div>
 
-    <!-- Sidebar + content layout -->
-    <div class="container-page lg:flex lg:gap-8 py-6">
-      <Sidebar locale={locale} activeSlug={calc.slug} activeCategory={cat} />
-
-      <div class="mt-6 flex-1 min-w-0 lg:mt-0">
+    <!-- Content layout (sidebar removed — was too space-greedy on desktop
+         and pushed the calculator below the fold on tablets). Category
+         + related-calc nav lives in Header (desktop) and the hamburger
+         drawer (mobile). -->
+    <div class="container-page py-6">
+      <div class="min-w-0">
         <!-- Quick Answer block (A2 SEO) — above the calculator form -->
         <QuickAnswer calc={calc} locale={locale} />
 

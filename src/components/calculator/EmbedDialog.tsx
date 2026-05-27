@@ -98,7 +98,7 @@ function CopyButton({ text, className }: { text: string; className?: string }) {
       onClick={handleCopy}
       className={
         className ??
-        "rounded-lg border border-slate-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 shadow-sm hover:bg-slate-50 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700"
+        "rounded-lg border border-slate-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 shadow-sm hover:bg-slate-50 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700 min-h-[44px] sm:min-h-0"
       }
     >
       {copied ? "Copied!" : "Copy"}
@@ -158,7 +158,7 @@ export function EmbedDialog({ calc, locale: initialLocale }: EmbedDialogProps) {
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="rounded-lg border border-purple-300 bg-purple-50 px-3 py-1.5 text-sm font-medium text-purple-700 shadow-sm hover:bg-purple-100 dark:border-purple-700 dark:bg-purple-950 dark:text-purple-300 dark:hover:bg-purple-900"
+        className="rounded-lg border border-purple-300 bg-purple-50 px-3 py-1.5 text-sm font-medium text-purple-700 shadow-sm hover:bg-purple-100 dark:border-purple-700 dark:bg-purple-950 dark:text-purple-300 dark:hover:bg-purple-900 min-h-[44px] sm:min-h-0"
       >
         Embed
       </button>
@@ -171,7 +171,7 @@ export function EmbedDialog({ calc, locale: initialLocale }: EmbedDialogProps) {
         aria-modal="true"
         aria-label="Embed calculator"
         onClick={handleDialogClick}
-        className="m-auto max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-2xl border border-slate-200 bg-white p-0 shadow-2xl backdrop:bg-black/40 dark:border-slate-700 dark:bg-slate-900"
+        className="m-auto w-[calc(100vw-1rem)] max-w-2xl max-h-[90vh] mx-2 sm:mx-auto overflow-y-auto rounded-2xl border border-slate-200 bg-white p-0 shadow-2xl backdrop:bg-black/40 dark:border-slate-700 dark:bg-slate-900"
       >
         {/* Header */}
         <div className="flex items-center justify-between border-b border-slate-200 px-6 py-4 dark:border-slate-700">
@@ -266,7 +266,7 @@ export function EmbedDialog({ calc, locale: initialLocale }: EmbedDialogProps) {
 
             {/* Code block */}
             <div className="relative">
-              <pre className="overflow-x-auto rounded-xl border border-slate-200 bg-slate-50 p-4 text-xs leading-relaxed text-slate-800 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200">
+              <pre className="overflow-x-auto rounded-xl border border-slate-200 bg-slate-50 p-4 text-xs leading-relaxed text-slate-800 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200 whitespace-pre-wrap break-all sm:whitespace-pre sm:break-normal">
                 <code>{activeSnippet}</code>
               </pre>
               <div className="absolute right-3 top-3">

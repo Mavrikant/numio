@@ -285,7 +285,7 @@ function DiffSection({
           return (
             <div
               key={output.id}
-              className="grid grid-cols-[1fr_auto_auto_auto] gap-2 items-baseline text-sm"
+              className="flex flex-col gap-1 md:grid md:grid-cols-[1fr_auto_auto_auto] md:gap-2 items-baseline text-sm"
             >
               <span className="text-slate-600 dark:text-slate-400 truncate">
                 {outLabel}
@@ -313,6 +313,7 @@ function DiffSection({
 
 export function CompareMode({ calc, locale, labels, onExit }: CompareModeProps) {
   const bundle = calc.i18n[locale] ?? calc.i18n["en"];
+  const [activeTab, setActiveTab] = useState<"A" | "B">("A");
 
   // Build defaults from definition
   const defaults = useMemo<InputValues>(() => {
@@ -412,26 +413,64 @@ export function CompareMode({ calc, locale, labels, onExit }: CompareModeProps) 
         </button>
       </div>
 
-      {/* Two-column layout */}
-      <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-        <ScenarioColumn
-          calc={calc}
-          locale={locale}
-          label={labels.scenarioA}
-          colorScheme="blue"
-          inputs={inputsA}
-          onChange={handleChangeA}
-          onReset={handleResetA}
-        />
-        <ScenarioColumn
-          calc={calc}
-          locale={locale}
-          label={labels.scenarioB}
-          colorScheme="purple"
-          inputs={inputsB}
-          onChange={handleChangeB}
-          onReset={handleResetB}
-        />
+      {/* Mobile tab strip — visible <md, hidden on tablet+ */}
+      <div
+        className="mb-4 flex gap-1 rounded-lg border border-slate-200 bg-slate-50 p-1 dark:border-slate-700 dark:bg-slate-800 md:hidden"
+        role="tablist"
+        aria-label={`${labels.scenarioA} / ${labels.scenarioB}`}
+      >
+        <button
+          type="button"
+          role="tab"
+          aria-selected={activeTab === "A"}
+          onClick={() => setActiveTab("A")}
+          className={`flex-1 rounded-md px-3 py-2 min-h-[44px] sm:min-h-0 text-sm font-medium transition-colors ${
+            activeTab === "A"
+              ? "bg-blue-600 text-white shadow-sm dark:bg-blue-500"
+              : "text-slate-600 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-200"
+          }`}
+        >
+          {labels.scenarioA}
+        </button>
+        <button
+          type="button"
+          role="tab"
+          aria-selected={activeTab === "B"}
+          onClick={() => setActiveTab("B")}
+          className={`flex-1 rounded-md px-3 py-2 min-h-[44px] sm:min-h-0 text-sm font-medium transition-colors ${
+            activeTab === "B"
+              ? "bg-purple-600 text-white shadow-sm dark:bg-purple-500"
+              : "text-slate-600 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-200"
+          }`}
+        >
+          {labels.scenarioB}
+        </button>
+      </div>
+
+      {/* Two-column layout (single column with tabbed visibility on mobile) */}
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+        <div className={activeTab === "A" ? "" : "hidden md:block"}>
+          <ScenarioColumn
+            calc={calc}
+            locale={locale}
+            label={labels.scenarioA}
+            colorScheme="blue"
+            inputs={inputsA}
+            onChange={handleChangeA}
+            onReset={handleResetA}
+          />
+        </div>
+        <div className={activeTab === "B" ? "" : "hidden md:block"}>
+          <ScenarioColumn
+            calc={calc}
+            locale={locale}
+            label={labels.scenarioB}
+            colorScheme="purple"
+            inputs={inputsB}
+            onChange={handleChangeB}
+            onReset={handleResetB}
+          />
+        </div>
       </div>
 
       {/* Diff section */}
