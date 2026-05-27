@@ -4,8 +4,7 @@
 export interface ConversionUnit {
   readonly label: string;
   readonly symbol: string;
-  readonly toBase: number; // multiply value by this to convert to base
-  readonly fromBase?: number; // (optional) divide value by this to convert from base; defaults to 1/toBase
+  readonly toBase: number; // multiply value by this to convert to base unit
 }
 
 export interface UnitsTable {
@@ -64,7 +63,8 @@ export function convertUnit(
   fromUnit: ConversionUnit,
   toUnit: ConversionUnit
 ): number {
+  // Convert to base unit first
   const baseValue = value * fromUnit.toBase;
-  const targetFromBase = toUnit.fromBase ?? 1 / toUnit.toBase;
-  return baseValue / targetFromBase;
+  // Then convert from base to target unit (divide by toBase)
+  return baseValue / toUnit.toBase;
 }

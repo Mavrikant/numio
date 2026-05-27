@@ -1,4 +1,3 @@
-import { z } from "zod";
 import { defineCalculator } from "@/types/calculator";
 import { compute, inputSchema } from "./compute";
 import i18n from "./i18n";
@@ -14,8 +13,8 @@ export default defineCalculator({
   ],
   outputs: [
     { id: "result", format: "number", precision: 4, highlight: true },
-    { id: "expanded", format: "string", precision: 0 },
-    { id: "scientific", format: "string", precision: 0 },
+    { id: "expanded", format: "text", precision: 0 },
+    { id: "scientific", format: "text", precision: 0 },
   ],
   inputSchema,
   compute,

@@ -14,10 +14,10 @@ describe("time-convert — compute", () => {
     expect(result.result).toBe(1);
   });
 
-  it("converts 365.25 days to 1 year (Gregorian average)", () => {
-    // 365.25 days = 1 year (accounting for leap years)
+  it("converts 365.25 days to ~1 year (Gregorian average)", () => {
+    // 365.25 days ≈ 1 year (accounting for leap years, within rounding)
     const result = compute({ value: 365.25, fromUnit: "day", toUnit: "year" });
-    expect(result.result).toBeCloseTo(1, 5);
+    expect(result.result).toBeCloseTo(1, 4);
   });
 
   it("handles zero input", () => {

@@ -1,3 +1,4 @@
+import { z } from "zod";
 import { defineCalculator } from "@/types/calculator";
 import { compute, inputSchema } from "./compute";
 import i18n from "./i18n";

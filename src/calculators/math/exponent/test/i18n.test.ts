@@ -1,6 +1,6 @@
 import { describe, it } from "vitest";
-import { assertI18nComplete } from "@/test/i18n-utils";
 import definition from "../definition";
+import { assertI18nComplete } from "@/test-utils";
 
 describe("Exponent — i18n", () => {
   it("has complete translations", () => {

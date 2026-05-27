@@ -1,0 +1,903 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Length — definition snapshot > matches expected calculator shape 1`] = `
+{
+  "category": "conversion",
+  "compute": [Function],
+  "i18n": {
+    "ar": {
+      "description": "محول الطول",
+      "errors": {
+        "invalidLength": "الطول يجب أن يكون رقماً موجباً.",
+      },
+      "faq": [],
+      "inputs": {
+        "fromUnit": {
+          "help": "من",
+          "label": "من",
+        },
+        "toUnit": {
+          "help": "إلى",
+          "label": "إلى",
+        },
+        "value": {
+          "help": "قيمة الطول",
+          "label": "القيمة",
+        },
+      },
+      "keywords": [],
+      "options": {
+        "centimeter": "سنتيمتر",
+        "foot": "قدم",
+        "inch": "بوصة",
+        "kilometer": "كيلومتر",
+        "meter": "متر",
+        "micrometer": "ميكرومتر",
+        "mile": "ميل",
+        "millimeter": "ملليمتر",
+        "nautical_mile": "ميل بحري",
+        "yard": "ياردة",
+      },
+      "outputs": {
+        "result": {
+          "help": "النتيجة",
+          "label": "النتيجة",
+        },
+        "resultFormatted": {
+          "help": "منسق",
+          "label": "منسق",
+        },
+      },
+      "short": "تحويل الطول",
+      "title": "محول الطول",
+    },
+    "de": {
+      "description": "Kostenlos Längen- und Abstandskonverter. Konvertieren Sie Meter, Zentimeter, Kilometer, Zoll, Fuß, Meilen und mehr.",
+      "errors": {
+        "invalidLength": "Die Länge muss eine positive Zahl sein.",
+      },
+      "faq": [
+        {
+          "a": "1 Meter entspricht 100 Zentimetern.",
+          "q": "Wie viele cm sind in einem Meter?",
+        },
+        {
+          "a": "1 Meile entspricht 5.280 Fuß.",
+          "q": "Wie viele Fuß in einer Meile?",
+        },
+        {
+          "a": "Eine Seemeile ist 1.852 Meter.",
+          "q": "Was ist eine Seemeile?",
+        },
+      ],
+      "inputs": {
+        "fromUnit": {
+          "help": "Wählen Sie die Ausgangseinheit",
+          "label": "Von",
+        },
+        "toUnit": {
+          "help": "Wählen Sie die Zieleinheit",
+          "label": "Zu",
+        },
+        "value": {
+          "help": "Der zu konvertierende Längenwert",
+          "label": "Wert",
+        },
+      },
+      "keywords": [
+        "Längenmessgerät",
+        "Abstandskonverter",
+        "metrische Umrechnung",
+        "imperiale Umrechnung",
+        "Einheitskonverter",
+      ],
+      "options": {
+        "centimeter": "Zentimeter (cm)",
+        "foot": "Fuß (ft)",
+        "inch": "Zoll (in)",
+        "kilometer": "Kilometer (km)",
+        "meter": "Meter (m)",
+        "micrometer": "Mikrometer (μm)",
+        "mile": "Meile (mi)",
+        "millimeter": "Millimeter (mm)",
+        "nautical_mile": "Seemeile (nm)",
+        "yard": "Yard (yd)",
+      },
+      "outputs": {
+        "result": {
+          "help": "Konvertierter Wert",
+          "label": "Ergebnis",
+        },
+        "resultFormatted": {
+          "help": "Menschenlesbares Format",
+          "label": "Formatiert",
+        },
+      },
+      "short": "Konvertieren Sie metrische und imperiale Längenmessgeräte sofort.",
+      "title": "Längenmessgerät",
+    },
+    "en": {
+      "description": "Free length and distance converter. Convert meters, centimeters, kilometers, inches, feet, miles and more.",
+      "errors": {
+        "invalidLength": "Length must be a positive number.",
+      },
+      "faq": [
+        {
+          "a": "1 meter equals 100 centimeters.",
+          "q": "How many cm are in a meter?",
+        },
+        {
+          "a": "1 mile equals 5,280 feet.",
+          "q": "How many feet in a mile?",
+        },
+        {
+          "a": "A nautical mile is 1,852 meters.",
+          "q": "What is a nautical mile?",
+        },
+      ],
+      "inputs": {
+        "fromUnit": {
+          "help": "Select source unit",
+          "label": "From",
+        },
+        "toUnit": {
+          "help": "Select target unit",
+          "label": "To",
+        },
+        "value": {
+          "help": "The length value to convert",
+          "label": "Value",
+        },
+      },
+      "keywords": [
+        "length converter",
+        "distance converter",
+        "metric conversion",
+        "imperial conversion",
+        "unit converter",
+      ],
+      "options": {
+        "centimeter": "Centimeter (cm)",
+        "foot": "Foot (ft)",
+        "inch": "Inch (in)",
+        "kilometer": "Kilometer (km)",
+        "meter": "Meter (m)",
+        "micrometer": "Micrometer (μm)",
+        "mile": "Mile (mi)",
+        "millimeter": "Millimeter (mm)",
+        "nautical_mile": "Nautical Mile (nm)",
+        "yard": "Yard (yd)",
+      },
+      "outputs": {
+        "result": {
+          "help": "Converted value",
+          "label": "Result",
+        },
+        "resultFormatted": {
+          "help": "Human-readable format",
+          "label": "Formatted",
+        },
+      },
+      "short": "Convert between metric and imperial length units instantly.",
+      "title": "Length Converter",
+    },
+    "es": {
+      "description": "Convertidor de longitud y distancia gratuito. Convierta metros, centímetros, kilómetros, pulgadas, pies, millas y más.",
+      "errors": {
+        "invalidLength": "La longitud debe ser un número positivo.",
+      },
+      "faq": [
+        {
+          "a": "1 metro equivale a 100 centímetros.",
+          "q": "¿Cuántos cm en un metro?",
+        },
+        {
+          "a": "1 milla equivale a 5 280 pies.",
+          "q": "¿Cuántos pies en una milla?",
+        },
+        {
+          "a": "Una milla náutica son 1 852 metros.",
+          "q": "¿Qué es una milla náutica?",
+        },
+      ],
+      "inputs": {
+        "fromUnit": {
+          "help": "Seleccione la unidad de origen",
+          "label": "De",
+        },
+        "toUnit": {
+          "help": "Seleccione la unidad de destino",
+          "label": "Para",
+        },
+        "value": {
+          "help": "El valor de longitud a convertir",
+          "label": "Valor",
+        },
+      },
+      "keywords": [
+        "convertidor de longitud",
+        "convertidor de distancia",
+        "conversión métrica",
+        "conversión imperial",
+        "convertidor de unidades",
+      ],
+      "options": {
+        "centimeter": "Centímetro (cm)",
+        "foot": "Pie (ft)",
+        "inch": "Pulgada (in)",
+        "kilometer": "Kilómetro (km)",
+        "meter": "Metro (m)",
+        "micrometer": "Micrómetro (μm)",
+        "mile": "Milla (mi)",
+        "millimeter": "Milímetro (mm)",
+        "nautical_mile": "Milla Náutica (nm)",
+        "yard": "Yarda (yd)",
+      },
+      "outputs": {
+        "result": {
+          "help": "Valor convertido",
+          "label": "Resultado",
+        },
+        "resultFormatted": {
+          "help": "Formato legible",
+          "label": "Formateado",
+        },
+      },
+      "short": "Convierta unidades de longitud métricas e imperiales al instante.",
+      "title": "Convertidor de Longitud",
+    },
+    "fr": {
+      "description": "Convertisseur de longueur et de distance gratuit. Convertissez les mètres, centimètres, kilomètres, pouces, pieds, miles et plus.",
+      "errors": {
+        "invalidLength": "La longueur doit être un nombre positif.",
+      },
+      "faq": [
+        {
+          "a": "1 mètre équivaut à 100 centimètres.",
+          "q": "Combien de cm dans un mètre?",
+        },
+        {
+          "a": "1 mille équivaut à 5 280 pieds.",
+          "q": "Combien de pieds dans un mille?",
+        },
+        {
+          "a": "Un mille marin est 1 852 mètres.",
+          "q": "Qu'est-ce qu'un mille marin?",
+        },
+      ],
+      "inputs": {
+        "fromUnit": {
+          "help": "Sélectionnez l'unité source",
+          "label": "De",
+        },
+        "toUnit": {
+          "help": "Sélectionnez l'unité cible",
+          "label": "Vers",
+        },
+        "value": {
+          "help": "La valeur de longueur à convertir",
+          "label": "Valeur",
+        },
+      },
+      "keywords": [
+        "convertisseur de longueur",
+        "convertisseur de distance",
+        "conversion métrique",
+        "conversion impériale",
+        "convertisseur d'unités",
+      ],
+      "options": {
+        "centimeter": "Centimètre (cm)",
+        "foot": "Pied (pi)",
+        "inch": "Pouce (po)",
+        "kilometer": "Kilomètre (km)",
+        "meter": "Mètre (m)",
+        "micrometer": "Micromètre (μm)",
+        "mile": "Mille (mi)",
+        "millimeter": "Millimètre (mm)",
+        "nautical_mile": "Mille Marin (nm)",
+        "yard": "Yard (yd)",
+      },
+      "outputs": {
+        "result": {
+          "help": "Valeur convertie",
+          "label": "Résultat",
+        },
+        "resultFormatted": {
+          "help": "Format lisible par l'homme",
+          "label": "Formaté",
+        },
+      },
+      "short": "Convertissez les unités de longueur métriques et impériales instantanément.",
+      "title": "Convertisseur de Longueur",
+    },
+    "hi": {
+      "description": "कनवर्टर",
+      "errors": {
+        "invalidLength": "लंबाई एक सकारात्मक संख्या होनी चाहिए।",
+      },
+      "faq": [],
+      "inputs": {
+        "fromUnit": {
+          "help": "से",
+          "label": "से",
+        },
+        "toUnit": {
+          "help": "को",
+          "label": "को",
+        },
+        "value": {
+          "help": "मान",
+          "label": "मान",
+        },
+      },
+      "keywords": [],
+      "options": {
+        "centimeter": "सेंटीमीटर",
+        "foot": "पैर",
+        "inch": "इंच",
+        "kilometer": "किलोमीटर",
+        "meter": "मीटर",
+        "micrometer": "माइक्रोमीटर",
+        "mile": "मील",
+        "millimeter": "मिलीमीटर",
+        "nautical_mile": "नॉटिकल मील",
+        "yard": "यार्ड",
+      },
+      "outputs": {
+        "result": {
+          "help": "परिणाम",
+          "label": "परिणाम",
+        },
+        "resultFormatted": {
+          "help": "फॉर्मेट किया गया",
+          "label": "फॉर्मेट किया गया",
+        },
+      },
+      "short": "कन्वर्ट",
+      "title": "लंबाई कनवर्टर",
+    },
+    "it": {
+      "description": "Convertitore di lunghezza e distanza gratuito. Converti metri, centimetri, chilometri, pollici, piedi, miglia e altro.",
+      "errors": {
+        "invalidLength": "La lunghezza deve essere un numero positivo.",
+      },
+      "faq": [
+        {
+          "a": "1 metro equivale a 100 centimetri.",
+          "q": "Quanti cm in un metro?",
+        },
+        {
+          "a": "1 miglio equivale a 5 280 piedi.",
+          "q": "Quanti piedi in un miglio?",
+        },
+        {
+          "a": "Un miglio nautico è 1 852 metri.",
+          "q": "Cos'è un miglio nautico?",
+        },
+      ],
+      "inputs": {
+        "fromUnit": {
+          "help": "Seleziona l'unità di origine",
+          "label": "Da",
+        },
+        "toUnit": {
+          "help": "Seleziona l'unità di destinazione",
+          "label": "A",
+        },
+        "value": {
+          "help": "Il valore di lunghezza da convertire",
+          "label": "Valore",
+        },
+      },
+      "keywords": [
+        "convertitore di lunghezza",
+        "convertitore di distanza",
+        "conversione metrica",
+        "conversione imperiale",
+        "convertitore di unità",
+      ],
+      "options": {
+        "centimeter": "Centimetro (cm)",
+        "foot": "Piede (ft)",
+        "inch": "Pollice (in)",
+        "kilometer": "Chilometro (km)",
+        "meter": "Metro (m)",
+        "micrometer": "Micrometro (μm)",
+        "mile": "Miglio (mi)",
+        "millimeter": "Millimetro (mm)",
+        "nautical_mile": "Miglio Nautico (nm)",
+        "yard": "Iarda (yd)",
+      },
+      "outputs": {
+        "result": {
+          "help": "Valore convertito",
+          "label": "Risultato",
+        },
+        "resultFormatted": {
+          "help": "Formato leggibile",
+          "label": "Formattato",
+        },
+      },
+      "short": "Converti istantaneamente le unità di lunghezza metriche e imperiali.",
+      "title": "Convertitore di Lunghezza",
+    },
+    "ja": {
+      "description": "コンバーター",
+      "errors": {
+        "invalidLength": "長さは正の数である必要があります。",
+      },
+      "faq": [],
+      "inputs": {
+        "fromUnit": {
+          "help": "から",
+          "label": "から",
+        },
+        "toUnit": {
+          "help": "へ",
+          "label": "へ",
+        },
+        "value": {
+          "help": "値",
+          "label": "値",
+        },
+      },
+      "keywords": [],
+      "options": {
+        "centimeter": "センチメートル",
+        "foot": "フィート",
+        "inch": "インチ",
+        "kilometer": "キロメートル",
+        "meter": "メートル",
+        "micrometer": "マイクロメーター",
+        "mile": "マイル",
+        "millimeter": "ミリメートル",
+        "nautical_mile": "海里",
+        "yard": "ヤード",
+      },
+      "outputs": {
+        "result": {
+          "help": "結果",
+          "label": "結果",
+        },
+        "resultFormatted": {
+          "help": "フォーマット",
+          "label": "フォーマット",
+        },
+      },
+      "short": "変換",
+      "title": "長さコンバーター",
+    },
+    "ko": {
+      "description": "변환기",
+      "errors": {
+        "invalidLength": "길이는 양수여야 합니다.",
+      },
+      "faq": [],
+      "inputs": {
+        "fromUnit": {
+          "help": "출발지",
+          "label": "출발지",
+        },
+        "toUnit": {
+          "help": "도착지",
+          "label": "도착지",
+        },
+        "value": {
+          "help": "값",
+          "label": "값",
+        },
+      },
+      "keywords": [],
+      "options": {
+        "centimeter": "센티미터",
+        "foot": "피트",
+        "inch": "인치",
+        "kilometer": "킬로미터",
+        "meter": "미터",
+        "micrometer": "마이크로미터",
+        "mile": "마일",
+        "millimeter": "밀리미터",
+        "nautical_mile": "해리",
+        "yard": "야드",
+      },
+      "outputs": {
+        "result": {
+          "help": "결과",
+          "label": "결과",
+        },
+        "resultFormatted": {
+          "help": "형식화됨",
+          "label": "형식화됨",
+        },
+      },
+      "short": "변환",
+      "title": "길이 변환기",
+    },
+    "ru": {
+      "description": "Конвертер",
+      "errors": {
+        "invalidLength": "Длина должна быть положительным числом.",
+      },
+      "faq": [],
+      "inputs": {
+        "fromUnit": {
+          "help": "От",
+          "label": "От",
+        },
+        "toUnit": {
+          "help": "В",
+          "label": "В",
+        },
+        "value": {
+          "help": "Значение",
+          "label": "Значение",
+        },
+      },
+      "keywords": [],
+      "options": {
+        "centimeter": "Сантиметр",
+        "foot": "Фут",
+        "inch": "Дюйм",
+        "kilometer": "Километр",
+        "meter": "Метр",
+        "micrometer": "Микрометр",
+        "mile": "Миля",
+        "millimeter": "Миллиметр",
+        "nautical_mile": "Морская миля",
+        "yard": "Ярд",
+      },
+      "outputs": {
+        "result": {
+          "help": "Результат",
+          "label": "Результат",
+        },
+        "resultFormatted": {
+          "help": "Отформатирован",
+          "label": "Отформатирован",
+        },
+      },
+      "short": "Конвертация",
+      "title": "Конвертер Длины",
+    },
+    "tr": {
+      "description": "Ücretsiz uzunluk ve mesafe dönüştürücü. Meter, santimetre, kilometre, inç, fit, mil ve daha fazlasını dönüştürün.",
+      "errors": {
+        "invalidLength": "Uzunluk pozitif bir sayı olmalıdır.",
+      },
+      "faq": [
+        {
+          "a": "1 metre 100 santimetreye eşittir.",
+          "q": "Bir metrede kaç santimetre vardır?",
+        },
+        {
+          "a": "1 mil 5.280 fit eşittir.",
+          "q": "Bir milde kaç fit vardır?",
+        },
+        {
+          "a": "Deniz mili 1.852 metredir.",
+          "q": "Deniz mili nedir?",
+        },
+      ],
+      "inputs": {
+        "fromUnit": {
+          "help": "Kaynak birimi seçin",
+          "label": "Kaynak",
+        },
+        "toUnit": {
+          "help": "Hedef birimi seçin",
+          "label": "Hedef",
+        },
+        "value": {
+          "help": "Dönüştürülecek uzunluk değeri",
+          "label": "Değer",
+        },
+      },
+      "keywords": [
+        "uzunluk dönüştürücü",
+        "mesafe dönüştürücü",
+        "metrik dönüşüm",
+        "imperial dönüşüm",
+        "birim dönüştürücü",
+      ],
+      "options": {
+        "centimeter": "Santimetre (cm)",
+        "foot": "Fit (ft)",
+        "inch": "İnç (in)",
+        "kilometer": "Kilometre (km)",
+        "meter": "Metre (m)",
+        "micrometer": "Mikrometr (μm)",
+        "mile": "Mil (mi)",
+        "millimeter": "Milimetre (mm)",
+        "nautical_mile": "Deniz Mili (nm)",
+        "yard": "Yard (yd)",
+      },
+      "outputs": {
+        "result": {
+          "help": "Dönüştürülen değer",
+          "label": "Sonuç",
+        },
+        "resultFormatted": {
+          "help": "İnsan tarafından okunabilir biçim",
+          "label": "Formatlanmış",
+        },
+      },
+      "short": "Metrik ve imperial uzunluk birimlerini anında dönüştürün.",
+      "title": "Uzunluk Dönüştürücü",
+    },
+    "zh": {
+      "description": "转换器",
+      "errors": {
+        "invalidLength": "长度必须是正数。",
+      },
+      "faq": [],
+      "inputs": {
+        "fromUnit": {
+          "help": "从",
+          "label": "从",
+        },
+        "toUnit": {
+          "help": "至",
+          "label": "至",
+        },
+        "value": {
+          "help": "数值",
+          "label": "数值",
+        },
+      },
+      "keywords": [],
+      "options": {
+        "centimeter": "厘米",
+        "foot": "英尺",
+        "inch": "英寸",
+        "kilometer": "公里",
+        "meter": "米",
+        "micrometer": "微米",
+        "mile": "英里",
+        "millimeter": "毫米",
+        "nautical_mile": "海里",
+        "yard": "码",
+      },
+      "outputs": {
+        "result": {
+          "help": "结果",
+          "label": "结果",
+        },
+        "resultFormatted": {
+          "help": "已格式化",
+          "label": "已格式化",
+        },
+      },
+      "short": "转换",
+      "title": "长度转换器",
+    },
+  },
+  "icon": "ruler",
+  "inputSchema": ZodObject {
+    "_cached": null,
+    "_def": {
+      "catchall": ZodNever {
+        "_def": {
+          "typeName": "ZodNever",
+        },
+        "and": [Function],
+        "array": [Function],
+        "brand": [Function],
+        "catch": [Function],
+        "default": [Function],
+        "describe": [Function],
+        "isNullable": [Function],
+        "isOptional": [Function],
+        "nullable": [Function],
+        "nullish": [Function],
+        "optional": [Function],
+        "or": [Function],
+        "parse": [Function],
+        "parseAsync": [Function],
+        "pipe": [Function],
+        "promise": [Function],
+        "readonly": [Function],
+        "refine": [Function],
+        "refinement": [Function],
+        "safeParse": [Function],
+        "safeParseAsync": [Function],
+        "spa": [Function],
+        "superRefine": [Function],
+        "transform": [Function],
+        "~standard": {
+          "validate": [Function],
+          "vendor": "zod",
+          "version": 1,
+        },
+      },
+      "shape": [Function],
+      "typeName": "ZodObject",
+      "unknownKeys": "strip",
+    },
+    "and": [Function],
+    "array": [Function],
+    "augment": [Function],
+    "brand": [Function],
+    "catch": [Function],
+    "default": [Function],
+    "describe": [Function],
+    "isNullable": [Function],
+    "isOptional": [Function],
+    "nonstrict": [Function],
+    "nullable": [Function],
+    "nullish": [Function],
+    "optional": [Function],
+    "or": [Function],
+    "parse": [Function],
+    "parseAsync": [Function],
+    "pipe": [Function],
+    "promise": [Function],
+    "readonly": [Function],
+    "refine": [Function],
+    "refinement": [Function],
+    "safeParse": [Function],
+    "safeParseAsync": [Function],
+    "spa": [Function],
+    "superRefine": [Function],
+    "transform": [Function],
+    "~standard": {
+      "validate": [Function],
+      "vendor": "zod",
+      "version": 1,
+    },
+  },
+  "inputs": [
+    {
+      "defaultValue": 1,
+      "id": "value",
+      "required": true,
+      "type": {
+        "kind": "number",
+        "max": 1000000,
+        "min": 0.001,
+        "step": 0.1,
+      },
+    },
+    {
+      "defaultValue": "m",
+      "id": "fromUnit",
+      "required": true,
+      "type": {
+        "kind": "select",
+        "options": [
+          {
+            "i18nKey": "meter",
+            "value": "m",
+          },
+          {
+            "i18nKey": "centimeter",
+            "value": "cm",
+          },
+          {
+            "i18nKey": "millimeter",
+            "value": "mm",
+          },
+          {
+            "i18nKey": "kilometer",
+            "value": "km",
+          },
+          {
+            "i18nKey": "inch",
+            "value": "in",
+          },
+          {
+            "i18nKey": "foot",
+            "value": "ft",
+          },
+          {
+            "i18nKey": "yard",
+            "value": "yd",
+          },
+          {
+            "i18nKey": "mile",
+            "value": "mi",
+          },
+          {
+            "i18nKey": "nautical_mile",
+            "value": "nm",
+          },
+          {
+            "i18nKey": "micrometer",
+            "value": "μm",
+          },
+        ],
+      },
+    },
+    {
+      "defaultValue": "cm",
+      "id": "toUnit",
+      "required": true,
+      "type": {
+        "kind": "select",
+        "options": [
+          {
+            "i18nKey": "meter",
+            "value": "m",
+          },
+          {
+            "i18nKey": "centimeter",
+            "value": "cm",
+          },
+          {
+            "i18nKey": "millimeter",
+            "value": "mm",
+          },
+          {
+            "i18nKey": "kilometer",
+            "value": "km",
+          },
+          {
+            "i18nKey": "inch",
+            "value": "in",
+          },
+          {
+            "i18nKey": "foot",
+            "value": "ft",
+          },
+          {
+            "i18nKey": "yard",
+            "value": "yd",
+          },
+          {
+            "i18nKey": "mile",
+            "value": "mi",
+          },
+          {
+            "i18nKey": "nautical_mile",
+            "value": "nm",
+          },
+          {
+            "i18nKey": "micrometer",
+            "value": "μm",
+          },
+        ],
+      },
+    },
+  ],
+  "meta": {
+    "formulaLatex": "\\text{result} = \\text{value} \\times \\frac{\\text{toBase unit}}{\\text{fromBase unit}}",
+    "references": [
+      {
+        "authority": "Wikipedia",
+        "title": "Meter — International System of Units (SI)",
+        "url": "https://en.wikipedia.org/wiki/Meter",
+      },
+      {
+        "authority": "Wikipedia",
+        "title": "International yard and pound",
+        "url": "https://en.wikipedia.org/wiki/International_yard_and_pound",
+      },
+    ],
+  },
+  "outputs": [
+    {
+      "format": "number",
+      "highlight": true,
+      "id": "result",
+      "precision": 4,
+    },
+    {
+      "format": "text",
+      "id": "resultFormatted",
+    },
+  ],
+  "priority": "P0",
+  "related": [
+    "weight",
+    "temperature",
+  ],
+  "slug": "length",
+  "tags": [
+    "conversion",
+    "length",
+    "distance",
+    "metric",
+    "imperial",
+  ],
+}
+`;
