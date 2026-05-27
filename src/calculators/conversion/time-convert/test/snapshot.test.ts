@@ -1,0 +1,1 @@
+import { describe, it, expect } from "vitest"; import definition from "../definition"; describe("time-convert — snapshot", () => { it("matches calculator definition shape", () => { expect(definition.slug).toBeDefined(); expect(definition.category).toBe("conversion"); expect(definition.inputs.length).toBeGreaterThan(0); expect(definition.outputs.length).toBeGreaterThan(0); }); });

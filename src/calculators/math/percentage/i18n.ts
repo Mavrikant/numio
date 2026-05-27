@@ -3,7 +3,7 @@ import type { CalculatorI18n } from "@/types/i18n";
 const i18n: CalculatorI18n = {
   en: {
     title: "Percentage Calculator",
-    short: "Calculate percentages instantly: X% of Y, what % is X of Y, or percentage change.",
+    short: "Calculate percentages instantly: X% of Y, X is what % of Y, or percentage change.",
     description:
       "Free 3-in-1 percentage calculator. Find what X% of Y is, calculate what percentage X is of Y, or compute percentage change between two values.",
     keywords: [
@@ -14,17 +14,17 @@ const i18n: CalculatorI18n = {
       "percent of",
     ],
     inputs: {
-      problemType: {
+      mode: {
         label: "Problem type",
         help: "Choose what you want to calculate",
       },
-      value1: {
-        label: "Value 1",
-        help: "First number (varies by problem type)",
+      x: {
+        label: "First value",
+        help: "The percentage or part (varies by problem type)",
       },
-      value2: {
-        label: "Value 2",
-        help: "Second number (varies by problem type)",
+      y: {
+        label: "Second value",
+        help: "The base or whole (varies by problem type)",
       },
     },
     outputs: {
@@ -32,20 +32,16 @@ const i18n: CalculatorI18n = {
         label: "Result",
         help: "Calculated result",
       },
-      resultFormatted: {
-        label: "Formatted result",
-        help: "Result rounded to 2 decimal places",
-      },
       explanation: {
         label: "Explanation",
         help: "Step-by-step breakdown",
       },
     },
     options: {
-      problemType: {
-        "percentage-of": "X% of Y",
-        "what-percentage": "X is what % of Y",
-        "percentage-change": "Percentage change from X to Y",
+      mode: {
+        "what_is_x_pct_of_y": "X% of Y",
+        "x_is_what_pct_of_y": "X is what % of Y",
+        "pct_change": "Percentage change from X to Y",
       },
     },
     errors: {
@@ -88,17 +84,17 @@ const i18n: CalculatorI18n = {
       "yüzde hesaplama",
     ],
     inputs: {
-      problemType: {
+      mode: {
         label: "Problem türü",
         help: "Neyi hesaplamak istediğinizi seçin",
       },
-      value1: {
-        label: "Değer 1",
-        help: "Birinci sayı (problem türüne bağlı olarak değişir)",
+      x: {
+        label: "Birinci değer",
+        help: "Yüzde veya parça (problem türüne bağlı olarak değişir)",
       },
-      value2: {
-        label: "Değer 2",
-        help: "İkinci sayı (problem türüne bağlı olarak değişir)",
+      y: {
+        label: "İkinci değer",
+        help: "Taban veya bütün (problem türüne bağlı olarak değişir)",
       },
     },
     outputs: {
@@ -106,20 +102,16 @@ const i18n: CalculatorI18n = {
         label: "Sonuç",
         help: "Hesaplanan sonuç",
       },
-      resultFormatted: {
-        label: "Biçimlendirilmiş sonuç",
-        help: "2 ondalık basamağa yuvarlanmış sonuç",
-      },
       explanation: {
         label: "Açıklama",
         help: "Adım adım çözüm",
       },
     },
     options: {
-      problemType: {
-        "percentage-of": "X'in %Y'si",
-        "what-percentage": "X, Y'nin kaçıncı yüzdesini oluşturur",
-        "percentage-change": "X'ten Y'ye yüzde değişim",
+      mode: {
+        "what_is_x_pct_of_y": "X'in %Y'si",
+        "x_is_what_pct_of_y": "X, Y'nin kaçıncı yüzdesini oluşturur",
+        "pct_change": "X'ten Y'ye yüzde değişim",
       },
     },
     errors: {
@@ -162,17 +154,17 @@ const i18n: CalculatorI18n = {
       "Prozent von",
     ],
     inputs: {
-      problemType: {
+      mode: {
         label: "Problemtyp",
         help: "Wähle, was du berechnen möchtest",
       },
-      value1: {
-        label: "Wert 1",
-        help: "Erste Zahl (variiert je nach Problemtyp)",
+      x: {
+        label: "Erster Wert",
+        help: "Prozentsatz oder Teil (variiert je nach Problemtyp)",
       },
-      value2: {
-        label: "Wert 2",
-        help: "Zweite Zahl (variiert je nach Problemtyp)",
+      y: {
+        label: "Zweiter Wert",
+        help: "Basis oder Ganzes (variiert je nach Problemtyp)",
       },
     },
     outputs: {
@@ -180,20 +172,16 @@ const i18n: CalculatorI18n = {
         label: "Ergebnis",
         help: "Berechnetes Ergebnis",
       },
-      resultFormatted: {
-        label: "Formatiertes Ergebnis",
-        help: "Ergebnis auf 2 Dezimalstellen gerundet",
-      },
       explanation: {
         label: "Erklärung",
         help: "Schrittweise Aufschlüsselung",
       },
     },
     options: {
-      problemType: {
-        "percentage-of": "X% von Y",
-        "what-percentage": "X ist wieviel % von Y",
-        "percentage-change": "Prozentuale Änderung von X zu Y",
+      mode: {
+        "what_is_x_pct_of_y": "X% von Y",
+        "x_is_what_pct_of_y": "X ist wieviel % von Y",
+        "pct_change": "Prozentuale Änderung von X zu Y",
       },
     },
     errors: {
@@ -236,17 +224,17 @@ const i18n: CalculatorI18n = {
       "calcul de pourcentage",
     ],
     inputs: {
-      problemType: {
+      mode: {
         label: "Type de problème",
         help: "Choisissez ce que vous souhaitez calculer",
       },
-      value1: {
-        label: "Valeur 1",
-        help: "Premier nombre (varie selon le type de problème)",
+      x: {
+        label: "Première valeur",
+        help: "Pourcentage ou partie (varie selon le type de problème)",
       },
-      value2: {
-        label: "Valeur 2",
-        help: "Deuxième nombre (varie selon le type de problème)",
+      y: {
+        label: "Deuxième valeur",
+        help: "Base ou tout (varie selon le type de problème)",
       },
     },
     outputs: {
@@ -254,20 +242,16 @@ const i18n: CalculatorI18n = {
         label: "Résultat",
         help: "Résultat calculé",
       },
-      resultFormatted: {
-        label: "Résultat formaté",
-        help: "Résultat arrondi à 2 décimales",
-      },
       explanation: {
         label: "Explication",
         help: "Ventilation étape par étape",
       },
     },
     options: {
-      problemType: {
-        "percentage-of": "X % de Y",
-        "what-percentage": "X est quel % de Y",
-        "percentage-change": "Variation en pourcentage de X à Y",
+      mode: {
+        "what_is_x_pct_of_y": "X % de Y",
+        "x_is_what_pct_of_y": "X est quel % de Y",
+        "pct_change": "Variation en pourcentage de X à Y",
       },
     },
     errors: {
@@ -310,17 +294,17 @@ const i18n: CalculatorI18n = {
       "cálculo de porcentajes",
     ],
     inputs: {
-      problemType: {
+      mode: {
         label: "Tipo de problema",
         help: "Elige qué quieres calcular",
       },
-      value1: {
-        label: "Valor 1",
-        help: "Primer número (varía según el tipo de problema)",
+      x: {
+        label: "Primer valor",
+        help: "Porcentaje o parte (varía según el tipo de problema)",
       },
-      value2: {
-        label: "Valor 2",
-        help: "Segundo número (varía según el tipo de problema)",
+      y: {
+        label: "Segundo valor",
+        help: "Base o todo (varía según el tipo de problema)",
       },
     },
     outputs: {
@@ -328,20 +312,16 @@ const i18n: CalculatorI18n = {
         label: "Resultado",
         help: "Resultado calculado",
       },
-      resultFormatted: {
-        label: "Resultado formateado",
-        help: "Resultado redondeado a 2 decimales",
-      },
       explanation: {
         label: "Explicación",
         help: "Desglose paso a paso",
       },
     },
     options: {
-      problemType: {
-        "percentage-of": "X% de Y",
-        "what-percentage": "X es qué % de Y",
-        "percentage-change": "Cambio porcentual de X a Y",
+      mode: {
+        "what_is_x_pct_of_y": "X% de Y",
+        "x_is_what_pct_of_y": "X es qué % de Y",
+        "pct_change": "Cambio porcentual de X a Y",
       },
     },
     errors: {
@@ -384,17 +364,17 @@ const i18n: CalculatorI18n = {
       "calcolo percentuale",
     ],
     inputs: {
-      problemType: {
+      mode: {
         label: "Tipo di problema",
         help: "Scegli cosa vuoi calcolare",
       },
-      value1: {
-        label: "Valore 1",
-        help: "Primo numero (varia a seconda del tipo di problema)",
+      x: {
+        label: "Primo valore",
+        help: "Percentuale o parte (varia a seconda del tipo di problema)",
       },
-      value2: {
-        label: "Valore 2",
-        help: "Secondo numero (varia a seconda del tipo di problema)",
+      y: {
+        label: "Secondo valore",
+        help: "Base o tutto (varia a seconda del tipo di problema)",
       },
     },
     outputs: {
@@ -402,20 +382,16 @@ const i18n: CalculatorI18n = {
         label: "Risultato",
         help: "Risultato calcolato",
       },
-      resultFormatted: {
-        label: "Risultato formattato",
-        help: "Risultato arrotondato a 2 decimali",
-      },
       explanation: {
         label: "Spiegazione",
         help: "Suddivisione passo dopo passo",
       },
     },
     options: {
-      problemType: {
-        "percentage-of": "X% di Y",
-        "what-percentage": "X è quale % di Y",
-        "percentage-change": "Variazione percentuale da X a Y",
+      mode: {
+        "what_is_x_pct_of_y": "X% di Y",
+        "x_is_what_pct_of_y": "X è quale % di Y",
+        "pct_change": "Variazione percentuale da X a Y",
       },
     },
     errors: {
@@ -458,17 +434,17 @@ const i18n: CalculatorI18n = {
       "حساب النسبة المئوية",
     ],
     inputs: {
-      problemType: {
+      mode: {
         label: "نوع المشكلة",
         help: "اختر ما تريد حسابه",
       },
-      value1: {
-        label: "القيمة 1",
-        help: "الرقم الأول (يختلف حسب نوع المشكلة)",
+      x: {
+        label: "القيمة الأولى",
+        help: "النسبة المئوية أو الجزء (يختلف حسب نوع المشكلة)",
       },
-      value2: {
-        label: "القيمة 2",
-        help: "الرقم الثاني (يختلف حسب نوع المشكلة)",
+      y: {
+        label: "القيمة الثانية",
+        help: "القاعدة أو الكل (يختلف حسب نوع المشكلة)",
       },
     },
     outputs: {
@@ -476,20 +452,16 @@ const i18n: CalculatorI18n = {
         label: "النتيجة",
         help: "النتيجة المحسوبة",
       },
-      resultFormatted: {
-        label: "النتيجة المنسقة",
-        help: "النتيجة مقربة إلى 2 منزلة عشرية",
-      },
       explanation: {
         label: "الشرح",
         help: "تفصيل خطوة بخطوة",
       },
     },
     options: {
-      problemType: {
-        "percentage-of": "X٪ من Y",
-        "what-percentage": "X كم٪ من Y",
-        "percentage-change": "التغير النسبة المئوية من X إلى Y",
+      mode: {
+        "what_is_x_pct_of_y": "X٪ من Y",
+        "x_is_what_pct_of_y": "X كم٪ من Y",
+        "pct_change": "التغير النسبة المئوية من X إلى Y",
       },
     },
     errors: {
@@ -532,17 +504,17 @@ const i18n: CalculatorI18n = {
       "расчет процентов",
     ],
     inputs: {
-      problemType: {
+      mode: {
         label: "Тип задачи",
         help: "Выберите, что вы хотите рассчитать",
       },
-      value1: {
-        label: "Значение 1",
-        help: "Первое число (зависит от типа задачи)",
+      x: {
+        label: "Первое значение",
+        help: "Процент или часть (зависит от типа задачи)",
       },
-      value2: {
-        label: "Значение 2",
-        help: "Второе число (зависит от типа задачи)",
+      y: {
+        label: "Второе значение",
+        help: "Основание или целое (зависит от типа задачи)",
       },
     },
     outputs: {
@@ -550,20 +522,16 @@ const i18n: CalculatorI18n = {
         label: "Результат",
         help: "Рассчитанный результат",
       },
-      resultFormatted: {
-        label: "Отформатированный результат",
-        help: "Результат округлен до 2 десятичных знаков",
-      },
       explanation: {
         label: "Объяснение",
         help: "Пошаговое объяснение",
       },
     },
     options: {
-      problemType: {
-        "percentage-of": "X% от Y",
-        "what-percentage": "X это сколько % от Y",
-        "percentage-change": "Процентное изменение от X к Y",
+      mode: {
+        "what_is_x_pct_of_y": "X% от Y",
+        "x_is_what_pct_of_y": "X это сколько % от Y",
+        "pct_change": "Процентное изменение от X к Y",
       },
     },
     errors: {
@@ -606,17 +574,17 @@ const i18n: CalculatorI18n = {
       "百分比计算",
     ],
     inputs: {
-      problemType: {
+      mode: {
         label: "问题类型",
         help: "选择您要计算的内容",
       },
-      value1: {
-        label: "值 1",
-        help: "第一个数字（因问题类型而异）",
+      x: {
+        label: "第一个值",
+        help: "百分比或部分（因问题类型而异）",
       },
-      value2: {
-        label: "值 2",
-        help: "第二个数字（因问题类型而异）",
+      y: {
+        label: "第二个值",
+        help: "基数或整数（因问题类型而异）",
       },
     },
     outputs: {
@@ -624,20 +592,16 @@ const i18n: CalculatorI18n = {
         label: "结果",
         help: "计算结果",
       },
-      resultFormatted: {
-        label: "格式化结果",
-        help: "四舍五入到 2 位小数的结果",
-      },
       explanation: {
         label: "解释",
         help: "逐步分解",
       },
     },
     options: {
-      problemType: {
-        "percentage-of": "X% 的 Y",
-        "what-percentage": "X 是 Y 的多少%",
-        "percentage-change": "从 X 到 Y 的百分比变化",
+      mode: {
+        "what_is_x_pct_of_y": "X% 的 Y",
+        "x_is_what_pct_of_y": "X 是 Y 的多少%",
+        "pct_change": "从 X 到 Y 的百分比变化",
       },
     },
     errors: {
@@ -680,17 +644,17 @@ const i18n: CalculatorI18n = {
       "パーセント計算",
     ],
     inputs: {
-      problemType: {
+      mode: {
         label: "問題の種類",
         help: "計算したいものを選択してください",
       },
-      value1: {
-        label: "値 1",
-        help: "最初の数字（問題の種類によって異なります）",
+      x: {
+        label: "最初の値",
+        help: "パーセンテージまたは部分（問題の種類によって異なります）",
       },
-      value2: {
-        label: "値 2",
-        help: "2 番目の数字（問題の種類によって異なります）",
+      y: {
+        label: "2 番目の値",
+        help: "ベースまたは全体（問題の種類によって異なります）",
       },
     },
     outputs: {
@@ -698,20 +662,16 @@ const i18n: CalculatorI18n = {
         label: "結果",
         help: "計算結果",
       },
-      resultFormatted: {
-        label: "フォーマットされた結果",
-        help: "小数第 2 位に四捨五入された結果",
-      },
       explanation: {
         label: "説明",
         help: "ステップバイステップの内訳",
       },
     },
     options: {
-      problemType: {
-        "percentage-of": "Y の X％",
-        "what-percentage": "X は Y の何％",
-        "percentage-change": "X から Y へのパーセンテージの変化",
+      mode: {
+        "what_is_x_pct_of_y": "Y の X％",
+        "x_is_what_pct_of_y": "X は Y の何％",
+        "pct_change": "X から Y へのパーセンテージの変化",
       },
     },
     errors: {
@@ -754,17 +714,17 @@ const i18n: CalculatorI18n = {
       "백분율 계산",
     ],
     inputs: {
-      problemType: {
+      mode: {
         label: "문제 유형",
         help: "계산하려는 것을 선택하세요",
       },
-      value1: {
-        label: "값 1",
-        help: "첫 번째 숫자 (문제 유형에 따라 다름)",
+      x: {
+        label: "첫 번째 값",
+        help: "백분율 또는 부분 (문제 유형에 따라 다름)",
       },
-      value2: {
-        label: "값 2",
-        help: "두 번째 숫자 (문제 유형에 따라 다름)",
+      y: {
+        label: "두 번째 값",
+        help: "기본 또는 전체 (문제 유형에 따라 다름)",
       },
     },
     outputs: {
@@ -772,20 +732,16 @@ const i18n: CalculatorI18n = {
         label: "결과",
         help: "계산된 결과",
       },
-      resultFormatted: {
-        label: "형식화된 결과",
-        help: "소수점 이하 2자리로 반올림된 결과",
-      },
       explanation: {
         label: "설명",
         help: "단계별 분석",
       },
     },
     options: {
-      problemType: {
-        "percentage-of": "Y의 X%",
-        "what-percentage": "X는 Y의 몇 %",
-        "percentage-change": "X에서 Y로의 백분율 변화",
+      mode: {
+        "what_is_x_pct_of_y": "Y의 X%",
+        "x_is_what_pct_of_y": "X는 Y의 몇 %",
+        "pct_change": "X에서 Y로의 백분율 변화",
       },
     },
     errors: {
@@ -828,17 +784,17 @@ const i18n: CalculatorI18n = {
       "प्रतिशत गणना",
     ],
     inputs: {
-      problemType: {
+      mode: {
         label: "समस्या प्रकार",
         help: "चुनें कि आप क्या गणना करना चाहते हैं",
       },
-      value1: {
-        label: "मान 1",
-        help: "पहली संख्या (समस्या प्रकार के अनुसार भिन्न)",
+      x: {
+        label: "पहला मान",
+        help: "प्रतिशत या भाग (समस्या प्रकार के अनुसार भिन्न)",
       },
-      value2: {
-        label: "मान 2",
-        help: "दूसरी संख्या (समस्या प्रकार के अनुसार भिन्न)",
+      y: {
+        label: "दूसरा मान",
+        help: "आधार या संपूर्ण (समस्या प्रकार के अनुसार भिन्न)",
       },
     },
     outputs: {
@@ -846,20 +802,16 @@ const i18n: CalculatorI18n = {
         label: "परिणाम",
         help: "गणना किया गया परिणाम",
       },
-      resultFormatted: {
-        label: "स्वरूपित परिणाम",
-        help: "2 दशमलव स्थानों तक गोल किया गया परिणाम",
-      },
       explanation: {
         label: "व्याख्या",
         help: "चरण-दर-चरण विवरण",
       },
     },
     options: {
-      problemType: {
-        "percentage-of": "Y का X%",
-        "what-percentage": "X, Y का कितना %",
-        "percentage-change": "X से Y तक प्रतिशत परिवर्तन",
+      mode: {
+        "what_is_x_pct_of_y": "Y का X%",
+        "x_is_what_pct_of_y": "X, Y का कितना %",
+        "pct_change": "X से Y तक प्रतिशत परिवर्तन",
       },
     },
     errors: {

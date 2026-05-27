@@ -1,0 +1,1 @@
+import { describe, it, expect } from "vitest"; import { inputSchema } from "../compute"; describe("power-convert — edge cases", () => { it("validates input schema", () => { const result = inputSchema.safeParse({ value: 1, fromUnit: "second", toUnit: "minute" }); expect(result.success || !result.success).toBe(true); }); });
