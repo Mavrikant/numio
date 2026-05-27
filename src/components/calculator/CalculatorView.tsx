@@ -25,6 +25,7 @@ import { ResultPanel } from "./ResultPanel";
 import { ChartPanel } from "./ChartPanel";
 import { PdfExport } from "./PdfExport";
 import { CompareMode } from "./CompareMode";
+import { EmbedDialog } from "./EmbedDialog";
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 
@@ -245,6 +246,7 @@ export function CalculatorView({ calc, locale, initialInputs }: CalculatorViewPr
                 inputs={inputs}
                 result={computeResult.result}
               />
+              <EmbedDialog calc={calc} locale={locale} />
             </div>
           </div>
         </section>
@@ -530,6 +532,7 @@ export function CalculatorViewWithViz({
                 inputs={inputs}
                 result={computeResult.result}
               />
+              <EmbedDialog calc={calc} locale={locale} />
               {compareEnabled && compareLabels && (
                 <button
                   type="button"
