@@ -1,0 +1,238 @@
+import type { CalculatorI18n } from "@/types/i18n";
+
+const i18n: CalculatorI18n = {
+  en: {
+    title: "Parabolic Antenna Gain & Beamwidth Calculator",
+    short: "Find the gain (dBi), beamwidth and effective aperture of a dish antenna.",
+    description:
+      "Free parabolic antenna calculator. Enter dish diameter, frequency and aperture efficiency to get gain in dBi, the −3 dB half-power beamwidth, linear gain and effective aperture. Useful for satellite, microwave and point-to-point links.",
+    keywords: ["antenna gain calculator", "parabolic dish gain", "dBi", "beamwidth", "HPBW", "effective aperture", "satellite dish", "microwave antenna"],
+    inputs: {
+      diameterM: { label: "Dish diameter (m)", help: "Physical diameter of the parabolic reflector." },
+      frequencyMHz: { label: "Frequency (MHz)", help: "Operating frequency, e.g. 12000 for 12 GHz Ku-band." },
+      efficiencyPct: { label: "Aperture efficiency (%)", help: "Typically 50–70%. Accounts for feed spillover, illumination taper and surface error." },
+    },
+    outputs: {
+      gainDbi: { label: "Gain", suffix: "dBi", help: "Boresight gain relative to an isotropic radiator." },
+      gainLinear: { label: "Gain (linear)", help: "Same gain as a plain ratio (not in dB)." },
+      beamwidthDeg: { label: "Half-power beamwidth", suffix: "°", help: "−3 dB beamwidth ≈ 70·λ/D." },
+      wavelengthM: { label: "Wavelength", help: "λ = c / f." },
+      effectiveApertureM2: { label: "Effective aperture", help: "A_eff = G·λ² / 4π." },
+    },
+    errors: { nonPositive: "Diameter and frequency must be greater than zero." },
+    faq: [
+      { q: "How is parabolic antenna gain calculated?", a: "Gain = η·(π·D/λ)², where D is the diameter, λ the wavelength and η the aperture efficiency. In dB: G(dBi) = 10·log10(η) + 20·log10(π·D·f/c)." },
+      { q: "What aperture efficiency should I use?", a: "Real dishes run about 50–70%. 55% is a common default for a prime-focus dish; high-performance Cassegrain feeds can reach 65–70%." },
+      { q: "What is half-power beamwidth?", a: "HPBW is the angular width where the radiated power falls to half (−3 dB) of the peak. For a dish it is roughly 70·λ/D degrees — bigger dishes and higher frequencies give narrower, more directional beams." },
+      { q: "Why does doubling the diameter add 6 dB?", a: "Gain scales with diameter squared, and 10·log10(2²) = 6 dB. Likewise, doubling the frequency also adds about 6 dB of gain for the same dish." },
+    ],
+  },
+  tr: {
+    title: "Parabolik Anten Kazancı ve Hüzme Genişliği Hesaplayıcı",
+    short: "Bir çanak antenin kazancını (dBi), hüzme genişliğini ve etkin açıklığını bulun.",
+    description:
+      "Ücretsiz parabolik anten hesaplayıcı. Çanak çapı, frekans ve açıklık verimliliğini girerek dBi cinsinden kazancı, −3 dB yarı güç hüzme genişliğini, doğrusal kazancı ve etkin açıklığı elde edin. Uydu, mikrodalga ve noktadan noktaya bağlantılar için kullanışlıdır.",
+    keywords: ["anten kazancı hesaplama", "parabolik çanak kazancı", "dBi", "hüzme genişliği", "HPBW", "etkin açıklık", "uydu çanağı", "mikrodalga anten"],
+    inputs: {
+      diameterM: { label: "Çanak çapı (m)", help: "Parabolik yansıtıcının fiziksel çapı." },
+      frequencyMHz: { label: "Frekans (MHz)", help: "Çalışma frekansı, örn. 12 GHz Ku-bandı için 12000." },
+      efficiencyPct: { label: "Açıklık verimliliği (%)", help: "Tipik olarak %50–70. Besleme taşması, aydınlatma azalması ve yüzey hatasını hesaba katar." },
+    },
+    outputs: {
+      gainDbi: { label: "Kazanç", suffix: "dBi", help: "İzotropik ışıyıcıya göre eksen kazancı." },
+      gainLinear: { label: "Kazanç (doğrusal)", help: "Aynı kazancın oran olarak değeri (dB değil)." },
+      beamwidthDeg: { label: "Yarı güç hüzme genişliği", suffix: "°", help: "−3 dB hüzme genişliği ≈ 70·λ/D." },
+      wavelengthM: { label: "Dalga boyu", help: "λ = c / f." },
+      effectiveApertureM2: { label: "Etkin açıklık", help: "A_eff = G·λ² / 4π." },
+    },
+    errors: { nonPositive: "Çap ve frekans sıfırdan büyük olmalıdır." },
+    faq: [
+      { q: "Parabolik anten kazancı nasıl hesaplanır?", a: "Kazanç = η·(π·D/λ)², burada D çap, λ dalga boyu ve η açıklık verimliliğidir. dB cinsinden: G(dBi) = 10·log10(η) + 20·log10(π·D·f/c)." },
+      { q: "Hangi açıklık verimliliğini kullanmalıyım?", a: "Gerçek çanaklar yaklaşık %50–70 çalışır. %55 odak beslemeli bir çanak için yaygın bir varsayılandır; yüksek performanslı Cassegrain beslemeleri %65–70'e ulaşabilir." },
+      { q: "Yarı güç hüzme genişliği nedir?", a: "HPBW, ışıyan gücün tepe değerinin yarısına (−3 dB) düştüğü açısal genişliktir. Bir çanak için kabaca 70·λ/D derecedir — daha büyük çanaklar ve daha yüksek frekanslar daha dar, daha yönlü hüzmeler verir." },
+      { q: "Çapı iki katına çıkarmak neden 6 dB ekler?", a: "Kazanç çapın karesiyle ölçeklenir ve 10·log10(2²) = 6 dB. Benzer şekilde frekansı iki katına çıkarmak da aynı çanak için yaklaşık 6 dB kazanç ekler." },
+    ],
+  },
+  de: {
+    title: "Parabolantennen-Gewinn- & Strahlbreiten-Rechner",
+    short: "Bestimmen Sie Gewinn (dBi), Strahlbreite und wirksame Apertur einer Parabolantenne.",
+    description: "Kostenloser Parabolantennen-Rechner. Geben Sie Durchmesser, Frequenz und Aperturwirkungsgrad ein, um Gewinn in dBi, die −3-dB-Halbwertsbreite, den linearen Gewinn und die wirksame Apertur zu erhalten.",
+    keywords: ["Antennengewinn Rechner", "Parabolgewinn", "dBi", "Strahlbreite", "HPBW", "wirksame Apertur", "Satellitenschüssel"],
+    inputs: {
+      diameterM: { label: "Schüsseldurchmesser (m)", help: "Physischer Durchmesser des Parabolreflektors." },
+      frequencyMHz: { label: "Frequenz (MHz)", help: "Betriebsfrequenz, z. B. 12000 für 12-GHz-Ku-Band." },
+      efficiencyPct: { label: "Aperturwirkungsgrad (%)", help: "Typisch 50–70 %." },
+    },
+    outputs: {
+      gainDbi: { label: "Gewinn", suffix: "dBi" },
+      gainLinear: { label: "Gewinn (linear)" },
+      beamwidthDeg: { label: "Halbwertsbreite", suffix: "°" },
+      wavelengthM: { label: "Wellenlänge" },
+      effectiveApertureM2: { label: "Wirksame Apertur" },
+    },
+  },
+  fr: {
+    title: "Calculateur de Gain & Largeur de Faisceau d'Antenne Parabolique",
+    short: "Déterminez le gain (dBi), la largeur de faisceau et l'ouverture effective d'une parabole.",
+    description: "Calculateur d'antenne parabolique gratuit. Saisissez le diamètre, la fréquence et le rendement d'ouverture pour obtenir le gain en dBi, la largeur de faisceau à −3 dB, le gain linéaire et l'ouverture effective.",
+    keywords: ["calculateur gain antenne", "gain parabole", "dBi", "largeur de faisceau", "HPBW", "ouverture effective", "antenne satellite"],
+    inputs: {
+      diameterM: { label: "Diamètre de la parabole (m)", help: "Diamètre physique du réflecteur parabolique." },
+      frequencyMHz: { label: "Fréquence (MHz)", help: "Fréquence de fonctionnement, p. ex. 12000 pour la bande Ku 12 GHz." },
+      efficiencyPct: { label: "Rendement d'ouverture (%)", help: "Typiquement 50–70 %." },
+    },
+    outputs: {
+      gainDbi: { label: "Gain", suffix: "dBi" },
+      gainLinear: { label: "Gain (linéaire)" },
+      beamwidthDeg: { label: "Largeur de faisceau à mi-puissance", suffix: "°" },
+      wavelengthM: { label: "Longueur d'onde" },
+      effectiveApertureM2: { label: "Ouverture effective" },
+    },
+  },
+  es: {
+    title: "Calculadora de Ganancia y Ancho de Haz de Antena Parabólica",
+    short: "Halla la ganancia (dBi), el ancho de haz y la apertura efectiva de una antena parabólica.",
+    description: "Calculadora de antena parabólica gratuita. Introduce el diámetro, la frecuencia y la eficiencia de apertura para obtener la ganancia en dBi, el ancho de haz a −3 dB, la ganancia lineal y la apertura efectiva.",
+    keywords: ["calculadora ganancia antena", "ganancia parabólica", "dBi", "ancho de haz", "HPBW", "apertura efectiva", "antena satelital"],
+    inputs: {
+      diameterM: { label: "Diámetro del plato (m)", help: "Diámetro físico del reflector parabólico." },
+      frequencyMHz: { label: "Frecuencia (MHz)", help: "Frecuencia de operación, p. ej. 12000 para banda Ku de 12 GHz." },
+      efficiencyPct: { label: "Eficiencia de apertura (%)", help: "Normalmente 50–70 %." },
+    },
+    outputs: {
+      gainDbi: { label: "Ganancia", suffix: "dBi" },
+      gainLinear: { label: "Ganancia (lineal)" },
+      beamwidthDeg: { label: "Ancho de haz a media potencia", suffix: "°" },
+      wavelengthM: { label: "Longitud de onda" },
+      effectiveApertureM2: { label: "Apertura efectiva" },
+    },
+  },
+  it: {
+    title: "Calcolatore di Guadagno e Larghezza di Fascio di Antenna Parabolica",
+    short: "Trova il guadagno (dBi), la larghezza di fascio e l'apertura efficace di un'antenna parabolica.",
+    description: "Calcolatore di antenna parabolica gratuito. Inserisci diametro, frequenza ed efficienza d'apertura per ottenere il guadagno in dBi, la larghezza di fascio a −3 dB, il guadagno lineare e l'apertura efficace.",
+    keywords: ["calcolatore guadagno antenna", "guadagno parabola", "dBi", "larghezza di fascio", "HPBW", "apertura efficace", "antenna satellitare"],
+    inputs: {
+      diameterM: { label: "Diametro parabola (m)", help: "Diametro fisico del riflettore parabolico." },
+      frequencyMHz: { label: "Frequenza (MHz)", help: "Frequenza operativa, es. 12000 per banda Ku 12 GHz." },
+      efficiencyPct: { label: "Efficienza d'apertura (%)", help: "Tipicamente 50–70 %." },
+    },
+    outputs: {
+      gainDbi: { label: "Guadagno", suffix: "dBi" },
+      gainLinear: { label: "Guadagno (lineare)" },
+      beamwidthDeg: { label: "Larghezza di fascio a metà potenza", suffix: "°" },
+      wavelengthM: { label: "Lunghezza d'onda" },
+      effectiveApertureM2: { label: "Apertura efficace" },
+    },
+  },
+  ar: {
+    title: "حاسبة كسب الهوائي المكافئ وعرض الحزمة",
+    short: "احسب كسب (dBi) وعرض الحزمة والفتحة الفعّالة لهوائي الطبق.",
+    description: "حاسبة هوائي مكافئ مجانية. أدخل قطر الطبق والتردد وكفاءة الفتحة للحصول على الكسب بالـ dBi وعرض حزمة نصف القدرة عند −3 dB والكسب الخطي والفتحة الفعّالة.",
+    keywords: ["حاسبة كسب الهوائي", "كسب الطبق المكافئ", "dBi", "عرض الحزمة", "HPBW", "الفتحة الفعّالة", "هوائي الأقمار الصناعية"],
+    inputs: {
+      diameterM: { label: "قطر الطبق (م)", help: "القطر الفيزيائي للعاكس المكافئ." },
+      frequencyMHz: { label: "التردد (ميجاهرتز)", help: "تردد التشغيل، مثل 12000 لنطاق Ku بتردد 12 جيجاهرتز." },
+      efficiencyPct: { label: "كفاءة الفتحة (%)", help: "عادةً 50–70%." },
+    },
+    outputs: {
+      gainDbi: { label: "الكسب", suffix: "dBi" },
+      gainLinear: { label: "الكسب (خطي)" },
+      beamwidthDeg: { label: "عرض حزمة نصف القدرة", suffix: "°" },
+      wavelengthM: { label: "الطول الموجي" },
+      effectiveApertureM2: { label: "الفتحة الفعّالة" },
+    },
+  },
+  ru: {
+    title: "Калькулятор Усиления и Ширины Луча Параболической Антенны",
+    short: "Найдите усиление (dBi), ширину луча и эффективную апертуру параболической антенны.",
+    description: "Бесплатный калькулятор параболической антенны. Введите диаметр, частоту и КПД апертуры, чтобы получить усиление в dBi, ширину луча по уровню −3 дБ, линейное усиление и эффективную апертуру.",
+    keywords: ["калькулятор усиления антенны", "усиление параболы", "dBi", "ширина луча", "HPBW", "эффективная апертура", "спутниковая антенна"],
+    inputs: {
+      diameterM: { label: "Диаметр тарелки (м)", help: "Физический диаметр параболического рефлектора." },
+      frequencyMHz: { label: "Частота (МГц)", help: "Рабочая частота, напр. 12000 для Ku-диапазона 12 ГГц." },
+      efficiencyPct: { label: "КПД апертуры (%)", help: "Обычно 50–70%." },
+    },
+    outputs: {
+      gainDbi: { label: "Усиление", suffix: "dBi" },
+      gainLinear: { label: "Усиление (линейное)" },
+      beamwidthDeg: { label: "Ширина луча по половинной мощности", suffix: "°" },
+      wavelengthM: { label: "Длина волны" },
+      effectiveApertureM2: { label: "Эффективная апертура" },
+    },
+  },
+  zh: {
+    title: "抛物面天线增益与波束宽度计算器",
+    short: "计算碟形天线的增益 (dBi)、波束宽度和有效孔径。",
+    description: "免费的抛物面天线计算器。输入碟径、频率和孔径效率，即可得到以 dBi 为单位的增益、−3 dB 半功率波束宽度、线性增益和有效孔径。",
+    keywords: ["天线增益计算器", "抛物面增益", "dBi", "波束宽度", "HPBW", "有效孔径", "卫星天线"],
+    inputs: {
+      diameterM: { label: "碟径 (m)", help: "抛物面反射器的物理直径。" },
+      frequencyMHz: { label: "频率 (MHz)", help: "工作频率，例如 12 GHz Ku 频段为 12000。" },
+      efficiencyPct: { label: "孔径效率 (%)", help: "通常为 50–70%。" },
+    },
+    outputs: {
+      gainDbi: { label: "增益", suffix: "dBi" },
+      gainLinear: { label: "增益（线性）" },
+      beamwidthDeg: { label: "半功率波束宽度", suffix: "°" },
+      wavelengthM: { label: "波长" },
+      effectiveApertureM2: { label: "有效孔径" },
+    },
+  },
+  ja: {
+    title: "パラボラアンテナ利得・ビーム幅計算機",
+    short: "ディッシュアンテナの利得（dBi）、ビーム幅、実効開口を求めます。",
+    description: "無料のパラボラアンテナ計算機。直径・周波数・開口効率を入力すると、dBi の利得、−3 dB 半値ビーム幅、線形利得、実効開口が得られます。",
+    keywords: ["アンテナ利得 計算", "パラボラ利得", "dBi", "ビーム幅", "HPBW", "実効開口", "衛星アンテナ"],
+    inputs: {
+      diameterM: { label: "ディッシュ直径 (m)", help: "パラボラ反射器の物理直径。" },
+      frequencyMHz: { label: "周波数 (MHz)", help: "動作周波数。例: 12 GHz Ku バンドなら 12000。" },
+      efficiencyPct: { label: "開口効率 (%)", help: "一般に 50〜70%。" },
+    },
+    outputs: {
+      gainDbi: { label: "利得", suffix: "dBi" },
+      gainLinear: { label: "利得（線形）" },
+      beamwidthDeg: { label: "半値ビーム幅", suffix: "°" },
+      wavelengthM: { label: "波長" },
+      effectiveApertureM2: { label: "実効開口" },
+    },
+  },
+  ko: {
+    title: "파라볼라 안테나 이득 및 빔폭 계산기",
+    short: "접시 안테나의 이득(dBi), 빔폭, 유효 개구를 구합니다.",
+    description: "무료 파라볼라 안테나 계산기. 직경, 주파수, 개구 효율을 입력하면 dBi 단위 이득, −3 dB 반전력 빔폭, 선형 이득, 유효 개구를 얻을 수 있습니다.",
+    keywords: ["안테나 이득 계산기", "파라볼라 이득", "dBi", "빔폭", "HPBW", "유효 개구", "위성 안테나"],
+    inputs: {
+      diameterM: { label: "접시 직경 (m)", help: "파라볼라 반사판의 물리적 직경." },
+      frequencyMHz: { label: "주파수 (MHz)", help: "동작 주파수. 예: 12 GHz Ku 대역은 12000." },
+      efficiencyPct: { label: "개구 효율 (%)", help: "일반적으로 50–70%." },
+    },
+    outputs: {
+      gainDbi: { label: "이득", suffix: "dBi" },
+      gainLinear: { label: "이득 (선형)" },
+      beamwidthDeg: { label: "반전력 빔폭", suffix: "°" },
+      wavelengthM: { label: "파장" },
+      effectiveApertureM2: { label: "유효 개구" },
+    },
+  },
+  hi: {
+    title: "परवलयिक एंटीना गेन और बीमविड्थ कैलकुलेटर",
+    short: "डिश एंटीना का गेन (dBi), बीमविड्थ और प्रभावी अपर्चर ज्ञात करें।",
+    description: "मुफ्त परवलयिक एंटीना कैलकुलेटर। डिश व्यास, आवृत्ति और अपर्चर दक्षता दर्ज करें और dBi में गेन, −3 dB अर्ध-शक्ति बीमविड्थ, रैखिक गेन और प्रभावी अपर्चर पाएं।",
+    keywords: ["एंटीना गेन कैलकुलेटर", "परवलयिक गेन", "dBi", "बीमविड्थ", "HPBW", "प्रभावी अपर्चर", "सैटेलाइट डिश"],
+    inputs: {
+      diameterM: { label: "डिश व्यास (m)", help: "परवलयिक परावर्तक का भौतिक व्यास।" },
+      frequencyMHz: { label: "आवृत्ति (MHz)", help: "संचालन आवृत्ति, जैसे 12 GHz Ku-बैंड के लिए 12000।" },
+      efficiencyPct: { label: "अपर्चर दक्षता (%)", help: "आमतौर पर 50–70%।" },
+    },
+    outputs: {
+      gainDbi: { label: "गेन", suffix: "dBi" },
+      gainLinear: { label: "गेन (रैखिक)" },
+      beamwidthDeg: { label: "अर्ध-शक्ति बीमविड्थ", suffix: "°" },
+      wavelengthM: { label: "तरंगदैर्ध्य" },
+      effectiveApertureM2: { label: "प्रभावी अपर्चर" },
+    },
+  },
+};
+
+export default i18n;
