@@ -1,0 +1,52 @@
+# Panel de Estadísticas Descriptivas
+
+Suba un archivo CSV y obtenga instantáneamente un perfil estadístico completo de cada columna numérica de su conjunto de datos. El panel calcula catorce indicadores clave por columna, renderiza un mini-histograma para cada una y — con dos o más columnas numéricas — genera un mapa de calor de correlación de Pearson para detectar relaciones de un vistazo. Todo el procesamiento ocurre en su navegador; sus datos nunca salen de su dispositivo.
+
+## ¿Qué son las estadísticas descriptivas?
+
+Las **estadísticas descriptivas** resumen y describen las características principales de un conjunto de datos sin hacer inferencias sobre una población más amplia. Responden a las preguntas fundamentales:
+
+- **¿Dónde está el centro?** La media, la mediana y la moda capturan el valor "típico" de diferentes maneras.
+- **¿Cuánto se dispersan los datos?** La desviación estándar, la varianza, el IQR y el rango cuantifican la variabilidad.
+- **¿Cuál es la forma de la distribución?** La asimetría y la curtosis describen la forma más allá de un simple promedio.
+- **¿Cuáles son los extremos?** El mínimo, el máximo y los cuartiles muestran los límites y la estructura.
+
+## Explicación de los indicadores
+
+**Media**: suma de todos los valores dividida por el recuento. Sensible a los valores atípicos.
+
+**Mediana**: valor central al ordenar los datos. Robusta frente a valores atípicos.
+
+**Moda**: el valor más frecuente. Para datos continuos puede no haber una moda significativa.
+
+**Desviación estándar**: distancia media de cada punto respecto a la media. El panel usa la desviación estándar muestral (dividida por n − 1).
+
+**Varianza**: cuadrado de la desviación estándar. Fundamental en fórmulas estadísticas como ANOVA y regresión.
+
+**RIC (rango intercuartílico)**: Q3 − Q1, anchura del 50 % central. Robusto frente a valores atípicos.
+
+**Asimetría (skewness)**: mide la asimetría de la distribución. Cercana a 0 → aproximadamente simétrica. Positiva → cola derecha larga. Negativa → cola izquierda larga.
+
+**Curtosis en exceso**: compara el peso de las colas con una distribución normal (curtosis en exceso = 0). Positiva (leptocúrtica) → colas más pesadas; negativa (platicúrtica) → colas más ligeras.
+
+## Matriz de correlación
+
+Con dos o más columnas numéricas, el panel calcula el **coeficiente de correlación de Pearson** r para cada par. El mapa de calor muestra correlaciones positivas fuertes en rojo y negativas en azul. Nota: Pearson r solo mide relaciones *lineales*, y la correlación no implica causalidad.
+
+## Cómo usar el panel
+
+1. Suba o pegue un archivo CSV — los separadores se detectan automáticamente.
+2. Revise el **resumen del conjunto de datos**: filas, columnas, columnas numéricas, valores faltantes.
+3. Desplácese por las **tarjetas de columnas**: cada una muestra un mini-histograma y una tabla de estadísticas completa.
+4. Examine la **matriz de correlación** al final de la página.
+5. Con más de 50 columnas numéricas, solo se muestran las primeras 12 inicialmente.
+
+## Privacidad
+
+Todos los cálculos se realizan localmente en su navegador. No se transmiten datos a ningún servidor. Tamaño máximo de archivo: aproximadamente 5 MB.
+
+## Referencias
+
+- Tukey, J. W. (1977). *Exploratory Data Analysis.* Addison-Wesley.
+- Pearson, K. (1895). Notes on regression and inheritance. *Proceedings of the Royal Society of London*, 58, 240–242.
+- Freedman, D., Diaconis, P. (1981). On the histogram as a density estimator. *Zeitschrift für Wahrscheinlichkeitstheorie*, 57, 453–476.

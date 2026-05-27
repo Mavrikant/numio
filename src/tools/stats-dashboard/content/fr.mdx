@@ -1,0 +1,52 @@
+# Tableau de Bord Statistiques Descriptives
+
+Téléversez un fichier CSV et obtenez instantanément un profil statistique complet de chaque colonne numérique de votre jeu de données. Le tableau de bord calcule quatorze indicateurs clés par colonne, affiche un mini-histogramme pour chacune et — avec deux colonnes numériques ou plus — génère une carte thermique de corrélation de Pearson pour identifier les relations en un coup d'œil. Tout le traitement se fait dans votre navigateur ; vos données ne quittent jamais votre appareil.
+
+## Qu'est-ce que la statistique descriptive ?
+
+La **statistique descriptive** résume et décrit les caractéristiques principales d'un jeu de données sans faire d'inférence sur une population plus large. Elle répond aux questions fondamentales :
+
+- **Où se situe le centre ?** La moyenne, la médiane et le mode capturent la valeur « typique » de différentes manières.
+- **Quelle est la dispersion des données ?** L'écart-type, la variance, l'IQR et l'étendue quantifient la variabilité.
+- **Quelle est la forme de la distribution ?** L'asymétrie (skewness) et le kurtosis (poids des queues) décrivent la forme au-delà d'une simple moyenne.
+- **Quelles sont les valeurs extrêmes ?** Le minimum, le maximum et les quartiles montrent les limites et la structure.
+
+## Explication des indicateurs
+
+**Moyenne** : somme de toutes les valeurs divisée par le nombre d'observations. Sensible aux valeurs aberrantes.
+
+**Médiane** : valeur centrale après tri des données. Robuste aux valeurs aberrantes.
+
+**Mode** : valeur la plus fréquente. Pour les données continues, il peut ne pas y avoir de mode significatif.
+
+**Écart-type** : distance moyenne de chaque point par rapport à la moyenne. Le tableau utilise l'écart-type échantillonnel (divisé par n − 1).
+
+**Variance** : carré de l'écart-type. Fondamental dans de nombreuses formules statistiques (ANOVA, régression).
+
+**IQR (intervalle interquartile)** : Q3 − Q1, largeur des 50 % centraux. Robuste aux valeurs aberrantes.
+
+**Asymétrie (skewness)** : mesure l'asymétrie de la distribution. Une valeur proche de 0 indique une symétrie approximative. Positive = queue droite longue ; négative = queue gauche longue.
+
+**Kurtosis en excès** : compare les queues de la distribution à celles d'une distribution normale (kurtosis en excès = 0). Positif (leptokurtique) = queues plus lourdes ; négatif (platykurtique) = queues plus légères.
+
+## Matrice de corrélation
+
+Avec deux colonnes numériques ou plus, le tableau calcule le **coefficient de corrélation de Pearson** r pour chaque paire. La carte thermique affiche les fortes corrélations positives en rouge et les négatives en bleu. Important : Pearson r ne mesure que les relations *linéaires*, et corrélation ne signifie pas causalité.
+
+## Comment utiliser le tableau de bord
+
+1. Téléversez ou collez un fichier CSV — les séparateurs sont détectés automatiquement.
+2. Consultez l'**aperçu du jeu de données** : lignes, colonnes, colonnes numériques, valeurs manquantes.
+3. Parcourez les **cartes de colonnes** : chacune montre un mini-histogramme et un tableau statistique complet.
+4. Examinez la **matrice de corrélation** en bas de la page.
+5. Pour plus de 50 colonnes numériques, seules les 12 premières sont affichées initialement.
+
+## Confidentialité
+
+Tous les calculs s'effectuent localement dans votre navigateur. Aucune donnée n'est transmise à un serveur. Taille maximale de fichier : environ 5 Mo.
+
+## Références
+
+- Tukey, J. W. (1977). *Exploratory Data Analysis.* Addison-Wesley.
+- Pearson, K. (1895). Notes on regression and inheritance. *Proceedings of the Royal Society of London*, 58, 240–242.
+- Freedman, D., Diaconis, P. (1981). On the histogram as a density estimator. *Zeitschrift für Wahrscheinlichkeitstheorie*, 57, 453–476.

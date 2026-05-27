@@ -1,0 +1,104 @@
+# Tanımlayıcı İstatistik Gösterge Paneli
+
+CSV dosyası yükleyin ve veri setinizdeki her sayısal sütunun kapsamlı istatistiksel profilini anında görün. Panel, sütun başına on dört temel istatistik hesaplar, her biri için mini histogram çizer ve — iki veya daha fazla sayısal sütun olduğunda — ilişkileri tek bakışta fark edebilmeniz için Pearson korelasyon ısı haritası gösterir. Tüm işlem tarayıcınızda gerçekleşir; veriniz hiçbir zaman cihazınızdan çıkmaz.
+
+## Tanımlayıcı istatistik nedir?
+
+**Tanımlayıcı istatistik**, daha büyük bir popülasyon hakkında çıkarım yapmadan bir veri setinin temel özelliklerini özetler ve tanımlar. Verileriniz hakkındaki en temel soruları yanıtlar:
+
+- **Merkez nerede?** Ortalama, medyan ve mod, "tipik" değeri farklı biçimlerde yakalar.
+- **Veri ne kadar yayılmış?** Standart sapma, varyans, IQR ve aralık, değişkenliği sayısal olarak ifade eder.
+- **Dağılımın şekli nedir?** Çarpıklık (asimetri) ve basıklık (kuyruk ağırlığı), şekli basit bir ortalamadan çok daha ayrıntılı biçimde tanımlar.
+- **Uç değerler neler?** Minimum, maksimum ve çeyrekler, sınırları ve yapıyı gösterir.
+
+Herhangi bir istatistiksel model çalıştırmadan önce — regresyon, kümeleme, hipotez testi — her zaman önce tanımlayıcı istatistikleri incelemelisiniz. Beklenmedik ortalamalar, aşırı standart sapmalar veya güçlü çarpıklık; veri giriş hatalarına, model varsayımlarını ihlal eden dağılımlara ya da araştırmaya değer ilginç gerçek dünya fenomenlerine işaret edebilir.
+
+## İstatistikler açıklandı
+
+### Merkez ölçüleri
+
+**Ortalama** (aritmetik ortalama), tüm değerlerin toplamının gözlem sayısına bölümüdür. Aykırı değerlere duyarlıdır: tek bir aşırı değer, ortalamayı çoğu verinin toplandığı yerden çok uzağa çekebilir.
+
+**Medyan**, veriler artan sırada dizildiğinde ortadaki değerdir. Çift sayıda gözlem için medyan, ortadaki iki değerin ortalamasıdır. Medyan, aykırı değerlere *dirençlidir* — aşırı değerlerin büyüklüğünü yok sayar ve yalnızca sırasını dikkate alır.
+
+**Mod**, en sık görülen değerdir. Kategorik verilere uygulanabilen tek merkez ölçüsüdür. Sürekli sayısal veri için her değer benzersiz olabilir ve anlamlı bir mod bulunmayabilir; panel bu durumda "—" gösterir.
+
+### Yayılım ölçüleri
+
+**Standart sapma**, her veri noktasının ortalamadan uzaklığının ortalamasını ölçer. Panel, popülasyon standart sapmasını örnekten tahmin etmek için yansız olan örneklem standart sapmasını (n − 1'e bölerek) kullanır.
+
+**Varyans**, standart sapmanın karesidir. Orijinal birimlerde daha az yorumlanabilir olsa da pek çok istatistiksel formülün (ANOVA, regresyon katsayıları vb.) merkezindedir.
+
+**Çeyrekler arası açıklık (IQR)**, Q3 − Q1'dir; verinin ortadaki %50'sinin genişliğidir. Aykırı değerlere dirençlidir ve Freedman-Diaconis bin genişliği seçiminde ile kutu grafiği bıyık yapımında kullanılır.
+
+**Aralık**, maks − min'dir. Verinin tam kapsamını yakalar ancak aykırı değerlere son derece duyarlıdır.
+
+### Çeyrekler ve yüzdelikler
+
+**Q1 (%25'lik dilim)**, gözlemlerin %25'inin altında kaldığı değerdir.
+**Q3 (%75'lik dilim)**, gözlemlerin %75'inin altında kaldığı değerdir.
+Panel, çeyrekleri hesaplamak için doğrusal interpolasyon (R tip 7 / Excel uyumlu) kullanır.
+
+### Şekil istatistikleri
+
+**Çarpıklık**, dağılımın ortalama etrafındaki asimetrisini ölçer. Panel Fisher'ın düzeltilmiş çarpıklığını hesaplar:
+
+- **0'a yakın** → yaklaşık simetrik
+- **Pozitif** → sağa çarpık (uzun sağ kuyruk; ortalama &gt; medyan). Tipik örnekler: gelir, tepki süreleri, ev fiyatları.
+- **Negatif** → sola çarpık (uzun sol kuyruk; ortalama &lt; medyan). Tipik örnekler: ölüm yaşı, tavan yakınındaki sınav puanları.
+
+Pratik kural: |çarpıklık| &lt; 0,5 yaklaşık simetrik; 0,5–1 orta derecede çarpık; &gt; 1 güçlü çarpıklık.
+
+**Artık basıklık**, kuyrukların ağırlığını normal dağılımla karşılaştırır (normal dağılımın artık basıklığı = 0):
+
+- **Pozitif (leptokurtik)** → normalden daha ağır kuyruklar, daha keskin merkez tepe. Finansal getiriler genellikle bu özelliği gösterir (kalın kuyruklar → nadir aşırı olaylar normal modelin öngördüğünden daha sık görülür).
+- **Negatif (platikurtik)** → daha hafif kuyruklar, düz tepe. Düzgün dağılımlar negatif basıklığa sahiptir.
+
+## Korelasyon matrisi
+
+Veri setinizde iki veya daha fazla sayısal sütun varsa, panel her çift için **Pearson korelasyon katsayısı** r değerini hesaplar. Sonuç, renklendirilmiş bir ısı haritası olarak gösterilir:
+
+- **Kırmızı** → güçlü pozitif korelasyon (r, +1'e yakın): bir değişken arttıkça diğeri de artar.
+- **Beyaz** → zayıf veya sıfır doğrusal ilişki (r, 0'a yakın).
+- **Mavi** → güçlü negatif korelasyon (r, −1'e yakın): bir değişken arttıkça diğeri azalır.
+
+**Önemli uyarılar:** Pearson r yalnızca *doğrusal* ilişkileri ölçer. İki değişken doğrusal olmayan bir biçimde güçlü ilişkili olabilir ve yine de r ≈ 0 gösterebilir. Ayrıca, korelasyon nedensellik değildir — iki değişken arasındaki yüksek r, birinin diğerine neden olduğunu göstermez.
+
+## Mini histogramlar
+
+Her sütun kartı, o sütunun dağılımının küçük bir histogramını gösterir. Histogramın şekli verinin şu özelliklerden birine sahip olup olmadığını söyler:
+
+- **Çan şekilli** (yaklaşık normal)
+- **Sağa çarpık** (değerlerin büyük çoğunluğu düşük, uzun yüksek değerler kuyruğu)
+- **Sola çarpık** (değerlerin büyük çoğunluğu yüksek, uzun düşük değerler kuyruğu)
+- **Bimodal** (iki tepe, iki alt grubu ima eder)
+- **Tekdüze** (eşit dağılmış değerler)
+- **Ağır kuyruklu** (aykırı değerler izole çubuklar olarak görünür)
+
+## Paneli nasıl kullanırım
+
+1. **Verilerinizi yükleyin**: CSV dosyasını sürükleyip bırakın, "Dosya seç"e tıklayın veya virgülle ayrılmış veriyi metin alanına yapıştırın. Araç ayraçları otomatik algılar ve hem ABD (1,234.56) hem de Avrupa (1.234,56) sayı formatlarını işler.
+2. **Veri seti özetini inceleyin**: satır, sütun, sayısal sütun, kategorik sütun ve eksik değer sayısını hemen görün.
+3. **Sütun kartlarını inceleyin**: kart ızgarasında kaydırın. Her kart üstte mini histogram, altta tam istatistik tablosu gösterir.
+4. **Korelasyon matrisini kontrol edin**: sayfanın altında (≥2 sayısal sütunla) ısı haritası, hangi değişken çiftlerinin ilişkili olduğunu vurgular.
+5. **Büyük veri setlerini yönetin**: CSV'nizde 50'den fazla sayısal sütun varsa panel ilk 12'yi gösterir ve "Tümünü göster" düğmesi sunar.
+
+## Yaygın kullanım alanları
+
+- **Keşifsel veri analizi (EDA)**: herhangi bir makine öğrenimi veya istatistiksel modelleme projesinden önce atılacak ilk adım.
+- **Veri kalitesi denetimi**: beklenmedik ortalamalara, yüksek eksik değer sayılarına veya aşırı aykırı değerlere sahip sütunları hızlıca tespit edin.
+- **Özellik seçimi**: korelasyon matrisini kullanarak bir modelde gereksiz olabilecek yüksek korelasyonlu özellikleri bulun.
+- **Anket analizi**: Likert ölçeği yanıtlarını, demografik dağılımları ve memnuniyet puanlarını özetleyin.
+- **Finansal veri incelemesi**: normal dağılım tabanlı risk modelleri uygulamadan önce getiri dağılımlarında kalın kuyrukları (yüksek basıklık) kontrol edin.
+- **Bilimsel deneyler**: ANOVA veya regresyon çalıştırmadan önce ölçümlerin makul aralıklar ve dağılımlara sahip olduğunu doğrulayın.
+
+## Gizlilik ve güvenlik
+
+Tüm CSV ayrıştırma, istatistiksel hesaplama ve grafik oluşturma işlemleri WebAssembly (Plotly) ve JavaScript kullanılarak tarayıcınızda yerel olarak gerçekleşir. Hiçbir sunucuya veri iletilmez. Desteklenen maksimum dosya boyutu yaklaşık 5 MB'dir.
+
+## Referanslar
+
+- Tukey, J. W. (1977). *Exploratory Data Analysis.* Addison-Wesley.
+- Pearson, K. (1895). Notes on regression and inheritance in the case of two parents. *Proceedings of the Royal Society of London*, 58, 240–242.
+- Fisher, R. A. (1930). The moments of the distribution for normal samples of measures of departure from normality. *Proceedings of the Royal Society of London*, Series A, 130, 16–28.
+- Freedman, D., Diaconis, P. (1981). On the histogram as a density estimator. *Zeitschrift für Wahrscheinlichkeitstheorie und Verwandte Gebiete*, 57, 453–476.

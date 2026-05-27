@@ -1,0 +1,104 @@
+# Descriptive Statistics Dashboard
+
+Upload a CSV file and instantly get a comprehensive statistical profile of every numeric column in your dataset. The dashboard computes fourteen key statistics per column, renders a mini-histogram for each, and — when you have two or more numeric columns — draws a Pearson correlation heatmap so you can spot relationships at a glance. All processing happens in your browser; no data ever leaves your device.
+
+## What is descriptive statistics?
+
+**Descriptive statistics** summarizes and describes the main features of a dataset without making inferences about a larger population. It answers the most fundamental questions about your data:
+
+- **Where is the center?** Mean, median, and mode each capture the "typical" value in a different way.
+- **How spread out is the data?** Standard deviation, variance, IQR, and range quantify variability.
+- **What is the shape of the distribution?** Skewness (asymmetry) and kurtosis (tail weight) describe the shape beyond a simple average.
+- **What are the extremes?** Minimum, maximum, and quartiles show the boundaries and structure.
+
+Before running any statistical model — regression, clustering, hypothesis test — you should always examine descriptive statistics first. Unexpected means, extreme standard deviations, or heavy skew can indicate data-entry errors, unusual distributions that violate model assumptions, or interesting real-world phenomena worth investigating.
+
+## Statistics explained
+
+### Measures of center
+
+**Mean** (arithmetic average) is the sum of all values divided by the count. It is sensitive to outliers: a single extreme value can pull the mean far from where most data points cluster.
+
+**Median** is the middle value when data is sorted in ascending order. For even-count datasets the median is the average of the two middle values. The median is *robust* to outliers — it ignores the magnitude of extreme values and only cares about their rank.
+
+**Mode** is the most frequently occurring value. It is the only measure of center applicable to categorical data. For continuous numerical data, every value may be unique and there may be no meaningful mode; the dashboard reports "—" in that case.
+
+### Measures of spread
+
+**Standard deviation** measures the average distance of each data point from the mean. The dashboard uses the sample standard deviation (dividing by n − 1), which is unbiased for estimating the population standard deviation from a sample.
+
+**Variance** is the square of the standard deviation. It is less interpretable in the original units but central to many statistical formulas (ANOVA, regression coefficients, etc.).
+
+**Interquartile range (IQR)** is Q3 − Q1, the width of the middle 50% of the data. It is robust to outliers and is used in Freedman-Diaconis bin-width selection and in box-plot whisker construction.
+
+**Range** is max − min. It captures the full extent of the data but is highly sensitive to outliers.
+
+### Quartiles and percentiles
+
+**Q1 (25th percentile)** is the value below which 25% of observations fall.
+**Q3 (75th percentile)** is the value below which 75% of observations fall.
+The dashboard uses linear interpolation (R type 7 / Excel-compatible) to compute quartiles.
+
+### Shape statistics
+
+**Skewness** measures the asymmetry of the distribution around its mean. The dashboard computes Fisher's adjusted skewness:
+
+- Near **0** → roughly symmetric
+- **Positive** → right-skewed (long right tail; mean &gt; median). Typical examples: income, response times, house prices.
+- **Negative** → left-skewed (long left tail; mean &lt; median). Typical examples: age at death, exam scores near a ceiling.
+
+A rule of thumb: |skewness| &lt; 0.5 is approximately symmetric; 0.5–1 is moderately skewed; &gt; 1 is highly skewed.
+
+**Excess kurtosis** measures the weight of the tails relative to a normal distribution (which has excess kurtosis = 0):
+
+- **Positive (leptokurtic)** → heavier tails than a normal distribution, sharper central peak. Financial returns often exhibit this (fat tails → rare extreme events are more common than a normal model predicts).
+- **Negative (platykurtic)** → lighter tails, flatter peak. Uniform distributions have negative kurtosis.
+
+## Correlation matrix
+
+When your dataset has two or more numeric columns, the dashboard computes the **Pearson correlation coefficient** r for every pair. The result is displayed as a color-coded heatmap:
+
+- **Red** → strong positive correlation (r near +1): as one variable increases, so does the other.
+- **White** → little or no linear relationship (r near 0).
+- **Blue** → strong negative correlation (r near −1): as one variable increases, the other decreases.
+
+**Important caveats:** Pearson r measures *linear* relationships only. Two variables could be strongly related in a non-linear way and still show r ≈ 0. Also, correlation is not causation — a high r between two variables does not mean one causes the other.
+
+## Mini-histograms
+
+Each column card shows a miniature histogram of that column's distribution. The histogram uses Plotly's automatic bin selection. You can hover over bars to see the exact value range and count. The shape of the histogram tells you whether the data is:
+
+- **Bell-shaped** (approximately normal)
+- **Right-skewed** (most values low, long tail of high values)
+- **Left-skewed** (most values high, long tail of low values)
+- **Bimodal** (two peaks, suggesting two subgroups)
+- **Uniform** (values spread evenly)
+- **Heavily tailed** (outliers visible as isolated bars)
+
+## How to use the dashboard
+
+1. **Upload your data**: drag and drop a CSV file, click "Choose file", or paste comma-separated data into the text area. The tool auto-detects delimiters and handles both US (1,234.56) and European (1.234,56) number formats.
+2. **Review the dataset overview**: immediately see how many rows, columns, numeric columns, categorical columns, and missing values your file contains.
+3. **Examine column cards**: scroll through the grid of cards. Each shows a mini-histogram at the top and the full statistics table below.
+4. **Check the correlation matrix**: at the bottom of the page (with ≥2 numeric columns), the heatmap highlights which pairs of variables are correlated.
+5. **Handle large datasets**: if your CSV has more than 50 numeric columns, the dashboard shows the first 12 and offers a "Show all" button. For very large files (&gt;100,000 rows), consider sampling before uploading.
+
+## Common use cases
+
+- **Exploratory data analysis (EDA)**: the first step before any machine-learning or statistical modelling project.
+- **Data quality audit**: quickly spot columns with unexpected means, high missing-value counts, or extreme outliers.
+- **Feature selection**: use the correlation matrix to find highly correlated features that may be redundant in a model.
+- **Survey analysis**: summarize Likert scale responses, demographic distributions, and satisfaction scores.
+- **Financial data review**: check return distributions for fat tails (high kurtosis) before applying normal-distribution-based risk models.
+- **Scientific experiments**: verify that measurements have sensible ranges and distributions before running ANOVA or regression.
+
+## Privacy and security
+
+All CSV parsing, statistical computation, and chart rendering happen locally in your browser using WebAssembly (Plotly) and JavaScript. No data is transmitted to any server. The maximum supported file size is approximately 5 MB. For files larger than that, consider loading them in chunks or using a tool like Python's pandas for preprocessing.
+
+## References
+
+- Tukey, J. W. (1977). *Exploratory Data Analysis.* Addison-Wesley.
+- Pearson, K. (1895). Notes on regression and inheritance in the case of two parents. *Proceedings of the Royal Society of London*, 58, 240–242.
+- Fisher, R. A. (1930). The moments of the distribution for normal samples of measures of departure from normality. *Proceedings of the Royal Society of London*, Series A, 130, 16–28.
+- Freedman, D., Diaconis, P. (1981). On the histogram as a density estimator. *Zeitschrift für Wahrscheinlichkeitstheorie und Verwandte Gebiete*, 57, 453–476.
