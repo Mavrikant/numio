@@ -82,3 +82,100 @@
     display: none;
   }
 }
+
+/* ─── Print styles ───────────────────────────────────────────────────────────
+   These override screen styles during print / browser print preview.
+   They work alongside Tailwind `print:` modifier classes applied to individual
+   components (Header, Footer, PdfExport buttons, etc.).
+   ─────────────────────────────────────────────────────────────────────────── */
+@media print {
+  /* Force white background, black text — save ink, ensure legibility */
+  *, *::before, *::after {
+    background: white !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* Page margins */
+  @page {
+    margin: 1.5cm 2cm;
+    size: A4 portrait;
+  }
+
+  /* Hide chrome elements — also have print:hidden Tailwind classes on them */
+  #site-header,
+  #site-footer,
+  [data-print-hide],
+  .print-hide {
+    display: none !important;
+  }
+
+  /* Ensure the calc content area is full width */
+  main {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Expand the calculator grid to single column for print */
+  .grid {
+    display: block !important;
+  }
+
+  /* Inputs section: render as static table, not interactive form */
+  input, select, textarea {
+    border: 1px solid #ccc !important;
+    background: white !important;
+  }
+
+  /* Show the print-only inputs table */
+  [data-print-show] {
+    display: block !important;
+  }
+
+  /* Keep result panel, formula, citations — visible */
+  [data-authority-footer] {
+    display: block !important;
+  }
+
+  /* Expand the formula <details> block so it's always visible when printing */
+  details {
+    display: block !important;
+  }
+  details > summary {
+    display: none !important;
+  }
+  details[open] > summary,
+  details > summary {
+    display: none !important;
+  }
+
+  /* Avoid breaking inside result rows, formula, citations */
+  [data-result-row],
+  li,
+  p {
+    break-inside: avoid;
+  }
+
+  /* Links — show URLs in parentheses */
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.75em;
+    color: #555 !important;
+  }
+
+  /* But NOT for icon-only links or buttons */
+  a[aria-label]::after,
+  button::after {
+    content: none !important;
+  }
+
+  /* Hide interactive buttons in print */
+  button[data-print-hide],
+  [data-pdf-export-buttons] {
+    display: none !important;
+  }
+}

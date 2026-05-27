@@ -110,5 +110,19 @@
   },
   "seo": {
     "metaSuffix": "무료, 즉시, 가입 불필요."
+  },
+  "compare": {
+    "toggle": "시나리오 비교",
+    "scenarioA": "시나리오 A",
+    "scenarioB": "시나리오 B",
+    "difference": "차이",
+    "exitCompare": "비교 종료",
+    "deltaLabel": "Δ"
+  },
+  "pdf": {
+    "print": "인쇄",
+    "download": "PDF 다운로드",
+    "generated": "karaman.dev/calculators에서 생성",
+    "title": "계산기 결과"
   }
 }

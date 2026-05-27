@@ -23,6 +23,8 @@ import { getCalculatorBySlug } from "@/lib/registry";
 import { InputField } from "./InputField";
 import { ResultPanel } from "./ResultPanel";
 import { ChartPanel } from "./ChartPanel";
+import { PdfExport } from "./PdfExport";
+import { CompareMode } from "./CompareMode";
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 
@@ -236,6 +238,13 @@ export function CalculatorView({ calc, locale, initialInputs }: CalculatorViewPr
               >
                 {shareLabel ?? "Share"}
               </button>
+              <PdfExport
+                calc={calc}
+                bundle={bundle}
+                locale={locale}
+                inputs={inputs}
+                result={computeResult.result}
+              />
             </div>
           </div>
         </section>
@@ -276,11 +285,24 @@ export function CalculatorView({ calc, locale, initialInputs }: CalculatorViewPr
 // ─── Variant with external visualization components ───────────────────────────
 // The Astro page passes pre-loaded viz components to avoid dynamic import issues.
 
+// ─── Compare mode labels type ─────────────────────────────────────────────────
+
+interface CompareModeLabels {
+  readonly toggle: string;
+  readonly scenarioA: string;
+  readonly scenarioB: string;
+  readonly difference: string;
+  readonly exitCompare: string;
+  readonly deltaLabel: string;
+}
+
 interface CalculatorViewWithVizProps extends CalculatorViewProps {
   readonly vizComponents?: Record<
     string,
     React.ComponentType<{ result: Record<string, unknown>; inputs: Record<string, unknown> }>
   >;
+  readonly compareEnabled?: boolean;
+  readonly compareLabels?: CompareModeLabels;
 }
 
 export function CalculatorViewWithViz({
@@ -288,8 +310,49 @@ export function CalculatorViewWithViz({
   locale,
   initialInputs,
   vizComponents: externalVizComponents,
+  compareEnabled = false,
+  compareLabels,
 }: CalculatorViewWithVizProps) {
   const bundle = calc.i18n[locale] ?? calc.i18n["en"];
+
+  // ─── Compare mode state ───────────────────────────────────────────────────
+  const [compareActive, setCompareActive] = useState<boolean>(() => {
+    if (typeof window === "undefined") return false;
+    return new URLSearchParams(window.location.search).get("compare") === "2";
+  });
+
+  const handleEnterCompare = useCallback(() => {
+    setCompareActive(true);
+  }, []);
+
+  const handleExitCompare = useCallback(() => {
+    setCompareActive(false);
+    // Remove compare params from URL, restore normal single-mode URL
+    const params = new URLSearchParams(window.location.search);
+    params.delete("compare");
+    for (const key of [...params.keys()]) {
+      if (key.startsWith("a.") || key.startsWith("b.")) params.delete(key);
+    }
+    const qs = params.toString();
+    window.history.replaceState(null, "", `${window.location.pathname}${qs ? `?${qs}` : ""}`);
+  }, []);
+
+  // When compare mode is active, render CompareMode overlay
+  if (compareActive && compareLabels) {
+    return (
+      <CompareMode
+        calc={calc}
+        locale={locale}
+        labels={{
+          scenarioA: compareLabels.scenarioA,
+          scenarioB: compareLabels.scenarioB,
+          difference: compareLabels.difference,
+          deltaLabel: compareLabels.deltaLabel,
+        }}
+        onExit={handleExitCompare}
+      />
+    );
+  }
 
   const defaults = useMemo<InputValues>(() => {
     const d: InputValues = {};
@@ -460,6 +523,22 @@ export function CalculatorViewWithViz({
               >
                 {shareLabel ?? "Share"}
               </button>
+              <PdfExport
+                calc={calc}
+                bundle={bundle}
+                locale={locale}
+                inputs={inputs}
+                result={computeResult.result}
+              />
+              {compareEnabled && compareLabels && (
+                <button
+                  type="button"
+                  onClick={handleEnterCompare}
+                  className="rounded-lg border border-violet-300 bg-violet-50 px-3 py-1.5 text-sm font-medium text-violet-700 shadow-sm hover:bg-violet-100 dark:border-violet-700 dark:bg-violet-950 dark:text-violet-300 dark:hover:bg-violet-900"
+                >
+                  {compareLabels.toggle}
+                </button>
+              )}
             </div>
           </div>
         </section>
@@ -506,9 +585,11 @@ interface CalculatorIslandProps {
   readonly slug: string;
   readonly locale: Locale;
   readonly initialInputs?: Record<string, unknown>;
+  /** Translated labels for compare mode UI — passed from Astro page via t() */
+  readonly compareLabels?: CompareModeLabels;
 }
 
-export function CalculatorIsland({ slug, locale, initialInputs }: CalculatorIslandProps) {
+export function CalculatorIsland({ slug, locale, initialInputs, compareLabels }: CalculatorIslandProps) {
   const calc = useMemo(() => getCalculatorBySlug(slug), [slug]);
   if (!calc) {
     return (
@@ -517,10 +598,13 @@ export function CalculatorIsland({ slug, locale, initialInputs }: CalculatorIsla
       </div>
     );
   }
+  const compareEnabled = Boolean(calc.meta.compareEnabled) && Boolean(compareLabels);
   return (
     <CalculatorViewWithViz
       calc={calc}
       locale={locale}
+      compareEnabled={compareEnabled}
+      {...(compareLabels ? { compareLabels } : {})}
       {...(initialInputs ? { initialInputs } : {})}
     />
   );

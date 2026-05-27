@@ -110,5 +110,19 @@
   },
   "seo": {
     "metaSuffix": "مجاني، فوري، بدون تسجيل."
+  },
+  "compare": {
+    "toggle": "مقارنة السيناريوهات",
+    "scenarioA": "السيناريو أ",
+    "scenarioB": "السيناريو ب",
+    "difference": "الفرق",
+    "exitCompare": "إنهاء المقارنة",
+    "deltaLabel": "Δ"
+  },
+  "pdf": {
+    "print": "طباعة",
+    "download": "تحميل PDF",
+    "generated": "تم الإنشاء بواسطة karaman.dev/calculators",
+    "title": "نتائج الحاسبة"
   }
 }

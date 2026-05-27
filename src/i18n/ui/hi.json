@@ -110,5 +110,19 @@
   },
   "seo": {
     "metaSuffix": "निःशुल्क, तत्काल, बिना साइनअप।"
+  },
+  "compare": {
+    "toggle": "परिदृश्य तुलना",
+    "scenarioA": "परिदृश्य A",
+    "scenarioB": "परिदृश्य B",
+    "difference": "अंतर",
+    "exitCompare": "तुलना से बाहर निकलें",
+    "deltaLabel": "Δ"
+  },
+  "pdf": {
+    "print": "प्रिंट करें",
+    "download": "PDF डाउनलोड करें",
+    "generated": "karaman.dev/calculators द्वारा निर्मित",
+    "title": "कैलकुलेटर परिणाम"
   }
 }

@@ -110,5 +110,19 @@
   },
   "seo": {
     "metaSuffix": "無料・即時・登録不要。"
+  },
+  "compare": {
+    "toggle": "シナリオを比較",
+    "scenarioA": "シナリオ A",
+    "scenarioB": "シナリオ B",
+    "difference": "差分",
+    "exitCompare": "比較を終了",
+    "deltaLabel": "Δ"
+  },
+  "pdf": {
+    "print": "印刷",
+    "download": "PDFをダウンロード",
+    "generated": "karaman.dev/calculators で作成",
+    "title": "計算結果"
   }
 }

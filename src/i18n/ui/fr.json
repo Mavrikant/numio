@@ -110,5 +110,19 @@
   },
   "seo": {
     "metaSuffix": "Gratuit, instantané, sans inscription."
+  },
+  "compare": {
+    "toggle": "Comparer les scénarios",
+    "scenarioA": "Scénario A",
+    "scenarioB": "Scénario B",
+    "difference": "Différence",
+    "exitCompare": "Quitter la comparaison",
+    "deltaLabel": "Δ"
+  },
+  "pdf": {
+    "print": "Imprimer",
+    "download": "Télécharger PDF",
+    "generated": "Généré par karaman.dev/calculators",
+    "title": "Résultats du calculateur"
   }
 }

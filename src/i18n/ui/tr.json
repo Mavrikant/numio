@@ -110,5 +110,19 @@
   },
   "seo": {
     "metaSuffix": "Ücretsiz, anında, kayıt gerekmez."
+  },
+  "compare": {
+    "toggle": "Senaryoları karşılaştır",
+    "scenarioA": "Senaryo A",
+    "scenarioB": "Senaryo B",
+    "difference": "Fark",
+    "exitCompare": "Karşılaştırmadan çık",
+    "deltaLabel": "Δ"
+  },
+  "pdf": {
+    "print": "Yazdır",
+    "download": "PDF İndir",
+    "generated": "karaman.dev/calculators tarafından oluşturuldu",
+    "title": "Hesaplayıcı sonuçları"
   }
 }

@@ -110,5 +110,19 @@
   },
   "seo": {
     "metaSuffix": "免费、即时、无需注册。"
+  },
+  "compare": {
+    "toggle": "对比方案",
+    "scenarioA": "方案 A",
+    "scenarioB": "方案 B",
+    "difference": "差异",
+    "exitCompare": "退出对比",
+    "deltaLabel": "Δ"
+  },
+  "pdf": {
+    "print": "打印",
+    "download": "下载 PDF",
+    "generated": "由 karaman.dev/calculators 生成",
+    "title": "计算器结果"
   }
 }
