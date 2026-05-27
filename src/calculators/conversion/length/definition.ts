@@ -1,10 +1,10 @@
 import { z } from "zod";
 import { defineCalculator } from "@/types/calculator";
-import { compute } from "./compute";
 import i18n from "./i18n";
+import { compute } from "./compute";
 
 const inputSchema = z.object({
-  value: z.number().positive().max(1_000_000),
+  value: z.number().positive(),
   fromUnit: z.enum(["m", "cm", "mm", "km", "in", "ft", "yd", "mi", "nm", "μm"]),
   toUnit: z.enum(["m", "cm", "mm", "km", "in", "ft", "yd", "mi", "nm", "μm"]),
 });
@@ -26,16 +26,16 @@ export default defineCalculator({
       type: {
         kind: "select",
         options: [
-          { value: "m", i18nKey: "meter" },
-          { value: "cm", i18nKey: "centimeter" },
-          { value: "mm", i18nKey: "millimeter" },
-          { value: "km", i18nKey: "kilometer" },
-          { value: "in", i18nKey: "inch" },
-          { value: "ft", i18nKey: "foot" },
-          { value: "yd", i18nKey: "yard" },
-          { value: "mi", i18nKey: "mile" },
-          { value: "nm", i18nKey: "nautical_mile" },
-          { value: "μm", i18nKey: "micrometer" },
+          { value: "m", label: "Meter (m)" },
+          { value: "cm", label: "Centimeter (cm)" },
+          { value: "mm", label: "Millimeter (mm)" },
+          { value: "km", label: "Kilometer (km)" },
+          { value: "in", label: "Inch (in)" },
+          { value: "ft", label: "Foot (ft)" },
+          { value: "yd", label: "Yard (yd)" },
+          { value: "mi", label: "Mile (mi)" },
+          { value: "nm", label: "Nautical Mile (nm)" },
+          { value: "μm", label: "Micrometer (μm)" },
         ],
       },
       defaultValue: "m",
@@ -46,16 +46,16 @@ export default defineCalculator({
       type: {
         kind: "select",
         options: [
-          { value: "m", i18nKey: "meter" },
-          { value: "cm", i18nKey: "centimeter" },
-          { value: "mm", i18nKey: "millimeter" },
-          { value: "km", i18nKey: "kilometer" },
-          { value: "in", i18nKey: "inch" },
-          { value: "ft", i18nKey: "foot" },
-          { value: "yd", i18nKey: "yard" },
-          { value: "mi", i18nKey: "mile" },
-          { value: "nm", i18nKey: "nautical_mile" },
-          { value: "μm", i18nKey: "micrometer" },
+          { value: "m", label: "Meter (m)" },
+          { value: "cm", label: "Centimeter (cm)" },
+          { value: "mm", label: "Millimeter (mm)" },
+          { value: "km", label: "Kilometer (km)" },
+          { value: "in", label: "Inch (in)" },
+          { value: "ft", label: "Foot (ft)" },
+          { value: "yd", label: "Yard (yd)" },
+          { value: "mi", label: "Mile (mi)" },
+          { value: "nm", label: "Nautical Mile (nm)" },
+          { value: "μm", label: "Micrometer (μm)" },
         ],
       },
       defaultValue: "cm",
@@ -64,13 +64,12 @@ export default defineCalculator({
   ],
   outputs: [
     { id: "result", format: "number", precision: 4, highlight: true },
-    { id: "resultFormatted", format: "text" },
   ],
   inputSchema,
   compute,
   i18n,
   meta: {
-    formulaLatex: "\\text{result} = \\text{value} \\times \\frac{\\text{toBase unit}}{\\text{fromBase unit}}",
+    description: "Convert between metric and imperial length units",
     references: [
       {
         title: "Meter — International System of Units (SI)",
@@ -78,8 +77,8 @@ export default defineCalculator({
         authority: "Wikipedia",
       },
       {
-        title: "International yard and pound",
-        url: "https://en.wikipedia.org/wiki/International_yard_and_pound",
+        title: "Conversion of units of length",
+        url: "https://en.wikipedia.org/wiki/Conversion_of_units#Length",
         authority: "Wikipedia",
       },
     ],

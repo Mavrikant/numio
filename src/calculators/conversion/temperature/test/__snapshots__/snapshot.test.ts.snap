@@ -1,0 +1,892 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Temperature — definition snapshot > matches expected calculator shape 1`] = `
+{
+  "category": "conversion",
+  "compute": [Function],
+  "i18n": {
+    "ar": {
+      "description": "تحويل بين مقاييس سيلسيوس وفهرنهايت وكلفن",
+      "errors": {
+        "invalidTemperature": "درجة الحرارة يجب أن تكون رقماً صحيحاً",
+      },
+      "faq": [
+        {
+          "answer": "سيلسيوس وفهرنهايت مقياسان للحرارة بنقاط مرجعية مختلفة. يتجمد الماء عند 0°C (32°F) ويغلي عند 100°C (212°F).",
+          "question": "ما الفرق بين سيلسيوس وفهرنهايت?",
+        },
+        {
+          "answer": "كلفن هو وحدة SI للحرارة المستخدمة في العلم. بدءاً من الصفر المطلق (−273.15°C).",
+          "question": "ما هو كلفن ولماذا مهم?",
+        },
+        {
+          "answer": "نعم! −40°C تساوي −40°F. إنها الحالة الوحيدة التي يظهر فيها كلا المقياسين نفس القيمة.",
+          "question": "هل توجد درجة حرارة تتساوى فيها سيلسيوس وفهرنهايت?",
+        },
+        {
+          "answer": "الصفر المطلق هو 0 كلفن (−273.15°C أو −459.67°F).",
+          "question": "ما هو الصفر المطلق?",
+        },
+      ],
+      "inputs": {
+        "celsius": {
+          "help": "درجة الحرارة بالسيلسيوس",
+          "label": "سيلسيوس",
+        },
+        "fahrenheit": {
+          "help": "درجة الحرارة بالفهرنهايت",
+          "label": "فهرنهايت",
+        },
+        "kelvin": {
+          "help": "درجة الحرارة بالكلفن",
+          "label": "كلفن",
+        },
+      },
+      "keywords": [
+        "درجة الحرارة",
+        "سيلسيوس",
+        "فهرنهايت",
+        "كلفن",
+        "تحويل",
+        "حراري",
+      ],
+      "outputs": {
+        "celsius": {
+          "help": "النتيجة بالسيلسيوس",
+          "label": "سيلسيوس",
+        },
+        "fahrenheit": {
+          "help": "النتيجة بالفهرنهايت",
+          "label": "فهرنهايت",
+        },
+        "kelvin": {
+          "help": "النتيجة بالكلفن",
+          "label": "كلفن",
+        },
+      },
+      "short": "تحويل فوري بين مقاييس سيلسيوس وفهرنهايت وكلفن",
+      "title": "محول درجة الحرارة",
+    },
+    "de": {
+      "description": "Umrechnung zwischen Celsius, Fahrenheit und Kelvin Temperaturskalen",
+      "errors": {
+        "invalidTemperature": "Temperatur muss eine gültige Zahl sein",
+      },
+      "faq": [
+        {
+          "answer": "Celsius und Fahrenheit sind zwei Temperaturskalen mit unterschiedlichen Referenzpunkten. Wasser gefriert bei 0°C (32°F) und siedet bei 100°C (212°F).",
+          "question": "Was ist der Unterschied zwischen Celsius und Fahrenheit?",
+        },
+        {
+          "answer": "Kelvin ist die SI-Einheit für Temperatur. Sie beginnt beim absoluten Nullpunkt (−273.15°C).",
+          "question": "Was ist Kelvin und warum ist es wichtig?",
+        },
+        {
+          "answer": "Ja! −40°C entspricht −40°F. Das ist der einzige Punkt, an dem beide Skalen denselben Wert anzeigen.",
+          "question": "Gibt es eine Temperatur, bei der Celsius und Fahrenheit gleich sind?",
+        },
+        {
+          "answer": "Der absolute Nullpunkt ist 0 Kelvin (−273.15°C oder −459.67°F).",
+          "question": "Was ist der absolute Nullpunkt?",
+        },
+      ],
+      "inputs": {
+        "celsius": {
+          "help": "Temperatur in Celsius",
+          "label": "Celsius",
+        },
+        "fahrenheit": {
+          "help": "Temperatur in Fahrenheit",
+          "label": "Fahrenheit",
+        },
+        "kelvin": {
+          "help": "Temperatur in Kelvin",
+          "label": "Kelvin",
+        },
+      },
+      "keywords": [
+        "temperatur",
+        "celsius",
+        "fahrenheit",
+        "kelvin",
+        "umrechnung",
+        "thermisch",
+      ],
+      "outputs": {
+        "celsius": {
+          "help": "Ergebnis in Celsius",
+          "label": "Celsius",
+        },
+        "fahrenheit": {
+          "help": "Ergebnis in Fahrenheit",
+          "label": "Fahrenheit",
+        },
+        "kelvin": {
+          "help": "Ergebnis in Kelvin",
+          "label": "Kelvin",
+        },
+      },
+      "short": "Sofortige Umrechnung zwischen Celsius, Fahrenheit und Kelvin",
+      "title": "Temperaturumrechner",
+    },
+    "en": {
+      "description": "Convert between Celsius, Fahrenheit, and Kelvin temperature scales with instant calculations",
+      "errors": {
+        "invalidTemperature": "Temperature must be a valid number",
+      },
+      "faq": [
+        {
+          "answer": "Celsius and Fahrenheit are two temperature scales with different reference points. Water freezes at 0°C (32°F) and boils at 100°C (212°F). Celsius is the metric standard, while Fahrenheit is commonly used in the US.",
+          "question": "What is the difference between Celsius and Fahrenheit?",
+        },
+        {
+          "answer": "Kelvin is the SI unit of temperature used in science and engineering. It starts at absolute zero (−273.15°C) and is used in physics and thermodynamics because it has no negative values.",
+          "question": "What is Kelvin and why is it important?",
+        },
+        {
+          "answer": "Yes! −40°C equals −40°F. This is the only point where both scales read the same value.",
+          "question": "Is there a temperature where Celsius and Fahrenheit are equal?",
+        },
+        {
+          "answer": "Absolute zero is 0 Kelvin (−273.15°C or −459.67°F), the lowest possible temperature where all molecular motion stops.",
+          "question": "What is absolute zero?",
+        },
+      ],
+      "inputs": {
+        "celsius": {
+          "help": "Temperature in Celsius",
+          "label": "Celsius",
+        },
+        "fahrenheit": {
+          "help": "Temperature in Fahrenheit",
+          "label": "Fahrenheit",
+        },
+        "kelvin": {
+          "help": "Temperature in Kelvin",
+          "label": "Kelvin",
+        },
+      },
+      "keywords": [
+        "temperature",
+        "celsius",
+        "fahrenheit",
+        "kelvin",
+        "conversion",
+        "thermal",
+      ],
+      "outputs": {
+        "celsius": {
+          "help": "Result in Celsius",
+          "label": "Celsius",
+        },
+        "fahrenheit": {
+          "help": "Result in Fahrenheit",
+          "label": "Fahrenheit",
+        },
+        "kelvin": {
+          "help": "Result in Kelvin",
+          "label": "Kelvin",
+        },
+      },
+      "short": "Convert between Celsius, Fahrenheit, and Kelvin scales instantly",
+      "title": "Temperature Converter",
+    },
+    "es": {
+      "description": "Conversión entre las escalas Celsius, Fahrenheit y Kelvin",
+      "errors": {
+        "invalidTemperature": "La temperatura debe ser un número válido",
+      },
+      "faq": [
+        {
+          "answer": "Celsius y Fahrenheit son dos escalas de temperatura con diferentes puntos de referencia. El agua se congela a 0°C (32°F) e hierve a 100°C (212°F).",
+          "question": "¿Cuál es la diferencia entre Celsius y Fahrenheit?",
+        },
+        {
+          "answer": "Kelvin es la unidad SI de temperatura utilizada en ciencias. Comienza en el cero absoluto (−273.15°C).",
+          "question": "¿Qué es Kelvin y por qué es importante?",
+        },
+        {
+          "answer": "¡Sí! −40°C equivale a −40°F. Es el único punto donde ambas escalas muestran el mismo valor.",
+          "question": "¿Hay una temperatura donde Celsius y Fahrenheit sean iguales?",
+        },
+        {
+          "answer": "El cero absoluto es 0 Kelvin (−273.15°C o −459.67°F).",
+          "question": "¿Qué es el cero absoluto?",
+        },
+      ],
+      "inputs": {
+        "celsius": {
+          "help": "Temperatura en Celsius",
+          "label": "Celsius",
+        },
+        "fahrenheit": {
+          "help": "Temperatura en Fahrenheit",
+          "label": "Fahrenheit",
+        },
+        "kelvin": {
+          "help": "Temperatura en Kelvin",
+          "label": "Kelvin",
+        },
+      },
+      "keywords": [
+        "temperatura",
+        "celsius",
+        "fahrenheit",
+        "kelvin",
+        "conversión",
+        "térmico",
+      ],
+      "outputs": {
+        "celsius": {
+          "help": "Resultado en Celsius",
+          "label": "Celsius",
+        },
+        "fahrenheit": {
+          "help": "Resultado en Fahrenheit",
+          "label": "Fahrenheit",
+        },
+        "kelvin": {
+          "help": "Resultado en Kelvin",
+          "label": "Kelvin",
+        },
+      },
+      "short": "Conversión instantánea entre las escalas Celsius, Fahrenheit y Kelvin",
+      "title": "Conversor de temperatura",
+    },
+    "fr": {
+      "description": "Conversion entre les échelles Celsius, Fahrenheit et Kelvin",
+      "errors": {
+        "invalidTemperature": "La température doit être un nombre valide",
+      },
+      "faq": [
+        {
+          "answer": "Celsius et Fahrenheit sont deux échelles de température avec des points de référence différents. L'eau gèle à 0°C (32°F) et bout à 100°C (212°F).",
+          "question": "Quelle est la différence entre Celsius et Fahrenheit?",
+        },
+        {
+          "answer": "Kelvin est l'unité SI de température utilisée en sciences. Elle commence au zéro absolu (−273.15°C).",
+          "question": "Qu'est-ce que Kelvin et pourquoi est-ce important?",
+        },
+        {
+          "answer": "Oui! −40°C équivaut à −40°F. C'est le seul point où les deux échelles affichent la même valeur.",
+          "question": "Y a-t-il une température où Celsius et Fahrenheit sont égaux?",
+        },
+        {
+          "answer": "Le zéro absolu est 0 Kelvin (−273.15°C ou −459.67°F).",
+          "question": "Quel est le zéro absolu?",
+        },
+      ],
+      "inputs": {
+        "celsius": {
+          "help": "Température en Celsius",
+          "label": "Celsius",
+        },
+        "fahrenheit": {
+          "help": "Température en Fahrenheit",
+          "label": "Fahrenheit",
+        },
+        "kelvin": {
+          "help": "Température en Kelvin",
+          "label": "Kelvin",
+        },
+      },
+      "keywords": [
+        "température",
+        "celsius",
+        "fahrenheit",
+        "kelvin",
+        "conversion",
+        "thermique",
+      ],
+      "outputs": {
+        "celsius": {
+          "help": "Résultat en Celsius",
+          "label": "Celsius",
+        },
+        "fahrenheit": {
+          "help": "Résultat en Fahrenheit",
+          "label": "Fahrenheit",
+        },
+        "kelvin": {
+          "help": "Résultat en Kelvin",
+          "label": "Kelvin",
+        },
+      },
+      "short": "Conversion instantanée entre les échelles Celsius, Fahrenheit et Kelvin",
+      "title": "Convertisseur de température",
+    },
+    "hi": {
+      "description": "सेल्सियस, फारेनहाइट और केल्विन स्केल के बीच रूपांतरण",
+      "errors": {
+        "invalidTemperature": "तापमान एक वैध संख्या होनी चाहिए",
+      },
+      "faq": [
+        {
+          "answer": "सेल्सियस और फारेनहाइट विभिन्न संदर्भ बिंदुओं वाले दो तापमान पैमाने हैं। पानी 0°C (32°F) पर जमता है और 100°C (212°F) पर उबलता है।",
+          "question": "सेल्सियस और फारेनहाइट में क्या अंतर है?",
+        },
+        {
+          "answer": "केल्विन विज्ञान में उपयोग किया जाने वाला SI तापमान इकाई है। पूर्ण शून्य (−273.15°C) से शुरू होता है।",
+          "question": "केल्विन क्या है और यह महत्वपूर्ण क्यों है?",
+        },
+        {
+          "answer": "हाँ! −40°C बराबर −40°F है। यह एकमात्र बिंदु है जहाँ दोनों पैमाने समान मान दिखाते हैं।",
+          "question": "क्या ऐसा तापमान है जहां सेल्सियस और फारेनहाइट बराबर हैं?",
+        },
+        {
+          "answer": "पूर्ण शून्य 0 केल्विन (−273.15°C या −459.67°F) है।",
+          "question": "पूर्ण शून्य क्या है?",
+        },
+      ],
+      "inputs": {
+        "celsius": {
+          "help": "सेल्सियस तापमान",
+          "label": "सेल्सियस",
+        },
+        "fahrenheit": {
+          "help": "फारेनहाइट तापमान",
+          "label": "फारेनहाइट",
+        },
+        "kelvin": {
+          "help": "केल्विन तापमान",
+          "label": "केल्विन",
+        },
+      },
+      "keywords": [
+        "तापमान",
+        "सेल्सियस",
+        "फारेनहाइट",
+        "केल्विन",
+        "रूपांतरण",
+        "तापीय",
+      ],
+      "outputs": {
+        "celsius": {
+          "help": "सेल्सियस परिणाम",
+          "label": "सेल्सियस",
+        },
+        "fahrenheit": {
+          "help": "फारेनहाइट परिणाम",
+          "label": "फारेनहाइट",
+        },
+        "kelvin": {
+          "help": "केल्विन परिणाम",
+          "label": "केल्विन",
+        },
+      },
+      "short": "सेल्सियस, फारेनहाइट और केल्विन स्केल के बीच तत्काल रूपांतरण",
+      "title": "तापमान परिवर्तक",
+    },
+    "it": {
+      "description": "Conversione tra le scale Celsius, Fahrenheit e Kelvin",
+      "errors": {
+        "invalidTemperature": "La temperatura deve essere un numero valido",
+      },
+      "faq": [
+        {
+          "answer": "Celsius e Fahrenheit sono due scale di temperatura con diversi punti di riferimento. L'acqua congela a 0°C (32°F) e bolle a 100°C (212°F).",
+          "question": "Qual è la differenza tra Celsius e Fahrenheit?",
+        },
+        {
+          "answer": "Kelvin è l'unità SI di temperatura utilizzata in scienze. Inizia dallo zero assoluto (−273.15°C).",
+          "question": "Cos'è Kelvin e perché è importante?",
+        },
+        {
+          "answer": "Sì! −40°C equivale a −40°F. È l'unico punto in cui entrambe le scale mostrano lo stesso valore.",
+          "question": "C'è una temperatura in cui Celsius e Fahrenheit sono uguali?",
+        },
+        {
+          "answer": "Lo zero assoluto è 0 Kelvin (−273.15°C o −459.67°F).",
+          "question": "Cos'è lo zero assoluto?",
+        },
+      ],
+      "inputs": {
+        "celsius": {
+          "help": "Temperatura in Celsius",
+          "label": "Celsius",
+        },
+        "fahrenheit": {
+          "help": "Temperatura in Fahrenheit",
+          "label": "Fahrenheit",
+        },
+        "kelvin": {
+          "help": "Temperatura in Kelvin",
+          "label": "Kelvin",
+        },
+      },
+      "keywords": [
+        "temperatura",
+        "celsius",
+        "fahrenheit",
+        "kelvin",
+        "conversione",
+        "termico",
+      ],
+      "outputs": {
+        "celsius": {
+          "help": "Risultato in Celsius",
+          "label": "Celsius",
+        },
+        "fahrenheit": {
+          "help": "Risultato in Fahrenheit",
+          "label": "Fahrenheit",
+        },
+        "kelvin": {
+          "help": "Risultato in Kelvin",
+          "label": "Kelvin",
+        },
+      },
+      "short": "Conversione istantanea tra le scale Celsius, Fahrenheit e Kelvin",
+      "title": "Convertitore di temperatura",
+    },
+    "ja": {
+      "description": "セルシウス、ファーレンハイト、ケルビンスケール間の変換",
+      "errors": {
+        "invalidTemperature": "温度は有効な数値である必要があります",
+      },
+      "faq": [
+        {
+          "answer": "セルシウスとファーレンハイトは異なる基準点を持つ2つの温度スケールです。水は0°C (32°F)で凍り、100°C (212°F)で沸騰します。",
+          "question": "セルシウスとファーレンハイトの違いは?",
+        },
+        {
+          "answer": "ケルビンは科学で使用されるSI温度単位です。絶対零度(−273.15°C)から始まります。",
+          "question": "ケルビンとは何であり、なぜ重要ですか?",
+        },
+        {
+          "answer": "はい！−40°Cは−40°Fに等しいです。両方のスケールが同じ値を示す唯一のポイントです。",
+          "question": "セルシウスとファーレンハイトが等しい温度はありますか?",
+        },
+        {
+          "answer": "絶対零度は0ケルビン(−273.15°CまたはFahrenheit−459.67°F)です。",
+          "question": "絶対零度とは?",
+        },
+      ],
+      "inputs": {
+        "celsius": {
+          "help": "セルシウス温度",
+          "label": "セルシウス",
+        },
+        "fahrenheit": {
+          "help": "ファーレンハイト温度",
+          "label": "ファーレンハイト",
+        },
+        "kelvin": {
+          "help": "ケルビン温度",
+          "label": "ケルビン",
+        },
+      },
+      "keywords": [
+        "温度",
+        "セルシウス",
+        "ファーレンハイト",
+        "ケルビン",
+        "変換",
+        "熱",
+      ],
+      "outputs": {
+        "celsius": {
+          "help": "セルシウス結果",
+          "label": "セルシウス",
+        },
+        "fahrenheit": {
+          "help": "ファーレンハイト結果",
+          "label": "ファーレンハイト",
+        },
+        "kelvin": {
+          "help": "ケルビン結果",
+          "label": "ケルビン",
+        },
+      },
+      "short": "セルシウス、ファーレンハイト、ケルビンスケール間の即座の変換",
+      "title": "温度変換ツール",
+    },
+    "ko": {
+      "description": "섭씨, 화씨 및 켈빈 눈금 간의 변환",
+      "errors": {
+        "invalidTemperature": "온도는 유효한 숫자여야 합니다",
+      },
+      "faq": [
+        {
+          "answer": "섭씨와 화씨는 다른 기준점을 가진 두 개의 온도 눈금입니다. 물은 0°C(32°F)에서 얼고 100°C(212°F)에서 끓습니다.",
+          "question": "섭씨와 화씨의 차이점은 무엇입니까?",
+        },
+        {
+          "answer": "켈빈은 과학에서 사용되는 SI 온도 단위입니다. 절대 영도(−273.15°C)부터 시작합니다.",
+          "question": "켈빈이란 무엇이고 왜 중요합니까?",
+        },
+        {
+          "answer": "네! −40°C는 −40°F와 같습니다. 두 눈금이 같은 값을 표시하는 유일한 지점입니다.",
+          "question": "섭씨와 화씨가 같은 온도가 있습니까?",
+        },
+        {
+          "answer": "절대 영도는 0 켈빈(−273.15°C 또는 −459.67°F)입니다.",
+          "question": "절대 영도란 무엇입니까?",
+        },
+      ],
+      "inputs": {
+        "celsius": {
+          "help": "섭씨 온도",
+          "label": "섭씨",
+        },
+        "fahrenheit": {
+          "help": "화씨 온도",
+          "label": "화씨",
+        },
+        "kelvin": {
+          "help": "켈빈 온도",
+          "label": "켈빈",
+        },
+      },
+      "keywords": [
+        "온도",
+        "섭씨",
+        "화씨",
+        "켈빈",
+        "변환",
+        "열",
+      ],
+      "outputs": {
+        "celsius": {
+          "help": "섭씨 결과",
+          "label": "섭씨",
+        },
+        "fahrenheit": {
+          "help": "화씨 결과",
+          "label": "화씨",
+        },
+        "kelvin": {
+          "help": "켈빈 결과",
+          "label": "켈빈",
+        },
+      },
+      "short": "섭씨, 화씨 및 켈빈 눈금 간 즉시 변환",
+      "title": "온도 변환기",
+    },
+    "ru": {
+      "description": "Преобразование между шкалами Цельсия, Фаренгейта и Кельвина",
+      "errors": {
+        "invalidTemperature": "Температура должна быть числом",
+      },
+      "faq": [
+        {
+          "answer": "Цельсий и Фаренгейт — две температурные шкалы с разными опорными точками. Вода замерзает при 0°C (32°F) и кипит при 100°C (212°F).",
+          "question": "В чем разница между Цельсием и Фаренгейтом?",
+        },
+        {
+          "answer": "Кельвин — единица СИ температуры, используемая в науке. Она начинается с абсолютного нуля (−273.15°C).",
+          "question": "Что такое Кельвин и почему это важно?",
+        },
+        {
+          "answer": "Да! −40°C равно −40°F. Это единственная точка, где обе шкалы показывают одно значение.",
+          "question": "Есть ли температура, где Цельсий и Фаренгейт равны?",
+        },
+        {
+          "answer": "Абсолютный нуль — 0 Кельвин (−273.15°C или −459.67°F).",
+          "question": "Что такое абсолютный нуль?",
+        },
+      ],
+      "inputs": {
+        "celsius": {
+          "help": "Температура в Цельсий",
+          "label": "Цельсий",
+        },
+        "fahrenheit": {
+          "help": "Температура в Фаренгейт",
+          "label": "Фаренгейт",
+        },
+        "kelvin": {
+          "help": "Температура в Кельвин",
+          "label": "Кельвин",
+        },
+      },
+      "keywords": [
+        "температура",
+        "цельсий",
+        "фаренгейт",
+        "кельвин",
+        "преобразование",
+        "тепловой",
+      ],
+      "outputs": {
+        "celsius": {
+          "help": "Результат в Цельсий",
+          "label": "Цельсий",
+        },
+        "fahrenheit": {
+          "help": "Результат в Фаренгейт",
+          "label": "Фаренгейт",
+        },
+        "kelvin": {
+          "help": "Результат в Кельвин",
+          "label": "Кельвин",
+        },
+      },
+      "short": "Мгновенное преобразование между шкалами Цельсия, Фаренгейта и Кельвина",
+      "title": "Конвертер температуры",
+    },
+    "tr": {
+      "description": "Celsius, Fahrenheit ve Kelvin ölçekleri arasında anında dönüşüm",
+      "errors": {
+        "invalidTemperature": "Sıcaklık geçerli bir sayı olmalıdır",
+      },
+      "faq": [
+        {
+          "answer": "Celsius ve Fahrenheit, farklı referans noktaları olan iki sıcaklık ölçeğidir. Su 0°C (32°F) de donar, 100°C (212°F) de kaynır.",
+          "question": "Celsius ve Fahrenheit arasındaki fark nedir?",
+        },
+        {
+          "answer": "Kelvin, bilim ve mühendislikte kullanılan SI sıcaklık birimidir. Mutlak sıfırdan (−273.15°C) başlar.",
+          "question": "Kelvin nedir ve neden önemlidir?",
+        },
+        {
+          "answer": "Evet! −40°C eşittir −40°F. Her iki ölçeğin de aynı değeri okuduğu tek noktadır.",
+          "question": "Celsius ve Fahrenheit'in eşit olduğu bir sıcaklık var mıdır?",
+        },
+        {
+          "answer": "Mutlak sıfır, 0 Kelvin (−273.15°C veya −459.67°F) olup, tüm moleküler hareketi durduğu en düşük sıcaklıktır.",
+          "question": "Mutlak sıfır nedir?",
+        },
+      ],
+      "inputs": {
+        "celsius": {
+          "help": "Celsius cinsinden sıcaklık",
+          "label": "Celsius",
+        },
+        "fahrenheit": {
+          "help": "Fahrenheit cinsinden sıcaklık",
+          "label": "Fahrenheit",
+        },
+        "kelvin": {
+          "help": "Kelvin cinsinden sıcaklık",
+          "label": "Kelvin",
+        },
+      },
+      "keywords": [
+        "sıcaklık",
+        "celsius",
+        "fahrenheit",
+        "kelvin",
+        "dönüşüm",
+        "termal",
+      ],
+      "outputs": {
+        "celsius": {
+          "help": "Celsius sonucu",
+          "label": "Celsius",
+        },
+        "fahrenheit": {
+          "help": "Fahrenheit sonucu",
+          "label": "Fahrenheit",
+        },
+        "kelvin": {
+          "help": "Kelvin sonucu",
+          "label": "Kelvin",
+        },
+      },
+      "short": "Celsius, Fahrenheit ve Kelvin ölçekleri arasında anında dönüşüm yapın",
+      "title": "Sıcaklık Dönüştürücü",
+    },
+    "zh": {
+      "description": "摄氏度、华氏度和开尔文之间的转换",
+      "errors": {
+        "invalidTemperature": "温度必须是有效数字",
+      },
+      "faq": [
+        {
+          "answer": "摄氏度和华氏度是两个参考点不同的温度刻度。水在0°C (32°F)时冻结，在100°C (212°F)时沸腾。",
+          "question": "摄氏度和华氏度有什么区别?",
+        },
+        {
+          "answer": "开尔文是科学中使用的SI温度单位。从绝对零度(−273.15°C)开始。",
+          "question": "开尔文是什么，为什么很重要?",
+        },
+        {
+          "answer": "是的! −40°C等于−40°F。这是两个刻度显示相同值的唯一点。",
+          "question": "摄氏度和华氏度相等的温度存在吗?",
+        },
+        {
+          "answer": "绝对零度是0开尔文(−273.15°C或−459.67°F)。",
+          "question": "绝对零度是什么?",
+        },
+      ],
+      "inputs": {
+        "celsius": {
+          "help": "摄氏度温度",
+          "label": "摄氏度",
+        },
+        "fahrenheit": {
+          "help": "华氏度温度",
+          "label": "华氏度",
+        },
+        "kelvin": {
+          "help": "开尔文温度",
+          "label": "开尔文",
+        },
+      },
+      "keywords": [
+        "温度",
+        "摄氏度",
+        "华氏度",
+        "开尔文",
+        "转换",
+        "热",
+      ],
+      "outputs": {
+        "celsius": {
+          "help": "摄氏度结果",
+          "label": "摄氏度",
+        },
+        "fahrenheit": {
+          "help": "华氏度结果",
+          "label": "华氏度",
+        },
+        "kelvin": {
+          "help": "开尔文结果",
+          "label": "开尔文",
+        },
+      },
+      "short": "摄氏度、华氏度和开尔文之间的即时转换",
+      "title": "温度转换器",
+    },
+  },
+  "icon": "thermometer",
+  "inputSchema": ZodObject {
+    "_cached": null,
+    "_def": {
+      "catchall": ZodNever {
+        "_def": {
+          "typeName": "ZodNever",
+        },
+        "and": [Function],
+        "array": [Function],
+        "brand": [Function],
+        "catch": [Function],
+        "default": [Function],
+        "describe": [Function],
+        "isNullable": [Function],
+        "isOptional": [Function],
+        "nullable": [Function],
+        "nullish": [Function],
+        "optional": [Function],
+        "or": [Function],
+        "parse": [Function],
+        "parseAsync": [Function],
+        "pipe": [Function],
+        "promise": [Function],
+        "readonly": [Function],
+        "refine": [Function],
+        "refinement": [Function],
+        "safeParse": [Function],
+        "safeParseAsync": [Function],
+        "spa": [Function],
+        "superRefine": [Function],
+        "transform": [Function],
+        "~standard": {
+          "validate": [Function],
+          "vendor": "zod",
+          "version": 1,
+        },
+      },
+      "shape": [Function],
+      "typeName": "ZodObject",
+      "unknownKeys": "strip",
+    },
+    "and": [Function],
+    "array": [Function],
+    "augment": [Function],
+    "brand": [Function],
+    "catch": [Function],
+    "default": [Function],
+    "describe": [Function],
+    "isNullable": [Function],
+    "isOptional": [Function],
+    "nonstrict": [Function],
+    "nullable": [Function],
+    "nullish": [Function],
+    "optional": [Function],
+    "or": [Function],
+    "parse": [Function],
+    "parseAsync": [Function],
+    "pipe": [Function],
+    "promise": [Function],
+    "readonly": [Function],
+    "refine": [Function],
+    "refinement": [Function],
+    "safeParse": [Function],
+    "safeParseAsync": [Function],
+    "spa": [Function],
+    "superRefine": [Function],
+    "transform": [Function],
+    "~standard": {
+      "validate": [Function],
+      "vendor": "zod",
+      "version": 1,
+    },
+  },
+  "inputs": [
+    {
+      "defaultValue": 0,
+      "id": "celsius",
+      "required": false,
+      "type": {
+        "kind": "number",
+        "step": 0.01,
+      },
+    },
+    {
+      "defaultValue": 32,
+      "id": "fahrenheit",
+      "required": false,
+      "type": {
+        "kind": "number",
+        "step": 0.01,
+      },
+    },
+    {
+      "defaultValue": 273.15,
+      "id": "kelvin",
+      "required": false,
+      "type": {
+        "kind": "number",
+        "min": 0,
+        "step": 0.01,
+      },
+    },
+  ],
+  "meta": {
+    "description": "Convert between Celsius, Fahrenheit, and Kelvin temperature scales with instantaneous cross-conversion",
+    "references": [
+      {
+        "authority": "Wikipedia",
+        "title": "Temperature Conversion - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Conversion_of_units_of_temperature",
+      },
+      {
+        "authority": "Celsius.org",
+        "title": "Celsius.org - Temperature Conversion",
+        "url": "https://www.celsius.org/",
+      },
+    ],
+  },
+  "outputs": [
+    {
+      "format": "number",
+      "id": "celsius",
+      "precision": 2,
+    },
+    {
+      "format": "number",
+      "id": "fahrenheit",
+      "precision": 2,
+    },
+    {
+      "format": "number",
+      "id": "kelvin",
+      "precision": 2,
+    },
+  ],
+  "priority": "P0",
+  "slug": "temperature",
+}
+`;

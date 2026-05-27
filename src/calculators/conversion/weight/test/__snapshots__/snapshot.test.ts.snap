@@ -1,0 +1,869 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Weight — definition snapshot > matches expected calculator shape 1`] = `
+{
+  "category": "conversion",
+  "compute": [Function],
+  "i18n": {
+    "ar": {
+      "description": "تحويل بين وحدات الوزن المترية والإمبراطورية والمتخصصة بدقة",
+      "errors": {
+        "invalidWeight": "الوزن يجب أن يكون رقماً موجباً.",
+      },
+      "faq": [
+        {
+          "answer": "الكتلة هي كمية المادة في الجسم. الوزن هو قوة الجاذبية على تلك الكتلة. في الممارسة العملية، نستخدم المصطلحات بالتبادل.",
+          "question": "ما الفرق بين الوزن والكتلة?",
+        },
+        {
+          "answer": "يوجد 1000 جرام في 1 كيلوجرام. هذا هو المعيار المتري.",
+          "question": "كم عدد الجرام في الكيلوجرام الواحد؟",
+        },
+        {
+          "answer": "تُستخدم وحدة Stone بشكل أساسي في المملكة المتحدة وأيرلندا لقياس وزن الجسم. 1 stone = 14 رطل أو حوالي 6.35 كيلوجرام.",
+          "question": "ما الغرض من وحدة Stone؟",
+        },
+        {
+          "answer": "اقسم الوزن بالأرطال على 2.20462. على سبيل المثال: 150 رطل ÷ 2.20462 = 68 كغ.",
+          "question": "كيف أحول الأرطال إلى كيلوجرامات؟",
+        },
+      ],
+      "inputs": {
+        "fromUnit": {
+          "help": "اختر الوحدة المصدر",
+          "label": "من الوحدة",
+        },
+        "toUnit": {
+          "help": "اختر الوحدة المستهدفة",
+          "label": "إلى الوحدة",
+        },
+        "value": {
+          "help": "قيمة الوزن المراد تحويلها",
+          "label": "القيمة",
+        },
+      },
+      "keywords": [
+        "وزن",
+        "كتلة",
+        "تحويل",
+        "كيلوجرام",
+        "رطل",
+        "أونصة",
+        "طن",
+      ],
+      "outputs": {
+        "result": {
+          "help": "القيمة المحولة",
+          "label": "النتيجة",
+        },
+      },
+      "short": "تحويل بين وحدات الوزن المترية والإمبراطورية والمتخصصة",
+      "title": "محول الوزن/الكتلة",
+    },
+    "de": {
+      "description": "Umrechnung zwischen metrischen, imperialen und speziellen Gewichtseinheiten mit Präzision",
+      "errors": {
+        "invalidWeight": "Gewicht muss eine positive Zahl sein.",
+      },
+      "faq": [
+        {
+          "answer": "Masse ist die Menge an Materie in einem Objekt. Gewicht ist die Gravitationskraft auf diese Masse. In der Praxis verwenden wir die Begriffe synonym.",
+          "question": "Was ist der Unterschied zwischen Gewicht und Masse?",
+        },
+        {
+          "answer": "Es gibt 1000 Gramm in 1 Kilogramm. Das ist der metrische Standard.",
+          "question": "Wie viele Gramm sind in einem Kilogramm?",
+        },
+        {
+          "answer": "Stone wird hauptsächlich im Vereinigten Königreich und Irland zum Messen von Körpergewicht verwendet. 1 Stone = 14 Pfund oder etwa 6.35 Kilogramm.",
+          "question": "Wofür wird Stone verwendet?",
+        },
+        {
+          "answer": "Dividieren Sie das Gewicht in Pfund durch 2.20462. Zum Beispiel: 150 lbs ÷ 2.20462 = 68 kg.",
+          "question": "Wie konvertiere ich Pfund in Kilogramm?",
+        },
+      ],
+      "inputs": {
+        "fromUnit": {
+          "help": "Ausgangseinheit auswählen",
+          "label": "Von Einheit",
+        },
+        "toUnit": {
+          "help": "Zieleinheit auswählen",
+          "label": "Zu Einheit",
+        },
+        "value": {
+          "help": "Der umzuwandelnde Gewichtswert",
+          "label": "Wert",
+        },
+      },
+      "keywords": [
+        "gewicht",
+        "masse",
+        "umrechnung",
+        "kilogramm",
+        "pfund",
+        "unze",
+        "tonne",
+      ],
+      "outputs": {
+        "result": {
+          "help": "Umgewandelter Wert",
+          "label": "Ergebnis",
+        },
+      },
+      "short": "Umrechnung zwischen metrischen, imperialen und speziellen Gewichtseinheiten",
+      "title": "Gewicht-/Massenumrechner",
+    },
+    "en": {
+      "description": "Convert between metric, imperial, and specialty weight units with precision",
+      "errors": {
+        "invalidWeight": "Weight must be a positive number.",
+      },
+      "faq": [
+        {
+          "answer": "Mass is the amount of matter in an object, measured in kilograms. Weight is the force of gravity on that mass. For practical conversions, we use the terms interchangeably.",
+          "question": "What is the difference between weight and mass?",
+        },
+        {
+          "answer": "There are 1000 grams in 1 kilogram. This is the metric standard.",
+          "question": "How many grams are in a kilogram?",
+        },
+        {
+          "answer": "Stone is primarily used in the United Kingdom and Ireland for measuring body weight. 1 stone equals 14 pounds or approximately 6.35 kilograms.",
+          "question": "What is a stone used for?",
+        },
+        {
+          "answer": "Divide the weight in pounds by 2.20462. For example, 150 lbs ÷ 2.20462 = 68 kg.",
+          "question": "How do I convert pounds to kilograms?",
+        },
+      ],
+      "inputs": {
+        "fromUnit": {
+          "help": "Select source unit",
+          "label": "From Unit",
+        },
+        "toUnit": {
+          "help": "Select target unit",
+          "label": "To Unit",
+        },
+        "value": {
+          "help": "The weight value to convert",
+          "label": "Value",
+        },
+      },
+      "keywords": [
+        "weight",
+        "mass",
+        "conversion",
+        "kilogram",
+        "pound",
+        "ounce",
+        "ton",
+      ],
+      "outputs": {
+        "result": {
+          "help": "Converted value",
+          "label": "Result",
+        },
+      },
+      "short": "Convert between metric, imperial, and specialty weight units",
+      "title": "Weight/Mass Converter",
+    },
+    "es": {
+      "description": "Conversión entre unidades de peso métricas, imperiales y especializadas con precisión",
+      "errors": {
+        "invalidWeight": "El peso debe ser un número positivo.",
+      },
+      "faq": [
+        {
+          "answer": "La masa es la cantidad de materia en un objeto. El peso es la fuerza de la gravedad en esa masa. En la práctica, usamos los términos de manera intercambiable.",
+          "question": "¿Cuál es la diferencia entre peso y masa?",
+        },
+        {
+          "answer": "Hay 1000 gramos en 1 kilogramo. Este es el estándar métrico.",
+          "question": "¿Cuántos gramos hay en un kilogramo?",
+        },
+        {
+          "answer": "La piedra se utiliza principalmente en el Reino Unido e Irlanda para medir el peso corporal. 1 piedra = 14 libras o aproximadamente 6.35 kilogramos.",
+          "question": "¿Para qué se usa la piedra?",
+        },
+        {
+          "answer": "Divide el peso en libras por 2.20462. Por ejemplo: 150 lbs ÷ 2.20462 = 68 kg.",
+          "question": "¿Cómo convierto libras a kilogramos?",
+        },
+      ],
+      "inputs": {
+        "fromUnit": {
+          "help": "Seleccione unidad de origen",
+          "label": "Unidad de origen",
+        },
+        "toUnit": {
+          "help": "Seleccione unidad de destino",
+          "label": "Unidad de destino",
+        },
+        "value": {
+          "help": "El valor de peso a convertir",
+          "label": "Valor",
+        },
+      },
+      "keywords": [
+        "peso",
+        "masa",
+        "conversión",
+        "kilogramo",
+        "libra",
+        "onza",
+        "tonelada",
+      ],
+      "outputs": {
+        "result": {
+          "help": "Valor convertido",
+          "label": "Resultado",
+        },
+      },
+      "short": "Conversión entre unidades de peso métricas, imperiales y especializadas",
+      "title": "Conversor de peso/masa",
+    },
+    "fr": {
+      "description": "Conversion entre les unités de poids métriques, impériales et spécialisées avec précision",
+      "errors": {
+        "invalidWeight": "Le poids doit être un nombre positif.",
+      },
+      "faq": [
+        {
+          "answer": "La masse est la quantité de matière dans un objet. Le poids est la force de la gravité sur cette masse. En pratique, nous utilisons les termes de façon interchangeable.",
+          "question": "Quelle est la différence entre le poids et la masse?",
+        },
+        {
+          "answer": "Il y a 1000 grammes dans 1 kilogramme. C'est la norme métrique.",
+          "question": "Combien de grammes y a-t-il dans un kilogramme?",
+        },
+        {
+          "answer": "La stone est principalement utilisée au Royaume-Uni et en Irlande pour mesurer le poids corporel. 1 stone = 14 livres ou environ 6.35 kilogrammes.",
+          "question": "À quoi sert la stone?",
+        },
+        {
+          "answer": "Divisez le poids en livres par 2.20462. Par exemple: 150 lbs ÷ 2.20462 = 68 kg.",
+          "question": "Comment convertir les livres en kilogrammes?",
+        },
+      ],
+      "inputs": {
+        "fromUnit": {
+          "help": "Sélectionnez l'unité source",
+          "label": "Unité de source",
+        },
+        "toUnit": {
+          "help": "Sélectionnez l'unité cible",
+          "label": "Unité cible",
+        },
+        "value": {
+          "help": "La valeur de poids à convertir",
+          "label": "Valeur",
+        },
+      },
+      "keywords": [
+        "poids",
+        "masse",
+        "conversion",
+        "kilogramme",
+        "livre",
+        "once",
+        "tonne",
+      ],
+      "outputs": {
+        "result": {
+          "help": "Valeur convertie",
+          "label": "Résultat",
+        },
+      },
+      "short": "Conversion entre les unités de poids métriques, impériales et spécialisées",
+      "title": "Convertisseur de poids/masse",
+    },
+    "hi": {
+      "description": "मीट्रिक, इम्पीरियल और विशेष वजन इकाइयों के बीच सटीक रूपांतरण",
+      "errors": {
+        "invalidWeight": "वजन एक सकारात्मक संख्या होनी चाहिए।",
+      },
+      "faq": [
+        {
+          "answer": "द्रव्यमान किसी वस्तु में पदार्थ की मात्रा है। वजन वह गुरुत्वाकर्षण बल है जो उस द्रव्यमान पर कार्य करता है। व्यावहारिक रूप से हम शब्दों का परस्पर उपयोग करते हैं।",
+          "question": "वजन और द्रव्यमान में क्या अंतर है?",
+        },
+        {
+          "answer": "1 किलोग्राम में 1000 ग्राम होते हैं। यह मीट्रिक मानक है।",
+          "question": "एक किलोग्राम में कितने ग्राम होते हैं?",
+        },
+        {
+          "answer": "स्टोन का उपयोग मुख्य रूप से यूनाइटेड किंगडम और आयरलैंड में शरीर के वजन को मापने के लिए किया जाता है। 1 स्टोन = 14 पाउंड या लगभग 6.35 किलोग्राम।",
+          "question": "स्टोन का उपयोग किसलिए किया जाता है?",
+        },
+        {
+          "answer": "पाउंड में वजन को 2.20462 से विभाजित करें। उदाहरण के लिए: 150 lbs ÷ 2.20462 = 68 kg।",
+          "question": "मैं पाउंड को किलोग्राम में कैसे बदलूं?",
+        },
+      ],
+      "inputs": {
+        "fromUnit": {
+          "help": "स्रोत इकाई चुनें",
+          "label": "से इकाई",
+        },
+        "toUnit": {
+          "help": "लक्ष्य इकाई चुनें",
+          "label": "को इकाई",
+        },
+        "value": {
+          "help": "रूपांतरण के लिए वजन मान",
+          "label": "मान",
+        },
+      },
+      "keywords": [
+        "वजन",
+        "द्रव्यमान",
+        "रूपांतरण",
+        "किलोग्राम",
+        "पाउंड",
+        "औंस",
+        "टन",
+      ],
+      "outputs": {
+        "result": {
+          "help": "रूपांतरित मान",
+          "label": "परिणाम",
+        },
+      },
+      "short": "मीट्रिक, इम्पीरियल और विशेष वजन इकाइयों के बीच रूपांतरण",
+      "title": "वजन/द्रव्यमान परिवर्तक",
+    },
+    "it": {
+      "description": "Conversione tra unità di peso metriche, imperiali e specializzate con precisione",
+      "errors": {
+        "invalidWeight": "Il peso deve essere un numero positivo.",
+      },
+      "faq": [
+        {
+          "answer": "La massa è la quantità di materia in un oggetto. Il peso è la forza di gravità su quella massa. In pratica, usiamo i termini in modo intercambiabile.",
+          "question": "Qual è la differenza tra peso e massa?",
+        },
+        {
+          "answer": "Ci sono 1000 grammi in 1 chilogrammo. Questo è lo standard metrico.",
+          "question": "Quanti grammi ci sono in un chilogrammo?",
+        },
+        {
+          "answer": "La stone è utilizzata principalmente nel Regno Unito e in Irlanda per misurare il peso corporeo. 1 stone = 14 libbre o circa 6.35 chilogrammi.",
+          "question": "A cosa serve la stone?",
+        },
+        {
+          "answer": "Dividi il peso in libbre per 2.20462. Ad esempio: 150 lbs ÷ 2.20462 = 68 kg.",
+          "question": "Come converto le libbre in chilogrammi?",
+        },
+      ],
+      "inputs": {
+        "fromUnit": {
+          "help": "Selezionare unità di origine",
+          "label": "Unità di origine",
+        },
+        "toUnit": {
+          "help": "Selezionare unità di destinazione",
+          "label": "Unità di destinazione",
+        },
+        "value": {
+          "help": "Il valore di peso da convertire",
+          "label": "Valore",
+        },
+      },
+      "keywords": [
+        "peso",
+        "massa",
+        "conversione",
+        "chilogrammo",
+        "libbra",
+        "oncia",
+        "tonnellata",
+      ],
+      "outputs": {
+        "result": {
+          "help": "Valore convertito",
+          "label": "Risultato",
+        },
+      },
+      "short": "Conversione tra unità di peso metriche, imperiali e specializzate",
+      "title": "Convertitore di peso/massa",
+    },
+    "ja": {
+      "description": "メートル法、帝国法、専門的な重量単位間の正確な変換",
+      "errors": {
+        "invalidWeight": "重量は正の数である必要があります。",
+      },
+      "faq": [
+        {
+          "answer": "質量はオブジェクト内の物質の量です。重量はその質量に対する重力です。実際には、用語を相互に使用します。",
+          "question": "重量と質量の違いは何ですか?",
+        },
+        {
+          "answer": "1キログラムには1000グラムあります。これはメートル法の標準です。",
+          "question": "1キログラムに何グラムありますか?",
+        },
+        {
+          "answer": "ストーン(st)は主に英国とアイルランドで体重を測定するために使用されます。1 st = 14 ポンドまたは約 6.35 キログラム。",
+          "question": "ストーンは何に使われますか?",
+        },
+        {
+          "answer": "ポンド単位の重量を2.20462で割ります。例：150 lbs ÷ 2.20462 = 68 kg。",
+          "question": "ポンドをキログラムに変換するには?",
+        },
+      ],
+      "inputs": {
+        "fromUnit": {
+          "help": "ソース単位を選択",
+          "label": "から単位",
+        },
+        "toUnit": {
+          "help": "ターゲット単位を選択",
+          "label": "へ単位",
+        },
+        "value": {
+          "help": "変換する重量の値",
+          "label": "値",
+        },
+      },
+      "keywords": [
+        "重量",
+        "質量",
+        "変換",
+        "キログラム",
+        "ポンド",
+        "オンス",
+        "トン",
+      ],
+      "outputs": {
+        "result": {
+          "help": "変換された値",
+          "label": "結果",
+        },
+      },
+      "short": "メートル法、帝国法、専門的な重量単位間の変換",
+      "title": "重量/質量変換ツール",
+    },
+    "ko": {
+      "description": "미터법, 영국식 및 전문 무게 단위 간의 정확한 변환",
+      "errors": {
+        "invalidWeight": "무게는 양수여야 합니다.",
+      },
+      "faq": [
+        {
+          "answer": "질량은 물체의 물질 양입니다. 무게는 그 질량에 대한 중력입니다. 실제로는 용어를 교대로 사용하지만 기술적으로는 다릅니다.",
+          "question": "무게와 질량의 차이는 무엇입니까?",
+        },
+        {
+          "answer": "1킬로그램에는 1000그램이 있습니다. 이것이 미터법 표준입니다.",
+          "question": "1킬로그램에 몇 그램이 있습니까?",
+        },
+        {
+          "answer": "스톤은 주로 영국과 아일랜드에서 체중을 측정하는 데 사용됩니다. 1 스톤 = 14파운드 또는 약 6.35킬로그램.",
+          "question": "Stone(스톤)은 무엇에 사용됩니까?",
+        },
+        {
+          "answer": "파운드 단위 무게를 2.20462로 나누면 됩니다. 예: 150 lbs ÷ 2.20462 = 68 kg.",
+          "question": "파운드를 킬로그램으로 변환하려면?",
+        },
+      ],
+      "inputs": {
+        "fromUnit": {
+          "help": "소스 단위 선택",
+          "label": "단위에서",
+        },
+        "toUnit": {
+          "help": "대상 단위 선택",
+          "label": "단위로",
+        },
+        "value": {
+          "help": "변환할 무게 값",
+          "label": "값",
+        },
+      },
+      "keywords": [
+        "무게",
+        "질량",
+        "변환",
+        "킬로그램",
+        "파운드",
+        "온스",
+        "톤",
+      ],
+      "outputs": {
+        "result": {
+          "help": "변환된 값",
+          "label": "결과",
+        },
+      },
+      "short": "미터법, 영국식 및 전문 무게 단위 간 변환",
+      "title": "무게/질량 변환기",
+    },
+    "ru": {
+      "description": "Преобразование между метрическими, британскими и специализированными единицами веса с точностью",
+      "errors": {
+        "invalidWeight": "Вес должен быть положительным числом.",
+      },
+      "faq": [
+        {
+          "answer": "Масса — это количество вещества в объекте. Вес — это сила тяжести, действующая на эту массу. На практике мы используем эти термины взаимозаменяемо.",
+          "question": "В чем разница между весом и массой?",
+        },
+        {
+          "answer": "В 1 килограмме 1000 граммов. Это метрический стандарт.",
+          "question": "Сколько граммов в килограмме?",
+        },
+        {
+          "answer": "Стоун в основном используется в Великобритании и Ирландии для измерения веса тела. 1 стоун = 14 фунтов или примерно 6.35 килограмма.",
+          "question": "Для чего используется стоун?",
+        },
+        {
+          "answer": "Разделите вес в фунтах на 2.20462. Например: 150 фунтов ÷ 2.20462 = 68 кг.",
+          "question": "Как конвертировать фунты в килограммы?",
+        },
+      ],
+      "inputs": {
+        "fromUnit": {
+          "help": "Выберите исходную единицу",
+          "label": "От единицы",
+        },
+        "toUnit": {
+          "help": "Выберите целевую единицу",
+          "label": "К единице",
+        },
+        "value": {
+          "help": "Значение веса для преобразования",
+          "label": "Значение",
+        },
+      },
+      "keywords": [
+        "вес",
+        "масса",
+        "преобразование",
+        "килограмм",
+        "фунт",
+        "унция",
+        "тонна",
+      ],
+      "outputs": {
+        "result": {
+          "help": "Преобразованное значение",
+          "label": "Результат",
+        },
+      },
+      "short": "Преобразование между метрическими, британскими и специализированными единицами веса",
+      "title": "Конвертер веса/массы",
+    },
+    "tr": {
+      "description": "Metrik, İmparatorluk ve özel ağırlık birimler arasında hassaslık dönüşüm",
+      "errors": {
+        "invalidWeight": "Ağırlık pozitif bir sayı olmalıdır.",
+      },
+      "faq": [
+        {
+          "answer": "Kütle, bir nesnedeki madde miktarıdır. Ağırlık, bu kütlenin yerçekimine maruz kaldığı kuvvettir. Pratik dönüşümlerde terimler birbirinin yerine kullanılır.",
+          "question": "Ağırlık ve kütle arasındaki fark nedir?",
+        },
+        {
+          "answer": "1 kilogramda 1000 gram vardır. Bu metrik standarttır.",
+          "question": "Bir kilogramda kaç gram vardır?",
+        },
+        {
+          "answer": "Taş birimi özellikle İngiltere ve İrlanda'da vücut ağırlığını ölçmek için kullanılır. 1 taş = 14 pound veya yaklaşık 6.35 kilogram.",
+          "question": "Taş ne için kullanılır?",
+        },
+        {
+          "answer": "Pound cinsinden ağırlığı 2.20462'ye bölün. Örneğin, 150 lb ÷ 2.20462 = 68 kg.",
+          "question": "Poundları kilogramlara nasıl dönüştürürüm?",
+        },
+      ],
+      "inputs": {
+        "fromUnit": {
+          "help": "Kaynak birimi seçin",
+          "label": "Kaynak Birim",
+        },
+        "toUnit": {
+          "help": "Hedef birimi seçin",
+          "label": "Hedef Birim",
+        },
+        "value": {
+          "help": "Dönüştürülecek ağırlık değeri",
+          "label": "Değer",
+        },
+      },
+      "keywords": [
+        "ağırlık",
+        "kütle",
+        "dönüşüm",
+        "kilogram",
+        "pound",
+        "ons",
+        "ton",
+      ],
+      "outputs": {
+        "result": {
+          "help": "Dönüştürülen değer",
+          "label": "Sonuç",
+        },
+      },
+      "short": "Metrik, İmparatorluk ve özel ağırlık birimler arasında dönüşüm",
+      "title": "Ağırlık/Kütle Dönüştürücü",
+    },
+    "zh": {
+      "description": "在公制、英制和专用重量单位之间进行精确转换",
+      "errors": {
+        "invalidWeight": "重量必须是正数。",
+      },
+      "faq": [
+        {
+          "answer": "质量是物体中物质的量。重量是重力对该质量的力。在实践中，我们可互换使用这两个术语。",
+          "question": "重量和质量有什么区别?",
+        },
+        {
+          "answer": "1 公斤 = 1000 克。这是公制标准。",
+          "question": "一公斤有多少克?",
+        },
+        {
+          "answer": "Stone 主要用于英国和爱尔兰测量体重。1 stone = 14 磅或约 6.35 公斤。",
+          "question": "Stone(英石)有什么用途?",
+        },
+        {
+          "answer": "将磅数除以 2.20462。例如：150 lb ÷ 2.20462 = 68 kg。",
+          "question": "如何将磅转换为公斤?",
+        },
+      ],
+      "inputs": {
+        "fromUnit": {
+          "help": "选择源单位",
+          "label": "从单位",
+        },
+        "toUnit": {
+          "help": "选择目标单位",
+          "label": "到单位",
+        },
+        "value": {
+          "help": "要转换的重量值",
+          "label": "数值",
+        },
+      },
+      "keywords": [
+        "重量",
+        "质量",
+        "转换",
+        "千克",
+        "磅",
+        "盎司",
+        "吨",
+      ],
+      "outputs": {
+        "result": {
+          "help": "转换后的值",
+          "label": "结果",
+        },
+      },
+      "short": "在公制、英制和专用重量单位之间进行转换",
+      "title": "重量/质量转换器",
+    },
+  },
+  "icon": "scale",
+  "inputSchema": ZodObject {
+    "_cached": null,
+    "_def": {
+      "catchall": ZodNever {
+        "_def": {
+          "typeName": "ZodNever",
+        },
+        "and": [Function],
+        "array": [Function],
+        "brand": [Function],
+        "catch": [Function],
+        "default": [Function],
+        "describe": [Function],
+        "isNullable": [Function],
+        "isOptional": [Function],
+        "nullable": [Function],
+        "nullish": [Function],
+        "optional": [Function],
+        "or": [Function],
+        "parse": [Function],
+        "parseAsync": [Function],
+        "pipe": [Function],
+        "promise": [Function],
+        "readonly": [Function],
+        "refine": [Function],
+        "refinement": [Function],
+        "safeParse": [Function],
+        "safeParseAsync": [Function],
+        "spa": [Function],
+        "superRefine": [Function],
+        "transform": [Function],
+        "~standard": {
+          "validate": [Function],
+          "vendor": "zod",
+          "version": 1,
+        },
+      },
+      "shape": [Function],
+      "typeName": "ZodObject",
+      "unknownKeys": "strip",
+    },
+    "and": [Function],
+    "array": [Function],
+    "augment": [Function],
+    "brand": [Function],
+    "catch": [Function],
+    "default": [Function],
+    "describe": [Function],
+    "isNullable": [Function],
+    "isOptional": [Function],
+    "nonstrict": [Function],
+    "nullable": [Function],
+    "nullish": [Function],
+    "optional": [Function],
+    "or": [Function],
+    "parse": [Function],
+    "parseAsync": [Function],
+    "pipe": [Function],
+    "promise": [Function],
+    "readonly": [Function],
+    "refine": [Function],
+    "refinement": [Function],
+    "safeParse": [Function],
+    "safeParseAsync": [Function],
+    "spa": [Function],
+    "superRefine": [Function],
+    "transform": [Function],
+    "~standard": {
+      "validate": [Function],
+      "vendor": "zod",
+      "version": 1,
+    },
+  },
+  "inputs": [
+    {
+      "defaultValue": 1,
+      "id": "value",
+      "required": true,
+      "type": {
+        "kind": "number",
+        "max": 1000000,
+        "min": 0.001,
+        "step": 0.1,
+      },
+    },
+    {
+      "defaultValue": "kg",
+      "id": "fromUnit",
+      "required": true,
+      "type": {
+        "kind": "select",
+        "options": [
+          {
+            "label": "Kilogram (kg)",
+            "value": "kg",
+          },
+          {
+            "label": "Gram (g)",
+            "value": "g",
+          },
+          {
+            "label": "Milligram (mg)",
+            "value": "mg",
+          },
+          {
+            "label": "Pound (lb)",
+            "value": "lb",
+          },
+          {
+            "label": "Ounce (oz)",
+            "value": "oz",
+          },
+          {
+            "label": "Metric Ton (ton)",
+            "value": "ton",
+          },
+          {
+            "label": "Stone (st)",
+            "value": "stone",
+          },
+        ],
+      },
+    },
+    {
+      "defaultValue": "g",
+      "id": "toUnit",
+      "required": true,
+      "type": {
+        "kind": "select",
+        "options": [
+          {
+            "label": "Kilogram (kg)",
+            "value": "kg",
+          },
+          {
+            "label": "Gram (g)",
+            "value": "g",
+          },
+          {
+            "label": "Milligram (mg)",
+            "value": "mg",
+          },
+          {
+            "label": "Pound (lb)",
+            "value": "lb",
+          },
+          {
+            "label": "Ounce (oz)",
+            "value": "oz",
+          },
+          {
+            "label": "Metric Ton (ton)",
+            "value": "ton",
+          },
+          {
+            "label": "Stone (st)",
+            "value": "stone",
+          },
+        ],
+      },
+    },
+  ],
+  "meta": {
+    "description": "Convert between metric, imperial, and specialty weight units",
+    "references": [
+      {
+        "authority": "NIST",
+        "title": "Conversion factors for weight - NIST",
+        "url": "https://www.nist.gov/pml/wmd/metric/si-units",
+      },
+      {
+        "authority": "Wikipedia",
+        "title": "Mass conversion - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Conversion_of_units#Mass",
+      },
+    ],
+  },
+  "outputs": [
+    {
+      "format": "number",
+      "highlight": true,
+      "id": "result",
+      "precision": 4,
+    },
+  ],
+  "priority": "P0",
+  "related": [
+    "length",
+    "temperature",
+  ],
+  "slug": "weight",
+  "tags": [
+    "conversion",
+    "weight",
+    "mass",
+    "metric",
+    "imperial",
+  ],
+}
+`;

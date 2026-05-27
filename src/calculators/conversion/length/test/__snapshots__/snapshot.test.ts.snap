@@ -6,143 +6,146 @@ exports[`Length — definition snapshot > matches expected calculator shape 1`] 
   "compute": [Function],
   "i18n": {
     "ar": {
-      "description": "محول الطول",
+      "description": "تحويل بين وحدات الطول المترية والإمبراطورية بدقة عالية",
       "errors": {
         "invalidLength": "الطول يجب أن يكون رقماً موجباً.",
       },
-      "faq": [],
-      "inputs": {
-        "fromUnit": {
-          "help": "من",
-          "label": "من",
-        },
-        "toUnit": {
-          "help": "إلى",
-          "label": "إلى",
-        },
-        "value": {
-          "help": "قيمة الطول",
-          "label": "القيمة",
-        },
-      },
-      "keywords": [],
-      "options": {
-        "centimeter": "سنتيمتر",
-        "foot": "قدم",
-        "inch": "بوصة",
-        "kilometer": "كيلومتر",
-        "meter": "متر",
-        "micrometer": "ميكرومتر",
-        "mile": "ميل",
-        "millimeter": "ملليمتر",
-        "nautical_mile": "ميل بحري",
-        "yard": "ياردة",
-      },
-      "outputs": {
-        "result": {
-          "help": "النتيجة",
-          "label": "النتيجة",
-        },
-        "resultFormatted": {
-          "help": "منسق",
-          "label": "منسق",
-        },
-      },
-      "short": "تحويل الطول",
-      "title": "محول الطول",
-    },
-    "de": {
-      "description": "Kostenlos Längen- und Abstandskonverter. Konvertieren Sie Meter, Zentimeter, Kilometer, Zoll, Fuß, Meilen und mehr.",
-      "errors": {
-        "invalidLength": "Die Länge muss eine positive Zahl sein.",
-      },
       "faq": [
         {
-          "a": "1 Meter entspricht 100 Zentimetern.",
-          "q": "Wie viele cm sind in einem Meter?",
+          "answer": "هناك 100 سنتيمتر في 1 متر. هذا هو التحويل المتري الأساسي.",
+          "question": "كم عدد السنتيمترات في المتر الواحد؟",
         },
         {
-          "a": "1 Meile entspricht 5.280 Fuß.",
-          "q": "Wie viele Fuß in einer Meile?",
+          "answer": "اضرب عدد الأقدام في 0.3048. على سبيل المثال، 10 أقدام × 0.3048 = 3.048 متر.",
+          "question": "كيف أحول الأقدام إلى أمتار؟",
         },
         {
-          "a": "Eine Seemeile ist 1.852 Meter.",
-          "q": "Was ist eine Seemeile?",
+          "answer": "الميل البحري يساوي تقريباً 1.852 متر. يُستخدم في الملاحة الجوية والبحرية.",
+          "question": "ما هي الميل البحري؟",
+        },
+        {
+          "answer": "1 ميل يساوي تقريباً 1.609 كيلومترات. 1 كيلومتر يساوي تقريباً 0.621 ميل.",
+          "question": "كم عدد الكيلومترات في الميل الواحد؟",
         },
       ],
       "inputs": {
         "fromUnit": {
-          "help": "Wählen Sie die Ausgangseinheit",
-          "label": "Von",
+          "help": "اختر الوحدة المصدر",
+          "label": "من الوحدة",
         },
         "toUnit": {
-          "help": "Wählen Sie die Zieleinheit",
-          "label": "Zu",
+          "help": "اختر الوحدة المستهدفة",
+          "label": "إلى الوحدة",
         },
         "value": {
-          "help": "Der zu konvertierende Längenwert",
+          "help": "قيمة الطول المراد تحويلها",
+          "label": "القيمة",
+        },
+      },
+      "keywords": [
+        "طول",
+        "مسافة",
+        "متر",
+        "كيلومتر",
+        "قدم",
+        "ميل",
+        "تحويل",
+      ],
+      "outputs": {
+        "result": {
+          "help": "القيمة المحولة",
+          "label": "النتيجة",
+        },
+      },
+      "short": "تحويل فوري بين وحدات الطول المترية والإمبراطورية",
+      "title": "محول الطول",
+    },
+    "de": {
+      "description": "Umrechnung zwischen metrischen und imperialen Längeneinheiten mit hoher Genauigkeit",
+      "errors": {
+        "invalidLength": "Länge muss eine positive Zahl sein.",
+      },
+      "faq": [
+        {
+          "answer": "Es gibt 100 Zentimeter in 1 Meter. Dies ist die grundlegende metrische Umrechnung.",
+          "question": "Wie viele Zentimeter sind in einem Meter?",
+        },
+        {
+          "answer": "Multiplizieren Sie die Anzahl der Fuß mit 0.3048. Beispiel: 10 Fuß × 0.3048 = 3.048 Meter.",
+          "question": "Wie konvertiere ich Fuß in Meter?",
+        },
+        {
+          "answer": "Eine Seemeile entspricht etwa 1.852 Metern. Sie wird häufig in der Luftfahrt verwendet.",
+          "question": "Was ist eine Seemeile?",
+        },
+        {
+          "answer": "1 Meile entspricht etwa 1.609 Kilometern. 1 Kilometer entspricht etwa 0.621 Meilen.",
+          "question": "Wie viele Kilometer sind in einer Meile?",
+        },
+      ],
+      "inputs": {
+        "fromUnit": {
+          "help": "Ausgangseinheit auswählen",
+          "label": "Von Einheit",
+        },
+        "toUnit": {
+          "help": "Zieleinheit auswählen",
+          "label": "Zu Einheit",
+        },
+        "value": {
+          "help": "Der umzuwandelnde Längenwert",
           "label": "Wert",
         },
       },
       "keywords": [
-        "Längenmessgerät",
-        "Abstandskonverter",
-        "metrische Umrechnung",
-        "imperiale Umrechnung",
-        "Einheitskonverter",
+        "länge",
+        "entfernung",
+        "meter",
+        "kilometer",
+        "fuß",
+        "meile",
+        "umrechnung",
       ],
-      "options": {
-        "centimeter": "Zentimeter (cm)",
-        "foot": "Fuß (ft)",
-        "inch": "Zoll (in)",
-        "kilometer": "Kilometer (km)",
-        "meter": "Meter (m)",
-        "micrometer": "Mikrometer (μm)",
-        "mile": "Meile (mi)",
-        "millimeter": "Millimeter (mm)",
-        "nautical_mile": "Seemeile (nm)",
-        "yard": "Yard (yd)",
-      },
       "outputs": {
         "result": {
-          "help": "Konvertierter Wert",
+          "help": "Umgewandelter Wert",
           "label": "Ergebnis",
         },
-        "resultFormatted": {
-          "help": "Menschenlesbares Format",
-          "label": "Formatiert",
-        },
       },
-      "short": "Konvertieren Sie metrische und imperiale Längenmessgeräte sofort.",
-      "title": "Längenmessgerät",
+      "short": "Sofortige Umrechnung zwischen metrischen und imperialen Längeneinheiten",
+      "title": "Längenumrechner",
     },
     "en": {
-      "description": "Free length and distance converter. Convert meters, centimeters, kilometers, inches, feet, miles and more.",
+      "description": "Convert between metric and imperial length units with high precision",
       "errors": {
         "invalidLength": "Length must be a positive number.",
       },
       "faq": [
         {
-          "a": "1 meter equals 100 centimeters.",
-          "q": "How many cm are in a meter?",
+          "answer": "There are 100 centimeters in 1 meter. This is the basic metric conversion.",
+          "question": "How many centimeters are in a meter?",
         },
         {
-          "a": "1 mile equals 5,280 feet.",
-          "q": "How many feet in a mile?",
+          "answer": "Multiply the number of feet by 0.3048 to get meters. For example, 10 feet × 0.3048 = 3.048 meters.",
+          "question": "How do I convert feet to meters?",
         },
         {
-          "a": "A nautical mile is 1,852 meters.",
-          "q": "What is a nautical mile?",
+          "answer": "A nautical mile is approximately 1,852 meters. It is commonly used in aviation and maritime navigation.",
+          "question": "What is a nautical mile?",
+        },
+        {
+          "answer": "1 mile equals approximately 1.609 kilometers. Conversely, 1 kilometer equals about 0.621 miles.",
+          "question": "How many kilometers are in a mile?",
         },
       ],
       "inputs": {
         "fromUnit": {
           "help": "Select source unit",
-          "label": "From",
+          "label": "From Unit",
         },
         "toUnit": {
           "help": "Select target unit",
-          "label": "To",
+          "label": "To Unit",
         },
         "value": {
           "help": "The length value to convert",
@@ -150,64 +153,54 @@ exports[`Length — definition snapshot > matches expected calculator shape 1`] 
         },
       },
       "keywords": [
-        "length converter",
-        "distance converter",
-        "metric conversion",
-        "imperial conversion",
-        "unit converter",
+        "length",
+        "distance",
+        "meter",
+        "kilometer",
+        "foot",
+        "mile",
+        "conversion",
       ],
-      "options": {
-        "centimeter": "Centimeter (cm)",
-        "foot": "Foot (ft)",
-        "inch": "Inch (in)",
-        "kilometer": "Kilometer (km)",
-        "meter": "Meter (m)",
-        "micrometer": "Micrometer (μm)",
-        "mile": "Mile (mi)",
-        "millimeter": "Millimeter (mm)",
-        "nautical_mile": "Nautical Mile (nm)",
-        "yard": "Yard (yd)",
-      },
       "outputs": {
         "result": {
           "help": "Converted value",
           "label": "Result",
         },
-        "resultFormatted": {
-          "help": "Human-readable format",
-          "label": "Formatted",
-        },
       },
-      "short": "Convert between metric and imperial length units instantly.",
+      "short": "Convert between metric and imperial length units instantly",
       "title": "Length Converter",
     },
     "es": {
-      "description": "Convertidor de longitud y distancia gratuito. Convierta metros, centímetros, kilómetros, pulgadas, pies, millas y más.",
+      "description": "Conversión entre unidades de longitud métricas e imperiales con alta precisión",
       "errors": {
         "invalidLength": "La longitud debe ser un número positivo.",
       },
       "faq": [
         {
-          "a": "1 metro equivale a 100 centímetros.",
-          "q": "¿Cuántos cm en un metro?",
+          "answer": "Hay 100 centímetros en 1 metro. Esta es la conversión métrica básica.",
+          "question": "¿Cuántos centímetros hay en un metro?",
         },
         {
-          "a": "1 milla equivale a 5 280 pies.",
-          "q": "¿Cuántos pies en una milla?",
+          "answer": "Multiplique el número de pies por 0.3048. Por ejemplo, 10 pies × 0.3048 = 3.048 metros.",
+          "question": "¿Cómo convierto pies a metros?",
         },
         {
-          "a": "Una milla náutica son 1 852 metros.",
-          "q": "¿Qué es una milla náutica?",
+          "answer": "Una milla náutica equivale a aproximadamente 1.852 metros. Se utiliza en aviación y navegación marítima.",
+          "question": "¿Qué es una milla náutica?",
+        },
+        {
+          "answer": "1 milla equivale a aproximadamente 1.609 kilómetros. 1 kilómetro equivale a aproximadamente 0.621 millas.",
+          "question": "¿Cuántos kilómetros hay en una milla?",
         },
       ],
       "inputs": {
         "fromUnit": {
-          "help": "Seleccione la unidad de origen",
-          "label": "De",
+          "help": "Seleccione unidad de origen",
+          "label": "Unidad de origen",
         },
         "toUnit": {
-          "help": "Seleccione la unidad de destino",
-          "label": "Para",
+          "help": "Seleccione unidad de destino",
+          "label": "Unidad de destino",
         },
         "value": {
           "help": "El valor de longitud a convertir",
@@ -215,64 +208,54 @@ exports[`Length — definition snapshot > matches expected calculator shape 1`] 
         },
       },
       "keywords": [
-        "convertidor de longitud",
-        "convertidor de distancia",
-        "conversión métrica",
-        "conversión imperial",
-        "convertidor de unidades",
+        "longitud",
+        "distancia",
+        "metro",
+        "kilómetro",
+        "pie",
+        "milla",
+        "conversión",
       ],
-      "options": {
-        "centimeter": "Centímetro (cm)",
-        "foot": "Pie (ft)",
-        "inch": "Pulgada (in)",
-        "kilometer": "Kilómetro (km)",
-        "meter": "Metro (m)",
-        "micrometer": "Micrómetro (μm)",
-        "mile": "Milla (mi)",
-        "millimeter": "Milímetro (mm)",
-        "nautical_mile": "Milla Náutica (nm)",
-        "yard": "Yarda (yd)",
-      },
       "outputs": {
         "result": {
           "help": "Valor convertido",
           "label": "Resultado",
         },
-        "resultFormatted": {
-          "help": "Formato legible",
-          "label": "Formateado",
-        },
       },
-      "short": "Convierta unidades de longitud métricas e imperiales al instante.",
-      "title": "Convertidor de Longitud",
+      "short": "Conversión instantánea entre unidades de longitud métricas e imperiales",
+      "title": "Conversor de longitud",
     },
     "fr": {
-      "description": "Convertisseur de longueur et de distance gratuit. Convertissez les mètres, centimètres, kilomètres, pouces, pieds, miles et plus.",
+      "description": "Conversion entre les unités de longueur métriques et impériales avec haute précision",
       "errors": {
         "invalidLength": "La longueur doit être un nombre positif.",
       },
       "faq": [
         {
-          "a": "1 mètre équivaut à 100 centimètres.",
-          "q": "Combien de cm dans un mètre?",
+          "answer": "Il y a 100 centimètres dans 1 mètre. C'est la conversion métrique de base.",
+          "question": "Combien de centimètres y a-t-il dans un mètre?",
         },
         {
-          "a": "1 mille équivaut à 5 280 pieds.",
-          "q": "Combien de pieds dans un mille?",
+          "answer": "Multipliez le nombre de pieds par 0.3048. Par exemple, 10 pieds × 0.3048 = 3.048 mètres.",
+          "question": "Comment convertir les pieds en mètres?",
         },
         {
-          "a": "Un mille marin est 1 852 mètres.",
-          "q": "Qu'est-ce qu'un mille marin?",
+          "answer": "Un mille nautique équivaut à environ 1.852 mètres. Il est utilisé en aviation et navigation maritime.",
+          "question": "Qu'est-ce qu'un mille nautique?",
+        },
+        {
+          "answer": "1 mille équivaut à environ 1.609 kilomètres. 1 kilomètre équivaut à environ 0.621 mille.",
+          "question": "Combien de kilomètres y a-t-il dans un mille?",
         },
       ],
       "inputs": {
         "fromUnit": {
           "help": "Sélectionnez l'unité source",
-          "label": "De",
+          "label": "Unité de source",
         },
         "toUnit": {
           "help": "Sélectionnez l'unité cible",
-          "label": "Vers",
+          "label": "Unité cible",
         },
         "value": {
           "help": "La valeur de longueur à convertir",
@@ -280,110 +263,109 @@ exports[`Length — definition snapshot > matches expected calculator shape 1`] 
         },
       },
       "keywords": [
-        "convertisseur de longueur",
-        "convertisseur de distance",
-        "conversion métrique",
-        "conversion impériale",
-        "convertisseur d'unités",
+        "longueur",
+        "distance",
+        "mètre",
+        "kilomètre",
+        "pied",
+        "mile",
+        "conversion",
       ],
-      "options": {
-        "centimeter": "Centimètre (cm)",
-        "foot": "Pied (pi)",
-        "inch": "Pouce (po)",
-        "kilometer": "Kilomètre (km)",
-        "meter": "Mètre (m)",
-        "micrometer": "Micromètre (μm)",
-        "mile": "Mille (mi)",
-        "millimeter": "Millimètre (mm)",
-        "nautical_mile": "Mille Marin (nm)",
-        "yard": "Yard (yd)",
-      },
       "outputs": {
         "result": {
           "help": "Valeur convertie",
           "label": "Résultat",
         },
-        "resultFormatted": {
-          "help": "Format lisible par l'homme",
-          "label": "Formaté",
-        },
       },
-      "short": "Convertissez les unités de longueur métriques et impériales instantanément.",
-      "title": "Convertisseur de Longueur",
+      "short": "Conversion instantanée entre les unités de longueur métriques et impériales",
+      "title": "Convertisseur de longueur",
     },
     "hi": {
-      "description": "कनवर्टर",
+      "description": "मीट्रिक और इंपीरियल लंबाई इकाइयों के बीच उच्च सटीकता रूपांतरण",
       "errors": {
         "invalidLength": "लंबाई एक सकारात्मक संख्या होनी चाहिए।",
       },
-      "faq": [],
+      "faq": [
+        {
+          "answer": "1 मीटर में 100 सेंटीमीटर होते हैं। यह बुनियादी मीट्रिक रूपांतरण है।",
+          "question": "एक मीटर में कितने सेंटीमीटर होते हैं?",
+        },
+        {
+          "answer": "फीट की संख्या को 0.3048 से गुणा करें। उदाहरण: 10 फीट × 0.3048 = 3.048 मीटर।",
+          "question": "मैं फीट को मीटर में कैसे बदलूं?",
+        },
+        {
+          "answer": "समुद्री मील लगभग 1,852 मीटर के बराबर है। इसका उपयोग विमान और समुद्री नेविगेशन में होता है।",
+          "question": "समुद्री मील क्या है?",
+        },
+        {
+          "answer": "1 मील लगभग 1.609 किलोमीटर के बराबर है। 1 किलोमीटर लगभग 0.621 मील के बराबर है।",
+          "question": "एक मील में कितने किलोमीटर होते हैं?",
+        },
+      ],
       "inputs": {
         "fromUnit": {
-          "help": "से",
-          "label": "से",
+          "help": "स्रोत इकाई चुनें",
+          "label": "से इकाई",
         },
         "toUnit": {
-          "help": "को",
-          "label": "को",
+          "help": "लक्ष्य इकाई चुनें",
+          "label": "को इकाई",
         },
         "value": {
-          "help": "मान",
+          "help": "रूपांतरण के लिए लंबाई मान",
           "label": "मान",
         },
       },
-      "keywords": [],
-      "options": {
-        "centimeter": "सेंटीमीटर",
-        "foot": "पैर",
-        "inch": "इंच",
-        "kilometer": "किलोमीटर",
-        "meter": "मीटर",
-        "micrometer": "माइक्रोमीटर",
-        "mile": "मील",
-        "millimeter": "मिलीमीटर",
-        "nautical_mile": "नॉटिकल मील",
-        "yard": "यार्ड",
-      },
+      "keywords": [
+        "लंबाई",
+        "दूरी",
+        "मीटर",
+        "किलोमीटर",
+        "फीट",
+        "मील",
+        "रूपांतरण",
+      ],
       "outputs": {
         "result": {
-          "help": "परिणाम",
+          "help": "रूपांतरित मान",
           "label": "परिणाम",
         },
-        "resultFormatted": {
-          "help": "फॉर्मेट किया गया",
-          "label": "फॉर्मेट किया गया",
-        },
       },
-      "short": "कन्वर्ट",
-      "title": "लंबाई कनवर्टर",
+      "short": "मीट्रिक और इंपीरियल लंबाई इकाइयों के बीच तत्काल रूपांतरण",
+      "title": "लंबाई परिवर्तक",
     },
     "it": {
-      "description": "Convertitore di lunghezza e distanza gratuito. Converti metri, centimetri, chilometri, pollici, piedi, miglia e altro.",
+      "description": "Conversione tra unità di lunghezza metriche e imperiali con alta precisione",
       "errors": {
         "invalidLength": "La lunghezza deve essere un numero positivo.",
       },
       "faq": [
         {
-          "a": "1 metro equivale a 100 centimetri.",
-          "q": "Quanti cm in un metro?",
+          "answer": "Ci sono 100 centimetri in 1 metro. Questa è la conversione metrica di base.",
+          "question": "Quanti centimetri ci sono in un metro?",
         },
         {
-          "a": "1 miglio equivale a 5 280 piedi.",
-          "q": "Quanti piedi in un miglio?",
+          "answer": "Moltiplicare il numero di piedi per 0.3048. Ad esempio, 10 piedi × 0.3048 = 3.048 metri.",
+          "question": "Come converto i piedi in metri?",
         },
         {
-          "a": "Un miglio nautico è 1 852 metri.",
-          "q": "Cos'è un miglio nautico?",
+          "answer": "Un miglio nautico equivale a circa 1.852 metri. È utilizzato in aviazione e navigazione marittima.",
+          "question": "Cos'è un miglio nautico?",
+        },
+        {
+          "answer": "1 miglio equivale a circa 1.609 chilometri. 1 chilometro equivale a circa 0.621 miglia.",
+          "question": "Quanti chilometri ci sono in un miglio?",
         },
       ],
       "inputs": {
         "fromUnit": {
-          "help": "Seleziona l'unità di origine",
-          "label": "Da",
+          "help": "Selezionare unità di origine",
+          "label": "Unità di origine",
         },
         "toUnit": {
-          "help": "Seleziona l'unità di destinazione",
-          "label": "A",
+          "help": "Selezionare unità di destinazione",
+          "label": "Unità di destinazione",
         },
         "value": {
           "help": "Il valore di lunghezza da convertire",
@@ -391,202 +373,219 @@ exports[`Length — definition snapshot > matches expected calculator shape 1`] 
         },
       },
       "keywords": [
-        "convertitore di lunghezza",
-        "convertitore di distanza",
-        "conversione metrica",
-        "conversione imperiale",
-        "convertitore di unità",
+        "lunghezza",
+        "distanza",
+        "metro",
+        "chilometro",
+        "piede",
+        "miglio",
+        "conversione",
       ],
-      "options": {
-        "centimeter": "Centimetro (cm)",
-        "foot": "Piede (ft)",
-        "inch": "Pollice (in)",
-        "kilometer": "Chilometro (km)",
-        "meter": "Metro (m)",
-        "micrometer": "Micrometro (μm)",
-        "mile": "Miglio (mi)",
-        "millimeter": "Millimetro (mm)",
-        "nautical_mile": "Miglio Nautico (nm)",
-        "yard": "Iarda (yd)",
-      },
       "outputs": {
         "result": {
           "help": "Valore convertito",
           "label": "Risultato",
         },
-        "resultFormatted": {
-          "help": "Formato leggibile",
-          "label": "Formattato",
-        },
       },
-      "short": "Converti istantaneamente le unità di lunghezza metriche e imperiali.",
-      "title": "Convertitore di Lunghezza",
+      "short": "Conversione istantanea tra unità di lunghezza metriche e imperiali",
+      "title": "Convertitore di lunghezza",
     },
     "ja": {
-      "description": "コンバーター",
+      "description": "メートル法とヤード・ポンド法の長さの単位間の高精度変換",
       "errors": {
         "invalidLength": "長さは正の数である必要があります。",
       },
-      "faq": [],
+      "faq": [
+        {
+          "answer": "1 メートルは 100 センチメートルです。これは基本的なメートル法の変換です。",
+          "question": "1 メートルには何センチメートルありますか?",
+        },
+        {
+          "answer": "フィート数に 0.3048 を掛けます。例: 10 フィート × 0.3048 = 3.048 メートル。",
+          "question": "フィートをメートルに変換するにはどうすればいいですか?",
+        },
+        {
+          "answer": "海里は約 1,852 メートルです。航空と海上ナビゲーションで使用されます。",
+          "question": "海里とは何ですか?",
+        },
+        {
+          "answer": "1 マイルは約 1.609 キロメートルです。1 キロメートルは約 0.621 マイルです。",
+          "question": "1 マイルに何キロメートルありますか?",
+        },
+      ],
       "inputs": {
         "fromUnit": {
-          "help": "から",
-          "label": "から",
+          "help": "ソース単位を選択",
+          "label": "から単位",
         },
         "toUnit": {
-          "help": "へ",
-          "label": "へ",
+          "help": "ターゲット単位を選択",
+          "label": "へ単位",
         },
         "value": {
-          "help": "値",
+          "help": "変換する長さの値",
           "label": "値",
         },
       },
-      "keywords": [],
-      "options": {
-        "centimeter": "センチメートル",
-        "foot": "フィート",
-        "inch": "インチ",
-        "kilometer": "キロメートル",
-        "meter": "メートル",
-        "micrometer": "マイクロメーター",
-        "mile": "マイル",
-        "millimeter": "ミリメートル",
-        "nautical_mile": "海里",
-        "yard": "ヤード",
-      },
+      "keywords": [
+        "長さ",
+        "距離",
+        "メートル",
+        "キロメートル",
+        "フィート",
+        "マイル",
+        "変換",
+      ],
       "outputs": {
         "result": {
-          "help": "結果",
+          "help": "変換された値",
           "label": "結果",
         },
-        "resultFormatted": {
-          "help": "フォーマット",
-          "label": "フォーマット",
-        },
       },
-      "short": "変換",
+      "short": "メートル法とヤード・ポンド法の長さの単位間の即座の変換",
       "title": "長さコンバーター",
     },
     "ko": {
-      "description": "변환기",
+      "description": "미터법과 영국식 길이 단위 간의 고정밀 변환",
       "errors": {
         "invalidLength": "길이는 양수여야 합니다.",
       },
-      "faq": [],
+      "faq": [
+        {
+          "answer": "1 미터는 100 센티미터입니다. 이는 기본 미터법 변환입니다.",
+          "question": "1 미터에는 몇 센티미터가 있습니까?",
+        },
+        {
+          "answer": "피트 수에 0.3048을 곱합니다. 예: 10 피트 × 0.3048 = 3.048 미터.",
+          "question": "피트를 미터로 변환하려면 어떻게 합니까?",
+        },
+        {
+          "answer": "해리는 약 1,852 미터입니다. 항공 및 해상 항법에 사용됩니다.",
+          "question": "해리(해상마일)는 무엇입니까?",
+        },
+        {
+          "answer": "1 마일은 약 1.609 킬로미터입니다. 1 킬로미터는 약 0.621 마일입니다.",
+          "question": "1 마일에는 몇 킬로미터가 있습니까?",
+        },
+      ],
       "inputs": {
         "fromUnit": {
-          "help": "출발지",
-          "label": "출발지",
+          "help": "소스 단위 선택",
+          "label": "단위에서",
         },
         "toUnit": {
-          "help": "도착지",
-          "label": "도착지",
+          "help": "대상 단위 선택",
+          "label": "단위로",
         },
         "value": {
-          "help": "값",
+          "help": "변환할 길이 값",
           "label": "값",
         },
       },
-      "keywords": [],
-      "options": {
-        "centimeter": "센티미터",
-        "foot": "피트",
-        "inch": "인치",
-        "kilometer": "킬로미터",
-        "meter": "미터",
-        "micrometer": "마이크로미터",
-        "mile": "마일",
-        "millimeter": "밀리미터",
-        "nautical_mile": "해리",
-        "yard": "야드",
-      },
+      "keywords": [
+        "길이",
+        "거리",
+        "미터",
+        "킬로미터",
+        "피트",
+        "마일",
+        "변환",
+      ],
       "outputs": {
         "result": {
-          "help": "결과",
+          "help": "변환된 값",
           "label": "결과",
         },
-        "resultFormatted": {
-          "help": "형식화됨",
-          "label": "형식화됨",
-        },
       },
-      "short": "변환",
+      "short": "미터법과 영국식 길이 단위 간 즉시 변환",
       "title": "길이 변환기",
     },
     "ru": {
-      "description": "Конвертер",
+      "description": "Преобразование между метрическими и имперскими единицами длины с высокой точностью",
       "errors": {
         "invalidLength": "Длина должна быть положительным числом.",
       },
-      "faq": [],
+      "faq": [
+        {
+          "answer": "В 1 метре 100 сантиметров. Это основное метрическое преобразование.",
+          "question": "Сколько сантиметров в метре?",
+        },
+        {
+          "answer": "Умножьте количество футов на 0.3048. Например, 10 футов × 0.3048 = 3.048 метра.",
+          "question": "Как конвертировать футы в метры?",
+        },
+        {
+          "answer": "Морская миля составляет примерно 1.852 метра. Она используется в авиации и морской навигации.",
+          "question": "Что такое морская миля?",
+        },
+        {
+          "answer": "1 миля равна примерно 1.609 километрам. 1 километр равен примерно 0.621 мили.",
+          "question": "Сколько километров в миле?",
+        },
+      ],
       "inputs": {
         "fromUnit": {
-          "help": "От",
-          "label": "От",
+          "help": "Выберите исходную единицу",
+          "label": "От единицы",
         },
         "toUnit": {
-          "help": "В",
-          "label": "В",
+          "help": "Выберите целевую единицу",
+          "label": "К единице",
         },
         "value": {
-          "help": "Значение",
+          "help": "Значение длины для преобразования",
           "label": "Значение",
         },
       },
-      "keywords": [],
-      "options": {
-        "centimeter": "Сантиметр",
-        "foot": "Фут",
-        "inch": "Дюйм",
-        "kilometer": "Километр",
-        "meter": "Метр",
-        "micrometer": "Микрометр",
-        "mile": "Миля",
-        "millimeter": "Миллиметр",
-        "nautical_mile": "Морская миля",
-        "yard": "Ярд",
-      },
+      "keywords": [
+        "длина",
+        "расстояние",
+        "метр",
+        "километр",
+        "фут",
+        "миля",
+        "преобразование",
+      ],
       "outputs": {
         "result": {
-          "help": "Результат",
+          "help": "Преобразованное значение",
           "label": "Результат",
         },
-        "resultFormatted": {
-          "help": "Отформатирован",
-          "label": "Отформатирован",
-        },
       },
-      "short": "Конвертация",
-      "title": "Конвертер Длины",
+      "short": "Мгновенное преобразование между метрическими и имперскими единицами длины",
+      "title": "Конвертер длины",
     },
     "tr": {
-      "description": "Ücretsiz uzunluk ve mesafe dönüştürücü. Meter, santimetre, kilometre, inç, fit, mil ve daha fazlasını dönüştürün.",
+      "description": "Metrik ve imparatorluk uzunluk birimlerinde yüksek kesinlikle dönüşüm",
       "errors": {
         "invalidLength": "Uzunluk pozitif bir sayı olmalıdır.",
       },
       "faq": [
         {
-          "a": "1 metre 100 santimetreye eşittir.",
-          "q": "Bir metrede kaç santimetre vardır?",
+          "answer": "1 metrede 100 santimetre vardır. Bu temel metrik dönüşümdür.",
+          "question": "Bir metrede kaç santimetre vardır?",
         },
         {
-          "a": "1 mil 5.280 fit eşittir.",
-          "q": "Bir milde kaç fit vardır?",
+          "answer": "Feet sayısını 0.3048 ile çarpın. Örneğin, 10 feet × 0.3048 = 3.048 metre.",
+          "question": "Feet'i metreye nasıl dönüştürürüm?",
         },
         {
-          "a": "Deniz mili 1.852 metredir.",
-          "q": "Deniz mili nedir?",
+          "answer": "Deniz mili yaklaşık 1.852 metredir. Havacılık ve denizcilik navigasyonunda kullanılır.",
+          "question": "Deniz mili nedir?",
+        },
+        {
+          "answer": "1 mil yaklaşık 1.609 kilometreye eşittir. 1 kilometre yaklaşık 0.621 mildir.",
+          "question": "Bir milde kaç kilometre vardır?",
         },
       ],
       "inputs": {
         "fromUnit": {
           "help": "Kaynak birimi seçin",
-          "label": "Kaynak",
+          "label": "Kaynak Birim",
         },
         "toUnit": {
           "help": "Hedef birimi seçin",
-          "label": "Hedef",
+          "label": "Hedef Birim",
         },
         "value": {
           "help": "Dönüştürülecek uzunluk değeri",
@@ -594,81 +593,76 @@ exports[`Length — definition snapshot > matches expected calculator shape 1`] 
         },
       },
       "keywords": [
-        "uzunluk dönüştürücü",
-        "mesafe dönüştürücü",
-        "metrik dönüşüm",
-        "imperial dönüşüm",
-        "birim dönüştürücü",
+        "uzunluk",
+        "mesafe",
+        "metre",
+        "kilometre",
+        "feet",
+        "mil",
+        "dönüşüm",
       ],
-      "options": {
-        "centimeter": "Santimetre (cm)",
-        "foot": "Fit (ft)",
-        "inch": "İnç (in)",
-        "kilometer": "Kilometre (km)",
-        "meter": "Metre (m)",
-        "micrometer": "Mikrometr (μm)",
-        "mile": "Mil (mi)",
-        "millimeter": "Milimetre (mm)",
-        "nautical_mile": "Deniz Mili (nm)",
-        "yard": "Yard (yd)",
-      },
       "outputs": {
         "result": {
           "help": "Dönüştürülen değer",
           "label": "Sonuç",
         },
-        "resultFormatted": {
-          "help": "İnsan tarafından okunabilir biçim",
-          "label": "Formatlanmış",
-        },
       },
-      "short": "Metrik ve imperial uzunluk birimlerini anında dönüştürün.",
+      "short": "Metrik ve imparatorluk uzunluk birimleri arasında anında dönüşüm",
       "title": "Uzunluk Dönüştürücü",
     },
     "zh": {
-      "description": "转换器",
+      "description": "公制和英制长度单位之间的高精度转换",
       "errors": {
         "invalidLength": "长度必须是正数。",
       },
-      "faq": [],
+      "faq": [
+        {
+          "answer": "1 米有 100 厘米。这是基本的公制转换。",
+          "question": "一米有多少厘米?",
+        },
+        {
+          "answer": "将英尺数乘以 0.3048。例如，10 英尺 × 0.3048 = 3.048 米。",
+          "question": "我如何将英尺转换为米?",
+        },
+        {
+          "answer": "海里约等于 1,852 米。它用于航空和海上导航。",
+          "question": "什么是海里?",
+        },
+        {
+          "answer": "1 英里约等于 1.609 公里。1 公里约等于 0.621 英里。",
+          "question": "一英里有多少公里?",
+        },
+      ],
       "inputs": {
         "fromUnit": {
-          "help": "从",
-          "label": "从",
+          "help": "选择源单位",
+          "label": "从单位",
         },
         "toUnit": {
-          "help": "至",
-          "label": "至",
+          "help": "选择目标单位",
+          "label": "到单位",
         },
         "value": {
-          "help": "数值",
+          "help": "要转换的长度值",
           "label": "数值",
         },
       },
-      "keywords": [],
-      "options": {
-        "centimeter": "厘米",
-        "foot": "英尺",
-        "inch": "英寸",
-        "kilometer": "公里",
-        "meter": "米",
-        "micrometer": "微米",
-        "mile": "英里",
-        "millimeter": "毫米",
-        "nautical_mile": "海里",
-        "yard": "码",
-      },
+      "keywords": [
+        "长度",
+        "距离",
+        "米",
+        "公里",
+        "英尺",
+        "英里",
+        "转换",
+      ],
       "outputs": {
         "result": {
-          "help": "结果",
+          "help": "转换后的值",
           "label": "结果",
         },
-        "resultFormatted": {
-          "help": "已格式化",
-          "label": "已格式化",
-        },
       },
-      "short": "转换",
+      "short": "公制和英制长度单位之间的即时转换",
       "title": "长度转换器",
     },
   },
@@ -766,43 +760,43 @@ exports[`Length — definition snapshot > matches expected calculator shape 1`] 
         "kind": "select",
         "options": [
           {
-            "i18nKey": "meter",
+            "label": "Meter (m)",
             "value": "m",
           },
           {
-            "i18nKey": "centimeter",
+            "label": "Centimeter (cm)",
             "value": "cm",
           },
           {
-            "i18nKey": "millimeter",
+            "label": "Millimeter (mm)",
             "value": "mm",
           },
           {
-            "i18nKey": "kilometer",
+            "label": "Kilometer (km)",
             "value": "km",
           },
           {
-            "i18nKey": "inch",
+            "label": "Inch (in)",
             "value": "in",
           },
           {
-            "i18nKey": "foot",
+            "label": "Foot (ft)",
             "value": "ft",
           },
           {
-            "i18nKey": "yard",
+            "label": "Yard (yd)",
             "value": "yd",
           },
           {
-            "i18nKey": "mile",
+            "label": "Mile (mi)",
             "value": "mi",
           },
           {
-            "i18nKey": "nautical_mile",
+            "label": "Nautical Mile (nm)",
             "value": "nm",
           },
           {
-            "i18nKey": "micrometer",
+            "label": "Micrometer (μm)",
             "value": "μm",
           },
         ],
@@ -816,43 +810,43 @@ exports[`Length — definition snapshot > matches expected calculator shape 1`] 
         "kind": "select",
         "options": [
           {
-            "i18nKey": "meter",
+            "label": "Meter (m)",
             "value": "m",
           },
           {
-            "i18nKey": "centimeter",
+            "label": "Centimeter (cm)",
             "value": "cm",
           },
           {
-            "i18nKey": "millimeter",
+            "label": "Millimeter (mm)",
             "value": "mm",
           },
           {
-            "i18nKey": "kilometer",
+            "label": "Kilometer (km)",
             "value": "km",
           },
           {
-            "i18nKey": "inch",
+            "label": "Inch (in)",
             "value": "in",
           },
           {
-            "i18nKey": "foot",
+            "label": "Foot (ft)",
             "value": "ft",
           },
           {
-            "i18nKey": "yard",
+            "label": "Yard (yd)",
             "value": "yd",
           },
           {
-            "i18nKey": "mile",
+            "label": "Mile (mi)",
             "value": "mi",
           },
           {
-            "i18nKey": "nautical_mile",
+            "label": "Nautical Mile (nm)",
             "value": "nm",
           },
           {
-            "i18nKey": "micrometer",
+            "label": "Micrometer (μm)",
             "value": "μm",
           },
         ],
@@ -860,7 +854,7 @@ exports[`Length — definition snapshot > matches expected calculator shape 1`] 
     },
   ],
   "meta": {
-    "formulaLatex": "\\text{result} = \\text{value} \\times \\frac{\\text{toBase unit}}{\\text{fromBase unit}}",
+    "description": "Convert between metric and imperial length units",
     "references": [
       {
         "authority": "Wikipedia",
@@ -869,8 +863,8 @@ exports[`Length — definition snapshot > matches expected calculator shape 1`] 
       },
       {
         "authority": "Wikipedia",
-        "title": "International yard and pound",
-        "url": "https://en.wikipedia.org/wiki/International_yard_and_pound",
+        "title": "Conversion of units of length",
+        "url": "https://en.wikipedia.org/wiki/Conversion_of_units#Length",
       },
     ],
   },
@@ -880,10 +874,6 @@ exports[`Length — definition snapshot > matches expected calculator shape 1`] 
       "highlight": true,
       "id": "result",
       "precision": 4,
-    },
-    {
-      "format": "text",
-      "id": "resultFormatted",
     },
   ],
   "priority": "P0",
