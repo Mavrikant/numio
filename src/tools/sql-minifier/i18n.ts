@@ -1,0 +1,26 @@
+import type { ToolI18n } from "@/types/tool";
+import { COMMON_UI } from "../_shared/ui";
+
+const data = {
+  en: { title: "SQL Minifier", short: "Strip comments and whitespace to minify SQL.", description: "Free SQL minifier. Remove comments and collapse extra whitespace to put a query on one compact line — string literals are preserved. Runs entirely in your browser.", keywords: ["sql minifier", "minify sql", "sql compressor", "remove sql comments", "sql one line"], input: "SQL", output: "Minified SQL" },
+  tr: { title: "SQL Küçültücü", short: "SQL'i küçültmek için yorumları ve boşlukları kaldırın.", description: "Ücretsiz SQL küçültücü. Bir sorguyu kompakt tek satıra getirmek için yorumları kaldırın ve fazla boşlukları daraltın — dize değişmezleri korunur. Tamamen tarayıcınızda çalışır.", keywords: ["sql küçültücü", "sql küçült", "sql sıkıştırıcı", "sql yorum kaldırma", "sql tek satır"], input: "SQL", output: "Küçültülmüş SQL" },
+  de: { title: "SQL-Minifizierer", short: "Kommentare und Leerzeichen entfernen, um SQL zu minifizieren.", description: "Kostenloser SQL-Minifizierer. Entfernen Sie Kommentare und reduzieren Sie überflüssige Leerzeichen, um eine Abfrage in eine kompakte Zeile zu bringen — String-Literale bleiben erhalten. Läuft vollständig im Browser.", keywords: ["sql minifizierer", "sql minifizieren", "sql kompressor", "sql kommentare entfernen", "sql eine zeile"], input: "SQL", output: "Minifiziertes SQL" },
+  fr: { title: "Minificateur SQL", short: "Supprimez commentaires et espaces pour minifier le SQL.", description: "Minificateur SQL gratuit. Supprimez les commentaires et réduisez les espaces superflus pour mettre une requête sur une seule ligne compacte — les littéraux de chaîne sont préservés. Fonctionne entièrement dans votre navigateur.", keywords: ["minificateur sql", "minifier sql", "compresseur sql", "supprimer commentaires sql", "sql une ligne"], input: "SQL", output: "SQL minifié" },
+  es: { title: "Minificador SQL", short: "Elimina comentarios y espacios para minificar SQL.", description: "Minificador SQL gratuito. Elimina comentarios y reduce los espacios extra para poner una consulta en una línea compacta — los literales de cadena se conservan. Funciona completamente en tu navegador.", keywords: ["minificador sql", "minificar sql", "compresor sql", "eliminar comentarios sql", "sql una línea"], input: "SQL", output: "SQL minificado" },
+  it: { title: "Minificatore SQL", short: "Rimuovi commenti e spazi per minificare SQL.", description: "Minificatore SQL gratuito. Rimuovi i commenti e riduci gli spazi superflui per mettere una query su una riga compatta — i letterali stringa sono preservati. Funziona interamente nel browser.", keywords: ["minificatore sql", "minificare sql", "compressore sql", "rimuovere commenti sql", "sql una riga"], input: "SQL", output: "SQL minificato" },
+  ar: { title: "مصغّر SQL", short: "أزِل التعليقات والمسافات لتصغير SQL.", description: "مصغّر SQL مجاني. أزِل التعليقات وقلّل المسافات الزائدة لوضع استعلام في سطر مضغوط واحد — يتم الحفاظ على القيم النصية الحرفية. يعمل بالكامل في متصفحك.", keywords: ["مصغر sql", "تصغير sql", "ضاغط sql", "إزالة تعليقات sql", "sql سطر واحد"], input: "SQL", output: "SQL المصغّر" },
+  ru: { title: "Минификатор SQL", short: "Удалите комментарии и пробелы для минификации SQL.", description: "Бесплатный минификатор SQL. Удалите комментарии и сократите лишние пробелы, чтобы поместить запрос в одну компактную строку — строковые литералы сохраняются. Работает полностью в браузере.", keywords: ["минификатор sql", "минифицировать sql", "компрессор sql", "удалить комментарии sql", "sql одна строка"], input: "SQL", output: "Минифицированный SQL" },
+  zh: { title: "SQL 压缩器", short: "去除注释和空白以压缩 SQL。", description: "免费的 SQL 压缩器。去除注释并折叠多余空白，将查询压缩为紧凑的一行——字符串字面量会被保留。完全在浏览器中运行。", keywords: ["sql 压缩器", "压缩 sql", "sql 压缩", "去除 sql 注释", "sql 单行"], input: "SQL", output: "压缩后的 SQL" },
+  ja: { title: "SQL ミニファイア", short: "コメントと空白を削除して SQL を圧縮。", description: "無料の SQL ミニファイア。コメントを削除し余分な空白をまとめて、クエリをコンパクトな1行にします——文字列リテラルは保持されます。すべてブラウザ内で動作します。", keywords: ["sql ミニファイア", "sql 圧縮", "sql 縮小", "sql コメント削除", "sql 一行"], input: "SQL", output: "圧縮された SQL" },
+  ko: { title: "SQL 압축기", short: "주석과 공백을 제거하여 SQL을 압축합니다.", description: "무료 SQL 압축기. 주석을 제거하고 여분의 공백을 줄여 쿼리를 간결한 한 줄로 만듭니다 — 문자열 리터럴은 보존됩니다. 모두 브라우저에서 실행됩니다.", keywords: ["sql 압축기", "sql 압축", "sql 미니파이", "sql 주석 제거", "sql 한 줄"], input: "SQL", output: "압축된 SQL" },
+  hi: { title: "SQL मिनिफायर", short: "SQL को छोटा करने के लिए टिप्पणियाँ और रिक्त स्थान हटाएं।", description: "मुफ्त SQL मिनिफायर। टिप्पणियाँ हटाएं और अतिरिक्त रिक्त स्थान को संक्षिप्त करें ताकि एक क्वेरी एक कॉम्पैक्ट लाइन में आ जाए — स्ट्रिंग लिटरल संरक्षित रहते हैं। पूरी तरह आपके ब्राउज़र में चलता है।", keywords: ["sql मिनिफायर", "sql छोटा करें", "sql कंप्रेसर", "sql टिप्पणियाँ हटाएं", "sql एक लाइन"], input: "SQL", output: "मिनिफाई किया SQL" },
+};
+
+const i18n = Object.fromEntries(
+  (Object.keys(data) as Array<keyof typeof data>).map((loc) => {
+    const { title, short, description, keywords, ...rest } = data[loc];
+    return [loc, { title, short, description, keywords, ui: { ...COMMON_UI[loc], ...rest } }];
+  }),
+) as unknown as ToolI18n;
+
+export default i18n;
