@@ -42,6 +42,7 @@ import AuthorityFooter from "@/components/calculator/AuthorityFooter.astro";
 // replaced by this single slot — each calc that wants a chart just creates
 // `src/calculators/{category}/{slug}/visualizations.tsx`.
 import CalcVizSlot from "@/components/calculator/CalcVizSlot";
+import JsonLd from "@/components/seo/JsonLd.astro";
 
 // ─── Static path generation ────────────────────────────────────────────────────
 
@@ -296,27 +297,11 @@ const Content = mdxModule
   </main>
 
   <!-- JSON-LD structured data: SoftwareApplication + BreadcrumbList -->
-  <script
-    is:inline
-    type="application/ld+json"
-    set:html={JSON.stringify(jsonLd)}
-  />
+  <JsonLd data={jsonLd} />
 
   <!-- JSON-LD: HowTo (math / conversion / engineering / formula calcs) -->
-  {howToJsonLd && (
-    <script
-      is:inline
-      type="application/ld+json"
-      set:html={JSON.stringify(howToJsonLd)}
-    />
-  )}
+  {howToJsonLd && <JsonLd data={howToJsonLd} />}
 
   <!-- JSON-LD: FAQPage (calcs with faq[] bundle) -->
-  {faqJsonLd && (
-    <script
-      is:inline
-      type="application/ld+json"
-      set:html={JSON.stringify(faqJsonLd)}
-    />
-  )}
+  {faqJsonLd && <JsonLd data={faqJsonLd} />}
 </Base>

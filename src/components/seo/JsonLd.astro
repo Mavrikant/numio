@@ -3,11 +3,13 @@
  * JsonLd.astro
  * Renders a <script type="application/ld+json"> tag with XSS-safe JSON.
  *
- * XSS strategy: after JSON.stringify, replace all occurrences of </script>
- * (case-insensitive) with the Unicode-escaped equivalent </script>
- * so the string can never prematurely close the enclosing script tag.
- * JSON.stringify already escapes < > & by default in some runtimes, but we
- * do not rely on that — the explicit replace is the reliable guard.
+ * XSS strategy: after JSON.stringify, escape every `<` (and `>`, `&`) to its
+ * Unicode-escaped equivalent. JSON.stringify does NOT escape these by default,
+ * so a string value containing `</script>` — or any variant the HTML parser
+ * accepts to close a script element, such as `</script `, `</script\n`, or
+ * `<!--` — would otherwise break out of the enclosing <script> tag. Escaping
+ * `<` outright makes it impossible to form any tag while keeping the output
+ * valid JSON (a JSON parser treats `<` as `<`).
  */
 
 export interface Props {
@@ -16,9 +18,11 @@ export interface Props {
 
 const { data } = Astro.props;
 
-// Serialize and escape </script> to prevent XSS tag injection.
-const raw = JSON.stringify(data);
-const safe = raw.replace(/<\/script>/gi, "\\u003c/script\\u003e");
+// Serialize, then escape characters that could terminate the script element.
+const safe = JSON.stringify(data)
+  .replace(/</g, "\\u003c")
+  .replace(/>/g, "\\u003e")
+  .replace(/&/g, "\\u0026");
 ---
 
 <script is:inline type="application/ld+json" set:html={safe} />
