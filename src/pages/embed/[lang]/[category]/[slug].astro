@@ -1,0 +1,153 @@
+---
+/**
+ * Embeddable calculator widget — /calculators/embed/{lang}/{category}/{slug}/
+ *
+ * Renders ONLY the calculator with no Header, Footer, Sidebar, or MDX content.
+ * Designed to be iframed by third-party sites.
+ *
+ * Query params:
+ *  ?theme=light|dark|auto  — sets theme class on <html> (default: light)
+ *  ?ref=<domain>           — embedding site for analytics (logged only, not persisted)
+ */
+import "@/styles/global.css";
+import {
+  LOCALES,
+  LOCALE_HTML_LANG,
+  isLocale,
+  isRTL,
+  type Locale,
+  SITE_URL,
+  BASE_PATH,
+} from "@/config/site";
+import { getLocalizedSlug, getCanonicalSlugFromLocalized } from "@/lib/i18n";
+import { getAllCalculators } from "@/lib/registry";
+import type { CalculatorCategory } from "@/types/calculator";
+import { CalculatorIsland } from "@/components/calculator/CalculatorView";
+
+// ─── Static path generation ────────────────────────────────────────────────────
+
+export async function getStaticPaths() {
+  const allCalcs = getAllCalculators();
+  const paths: Array<{
+    params: { lang: string; category: string; slug: string };
+    props: { canonicalSlug: string };
+  }> = [];
+
+  for (const lang of LOCALES) {
+    for (const calc of allCalcs) {
+      const localizedSlug = getLocalizedSlug(calc.slug, lang);
+      paths.push({
+        params: {
+          lang,
+          category: calc.category,
+          slug: localizedSlug,
+        },
+        props: { canonicalSlug: calc.slug },
+      });
+    }
+  }
+
+  return paths;
+}
+
+// ─── Page setup ───────────────────────────────────────────────────────────────
+
+const { lang, category, slug } = Astro.params;
+const { canonicalSlug } = Astro.props;
+
+// Validate locale
+if (!lang || !isLocale(lang)) {
+  return Astro.redirect(`${BASE_PATH}/en/`);
+}
+const locale = lang as Locale;
+const cat = category as CalculatorCategory;
+
+// Resolve canonical slug — the URL slug may be localized
+const resolvedSlug =
+  canonicalSlug ??
+  getCanonicalSlugFromLocalized(slug ?? "", locale) ??
+  slug;
+
+// Load all calculators and find this one
+const allCalcs = getAllCalculators();
+const calc = allCalcs.find((c) => c.slug === resolvedSlug);
+
+if (!calc || calc.category !== cat) {
+  return Astro.redirect("/404");
+}
+
+// ─── Referrer logging (forward-compat, build-time only) ──────────────────────
+// NOTE: Query params (?theme=, ?ref=) are read client-side via the inline
+// theme script because this is a static (pre-rendered) Astro site.
+// Astro.url.searchParams is always empty at build time for static pages.
+
+// ─── Page metadata ────────────────────────────────────────────────────────────
+
+const bundle = calc.i18n[locale] ?? calc.i18n["en"];
+const htmlLang = LOCALE_HTML_LANG[locale];
+const dir = isRTL(locale) ? "rtl" : "ltr";
+const canonicalUrl = `${SITE_URL}${BASE_PATH}/${locale}/${cat}/${getLocalizedSlug(calc.slug, locale)}/`;
+---
+
+<!doctype html>
+<html lang={htmlLang} dir={dir} class="h-full scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>{bundle.title}</title>
+
+    {/* Allow embedding from any origin */}
+    <meta http-equiv="Content-Security-Policy" content="frame-ancestors *;" />
+
+    {/* Inline script: read ?theme= query param and apply dark class BEFORE first paint.
+        This runs client-side because the page is statically generated — Astro.url
+        has no query params at build time. */}
+    <script is:inline>
+      (function () {
+        try {
+          var params = new URLSearchParams(window.location.search);
+          var theme = params.get("theme") || "light";
+          var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+          var shouldBeDark =
+            theme === "dark" || (theme === "auto" && prefersDark);
+          var el = document.documentElement;
+          if (shouldBeDark) {
+            el.classList.add("dark");
+          } else {
+            el.classList.remove("dark");
+          }
+          // Log ref param for forward-compat analytics
+          var ref = params.get("ref");
+          if (ref) {
+            // eslint-disable-next-line no-console
+            console.debug("[embed] ref=", ref);
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+
+  <body class="flex min-h-full flex-col bg-white text-slate-900 dark:bg-slate-900 dark:text-slate-100">
+    {/* Calculator widget — no nav, no sidebar, no MDX */}
+    <main class="flex-1">
+      <CalculatorIsland
+        client:only="react"
+        slug={calc.slug}
+        locale={locale}
+      />
+    </main>
+
+    {/* Attribution backlink — the entire point of the embed route */}
+    <footer class="border-t border-slate-200 bg-slate-50 px-4 py-2 text-center dark:border-slate-700 dark:bg-slate-800/50">
+      <a
+        href={canonicalUrl}
+        target="_blank"
+        rel="noopener"
+        class="text-xs text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200"
+      >
+        Powered by karaman.dev — full version
+      </a>
+    </footer>
+  </body>
+</html>

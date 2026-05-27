@@ -23,6 +23,7 @@ import { getCalculatorBySlug } from "@/lib/registry";
 import { InputField } from "./InputField";
 import { ResultPanel } from "./ResultPanel";
 import { ChartPanel } from "./ChartPanel";
+import { EmbedDialog } from "./EmbedDialog";
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 
@@ -236,6 +237,7 @@ export function CalculatorView({ calc, locale, initialInputs }: CalculatorViewPr
               >
                 {shareLabel ?? "Share"}
               </button>
+              <EmbedDialog calc={calc} locale={locale} />
             </div>
           </div>
         </section>
@@ -460,6 +462,7 @@ export function CalculatorViewWithViz({
               >
                 {shareLabel ?? "Share"}
               </button>
+              <EmbedDialog calc={calc} locale={locale} />
             </div>
           </div>
         </section>
