@@ -1,4 +1,9 @@
 {
+  "one-rep-max": "one-rep-max",
+  "body-surface-area": "body-surface-area",
+  "waist-to-height-ratio": "waist-to-height-ratio",
+  "protein-intake": "protein-intake",
+  "a1c-glucose-converter": "a1c-glucose-converter",
   "week-number": "week-number",
   "day-of-year": "day-of-year",
   "add-business-days": "add-business-days",
