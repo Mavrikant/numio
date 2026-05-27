@@ -31,6 +31,18 @@ export default defineConfig({
         "@lib": "/src/lib",
         "@components": "/src/components",
       },
+      // Force a SINGLE copy of React across the dep graph. Without this,
+      // Vite occasionally bundles a second React instance into chunks
+      // pulled in by import.meta.glob (e.g. visualizations.tsx files),
+      // which then evaluates with React.useMemo === null and crashes
+      // hydration. See https://react.dev/warnings/invalid-hook-call-warning
+      dedupe: ["react", "react-dom"],
+    },
+    optimizeDeps: {
+      // Pre-bundle React in dev so the dynamically-imported viz modules
+      // (loaded via CalcVizSlot's import.meta.glob) share the same React
+      // instance as the rest of the app.
+      include: ["react", "react-dom", "react-dom/client"],
     },
   },
 });

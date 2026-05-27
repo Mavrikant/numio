@@ -12,6 +12,9 @@
  * Pure server render — zero client JS. KaTeX CSS injected via slot="head".
  */
 import katex from "katex";
+// Bundle KaTeX CSS locally (was a CDN <link> with a brittle SRI hash that
+// browsers blocked when the upstream artifact rebuilt).
+import "katex/dist/katex.min.css";
 import type { AnyCalculatorDefinition } from "@/types/calculator";
 import type { Locale } from "@/config/site";
 import { DEFAULT_LOCALE } from "@/config/site";
@@ -171,13 +174,5 @@ const hasContent = formulaHtml || hasRefs || accuracyNote || disclaimer;
   </aside>
 )}
 
-<!-- KaTeX styles — injected into <head> once per page -->
-{formulaHtml && (
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"
-    integrity="sha384-5TcZemv2l/9On385z///+d7MSYlvIxqG3IJHU0mRjVk7lTTuOHhxPDgMEI5klAJ"
-    crossorigin="anonymous"
-    slot="head"
-  />
-)}
+<!-- KaTeX CSS is bundled via the `import "katex/dist/katex.min.css"` in the
+     frontmatter above — Vite emits a hashed, locally-served stylesheet. -->
