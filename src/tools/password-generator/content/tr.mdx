@@ -1,0 +1,53 @@
+# Rastgele Şifre Üretici
+
+Güçlü ve tahmin edilemez şifreleri doğrudan tarayıcınızda oluşturun, ardından ne kadar güçlü olduklarını tam olarak görün. Bu araç her şifreyi **Web Crypto API** ile — kriptografik olarak güvenli bir rastgelelik kaynağı — üretir ve bit cinsinden entropisini, zorluk derecesini ve bir saldırganın çeşitli gerçekçi senaryolarda şifreyi kırmasının ne kadar süreceğini gösterir. Ürettiğiniz hiçbir şey cihazınızdan çıkmaz.
+
+## Bir şifreyi güçlü yapan nedir?
+
+Bir şifre **uzun** olduğunda ve **geniş bir karakter kümesinden**, her karakter rastgele seçilerek oluşturulduğunda güçlüdür. Temel ölçü, bit cinsinden ifade edilen **entropidir**:
+
+> entropi = uzunluk × log₂(havuz boyutu)
+
+*Havuz boyutu*, kaç farklı karakterin görünebileceğidir: küçük harfler için 26, büyük harfler için 26, rakamlar için 10 ve yaklaşık 24 yaygın sembol. Dördünü de etkinleştirmek yaklaşık 86'lık bir havuz verir. Her ek entropi biti, bir saldırganın ihtiyaç duyduğu deneme sayısını **ikiye katlar**; bu yüzden uzunluk ve çeşitlilik üstel olarak değer kazanır.
+
+Pratik bir kural olarak:
+
+- **28 bitin altı** — kolayca kırılır, hiçbir şey için uygun değildir.
+- **28–35 bit** — zayıf; yalnızca gelişigüzel tahminlere direnir.
+- **36–59 bit** — giriş denemelerini sınırlayan düşük değerli çevrimiçi hesaplar için makul.
+- **60–127 bit** — güçlü; öngörülebilir gelecekte çevrimdışı saldırılara karşı güvenli.
+- **128 bit ve üzeri** — akla gelebilecek herhangi bir donanımla pratikte kırılamaz.
+
+## Kırılma süresi nasıl tahmin edilir?
+
+Rastgele bir şifreyi kaba kuvvetle kırmak için saldırganın ortalama olarak tüm olası kombinasyonların **yarısını** denemesi gerekir. Bu sayıyı bir deneme hızına bölerek kırılma süresini tahmin ederiz ve dört saldırgan modeli gösteririz:
+
+1. **Çevrimiçi, kısıtlı (100 deneme/sn)** — denemeleri sınırlayan bir giriş formu.
+2. **Çevrimiçi, hızlı (10.000 deneme/sn)** — zayıf veya hiç kısıtlaması olmayan bir API.
+3. **Çevrimdışı, yavaş hash (10.000 deneme/sn)** — şifre dosyası çalındı ancak bcrypt veya Argon2 gibi kasıtlı olarak yavaş bir işlevle özetlendi.
+4. **Çevrimdışı, hızlı hash (1 trilyon deneme/sn)** — hızlı ve tuzsuz bir işlevle (MD5, SHA-1) özetlenmiş, GPU çiftliğiyle saldırılan çalınmış bir dosya.
+
+Bu rakamlar **örnekleyicidir**. Gerçek sayılar hash şemasına, tuzlamaya ve saldırganın donanım bütçesine bağlıdır — ancak uzunluğun ve karakter çeşitliliğinin göreli etkisini açıkça ortaya koyar.
+
+## Bu araç nasıl kullanılır?
+
+1. Kaydırıcıyla **uzunluğu ayarlayın.** En az 16 karakter hedefleyin; daha uzun her zaman daha iyidir.
+2. **Karakter türlerini seçin** — küçük harf, büyük harf, rakam ve sembol. Dördünü de kullanmak havuzu en üst düzeye çıkarır.
+3. **İsteğe bağlı olarak karıştırılabilir karakterleri** (`I`, `l`, `1`, `O`, `0` gibi) elle yazacaksanız veya yüksek sesle okuyacaksanız çıkarın.
+4. **Üretin ve kopyalayın.** Her tıklama yeni bir şifre üretir; metrikler anında güncellenir.
+
+## Şifreleri güvenli kullanma ipuçları
+
+- **Her hesap için benzersiz bir şifre kullanın.** Yeniden kullanım, tek bir ihlalin birçok siteyi tehlikeye atması demektir.
+- **Bunları ezberlemek veya bir yere yazmak yerine bir şifre yöneticisinde saklayın.** Yönetici, uzun rastgele şifreleri her yerde zahmetsizce kullanmanızı sağlar.
+- **Karmaşıklık kurallarından çok uzunluğu tercih edin.** 20 karakterlik rastgele bir şifre, sembollerle doldurulmuş kısa bir şifreyi geçer.
+- **Mümkün olan her yerde iki faktörlü kimlik doğrulamayı etkinleştirin** — bir şifre sızsa bile sizi korur.
+
+## Gizlilik
+
+Tüm üretim ve analiz, `crypto.getRandomValues` kullanılarak yerel olarak tarayıcınızda gerçekleşir. Hiçbir şifre herhangi bir sunucuya gönderilmez, kaydedilmez veya saklanmaz.
+
+## Kaynaklar
+
+- NIST SP 800-63B, *Dijital Kimlik Kılavuzu: Kimlik Doğrulama ve Yaşam Döngüsü Yönetimi.*
+- *Şifre gücü,* Wikipedia — entropi ve kaba kuvvet süresi tahmini.

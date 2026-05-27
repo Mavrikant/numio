@@ -1,0 +1,53 @@
+# Random Password Generator
+
+Create strong, unpredictable passwords directly in your browser, then see exactly how strong they are. This tool generates each password with the **Web Crypto API** — a cryptographically-secure random source — and reports its entropy in bits, a strength rating, and how long it would take an attacker to crack it under several realistic scenarios. Nothing you generate ever leaves your device.
+
+## What makes a password strong?
+
+A password is strong when it is **long** and drawn from a **large set of characters**, with every character chosen at random. The key measure is **entropy**, expressed in bits:
+
+> entropy = length × log₂(pool size)
+
+The *pool size* is how many distinct characters can appear: 26 for lowercase, 26 for uppercase, 10 for digits, and roughly 24 common symbols. Enabling all four gives a pool of about 86. Each additional bit of entropy **doubles** the number of guesses an attacker needs, so length and variety pay off exponentially.
+
+As a rule of thumb:
+
+- **Under 28 bits** — trivially cracked, suitable for nothing.
+- **28–35 bits** — weak; only resists casual guessing.
+- **36–59 bits** — reasonable for low-value online accounts that rate-limit logins.
+- **60–127 bits** — strong; safe against offline attacks for the foreseeable future.
+- **128 bits and above** — effectively unbreakable with any conceivable hardware.
+
+## How crack time is estimated
+
+To brute-force a random password an attacker must, on average, try **half** of all possible combinations. We divide that figure by a guess rate to estimate time-to-crack, and show four attacker models:
+
+1. **Online, throttled (100 guesses/s)** — a login form that rate-limits attempts.
+2. **Online, fast (10,000 guesses/s)** — an API with weak or no throttling.
+3. **Offline, slow hash (10,000 guesses/s)** — the password file was stolen but hashed with a deliberately slow function like bcrypt or Argon2.
+4. **Offline, fast hash (1 trillion guesses/s)** — a stolen file hashed with a fast, unsalted function (MD5, SHA-1) attacked by a GPU farm.
+
+These figures are **illustrative**. Real numbers depend on the hashing scheme, salting, and the attacker's hardware budget — but they make the relative impact of length and character variety obvious.
+
+## How to use this tool
+
+1. **Set the length** with the slider. Aim for at least 16 characters; longer is always better.
+2. **Choose character types** — lowercase, uppercase, numbers, and symbols. Using all four maximizes the pool.
+3. **Optionally exclude ambiguous characters** (like `I`, `l`, `1`, `O`, `0`) if you'll be typing the password by hand or reading it aloud.
+4. **Generate and copy.** Each click produces a fresh password; the metrics update instantly.
+
+## Tips for using passwords safely
+
+- **Use a unique password for every account.** Reuse means one breach compromises many sites.
+- **Store them in a password manager** rather than memorizing or writing them down. A manager lets you use long random passwords everywhere without friction.
+- **Prefer length over complexity rules.** A 20-character random password beats a short one stuffed with symbols.
+- **Enable two-factor authentication** wherever possible — it protects you even if a password leaks.
+
+## Privacy
+
+All generation and analysis happen locally in your browser using `crypto.getRandomValues`. No password is sent to any server, logged, or stored.
+
+## References
+
+- NIST SP 800-63B, *Digital Identity Guidelines: Authentication and Lifecycle Management.*
+- *Password strength,* Wikipedia — entropy and brute-force time estimation.
