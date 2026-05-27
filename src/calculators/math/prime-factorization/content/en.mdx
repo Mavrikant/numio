@@ -1,0 +1,74 @@
+# Prime Factorization Calculator
+
+## What Is Prime Factorization?
+
+Prime factorization is the process of decomposing a number into its prime factors. Every integer greater than 1 has a unique prime factorization, which is stated by the **Fundamental Theorem of Arithmetic**.
+
+Mathematically, any positive integer n can be written as:
+
+$$n = p_1^{a_1} \times p_2^{a_2} \times \cdots \times p_k^{a_k}$$
+
+where $p_1, p_2, \ldots, p_k$ are distinct prime numbers, and $a_1, a_2, \ldots, a_k$ are their respective exponents.
+
+**Example:** The number 60 factorizes as:
+- 60 = 2² × 3 × 5
+
+This means 60 = 2 × 2 × 3 × 5.
+
+## How to Use Prime Factorization
+
+Prime factorization uses trial division, a systematic method to find all prime factors:
+
+1. **Start with the smallest prime:** Begin with 2. If the number is even, divide by 2 repeatedly until it's odd.
+2. **Move to odd primes:** Test 3, 5, 7, 11, etc., dividing out each prime completely before moving to the next.
+3. **Stop at √n:** You only need to check primes up to the square root of the original number. If no prime divides the remaining number by that point, the remaining number itself is prime.
+4. **Record exponents:** Count how many times each prime appears in the factorization.
+
+**Trial Division Example for 120:**
+- 120 ÷ 2 = 60
+- 60 ÷ 2 = 30
+- 30 ÷ 2 = 15
+- 15 ÷ 3 = 5
+- 5 is prime; stop at √5 ≈ 2.24
+
+Result: 120 = 2³ × 3 × 5
+
+## Examples
+
+### Example 1: Factor 84
+84 = 2² × 3 × 7
+
+Here, 2 appears twice (2²), while 3 and 7 appear once.
+
+### Example 2: Factor 360
+360 = 2³ × 3² × 5
+
+This shows a number with multiple prime factors at different exponents.
+
+### Example 3: Factor a Prime Number (97)
+97 = 97
+
+A prime number factors only to itself with exponent 1.
+
+## FAQ
+
+**Q: Why is prime factorization important?**
+A: Prime factorization is essential in mathematics and computer science. It is used to simplify fractions, find the greatest common divisor (GCD) and least common multiple (LCM), solve problems in number theory, and even in cryptography (e.g., RSA encryption relies on the difficulty of factorizing large numbers).
+
+**Q: What is a prime number?**
+A: A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself. The smallest primes are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, etc.
+
+**Q: Why do we use the Euclidean algorithm for GCD, not factorization?**
+A: While prime factorization can find GCD and LCM, the Euclidean algorithm is much faster for finding GCD, especially for large numbers. Factorization becomes computationally expensive as numbers grow larger.
+
+**Q: What is the Fundamental Theorem of Arithmetic?**
+A: The Fundamental Theorem of Arithmetic states that every integer greater than 1 either is prime itself or is the product of a unique combination of prime numbers (up to ordering). This uniqueness is why factorization is so important.
+
+**Q: What is the trial division method?**
+A: Trial division is a straightforward factorization algorithm where you divide the number by each prime (starting from 2) repeatedly until the number becomes 1. While simple, it is slow for very large numbers with large prime factors. More advanced algorithms exist for cryptographic applications.
+
+## References
+
+- [Prime Factorization — Wikipedia](https://en.wikipedia.org/wiki/Prime_factorization)
+- [Fundamental Theorem of Arithmetic — Wikipedia](https://en.wikipedia.org/wiki/Fundamental_theorem_of_arithmetic)
+- [Prime Numbers and Factorization — Khan Academy](https://www.khanacademy.org/math/arithmetic-home/multiply-divide/factors-multiples/v/prime-factorization)

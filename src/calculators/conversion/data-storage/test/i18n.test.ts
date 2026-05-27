@@ -1,0 +1,9 @@
+import { describe, it } from "vitest";
+import { assertI18nComplete } from "@/types/i18n";
+import definition from "../definition";
+
+describe("Data Storage Converter — i18n", () => {
+  it("has complete 12-language i18n bundle", () => {
+    assertI18nComplete(definition.i18n);
+  });
+});

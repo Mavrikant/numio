@@ -3,287 +3,890 @@ import type { CalculatorI18n } from "@/types/i18n";
 const i18n: CalculatorI18n = {
   en: {
     title: "Percentage Calculator",
-    short: "Solve all common percentage problems in one tool.",
-    description: "Easily compute percentage values, find what percent a number is of another, and calculate the percentage increase or decrease between two values.",
-    keywords: ["percentage", "percent change", "percent off", "percentage calculator", "increase decrease"],
+    short: "Calculate percentages instantly: X% of Y, what % is X of Y, or percentage change.",
+    description:
+      "Free 3-in-1 percentage calculator. Find what X% of Y is, calculate what percentage X is of Y, or compute percentage change between two values.",
+    keywords: [
+      "percentage calculator",
+      "percent calculator",
+      "percentage change calculator",
+      "what percentage of",
+      "percent of",
+    ],
     inputs: {
-      mode: { label: "Problem Type" },
-      x: { label: "Value X" },
-      y: { label: "Value Y" },
+      problemType: {
+        label: "Problem type",
+        help: "Choose what you want to calculate",
+      },
+      value1: {
+        label: "Value 1",
+        help: "First number (varies by problem type)",
+      },
+      value2: {
+        label: "Value 2",
+        help: "Second number (varies by problem type)",
+      },
     },
     outputs: {
-      result: { label: "Result" },
-      absoluteDifference: { label: "Absolute Difference / Base Value" },
+      result: {
+        label: "Result",
+        help: "Calculated result",
+      },
+      resultFormatted: {
+        label: "Formatted result",
+        help: "Result rounded to 2 decimal places",
+      },
+      explanation: {
+        label: "Explanation",
+        help: "Step-by-step breakdown",
+      },
     },
     options: {
-      mode: {
-        what_is_x_pct_of_y: "What is X% of Y?",
-        x_is_what_pct_of_y: "X is what percent of Y?",
-        pct_change: "Percentage change from X to Y",
+      problemType: {
+        "percentage-of": "X% of Y",
+        "what-percentage": "X is what % of Y",
+        "percentage-change": "Percentage change from X to Y",
       },
+    },
+    errors: {
+      divideByZero: "Cannot divide by zero",
     },
     faq: [
       {
-        q: "How do you calculate a percentage?",
-        a: "To find X% of Y, multiply X by Y and then divide by 100. For example, 15% of 80 is (15 * 80) / 100 = 12.",
+        q: "What does 'percentage' mean?",
+        a: "Percentage (%) means 'per hundred'. For example, 25% means 25 out of 100, or 0.25 as a decimal.",
       },
       {
-        q: "How do you find the percentage difference between two numbers?",
-        a: "To find the percentage change from X to Y, subtract X from Y to get the difference, divide that difference by the original value X, and multiply by 100.",
+        q: "How do I calculate X% of Y?",
+        a: "Multiply Y by X and divide by 100. Formula: (X / 100) × Y. Example: 25% of 200 = (25 / 100) × 200 = 50.",
+      },
+      {
+        q: "How do I find what percentage X is of Y?",
+        a: "Divide X by Y and multiply by 100. Formula: (X / Y) × 100. Example: 50 is what % of 200 = (50 / 200) × 100 = 25%.",
+      },
+      {
+        q: "What is percentage change?",
+        a: "Percentage change measures how much a value has changed relative to its original value. Formula: ((New - Old) / Old) × 100. A positive result means increase, negative means decrease.",
+      },
+      {
+        q: "Can percentages exceed 100%?",
+        a: "Yes. A percentage greater than 100% means the new value exceeds the original (e.g., growing from 50 to 150 is a 200% increase). Percentages can also be negative for decreases.",
       },
     ],
   },
+
   tr: {
-    title: "Yüzde Hesaplama",
-    short: "Tüm yaygın yüzde problemlerini tek bir araçta çözün.",
-    description: "Yüzde değerlerini kolayca hesaplayın, bir sayının diğerinin yüzde kaçı olduğunu bulun ve iki değer arasındaki yüzde artış veya azalışı hesaplayın.",
-    keywords: ["yüzde hesaplama", "yüzde değişimi", "yüzde kaçı", "artış azalış oranı", "yüzde formülü"],
+    title: "Yüzde Hesaplayıcı",
+    short: "Yüzdeleri anında hesapla: X'in %Y'si, X'in kaçıncı yüzdesi Y'dir, veya yüzde değişim.",
+    description:
+      "Ücretsiz 3-in-1 yüzde hesaplayıcı. X'in %Y'sini bul, X'in Y'nin kaçıncı yüzdesini hesapla veya iki değer arasındaki yüzde değişimini hesapla.",
+    keywords: [
+      "yüzde hesaplayıcı",
+      "yüzde",
+      "yüzde değişim hesaplayıcı",
+      "yüzde nedir",
+      "yüzde hesaplama",
+    ],
     inputs: {
-      mode: { label: "Problem Türü" },
-      x: { label: "X Değeri" },
-      y: { label: "Y Değeri" },
+      problemType: {
+        label: "Problem türü",
+        help: "Neyi hesaplamak istediğinizi seçin",
+      },
+      value1: {
+        label: "Değer 1",
+        help: "Birinci sayı (problem türüne bağlı olarak değişir)",
+      },
+      value2: {
+        label: "Değer 2",
+        help: "İkinci sayı (problem türüne bağlı olarak değişir)",
+      },
     },
     outputs: {
-      result: { label: "Sonuç" },
-      absoluteDifference: { label: "Mutlak Fark / Temel Değer" },
+      result: {
+        label: "Sonuç",
+        help: "Hesaplanan sonuç",
+      },
+      resultFormatted: {
+        label: "Biçimlendirilmiş sonuç",
+        help: "2 ondalık basamağa yuvarlanmış sonuç",
+      },
+      explanation: {
+        label: "Açıklama",
+        help: "Adım adım çözüm",
+      },
     },
     options: {
-      mode: {
-        what_is_x_pct_of_y: "Y'nin yüzde X'i kaçtır?",
-        x_is_what_pct_of_y: "X, Y'nin yüzde kaçıdır?",
-        pct_change: "X'ten Y'ye yüzde değişim oranı",
+      problemType: {
+        "percentage-of": "X'in %Y'si",
+        "what-percentage": "X, Y'nin kaçıncı yüzdesini oluşturur",
+        "percentage-change": "X'ten Y'ye yüzde değişim",
       },
+    },
+    errors: {
+      divideByZero: "Sıfıra bölme yapılamaz",
     },
     faq: [
       {
-        q: "Yüzde nasıl hesaplanır?",
-        a: "Bir Y sayısının %X'ini bulmak için X ile Y çarpılır ve 100'e bölünür. Örneğin, 80'in %15'i (15 * 80) / 100 = 12 şeklindedir.",
+        q: "Yüzde ne demek?",
+        a: "Yüzde (%) 'yüzde bir' anlamına gelir. Örneğin, %25 = 100'de 25 = 0,25 olarak yazılır.",
       },
       {
-        q: "İki sayı arasındaki yüzde değişim nasıl bulunur?",
-        a: "X'ten Y'ye yüzde değişimi bulmak için, Y'den X çıkarılarak fark bulunur, bu fark ilk değer olan X'e bölünür ve 100 ile çarpılır.",
+        q: "X'in %Y'sini nasıl hesaplarım?",
+        a: "Y'yi X'e bölün ve 100 ile çarpın. Formül: (X / 100) × Y. Örnek: 200'ün %25'i = (25 / 100) × 200 = 50.",
+      },
+      {
+        q: "X, Y'nin kaçıncı yüzdesini oluşturur?",
+        a: "X'i Y'ye bölün ve 100 ile çarpın. Formül: (X / Y) × 100. Örnek: 50, 200'ün %25'i = (50 / 200) × 100 = 25%.",
+      },
+      {
+        q: "Yüzde değişim nedir?",
+        a: "Yüzde değişim, bir değerin orijinal değerine göre ne kadar değiştiğini gösterir. Formül: ((Yeni - Eski) / Eski) × 100. Pozitif sonuç artışı, negatif sonuç azalışı gösterir.",
+      },
+      {
+        q: "Yüzde 100'den fazla olabilir mi?",
+        a: "Evet. %100'den büyük yüzde, yeni değerin orijinalini aştığı anlamına gelir (örn., 50'den 150'ye geçiş %200 artışıdır). Yüzde negatif de olabilir.",
       },
     ],
   },
+
   de: {
     title: "Prozentrechner",
-    short: "Lösen Sie alle gängigen Prozentaufgaben in einem Tool.",
-    description: "Berechnen Sie ganz einfach Prozentwerte, finden Sie heraus, wie viel Prozent eine Zahl von einer anderen ausmacht, und berechnen Sie die prozentuale Zu- oder Abnahme zwischen zwei Werten.",
-    keywords: ["prozentrechner", "prozentuale änderung", "prozentwert", "prozentsatz", "prozentrechnung"],
+    short: "Berechne Prozente sofort: X% von Y, X ist wieviel % von Y, oder prozentuale Änderung.",
+    description:
+      "Kostenloser 3-in-1-Prozentrechner. Finde X% von Y, berechne den Prozentsatz von X zu Y oder die prozentuale Änderung zwischen zwei Werten.",
+    keywords: [
+      "Prozentrechner",
+      "Prozentrechnung",
+      "Prozentuale Änderung",
+      "Prozentsatz berechnen",
+      "Prozent von",
+    ],
     inputs: {
-      mode: { label: "Problemtyp" },
-      x: { label: "Wert X" },
-      y: { label: "Wert Y" },
-    },
-    outputs: {
-      result: { label: "Ergebnis" },
-      absoluteDifference: { label: "Absolute Differenz / Basiswert" },
-    },
-    options: {
-      mode: {
-        what_is_x_pct_of_y: "Was ist X% von Y?",
-        x_is_what_pct_of_y: "Wie viel Prozent ist X von Y?",
-        pct_change: "Prozentuale Änderung von X zu Y",
+      problemType: {
+        label: "Problemtyp",
+        help: "Wähle, was du berechnen möchtest",
+      },
+      value1: {
+        label: "Wert 1",
+        help: "Erste Zahl (variiert je nach Problemtyp)",
+      },
+      value2: {
+        label: "Wert 2",
+        help: "Zweite Zahl (variiert je nach Problemtyp)",
       },
     },
+    outputs: {
+      result: {
+        label: "Ergebnis",
+        help: "Berechnetes Ergebnis",
+      },
+      resultFormatted: {
+        label: "Formatiertes Ergebnis",
+        help: "Ergebnis auf 2 Dezimalstellen gerundet",
+      },
+      explanation: {
+        label: "Erklärung",
+        help: "Schrittweise Aufschlüsselung",
+      },
+    },
+    options: {
+      problemType: {
+        "percentage-of": "X% von Y",
+        "what-percentage": "X ist wieviel % von Y",
+        "percentage-change": "Prozentuale Änderung von X zu Y",
+      },
+    },
+    errors: {
+      divideByZero: "Kann nicht durch Null dividieren",
+    },
+    faq: [
+      {
+        q: "Was bedeutet 'Prozent'?",
+        a: "Prozent (%) bedeutet 'pro Hundert'. Zum Beispiel bedeutet 25% 25 von 100, oder 0,25 als Dezimalzahl.",
+      },
+      {
+        q: "Wie berechne ich X% von Y?",
+        a: "Multipliziere Y mit X und dividiere durch 100. Formel: (X / 100) × Y. Beispiel: 25% von 200 = (25 / 100) × 200 = 50.",
+      },
+      {
+        q: "Wie finde ich heraus, wieviel Prozent X von Y ist?",
+        a: "Dividiere X durch Y und multipliziere mit 100. Formel: (X / Y) × 100. Beispiel: 50 ist wieviel % von 200 = (50 / 200) × 100 = 25%.",
+      },
+      {
+        q: "Was ist prozentuale Änderung?",
+        a: "Prozentuale Änderung misst, wie sehr sich ein Wert im Vergleich zum Originalwert verändert hat. Formel: ((Neu - Alt) / Alt) × 100. Positives Ergebnis bedeutet Zunahme, negatives Abnahme.",
+      },
+      {
+        q: "Können Prozentsätze über 100% liegen?",
+        a: "Ja. Ein Prozentsatz größer als 100% bedeutet, dass der neue Wert das Original übersteigt (z.B. Wachstum von 50 auf 150 ist eine Steigerung von 200%). Prozentsätze können auch negativ sein.",
+      },
+    ],
   },
+
   fr: {
-    title: "Calculateur de Pourcentage",
-    short: "Résolvez tous les problèmes de pourcentage courants en un seul outil.",
-    description: "Calculez facilement des valeurs de pourcentage, déterminez quel pourcentage un nombre représente par rapport à un autre, et calculez la variation en pourcentage entre deux valeurs.",
-    keywords: ["calculateur de pourcentage", "calcul pourcentage", "variation pourcentage", "pourcentage d'augmentation"],
+    title: "Calculatrice de Pourcentage",
+    short: "Calculez instantanément les pourcentages : X % de Y, X est quel % de Y, ou variation en pourcentage.",
+    description:
+      "Calculatrice de pourcentage 3-en-1 gratuite. Trouvez X % de Y, calculez quel pourcentage X représente de Y ou la variation en pourcentage entre deux valeurs.",
+    keywords: [
+      "calculatrice de pourcentage",
+      "pourcentage",
+      "variation en pourcentage",
+      "quel pourcentage de",
+      "calcul de pourcentage",
+    ],
     inputs: {
-      mode: { label: "Type de Problème" },
-      x: { label: "Valeur X" },
-      y: { label: "Valeur Y" },
-    },
-    outputs: {
-      result: { label: "Résultat" },
-      absoluteDifference: { label: "Différence Absolue / Valeur de Base" },
-    },
-    options: {
-      mode: {
-        what_is_x_pct_of_y: "Que vaut X% de Y ?",
-        x_is_what_pct_of_y: "Quel pourcentage représente X de Y ?",
-        pct_change: "Variation en pourcentage de X à Y",
+      problemType: {
+        label: "Type de problème",
+        help: "Choisissez ce que vous souhaitez calculer",
+      },
+      value1: {
+        label: "Valeur 1",
+        help: "Premier nombre (varie selon le type de problème)",
+      },
+      value2: {
+        label: "Valeur 2",
+        help: "Deuxième nombre (varie selon le type de problème)",
       },
     },
+    outputs: {
+      result: {
+        label: "Résultat",
+        help: "Résultat calculé",
+      },
+      resultFormatted: {
+        label: "Résultat formaté",
+        help: "Résultat arrondi à 2 décimales",
+      },
+      explanation: {
+        label: "Explication",
+        help: "Ventilation étape par étape",
+      },
+    },
+    options: {
+      problemType: {
+        "percentage-of": "X % de Y",
+        "what-percentage": "X est quel % de Y",
+        "percentage-change": "Variation en pourcentage de X à Y",
+      },
+    },
+    errors: {
+      divideByZero: "Impossible de diviser par zéro",
+    },
+    faq: [
+      {
+        q: "Qu'est-ce qu'un pourcentage ?",
+        a: "Un pourcentage (%) signifie 'pour cent'. Par exemple, 25 % signifie 25 sur 100, ou 0,25 sous forme décimale.",
+      },
+      {
+        q: "Comment calculer X % de Y ?",
+        a: "Multipliez Y par X et divisez par 100. Formule : (X / 100) × Y. Exemple : 25 % de 200 = (25 / 100) × 200 = 50.",
+      },
+      {
+        q: "Comment trouver quel pourcentage X représente de Y ?",
+        a: "Divisez X par Y et multipliez par 100. Formule : (X / Y) × 100. Exemple : 50 est quel % de 200 = (50 / 200) × 100 = 25 %.",
+      },
+      {
+        q: "Qu'est-ce que la variation en pourcentage ?",
+        a: "La variation en pourcentage mesure le changement d'une valeur par rapport à sa valeur d'origine. Formule : ((Nouveau - Ancien) / Ancien) × 100. Un résultat positif indique une augmentation, un résultat négatif une diminution.",
+      },
+      {
+        q: "Les pourcentages peuvent-ils dépasser 100 % ?",
+        a: "Oui. Un pourcentage supérieur à 100 % signifie que la nouvelle valeur dépasse l'original (par exemple, passer de 50 à 150 est une augmentation de 200 %). Les pourcentages peuvent également être négatifs.",
+      },
+    ],
   },
+
   es: {
     title: "Calculadora de Porcentajes",
-    short: "Resuelva todos los problemas comunes de porcentaje en una sola herramienta.",
-    description: "Calcule fácilmente valores porcentuales, determine qué porcentaje representa un número de otro y calcule el aumento o disminución porcentual entre dos valores.",
-    keywords: ["calculadora de porcentaje", "calcular porcentaje", "diferencia porcentual", "porcentaje de incremento"],
+    short: "Calcula porcentajes al instante: X% de Y, X es qué % de Y, o cambio porcentual.",
+    description:
+      "Calculadora de porcentajes 3 en 1 gratuita. Encuentra X% de Y, calcula qué porcentaje es X de Y o la variación porcentual entre dos valores.",
+    keywords: [
+      "calculadora de porcentajes",
+      "porcentaje",
+      "calculadora de cambio porcentual",
+      "qué porcentaje de",
+      "cálculo de porcentajes",
+    ],
     inputs: {
-      mode: { label: "Tipo de Problema" },
-      x: { label: "Valor X" },
-      y: { label: "Valor Y" },
-    },
-    outputs: {
-      result: { label: "Resultado" },
-      absoluteDifference: { label: "Diferencia Absoluta / Valor Base" },
-    },
-    options: {
-      mode: {
-        what_is_x_pct_of_y: "¿Cuánto es el X% de Y?",
-        x_is_what_pct_of_y: "¿Qué porcentaje es X de Y?",
-        pct_change: "Cambio porcentual de X a Y",
+      problemType: {
+        label: "Tipo de problema",
+        help: "Elige qué quieres calcular",
+      },
+      value1: {
+        label: "Valor 1",
+        help: "Primer número (varía según el tipo de problema)",
+      },
+      value2: {
+        label: "Valor 2",
+        help: "Segundo número (varía según el tipo de problema)",
       },
     },
+    outputs: {
+      result: {
+        label: "Resultado",
+        help: "Resultado calculado",
+      },
+      resultFormatted: {
+        label: "Resultado formateado",
+        help: "Resultado redondeado a 2 decimales",
+      },
+      explanation: {
+        label: "Explicación",
+        help: "Desglose paso a paso",
+      },
+    },
+    options: {
+      problemType: {
+        "percentage-of": "X% de Y",
+        "what-percentage": "X es qué % de Y",
+        "percentage-change": "Cambio porcentual de X a Y",
+      },
+    },
+    errors: {
+      divideByZero: "No se puede dividir por cero",
+    },
+    faq: [
+      {
+        q: "¿Qué significa porcentaje?",
+        a: "Porcentaje (%) significa 'por ciento'. Por ejemplo, 25% significa 25 de 100, o 0,25 como decimal.",
+      },
+      {
+        q: "¿Cómo calculo X% de Y?",
+        a: "Multiplica Y por X y divide entre 100. Fórmula: (X / 100) × Y. Ejemplo: 25% de 200 = (25 / 100) × 200 = 50.",
+      },
+      {
+        q: "¿Cómo encuentro qué porcentaje es X de Y?",
+        a: "Divide X entre Y y multiplica por 100. Fórmula: (X / Y) × 100. Ejemplo: 50 es qué % de 200 = (50 / 200) × 100 = 25%.",
+      },
+      {
+        q: "¿Qué es el cambio porcentual?",
+        a: "El cambio porcentual mide cuánto ha cambiado un valor en relación con su valor original. Fórmula: ((Nuevo - Antiguo) / Antiguo) × 100. Un resultado positivo significa aumento, negativo significa disminución.",
+      },
+      {
+        q: "¿Los porcentajes pueden ser mayores que 100%?",
+        a: "Sí. Un porcentaje mayor que 100% significa que el nuevo valor excede al original (por ejemplo, aumentar de 50 a 150 es un aumento de 200%). Los porcentajes también pueden ser negativos.",
+      },
+    ],
   },
+
   it: {
     title: "Calcolatore di Percentuale",
-    short: "Risolvi tutti i problemi percentuali comuni in un solo strumento.",
-    description: "Calcola facilmente i valori percentuali, trova quale percentuale rappresenta un numero rispetto a un altro e calcola la variazione percentuale tra due valori.",
-    keywords: ["calcolatore percentuale", "calcolo percentuale", "differenza percentuale", "variazione percentuale"],
+    short: "Calcola percentuali al istante: X% di Y, X è quale % di Y, o variazione percentuale.",
+    description:
+      "Calcolatore di percentuale 3 in 1 gratuito. Trova X% di Y, calcola quale percentuale X rappresenta di Y o la variazione percentuale tra due valori.",
+    keywords: [
+      "calcolatore di percentuale",
+      "percentuale",
+      "calcolatore di variazione percentuale",
+      "quale percentuale di",
+      "calcolo percentuale",
+    ],
     inputs: {
-      mode: { label: "Tipo di Problema" },
-      x: { label: "Valore X" },
-      y: { label: "Valore Y" },
-    },
-    outputs: {
-      result: { label: "Risultato" },
-      absoluteDifference: { label: "Differenza Assoluta / Valore Base" },
-    },
-    options: {
-      mode: {
-        what_is_x_pct_of_y: "Quanto è il X% di Y?",
-        x_is_what_pct_of_y: "Che percentuale è X rispetto a Y?",
-        pct_change: "Variazione percentuale da X a Y",
+      problemType: {
+        label: "Tipo di problema",
+        help: "Scegli cosa vuoi calcolare",
+      },
+      value1: {
+        label: "Valore 1",
+        help: "Primo numero (varia a seconda del tipo di problema)",
+      },
+      value2: {
+        label: "Valore 2",
+        help: "Secondo numero (varia a seconda del tipo di problema)",
       },
     },
+    outputs: {
+      result: {
+        label: "Risultato",
+        help: "Risultato calcolato",
+      },
+      resultFormatted: {
+        label: "Risultato formattato",
+        help: "Risultato arrotondato a 2 decimali",
+      },
+      explanation: {
+        label: "Spiegazione",
+        help: "Suddivisione passo dopo passo",
+      },
+    },
+    options: {
+      problemType: {
+        "percentage-of": "X% di Y",
+        "what-percentage": "X è quale % di Y",
+        "percentage-change": "Variazione percentuale da X a Y",
+      },
+    },
+    errors: {
+      divideByZero: "Impossibile dividere per zero",
+    },
+    faq: [
+      {
+        q: "Cosa significa percentuale?",
+        a: "Percentuale (%) significa 'per cento'. Ad esempio, 25% significa 25 su 100, o 0,25 come decimale.",
+      },
+      {
+        q: "Come calcolo il X% di Y?",
+        a: "Moltiplica Y per X e dividi per 100. Formula: (X / 100) × Y. Esempio: 25% di 200 = (25 / 100) × 200 = 50.",
+      },
+      {
+        q: "Come trovo quale percentuale X rappresenta di Y?",
+        a: "Dividi X per Y e moltiplica per 100. Formula: (X / Y) × 100. Esempio: 50 è quale % di 200 = (50 / 200) × 100 = 25%.",
+      },
+      {
+        q: "Cos'è la variazione percentuale?",
+        a: "La variazione percentuale misura quanto un valore è cambiato rispetto al suo valore originale. Formula: ((Nuovo - Vecchio) / Vecchio) × 100. Un risultato positivo indica un aumento, uno negativo una diminuzione.",
+      },
+      {
+        q: "Le percentuali possono essere maggiori del 100%?",
+        a: "Sì. Una percentuale maggiore del 100% significa che il nuovo valore supera l'originale (ad esempio, aumentare da 50 a 150 è un aumento del 200%). Le percentuali possono anche essere negative.",
+      },
+    ],
   },
+
   ar: {
-    title: "حاسبة النسب المئوية",
-    short: "حل جميع مسائل النسبة المئوية الشائعة في أداة واحدة.",
-    description: "احسب قيم النسبة المئوية بسهولة، واعرف النسبة المئوية لعدد مقارنة بآخر، واحسب النسبة المئوية للزيادة أو النقصان بين قيمتين.",
-    keywords: ["حاسبة النسبة المئوية", "حساب النسبة المئوية", "الفرق المئوي", "التغير المئوي"],
+    title: "آلة حاسبة النسبة المئوية",
+    short: "احسب النسب المئوية فورًا: X٪ من Y، X كم٪ من Y، أو التغير النسبة المئوية.",
+    description:
+      "آلة حاسبة نسبة مئوية 3 في 1 مجانية. ابحث عن X٪ من Y، احسب ما هي نسبة X إلى Y أو التغير النسبة المئوية بين قيمتين.",
+    keywords: [
+      "آلة حاسبة النسبة المئوية",
+      "النسبة المئوية",
+      "حاسبة التغير النسبة المئوية",
+      "ما هي النسبة المئوية",
+      "حساب النسبة المئوية",
+    ],
     inputs: {
-      mode: { label: "نوع المسألة" },
-      x: { label: "القيمة X" },
-      y: { label: "القيمة Y" },
-    },
-    outputs: {
-      result: { label: "النتيجة" },
-      absoluteDifference: { label: "الفرق المطلق / القيمة الأساسية" },
-    },
-    options: {
-      mode: {
-        what_is_x_pct_of_y: "ما قيمة X% من Y؟",
-        x_is_what_pct_of_y: "ما النسبة المئوية لـ X من Y؟",
-        pct_change: "نسبة التغير من X إلى Y",
+      problemType: {
+        label: "نوع المشكلة",
+        help: "اختر ما تريد حسابه",
+      },
+      value1: {
+        label: "القيمة 1",
+        help: "الرقم الأول (يختلف حسب نوع المشكلة)",
+      },
+      value2: {
+        label: "القيمة 2",
+        help: "الرقم الثاني (يختلف حسب نوع المشكلة)",
       },
     },
+    outputs: {
+      result: {
+        label: "النتيجة",
+        help: "النتيجة المحسوبة",
+      },
+      resultFormatted: {
+        label: "النتيجة المنسقة",
+        help: "النتيجة مقربة إلى 2 منزلة عشرية",
+      },
+      explanation: {
+        label: "الشرح",
+        help: "تفصيل خطوة بخطوة",
+      },
+    },
+    options: {
+      problemType: {
+        "percentage-of": "X٪ من Y",
+        "what-percentage": "X كم٪ من Y",
+        "percentage-change": "التغير النسبة المئوية من X إلى Y",
+      },
+    },
+    errors: {
+      divideByZero: "لا يمكن القسمة على صفر",
+    },
+    faq: [
+      {
+        q: "ما معنى النسبة المئوية؟",
+        a: "النسبة المئوية (٪) تعني 'لكل مائة'. على سبيل المثال، 25٪ تعني 25 من 100، أو 0.25 كعدد عشري.",
+      },
+      {
+        q: "كيف أحسب X٪ من Y؟",
+        a: "اضرب Y في X واقسم على 100. الصيغة: (X / 100) × Y. مثال: 25٪ من 200 = (25 / 100) × 200 = 50.",
+      },
+      {
+        q: "كيف أعرف ما هي نسبة X من Y؟",
+        a: "اقسم X على Y واضرب في 100. الصيغة: (X / Y) × 100. مثال: 50 كم٪ من 200 = (50 / 200) × 100 = 25٪.",
+      },
+      {
+        q: "ما هو التغير النسبة المئوية؟",
+        a: "يقيس التغير النسبة المئوية مقدار تغير القيمة بالنسبة للقيمة الأصلية. الصيغة: ((جديد - قديم) / قديم) × 100. النتيجة الموجبة تعني زيادة، والسالبة تعني نقصان.",
+      },
+      {
+        q: "هل يمكن أن تكون النسب المئوية أكثر من 100٪؟",
+        a: "نعم. النسبة المئوية الأكبر من 100٪ تعني أن القيمة الجديدة تتجاوز الأصلية (مثلاً، الزيادة من 50 إلى 150 هي زيادة بنسبة 200٪). يمكن أن تكون النسب المئوية سالبة أيضًا.",
+      },
+    ],
   },
+
   ru: {
     title: "Калькулятор Процентов",
-    short: "Решайте все распространенные задачи с процентами в одном инструменте.",
-    description: "Легко вычисляйте проценты, находите отношение чисел в процентах, а также рассчитывайте процентное увеличение или уменьшение между двумя величинами.",
-    keywords: ["калькулятор процентов", "вычислить процент", "процентное изменение", "процент от числа"],
+    short: "Рассчитайте проценты мгновенно: X% от Y, X это сколько % от Y, или процентное изменение.",
+    description:
+      "Бесплатный 3-в-1 калькулятор процентов. Найдите X% от Y, рассчитайте какой процент составляет X от Y или процентное изменение между двумя значениями.",
+    keywords: [
+      "калькулятор процентов",
+      "процент",
+      "калькулятор процентного изменения",
+      "какой процент от",
+      "расчет процентов",
+    ],
     inputs: {
-      mode: { label: "Тип Задачи" },
-      x: { label: "Значение X" },
-      y: { label: "Значение Y" },
-    },
-    outputs: {
-      result: { label: "Результат" },
-      absoluteDifference: { label: "Абсолютная Разница / Базовое Значение" },
-    },
-    options: {
-      mode: {
-        what_is_x_pct_of_y: "Сколько будет X% от Y?",
-        x_is_what_pct_of_y: "Сколько процентов составляет X от Y?",
-        pct_change: "Процентное изменение от X к Y",
+      problemType: {
+        label: "Тип задачи",
+        help: "Выберите, что вы хотите рассчитать",
+      },
+      value1: {
+        label: "Значение 1",
+        help: "Первое число (зависит от типа задачи)",
+      },
+      value2: {
+        label: "Значение 2",
+        help: "Второе число (зависит от типа задачи)",
       },
     },
+    outputs: {
+      result: {
+        label: "Результат",
+        help: "Рассчитанный результат",
+      },
+      resultFormatted: {
+        label: "Отформатированный результат",
+        help: "Результат округлен до 2 десятичных знаков",
+      },
+      explanation: {
+        label: "Объяснение",
+        help: "Пошаговое объяснение",
+      },
+    },
+    options: {
+      problemType: {
+        "percentage-of": "X% от Y",
+        "what-percentage": "X это сколько % от Y",
+        "percentage-change": "Процентное изменение от X к Y",
+      },
+    },
+    errors: {
+      divideByZero: "Невозможно делить на ноль",
+    },
+    faq: [
+      {
+        q: "Что такое процент?",
+        a: "Процент (%) означает 'на сто'. Например, 25% означает 25 из 100, или 0,25 в виде десятичной дроби.",
+      },
+      {
+        q: "Как рассчитать X% от Y?",
+        a: "Умножьте Y на X и разделите на 100. Формула: (X / 100) × Y. Пример: 25% от 200 = (25 / 100) × 200 = 50.",
+      },
+      {
+        q: "Как найти какой процент составляет X от Y?",
+        a: "Разделите X на Y и умножьте на 100. Формула: (X / Y) × 100. Пример: 50 это сколько % от 200 = (50 / 200) × 100 = 25%.",
+      },
+      {
+        q: "Что такое процентное изменение?",
+        a: "Процентное изменение показывает, насколько значение изменилось относительно исходного. Формула: ((Новое - Старое) / Старое) × 100. Положительный результат - это увеличение, отрицательный - уменьшение.",
+      },
+      {
+        q: "Может ли процент быть больше 100%?",
+        a: "Да. Процент больше 100% означает, что новое значение превышает исходное (например, увеличение с 50 до 150 это увеличение на 200%). Проценты могут быть и отрицательными.",
+      },
+    ],
   },
+
   zh: {
     title: "百分比计算器",
-    short: "在一个工具中解决所有常见的百分比问题。",
-    description: "轻松计算百分比值，找出非百分数之间的比例关系，以及计算两个数值之间的百分比增加或减少。",
-    keywords: ["百分比计算器", "计算百分比", "百分比变化", "增减比例"],
+    short: "即时计算百分比：X% 的 Y、X 是 Y 的多少%，或百分比变化。",
+    description:
+      "免费 3 合 1 百分比计算器。找出 X% 的 Y、计算 X 是 Y 的多少百分比，或计算两个值之间的百分比变化。",
+    keywords: [
+      "百分比计算器",
+      "百分比",
+      "百分比变化计算器",
+      "占比",
+      "百分比计算",
+    ],
     inputs: {
-      mode: { label: "问题类型" },
-      x: { label: "数值 X" },
-      y: { label: "数值 Y" },
-    },
-    outputs: {
-      result: { label: "结果" },
-      absoluteDifference: { label: "绝对差值 / 基准值" },
-    },
-    options: {
-      mode: {
-        what_is_x_pct_of_y: "Y 的 X% 是多少？",
-        x_is_what_pct_of_y: "X 是 Y 的百分之几？",
-        pct_change: "从 X 到 Y 的百分比变化",
+      problemType: {
+        label: "问题类型",
+        help: "选择您要计算的内容",
+      },
+      value1: {
+        label: "值 1",
+        help: "第一个数字（因问题类型而异）",
+      },
+      value2: {
+        label: "值 2",
+        help: "第二个数字（因问题类型而异）",
       },
     },
+    outputs: {
+      result: {
+        label: "结果",
+        help: "计算结果",
+      },
+      resultFormatted: {
+        label: "格式化结果",
+        help: "四舍五入到 2 位小数的结果",
+      },
+      explanation: {
+        label: "解释",
+        help: "逐步分解",
+      },
+    },
+    options: {
+      problemType: {
+        "percentage-of": "X% 的 Y",
+        "what-percentage": "X 是 Y 的多少%",
+        "percentage-change": "从 X 到 Y 的百分比变化",
+      },
+    },
+    errors: {
+      divideByZero: "不能除以零",
+    },
+    faq: [
+      {
+        q: "百分比是什么意思？",
+        a: "百分比（%）是指「百分之一」。例如，25% 意味着 100 中的 25，或作为小数的 0.25。",
+      },
+      {
+        q: "如何计算 X% 的 Y？",
+        a: "将 Y 乘以 X 然后除以 100。公式：(X / 100) × Y。例子：200 的 25% = (25 / 100) × 200 = 50。",
+      },
+      {
+        q: "如何找到 X 是 Y 的多少百分比？",
+        a: "将 X 除以 Y 然后乘以 100。公式：(X / Y) × 100。例子：50 是 200 的多少% = (50 / 200) × 100 = 25%。",
+      },
+      {
+        q: "什么是百分比变化？",
+        a: "百分比变化测量相对于原始值的变化量。公式：((新 - 旧) / 旧) × 100。正结果表示增加，负结果表示减少。",
+      },
+      {
+        q: "百分比可以超过 100% 吗？",
+        a: "是的。超过 100% 的百分比意味着新值超过了原始值（例如，从 50 增加到 150 是 200% 的增加）。百分比也可以是负数。",
+      },
+    ],
   },
+
   ja: {
-    title: "電卓 - パーセント計算",
-    short: "一般的なパーセント問題をすべて1つのツールで解決します。",
-    description: "パーセント値を簡単に計算し、ある数値が別の数値の何パーセントであるかを求め、2つの数値の間の増減率を計算します。",
-    keywords: ["パーセント計算", "割合計算", "増減率", "パーセンテージ", "電卓"],
+    title: "パーセント計算機",
+    short: "パーセンテージを即座に計算：Y の X％、X は Y の何％、またはパーセンテージの変化。",
+    description:
+      "無料の 3 合 1 パーセント計算機。Y の X％を見つけ、X が Y の何パーセントであるかを計算し、2 つの値間のパーセンテージの変化を計算します。",
+    keywords: [
+      "パーセント計算機",
+      "パーセンテージ",
+      "パーセンテージ変化計算機",
+      "何パーセント",
+      "パーセント計算",
+    ],
     inputs: {
-      mode: { label: "問題タイプ" },
-      x: { label: "値 X" },
-      y: { label: "値 Y" },
-    },
-    outputs: {
-      result: { label: "結果" },
-      absoluteDifference: { label: "絶対差 / 基準値" },
-    },
-    options: {
-      mode: {
-        what_is_x_pct_of_y: "Y の X% は何ですか？",
-        x_is_what_pct_of_y: "X は Y の何パーセントですか？",
-        pct_change: "X から Y へのパーセント変化率",
+      problemType: {
+        label: "問題の種類",
+        help: "計算したいものを選択してください",
+      },
+      value1: {
+        label: "値 1",
+        help: "最初の数字（問題の種類によって異なります）",
+      },
+      value2: {
+        label: "値 2",
+        help: "2 番目の数字（問題の種類によって異なります）",
       },
     },
+    outputs: {
+      result: {
+        label: "結果",
+        help: "計算結果",
+      },
+      resultFormatted: {
+        label: "フォーマットされた結果",
+        help: "小数第 2 位に四捨五入された結果",
+      },
+      explanation: {
+        label: "説明",
+        help: "ステップバイステップの内訳",
+      },
+    },
+    options: {
+      problemType: {
+        "percentage-of": "Y の X％",
+        "what-percentage": "X は Y の何％",
+        "percentage-change": "X から Y へのパーセンテージの変化",
+      },
+    },
+    errors: {
+      divideByZero: "ゼロで除算することはできません",
+    },
+    faq: [
+      {
+        q: "パーセンテージとは何ですか？",
+        a: "パーセンテージ（％）は「100 分の」を意味します。たとえば、25％は 100 のうち 25、または小数として 0.25 を意味します。",
+      },
+      {
+        q: "Y の X％ を計算するにはどうすればよいですか？",
+        a: "Y に X を掛け、100 で割ります。公式：(X / 100) × Y。例：200 の 25％ = (25 / 100) × 200 = 50。",
+      },
+      {
+        q: "X が Y の何パーセントであるかを見つけるにはどうすればよいですか？",
+        a: "X を Y で割り、100 を掛けます。公式：(X / Y) × 100。例：50 は 200 の何％ = (50 / 200) × 100 = 25％。",
+      },
+      {
+        q: "パーセンテージの変化とは何ですか？",
+        a: "パーセンテージの変化は、元の値に対する値の変化量を測定します。公式：((新 - 旧) / 旧) × 100。正の結果は増加、負の結果は減少を示します。",
+      },
+      {
+        q: "パーセンテージが 100％を超える可能性はありますか？",
+        a: "はい。100％を超えるパーセンテージは、新しい値が元の値を超えていることを意味します（たとえば、50 から 150 への増加は 200％の増加です）。パーセンテージは負の値にもなります。",
+      },
+    ],
   },
+
   ko: {
     title: "백분율 계산기",
-    short: "모든 일반적인 백분율 문제를 하나의 도구로 해결하세요.",
-    description: "백분율 값을 쉽게 계산하고, 한 숫자가 다른 숫자의 몇 퍼센트인지 구하며, 두 값 사이의 백분율 증감을 계산합니다.",
-    keywords: ["백분율 계산기", "퍼센트 계산", "증감률 계산", "퍼센트 공식"],
+    short: "백분율을 즉시 계산: Y의 X%, X는 Y의 몇 %, 또는 백분율 변화.",
+    description:
+      "무료 3합1 백분율 계산기. Y의 X%를 찾고, X가 Y의 몇 퍼센트인지 계산하고, 두 값 간의 백분율 변화를 계산합니다.",
+    keywords: [
+      "백분율 계산기",
+      "백분율",
+      "백분율 변화 계산기",
+      "몇 퍼센트",
+      "백분율 계산",
+    ],
     inputs: {
-      mode: { label: "문제 유형" },
-      x: { label: "값 X" },
-      y: { label: "값 Y" },
-    },
-    outputs: {
-      result: { label: "결과" },
-      absoluteDifference: { label: "절대 차이 / 기준 값" },
-    },
-    options: {
-      mode: {
-        what_is_x_pct_of_y: "Y의 X%는 얼마인가요?",
-        x_is_what_pct_of_y: "X는 Y의 몇 퍼센트인가요?",
-        pct_change: "X에서 Y로의 백분율 변화",
+      problemType: {
+        label: "문제 유형",
+        help: "계산하려는 것을 선택하세요",
+      },
+      value1: {
+        label: "값 1",
+        help: "첫 번째 숫자 (문제 유형에 따라 다름)",
+      },
+      value2: {
+        label: "값 2",
+        help: "두 번째 숫자 (문제 유형에 따라 다름)",
       },
     },
+    outputs: {
+      result: {
+        label: "결과",
+        help: "계산된 결과",
+      },
+      resultFormatted: {
+        label: "형식화된 결과",
+        help: "소수점 이하 2자리로 반올림된 결과",
+      },
+      explanation: {
+        label: "설명",
+        help: "단계별 분석",
+      },
+    },
+    options: {
+      problemType: {
+        "percentage-of": "Y의 X%",
+        "what-percentage": "X는 Y의 몇 %",
+        "percentage-change": "X에서 Y로의 백분율 변화",
+      },
+    },
+    errors: {
+      divideByZero: "0으로 나눌 수 없습니다",
+    },
+    faq: [
+      {
+        q: "백분율이란 무엇입니까?",
+        a: "백분율(%)은 '백분의'를 의미합니다. 예를 들어 25%는 100 중 25 또는 소수로 0.25를 의미합니다.",
+      },
+      {
+        q: "Y의 X%를 계산하려면 어떻게 해야 합니까?",
+        a: "Y에 X를 곱하고 100으로 나눕니다. 공식: (X / 100) × Y. 예: 200의 25% = (25 / 100) × 200 = 50.",
+      },
+      {
+        q: "X가 Y의 몇 퍼센트인지 찾으려면 어떻게 해야 합니까?",
+        a: "X를 Y로 나누고 100을 곱합니다. 공식: (X / Y) × 100. 예: 50은 200의 몇 % = (50 / 200) × 100 = 25%.",
+      },
+      {
+        q: "백분율 변화란 무엇입니까?",
+        a: "백분율 변화는 원래 값에 대한 값의 변화량을 측정합니다. 공식: ((신규 - 구형) / 구형) × 100. 양수 결과는 증가, 음수는 감소를 나타냅니다.",
+      },
+      {
+        q: "백분율이 100%보다 클 수 있습니까?",
+        a: "네. 100%보다 큰 백분율은 새 값이 원래 값을 초과함을 의미합니다(예: 50에서 150으로 증가는 200% 증가). 백분율은 음수일 수도 있습니다.",
+      },
+    ],
   },
+
   hi: {
     title: "प्रतिशत कैलकुलेटर",
-    short: "एक ही उपकरण में सभी सामान्य प्रतिशत समस्याओं को हल करें।",
-    description: "प्रतिशत मानों की आसानी से गणना करें, यह पता लगाएं कि कोई संख्या किसी अन्य का कितना प्रतिशत है, और दो मानों के बीच प्रतिशत वृद्धि या कमी की गणना करें।",
-    keywords: ["प्रतिशत कैलकुलेटर", "प्रतिशत निकालें", "प्रतिशत वृद्धि कमी", "प्रतिशत दर"],
+    short: "तुरंत प्रतिशत की गणना करें: Y का X%, X, Y का कितना %, या प्रतिशत परिवर्तन।",
+    description:
+      "मुफ्त 3-इन-1 प्रतिशत कैलकुलेटर। Y का X% खोजें, X, Y का कितना प्रतिशत है इसकी गणना करें, या दो मानों के बीच प्रतिशत परिवर्तन की गणना करें।",
+    keywords: [
+      "प्रतिशत कैलकुलेटर",
+      "प्रतिशत",
+      "प्रतिशत परिवर्तन कैलकुलेटर",
+      "कितना प्रतिशत",
+      "प्रतिशत गणना",
+    ],
     inputs: {
-      mode: { label: "समस्या का प्रकार" },
-      x: { label: "मान X" },
-      y: { label: "मान Y" },
-    },
-    outputs: {
-      result: { label: "परिणाम" },
-      absoluteDifference: { label: "पूर्ण अंतर / आधार मूल्य" },
-    },
-    options: {
-      mode: {
-        what_is_x_pct_of_y: "Y का X% कितना है?",
-        x_is_what_pct_of_y: "X, Y का कितना प्रतिशत है?",
-        pct_change: "X से Y में प्रतिशत परिवर्तन",
+      problemType: {
+        label: "समस्या प्रकार",
+        help: "चुनें कि आप क्या गणना करना चाहते हैं",
+      },
+      value1: {
+        label: "मान 1",
+        help: "पहली संख्या (समस्या प्रकार के अनुसार भिन्न)",
+      },
+      value2: {
+        label: "मान 2",
+        help: "दूसरी संख्या (समस्या प्रकार के अनुसार भिन्न)",
       },
     },
+    outputs: {
+      result: {
+        label: "परिणाम",
+        help: "गणना किया गया परिणाम",
+      },
+      resultFormatted: {
+        label: "स्वरूपित परिणाम",
+        help: "2 दशमलव स्थानों तक गोल किया गया परिणाम",
+      },
+      explanation: {
+        label: "व्याख्या",
+        help: "चरण-दर-चरण विवरण",
+      },
+    },
+    options: {
+      problemType: {
+        "percentage-of": "Y का X%",
+        "what-percentage": "X, Y का कितना %",
+        "percentage-change": "X से Y तक प्रतिशत परिवर्तन",
+      },
+    },
+    errors: {
+      divideByZero: "शून्य से विभाजन नहीं हो सकता",
+    },
+    faq: [
+      {
+        q: "प्रतिशत का क्या मतलब है?",
+        a: "प्रतिशत (%) का मतलब 'प्रति सौ' है। उदाहरण के लिए, 25% का मतलब 100 में से 25, या दशमलव के रूप में 0.25।",
+      },
+      {
+        q: "मैं Y का X% कैसे गणना करूं?",
+        a: "Y को X से गुणा करें और 100 से विभाजित करें। सूत्र: (X / 100) × Y। उदाहरण: 200 का 25% = (25 / 100) × 200 = 50।",
+      },
+      {
+        q: "मैं X, Y का कितना प्रतिशत है यह कैसे पता करूं?",
+        a: "X को Y से विभाजित करें और 100 से गुणा करें। सूत्र: (X / Y) × 100। उदाहरण: 50, 200 का कितना % = (50 / 200) × 100 = 25%।",
+      },
+      {
+        q: "प्रतिशत परिवर्तन क्या है?",
+        a: "प्रतिशत परिवर्तन मापता है कि एक मान अपने मूल मान के सापेक्ष कितना बदल गया है। सूत्र: ((नया - पुराना) / पुराना) × 100। सकारात्मक परिणाम वृद्धि, नकारात्मक का मतलब कमी है।",
+      },
+      {
+        q: "क्या प्रतिशत 100% से अधिक हो सकता है?",
+        a: "हां। 100% से अधिक प्रतिशत का मतलब है कि नया मान मूल से अधिक है (उदाहरण के लिए, 50 से 150 तक वृद्धि 200% वृद्धि है)। प्रतिशत नकारात्मक भी हो सकता है।",
+      },
+    ],
   },
 };
 

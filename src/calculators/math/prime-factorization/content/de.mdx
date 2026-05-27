@@ -1,0 +1,74 @@
+# Primfaktorzerlegung-Rechner
+
+## Was ist Primfaktorzerlegung?
+
+Primfaktorzerlegung ist der Prozess, eine Zahl in ihre Primfaktoren zu zerlegen. Jede ganze Zahl größer als 1 hat eine eindeutige Primfaktorzerlegung. Dies wird durch den **Fundamentalsatz der Arithmetik** ausgedrückt.
+
+Mathematisch kann jede positive ganze Zahl n wie folgt geschrieben werden:
+
+$$n = p_1^{a_1} \times p_2^{a_2} \times \cdots \times p_k^{a_k}$$
+
+wobei $p_1, p_2, \ldots, p_k$ unterschiedliche Primzahlen sind und $a_1, a_2, \ldots, a_k$ ihre entsprechenden Exponenten sind.
+
+**Beispiel:** Die Zahl 60 wird zerlegt als:
+- 60 = 2² × 3 × 5
+
+Dies bedeutet 60 = 2 × 2 × 3 × 5.
+
+## Wie man Primfaktorzerlegung verwendet
+
+Primfaktorzerlegung nutzt die Probedivision, eine systematische Methode zur Findung aller Primfaktoren:
+
+1. **Mit der kleinsten Primzahl beginnen:** Mit 2 anfangen. Wenn die Zahl gerade ist, wiederholt durch 2 teilen, bis sie ungerade ist.
+2. **Zu ungeraden Primzahlen übergehen:** 3, 5, 7, 11 usw. testen; jede Primzahl vollständig ausgliedern, bevor zur nächsten übergegangen wird.
+3. **Bei √n stoppen:** Sie müssen nur Primzahlen bis zur Quadratwurzel der ursprünglichen Zahl überprüfen. Wenn keine Primzahl die verbleibende Zahl bis zu diesem Punkt teilt, ist die verbleibende Zahl selbst Prim.
+4. **Exponenten aufzeichnen:** Zählen Sie, wie oft jede Primzahl in der Zerlegung vorkommt.
+
+**Probedivisionsbeispiel für 120:**
+- 120 ÷ 2 = 60
+- 60 ÷ 2 = 30
+- 30 ÷ 2 = 15
+- 15 ÷ 3 = 5
+- 5 ist prim; bei √5 ≈ 2.24 stoppen
+
+Ergebnis: 120 = 2³ × 3 × 5
+
+## Beispiele
+
+### Beispiel 1: Zerlegen Sie 84
+84 = 2² × 3 × 7
+
+Hier erscheint 2 zweimal (2²), während 3 und 7 einmal erscheinen.
+
+### Beispiel 2: Zerlegen Sie 360
+360 = 2³ × 3² × 5
+
+Dies zeigt eine Zahl mit mehreren Primfaktoren bei verschiedenen Exponenten.
+
+### Beispiel 3: Zerlegen Sie eine Primzahl (97)
+97 = 97
+
+Eine Primzahl zerlegt sich nur zu sich selbst mit Exponent 1.
+
+## FAQ
+
+**F: Warum ist Primfaktorzerlegung wichtig?**
+A: Primfaktorzerlegung ist wesentlich in der Mathematik und Informatik. Sie wird verwendet, um Brüche zu vereinfachen, den größten gemeinsamen Teiler (ggT) und das kleinste gemeinsame Vielfache (kgV) zu finden, Probleme in der Zahlentheorie zu lösen und sogar in der Kryptographie (z.B. RSA-Verschlüsselung basiert auf der Schwierigkeit, große Zahlen zu faktorisieren).
+
+**F: Was ist eine Primzahl?**
+A: Eine Primzahl ist eine natürliche Zahl größer als 1, die keine positiven Teiler außer 1 und sich selbst hat. Die kleinsten Primzahlen sind 2, 3, 5, 7, 11, 13, 17, 19, 23, 29 usw.
+
+**F: Warum verwenden wir den euklidischen Algorithmus für ggT, nicht Faktorisierung?**
+A: Während Primfaktorzerlegung ggT und kgV finden kann, ist der euklidische Algorithmus besonders für große Zahlen viel schneller für die Findung von ggT. Faktorisierung wird rechnerisch teuer, wenn Zahlen größer werden.
+
+**F: Was ist der Fundamentalsatz der Arithmetik?**
+A: Der Fundamentalsatz der Arithmetik besagt, dass jede ganze Zahl größer als 1 entweder prim ist oder das Produkt einer eindeutigen Kombination von Primzahlen ist (bis auf Ordnung). Diese Eindeutigkeit ist der Grund, warum Faktorisierung so wichtig ist.
+
+**F: Was ist die Probedivisionsmethode?**
+A: Probedivision ist ein einfacher Faktorisierungsalgorithmus, bei dem Sie die Zahl von 2 beginnen mit jeder Primzahl wiederholt teilen, bis die Zahl 1 wird. Obwohl einfach, ist sie für sehr große Zahlen mit großen Primfaktoren langsam. Es gibt fortgeschrittenere Algorithmen für kryptographische Anwendungen.
+
+## Referenzen
+
+- [Primfaktorzerlegung — Wikipedia](https://de.wikipedia.org/wiki/Primfaktorzerlegung)
+- [Fundamentalsatz der Arithmetik — Wikipedia](https://de.wikipedia.org/wiki/Fundamentalsatz_der_Arithmetik)
+- [Primzahlen und Faktorisierung — Khan Academy](https://de.khanacademy.org/)

@@ -1,0 +1,15 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`percentage snapshot > matches snapshot for pct_change 1`] = `
+{
+  "absoluteDifference": 20,
+  "result": 25,
+}
+`;
+
+exports[`percentage snapshot > matches snapshot for what_is_x_pct_of_y 1`] = `
+{
+  "absoluteDifference": 30,
+  "result": 30,
+}
+`;

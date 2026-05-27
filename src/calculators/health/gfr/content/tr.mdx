@@ -1,0 +1,93 @@
+# eGFR Hesaplayıcı: Böbrek İşlevini Tahmin Edin
+
+## eGFR Nedir?
+
+Tahmini Glomerüler Filtrasyon Hızı (eGFR), böbreklerinizin kanınızdaki atıkları ne kadar iyi filtrelediğinin sayısal tahminidir; vücut yüzey alanının 1,73 metrekaresine düşen dakika başına mililitre cinsinden ölçülür (mL/dak/1,73m²). Serum kreatinin konsantrasyonu, kas metabolizmasının bir parçası olan madde, yaş, cinsiyet ve ırk kullanılarak hesaplanır.
+
+Böbreklerin birincil işlevi, atık maddeler, fazla su ve diğer safsızlıkları çıkarmak için günde yaklaşık 180 litre kanı filtrelemektir. Sağlıklı bir eGFR tipik olarak 90 veya daha yüksektir. 60 mL/dak/1,73m² altındaki değerler kronik böbrek hastalığını (CKD) gösterebilir ve sağlık hizmet sağlayıcısının değerlendirmesini gerektirir.
+
+**Formül: CKD-EPI 2021 Denklemi**
+
+CKD-EPI 2021 kreatinin denklemi, klinik uygulamada eGFR hesaplaması için geçerli standarttır:
+
+eGFR = 142 × (Scr/λ)^α × (0,9938)^yaş × 0,942^(kadın ise) × C_ırk
+
+Burada:
+- Scr = serum kreatinin (mg/dL)
+- λ = kadınlar için 0,7, erkekler için 0,9
+- α = kadınlar için -0,302, erkekler için -0,241
+- Yaş yıl cinsinden
+- Irk katsayısı: Siyah bireyler için 1,012, diğerleri için 1,0
+
+## Hesaplayıcıyı Nasıl Kullanılır
+
+1. **Serum kreatinin seviyesi girin**: Bu, bir kan testinden ölçülür. Doktor bu değeri mikromol/litre (µmol/L) cinsinden verecektir. Yaygın normal aralıklar erkekler için 60–110 µmol/L, kadınlar için 45–90 µmol/L'dir.
+
+2. **Yaşınızı girin**: Yaşınızı tam yıl olarak belirtin. Denklem 18–120 yaş için geçerlidir. eGFR doğal olarak yaşla birlikte, 30 yaşından sonra yaklaşık olarak yılda 1 mL/dak/1,73m² oranında azalır.
+
+3. **Cinsiyetinizi seçin**: Biyolojik cinsiyetinizi seçin. Cinsiyet eGFR hesaplamasını etkiler, çünkü kadınların tipik olarak erkeklere göre daha düşük kas kütlesi vardır.
+
+4. **Irk/etnik kökeni seçin**: CKD-EPI 2021 denklemi isteğe bağlı bir ırk ayarlaması içerir. Bu, popülasyonlar arasında kreatinin metabolizmasında farklılıkları gösteren epidemiyolojik verilere dayanır. Siyah veya Afrika Amerikalı olarak tanımlıyorsanız "Siyah" seçin; aksi takdirde "Diğer"i seçin.
+
+5. **Sonuçları alın**: Hesaplayıcı eGFR değerini ve karşılık gelen CKD evresini, ayrıca bir risk seviyesi sınıflandırmasını gösterir.
+
+## CKD Evreleri
+
+Kronik Böbrek Hastalığı eGFR'ye göre 5 evreye ayrılır:
+
+- **Evre 1 (eGFR ≥90)**: Normal veya yüksek böbrek işlevi. Böbrekler iyi çalışıyor. Tipik olarak belirti yok.
+- **Evre 2 (eGFR 60–89)**: Hafif azalmış böbrek işlevi. Erken CKD olabilir, ancak hasar minimaldir.
+- **Evre 3a (eGFR 45–59)**: Orta düzey azalmış böbrek işlevi. CKD mevcuttur; izleme ve yönetim önemli hale gelir.
+- **Evre 3b (eGFR 30–44)**: Orta ila şiddetli azalmış böbrek işlevi. Düzenli kontroller ve ilaç yönetimi gerekebilir.
+- **Evre 4 (eGFR 15–29)**: Ciddi şekilde azalmış böbrek işlevi. Yakın izleme, ilaçlar ve diyetetik ayarlamalar tipik olarak gereklidir; nefroloji uzmanına yönlendirme önerilir.
+- **Evre 5 (eGFR <15)**: Böbrek yetmezliği (son dönem böbrek hastalığı). Diyaliz, böbrek nakli veya palyatif bakım tipik olarak gereklidir.
+
+## Örnekler
+
+### Örnek 1: Sağlıklı Yetişkin
+
+40 yaşında serum kreatini 85 µmol/L olan bir erkek:
+- eGFR ≈ 110 mL/dak/1,73m²
+- Evre 1 (Normal)
+- Müdahale gerekmez.
+
+### Örnek 2: Erken Dönem CKD
+
+65 yaşında serum kreatini 110 µmol/L olan bir kadın:
+- eGFR ≈ 55 mL/dak/1,73m²
+- Evre 3a
+- Düzenli izleme ve yaşam tarzı değişikliği önerilir.
+
+### Örnek 3: İleri Dönem CKD
+
+72 yaşında serum kreatini 250 µmol/L olan bir erkek:
+- eGFR ≈ 20 mL/dak/1,73m²
+- Evre 4 (Ciddi azalma)
+- Uzman bakım, ilaç incelemesi ve böbrek nakli hazırlığı gerekebilir.
+
+## Sıkça Sorulan Sorular
+
+**S: Neden cinsiyet eGFR denkleminde önemli?**
+C: Kadınların tipik olarak erkeklerden daha düşük kas kütlesi vardır, bu da daha düşük serum kreatini ile sonuçlanır. Denklem cinsiyetler arasında daha doğru tahminler için bunu dikkate alır.
+
+**S: eGFR'im normal ama kreatinin yüksek?**
+C: eGFR ve kreatinin, özellikle sporcuların veya alışılmadık kas kütlesine sahip kişilerde farklılık gösterebilir. Endişeleriniz varsa doktorunuza danışın.
+
+**S: eGFR yanlış olabilir mi?**
+C: Evet. eGFR bir tahmindir. Yaşlı bireyler, ekstrem vücut yapısı veya belirli durumları olanlarda daha az doğru olabilir. Doktor daha kesin ölçümler sipariş edebilir.
+
+**S: eGFR'im 60'ın altındaysa ne yapmalıyım?**
+C: Doktorunuzla randevu alın. Temel nedenleri değerlendirip yönetim planı yapacaktır.
+
+**S: CKD iyileşebilir mi?**
+C: Bazı erken dönem hasar, tedavi ile iyileşebilir veya stabilize olabilir, özellikle altta yatan neden (diyabet, hipertansiyon) kontrol altında alındığında. Ancak ileri CKD genellikle ilerleyicidir.
+
+**S: eGFR kreatinine göre daha mı iyi?**
+C: Evet. eGFR yaş, cinsiyet ve vücut bileşimini dikkate alarak, salt kreatininden daha doğru bir resim sunar. Ancak her ikisi de kas kitlesinden etkilenebilir, bu nedenle zaman içinde takip etmek yararlıdır.
+
+## Kaynaklar
+
+- Inker, L. A., Eneanya, N. D., Coresh, J., vd. (2021). "CKD-EPI 2021 Denklemi." *Journal of the American Society of Nephrology*. https://doi.org/10.1681/ASN.2020121280
+- KDIGO 2012 Kronik Böbrek Hastalığı Rehberi. https://kdigo.org/
+- Türk Nefroloji Derneği. https://www.nefroloji.org.tr/
+- Sağlık Bakanlığı. Kronik Böbrek Hastalığı Bilgileri.

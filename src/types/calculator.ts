@@ -19,14 +19,16 @@ export const CATEGORIES: readonly CalculatorCategory[] = [
 export type UnitKey =
   | "kg" | "g" | "lb" | "oz"
   | "m" | "cm" | "mm" | "ft" | "in" | "km" | "mi"
-  | "l" | "ml" | "gal" | "floz"
+  | "l" | "ml" | "gal" | "floz" | "m3" | "ft3" | "cup" | "tbsp" | "tsp" | "galuk"
   | "celsius" | "fahrenheit" | "kelvin"
   | "year" | "month" | "day" | "hour" | "minute" | "second"
   | "percent" | "ratio"
   | "usd" | "eur" | "try" | "gbp" | "jpy"
-  | "watt" | "kw" | "hp" | "joule" | "kcal"
+  | "watt" | "kw" | "hp" | "joule" | "kcal" | "kj" | "cal" | "kwh" | "btu" | "ftlbf" | "ev"
   | "volt" | "amp" | "ohm"
-  | "pa" | "kpa" | "bar" | "psi";
+  | "pa" | "kpa" | "bar" | "psi" | "atm" | "mmhg" | "inhg"
+  | "kmh" | "mph" | "ms" | "knots" | "fts"
+  | "m2" | "ft2" | "yd2" | "ha" | "acre" | "km2" | "cm2";
 
 export type NumberInputDef = {
   readonly kind: "number";

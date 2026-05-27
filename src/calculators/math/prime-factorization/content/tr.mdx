@@ -1,0 +1,74 @@
+# Asal Çarpanlarına Ayırma Hesaplayıcısı
+
+## Asal Çarpanlarına Ayırma Nedir?
+
+Asal çarpanlarına ayırma, bir sayıyı asal çarpanlarına ayırma işlemidir. 1'den büyük her tam sayının benzersiz bir asal çarpanlarına ayırması vardır. Bu, **Aritmetiğin Temel Teoremi** ile belirtilmiştir.
+
+Matematiksel olarak, herhangi bir pozitif tam sayı n şu şekilde yazılabilir:
+
+$$n = p_1^{a_1} \times p_2^{a_2} \times \cdots \times p_k^{a_k}$$
+
+burada $p_1, p_2, \ldots, p_k$ farklı asal sayılardır ve $a_1, a_2, \ldots, a_k$ bunların karşılık gelen üsleridir.
+
+**Örnek:** 60 sayısı şu şekilde çarpanlarına ayrılır:
+- 60 = 2² × 3 × 5
+
+Bu 60 = 2 × 2 × 3 × 5 anlamına gelir.
+
+## Asal Çarpanlarına Ayırma Nasıl Kullanılır
+
+Asal çarpanlarına ayırma, tüm asal çarpanları bulmanın sistematik bir yöntemi olan deneme bölmesi kullanır:
+
+1. **En küçük asal ile başlayın:** 2 ile başlayın. Sayı çiftse, tek olmadan önce tekrar tekrar 2'ye bölün.
+2. **Tek asallara geçin:** 3, 5, 7, 11 vb. test edin; sonrakine geçmeden önce her asalı tamamen ayırın.
+3. **√n'de durun:** Orijinal sayının karekökü kadar asalları kontrol etmeniz yeterlidir. O noktaya kadar hiçbir asal kalan sayıyı bölmezse, kalan sayının kendisi asaldır.
+4. **Üsleri kaydedin:** Her asalın çarpanlarına ayırmada kaç kez göründüğünü sayın.
+
+**120 için Deneme Bölmesi Örneği:**
+- 120 ÷ 2 = 60
+- 60 ÷ 2 = 30
+- 30 ÷ 2 = 15
+- 15 ÷ 3 = 5
+- 5 asaldır; √5 ≈ 2.24'te durun
+
+Sonuç: 120 = 2³ × 3 × 5
+
+## Örnekler
+
+### Örnek 1: 84'ü Çarpanlarına Ayırın
+84 = 2² × 3 × 7
+
+Burada 2 iki kez (2²) görünürken, 3 ve 7 bir kez görünür.
+
+### Örnek 2: 360'ı Çarpanlarına Ayırın
+360 = 2³ × 3² × 5
+
+Bu, farklı üslerde birden fazla asal çarpanı olan bir sayıyı gösterir.
+
+### Örnek 3: Bir Asal Sayıyı Çarpanlarına Ayırın (97)
+97 = 97
+
+Bir asal sayı sadece kendisine 1 üssü ile çarpanlarına ayrılır.
+
+## Sıkça Sorulan Sorular
+
+**S: Asal çarpanlarına ayırma neden önemlidir?**
+C: Asal çarpanlarına ayırma matematik ve bilgisayar biliminde gereklidir. Kesirleri basitleştirmek, en büyük ortak bölen (EBOB) ve en küçük ortak kat (EKOK) bulmak, sayı teorisindeki problemleri çözmek ve hatta kriptografide (örn. RSA şifreleme, büyük sayıları çarpanlarına ayırmanın zorluğuna dayanır) kullanılır.
+
+**S: Asal sayı nedir?**
+C: Asal sayı, 1'den büyük ve 1 ile kendisinden başka hiçbir pozitif bölen olmayan doğal sayıdır. En küçük asallar 2, 3, 5, 7, 11, 13, 17, 19, 23, 29 vb.
+
+**S: EBOB için neden çarpanlarına ayırma yerine Öklid algoritmasını kullanırız?**
+C: Asal çarpanlarına ayırma EBOB ve EKOK bulabilirse de, Öklid algoritması özellikle büyük sayılar için EBOB bulma konusunda çok daha hızlıdır. Sayılar büyüdükçe çarpanlarına ayırma hesaplama açısından pahalı hale gelir.
+
+**S: Aritmetiğin Temel Teoremi nedir?**
+C: Aritmetiğin Temel Teoremi, 1'den büyük her tam sayının ya kendisi asal ya da asal sayıların benzersiz bir kombinasyonunun çarpımı olduğunu belirtir (sıraya bakılmaksızın). Bu benzersizlik, çarpanlarına ayırmanın neden önemli olduğunun nedenidir.
+
+**S: Deneme bölmesi yöntemi nedir?**
+C: Deneme bölmesi, sayıyı 2'den başlayarak her asal ile tekrar tekrar bölüp 1 olmadığı sürece devam eden basit bir çarpanlarına ayırma algoritmasıdır. Basit olmakla birlikte, büyük asal çarpanları olan çok büyük sayılar için yavaştır. Kriptografik uygulamalar için daha gelişmiş algoritmalar vardır.
+
+## Kaynaklar
+
+- [Asal Çarpanlarına Ayırma — Wikipedia](https://tr.wikipedia.org/wiki/Asal_%C3%A7arpanlarına_ayırma)
+- [Aritmetiğin Temel Teoremi — Wikipedia](https://tr.wikipedia.org/wiki/Aritmetiğin_temel_teoremi)
+- [Asal Sayılar ve Çarpanlarına Ayırma — Khan Academy](https://tr.khanacademy.org/)

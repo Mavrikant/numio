@@ -20,7 +20,9 @@ interface UnitDefinition {
     | "currency_eur"
     | "currency_try"
     | "currency_gbp"
-    | "currency_jpy";
+    | "currency_jpy"
+    | "speed"
+    | "area";
   readonly toBase: ConversionFn;
   readonly fromBase: ConversionFn;
 }
@@ -90,6 +92,43 @@ const UNITS: Partial<Record<UnitKey, UnitDefinition>> = {
   try: { category: "currency_try", toBase: (v) => v, fromBase: (v) => v },
   gbp: { category: "currency_gbp", toBase: (v) => v, fromBase: (v) => v },
   jpy: { category: "currency_jpy", toBase: (v) => v, fromBase: (v) => v },
+
+  // speed — base unit: m/s
+  ms: { category: "speed", toBase: (v) => v, fromBase: (v) => v },
+  kmh: { category: "speed", toBase: (v) => v / 3.6, fromBase: (v) => v * 3.6 },
+  mph: { category: "speed", toBase: (v) => v * 0.44704, fromBase: (v) => v / 0.44704 },
+  knots: { category: "speed", toBase: (v) => v * 0.51444, fromBase: (v) => v / 0.51444 },
+  fts: { category: "speed", toBase: (v) => v * 0.3048, fromBase: (v) => v / 0.3048 },
+
+  // area — base unit: m²
+  m2: { category: "area", toBase: (v) => v, fromBase: (v) => v },
+  cm2: { category: "area", toBase: (v) => v / 10000, fromBase: (v) => v * 10000 },
+  ft2: { category: "area", toBase: (v) => v * 0.09290304, fromBase: (v) => v / 0.09290304 },
+  yd2: { category: "area", toBase: (v) => v * 0.83612736, fromBase: (v) => v / 0.83612736 },
+  km2: { category: "area", toBase: (v) => v * 1000000, fromBase: (v) => v / 1000000 },
+  ha: { category: "area", toBase: (v) => v * 10000, fromBase: (v) => v / 10000 },
+  acre: { category: "area", toBase: (v) => v * 4046.8564224, fromBase: (v) => v / 4046.8564224 },
+
+  // additional volume units — base unit: L (liters)
+  m3: { category: "volume", toBase: (v) => v * 1000, fromBase: (v) => v / 1000 },
+  ft3: { category: "volume", toBase: (v) => v * 28.3168466, fromBase: (v) => v / 28.3168466 },
+  cup: { category: "volume", toBase: (v) => v * 0.236588, fromBase: (v) => v / 0.236588 },
+  tbsp: { category: "volume", toBase: (v) => v * 0.0147868, fromBase: (v) => v / 0.0147868 },
+  tsp: { category: "volume", toBase: (v) => v * 0.00492892, fromBase: (v) => v / 0.00492892 },
+  galuk: { category: "volume", toBase: (v) => v * 4.54609, fromBase: (v) => v / 4.54609 },
+
+  // additional pressure units — base unit: Pa (Pascals)
+  atm: { category: "pressure", toBase: (v) => v * 101325, fromBase: (v) => v / 101325 },
+  mmhg: { category: "pressure", toBase: (v) => v * 133.322, fromBase: (v) => v / 133.322 },
+  inhg: { category: "pressure", toBase: (v) => v * 3386.39, fromBase: (v) => v / 3386.39 },
+
+  // additional energy units — base unit: J (Joules)
+  kj: { category: "energy", toBase: (v) => v * 1000, fromBase: (v) => v / 1000 },
+  cal: { category: "energy", toBase: (v) => v * 4.184, fromBase: (v) => v / 4.184 },
+  kwh: { category: "energy", toBase: (v) => v * 3600000, fromBase: (v) => v / 3600000 },
+  btu: { category: "energy", toBase: (v) => v * 1055.06, fromBase: (v) => v / 1055.06 },
+  ftlbf: { category: "energy", toBase: (v) => v * 1.35582, fromBase: (v) => v / 1.35582 },
+  ev: { category: "energy", toBase: (v) => v * 1.60218e-19, fromBase: (v) => v / 1.60218e-19 },
 };
 
 export class UnitConversionError extends Error {

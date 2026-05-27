@@ -1,68 +1,140 @@
-# Yüzde Hesaplama
+# Yüzde Hesaplayıcı
 
-Yüzde hesaplayıcı, en yaygın üç yüzde problemini tek bir yerde çözmenize yardımcı olur: bir sayının belirli bir yüzdesini bulmak, bir sayının başka bir sayıya göre yüzde kaç olduğunu belirlemek ve iki değer arasındaki yüzde değişimini hesaplamak. İster okul ödevinde çalışın, ister mağazada indirim hesaplayın, ister iş metriklerini analiz edin; bu araç size anında ve doğru yanıtlar verir.
+Yüzde hesaplayıcı, üç temel yüzde problemini anında çözmenize yardımcı olur.
 
 ## Yüzde Nedir?
 
-Yüzde, bir sayıyı 100 üzerinden ifade etmenin bir yoludur. Kelime, Latince *per centum* yani "yüzde biri" anlamına gelir. Yüzde 25 dediğimizde, her 100'den 25'ini, yani bütünün dörtte birini kastediyoruz. Yüzdeler karşılaştırmanın evrensel dilidir: temel sayıların ölçeğinden bağımsız olarak oranları, hızları ve değişimleri tutarlı bir biçimde tanımlamamızı sağlar.
+**Yüzde** (%), 100'ün kesri olarak ifade edilen bir sayı veya orandır. Orantıları göstermenin ve değerleri aynı ölçekte karşılaştırmanın boyutsuz bir yoludur.
 
-Yüzdeler günlük yaşamın her alanında karşımıza çıkar: restoran hesabında yüzde 20 bahşiş, yüzde 20 KDV, kredide yüzde 5 faiz oranı, üründe yüzde 30 indirim, yıllık yüzde 8 maaş zammı ve yüzde 2,5 enflasyon oranı.
+- **Sembol**: % (yüzde)
+- **Anlamı**: Yüzde bir, veya 100'de
+- **Ondalık eşdeğeri**: %25 = 0,25
+- **Örnek**: 200'ün %25'i = 0,25 × 200 = 50
 
-## Bu Hesaplayıcı Nasıl Kullanılır?
+Yüzdeler her yerdedir: mağazalardaki indirimler (%30 indirim), okulda notlar (%85), banka faiz oranları (%2,5 yıllık), ve vergi oranları (%8 satış vergisi).
 
-Çözmek istediğiniz problemi türünü seçin:
+## Üç Problem Türü
 
-**1. Y'nin yüzde X'i kaçtır?**
-Yüzdeyi (X) ve temel sayıyı (Y) girin. Sonuç, Y'nin X%'ini temsil eden miktarı verir.
-*Örnek: 80'in yüzde 15'i? → 12*
+### 1. X'in %Y'sini Bulma
 
-**2. X, Y'nin yüzde kaçıdır?**
-İki sayıyı girin. Sonuç, X sayısının Y'nin kaçta kaçı olduğunu yüzde olarak gösterir.
-*Örnek: 30, 120'nin yüzde kaçıdır? → %25*
+Bu en yaygın yüzde problemidir. Bir yüzde ve bir temel değer vardır ve bu yüzdenin neyi temsil ettiğini bulmak istiyorsunuz.
 
-**3. X'ten Y'ye yüzde değişim**
-Başlangıç değerini (X) ve bitiş değerini (Y) girin. Sonuç yüzde artış veya azalışı verir.
-*Örnek: 50'den 75'e değişim → %50 artış*
+**Formül**: (X ÷ 100) × Y
 
-## Formüller
+**Örnek**: 200'ün %25'i nedir?
+- (25 ÷ 100) × 200 = 0,25 × 200 = 50
 
-| Problem Türü | Formül |
-|---|---|
-| Y'nin X%'i | Sonuç = (X ÷ 100) × Y |
-| X, Y'nin yüzde kaçıdır? | Sonuç = (X ÷ Y) × 100 |
-| X'ten Y'ye yüzde değişim | Sonuç = ((Y − X) ÷ X) × 100 |
+**Gerçek hayat kullanımı**: Bir gömlek 200 TL maliyetli ve %25 indirim işaretlenmiş ise, indirim (0,25) × 200 = 50 TL'dir ve 150 TL ödersiniz.
 
-## Örnekler
+### 2. X, Y'nin Kaçıncı Yüzdesini Oluşturur?
 
-**Örnek 1 — Perakende indirimi:**
-Orijinal fiyatı 1200 TL olan bir ceket %25 indirimle satışa çıkmış. İndirim tutarı ne kadar?
-→ 1200'ün %25'i = (25 ÷ 100) × 1200 = **300 TL indirim** (indirimli fiyat: 900 TL)
+İki değeriniz vardır ve ilkinin ikincinin ne kadarını temsil ettiğini öğrenmek istiyorsunuz. Bu "notum kaç?" veya "pazar payım nedir?" gibi soruları yanıtlar.
 
-**Örnek 2 — Sınav puanı:**
-Bir öğrenci 56 sorudan 42'sini doğru yanıtladı. Yüzde kaçını doğru yaptı?
-→ 42, 56'nın yüzde kaçıdır = (42 ÷ 56) × 100 = **%75**
+**Formül**: (X ÷ Y) × 100
 
-**Örnek 3 — Maaş artışı:**
-Bir çalışanın maaşı 40.000 TL'den 44.000 TL'ye yükseltildi. Yüzde artış nedir?
-→ Yüzde değişim = ((44.000 − 40.000) ÷ 40.000) × 100 = **%10 artış**
+**Örnek**: 50, 200'ün kaçıncı yüzdesidir?
+- (50 ÷ 200) × 100 = 0,25 × 100 = %25
 
-**Örnek 4 — Piyasa düşüşü:**
-Bir hisse senedi 200 TL'den 170 TL'ye düştü. Yüzde kaç düşüş yaşandı?
-→ Yüzde değişim = ((170 − 200) ÷ 200) × 100 = **%−15 düşüş**
+**Gerçek hayat kullanımı**: Sınavda 100 puandan 75 puan aldıysanız, yüzdeniz (75 ÷ 100) × 100 = %75'tir.
+
+### 3. Yüzde Değişimi
+
+Yüzde değişimi, bir değerin orijinal değerine göre ne kadar arttığını veya azaldığını ölçer. Büyüme, enflasyon ve performans metriklerini izlemek için çok önemlidir.
+
+**Formül**: ((Yeni − Eski) ÷ Eski) × 100
+
+**Örnek**: Bir hisse senedi fiyatı 100 TL'den 150 TL'ye çıktı. Yüzde değişim nedir?
+- ((150 − 100) ÷ 100) × 100 = (50 ÷ 100) × 100 = %50
+
+**Yorumlama**:
+- Pozitif sonuç = artış (büyüme)
+- Negatif sonuç = azalış (kayıp)
+- Sıfır = değişim yok
+
+**Gerçek hayat kullanımı**: Maaşınız 50.000 TL'den 55.000 TL'ye çıktıysa, zam oranı ((55000 − 50000) ÷ 50000) × 100 = %10'dur.
+
+## Hesaplayıcıyı Nasıl Kullanacağınız
+
+1. **Problem türünü seçin** açılır menüden:
+   - "X'in %Y'si" - bir bölümü bulmak için
+   - "X, Y'nin kaçıncı yüzdesidir" - yüzdeyi bulmak için
+   - "X'ten Y'ye yüzde değişim" - büyüme veya azalışı bulmak için
+
+2. **Değerlerinizi girin** giriş alanlarına (etiketler seçiminize göre değişir)
+
+3. **Hesapla**'yı tıklayın ve sonucunuzu anında görün
+
+4. **Açıklamayı gözden geçirin** cevabın nasıl hesaplandığını anlamak için
+
+## Çalışılan Örnekler
+
+### Örnek 1: 450'nin %35'i
+
+450'nin %35'ini bulmak istiyorsunuz.
+- "X'in %Y'si"'ni seçin
+- "Değer 1"'e 35 ve "Değer 2"'ye 450 girin
+- Sonuç: 157,5
+
+**Hesaplama**: (35 ÷ 100) × 450 = 0,35 × 450 = 157,5
+
+**Kullanım durumu**: Bir ürün 450 TL maliyetli ve %35 kar marjı varsa, kar miktarı 157,50 TL'dir.
+
+### Örnek 2: 84, 120'nin kaçıncı yüzdesidir?
+
+Sınavda 120 puandan 84 puan aldınız. Yüzdeniz kaç?
+- "X, Y'nin kaçıncı yüzdesidir"'ni seçin
+- "Değer 1"'e 84 ve "Değer 2"'ye 120 girin
+- Sonuç: %70
+
+**Hesaplama**: (84 ÷ 120) × 100 = 0,70 × 100 = %70
+
+**Yorumlama**: %70 puan aldınız.
+
+### Örnek 3: 200.000'den 260.000'e Yüzde Değişim
+
+Gelir 200.000 TL'den 260.000 TL'ye çıktı. Yüzde büyüme nedir?
+- "X'ten Y'ye yüzde değişim"'i seçin
+- "Değer 1"'e 200 (eski) ve "Değer 2"'ye 260 (yeni) girin
+- Sonuç: %30
+
+**Hesaplama**: ((260 − 200) ÷ 200) × 100 = (60 ÷ 200) × 100 = %30
+
+**Yorumlama**: Geliriniz %30 arttı.
 
 ## Sıkça Sorulan Sorular
 
-**Yüzde ile yüzde puan arasındaki fark nedir?**
-Yüzde ve yüzde puan sık karıştırılır. Bir faiz oranı %4'ten %6'ya yükselirse, 2 *yüzde puan* artmıştır; ancak *yüzde* artışı %50'dir (çünkü 2, 4'ün %50'sidir). Bu ayrım finans ve ekonomide büyük önem taşır.
+### Yüzde %100'den fazla olabilir mi?
 
-**Yüzde 100'den büyük olabilir mi?**
-Evet. Bir miktar iki katına çıkarsa %100 artmış olur. Üç katına çıkarsa bu %200 artıştır. Büyüme veya temel değerden büyük oranları temsil ederken %100'ün üzerindeki yüzdeler tamamen geçerlidir.
+Evet! %100'den büyük yüzde, yeni değerin orijinali aştığı anlamına gelir. Örneğin:
+- 1.000 TL yatırım yaparsanız ve 2.500 TL'ye ulaşırsa, getiri ((2500 − 1000) ÷ 1000) × 100 = %150'dir
 
-**Yüzde hesabını zihinsel olarak nasıl yaparım?**
-Kullanışlı bir ipucu: Herhangi bir sayının %10'u, o sayının 10'a bölümüdür. Sonra ölçekleyebilirsiniz: %5, %10'un yarısı; %20, %10'un iki katı; %1, %10'un onda biridir.
+### Yüzde negatif olabilir mi?
+
+Evet! Negatif yüzde bir azalışı gösterir:
+- Hisse fiyatı 100 TL'den 75 TL'ye düşerse, değişim ((75 − 100) ÷ 100) × 100 = −%25'tir
+
+### Yüzde değişimi sadece çıkarmaktan neden farklı?
+
+Yüzde değişimi orijinal değerin bağlamını düşünür. 50 TL artış farklı anlamlara gelir:
+- 50 TL'den 100 TL'ye = %100 artış (iki katına)
+- 500 TL'den 550 TL'ye = %10 artış (ılımlı büyüme)
+
+Her ikisi de 50 TL arttı ama yüzde nispi değişimi gösterir.
+
+### Yüzde indirimini nasıl hesaplarım?
+
+"X'in %Y'si" kullanarak indirim miktarını bulun, sonra orijinal fiyattan çıkartın:
+- Orijinal fiyat: 80 TL
+- İndirim: 80 TL'nin %25'i = (0,25) × 80 = 20 TL
+- Nihai fiyat: 80 − 20 = 60 TL
+
+### Yüzde puan ve yüzde değişim farkı nedir?
+
+- **Yüzde puanı**: Basit aritmetik fark. Vergi oranı %8'den %10'a çıkarsa, %2 yüzde puanı artışıdır.
+- **Yüzde değişim**: Nispi artış. Vergi oranı ((10 − 8) ÷ 8) × 100 = %25 arttı (nispi terimlerle).
 
 ## Kaynaklar
 
-1. Türk Standartları Enstitüsü. *Ölçü Birimleri.*
-2. Khan Academy. *Yüzdeler.* [tr.khanacademy.org](https://tr.khanacademy.org)
-3. Vikipedi. *Yüzde.* [tr.wikipedia.org](https://tr.wikipedia.org/wiki/Y%C3%BCzde)
+- [Yüzde Matematiği - Khan Academy](https://www.khanacademy.org/math/arithmetic-home/arith-review-percents)
+- [Yüzdeyi Anlamak - Math is Fun](https://www.mathsisfun.com/percentage.html)
+- [Yüzde Hesaplayıcıları ve Formülleri](https://www.investopedia.com/terms/p/percentage.asp)

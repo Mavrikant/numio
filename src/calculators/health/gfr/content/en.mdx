@@ -1,0 +1,98 @@
+# eGFR Calculator: Estimate Your Kidney Function
+
+## What is eGFR?
+
+Estimated Glomerular Filtration Rate (eGFR) is a numerical estimate of how well your kidneys are filtering waste from your blood, measured in milliliters per minute per 1.73 square meters of body surface area (mL/min/1.73m²). It is calculated using serum creatinine concentration, a breakdown product of muscle metabolism, along with age, sex, and race.
+
+The kidneys' primary function is to filter about 180 liters of blood daily to remove urea, excess water, and other impurities. A healthy eGFR is typically 90 or higher. Values below 60 mL/min/1.73m² may indicate chronic kidney disease (CKD) and warrant evaluation by a healthcare provider.
+
+**Formula: CKD-EPI 2021 Equation**
+
+The CKD-EPI 2021 creatinine equation is the current standard for eGFR calculation in clinical practice:
+
+eGFR = 142 × (Scr/λ)^α × (0.9938)^age × 0.942^(if female) × C_race
+
+where:
+- Scr = serum creatinine in mg/dL
+- λ = 0.7 for females, 0.9 for males
+- α = -0.302 for females, -0.241 for males
+- Age is in years
+- Race coefficient: 1.012 for Black individuals, 1.0 for others (optional adjustment)
+
+This equation was developed by Inker et al. and published in 2021 to improve accuracy across diverse populations.
+
+## How to Use the Calculator
+
+1. **Enter your serum creatinine level**: This is measured from a blood test. Your doctor will provide this value in micromoles per liter (µmol/L). Common normal ranges are 60–110 µmol/L for men and 45–90 µmol/L for women, though these vary by laboratory.
+
+2. **Enter your age**: Provide your age in whole years. The equation applies to ages 18–120. eGFR naturally declines with age, even in healthy individuals, at a rate of approximately 1 mL/min/1.73m² per year after age 30.
+
+3. **Select your sex**: Choose your biological sex. Sex affects the eGFR calculation because women typically have lower muscle mass and therefore lower serum creatinine levels than men.
+
+4. **Select your race/ethnicity**: The CKD-EPI 2021 equation includes an optional race adjustment. This was added based on epidemiological data showing differences in creatinine metabolism between populations. Select "Black" if you identify as Black or African American; otherwise select "Other."
+
+5. **Get your results**: The calculator displays your eGFR value and corresponding CKD stage, along with a risk level classification.
+
+## CKD Stages Explained
+
+Chronic Kidney Disease is classified into 5 stages based on eGFR:
+
+- **Stage 1 (eGFR ≥90)**: Normal or high kidney function. Kidneys are functioning well. No symptoms typically present.
+- **Stage 2 (eGFR 60–89)**: Mildly decreased kidney function. Early CKD may be present, but kidney damage is minimal.
+- **Stage 3a (eGFR 45–59)**: Mild to moderate decrease in kidney function. CKD is present; monitoring and management become important.
+- **Stage 3b (eGFR 30–44)**: Moderate to severe decrease in kidney function. Regular check-ups and medication management may be necessary.
+- **Stage 4 (eGFR 15–29)**: Severely decreased kidney function. Close monitoring, medication, and dietary adjustments are typically needed; nephrologist referral is recommended.
+- **Stage 5 (eGFR <15)**: Kidney failure (end-stage renal disease, ESRD). Dialysis, kidney transplantation, or palliative care is typically required.
+
+## Examples
+
+### Example 1: Healthy Adult
+
+A 40-year-old man with a serum creatinine of 85 µmol/L and race classified as "Other":
+- eGFR ≈ 110 mL/min/1.73m²
+- Stage 1 (Normal)
+- Risk: Normal kidney function; no intervention needed.
+
+### Example 2: Early CKD
+
+A 65-year-old woman with a serum creatinine of 110 µmol/L and race "Other":
+- eGFR ≈ 55 mL/min/1.73m²
+- Stage 3a (Mildly to moderately decreased)
+- Risk: Moderate; regular monitoring and lifestyle modification recommended.
+
+### Example 3: Advanced CKD
+
+A 72-year-old man with a serum creatinine of 250 µmol/L and race "Other":
+- eGFR ≈ 20 mL/min/1.73m²
+- Stage 4 (Severely decreased)
+- Risk: Very High; specialist care, medication review, and possible preparation for kidney replacement therapy needed.
+
+## Frequently Asked Questions
+
+**Q: Why does sex matter in the eGFR equation?**
+A: Women generally have lower muscle mass than men, which results in lower baseline serum creatinine. The equation accounts for this biological difference to provide more accurate estimates across sexes.
+
+**Q: Is the race adjustment controversial?**
+A: Yes. While epidemiological data shows creatinine metabolism varies by population ancestry, recent guidance recommends the race coefficient be applied thoughtfully and in clinical context rather than automatically. Some providers may not use it.
+
+**Q: What if my eGFR is normal but my creatinine is high?**
+A: eGFR and creatinine can diverge, especially in athletes or people with unusual muscle mass. If you have concerns, discuss with your doctor; they may order additional tests like cystatin C or measured GFR.
+
+**Q: Can eGFR be inaccurate?**
+A: Yes. eGFR is an estimate. It may be less accurate in elderly individuals, people with extreme body compositions (very muscular or obese), liver disease, malnutrition, or certain medications. Your doctor may order more precise measurements if needed.
+
+**Q: What should I do if my eGFR is below 60?**
+A: Schedule an appointment with your doctor. They will review your creatinine trends, assess for underlying causes (diabetes, high blood pressure), and recommend lifestyle changes, medication adjustments, or specialist referral.
+
+**Q: Can CKD be reversed?**
+A: Some early-stage kidney damage may improve or stabilize with treatment, especially if the underlying cause (like high blood pressure or diabetes) is controlled. However, advanced CKD is usually progressive. Early detection and management are key.
+
+**Q: Is eGFR better than creatinine alone?**
+A: Yes. eGFR accounts for age, sex, and body composition, giving a more accurate picture of kidney function than raw creatinine. However, both can be influenced by muscle mass, so they are most useful when trended over time.
+
+## References
+
+- Inker, L. A., Eneanya, N. D., Coresh, J., et al. (2021). "A New Estimated GFR Should Be Used with Both Creatinine and Cystatin C in the General Population." *Journal of the American Society of Nephrology*, 32(10), 2347–2357. https://doi.org/10.1681/ASN.2020121280
+- KDIGO 2012 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease. https://kdigo.org/
+- National Kidney Foundation. eGFR Calculator and CKD Stages. https://www.kidney.org/
+- Centers for Disease Control and Prevention. Chronic Kidney Disease in the United States. https://www.cdc.gov/kidneydisease/
