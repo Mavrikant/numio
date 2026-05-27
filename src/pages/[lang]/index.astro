@@ -11,7 +11,7 @@ export async function getStaticPaths() {
 
 const { lang } = Astro.params;
 if (!lang || !isLocale(lang)) {
-  return Astro.redirect("/calculators/en/");
+  return Astro.redirect("/numio/en/");
 }
 const locale = lang as Locale;
 const categories = getAvailableCategories();

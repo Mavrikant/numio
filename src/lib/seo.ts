@@ -128,7 +128,7 @@ function buildMetaDescription(
 
 /**
  * Build the absolute OG image URL for a calculator.
- * Points to /calculators/og/{category}/{slug}.svg
+ * Points to /numio/og/{category}/{slug}.svg
  */
 function buildOgImageUrl(category: string, slug: string): string {
   const base = BASE_PATH.replace(/\/+$/, "");

@@ -1,6 +1,6 @@
 {
   "site": {
-    "name": "numio",
+    "name": "Numio",
     "tagline": "免费计算器，服务日常生活 — 金融、健康、工程、数学。",
     "description": "以12种语言使用免费、精准的计算器。无需登录，不跟踪用户，即时获得结果。"
   },
@@ -44,7 +44,7 @@
     "tooLarge": "值过大"
   },
   "footer": {
-    "copyright": "© numio",
+    "copyright": "© Numio",
     "disclaimer": "结果仅供参考。在做出重要决定之前请先核实。",
     "sourceCode": "源代码",
     "links": "链接",
@@ -106,7 +106,7 @@
     "accuracyNote": "精确度说明",
     "disclaimer": "免责声明",
     "lastReviewed": "最后审核",
-    "editorialTeam": "由 numio 编辑团队"
+    "editorialTeam": "由 Numio 编辑团队"
   },
   "seo": {
     "metaSuffix": "免费、即时、无需注册。"
@@ -122,7 +122,7 @@
   "pdf": {
     "print": "打印",
     "download": "下载 PDF",
-    "generated": "由 numio 生成",
+    "generated": "由 Numio 生成",
     "title": "计算器结果"
   },
   "pwa": {

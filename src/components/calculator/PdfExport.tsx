@@ -150,7 +150,7 @@ export function PdfExport({
       doc.setTextColor(255, 255, 255);
       doc.setFontSize(8);
       doc.setFont("helvetica", "normal");
-      doc.text("karaman.dev/calculators", margin, 8);
+      doc.text("karaman.dev/numio", margin, 8);
       doc.text(todayISO(), pageW - margin, 8, { align: "right" });
 
       y = 22;

@@ -3,8 +3,8 @@ import { BASE_PATH } from "@/config/site";
 
 export const GET: APIRoute = () => {
   const manifest = {
-    name: "numio",
-    short_name: "Calcs",
+    name: "Numio",
+    short_name: "Numio",
     description:
       "Free calculators for health, finance, engineering, math, and conversion — in 12 languages.",
     start_url: `${BASE_PATH}/en/`,

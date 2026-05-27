@@ -1,6 +1,6 @@
 {
   "site": {
-    "name": "numio",
+    "name": "Numio",
     "tagline": "Calculadoras gratuitas para la vida cotidiana — finanzas, salud, ingeniería, matemáticas.",
     "description": "Use calculadoras gratuitas y precisas en 12 idiomas. Sin registro, sin rastreo, resultados instantáneos."
   },
@@ -44,7 +44,7 @@
     "tooLarge": "El valor es demasiado grande"
   },
   "footer": {
-    "copyright": "© numio",
+    "copyright": "© Numio",
     "disclaimer": "Los resultados son solo para fines informativos. Verifique antes de usarlos en decisiones importantes.",
     "sourceCode": "Código fuente",
     "links": "Enlaces",
@@ -106,7 +106,7 @@
     "accuracyNote": "Nota de precisión",
     "disclaimer": "Aviso legal",
     "lastReviewed": "Última revisión",
-    "editorialTeam": "por el equipo editorial de numio"
+    "editorialTeam": "por el equipo editorial de Numio"
   },
   "seo": {
     "metaSuffix": "Gratis, instantáneo, sin registro."
@@ -122,7 +122,7 @@
   "pdf": {
     "print": "Imprimir",
     "download": "Descargar PDF",
-    "generated": "Generado por numio",
+    "generated": "Generado por Numio",
     "title": "Resultados de la calculadora"
   },
   "pwa": {

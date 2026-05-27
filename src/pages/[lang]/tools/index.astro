@@ -1,6 +1,6 @@
 ---
 /**
- * Tools listing page — /calculators/{lang}/tools/
+ * Tools listing page — /numio/{lang}/tools/
  */
 import Base from "@/layouts/Base.astro";
 import { LOCALES, isLocale, type Locale, SITE_URL } from "@/config/site";
@@ -13,12 +13,12 @@ export async function getStaticPaths() {
 
 const { lang } = Astro.params;
 if (!lang || !isLocale(lang)) {
-  return Astro.redirect("/calculators/en/");
+  return Astro.redirect("/numio/en/");
 }
 const locale = lang as Locale;
 
 const tools = getAllTools();
-const canonical = `${SITE_URL}/calculators/${locale}/tools/`;
+const canonical = `${SITE_URL}/numio/${locale}/tools/`;
 const title = t(locale, "nav.tools") ?? "Data Analysis Tools";
 const description = t(locale, "tools.description") ??
   "Upload CSV data and create interactive visualizations — histograms, scatter plots, time series, and descriptive statistics.";
@@ -29,7 +29,7 @@ const description = t(locale, "tools.description") ??
     <link
       rel="alternate"
       hreflang={l}
-      href={`${SITE_URL}/calculators/${l}/tools/`}
+      href={`${SITE_URL}/numio/${l}/tools/`}
       slot="head"
     />
   ))}

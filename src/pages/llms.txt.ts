@@ -1,5 +1,5 @@
 /**
- * /calculators/llms.txt — LLM/AI discovery manifest
+ * /numio/llms.txt — LLM/AI discovery manifest
  * Spec: https://llmstxt.org/
  *
  * Lists every calculator and tool with a 1-line English description

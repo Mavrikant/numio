@@ -1,6 +1,6 @@
 ---
 /**
- * Category listing page — /calculators/{lang}/{category}/
+ * Category listing page — /numio/{lang}/{category}/
  *
  * Generates one page per (locale × category) combination for all categories
  * that have at least one calculator registered.
@@ -41,7 +41,7 @@ export async function getStaticPaths() {
 const { lang, category } = Astro.params;
 
 if (!lang || !isLocale(lang)) {
-  return Astro.redirect("/calculators/en/");
+  return Astro.redirect("/numio/en/");
 }
 
 const locale = lang as Locale;

@@ -1,5 +1,5 @@
 /**
- * /calculators/api/{slug}.json — Static JSON API per calculator
+ * /numio/api/{slug}.json — Static JSON API per calculator
  *
  * Pre-rendered at build time for each calculator. Each response includes:
  *   - Full metadata (slug, category, title, description)

@@ -1,6 +1,10 @@
 export const SITE_URL = "https://karaman.dev";
-export const BASE_PATH = "/calculators";
-export const SITE_NAME = "numio";
+// IMPORTANT: BASE_PATH drives Astro's `site` + `base` config, the PWA
+// manifest scope, the service-worker registration path, every canonical,
+// every sitemap entry, hreflang, OG images, and the embed-widget src
+// URLs. Changing it here cascades automatically.
+export const BASE_PATH = "/numio";
+export const SITE_NAME = "Numio";
 
 export const LOCALES = [
   "en",
