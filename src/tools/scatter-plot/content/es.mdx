@@ -1,0 +1,45 @@
+# Diagrama de Dispersión y Correlación
+
+Suba un archivo CSV o pegue datos tabulares, elija dos columnas numéricas y vea la relación al instante. Esta herramienta dibuja un diagrama de dispersión en su navegador, calcula el coeficiente de correlación de Pearson y puede superponer opcionalmente una línea de regresión — sin enviar datos a ningún servidor.
+
+## ¿Qué es un diagrama de dispersión?
+
+Un **diagrama de dispersión** (scatter plot o gráfico XY) representa pares de observaciones como puntos en un plano bidimensional. Cada punto tiene una coordenada X de una variable y una coordenada Y de otra. La nube de puntos resultante revela la forma, fuerza y dirección de la relación entre las dos variables.
+
+Preguntas que un diagrama de dispersión puede responder rápidamente:
+
+- ¿Existe una **relación positiva** (cuando X aumenta, Y tiende a aumentar)?
+- ¿Existe una **relación negativa** (cuando X aumenta, Y tiende a disminuir)?
+- ¿La relación es **lineal** o **curvilínea**?
+- ¿Hay **valores atípicos** lejos del grupo principal?
+
+## Coeficiente de correlación de Pearson (r)
+
+**Pearson r** es el resumen numérico más común de una relación lineal. Va de -1 a +1:
+
+- **r = +1**: relación lineal positiva perfecta.
+- **r = 0**: ninguna relación lineal.
+- **r = -1**: relación lineal negativa perfecta.
+
+Umbrales convencionales (Cohen, 1988): |r| &lt; 0,1 insignificante; 0,1–0,3 pequeño; 0,3–0,5 moderado; 0,5–0,7 grande; &gt; 0,7 muy grande.
+
+**Advertencias importantes:** r mide solo asociación *lineal*. La correlación no implica causalidad. Los valores atípicos pueden influir fuertemente en r. Siempre visualice sus datos — el Cuarteto de Anscombe (1973) muestra que valores iguales de r pueden corresponder a gráficos completamente diferentes.
+
+## R² — coeficiente de determinación
+
+**R²** es r² y representa la proporción de varianza de Y explicada linealmente por X. Por ejemplo, R² = 0,64 significa que el 64 % de la variación de Y está explicada por X.
+
+## Regresión lineal
+
+Marque **Mostrar línea de regresión** para calcular la línea de mínimos cuadrados ordinarios (MCO): ŷ = pendiente · x + intercepto, minimizando la suma de los cuadrados de los residuos verticales.
+
+## Casos de uso comunes
+
+- **Biología/medicina**: altura vs peso, dosis vs respuesta, edad vs presión arterial.
+- **Finanzas**: precio vs volumen, rendimientos vs índice de mercado.
+- **Educación**: horas de estudio vs nota, tamaño de clase vs rendimiento.
+- **Ingeniería**: tensión de entrada vs corriente de salida, temperatura vs resistencia.
+
+## Privacidad
+
+Todos los cálculos se realizan localmente en su navegador. No se envían datos a ningún servidor. Tamaño de archivo recomendado: máximo 5 MB.

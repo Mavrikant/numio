@@ -1,0 +1,38 @@
+# Streudiagramm & Korrelation
+
+Laden Sie eine CSV-Datei hoch oder fügen Sie tabellarische Daten ein, wählen Sie zwei numerische Spalten und sehen Sie die Beziehung sofort. Dieses Tool zeichnet ein Streudiagramm in Ihrem Browser, berechnet den Pearson-Korrelationskoeffizienten und kann optional eine Regressionsgerade überlagern — ganz ohne Datenweitergabe an einen Server.
+
+## Was ist ein Streudiagramm?
+
+Ein **Streudiagramm** (Scatter Plot oder XY-Diagramm) stellt gepaarte Beobachtungen als Punkte auf einer zweidimensionalen Ebene dar. Jeder Punkt hat eine X-Koordinate aus einer Variable und eine Y-Koordinate aus einer anderen. Die entstehende Punktwolke zeigt Form, Stärke und Richtung der Beziehung zwischen den beiden Variablen.
+
+## Pearson-Korrelationskoeffizient (r)
+
+**Pearson r** ist die gebräuchlichste Einzelzahl-Zusammenfassung einer linearen Beziehung. Er liegt zwischen -1 und +1:
+
+- **r = +1**: perfekte positive lineare Beziehung — alle Punkte liegen genau auf einer aufsteigenden Geraden.
+- **r = 0**: keine lineare Beziehung.
+- **r = -1**: perfekte negative lineare Beziehung.
+
+Konventionelle Stärkerichtlinien (Cohen, 1988): |r| &lt; 0,1 vernachlässigbar; 0,1–0,3 klein; 0,3–0,5 mittel; 0,5–0,7 groß; &gt; 0,7 sehr groß.
+
+**Wichtige Hinweise:** r misst nur *lineare* Zusammenhänge. Korrelation impliziert keine Kausalität. Ausreißer können r erheblich beeinflussen. Visualisieren Sie Ihre Daten immer — Anscombe's Quartett (1973) zeigt eindrucksvoll, dass gleiche r-Werte völlig unterschiedliche Streudiagramme haben können.
+
+## R² — Bestimmtheitsmaß
+
+**R²** ist das Quadrat von r und gibt den Anteil der Varianz in Y an, der durch den linearen Zusammenhang mit X erklärt wird. R² = 0,64 bedeutet beispielsweise, dass 64 % der Variation in Y durch X erklärt werden.
+
+## Lineare Regression
+
+Aktivieren Sie **Regressionsgerade anzeigen**, um die Methode der kleinsten Quadrate (OLS) anzuwenden: die Gerade ŷ = Steigung · x + Achsenabschnitt, die die Summe der quadrierten vertikalen Abstände minimiert.
+
+## Anwendungsfälle
+
+- **Biologie/Medizin**: Körpergröße vs. Gewicht, Dosis vs. Wirkung.
+- **Finanzen**: Kurs vs. Volumen, Renditen vs. Marktindex.
+- **Bildung**: Lernstunden vs. Prüfungsnote, Klassengröße vs. Leistung.
+- **Ingenieurwesen**: Eingangsspannung vs. Ausgangsstrom, Temperatur vs. Widerstand.
+
+## Datenschutz
+
+Alle Berechnungen erfolgen lokal in Ihrem Browser. Es werden keine Daten an einen Server übertragen. Maximale empfohlene Dateigröße: 5 MB.

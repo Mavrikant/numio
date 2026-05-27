@@ -1,0 +1,45 @@
+# Grafico a Dispersione e Correlazione
+
+Carica un file CSV o incolla dati tabulari, scegli due colonne numeriche e visualizza istantaneamente la relazione. Questo strumento disegna un grafico a dispersione nel tuo browser, calcola il coefficiente di correlazione di Pearson e può sovrapporre opzionalmente una retta di regressione — senza inviare dati a nessun server.
+
+## Cos'è un grafico a dispersione?
+
+Un **grafico a dispersione** (scatter plot o grafico XY) rappresenta coppie di osservazioni come punti su un piano bidimensionale. Ogni punto ha una coordinata X da una variabile e una coordinata Y dall'altra. La nuvola di punti rivela la forma, la forza e la direzione della relazione tra le due variabili.
+
+Domande a cui un grafico a dispersione può rispondere rapidamente:
+
+- Esiste una **relazione positiva** (quando X aumenta, Y tende ad aumentare)?
+- Esiste una **relazione negativa** (quando X aumenta, Y tende a diminuire)?
+- La relazione è **lineare** o **curvilinea**?
+- Ci sono **valori anomali** lontani dal gruppo principale?
+
+## Coefficiente di correlazione di Pearson (r)
+
+**Pearson r** è il riassunto numerico più comune di una relazione lineare. Va da -1 a +1:
+
+- **r = +1**: relazione lineare positiva perfetta.
+- **r = 0**: nessuna relazione lineare.
+- **r = -1**: relazione lineare negativa perfetta.
+
+Soglie convenzionali (Cohen, 1988): |r| &lt; 0,1 trascurabile; 0,1–0,3 piccolo; 0,3–0,5 moderato; 0,5–0,7 grande; &gt; 0,7 molto grande.
+
+**Avvertenze importanti:** r misura solo l'associazione *lineare*. La correlazione non implica causalità. I valori anomali possono influenzare fortemente r. Visualizza sempre i tuoi dati — il Quartetto di Anscombe (1973) mostra che valori uguali di r possono corrispondere a grafici completamente diversi.
+
+## R² — coefficiente di determinazione
+
+**R²** è r² e rappresenta la proporzione di varianza di Y spiegata linearmente da X. Ad esempio, R² = 0,64 significa che il 64% della variazione di Y è spiegata da X.
+
+## Regressione lineare
+
+Spunta **Mostra retta di regressione** per calcolare la retta dei minimi quadrati ordinari (OLS): ŷ = pendenza · x + intercetta, minimizzando la somma dei quadrati dei residui verticali.
+
+## Casi d'uso comuni
+
+- **Biologia/medicina**: altezza vs peso, dose vs risposta, età vs pressione sanguigna.
+- **Finanza**: prezzo vs volume, rendimenti vs indice di mercato.
+- **Istruzione**: ore di studio vs voto, dimensione classe vs rendimento.
+- **Ingegneria**: tensione di ingresso vs corrente di uscita, temperatura vs resistenza.
+
+## Privacy
+
+Tutti i calcoli vengono eseguiti localmente nel tuo browser. Nessun dato viene trasmesso a server. Dimensione file consigliata: massimo 5 MB.

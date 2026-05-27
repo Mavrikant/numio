@@ -1,0 +1,82 @@
+# Scatter Plot & Correlation
+
+Upload a CSV file or paste tabular data, choose two numeric columns, and instantly see how they relate. This tool draws a scatter plot in your browser, computes the Pearson correlation coefficient, and optionally overlays a linear regression line — all without sending any data to a server.
+
+## What is a scatter plot?
+
+A **scatter plot** (also called a scatter graph or XY plot) places paired observations as dots on a two-dimensional plane. Each dot has an X coordinate from one variable and a Y coordinate from another. The resulting cloud of points reveals the shape, strength, and direction of the relationship between the two variables.
+
+Looking at a scatter plot you can quickly answer:
+
+- Is there a **positive relationship** (as X increases, Y tends to increase)?
+- Is there a **negative relationship** (as X increases, Y tends to decrease)?
+- Is the relationship **linear** (dots cluster around a straight line) or **curved**?
+- Are there **outliers** — points far from the main cluster?
+- Are there **subgroups** — multiple distinct clouds that suggest hidden categories in the data?
+
+Scatter plots are foundational to exploratory data analysis (EDA). Before applying any statistical test or machine learning model, visualizing your data as a scatter plot can save hours of wasted effort by revealing structure that summary statistics alone miss.
+
+## Pearson correlation coefficient (r)
+
+The **Pearson r** is the most common single-number summary of a linear relationship. It ranges from -1 to +1:
+
+- **r = +1**: perfect positive linear relationship — all points lie exactly on an upward-sloping line.
+- **r = 0**: no linear relationship — knowing X gives no information about Y under a linear model.
+- **r = -1**: perfect negative linear relationship — all points lie exactly on a downward-sloping line.
+
+Conventional strength guidelines (Cohen, 1988): |r| &lt; 0.1 is negligible; 0.1–0.3 small; 0.3–0.5 moderate; 0.5–0.7 large; &gt; 0.7 very large. These thresholds vary by discipline — in physics an r of 0.9 might be unimpressive, while in social science it would be remarkable.
+
+**Important caveats:**
+
+1. r measures only *linear* association. Two variables can be strongly related in a curved (nonlinear) way yet have r close to zero. Always look at the plot.
+2. Correlation does not imply causation. A high r between ice cream sales and drowning rates does not mean ice cream causes drowning — both are driven by hot weather.
+3. Outliers can inflate or deflate r dramatically. One extreme point can shift r by 0.3 or more.
+4. Anscombe's Quartet (1973) famously showed four datasets with identical r ≈ 0.816 but wildly different scatter plots. Always visualize your data.
+
+## R² — coefficient of determination
+
+**R²** is simply r², and it has a more intuitive interpretation: it is the proportion of variance in Y that is linearly explained by X. For example, if r = 0.8, then R² = 0.64, meaning 64% of the variation in Y is accounted for by the linear relationship with X. The remaining 36% is due to other factors, measurement error, or nonlinearity.
+
+R² is also reported by this tool alongside r so you can see both the direction (sign of r) and the explanatory power (R²) at a glance.
+
+## Linear regression
+
+When you check **Show regression line**, the tool computes a simple ordinary least squares (OLS) regression: it finds the straight line ŷ = slope · x + intercept that minimises the sum of squared vertical distances (residuals) from each point to the line.
+
+- **Slope**: how many units Y changes on average for each one-unit increase in X.
+- **Intercept**: the predicted value of Y when X = 0 (may not be meaningful if X = 0 is outside your data range).
+
+The regression line passes through the point (x̄, ȳ) — the joint mean of both variables. The slope equals Cov(X, Y) / Var(X). The R² of the regression line equals r².
+
+**When is regression useful?**
+
+- **Prediction**: given a new X value, use the line to estimate Y (within the range of your data — extrapolation is risky).
+- **Effect size**: the slope tells you the practical magnitude of the relationship, not just its direction.
+- **Communication**: a trend line on a scatter plot makes the relationship concrete and easy to explain to non-statisticians.
+
+## How to use this tool
+
+1. **Upload your data**: drag and drop a CSV file, click "Choose file", or paste comma- or tab-separated text into the textarea. The tool auto-detects delimiters and column headers.
+2. **Select X and Y columns**: any two numeric columns. You can swap them to flip which variable is treated as independent.
+3. **Read the stats**: Pearson r and R² are shown immediately below the chart.
+4. **Toggle the regression line**: check "Show regression line" to overlay the OLS fit with slope and intercept displayed.
+5. **Explore**: try different column pairs to understand the structure of your dataset.
+
+## Common use cases
+
+- **Biology / medicine**: height vs weight, dose vs response, age vs blood pressure.
+- **Finance**: price vs volume, returns vs market index (beta estimation).
+- **Education**: study hours vs exam score, class size vs performance.
+- **Engineering**: input voltage vs output current, temperature vs resistance.
+- **Marketing**: ad spend vs sales, customer reviews vs churn rate.
+
+## Privacy
+
+All computation happens locally in your browser using JavaScript. No data is transmitted to any server. The maximum recommended file size is 5 MB; very large files (&gt; 100,000 rows) may be slow to render.
+
+## References
+
+- Pearson, K. (1895). *Notes on regression and inheritance in the case of two parents.* Proceedings of the Royal Society of London.
+- Galton, F. (1886). *Regression towards mediocrity in hereditary stature.* Journal of the Anthropological Institute, 15, 246–263.
+- Anscombe, F. J. (1973). *Graphs in statistical analysis.* The American Statistician, 27(1), 17–21.
+- Cohen, J. (1988). *Statistical Power Analysis for the Behavioral Sciences* (2nd ed.). Erlbaum.

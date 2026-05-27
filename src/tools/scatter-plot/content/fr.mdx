@@ -1,0 +1,45 @@
+# Nuage de Points & Corrélation
+
+Téléversez un fichier CSV ou collez des données tabulaires, choisissez deux colonnes numériques et visualisez instantanément la relation. Cet outil trace un nuage de points dans votre navigateur, calcule le coefficient de corrélation de Pearson et peut superposer optionnellement une droite de régression — sans aucun envoi de données vers un serveur.
+
+## Qu'est-ce qu'un nuage de points ?
+
+Un **nuage de points** (scatter plot ou graphique XY) représente des paires d'observations sous forme de points sur un plan à deux dimensions. Chaque point a une coordonnée X issue d'une variable et une coordonnée Y issue d'une autre. Le nuage révèle la forme, la force et la direction de la relation entre les deux variables.
+
+Quelques questions auxquelles un nuage de points peut répondre rapidement :
+
+- Y a-t-il une **relation positive** (quand X augmente, Y tend à augmenter) ?
+- Y a-t-il une **relation négative** (quand X augmente, Y tend à diminuer) ?
+- La relation est-elle **linéaire** ou **curvilinéaire** ?
+- Y a-t-il des **valeurs aberrantes** loin du nuage principal ?
+
+## Coefficient de corrélation de Pearson (r)
+
+**Pearson r** est le résumé chiffré le plus courant d'une relation linéaire. Il varie de -1 à +1 :
+
+- **r = +1** : relation linéaire positive parfaite.
+- **r = 0** : aucune relation linéaire.
+- **r = -1** : relation linéaire négative parfaite.
+
+Seuils conventionnels (Cohen, 1988) : |r| &lt; 0,1 négligeable ; 0,1–0,3 faible ; 0,3–0,5 modéré ; 0,5–0,7 fort ; &gt; 0,7 très fort.
+
+**Mises en garde importantes :** r ne mesure que l'association *linéaire*. La corrélation n'implique pas la causalité. Les valeurs aberrantes peuvent fortement influencer r. Toujours visualiser les données — le Quartet d'Anscombe (1973) illustre que des r identiques peuvent correspondre à des nuages totalement différents.
+
+## R² — coefficient de détermination
+
+**R²** vaut r² et représente la proportion de variance de Y expliquée linéairement par X. Par exemple, R² = 0,64 signifie que 64 % de la variation de Y est expliquée par X.
+
+## Régression linéaire
+
+Cochez **Afficher la droite de régression** pour calculer la droite des moindres carrés ordinaires (MCO) : ŷ = pente · x + ordonnée à l'origine, minimisant la somme des carrés des résidus verticaux.
+
+## Cas d'utilisation courants
+
+- **Biologie/médecine** : taille vs poids, dose vs réponse, âge vs tension artérielle.
+- **Finance** : prix vs volume, rendements vs indice de marché (estimation du bêta).
+- **Éducation** : heures d'étude vs note, taille de classe vs performance.
+- **Ingénierie** : tension d'entrée vs courant de sortie, température vs résistance.
+
+## Confidentialité
+
+Tous les calculs sont effectués localement dans votre navigateur. Aucune donnée n'est envoyée à un serveur. Taille de fichier recommandée : 5 Mo maximum.

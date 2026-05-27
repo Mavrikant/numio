@@ -1,0 +1,70 @@
+# Dağılım Grafiği ve Korelasyon
+
+CSV dosyası yükleyin veya tablo biçiminde veri yapıştırın, iki sayısal sütun seçin ve ilişkiyi anında görün. Bu araç, tarayıcınızda bir dağılım grafiği çizer, Pearson korelasyon katsayısını hesaplar ve isteğe bağlı olarak doğrusal regresyon çizgisi ekler — hiçbir veri sunucuya gönderilmez.
+
+## Dağılım grafiği nedir?
+
+**Dağılım grafiği** (scatter plot veya XY grafiği), eşleştirilmiş gözlemleri iki boyutlu bir düzlemde noktalar olarak gösterir. Her noktanın X koordinatı bir değişkenden, Y koordinatı ise diğerinden gelir. Oluşan nokta bulutu, iki değişken arasındaki ilişkinin şeklini, gücünü ve yönünü ortaya koyar.
+
+Dağılım grafiğine bakarak hızla şu soruları cevaplayabilirsiniz:
+
+- **Pozitif ilişki** var mı (X arttıkça Y de artıyor mu)?
+- **Negatif ilişki** var mı (X arttıkça Y azalıyor mu)?
+- İlişki **doğrusal** mı (noktalar düz bir çizgi etrafında mı kümeleniyor) yoksa **eğrisel** mi?
+- **Aykırı değerler** var mı — ana kümeden çok uzak noktalar?
+- **Alt gruplar** var mı — veride gizli kategorilere işaret eden birden fazla ayrı bulut?
+
+Dağılım grafikleri, keşifsel veri analizinin (EDA) temel taşıdır. Herhangi bir istatistiksel test veya makine öğrenmesi modeli uygulamadan önce verilerinizi dağılım grafiği olarak görselleştirmek, özet istatistiklerin gözden kaçırdığı yapıları ortaya çıkararak saatlerce boşa harcanan çabayı önleyebilir.
+
+## Pearson korelasyon katsayısı (r)
+
+**Pearson r**, doğrusal ilişkinin en yaygın tek sayılı özetidir. -1 ile +1 arasında değer alır:
+
+- **r = +1**: mükemmel pozitif doğrusal ilişki — tüm noktalar tam olarak yukarı eğimli bir çizgi üzerinde.
+- **r = 0**: doğrusal ilişki yok — doğrusal model altında X, Y hakkında bilgi vermez.
+- **r = -1**: mükemmel negatif doğrusal ilişki — tüm noktalar tam olarak aşağı eğimli bir çizgi üzerinde.
+
+Geleneksel güç kılavuzları (Cohen, 1988): |r| &lt; 0,1 ihmal edilebilir; 0,1–0,3 küçük; 0,3–0,5 orta; 0,5–0,7 büyük; &gt; 0,7 çok büyük. Bu eşikler alana göre değişir — fizikte 0,9'luk bir r önemsiz görünebilirken, sosyal bilimlerde dikkat çekici olacaktır.
+
+**Önemli uyarılar:**
+
+1. r yalnızca *doğrusal* ilişkiyi ölçer. İki değişken eğrisel bir şekilde güçlü biçimde ilişkili olabilir ancak r sıfıra yakın olabilir. Grafiğe mutlaka bakın.
+2. Korelasyon nedensellik anlamına gelmez. Dondurma satışları ile boğulma oranları arasındaki yüksek r, dondurmanın boğulmaya neden olduğu anlamına gelmez — her ikisi de sıcak havayla ilgilidir.
+3. Aykırı değerler r'yi dramatik biçimde artırabilir veya azaltabilir. Tek bir uç nokta r'yi 0,3 veya daha fazla kaydırabilir.
+4. Anscombe'nin Dörtlüsü (1973), r ≈ 0,816 olan ama birbirinden tamamen farklı dağılım grafiklerine sahip dört veri setini göstermiştir. Verilerinizi her zaman görselleştirin.
+
+## R² — belirlilik katsayısı
+
+**R²**, r'nin karesidir ve daha sezgisel bir yorumu vardır: Y'deki varyansın X tarafından doğrusal olarak açıklanan oranıdır. Örneğin r = 0,8 ise R² = 0,64 olur; bu, Y'deki değişkenliğin %64'ünün X ile doğrusal ilişki tarafından açıklandığı anlamına gelir. Kalan %36, diğer faktörler, ölçüm hatası veya doğrusal olmama nedeniyledir.
+
+## Doğrusal regresyon
+
+**Regresyon çizgisini göster** seçeneğini işaretlediğinizde araç, basit en küçük kareler (OLS) regresyonu hesaplar: ŷ = eğim · x + kesişim doğrusunu, yani her noktadan çizgiye olan dikey mesafelerin (artıkların) karelerinin toplamını minimize eden düz çizgiyi bulur.
+
+- **Eğim**: X'te bir birimlik artış için Y'nin ortalama kaç birim değiştiği.
+- **Kesişim**: X = 0 olduğunda Y'nin tahmin edilen değeri (veri aralığı dışındaysa anlamlı olmayabilir).
+
+## Aracı nasıl kullanırım?
+
+1. **Verinizi yükleyin**: CSV dosyasını sürükle-bırak yapın, "Dosya seç"e tıklayın veya virgülle ya da sekmeyle ayrılmış metni metin alanına yapıştırın. Araç ayraçları ve sütun başlıklarını otomatik algılar.
+2. **X ve Y sütunlarını seçin**: herhangi iki sayısal sütun. Hangi değişkenin bağımsız olarak ele alındığını değiştirmek için yer değiştirebilirsiniz.
+3. **İstatistikleri okuyun**: Pearson r ve R² grafiğin hemen altında gösterilir.
+4. **Regresyon çizgisini açın**: OLS uyumunu eğim ve kesişimle birlikte görmek için "Regresyon çizgisini göster" seçeneğini işaretleyin.
+
+## Yaygın kullanım alanları
+
+- **Biyoloji/tıp**: boy ile ağırlık, doz ile yanıt, yaş ile tansiyon.
+- **Finans**: fiyat ile hacim, getiriler ile piyasa endeksi (beta tahmini).
+- **Eğitim**: çalışma saati ile sınav puanı, sınıf büyüklüğü ile başarı.
+- **Mühendislik**: giriş gerilimi ile çıkış akımı, sıcaklık ile direnç.
+- **Pazarlama**: reklam harcaması ile satışlar, müşteri yorumları ile kayıp oranı.
+
+## Gizlilik
+
+Tüm hesaplama, JavaScript kullanılarak tarayıcınızda yerel olarak gerçekleşir. Hiçbir veri herhangi bir sunucuya iletilmez. Önerilen maksimum dosya boyutu 5 MB'dir.
+
+## Referanslar
+
+- Pearson, K. (1895). *Notes on regression and inheritance in the case of two parents.* Proceedings of the Royal Society of London.
+- Galton, F. (1886). *Regression towards mediocrity in hereditary stature.* Journal of the Anthropological Institute.
+- Anscombe, F. J. (1973). *Graphs in statistical analysis.* The American Statistician, 27(1), 17–21.
