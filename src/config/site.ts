@@ -72,6 +72,32 @@ export const LOCALE_HTML_LANG: Record<Locale, string> = {
   hi: "hi",
 };
 
+export type CurrencyCode =
+  | "USD"
+  | "TRY"
+  | "EUR"
+  | "GBP"
+  | "JPY"
+  | "RUB"
+  | "CNY"
+  | "KRW"
+  | "INR";
+
+export const LOCALE_CURRENCY: Record<Locale, CurrencyCode> = {
+  en: "USD",
+  tr: "TRY",
+  de: "EUR",
+  fr: "EUR",
+  es: "EUR",
+  it: "EUR",
+  ar: "USD",
+  ru: "RUB",
+  zh: "CNY",
+  ja: "JPY",
+  ko: "KRW",
+  hi: "INR",
+};
+
 export function isLocale(value: string): value is Locale {
   return (LOCALES as readonly string[]).includes(value);
 }

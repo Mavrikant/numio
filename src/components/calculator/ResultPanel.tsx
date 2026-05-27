@@ -17,12 +17,14 @@
 import type { OutputDef, OutputFormat } from "@/types/calculator";
 import type { CalculatorI18nBundle } from "@/types/i18n";
 import type { Locale } from "@/config/site";
+import { LOCALE_CURRENCY } from "@/config/site";
 import {
   formatNumber,
   formatCurrency,
   formatPercent,
-  formatDuration,
-} from "@/lib/format";
+  formatDate,
+} from "@/lib/intl";
+import { formatDuration } from "@/lib/format";
 
 interface ResultPanelProps {
   readonly outputs: ReadonlyArray<OutputDef>;
@@ -37,24 +39,31 @@ function formatValue(
   format: OutputFormat,
   precision: number,
   locale: Locale,
+  unitOverride?: string,
 ): string {
   if (value === null || value === undefined) return "—";
 
   switch (format) {
     case "number":
       return typeof value === "number"
-        ? formatNumber(value, locale, precision)
+        ? formatNumber(value, locale, { maximumFractionDigits: precision, minimumFractionDigits: 0 })
         : String(value);
 
-    case "currency":
-      return typeof value === "number"
-        ? formatCurrency(value, locale, "USD", precision)
-        : String(value);
+    case "currency": {
+      if (typeof value !== "number") return String(value);
+      // Allow an explicit currency code via unitOverride (e.g. out.unit = "eur")
+      const explicitCode = unitOverride?.toUpperCase();
+      const validCodes = new Set(["USD","TRY","EUR","GBP","JPY","RUB","CNY","KRW","INR","AUD","CAD","CHF"]);
+      const currency = (explicitCode && validCodes.has(explicitCode))
+        ? (explicitCode as import("@/config/site").CurrencyCode)
+        : LOCALE_CURRENCY[locale];
+      return formatCurrency(value, locale, currency);
+    }
 
     case "percent":
       // Accept raw percent (e.g. 42.5 meaning 42.5%) — divide by 100 for Intl
       return typeof value === "number"
-        ? formatPercent(value / 100, locale, precision)
+        ? formatPercent(value, locale, precision)
         : String(value);
 
     case "duration":
@@ -66,9 +75,9 @@ function formatValue(
       return String(value);
 
     case "date":
-      return value instanceof Date
-        ? value.toLocaleDateString()
-        : String(value);
+      if (value instanceof Date) return formatDate(value, locale);
+      if (typeof value === "string") return formatDate(value, locale);
+      return String(value);
 
     case "list":
       return Array.isArray(value) ? (value as unknown[]).join(", ") : String(value);
@@ -129,6 +138,7 @@ export function ResultPanel({
           output.format,
           output.precision ?? 2,
           locale,
+          displayUnit,
         );
 
         const outputLabels = bundle.outputs[output.id];
