@@ -1,4 +1,9 @@
 {
+  "age": "edad",
+  "date-difference": "diferencia-fechas",
+  "date-add": "sumar-fecha",
+  "time-duration": "duracion",
+  "gpa": "promedio-gpa",
   "simple-interest": "interes-simple",
   "circle": "circulo",
   "slope": "pendiente",

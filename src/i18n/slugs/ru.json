@@ -1,4 +1,9 @@
 {
+  "age": "age",
+  "date-difference": "date-difference",
+  "date-add": "date-add",
+  "time-duration": "time-duration",
+  "gpa": "gpa",
   "simple-interest": "simple-interest",
   "circle": "circle",
   "slope": "slope",

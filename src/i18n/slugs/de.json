@@ -1,4 +1,9 @@
 {
+  "age": "alter",
+  "date-difference": "datumsdifferenz",
+  "date-add": "datum-addieren",
+  "time-duration": "zeitdauer",
+  "gpa": "notendurchschnitt",
   "simple-interest": "einfache-zinsen",
   "circle": "kreis",
   "slope": "steigung",

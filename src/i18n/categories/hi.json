@@ -3,5 +3,6 @@
   "finance": "वित्त",
   "engineering": "इंजीनियरिंग",
   "math": "गणित",
-  "conversion": "रूपांतरण"
+  "conversion": "रूपांतरण",
+  "datetime": "दिनांक और समय"
 }

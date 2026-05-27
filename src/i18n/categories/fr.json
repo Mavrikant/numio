@@ -3,5 +3,6 @@
   "finance": "Finances",
   "engineering": "Ingénierie",
   "math": "Mathématiques",
-  "conversion": "Conversion"
+  "conversion": "Conversion",
+  "datetime": "Date et Heure"
 }

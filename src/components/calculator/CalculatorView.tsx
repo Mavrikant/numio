@@ -78,7 +78,10 @@ export function CalculatorView({ calc, locale, initialInputs }: CalculatorViewPr
   const defaults = useMemo<InputValues>(() => {
     const d: InputValues = {};
     for (const input of calc.inputs) {
-      d[input.id] = input.defaultValue as number | string | boolean;
+      d[input.id] =
+        input.type.kind === "date" && input.defaultValue === "today"
+          ? new Date().toISOString().slice(0, 10)
+          : (input.defaultValue as number | string | boolean);
     }
     if (initialInputs) {
       for (const [k, v] of Object.entries(initialInputs)) {
@@ -365,7 +368,10 @@ export function CalculatorViewWithViz({
   const defaults = useMemo<InputValues>(() => {
     const d: InputValues = {};
     for (const input of calc.inputs) {
-      d[input.id] = input.defaultValue as number | string | boolean;
+      d[input.id] =
+        input.type.kind === "date" && input.defaultValue === "today"
+          ? new Date().toISOString().slice(0, 10)
+          : (input.defaultValue as number | string | boolean);
     }
     if (initialInputs) {
       for (const [k, v] of Object.entries(initialInputs)) {
