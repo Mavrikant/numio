@@ -50,7 +50,7 @@ const siteName = t(locale, "site.name");
           <line x1="8" y1="18" x2="12" y2="18" />
           <line x1="16" y1="18" x2="16" y2="18" />
         </svg>
-        <span class="text-sm sm:text-base">{siteName}</span>
+        <span class="text-base">{siteName}</span>
       </a>
 
       {/* Desktop nav — hidden on mobile */}
@@ -78,7 +78,7 @@ const siteName = t(locale, "site.name");
         <button
           type="button"
           aria-label={t(locale, "nav.search")}
-          class="hidden sm:inline-flex h-9 w-9 items-center justify-center rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-100 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500"
+          class="hidden sm:inline-flex h-10 w-10 sm:h-9 sm:w-9 items-center justify-center rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-100 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500"
           disabled
         >
           <svg
@@ -107,7 +107,7 @@ const siteName = t(locale, "site.name");
           aria-label={t(locale, "nav.openMenu")}
           aria-expanded="false"
           aria-controls="mobile-menu"
-          class="inline-flex h-9 w-9 items-center justify-center rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-100 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 md:hidden"
+          class="inline-flex h-10 w-10 sm:h-9 sm:w-9 items-center justify-center rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-100 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 md:hidden"
         >
           <svg
             id="hamburger-icon"

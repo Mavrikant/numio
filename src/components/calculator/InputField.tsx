@@ -15,7 +15,7 @@ interface InputFieldProps {
 }
 
 const baseInputClass =
-  "w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 shadow-sm " +
+  "w-full rounded-lg border border-slate-300 bg-white px-3 py-2.5 sm:py-2 min-h-[44px] sm:min-h-0 text-sm text-slate-900 shadow-sm " +
   "focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 " +
   "dark:border-slate-600 dark:bg-slate-800 dark:text-slate-100 " +
   "dark:focus:border-blue-400 dark:focus:ring-blue-400";
@@ -48,10 +48,11 @@ export function InputField({ input, value, bundle, onChange }: InputFieldProps) 
       case "number": {
         const numType = type;
         return (
-          <div className="relative flex items-center gap-2">
+          <div className="relative flex flex-wrap items-center gap-2">
             <input
               id={id}
               type="number"
+              inputMode="decimal"
               min={numType.min}
               max={numType.max}
               step={numType.step ?? (numType.integer ? 1 : "any")}

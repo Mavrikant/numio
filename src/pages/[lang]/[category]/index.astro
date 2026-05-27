@@ -23,7 +23,6 @@ import {
   getCalculatorsByCategory,
 } from "@/lib/registry";
 import type { CalculatorCategory } from "@/types/calculator";
-import Sidebar from "@/components/chrome/Sidebar.astro";
 
 export async function getStaticPaths() {
   const categories = getAvailableCategories();
@@ -60,10 +59,8 @@ const pageDescription = t(locale, "site.description");
 <Base locale={locale} title={categoryLabel} description={pageDescription} canonical={canonical}>
   <!-- Hreflang links (intentionally omitted — Base layout handles canonical) -->
 
-  <main class="container-page py-8 lg:flex lg:gap-8">
-    <Sidebar locale={locale} activeCategory={cat} />
-
-    <div class="mt-6 flex-1 min-w-0 lg:mt-0">
+  <main class="container-page py-8">
+    <div class="min-w-0">
       <!-- Breadcrumb -->
       <nav aria-label="Breadcrumb" class="mb-6 text-sm text-slate-500 dark:text-slate-400">
         <ol class="flex items-center gap-2">

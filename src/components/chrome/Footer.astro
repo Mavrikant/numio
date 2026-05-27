@@ -129,7 +129,7 @@ const buildIsoForAttr = BUILD_TIME;
     </div>
 
     {/* Bottom bar */}
-    <div class="mt-8 flex flex-col items-center justify-between gap-4 border-t border-slate-200 pt-6 text-xs text-slate-500 dark:border-slate-800 dark:text-slate-400 sm:flex-row">
+    <div class="mt-8 flex flex-col flex-wrap items-center justify-between gap-2 sm:gap-4 border-t border-slate-200 pt-6 text-xs text-slate-500 dark:border-slate-800 dark:text-slate-400 sm:flex-row">
       <p>
         {t(locale, "footer.copyright")} {currentYear}
       </p>
@@ -138,7 +138,7 @@ const buildIsoForAttr = BUILD_TIME;
       <button
         id="pwa-install-btn"
         onclick="window._triggerPwaInstall && window._triggerPwaInstall()"
-        class="hidden items-center gap-1.5 rounded-md border border-brand-500 px-3 py-1.5 text-xs font-medium text-brand-600 transition-colors hover:bg-brand-50 dark:border-brand-400 dark:text-brand-400 dark:hover:bg-brand-950"
+        class="hidden items-center gap-1.5 rounded-md border border-brand-500 px-3 py-2 sm:py-1.5 text-sm sm:text-xs min-h-[44px] sm:min-h-0 font-medium text-brand-600 transition-colors hover:bg-brand-50 dark:border-brand-400 dark:text-brand-400 dark:hover:bg-brand-950"
         aria-label={t(locale, "pwa.install")}
       >
         <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">

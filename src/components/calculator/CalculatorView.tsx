@@ -187,7 +187,7 @@ export function CalculatorView({ calc, locale, initialInputs }: CalculatorViewPr
     computeResult.result !== null;
 
   return (
-    <div className="mx-auto max-w-4xl px-4 py-8">
+    <div className="mx-auto max-w-4xl px-3 sm:px-4 py-8">
       {/* Calculator title */}
       <div className="mb-8">
         <p className="text-sm text-slate-500 dark:text-slate-400">
@@ -195,7 +195,7 @@ export function CalculatorView({ calc, locale, initialInputs }: CalculatorViewPr
         </p>
       </div>
 
-      <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
         {/* Input panel */}
         <section aria-label="Inputs">
           <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-700 dark:bg-slate-900">
@@ -222,7 +222,7 @@ export function CalculatorView({ calc, locale, initialInputs }: CalculatorViewPr
               <button
                 type="button"
                 onClick={handleReset}
-                className="rounded-lg border border-slate-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 shadow-sm hover:bg-slate-50 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700"
+                className="rounded-lg border border-slate-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 shadow-sm hover:bg-slate-50 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700 min-h-[44px] sm:min-h-0"
               >
                 {bundle.errors?.["reset"] ?? "Reset"}
               </button>
@@ -230,14 +230,14 @@ export function CalculatorView({ calc, locale, initialInputs }: CalculatorViewPr
                 type="button"
                 onClick={handleCopy}
                 disabled={!computeResult.result}
-                className="rounded-lg border border-slate-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 shadow-sm hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-40 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700"
+                className="rounded-lg border border-slate-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 shadow-sm hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-40 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700 min-h-[44px] sm:min-h-0"
               >
                 {copyLabel ?? "Copy"}
               </button>
               <button
                 type="button"
                 onClick={handleShare}
-                className="rounded-lg border border-blue-300 bg-blue-50 px-3 py-1.5 text-sm font-medium text-blue-700 shadow-sm hover:bg-blue-100 dark:border-blue-700 dark:bg-blue-950 dark:text-blue-300 dark:hover:bg-blue-900"
+                className="rounded-lg border border-blue-300 bg-blue-50 px-3 py-1.5 text-sm font-medium text-blue-700 shadow-sm hover:bg-blue-100 dark:border-blue-700 dark:bg-blue-950 dark:text-blue-300 dark:hover:bg-blue-900 min-h-[44px] sm:min-h-0"
               >
                 {shareLabel ?? "Share"}
               </button>
@@ -483,14 +483,14 @@ export function CalculatorViewWithViz({
     computeResult.result !== null;
 
   return (
-    <div className="mx-auto max-w-4xl px-4 py-8">
+    <div className="mx-auto max-w-4xl px-3 sm:px-4 py-8">
       <div className="mb-8">
         <p className="text-sm text-slate-500 dark:text-slate-400">
           {bundle.short}
         </p>
       </div>
 
-      <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
         {/* Input panel */}
         <section aria-label="Inputs">
           {nlEnabled && nlLabels && (
@@ -529,7 +529,7 @@ export function CalculatorViewWithViz({
               <button
                 type="button"
                 onClick={handleReset}
-                className="rounded-lg border border-slate-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 shadow-sm hover:bg-slate-50 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700"
+                className="rounded-lg border border-slate-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 shadow-sm hover:bg-slate-50 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700 min-h-[44px] sm:min-h-0"
               >
                 Reset
               </button>
@@ -537,14 +537,14 @@ export function CalculatorViewWithViz({
                 type="button"
                 onClick={handleCopy}
                 disabled={!computeResult.result}
-                className="rounded-lg border border-slate-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 shadow-sm hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-40 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700"
+                className="rounded-lg border border-slate-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 shadow-sm hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-40 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700 min-h-[44px] sm:min-h-0"
               >
                 {copyLabel ?? "Copy"}
               </button>
               <button
                 type="button"
                 onClick={handleShare}
-                className="rounded-lg border border-blue-300 bg-blue-50 px-3 py-1.5 text-sm font-medium text-blue-700 shadow-sm hover:bg-blue-100 dark:border-blue-700 dark:bg-blue-950 dark:text-blue-300 dark:hover:bg-blue-900"
+                className="rounded-lg border border-blue-300 bg-blue-50 px-3 py-1.5 text-sm font-medium text-blue-700 shadow-sm hover:bg-blue-100 dark:border-blue-700 dark:bg-blue-950 dark:text-blue-300 dark:hover:bg-blue-900 min-h-[44px] sm:min-h-0"
               >
                 {shareLabel ?? "Share"}
               </button>
@@ -560,7 +560,7 @@ export function CalculatorViewWithViz({
                 <button
                   type="button"
                   onClick={handleEnterCompare}
-                  className="rounded-lg border border-violet-300 bg-violet-50 px-3 py-1.5 text-sm font-medium text-violet-700 shadow-sm hover:bg-violet-100 dark:border-violet-700 dark:bg-violet-950 dark:text-violet-300 dark:hover:bg-violet-900"
+                  className="rounded-lg border border-violet-300 bg-violet-50 px-3 py-1.5 text-sm font-medium text-violet-700 shadow-sm hover:bg-violet-100 dark:border-violet-700 dark:bg-violet-950 dark:text-violet-300 dark:hover:bg-violet-900 min-h-[44px] sm:min-h-0"
                 >
                   {compareLabels.toggle}
                 </button>

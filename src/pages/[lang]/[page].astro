@@ -8,7 +8,6 @@
 import Base from "@/layouts/Base.astro";
 import { LOCALES, isLocale, type Locale, SITE_NAME } from "@/config/site";
 import { t, buildAbsoluteUrl } from "@/lib/i18n";
-import Sidebar from "@/components/chrome/Sidebar.astro";
 import {
   STATIC_PAGE_SLUGS,
   getStaticPage,
@@ -138,10 +137,8 @@ const bodyHtml = renderMarkdown(content.body);
   description={content.title + " — " + SITE_NAME}
   canonical={canonical}
 >
-  <main class="container-page py-8 lg:flex lg:gap-8">
-    <Sidebar locale={locale} />
-
-    <div class="mt-6 flex-1 min-w-0 lg:mt-0">
+  <main class="container-page py-8">
+    <div class="min-w-0">
       <nav aria-label="Breadcrumb" class="mb-6 text-sm text-slate-500 dark:text-slate-400">
         <ol class="flex items-center gap-2">
           <li>

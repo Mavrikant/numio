@@ -407,7 +407,7 @@ export function PdfExport({
       <button
         type="button"
         onClick={handlePrint}
-        className="rounded-lg border border-slate-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 shadow-sm hover:bg-slate-50 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700"
+        className="rounded-lg border border-slate-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 shadow-sm hover:bg-slate-50 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700 min-h-[44px] sm:min-h-0"
         aria-label={labelPrint}
       >
         <span className="mr-1.5" aria-hidden="true">🖨️</span>
@@ -419,7 +419,7 @@ export function PdfExport({
         type="button"
         onClick={() => void handleDownload()}
         disabled={!result || isGenerating}
-        className="rounded-lg border border-emerald-300 bg-emerald-50 px-3 py-1.5 text-sm font-medium text-emerald-700 shadow-sm hover:bg-emerald-100 disabled:cursor-not-allowed disabled:opacity-40 dark:border-emerald-700 dark:bg-emerald-950 dark:text-emerald-300 dark:hover:bg-emerald-900"
+        className="rounded-lg border border-emerald-300 bg-emerald-50 px-3 py-1.5 text-sm font-medium text-emerald-700 shadow-sm hover:bg-emerald-100 disabled:cursor-not-allowed disabled:opacity-40 dark:border-emerald-700 dark:bg-emerald-950 dark:text-emerald-300 dark:hover:bg-emerald-900 min-h-[44px] sm:min-h-0"
         aria-label={isGenerating ? "Generating…" : labelDownload}
       >
         <span className="mr-1.5" aria-hidden="true">
