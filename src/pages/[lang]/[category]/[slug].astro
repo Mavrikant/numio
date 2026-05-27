@@ -38,10 +38,11 @@ import { CalculatorIsland } from "@/components/calculator/CalculatorView";
 import Sidebar from "@/components/chrome/Sidebar.astro";
 import QuickAnswer from "@/components/calculator/QuickAnswer.astro";
 import AuthorityFooter from "@/components/calculator/AuthorityFooter.astro";
-// Per-calculator viz islands — manually wired here because dynamic glob import
-// of viz modules into the CalculatorView bundle triggers a "React is null"
-// circular-import error.
-import StatisticsBasicBoxPlot from "@/calculators/math/statistics-basic/visualizations";
+// Universal per-calc viz loader (auto-discovers visualizations.tsx files via
+// non-eager import.meta.glob). The earlier per-slug conditional mount was
+// replaced by this single slot — each calc that wants a chart just creates
+// `src/calculators/{category}/{slug}/visualizations.tsx`.
+import CalcVizSlot from "@/components/calculator/CalcVizSlot";
 
 // ─── Static path generation ────────────────────────────────────────────────────
 
@@ -244,12 +245,9 @@ const Content = mdxModule
           />
         </div>
 
-        <!-- Per-calculator chart islands -->
-        {calc.slug === "statistics-basic" && (
-          <div class="mt-6">
-            <StatisticsBasicBoxPlot client:only="react" />
-          </div>
-        )}
+        <!-- Universal per-calc visualization slot — auto-loads any
+             visualizations.tsx file present for this calculator. -->
+        <CalcVizSlot client:only="react" slug={calc.slug} locale={locale} />
 
         <!-- MDX content -->
         {Content && (

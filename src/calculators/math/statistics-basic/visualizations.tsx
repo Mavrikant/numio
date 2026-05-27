@@ -1,38 +1,32 @@
 /**
- * Statistics Basic — Box plot island.
+ * Statistics Basic — Box plot.
  *
- * This is a standalone client component (own React island, separate from
- * CalculatorView) that lives below the calculator on the page. It:
- *   - reads the `values` input from the URL search params on mount
- *   - subscribes to the `calc:inputs-changed` window event that CalculatorView
- *     dispatches whenever the user edits inputs (URL replaceState doesn't fire
- *     popstate, so we use a custom event)
- *   - renders a horizontal Plotly box plot with strip-plot overlay of individual
- *     points, plus the five-number summary as a caption
+ * Now follows the universal `VizProps` contract used by CalcVizSlot:
+ *   default export accepts { inputs, result, locale } and renders a chart.
  *
- * Why separate island (instead of being passed via CalculatorView's vizComponents
- * prop): hauling chart libs into the main calculator chunk via import.meta.glob
- * triggered a React-as-null circular-import error. Keeping it in its own island
- * means Plotly is only loaded on calculator pages that actually use it.
+ * Parser logic for the comma-separated `values` string still lives here
+ * because the calc's compute() returns aggregated stats (min/max/Q1/Q3/mean)
+ * but not the raw point array — which the box plot also needs for the strip
+ * overlay.
  */
 
-import { lazy, Suspense, useEffect, useState, useMemo } from "react";
+import { lazy, Suspense, useMemo } from "react";
 
 const PlotlyChart = lazy(() => import("@/components/charts/PlotlyChart"));
 
-function parseValues(raw: string | null): number[] {
-  if (!raw) return [];
+interface Props {
+  readonly inputs: Record<string, unknown>;
+  readonly result: Record<string, unknown>;
+}
+
+function parseValues(raw: unknown): number[] {
+  if (typeof raw !== "string") return [];
   const out: number[] = [];
   for (const part of raw.split(",")) {
     const n = parseFloat(part.trim());
     if (Number.isFinite(n)) out.push(n);
   }
   return out;
-}
-
-function readValuesFromUrl(): string {
-  if (typeof window === "undefined") return "";
-  return new URL(window.location.href).searchParams.get("values") ?? "";
 }
 
 function quantile(sorted: number[], q: number): number {
@@ -44,49 +38,13 @@ function quantile(sorted: number[], q: number): number {
   return sorted[lo]! * (1 - (idx - lo)) + sorted[hi]! * (idx - lo);
 }
 
-const DEFAULT_VALUES = "2, 5, 7, 9, 3, 8, 5";
+function fmt(n: number): string {
+  if (!Number.isFinite(n)) return "—";
+  return Number.isInteger(n) ? String(n) : n.toFixed(2);
+}
 
-export default function StatisticsBasicBoxPlot() {
-  const [valuesString, setValuesString] = useState<string>(DEFAULT_VALUES);
-
-  useEffect(() => {
-    // Initial read from URL (falls back to default if absent)
-    const initial = readValuesFromUrl();
-    if (initial) setValuesString(initial);
-
-    // Subscribe to CalculatorView's input updates
-    const handler = (e: Event) => {
-      const ce = e as CustomEvent<{ slug: string; inputs: Record<string, unknown> }>;
-      if (ce.detail?.slug !== "statistics-basic") return;
-      const v = ce.detail.inputs?.values;
-      if (typeof v === "string") setValuesString(v);
-    };
-    window.addEventListener("calc:inputs-changed", handler);
-    // Also listen to popstate as a fallback for back/forward navigation
-    const onPop = () => setValuesString(readValuesFromUrl() || DEFAULT_VALUES);
-    window.addEventListener("popstate", onPop);
-
-    return () => {
-      window.removeEventListener("calc:inputs-changed", handler);
-      window.removeEventListener("popstate", onPop);
-    };
-  }, []);
-
-  const values = useMemo(() => parseValues(valuesString), [valuesString]);
-  const stats = useMemo(() => {
-    if (values.length < 2) return null;
-    const sorted = [...values].sort((a, b) => a - b);
-    const sum = values.reduce((s, x) => s + x, 0);
-    return {
-      n: values.length,
-      min: sorted[0]!,
-      max: sorted[sorted.length - 1]!,
-      mean: sum / values.length,
-      median: quantile(sorted, 0.5),
-      q1: quantile(sorted, 0.25),
-      q3: quantile(sorted, 0.75),
-    };
-  }, [values]);
+export default function StatisticsBasicBoxPlot({ inputs, result }: Props) {
+  const values = useMemo(() => parseValues(inputs.values), [inputs.values]);
 
   if (values.length < 2) {
     return (
@@ -101,19 +59,34 @@ export default function StatisticsBasicBoxPlot() {
     );
   }
 
+  const sorted = [...values].sort((a, b) => a - b);
+  const stats = {
+    n: values.length,
+    min: typeof result.min === "number" ? result.min : sorted[0]!,
+    max: typeof result.max === "number" ? result.max : sorted[sorted.length - 1]!,
+    median: typeof result.median === "number" ? result.median : quantile(sorted, 0.5),
+    mean: typeof result.mean === "number" ? result.mean : NaN,
+    q1: typeof result.q1 === "number" ? result.q1 : quantile(sorted, 0.25),
+    q3: typeof result.q3 === "number" ? result.q3 : quantile(sorted, 0.75),
+  };
+
   return (
     <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-700 dark:bg-slate-900">
       <div className="mb-3 flex items-baseline justify-between gap-3 flex-wrap">
         <h2 className="text-base font-semibold text-slate-900 dark:text-slate-100">
           Box Plot
         </h2>
-        {stats && (
-          <div className="text-xs text-slate-500 dark:text-slate-400 font-mono">
-            n={stats.n} · min={fmt(stats.min)} · Q1={fmt(stats.q1)} · median={fmt(stats.median)} · Q3={fmt(stats.q3)} · max={fmt(stats.max)}
-          </div>
-        )}
+        <div className="text-xs text-slate-500 dark:text-slate-400 font-mono">
+          n={stats.n} · min={fmt(stats.min)} · Q1={fmt(stats.q1)} · median={fmt(stats.median)} · Q3={fmt(stats.q3)} · max={fmt(stats.max)}
+        </div>
       </div>
-      <Suspense fallback={<ChartLoading />}>
+      <Suspense
+        fallback={
+          <div className="flex h-60 items-center justify-center text-sm text-slate-400">
+            Loading chart…
+          </div>
+        }
+      >
         <PlotlyChart
           data={[
             {
@@ -133,12 +106,7 @@ export default function StatisticsBasicBoxPlot() {
               mode: "markers",
               x: values,
               y: Array(values.length).fill("values"),
-              marker: {
-                color: "#1e40af",
-                size: 7,
-                opacity: 0.5,
-                symbol: "circle",
-              },
+              marker: { color: "#1e40af", size: 7, opacity: 0.5, symbol: "circle" },
               name: "points",
               showlegend: false,
               hovertemplate: "%{x}<extra></extra>",
@@ -159,17 +127,4 @@ export default function StatisticsBasicBoxPlot() {
       </p>
     </div>
   );
-}
-
-function ChartLoading() {
-  return (
-    <div className="flex h-60 items-center justify-center text-sm text-slate-400">
-      Loading chart…
-    </div>
-  );
-}
-
-function fmt(n: number): string {
-  if (!Number.isFinite(n)) return "—";
-  return Number.isInteger(n) ? String(n) : n.toFixed(2);
 }
