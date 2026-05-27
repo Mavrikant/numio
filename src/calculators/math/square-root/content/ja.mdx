@@ -1,23 +1,60 @@
-# Square root Calculator
+# 平方根計算機
 
-Detailed explanation of square root in ja.
+この計算機は、数の平方根または任意のn乗根を計算し、完全平方数かどうかを確認し、簡略化された根号形式を提供します。
 
-## What is Square root?
+## 平方根とは？
 
-Explanation...
+数 *x* の**平方根**は r² = x を満たす値 *r* です。すべての非負数には唯一の非負の平方根 √x があります。
 
-## How to Use This Calculator
+**n乗根**はこれを一般化したもの：ⁿ√x = x^(1/n)。
 
-Steps...
+## 完全平方数
 
-## Examples
+**完全平方数**は、平方根も整数である非負整数です。例：0、1、4、9、16、25、36、49、64、81、100。
 
-Example 1...
+## 簡略化された根号形式
 
-## Frequently Asked Questions
+簡略化とは、根号内の完全平方因子をすべて外に取り出すことです。
 
-Q&A...
+**例：** √72
+- 72 = 36 × 2
+- √72 = 6√2（係数 6、被開方数 2）
 
-## References
+**一般的なアルゴリズム（n乗根）：**
+1. 素因数分解：x = p₁^e₁ × p₂^e₂ × …
+2. 係数：各 p^⌊e/n⌋ の積；被開方数：各 p^(e mod n) の積
 
-References...
+## 計算例
+
+### 例1 — ピタゴラスの定理
+
+壁にかかるはしご：高さ 3 m、距離 4 m。
+長さ = √(9 + 16) = √25 = **5 m**
+
+### 例2 — √180 を簡略化する
+
+180 = 36 × 5 → √180 = 6√5 ≈ **13.416**
+
+### 例3 — 立方根
+
+∛343（n=3）：7³ = 343 → ∛343 = **7**
+
+## よくある誤り
+
+1. **√(a + b) ≠ √a + √b。** 例：√(9 + 16) = 5、3 + 4 = 7 ではない。
+2. **√(a²) = |a|、常に a ではない。**
+3. **完全平方因子を見落とす。**
+
+## よくある質問
+
+**なぜ負の数の平方根が実数に存在しないのですか？**
+実数の二乗は必ず非負であるため。複素数では i = √(−1) が定義されます。
+
+**計算の精度はどのくらいですか？**
+n=2 は Math.sqrt、それ以外は Math.pow(x, 1/n) を使用。どちらも約 15 桁の精度があります。
+
+## 参考文献
+
+- Wolfram MathWorld：[Square Root](https://mathworld.wolfram.com/SquareRoot.html)
+- Khan Academy：[ラジカル](https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:rational-exponents-radicals)
+- Wikipedia：[Nth Root](https://en.wikipedia.org/wiki/Nth_root)

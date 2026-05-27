@@ -1,23 +1,60 @@
-# Square root Calculator
+# Calculateur de Racine Carrée
 
-Detailed explanation of square root in fr.
+Ce calculateur calcule la racine carrée ou toute racine n-ième d'un nombre, vérifie s'il s'agit d'un carré parfait et fournit la forme radicale simplifiée.
 
-## What is Square root?
+## Qu'est-ce qu'une racine carrée ?
 
-Explanation...
+La **racine carrée** d'un nombre *x* est une valeur *r* telle que r² = x. Chaque nombre non négatif possède exactement une racine carrée non négative : √x.
 
-## How to Use This Calculator
+La **racine n-ième** généralise ce concept : ⁿ√x = x^(1/n).
 
-Steps...
+## Carrés parfaits
 
-## Examples
+Un **carré parfait** est un entier dont la racine carrée est également un entier. Exemples : 0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100.
 
-Example 1...
+## Forme radicale simplifiée
 
-## Frequently Asked Questions
+Simplifier signifie extraire tous les facteurs qui sont des carrés parfaits hors du radical.
 
-Q&A...
+**Exemple :** √72
+- 72 = 36 × 2
+- √72 = 6√2 (coefficient 6, radicande 2)
 
-## References
+**Algorithme général (racine n-ième) :**
+1. Factorisation en nombres premiers : x = p₁^e₁ × p₂^e₂ × …
+2. Coefficient : produit des p^⌊e/n⌋ ; radicande : produit des p^(e mod n)
 
-References...
+## Exemples de calcul
+
+### Exemple 1 — Théorème de Pythagore
+
+Échelle contre un mur : hauteur 3 m, distance 4 m.
+Longueur = √(9 + 16) = √25 = **5 m**
+
+### Exemple 2 — Simplifier √180
+
+180 = 36 × 5 → √180 = 6√5 ≈ **13,416**
+
+### Exemple 3 — Racine cubique
+
+∛343 (n=3) : 7³ = 343 → ∛343 = **7**
+
+## Erreurs fréquentes
+
+1. **√(a + b) ≠ √a + √b.** Exemple : √(9 + 16) = 5, pas 3 + 4 = 7.
+2. **√(a²) = |a|, pas toujours a.**
+3. **Oublier de chercher les facteurs carrés.**
+
+## Questions fréquentes
+
+**Pourquoi pas de racine carrée de nombres négatifs ?**
+Le carré de tout réel est positif ou nul. Dans les nombres complexes, i = √(−1) est défini.
+
+**Quelle est la précision du calcul ?**
+Pour n=2, Math.sqrt est utilisé ; sinon Math.pow(x, 1/n). Les deux sont précis à environ 15 chiffres significatifs.
+
+## Références
+
+- Wolfram MathWorld : [Square Root](https://mathworld.wolfram.com/SquareRoot.html)
+- Khan Academy : [Radicaux](https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:rational-exponents-radicals)
+- Wikipedia : [Nth Root](https://en.wikipedia.org/wiki/Nth_root)

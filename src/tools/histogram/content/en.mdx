@@ -1,0 +1,53 @@
+# Histogram & Box Plot Generator
+
+Upload a CSV file or paste data, pick a numeric column, and instantly see how it's distributed. This tool computes summary statistics, draws a histogram with automatically-chosen bin widths, and a parallel box plot showing quartiles and outliers — all in your browser. No data leaves your device.
+
+## What is a histogram?
+
+A **histogram** is a chart that groups numeric data into intervals (bins) and shows how many values fall into each bin. It's the most common way to visualize the distribution of a single continuous variable. By looking at the shape of a histogram you can answer questions like:
+
+- Is the data roughly **symmetric** (bell-shaped) or **skewed**?
+- Are there **multiple peaks** (modes), suggesting subgroups in the data?
+- Are there **outliers** or unexpected gaps?
+- How **spread out** are the values around the typical value?
+
+## How bin widths are chosen
+
+The default uses the **Freedman-Diaconis rule**: bin width = 2 · IQR · n⁻¹ᐟ³, where IQR is the interquartile range and n is the sample size. This rule is robust to outliers because it uses IQR (a resistant measure of spread) rather than standard deviation. For tiny datasets (n &lt; 30) we fall back to **Sturges' rule** (log₂(n) + 1 bins).
+
+You can also override the bin count manually — try several values to see how the shape changes. Too few bins hide structure; too many create noise.
+
+## What is a box plot?
+
+A **box plot** (also called box-and-whisker plot) is a compact summary of a distribution showing five key values:
+
+- **Median** (the line inside the box): the middle value when data is sorted.
+- **Q1 and Q3** (box edges): the 25th and 75th percentiles. The box spans the middle 50% of the data.
+- **Whiskers**: typically extend to the most extreme value within 1.5 · IQR of the quartiles.
+- **Outliers** (dots beyond whiskers): values further than 1.5 · IQR from Q1 or Q3.
+
+Box plots are excellent for comparing several groups side-by-side, or for spotting outliers quickly. This tool draws a box plot of the selected column right next to the histogram.
+
+## How to use this tool
+
+1. **Upload your data**: drag and drop a CSV file, click "Choose file", or paste data into the textarea. The tool auto-detects delimiters and headers, and handles US (1,234.56) or EU (1.234,56) number formats.
+2. **Pick a column**: only numeric columns are listed. Switch between columns to compare distributions.
+3. **Adjust bin count** (optional): start with auto, then try 10, 20, 30 to see how the shape changes.
+4. **Read the summary**: count, mean, standard deviation, quartiles, IQR, range, skewness, and kurtosis are computed for the selected column.
+
+## Common use cases
+
+- **Quality control**: visualize measurement error or product dimensions to detect drift.
+- **Survey analysis**: see how respondents' ages, scores, or ratings are distributed.
+- **Finance**: examine the distribution of daily returns, transaction sizes, or wait times.
+- **Sciences**: explore experimental data before running formal statistical tests.
+
+## Privacy & accuracy
+
+All parsing and computation happens locally in your browser. Nothing is uploaded to a server. The maximum file size is 5 MB. For very large datasets (>100,000 rows) rendering may be slow; consider sampling.
+
+## References
+
+- Freedman, D., Diaconis, P. (1981). *On the histogram as a density estimator: L₂ theory.* Zeitschrift für Wahrscheinlichkeitstheorie und Verwandte Gebiete 57, 453–476.
+- Tukey, J. W. (1977). *Exploratory Data Analysis.* Addison-Wesley.
+- Sturges, H. A. (1926). *The choice of a class interval.* Journal of the American Statistical Association.

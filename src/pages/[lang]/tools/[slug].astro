@@ -1,0 +1,134 @@
+---
+/**
+ * Tool detail page — /calculators/{lang}/tools/{slug}/
+ *
+ * Tools are standalone data-analysis pages (histogram, scatter, etc.).
+ * Each tool component is loaded as a `client:only="react"` island because
+ * it requires browser APIs (File, FileReader, DOM measurement).
+ */
+import Base from "@/layouts/Base.astro";
+import { LOCALES, isLocale, type Locale, SITE_URL } from "@/config/site";
+import { t, buildAbsoluteUrl } from "@/lib/i18n";
+import { getAllTools } from "@/lib/tools-registry";
+import HistogramTool from "@/tools/histogram/Tool";
+import ScatterTool from "@/tools/scatter-plot/Tool";
+import TimeSeriesTool from "@/tools/time-series/Tool";
+import StatsTool from "@/tools/stats-dashboard/Tool";
+
+export async function getStaticPaths() {
+  const tools = getAllTools();
+  const paths: Array<{ params: { lang: string; slug: string }; props: { slug: string } }> = [];
+  for (const lang of LOCALES) {
+    for (const tool of tools) {
+      paths.push({ params: { lang, slug: tool.slug }, props: { slug: tool.slug } });
+    }
+  }
+  return paths;
+}
+
+const { lang, slug } = Astro.params;
+const { slug: canonicalSlug } = Astro.props;
+
+if (!lang || !isLocale(lang)) {
+  return Astro.redirect("/calculators/en/");
+}
+const locale = lang as Locale;
+
+const allTools = getAllTools();
+const tool = allTools.find((t) => t.slug === canonicalSlug);
+if (!tool) {
+  return Astro.redirect("/404");
+}
+
+const bundle = tool.i18n[locale] ?? tool.i18n["en"];
+
+// SEO
+const canonical = `${SITE_URL}/calculators/${locale}/tools/${tool.slug}/`;
+const hreflangs = LOCALES.map((l) => ({
+  hreflang: l,
+  href: `${SITE_URL}/calculators/${l}/tools/${tool.slug}/`,
+}));
+
+// MDX content (optional)
+const allMdxModules = import.meta.glob<{ default: unknown; Content: unknown }>(
+  "/src/tools/*/content/*.mdx",
+  { eager: true },
+);
+const mdxKey = `/src/tools/${tool.slug}/content/${locale}.mdx`;
+const fallbackMdxKey = `/src/tools/${tool.slug}/content/en.mdx`;
+const mdxModule = allMdxModules[mdxKey] ?? allMdxModules[fallbackMdxKey];
+const Content = mdxModule
+  ? (mdxModule as { Content?: unknown }).Content ?? (mdxModule as { default?: unknown }).default
+  : null;
+---
+
+<Base
+  locale={locale}
+  title={bundle.title}
+  description={bundle.description}
+  canonical={canonical}
+>
+  {hreflangs.map((entry) => (
+    <link rel="alternate" hreflang={entry.hreflang} href={entry.href} slot="head" />
+  ))}
+  {bundle.keywords && bundle.keywords.length > 0 && (
+    <meta name="keywords" content={bundle.keywords.join(", ")} slot="head" />
+  )}
+
+  <main>
+    <div class="border-b border-slate-200 bg-slate-50 dark:border-slate-700 dark:bg-slate-800/50">
+      <div class="container-page py-6">
+        <nav aria-label="Breadcrumb" class="mb-3 text-sm text-slate-500 dark:text-slate-400">
+          <ol class="flex flex-wrap items-center gap-1.5">
+            <li>
+              <a
+                href={`${import.meta.env.BASE_URL}${locale}/`}
+                class="hover:text-slate-800 dark:hover:text-slate-200"
+              >
+                {t(locale, "nav.home")}
+              </a>
+            </li>
+            <li aria-hidden="true">/</li>
+            <li>
+              <a
+                href={`${import.meta.env.BASE_URL}${locale}/tools/`}
+                class="hover:text-slate-800 dark:hover:text-slate-200"
+              >
+                {t(locale, "nav.tools") ?? "Tools"}
+              </a>
+            </li>
+            <li aria-hidden="true">/</li>
+            <li>
+              <span class="font-medium text-slate-900 dark:text-slate-100" aria-current="page">
+                {bundle.title}
+              </span>
+            </li>
+          </ol>
+        </nav>
+
+        <h1 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-100 sm:text-3xl">
+          {bundle.title}
+        </h1>
+        <p class="mt-1 text-sm text-slate-600 dark:text-slate-400 max-w-2xl">
+          {bundle.description}
+        </p>
+      </div>
+    </div>
+
+    <div class="container-page py-6">
+      <div class="rounded-xl border border-slate-200 bg-white p-4 dark:border-slate-700 dark:bg-slate-900 sm:p-6">
+        {tool.slug === "histogram" && <HistogramTool client:only="react" locale={locale} />}
+        {tool.slug === "scatter-plot" && <ScatterTool client:only="react" locale={locale} />}
+        {tool.slug === "time-series" && <TimeSeriesTool client:only="react" locale={locale} />}
+        {tool.slug === "stats-dashboard" && <StatsTool client:only="react" locale={locale} />}
+      </div>
+
+      {Content && (
+        <section class="py-10 prose prose-slate dark:prose-invert max-w-none" aria-label="Tool guide">
+          {/* @ts-ignore — Astro MDX Content component is dynamic */}
+          <Content />
+        </section>
+      )}
+    </div>
+  </main>
+</Base>

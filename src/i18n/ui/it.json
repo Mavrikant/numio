@@ -14,7 +14,8 @@
     "openMenu": "Apri menu",
     "closeMenu": "Chiudi menu",
     "skipToContent": "Vai al contenuto",
-    "mainNavigation": "Navigazione principale"
+    "mainNavigation": "Navigazione principale",
+    "tools": "Strumenti"
   },
   "actions": {
     "calculate": "Calcola",
@@ -93,5 +94,10 @@
     "analyticsDesc": "Ci aiuta a capire come i visitatori usano il sito (anonimo).",
     "ads": "Pubblicità",
     "adsDesc": "Ci consente di mostrare annunci pertinenti e supportare l'accesso gratuito ai calcolatori."
+  },
+  "tools": {
+    "description": "Carica dati CSV e crea visualizzazioni interattive — istogrammi, grafici a dispersione, serie temporali e statistica descrittiva.",
+    "browseCatalog": "Vedi tutti gli strumenti",
+    "uploadData": "Carica i tuoi dati"
   }
 }

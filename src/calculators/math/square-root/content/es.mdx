@@ -1,23 +1,60 @@
-# Square root Calculator
+# Calculadora de Raíz Cuadrada
 
-Detailed explanation of square root in es.
+Esta calculadora calcula la raíz cuadrada o cualquier raíz n-ésima de un número, verifica si es un cuadrado perfecto y proporciona la forma radical simplificada.
 
-## What is Square root?
+## ¿Qué es una raíz cuadrada?
 
-Explanation...
+La **raíz cuadrada** de un número *x* es un valor *r* tal que r² = x. Todo número no negativo tiene exactamente una raíz cuadrada no negativa: √x.
 
-## How to Use This Calculator
+La **raíz n-ésima** generaliza este concepto: ⁿ√x = x^(1/n).
 
-Steps...
+## Cuadrados perfectos
 
-## Examples
+Un **cuadrado perfecto** es un entero cuya raíz cuadrada es también un entero. Ejemplos: 0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100.
 
-Example 1...
+## Forma radical simplificada
 
-## Frequently Asked Questions
+Simplificar significa extraer todos los factores que son cuadrados perfectos fuera del radical.
 
-Q&A...
+**Ejemplo:** √72
+- 72 = 36 × 2
+- √72 = 6√2 (coeficiente 6, radicando 2)
 
-## References
+**Algoritmo general (raíz n-ésima):**
+1. Factorización en primos: x = p₁^e₁ × p₂^e₂ × …
+2. Coeficiente: producto de p^⌊e/n⌋; radicando: producto de p^(e mod n)
 
-References...
+## Ejemplos de cálculo
+
+### Ejemplo 1 — Teorema de Pitágoras
+
+Escalera contra una pared: altura 3 m, distancia 4 m.
+Longitud = √(9 + 16) = √25 = **5 m**
+
+### Ejemplo 2 — Simplificar √180
+
+180 = 36 × 5 → √180 = 6√5 ≈ **13,416**
+
+### Ejemplo 3 — Raíz cúbica
+
+∛343 (n=3): 7³ = 343 → ∛343 = **7**
+
+## Errores frecuentes
+
+1. **√(a + b) ≠ √a + √b.** Ejemplo: √(9 + 16) = 5, no 3 + 4 = 7.
+2. **√(a²) = |a|, no siempre a.**
+3. **Olvidar buscar factores cuadrados.**
+
+## Preguntas frecuentes
+
+**¿Por qué no hay raíz cuadrada de números negativos?**
+El cuadrado de cualquier número real es no negativo. En los números complejos se define i = √(−1).
+
+**¿Cuál es la precisión del cálculo?**
+Para n=2 se usa Math.sqrt; de lo contrario, Math.pow(x, 1/n). Ambos tienen una precisión de unos 15 dígitos significativos.
+
+## Referencias
+
+- Wolfram MathWorld: [Square Root](https://mathworld.wolfram.com/SquareRoot.html)
+- Khan Academy: [Radicales](https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:rational-exponents-radicals)
+- Wikipedia: [Nth Root](https://en.wikipedia.org/wiki/Nth_root)

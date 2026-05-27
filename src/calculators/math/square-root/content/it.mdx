@@ -1,23 +1,60 @@
-# Square root Calculator
+# Calcolatore di Radice Quadrata
 
-Detailed explanation of square root in it.
+Questo strumento calcola la radice quadrata o qualsiasi radice n-esima di un numero, verifica se è un quadrato perfetto e fornisce la forma radicale semplificata.
 
-## What is Square root?
+## Cos'è una radice quadrata?
 
-Explanation...
+La **radice quadrata** di *x* è un valore *r* tale che r² = x. Ogni numero non negativo ha esattamente una radice quadrata non negativa: √x.
 
-## How to Use This Calculator
+La **radice n-esima** generalizza: ⁿ√x = x^(1/n).
 
-Steps...
+## Quadrati perfetti
 
-## Examples
+Un **quadrato perfetto** è un intero la cui radice quadrata è anch'essa un intero. Esempi: 0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100.
 
-Example 1...
+## Forma radicale semplificata
 
-## Frequently Asked Questions
+Semplificare significa estrarre tutti i fattori che sono quadrati perfetti dal radicale.
 
-Q&A...
+**Esempio:** √72
+- 72 = 36 × 2
+- √72 = 6√2 (coefficiente 6, radicando 2)
 
-## References
+**Algoritmo generale (radice n-esima):**
+1. Fattorizzazione in primi: x = p₁^e₁ × p₂^e₂ × …
+2. Coefficiente: prodotto di p^⌊e/n⌋; radicando: prodotto di p^(e mod n)
 
-References...
+## Esempi di calcolo
+
+### Esempio 1 — Teorema di Pitagora
+
+Scala contro un muro: altezza 3 m, distanza 4 m.
+Lunghezza = √(9 + 16) = √25 = **5 m**
+
+### Esempio 2 — Semplificare √180
+
+180 = 36 × 5 → √180 = 6√5 ≈ **13,416**
+
+### Esempio 3 — Radice cubica
+
+∛343 (n=3): 7³ = 343 → ∛343 = **7**
+
+## Errori frequenti
+
+1. **√(a + b) ≠ √a + √b.** Esempio: √(9 + 16) = 5, non 3 + 4 = 7.
+2. **√(a²) = |a|, non sempre a.**
+3. **Dimenticare di cercare fattori quadrati perfetti.**
+
+## Domande frequenti
+
+**Perché la radice quadrata di numeri negativi non esiste nel reale?**
+Il quadrato di qualsiasi numero reale è non negativo. Nei numeri complessi si definisce i = √(−1).
+
+**Qual è la precisione del calcolo?**
+Per n=2 si usa Math.sqrt; altrimenti Math.pow(x, 1/n). Entrambi sono accurati a circa 15 cifre significative.
+
+## Riferimenti
+
+- Wolfram MathWorld: [Square Root](https://mathworld.wolfram.com/SquareRoot.html)
+- Khan Academy: [Radicali](https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:rational-exponents-radicals)
+- Wikipedia: [Nth Root](https://en.wikipedia.org/wiki/Nth_root)

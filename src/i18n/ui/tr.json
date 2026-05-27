@@ -14,7 +14,8 @@
     "openMenu": "Menüyü aç",
     "closeMenu": "Menüyü kapat",
     "skipToContent": "İçeriğe geç",
-    "mainNavigation": "Ana gezinti"
+    "mainNavigation": "Ana gezinti",
+    "tools": "Araçlar"
   },
   "actions": {
     "calculate": "Hesapla",
@@ -93,5 +94,10 @@
     "analyticsDesc": "Ziyaretçilerin siteyi nasıl kullandığını anlamamıza yardımcı olur (anonim).",
     "ads": "Reklam",
     "adsDesc": "İlgili reklamlar göstermemize ve hesaplayıcılara ücretsiz erişimi sürdürmemize olanak tanır."
+  },
+  "tools": {
+    "description": "CSV veri yükleyin ve interaktif görselleştirmeler oluşturun — histogramlar, dağılım grafikleri, zaman serileri ve tanımlayıcı istatistikler.",
+    "browseCatalog": "Tüm araçları gör",
+    "uploadData": "Verinizi yükleyin"
   }
 }

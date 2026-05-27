@@ -1,23 +1,60 @@
-# Square root Calculator
+# 제곱근 계산기
 
-Detailed explanation of square root in ko.
+이 계산기는 임의의 수의 제곱근 또는 n제곱근을 계산하고, 완전제곱수 여부를 확인하며, 간소화된 근호 형식을 제공합니다.
 
-## What is Square root?
+## 제곱근이란?
 
-Explanation...
+수 *x*의 **제곱근**은 r² = x를 만족하는 값 *r*입니다. 모든 음수가 아닌 수는 유일한 음수가 아닌 제곱근 √x를 가집니다.
 
-## How to Use This Calculator
+**n제곱근**은 이를 일반화한 것: ⁿ√x = x^(1/n).
 
-Steps...
+## 완전제곱수
 
-## Examples
+**완전제곱수**는 제곱근도 정수인 음수가 아닌 정수입니다. 예: 0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100.
 
-Example 1...
+## 간소화된 근호 형식
 
-## Frequently Asked Questions
+간소화는 근호 안에서 완전제곱 인수를 모두 밖으로 꺼내는 것입니다.
 
-Q&A...
+**예:** √72
+- 72 = 36 × 2
+- √72 = 6√2 (계수 6, 피개방수 2)
 
-## References
+**일반 알고리즘 (n제곱근):**
+1. 소인수분해: x = p₁^e₁ × p₂^e₂ × …
+2. 계수: 각 p^⌊e/n⌋의 곱; 피개방수: 각 p^(e mod n)의 곱
 
-References...
+## 계산 예제
+
+### 예제 1 — 피타고라스 정리
+
+벽에 기댄 사다리: 높이 3 m, 거리 4 m.
+길이 = √(9 + 16) = √25 = **5 m**
+
+### 예제 2 — √180 간소화
+
+180 = 36 × 5 → √180 = 6√5 ≈ **13.416**
+
+### 예제 3 — 세제곱근
+
+∛343 (n=3): 7³ = 343 → ∛343 = **7**
+
+## 흔한 실수
+
+1. **√(a + b) ≠ √a + √b.** 예: √(9 + 16) = 5, 3 + 4 = 7이 아님.
+2. **√(a²) = |a|, 항상 a는 아님.**
+3. **완전제곱 인수를 놓치기.**
+
+## 자주 묻는 질문
+
+**왜 음수의 제곱근은 실수에 없나요?**
+실수의 제곱은 항상 비음수입니다. 복소수에서 i = √(−1)이 정의됩니다.
+
+**계산 정확도는 어떻게 되나요?**
+n=2는 Math.sqrt, 그 외는 Math.pow(x, 1/n)을 사용합니다. 약 15자리 유효숫자 정확도입니다.
+
+## 참고 자료
+
+- Wolfram MathWorld: [Square Root](https://mathworld.wolfram.com/SquareRoot.html)
+- Khan Academy: [근호](https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:rational-exponents-radicals)
+- Wikipedia: [Nth Root](https://en.wikipedia.org/wiki/Nth_root)

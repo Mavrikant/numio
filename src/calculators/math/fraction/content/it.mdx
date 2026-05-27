@@ -1,23 +1,67 @@
-# Fraction Calculator
+# Calcolatore di Frazioni
 
-Detailed explanation of fraction in it.
+Questo strumento semplifica frazioni o esegue operazioni esatte (addizione, sottrazione, moltiplicazione, divisione) con due frazioni.
 
-## What is Fraction?
+## Cos'è una frazione?
 
-Explanation...
+Una frazione rappresenta una parte di un intero:
 
-## How to Use This Calculator
+- **Numeratore** (numero in alto) — quante parti possiedi.
+- **Denominatore** (numero in basso) — in quante parti uguali è diviso l'intero.
 
-Steps...
+Esempio: 3/4 significa 3 parti su 4.
 
-## Examples
+## Semplificare una frazione
 
-Example 1...
+Dividere numeratore e denominatore per il loro **MCD** (massimo comun divisore).
 
-## Frequently Asked Questions
+**Esempio:** Semplificare 18/24
+- MCD(18, 24) = 6
+- 18 ÷ 6 = 3; 24 ÷ 6 = 4 → **3/4**
 
-Q&A...
+## Addizionare e sottrarre frazioni
 
-## References
+Stesso denominatore: addizionare i numeratori. Denominatori diversi:
 
-References...
+**a/b + c/d = (a×d + c×b) / (b×d)**
+
+**Esempio:** 1/2 + 1/3 = (3 + 2) / 6 = **5/6**
+
+## Moltiplicare e dividere frazioni
+
+- **Moltiplicazione:** a/b × c/d = (a×c)/(b×d)
+- **Divisione:** a/b ÷ c/d = (a×d)/(b×c) — moltiplicare per il reciproco
+
+**Esempio divisione:** 3/4 ÷ 1/2 = 3/4 × 2/1 = **3/2**
+
+## Esempi di calcolo
+
+### Esempio 1 — Frazioni con denominatori diversi
+
+**5/6 + 7/8 = ?**
+- Numeratore: 5×8 + 7×6 = 82; Denominatore: 48
+- MCD(82, 48) = 2 → **41/24** ≈ 1,708
+
+### Esempio 2 — Dimezzare una ricetta
+
+3/4 tazza di farina per mezza porzione:
+3/4 ÷ 2 = **3/8** tazza
+
+## Errori frequenti
+
+1. **Addizionare i denominatori direttamente.** 1/2 + 1/3 ≠ 2/5.
+2. **Dimenticare di semplificare dopo il calcolo.**
+3. **Non usare il reciproco nella divisione.**
+
+## Domande frequenti
+
+**Cos'è il MCD?**
+Il massimo comun divisore è il più grande intero che divide esattamente entrambi i numeri. Si calcola con l'algoritmo di Euclide.
+
+**Differenza tra frazione impropria e numero misto?**
+7/4 è una frazione impropria; 1¾ è la sua forma mista — stesso valore, forma diversa.
+
+## Riferimenti
+
+- Khan Academy: [Aritmetica delle frazioni](https://www.khanacademy.org/math/arithmetic/fraction-arithmetic)
+- Wolfram MathWorld: [Fraction](https://mathworld.wolfram.com/Fraction.html)

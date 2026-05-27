@@ -1,23 +1,60 @@
-# Square root Calculator
+# 平方根计算器
 
-Detailed explanation of square root in zh.
+本计算器可计算任意数的平方根或 n 次方根，检查是否为完全平方数，并提供化简后的根式形式。
 
-## What is Square root?
+## 什么是平方根？
 
-Explanation...
+数 *x* 的**平方根**是满足 r² = x 的值 *r*。每个非负数都有唯一的非负平方根：√x。
 
-## How to Use This Calculator
+**n 次方根**是更一般的概念：ⁿ√x = x^(1/n)。
 
-Steps...
+## 完全平方数
 
-## Examples
+**完全平方数**是平方根也为整数的非负整数。示例：0、1、4、9、16、25、36、49、64、81、100。
 
-Example 1...
+## 化简根式
 
-## Frequently Asked Questions
+化简是指将根号内所有完全平方因子提取到根号外。
 
-Q&A...
+**示例：** √72
+- 72 = 36 × 2
+- √72 = 6√2（系数 6，被开方数 2）
 
-## References
+**通用算法（n 次方根）：**
+1. 质因数分解：x = p₁^e₁ × p₂^e₂ × …
+2. 系数：各 p^⌊e/n⌋ 之积；被开方数：各 p^(e mod n) 之积
 
-References...
+## 计算示例
+
+### 示例一 — 勾股定理
+
+梯子靠墙：高 3 m，距墙 4 m。
+长度 = √(9 + 16) = √25 = **5 m**
+
+### 示例二 — 化简 √180
+
+180 = 36 × 5 → √180 = 6√5 ≈ **13.416**
+
+### 示例三 — 立方根
+
+∛343（n=3）：7³ = 343 → ∛343 = **7**
+
+## 常见错误
+
+1. **√(a + b) ≠ √a + √b。** 例：√(9 + 16) = 5，而非 3 + 4 = 7。
+2. **√(a²) = |a|，并非总是 a。**
+3. **忘记寻找完全平方因子。**
+
+## 常见问题
+
+**为什么负数没有实数平方根？**
+因为任何实数的平方都是非负数。在复数中定义 i = √(−1)。
+
+**计算精度如何？**
+n=2 时使用 Math.sqrt，其他情况使用 Math.pow(x, 1/n)，精度约为 15 位有效数字。
+
+## 参考资料
+
+- Wolfram MathWorld：[Square Root](https://mathworld.wolfram.com/SquareRoot.html)
+- Khan Academy：[根式](https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:rational-exponents-radicals)
+- Wikipedia：[Nth Root](https://en.wikipedia.org/wiki/Nth_root)

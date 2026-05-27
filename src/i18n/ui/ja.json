@@ -14,7 +14,8 @@
     "openMenu": "メニューを開く",
     "closeMenu": "メニューを閉じる",
     "skipToContent": "コンテンツへスキップ",
-    "mainNavigation": "メインナビゲーション"
+    "mainNavigation": "メインナビゲーション",
+    "tools": "ツール"
   },
   "actions": {
     "calculate": "計算する",
@@ -93,5 +94,10 @@
     "analyticsDesc": "訪問者がサイトをどのように使用しているかを理解するのに役立ちます（匿名）。",
     "ads": "広告",
     "adsDesc": "関連広告を表示し、計算ツールへの無料アクセスを支援します。"
+  },
+  "tools": {
+    "description": "CSV データをアップロードしてインタラクティブな可視化を作成 — ヒストグラム、散布図、時系列、記述統計。",
+    "browseCatalog": "すべてのツールを見る",
+    "uploadData": "データをアップロード"
   }
 }

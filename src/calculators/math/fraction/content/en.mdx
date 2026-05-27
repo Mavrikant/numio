@@ -1,23 +1,117 @@
 # Fraction Calculator
 
-Detailed explanation of fraction in en.
+A fraction calculator lets you simplify fractions to their lowest terms or perform exact arithmetic — addition, subtraction, multiplication, and division — on two fractions. Results appear as a simplified fraction, a decimal, and a mixed number, so you can work with whichever form suits your needs.
 
-## What is Fraction?
+## What Is a Fraction?
 
-Explanation...
+A fraction represents a part of a whole. It consists of two integers:
 
-## How to Use This Calculator
+- **Numerator** (top number) — how many parts you have.
+- **Denominator** (bottom number) — how many equal parts the whole is divided into.
 
-Steps...
+For example, 3/4 means 3 out of 4 equal parts.
 
-## Examples
+### Types of Fractions
 
-Example 1...
+| Type | Description | Example |
+|------|-------------|---------|
+| **Proper** | Numerator &lt; denominator | 3/4 |
+| **Improper** | Numerator ≥ denominator | 7/4 |
+| **Mixed number** | Whole + proper fraction | 1¾ |
+| **Equivalent** | Different form, same value | 2/4 = 1/2 |
+
+## How to Simplify Fractions
+
+Simplifying (reducing) a fraction means dividing both numerator and denominator by their **Greatest Common Divisor (GCD)**.
+
+**Steps:**
+1. Find GCD(numerator, denominator) using the Euclidean algorithm.
+2. Divide both by the GCD.
+
+**Example:** Simplify 18/24
+- GCD(18, 24) = 6
+- 18 ÷ 6 = 3; 24 ÷ 6 = 4
+- Result: **3/4**
+
+## How to Add and Subtract Fractions
+
+### Same Denominator
+
+Simply add or subtract the numerators: a/c ± b/c = (a ± b)/c
+
+**Example:** 3/8 + 1/8 = 4/8 = **1/2**
+
+### Different Denominators
+
+Use the formula: **a/b + c/d = (a×d + c×b) / (b×d)**, then simplify.
+
+**Example:** 1/2 + 1/3
+- (1×3 + 1×2) / (2×3) = 5/6
+- GCD(5, 6) = 1 → already simplified
+- Result: **5/6**
+
+## How to Multiply and Divide Fractions
+
+### Multiplication
+
+**a/b × c/d = (a×c) / (b×d)**
+
+**Example:** 2/3 × 3/4 = 6/12 = **1/2**
+
+### Division
+
+**a/b ÷ c/d = (a×d) / (b×c)** — multiply by the reciprocal.
+
+**Example:** 3/4 ÷ 1/2 = 3/4 × 2/1 = 6/4 = **3/2** (or 1½)
+
+## Worked Examples
+
+### Example 1 — Adding Unlike Fractions
+
+**5/6 + 7/8 = ?**
+
+Using the formula:
+- Numerator: 5×8 + 7×6 = 40 + 42 = 82
+- Denominator: 6×8 = 48
+- GCD(82, 48) = 2
+- Result: **41/24** = 1 and 17/24 ≈ 1.708
+
+### Example 2 — Dividing Fractions (Recipe Scaling)
+
+A recipe calls for 3/4 cup of flour, but you want to make half the recipe.
+
+3/4 ÷ 2 = 3/4 × 1/2 = 3/8 cup of flour.
+
+### Example 3 — Simplifying a Large Fraction
+
+Simplify 360/480:
+- GCD(360, 480) = 120
+- 360 ÷ 120 = 3; 480 ÷ 120 = 4
+- Result: **3/4**
+
+## Common Mistakes
+
+1. **Adding denominators directly.** 1/2 + 1/3 ≠ 2/5. Always find a common denominator first.
+2. **Forgetting to simplify after arithmetic.** Always check if the result can be reduced.
+3. **Dividing instead of multiplying by the reciprocal.** To divide by a fraction, flip the second fraction and multiply.
+4. **Ignoring the sign.** Negative fractions: (-3)/4 = 3/(-4) = -3/4. The denominator should always be positive in the simplified form.
 
 ## Frequently Asked Questions
 
-Q&A...
+**What is the GCD and why does it matter?**
+The Greatest Common Divisor (GCD) is the largest integer that divides both numbers without remainder. Dividing numerator and denominator by the GCD gives the simplest form of a fraction. The Euclidean algorithm finds it efficiently: GCD(a, b) = GCD(b, a mod b) repeated until b = 0.
+
+**What is the difference between an improper fraction and a mixed number?**
+They represent the same value in different forms. 7/4 is an improper fraction (numerator ≥ denominator). 1¾ is the mixed number form (1 whole + 3/4). This calculator shows both.
+
+**Can fractions have negative denominators?**
+Mathematically yes, but by convention the denominator is always written as positive. A negative fraction is shown with the minus sign on the numerator: -3/4.
+
+**How do I compare two fractions?**
+Convert both to the same denominator (or to decimals) and compare. For example, which is larger, 5/8 or 3/5? 5/8 = 0.625, 3/5 = 0.600, so 5/8 is larger.
 
 ## References
 
-References...
+- Khan Academy: [Fraction Arithmetic](https://www.khanacademy.org/math/arithmetic/fraction-arithmetic)
+- Wolfram MathWorld: [Fraction](https://mathworld.wolfram.com/Fraction.html)
+- Wolfram MathWorld: [Greatest Common Divisor](https://mathworld.wolfram.com/GreatestCommonDivisor.html)

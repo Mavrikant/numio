@@ -14,7 +14,8 @@
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
     "skipToContent": "Skip to content",
-    "mainNavigation": "Main navigation"
+    "mainNavigation": "Main navigation",
+    "tools": "Tools"
   },
   "actions": {
     "calculate": "Calculate",
@@ -93,5 +94,10 @@
     "analyticsDesc": "Helps us understand how visitors use the site (anonymous).",
     "ads": "Advertising",
     "adsDesc": "Allows us to show relevant ads and support free access to calculators."
+  },
+  "tools": {
+    "description": "Upload CSV data and create interactive visualizations — histograms, scatter plots, time series, and descriptive statistics.",
+    "browseCatalog": "Browse all tools",
+    "uploadData": "Upload your data"
   }
 }

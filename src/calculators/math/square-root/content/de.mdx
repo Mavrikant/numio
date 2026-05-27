@@ -1,23 +1,60 @@
-# Square root Calculator
+# Quadratwurzel-Rechner
 
-Detailed explanation of square root in de.
+Dieser Rechner berechnet die Quadrat- oder n-te Wurzel einer Zahl, prüft ob sie eine perfekte Quadratzahl ist, und gibt die vereinfachte Radikalform aus.
 
-## What is Square root?
+## Was ist eine Quadratwurzel?
 
-Explanation...
+Die **Quadratwurzel** einer Zahl *x* ist eine Zahl *r* mit r² = x. Für nicht-negative Zahlen gibt es genau eine nicht-negative Wurzel: √x.
 
-## How to Use This Calculator
+Die **n-te Wurzel** verallgemeinert dies: ⁿ√x = x^(1/n), wobei rⁿ = x.
 
-Steps...
+## Perfekte Quadratzahlen
 
-## Examples
+Eine **perfekte Quadratzahl** ist eine ganze Zahl, deren Quadratwurzel ebenfalls eine ganze Zahl ist. Beispiele: 0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100.
 
-Example 1...
+## Vereinfachte Radikalform
 
-## Frequently Asked Questions
+Vereinfachung bedeutet, alle quadratischen Faktoren aus dem Wurzelzeichen herauszuziehen.
 
-Q&A...
+**Beispiel:** √72
+- 72 = 36 × 2
+- √72 = 6√2 (Koeffizient 6, Radikand 2)
 
-## References
+**Allgemeiner Algorithmus (n-te Wurzel):**
+1. Primfaktorzerlegung: x = p₁^e₁ × p₂^e₂ × …
+2. Koeffizient: Produkt der p^⌊e/n⌋; Radikand: Produkt der p^(e mod n)
 
-References...
+## Rechenbeispiele
+
+### Beispiel 1 — Satz des Pythagoras
+
+Eine Leiter lehnt an einer Wand: Höhe 3 m, Abstand 4 m.
+Länge = √(3² + 4²) = √25 = **5 m**
+
+### Beispiel 2 — √180 vereinfachen
+
+180 = 36 × 5 → √180 = 6√5 ≈ **13,416**
+
+### Beispiel 3 — Kubikwurzel
+
+∛343 (n=3): 7³ = 343 → ∛343 = **7**
+
+## Häufige Fehler
+
+1. **√(a + b) ≠ √a + √b.** Beispiel: √(9 + 16) = 5, nicht 3 + 4 = 7.
+2. **√(a²) = |a|, nicht immer a.** Für negative a ist das Ergebnis -a.
+3. **Quadratische Faktoren übersehen.** Immer faktorisieren vor der Vereinfachung.
+
+## Häufig gestellte Fragen
+
+**Warum gibt es keine Quadratwurzel negativer Zahlen im Reellen?**
+Weil das Quadrat jeder reellen Zahl nicht-negativ ist. Im Bereich der komplexen Zahlen definiert man i = √(−1).
+
+**Wie genau ist die Berechnung?**
+Für n=2 wird Math.sqrt verwendet, für andere n wird Math.pow(x, 1/n) eingesetzt — beide basieren auf IEEE 754 Doppeltgenauigkeit mit ca. 15 signifikanten Stellen.
+
+## Referenzen
+
+- Wolfram MathWorld: [Square Root](https://mathworld.wolfram.com/SquareRoot.html)
+- Khan Academy: [Radicals](https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:rational-exponents-radicals)
+- Wikipedia: [Nth Root](https://en.wikipedia.org/wiki/Nth_root)

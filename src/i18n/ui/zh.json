@@ -14,7 +14,8 @@
     "openMenu": "打开菜单",
     "closeMenu": "关闭菜单",
     "skipToContent": "跳转至内容",
-    "mainNavigation": "主导航"
+    "mainNavigation": "主导航",
+    "tools": "工具"
   },
   "actions": {
     "calculate": "计算",
@@ -93,5 +94,10 @@
     "analyticsDesc": "帮助我们了解访客如何使用网站（匿名）。",
     "ads": "广告",
     "adsDesc": "使我们能够展示相关广告并支持对计算器的免费访问。"
+  },
+  "tools": {
+    "description": "上传 CSV 数据并创建交互式可视化 — 直方图、散点图、时间序列和描述性统计。",
+    "browseCatalog": "查看所有工具",
+    "uploadData": "上传您的数据"
   }
 }

@@ -1,23 +1,93 @@
-# Average Hesaplama
+# Ortalama Hesaplayıcı
 
-Detailed explanation of average in tr.
+Ortalama hesaplayıcı, merkezi eğilimin üç klasik ölçüsünü — ortalama, ortanca ve tepe değer — anında hesaplamanızı sağlar; bunun yanı sıra sayı, toplam ve aralık gibi destekleyici istatistikleri de sunar.
 
-## What is Average?
+## Ortalama Nedir?
 
-Explanation...
+Günlük dilde "ortalama" neredeyse her zaman **aritmetik ortalamayı** ifade eder: değerlerin toplamının değer sayısına bölünmesi. Matematikte ve istatistikte "ortalama" birkaç farklı ölçüyü kapsayan genel bir kavramdır:
 
-## How to Use This Calculator
+- **Ortalama (aritmetik)** — tüm değerlerin toplamının sayıya bölünmesi.
+- **Ortanca** — veriler küçükten büyüğe sıralandığında ortadaki değer.
+- **Tepe değer (mod)** — en sık tekrar eden değer.
 
-Steps...
+Her ölçü veri setinin "merkezini" farklı şekilde tanımlar ve farklı durumlarda daha yararlıdır.
 
-## Examples
+## Ortalama, Ortanca ve Tepe Değer Nasıl Hesaplanır?
 
-Example 1...
+### Aritmetik Ortalama
 
-## Frequently Asked Questions
+**Ortalama = (x₁ + x₂ + … + xₙ) / n**
 
-Q&A...
+**Örnek:** \{4, 8, 15, 16, 23, 42\} veri seti için:
+- Toplam = 108, Sayı = 6
+- Ortalama = 108 / 6 = **18**
 
-## References
+### Ortanca
 
-References...
+1. Değerleri küçükten büyüğe sıralayın.
+2. Sayı **tekse**, ortanca (n+1)/2. konumdaki değerdir.
+3. Sayı **çiftse**, iki ortadaki değerin ortalamasıdır.
+
+**Örnek:** \{4, 8, 15, 16, 23, 42\} için (n = 6):
+- 3. değer (15) ve 4. değer (16)
+- Ortanca = (15 + 16) / 2 = **15,5**
+
+### Tepe Değer
+
+Her değerin kaç kez geçtiğini sayın; en fazla tekrar eden değer tepe değerdir.
+
+**Örnek:** \{2, 3, 3, 5, 7, 3, 8\} için 3 üç kez geçiyor → Tepe değer = **3**
+
+### Aralık
+
+**Aralık = Maksimum − Minimum**
+
+\{4, 8, 15, 16, 23, 42\} için: 42 − 4 = **38**
+
+## Örnek Hesaplamalar
+
+### Örnek 1 — Sınav Notları
+
+Bir sınıfın notları: 72, 85, 90, 68, 74, 85, 91, 78
+
+- **Ortalama:** 643 / 8 = **80,375**
+- **Ortanca:** Sıralı: 68, 72, 74, 78, 85, 85, 90, 91 → (78 + 85) / 2 = **81,5**
+- **Tepe değer:** 85 (iki kez tekrar ediyor) → **85**
+- **Aralık:** 91 − 68 = **23**
+
+### Örnek 2 — Ev Fiyatları (Aykırı Değerin Etkisi)
+
+Konut fiyatları (bin TL): 250, 270, 265, 280, 260, 1100
+
+- **Ortalama:** ≈ 404 (1100'ün etkisiyle yüksek)
+- **Ortanca:** (265 + 270) / 2 = **267,5** (daha temsili)
+
+Aykırı değer varlığında ortanca daha güvenilir bir merkez ölçüsüdür.
+
+## Hangi Ölçüyü Kullanmalısınız?
+
+| Ölçü | Ne zaman kullanın |
+|------|------------------|
+| **Ortalama** | Veriler simetrik, aykırı değer yok |
+| **Ortanca** | Veriler çarpık veya aykırı değer var |
+| **Tepe değer** | En yaygın değeri bulmak istiyorsanız |
+
+## Sık Yapılan Hatalar
+
+1. **Çarpık verilerde ortalama kullanmak.** Gelir veya konut fiyatı gibi sağa çarpık dağılımlarda ortalama tipik değeri abartır.
+2. **Ortanca konumunu ortanca değeriyle karıştırmak.** \{1, 2, 3, 4\} için ortanca 2,5'tir; 3 değil.
+3. **Her zaman tek bir tepe değer olduğunu varsaymak.** Veri çift veya çok tepeli olabilir ya da hiç tepe değeri olmayabilir.
+
+## Sıkça Sorulan Sorular
+
+**Yüzdelerin ortalamasını alabilir miyim?**
+Yüzdeler aynı taban miktara uygulanıyorsa ortalamaları alınabilir. Farklı tabanlıysa ağırlıklı ortalama kullanılmalıdır.
+
+**Aritmetik ortalama neden aykırı değerlere duyarlıdır?**
+Ortalama tüm değerleri eşit ağırlıkla kullandığından aşırı bir değer toplamı önemli ölçüde etkiler. Ortanca yalnızca sıralamaya bağlı olduğundan aşırı değerler onu fazla etkilemez.
+
+## Kaynaklar
+
+- Khan Academy: [Ortalama, Ortanca ve Tepe Değer](https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/mean-median-basics/a/mean-median-and-mode-review)
+- Wolfram MathWorld: [Arithmetic Mean](https://mathworld.wolfram.com/ArithmeticMean.html)
+- NIST: [Merkezi Eğilim Ölçüleri](https://www.itl.nist.gov/div898/handbook/eda/section3/eda351.htm)

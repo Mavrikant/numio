@@ -1,23 +1,119 @@
 # Average Calculator
 
-Detailed explanation of average in en.
+An average calculator lets you instantly compute the three classic measures of central tendency — mean, median, and mode — alongside supporting statistics like count, sum, and range. Whether you're analyzing test scores, comparing prices, or working on a statistics assignment, this tool handles the arithmetic so you can focus on interpretation.
 
-## What is Average?
+## What Is an Average?
 
-Explanation...
+In everyday language, "average" almost always means the **arithmetic mean** — the sum of a set of values divided by how many values there are. In mathematics and statistics, however, "average" is an umbrella term that covers several different measures:
 
-## How to Use This Calculator
+- **Mean (arithmetic average)** — the sum of all values divided by the count.
+- **Median** — the middle value when the data is sorted from smallest to largest.
+- **Mode** — the value that appears most often.
 
-Steps...
+Each measure describes the "center" of a data set differently, and each is more useful in certain situations.
 
-## Examples
+## How to Calculate Mean, Median, and Mode
 
-Example 1...
+### Arithmetic Mean
+
+The formula for arithmetic mean is:
+
+**Mean = (x₁ + x₂ + … + xₙ) / n**
+
+where *n* is the number of values.
+
+**Example:** For the data set \{4, 8, 15, 16, 23, 42\}:
+- Sum = 4 + 8 + 15 + 16 + 23 + 42 = 108
+- Count = 6
+- Mean = 108 / 6 = **18**
+
+### Median
+
+1. Sort the values from smallest to largest.
+2. If *n* is **odd**, the median is the value in position (n + 1) / 2.
+3. If *n* is **even**, the median is the average of the two middle values.
+
+**Example:** For \{4, 8, 15, 16, 23, 42\} (already sorted, n = 6):
+- Middle positions: 3rd (15) and 4th (16)
+- Median = (15 + 16) / 2 = **15.5**
+
+### Mode
+
+Count how often each value appears. The value with the highest count is the mode. If no value repeats, there is no mode.
+
+**Example:** For \{2, 3, 3, 5, 7, 3, 8\}:
+- 3 appears 3 times — the most frequent value.
+- Mode = **3**
+
+### Range
+
+**Range = Maximum − Minimum**
+
+For \{4, 8, 15, 16, 23, 42\}: Range = 42 − 4 = **38**
+
+## Worked Examples
+
+### Example 1 — Test Scores
+
+A class scored: 72, 85, 90, 68, 74, 85, 91, 78
+
+**Mean:** (72 + 85 + 90 + 68 + 74 + 85 + 91 + 78) / 8 = 643 / 8 = **80.375**
+
+**Median:** Sorted: 68, 72, 74, 78, 85, 85, 90, 91 → Middle pair: 78 and 85 → (78 + 85) / 2 = **81.5**
+
+**Mode:** 85 appears twice (the only repeated value) → **85**
+
+**Range:** 91 − 68 = **23**
+
+The mean and median are close (about 80–81), suggesting the data is fairly symmetrical.
+
+### Example 2 — House Prices (Effect of an Outlier)
+
+House prices in a neighborhood (thousands): 250, 270, 265, 280, 260, 1100
+
+**Mean:** 2425 / 6 ≈ **$404k** — pulled up significantly by the $1.1M outlier.
+
+**Median:** Sorted: 250, 260, 265, 270, 280, 1100 → (265 + 270) / 2 = **$267.5k**
+
+Here the median is far more representative of a "typical" home than the mean.
+
+### Example 3 — Shoe Sizes at a Store
+
+Sizes sold in one day: 8, 9, 10, 10, 10, 11, 12, 9, 10
+
+**Mode = 10** — the store should stock more size 10 than any other.
+
+## When to Use Mean vs. Median vs. Mode
+
+| Measure | Best used when… |
+|---------|----------------|
+| **Mean** | Data is symmetric, no major outliers |
+| **Median** | Data is skewed or has outliers |
+| **Mode** | You need the most common value (e.g., clothing sizes, survey responses) |
+
+## Common Mistakes
+
+1. **Using mean with skewed data.** Income, house prices, and other right-skewed distributions have means that overstate the typical value. Prefer the median.
+2. **Confusing median position with median value.** For \{1, 2, 3, 4\}, the median is 2.5 (average of 2 and 3), not 3.
+3. **Assuming there is always one mode.** Data can have multiple modes (bimodal, multimodal) or no mode at all.
+4. **Ignoring the range.** Two data sets can have the same mean but very different spreads — always report the range or standard deviation alongside the average.
 
 ## Frequently Asked Questions
 
-Q&A...
+**Can I average percentages?**
+You can average percentages if each percentage applies to the same base quantity. If the bases differ, you need a weighted average instead.
+
+**What is a weighted average?**
+A weighted average multiplies each value by a weight (its relative importance) before summing and then divides by the total weight. Example: if exam 1 counts 40% and exam 2 counts 60%, the final grade = (score₁ × 0.4 + score₂ × 0.6).
+
+**Why is the mean sensitive to outliers?**
+The mean uses every value equally, so an extreme value shifts the sum substantially. The median only depends on order, so extreme values don't move it much.
+
+**What is the geometric mean?**
+The geometric mean is the *n*th root of the product of all values. It is used for growth rates and ratios (e.g., compound interest, population growth).
 
 ## References
 
-References...
+- Khan Academy: [Mean, Median, Mode Review](https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/mean-median-basics/a/mean-median-and-mode-review)
+- Wolfram MathWorld: [Arithmetic Mean](https://mathworld.wolfram.com/ArithmeticMean.html)
+- NIST/SEMATECH: [Measures of Central Tendency](https://www.itl.nist.gov/div898/handbook/eda/section3/eda351.htm)

@@ -5,19 +5,21 @@ import { assertSchemaValidates, assertComputeIsPure } from "@/test-utils";
 
 describe("fraction snapshot", () => {
   it("matches snapshot for standard inputs", () => {
-    const result = definition.compute({ value: 10 });
+    const parsed = definition.inputSchema.parse({ numerator1: 3, denominator1: 4, operation: "simplify" });
+    const result = definition.compute(parsed);
     expect(result).toMatchSnapshot();
   });
 
   it("schema validates correct inputs", () => {
     assertSchemaValidates(
       definition as AnyCalculatorDefinition,
-      { value: 10 },
-      { value: "invalid" }
+      { numerator1: 1, denominator1: 2, operation: "simplify" },
+      { numerator1: "abc", denominator1: 2, operation: "simplify" }
     );
   });
 
   it("compute is pure", () => {
-    assertComputeIsPure(definition as AnyCalculatorDefinition, { value: 10 });
+    const parsed = definition.inputSchema.parse({ numerator1: 1, denominator1: 2, operation: "simplify" });
+    assertComputeIsPure(definition as AnyCalculatorDefinition, parsed as Record<string, unknown>);
   });
 });

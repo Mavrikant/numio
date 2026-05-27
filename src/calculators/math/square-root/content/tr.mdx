@@ -1,23 +1,73 @@
-# Square root Hesaplama
+# Karekök Hesaplayıcı
 
-Detailed explanation of square root in tr.
+Karekök hesaplayıcı, bir sayının karekökünü veya n'inci kökünü hesaplar, tam kare kontrolü yapar ve sonucu sadeleştirilmiş kök formunda sunar.
 
-## What is Square root?
+## Karekök Nedir?
 
-Explanation...
+Bir *x* sayısının **kareköü**, r² = x şartını sağlayan *r* değeridir. Negatif olmayan her sayının tek bir negatif olmayan karekökü vardır ve √x olarak gösterilir. Negatif sayıların gerçel karekökü yoktur.
 
-## How to Use This Calculator
+**n'inci kök** bu kavramı genelleştirir: rⁿ = x şartını sağlayan *r* değeridir; ⁿ√x veya x^(1/n) olarak yazılır.
 
-Steps...
+## Tam Kareler
 
-## Examples
+**Tam kare**, karekökü tam sayı olan negatif olmayan tam sayılardır. İlk 15 tam kare:
 
-Example 1...
+0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 169, 196
 
-## Frequently Asked Questions
+Hızlı kontrol: 225 tam kare mi? √225 = 15 (tam sayı) → evet. 50 tam kare mi? √50 ≈ 7,071 → hayır.
 
-Q&A...
+## Sadeleştirilmiş Kök Formu
 
-## References
+Bir kök ifadesi, kök işaretinin altında tam kare çarpan kalmadığında **sadeleştirilmiş** sayılır.
 
-References...
+### √n Nasıl Sadeleştirilir?
+
+**Örnek:** √72'yi sadeleştir
+- 72 = 36 × 2
+- √72 = √(36 × 2) = 6√2
+
+**Genel algoritma (n'inci kök için):**
+1. x'in asal çarpanlara ayrılması: x = p₁^e₁ × p₂^e₂ × …
+2. Her pᵢ için: katsayı payı = pᵢ^⌊eᵢ/n⌋, radikan payı = pᵢ^(eᵢ mod n)
+3. Katsayı paylarını çarpın; radikan paylarını çarpın.
+
+## Örnek Hesaplamalar
+
+### Örnek 1 — Pisagor Teoremi
+
+3 m yükselen ve 4 m yatay uzayan bir merdiven korkuluğunun uzunluğu:
+√(3² + 4²) = √(9 + 16) = √25 = **5 m**
+
+### Örnek 2 — √180 Sadeleştirme
+
+- 180 = 36 × 5
+- √180 = 6√5
+- Katsayı: **6**, Radikan: **5**
+- Ondalık: 6 × 2,2361 ≈ **13,416**
+
+### Örnek 3 — Küp Kök
+
+∛343 (n = 3): 7³ = 343 → ∛343 = **7** (tam küp)
+
+## Sık Yapılan Hatalar
+
+1. **√(a + b) ≠ √a + √b.** Örnek: √(9 + 16) = 5 ≠ 3 + 4.
+2. **√(a²) = |a|, her zaman a değil.** a negatifse sonuç -a'dır.
+3. **Tam kare çarpanları kontrol etmemek.** Sadeleştirmeden önce asal çarpanlara ayırın.
+
+## Sıkça Sorulan Sorular
+
+**Negatif sayının karekökü neden alınamaz?**
+Gerçek sayı sisteminde herhangi bir gerçel sayının karesi negatif olamaz. r² = -1 denklemini sağlayan gerçel r yoktur. Karmaşık sayılarda i = √(−1) tanımlanır.
+
+**Tam ve yaklaşık kök arasındaki fark nedir?**
+√4 = 2 tam ve rasyonel bir değerdir. √2 = 1,41421356… irrasyoneldir; tam sonuç için √2 (sadeleştirilmiş kök formu) olarak bırakılır.
+
+**Hesaplayıcı ne kadar doğrudur?**
+n=2 için Math.sqrt, diğerleri için Math.pow(x, 1/n) kullanılır; IEEE 754 çift duyarlılık ile yaklaşık 15 anlamlı basamak doğruluk sağlar. Sonuçlar 6 ondalık basamağa gösterilir.
+
+## Kaynaklar
+
+- Wolfram MathWorld: [Square Root](https://mathworld.wolfram.com/SquareRoot.html)
+- Khan Academy: [Kökler ve Karekökler](https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:rational-exponents-radicals)
+- Wikipedia: [Nth Root](https://en.wikipedia.org/wiki/Nth_root)

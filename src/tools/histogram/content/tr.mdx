@@ -1,0 +1,53 @@
+# Histogram ve Kutu Grafiği Oluşturucu
+
+CSV dosyası yükleyin veya veri yapıştırın, sayısal bir sütun seçin, dağılımını anında görün. Bu araç özet istatistikleri hesaplar, otomatik bin genişliği seçimi ile histogram çizer ve kuartilleri/aykırı değerleri gösteren bir kutu grafiği çıkarır — hepsi tarayıcınızda. Verileriniz cihazınızdan çıkmaz.
+
+## Histogram nedir?
+
+**Histogram**, sayısal veriyi aralıklara (bin'lere) gruplandıran ve her aralığa kaç değerin düştüğünü gösteren bir grafiktir. Tek bir sürekli değişkenin dağılımını görselleştirmenin en yaygın yoludur. Histogramın şekline bakarak şu soruları cevaplayabilirsiniz:
+
+- Veri yaklaşık olarak **simetrik** (çan eğrisi) mi yoksa **çarpık** mı?
+- **Birden fazla tepe** (mode) var mı? Bu, veride alt grupların olduğuna işaret eder.
+- **Aykırı değerler** veya beklenmedik boşluklar var mı?
+- Değerler tipik değerin etrafında ne kadar **yayılmış**?
+
+## Bin genişlikleri nasıl seçilir?
+
+Varsayılan olarak **Freedman-Diaconis kuralı** kullanılır: bin genişliği = 2 · IQR · n⁻¹ᐟ³, IQR çeyrekler arası açıklık ve n örneklem boyutudur. Bu kural aykırı değerlere karşı dayanıklıdır çünkü standart sapma yerine IQR (dirençli bir yayılım ölçüsü) kullanır. Küçük veri setleri için (n &lt; 30) **Sturges kuralına** (log₂(n) + 1 bin) geçer.
+
+Bin sayısını manuel olarak da değiştirebilirsiniz — birkaç değer deneyerek şeklin nasıl değiştiğini görün. Çok az bin yapıyı gizler; çok fazla bin gürültü yaratır.
+
+## Kutu grafiği nedir?
+
+**Kutu grafiği** (box-and-whisker), bir dağılımın beş temel değerini özetleyen kompakt bir gösterimdir:
+
+- **Medyan** (kutunun içindeki çizgi): veriler sıralandığında ortadaki değer.
+- **Q1 ve Q3** (kutu kenarları): 25. ve 75. persentiller. Kutu, verinin orta %50'sini kapsar.
+- **Bıyıklar**: tipik olarak kuartillerin 1.5 · IQR mesafesindeki en uç değerlere uzanır.
+- **Aykırı değerler** (bıyıkların ötesindeki noktalar): Q1 veya Q3'ten 1.5 · IQR'den uzak değerler.
+
+Kutu grafikleri birden fazla grubu yan yana karşılaştırmak veya hızlıca aykırı değerleri tespit etmek için mükemmeldir. Bu araç, seçilen sütunun kutu grafiğini histogramın yanına çizer.
+
+## Aracı nasıl kullanırım?
+
+1. **Verinizi yükleyin**: CSV dosyasını sürükle-bırak yapın, "Dosya seç"e tıklayın veya veriyi metin alanına yapıştırın. Araç ayraçları ve başlıkları otomatik algılar, ABD (1,234.56) veya AB (1.234,56) sayı formatlarıyla başa çıkar.
+2. **Sütun seçin**: sadece sayısal sütunlar listelenir. Dağılımları karşılaştırmak için sütunlar arasında geçiş yapın.
+3. **Bin sayısını ayarlayın** (isteğe bağlı): otomatik ile başlayın, sonra 10, 20, 30 deneyerek şeklin nasıl değiştiğini görün.
+4. **Özeti okuyun**: seçilen sütun için sayı, ortalama, standart sapma, kuartiller, IQR, aralık, çarpıklık ve basıklık hesaplanır.
+
+## Yaygın kullanım alanları
+
+- **Kalite kontrolü**: ürün boyutlarındaki sapmaları tespit etmek için ölçüm hatasını görselleştirin.
+- **Anket analizi**: katılımcıların yaş, puan veya değerlendirmelerinin nasıl dağıldığını görün.
+- **Finans**: günlük getirilerin, işlem boyutlarının veya bekleme sürelerinin dağılımını inceleyin.
+- **Bilim**: formel istatistik testler yapmadan önce deneysel veriyi keşfedin.
+
+## Gizlilik ve doğruluk
+
+Tüm ayrıştırma ve hesaplama tarayıcınızda yerel olarak gerçekleşir. Hiçbir veri sunucuya yüklenmez. Maksimum dosya boyutu 5 MB'dir. Çok büyük veri setleri için (>100,000 satır) render yavaş olabilir; örnekleme yapmayı düşünün.
+
+## Referanslar
+
+- Freedman, D., Diaconis, P. (1981). *On the histogram as a density estimator: L₂ theory.*
+- Tukey, J. W. (1977). *Exploratory Data Analysis.* Addison-Wesley.
+- Sturges, H. A. (1926). *The choice of a class interval.* Journal of the American Statistical Association.

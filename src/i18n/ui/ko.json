@@ -14,7 +14,8 @@
     "openMenu": "메뉴 열기",
     "closeMenu": "메뉴 닫기",
     "skipToContent": "본문으로 건너뛰기",
-    "mainNavigation": "주요 내비게이션"
+    "mainNavigation": "주요 내비게이션",
+    "tools": "도구"
   },
   "actions": {
     "calculate": "계산",
@@ -93,5 +94,10 @@
     "analyticsDesc": "방문자가 사이트를 어떻게 이용하는지 이해하는 데 도움이 됩니다 (익명).",
     "ads": "광고",
     "adsDesc": "관련 광고를 표시하고 계산기에 대한 무료 접근을 지원합니다."
+  },
+  "tools": {
+    "description": "CSV 데이터를 업로드하고 인터랙티브 시각화 만들기 — 히스토그램, 산점도, 시계열 및 기술 통계.",
+    "browseCatalog": "모든 도구 보기",
+    "uploadData": "데이터 업로드"
   }
 }

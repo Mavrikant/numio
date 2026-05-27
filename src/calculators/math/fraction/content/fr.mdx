@@ -1,23 +1,67 @@
-# Fraction Calculator
+# Calculateur de Fractions
 
-Detailed explanation of fraction in fr.
+Cet outil simplifie les fractions ou effectue des opérations exactes (addition, soustraction, multiplication, division) sur deux fractions.
 
-## What is Fraction?
+## Qu'est-ce qu'une fraction ?
 
-Explanation...
+Une fraction représente une partie d'un tout :
 
-## How to Use This Calculator
+- **Numérateur** (nombre du haut) — combien de parties vous possédez.
+- **Dénominateur** (nombre du bas) — en combien de parties égales le tout est divisé.
 
-Steps...
+Exemple : 3/4 signifie 3 parties sur 4.
 
-## Examples
+## Simplifier une fraction
 
-Example 1...
+Divisez le numérateur et le dénominateur par leur **PGCD** (plus grand commun diviseur).
 
-## Frequently Asked Questions
+**Exemple :** Simplifier 18/24
+- PGCD(18, 24) = 6
+- 18 ÷ 6 = 3 ; 24 ÷ 6 = 4 → **3/4**
 
-Q&A...
+## Additionner et soustraire des fractions
 
-## References
+Même dénominateur : additionner les numérateurs. Dénominateurs différents :
 
-References...
+**a/b + c/d = (a×d + c×b) / (b×d)**
+
+**Exemple :** 1/2 + 1/3 = (3 + 2) / 6 = **5/6**
+
+## Multiplier et diviser des fractions
+
+- **Multiplication :** a/b × c/d = (a×c)/(b×d)
+- **Division :** a/b ÷ c/d = (a×d)/(b×c) — multiplier par l'inverse
+
+**Exemple division :** 3/4 ÷ 1/2 = 3/4 × 2/1 = **3/2**
+
+## Exemples de calcul
+
+### Exemple 1 — Fractions de dénominateurs différents
+
+**5/6 + 7/8 = ?**
+- Numérateur : 5×8 + 7×6 = 82 ; Dénominateur : 48
+- PGCD(82, 48) = 2 → **41/24** ≈ 1,708
+
+### Exemple 2 — Diviser une recette
+
+3/4 de tasse pour la moitié de la recette :
+3/4 ÷ 2 = **3/8** de tasse
+
+## Erreurs fréquentes
+
+1. **Additionner les dénominateurs directement.** 1/2 + 1/3 ≠ 2/5.
+2. **Oublier de simplifier après le calcul.**
+3. **Confondre diviser avec multiplier par l'inverse.**
+
+## Questions fréquentes
+
+**Qu'est-ce que le PGCD ?**
+Le plus grand commun diviseur est le plus grand entier qui divise exactement les deux nombres. Il est calculé par l'algorithme d'Euclide.
+
+**Fraction impropre vs nombre mixte ?**
+7/4 est une fraction impropre ; 1¾ est sa forme mixte — même valeur, présentation différente.
+
+## Références
+
+- Khan Academy : [Calcul fractionnel](https://www.khanacademy.org/math/arithmetic/fraction-arithmetic)
+- Wolfram MathWorld : [Fraction](https://mathworld.wolfram.com/Fraction.html)

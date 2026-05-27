@@ -14,7 +14,8 @@
     "openMenu": "Menü öffnen",
     "closeMenu": "Menü schließen",
     "skipToContent": "Zum Inhalt springen",
-    "mainNavigation": "Hauptnavigation"
+    "mainNavigation": "Hauptnavigation",
+    "tools": "Werkzeuge"
   },
   "actions": {
     "calculate": "Berechnen",
@@ -93,5 +94,10 @@
     "analyticsDesc": "Hilft uns zu verstehen, wie Besucher die Website nutzen (anonym).",
     "ads": "Werbung",
     "adsDesc": "Ermöglicht uns, relevante Werbung anzuzeigen und den kostenlosen Zugang zu Rechnern zu unterstützen."
+  },
+  "tools": {
+    "description": "CSV-Daten hochladen und interaktive Visualisierungen erstellen — Histogramme, Streudiagramme, Zeitreihen und deskriptive Statistik.",
+    "browseCatalog": "Alle Werkzeuge anzeigen",
+    "uploadData": "Daten hochladen"
   }
 }

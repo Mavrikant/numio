@@ -1,23 +1,108 @@
-# Square root Calculator
+# Square Root Calculator
 
-Detailed explanation of square root in en.
+A square root calculator finds the square root — or any nth root — of a number. It also checks whether the number is a perfect square and expresses the result in simplified radical form. Whether you need √144 for a geometry problem or ∛216 for a volume calculation, this tool gives you the exact answer instantly.
 
-## What is Square root?
+## What Is a Square Root?
 
-Explanation...
+The **square root** of a number *x* is a value *r* such that r² = x. Every non-negative number has exactly one non-negative square root, denoted √x. Negative numbers have no real square roots.
 
-## How to Use This Calculator
+The **nth root** (or n-th root) generalizes this concept: the nth root of *x* is a value *r* such that rⁿ = x, written ⁿ√x or x^(1/n).
 
-Steps...
+## Perfect Squares
 
-## Examples
+A **perfect square** is a non-negative integer whose square root is also an integer. The first 15 perfect squares are:
 
-Example 1...
+0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 169, 196
+
+You can quickly check: is 225 a perfect square? √225 = 15 (integer) → yes. Is 50 a perfect square? √50 ≈ 7.071 (not integer) → no.
+
+## Simplified Radical Form
+
+A radical expression is **simplified** when:
+1. The radicand (number under the radical) has no perfect-square factor other than 1.
+2. There are no fractions under the radical.
+
+### How to Simplify √n
+
+Factor the radicand into primes, then pull out pairs (for √) or groups of n (for nth root).
+
+**Example:** Simplify √72
+- 72 = 2 × 36 = 2 × 6² → Wait, 72 = 4 × 18 = 4 × 9 × 2 = 36 × 2
+- √72 = √(36 × 2) = 6√2
+
+**Algorithm (for any integer x and nth root n):**
+1. Find prime factorization of x: x = p₁^e₁ × p₂^e₂ × …
+2. For each prime pᵢ with exponent eᵢ:
+   - coefficient factor: pᵢ^⌊eᵢ/n⌋
+   - radicand factor: pᵢ^(eᵢ mod n)
+3. Multiply coefficient factors together; multiply radicand factors together.
+
+## How to Calculate Square Roots by Hand
+
+### Method 1 — Guess and Check
+
+For √50: Try 7² = 49, 8² = 64. So √50 is between 7 and 7.1. Try 7.07² = 49.98, 7.08² = 50.13 → √50 ≈ 7.07.
+
+### Method 2 — Babylonian (Newton's) Method
+
+Start with a guess g₀. Repeatedly apply: gₙ₊₁ = (gₙ + x/gₙ) / 2
+
+**Example:** √2 starting with g₀ = 1.5
+- g₁ = (1.5 + 2/1.5) / 2 = (1.5 + 1.333) / 2 = 1.4167
+- g₂ = (1.4167 + 2/1.4167) / 2 ≈ 1.4142
+
+This converges quadratically and is very fast.
+
+## Worked Examples
+
+### Example 1 — Architecture: Staircase Diagonal
+
+A staircase rises 3 m and runs 4 m horizontally. What is the length of the railing?
+
+By the Pythagorean theorem: diagonal = √(3² + 4²) = √(9 + 16) = √25 = **5 m**
+
+### Example 2 — Simplifying √180
+
+- 180 = 4 × 45 = 4 × 9 × 5 = 36 × 5
+- √180 = √(36 × 5) = 6√5
+- Coefficient: **6**, Radicand: **5**
+- Decimal: 6 × √5 ≈ 6 × 2.2361 ≈ **13.416**
+
+### Example 3 — Cube Root of 343
+
+ⁿ√343 with n = 3: 7³ = 343. So ∛343 = **7** (perfect cube).
+
+### Example 4 — nth Root in Finance
+
+The formula for CAGR (Compound Annual Growth Rate) uses nth roots:
+CAGR = (Ending Value / Beginning Value)^(1/n) − 1
+
+If an investment grew from $1000 to $1600 in 5 years:
+CAGR = (1600/1000)^(1/5) − 1 = 1.6^0.2 − 1 ≈ 0.0986 = **9.86% per year**
+
+## Common Mistakes
+
+1. **√(a + b) ≠ √a + √b.** For example, √(9 + 16) = √25 = 5, not 3 + 4 = 7.
+2. **√(a²) = |a|, not always a.** If a is negative, √(a²) = −a, not a.
+3. **Forgetting to check for perfect square factors.** Always prime-factorize before simplifying.
+4. **Confusing the index.** √x (index 2) vs ∛x (index 3) — the index is not written for square roots by convention.
 
 ## Frequently Asked Questions
 
-Q&A...
+**Why can't you take the square root of a negative number in real numbers?**
+Because any real number squared is non-negative. There's no real number r such that r² = −1. In complex number theory, i = √(−1) is defined, opening a whole new field of mathematics.
+
+**What is the difference between exact and approximate roots?**
+Exact: √4 = 2 (rational, terminating). √2 = 1.41421356… is irrational — the decimal never repeats or terminates. For exact work, leave it as √2 (simplified radical form).
+
+**How accurate is the nth root calculation?**
+This calculator uses JavaScript's `Math.sqrt` (for n=2) and `Math.pow(x, 1/n)` for other roots, which are IEEE 754 double-precision operations accurate to about 15 significant digits. Results are displayed to 6 decimal places.
+
+**Can I compute fractional roots (e.g., x^(1/3))?**
+Yes — set n=3 for cube root, n=4 for 4th root, etc. The calculator supports integer root indices from 2 to 100.
 
 ## References
 
-References...
+- Wolfram MathWorld: [Square Root](https://mathworld.wolfram.com/SquareRoot.html)
+- Khan Academy: [Radicals and Square Roots](https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:rational-exponents-radicals)
+- Wikipedia: [Nth Root](https://en.wikipedia.org/wiki/Nth_root)
