@@ -44,10 +44,13 @@ export function parseCsv(input: string, opts: ParseOptions = {}): ParsedDataset 
     transformHeader: (h) => h.trim(),
   });
 
-  if (result.errors.length > 0) {
-    // We continue with best-effort parsing; surface only fatal errors.
-    const fatal = result.errors.find((e) => e.type === "Delimiter");
-    if (fatal) throw new Error(`CSV parse error: ${fatal.message}`);
+  // PapaParse emits non-fatal warnings (notably code: "UndetectableDelimiter"
+  // when auto-detection falls back to ","). It still produces valid rows in
+  // that case — only throw if no rows came out, otherwise treat warnings as
+  // best-effort and proceed.
+  if (result.errors.length > 0 && (!result.data || result.data.length === 0)) {
+    const first = result.errors[0]!;
+    throw new Error(`CSV parse error: ${first.message}`);
   }
 
   let rows: Array<Record<string, string>>;
