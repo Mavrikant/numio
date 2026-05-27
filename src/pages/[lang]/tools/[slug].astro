@@ -15,6 +15,7 @@ import ScatterTool from "@/tools/scatter-plot/Tool";
 import TimeSeriesTool from "@/tools/time-series/Tool";
 import StatsTool from "@/tools/stats-dashboard/Tool";
 import PasswordGeneratorTool from "@/tools/password-generator/Tool";
+import ChartBuilderTool from "@/tools/chart-builder/Tool";
 
 export async function getStaticPaths() {
   const tools = getAllTools();
@@ -123,6 +124,7 @@ const Content = mdxModule
         {tool.slug === "time-series" && <TimeSeriesTool client:only="react" locale={locale} />}
         {tool.slug === "stats-dashboard" && <StatsTool client:only="react" locale={locale} />}
         {tool.slug === "password-generator" && <PasswordGeneratorTool client:only="react" locale={locale} />}
+        {tool.slug === "chart-builder" && <ChartBuilderTool client:only="react" locale={locale} />}
       </div>
 
       {Content && (
