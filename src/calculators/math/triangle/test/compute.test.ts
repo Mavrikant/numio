@@ -50,7 +50,7 @@ describe("Triangle Calculator — compute", () => {
 
     expect(result.sideA).toBeCloseTo(5, 4);
     expect(result.sideB).toBeCloseTo(7, 4);
-    expect(result.sideC).toBeCloseTo(6.086, 2); // law of cosines
+    expect(result.sideC).toBeCloseTo(6.245, 2); // law of cosines: sqrt(5² + 7² − 2·5·7·cos(60°)) = sqrt(39)
     expect(result.angleC).toBeCloseTo(60, 1);
     expect(result.area).toBeCloseTo(15.155, 2); // (5 * 7 * sin(60)) / 2
   });

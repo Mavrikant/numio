@@ -58,27 +58,31 @@ describe("Numeral System Converter - compute", () => {
 
   describe("Binary input", () => {
     it("should convert binary 11111111 to decimal 255", () => {
-      const result = compute({ value: 255, sourceBase: "binary" });
-      // 11111111 in binary = 255 decimal
+      // Input is the digit pattern as a number: 11111111 stringified is
+      // "11111111" which is a valid binary representation of 255.
+      const result = compute({ value: 11111111, sourceBase: "binary" });
       expect(parseFloat(result.decimal)).toBe(255);
     });
 
     it("should convert binary 1010 to decimal 10", () => {
-      const result = compute({ value: 10, sourceBase: "binary" });
-      // 1010 in binary (input as decimal 10) = 10 decimal
+      // 1010 stringified is "1010" → binary 1010 = decimal 10
+      const result = compute({ value: 1010, sourceBase: "binary" });
       expect(parseFloat(result.decimal)).toBe(10);
     });
   });
 
   describe("Hexadecimal input", () => {
-    it("should convert hexadecimal FF to decimal 255", () => {
-      const result = compute({ value: 255, sourceBase: "hexadecimal" });
-      expect(parseFloat(result.decimal)).toBe(255);
+    it("should convert hexadecimal 100 to decimal 256", () => {
+      // The API accepts numeric input, so all-digit hex strings only.
+      // 100 stringified = "100" → hex 0x100 = 256 decimal.
+      const result = compute({ value: 100, sourceBase: "hexadecimal" });
+      expect(parseFloat(result.decimal)).toBe(256);
     });
 
-    it("should convert hexadecimal A to decimal 10", () => {
+    it("should convert hexadecimal 10 to decimal 16", () => {
+      // 10 stringified = "10" → hex 0x10 = 16 decimal
       const result = compute({ value: 10, sourceBase: "hexadecimal" });
-      expect(parseFloat(result.decimal)).toBe(10);
+      expect(parseFloat(result.decimal)).toBe(16);
     });
   });
 

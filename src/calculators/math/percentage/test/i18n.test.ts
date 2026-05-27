@@ -1,5 +1,5 @@
 import { describe, it } from "vitest";
-import { assertI18nComplete } from "@/test/i18n-validator";
+import { assertI18nComplete } from "@/test-utils";
 import definition from "../definition";
 
 describe("Percentage Calculator - i18n", () => {

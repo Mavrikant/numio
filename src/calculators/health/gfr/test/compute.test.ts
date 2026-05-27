@@ -48,14 +48,17 @@ describe("GFR compute", () => {
   });
 
   it("handles severe kidney disease (stage 4)", () => {
-    // High creatinine indicates poor kidney function
+    // Stage 4 = eGFR 15–29. With the correct two-slope CKD-EPI 2021
+    // formula, creatinine 250 µmol/L for a 70yo male yields eGFR ≈ 23
+    // (the previous 400 µmol/L input now lands in stage 5).
     const result = compute({
-      creatinineUmolL: 400,
+      creatinineUmolL: 250,
       ageYears: 70,
       sex: "male",
       race: "other",
     });
     expect(result.eGfr).toBeLessThan(30);
+    expect(result.eGfr).toBeGreaterThanOrEqual(15);
     expect(result.stage).toBe("stage4");
   });
 

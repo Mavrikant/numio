@@ -1,5 +1,5 @@
 import { describe, it } from "vitest";
-import { assertI18nComplete } from "@/test/i18n-utils";
+import { assertI18nComplete } from "@/test-utils";
 import definition from "../definition";
 
 describe("Triangle Calculator — i18n", () => {

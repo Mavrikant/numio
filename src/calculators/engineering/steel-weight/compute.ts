@@ -1,22 +1,67 @@
 import { z } from "zod";
 import { MATERIAL_DENSITIES, STEEL_REBAR_TABLE, STEEL_PIPE_TABLE } from "../_helpers/structures";
 
-export const inputSchema = z.object({
-  type: z.enum(["bar", "rebar", "pipe", "plate"]),
-  material: z.enum(["steel", "aluminum", "copper"]),
-  // Rebar: diameter
-  rebarDiameter: z.number().positive().optional(),
-  // Pipe: outer diameter, wall thickness (or select from table)
-  pipeOuterDia: z.number().positive().optional(),
-  pipeWallThickness: z.number().positive().optional(),
-  // Plate: width, height
-  plateWidth: z.number().positive().optional(),
-  plateHeight: z.number().positive().optional(),
-  plateThickness: z.number().positive().optional(),
-  // Common to all
-  lengthM: z.number().positive(),
-  quantity: z.number().int().positive().default(1),
-});
+export const inputSchema = z
+  .object({
+    type: z.enum(["bar", "rebar", "pipe", "plate"]),
+    material: z.enum(["steel", "aluminum", "copper"]),
+    // Rebar: diameter
+    rebarDiameter: z.number().positive().optional(),
+    // Pipe: outer diameter, wall thickness (or select from table)
+    pipeOuterDia: z.number().positive().optional(),
+    pipeWallThickness: z.number().positive().optional(),
+    // Plate: width, height
+    plateWidth: z.number().positive().optional(),
+    plateHeight: z.number().positive().optional(),
+    plateThickness: z.number().positive().optional(),
+    // Common to all
+    lengthM: z.number().positive(),
+    quantity: z.number().int().positive().default(1),
+  })
+  .superRefine((data, ctx) => {
+    // Type-specific required fields. Without these refinements the schema
+    // would accept e.g. `{type:"rebar", lengthM:6}` with no diameter and
+    // compute() would dereference a nullish field, returning NaN.
+    if ((data.type === "rebar" || data.type === "bar") && data.rebarDiameter == null) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ["rebarDiameter"],
+        message: "Required for rebar/bar",
+      });
+    }
+    if (data.type === "pipe") {
+      if (data.pipeOuterDia == null) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          path: ["pipeOuterDia"],
+          message: "Required for pipe",
+        });
+      }
+      if (data.pipeWallThickness == null) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          path: ["pipeWallThickness"],
+          message: "Required for pipe",
+        });
+      }
+    }
+    if (data.type === "plate") {
+      if (data.plateWidth == null) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          path: ["plateWidth"],
+          message: "Required for plate",
+        });
+      }
+      if (data.plateThickness == null) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          path: ["plateThickness"],
+          message: "Required for plate",
+        });
+      }
+    }
+  });
 
 export type SteelWeightInputs = z.infer<typeof inputSchema>;
 

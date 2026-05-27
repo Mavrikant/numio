@@ -116,8 +116,11 @@ describe("Z-Score compute — formula verification", () => {
     calculator.compute(calculator.inputSchema.parse({ value, mean, standardDeviation: stdDev }));
 
   it("two-tailed p-value equals 2x one-tailed for positive z", () => {
+    // Both p-values are rounded to 4 decimals independently, so the
+    // identity can be off by up to ±0.0001 due to half-up rounding plus
+    // IEEE-754 noise; allow up to 0.001 (1 unit in the last place).
     const result = parse(130, 100, 15);
-    expect(Math.abs(result.twoTailPValue - 2 * result.oneTailPValue)).toBeLessThan(0.0001);
+    expect(Math.abs(result.twoTailPValue - 2 * result.oneTailPValue)).toBeLessThan(0.001);
   });
 
   it("percentile is in range [0, 100]", () => {

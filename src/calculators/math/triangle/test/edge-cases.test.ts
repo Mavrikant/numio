@@ -1,5 +1,7 @@
 import { describe, it, expect } from "vitest";
-import { inputSchema } from "../compute";
+import definition from "../definition";
+
+const { inputSchema } = definition;
 
 describe("Triangle Calculator — edge cases", () => {
   it("rejects triangle inequality violation (SSS)", () => {

@@ -130,16 +130,19 @@ export function normalCDF(z: number): number {
   const a5 = 1.061405429;
   const p = 0.3275911;
 
-  // Compute error function
+  // For the standard normal CDF, Φ(z) = 0.5·(1 + erf(z/√2)), so the
+  // Abramowitz-Stegun erf approximation must be evaluated at x = |z|/√2,
+  // not |z| directly. The earlier implementation fed |z| straight in,
+  // which silently computed erf(z) and threw every CDF off by ~0.02
+  // (e.g. Φ(2) ≈ 0.998 instead of 0.977).
   const sign = z >= 0 ? 1 : -1;
-  const absZ = Math.abs(z);
-  const t = 1.0 / (1.0 + p * absZ);
+  const x = Math.abs(z) / Math.SQRT2;
+  const t = 1.0 / (1.0 + p * x);
   const t2 = t * t;
   const t3 = t2 * t;
   const t4 = t3 * t;
   const t5 = t4 * t;
-
-  const erf = 1.0 - (a1 * t + a2 * t2 + a3 * t3 + a4 * t4 + a5 * t5) * Math.exp(-(absZ * absZ));
+  const erf = 1.0 - (a1 * t + a2 * t2 + a3 * t3 + a4 * t4 + a5 * t5) * Math.exp(-(x * x));
 
   // Convert error function to CDF
   return 0.5 * (1.0 + sign * erf);
@@ -168,12 +171,14 @@ export function quartiles(values: readonly number[]): { q1: number; q2: number; 
   // Calculate median (Q2)
   const q2 = len % 2 === 0 ? (sorted[len / 2 - 1] + sorted[len / 2]) / 2 : sorted[Math.floor(len / 2)];
 
-  // Calculate Q1 (median of lower half)
-  const lowerHalf = sorted.slice(0, Math.floor(len / 2));
+  // Calculate Q1 (median of lower half) — Tukey's inclusive method:
+  // for odd-length datasets the median is included in BOTH halves so that
+  // [1,2,3,4,5] yields Q1=2 (median of [1,2,3]) and Q3=4 (median of [3,4,5]).
+  const lowerHalf = sorted.slice(0, Math.ceil(len / 2));
   const q1 = lowerHalf.length % 2 === 0 ? (lowerHalf[lowerHalf.length / 2 - 1] + lowerHalf[lowerHalf.length / 2]) / 2 : lowerHalf[Math.floor(lowerHalf.length / 2)];
 
   // Calculate Q3 (median of upper half)
-  const upperHalf = sorted.slice(Math.ceil(len / 2));
+  const upperHalf = sorted.slice(Math.floor(len / 2));
   const q3 = upperHalf.length % 2 === 0 ? (upperHalf[upperHalf.length / 2 - 1] + upperHalf[upperHalf.length / 2]) / 2 : upperHalf[Math.floor(upperHalf.length / 2)];
 
   return { q1, q2, q3 };

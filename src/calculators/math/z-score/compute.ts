@@ -4,7 +4,7 @@ import { zScore, normalCDF, percentileFromZ } from "../_helpers/statistics";
 export const inputSchema = z.object({
   value: z.number(),
   mean: z.number(),
-  standardDeviation: z.number().min(0),
+  standardDeviation: z.number().positive(),
 });
 
 export type ZScoreInputs = z.infer<typeof inputSchema>;

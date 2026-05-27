@@ -41,11 +41,6 @@ export default defineCalculator({
       precision: 4,
       highlight: true,
     },
-    {
-      id: "absoluteDifference",
-      format: "number",
-      precision: 4,
-    },
   ],
   inputSchema,
   compute,

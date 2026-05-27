@@ -1,114 +1,184 @@
 import { z } from "zod";
 
-export const AWG_VALUES = ["22", "20", "18", "16", "14", "12", "10", "8", "6", "4", "2", "1", "1/0", "2/0", "3/0", "4/0"] as const;
-export type AwgValue = typeof AWG_VALUES[number];
+/**
+ * Wire Gauge Calculator
+ *
+ * Computes wire resistance, voltage drop, power loss, and NEC ampacity
+ * for an AWG- or mm²-sized conductor of either copper or aluminum, on
+ * DC or AC (50/60 Hz) circuits.
+ *
+ * Resistivity at 20 °C (Ω·m):
+ *   ρ_Cu = 1.724e-8
+ *   ρ_Al = 2.82e-8
+ *
+ * AC adjustment (small at power frequencies, conservative):
+ *   DC      → 1.00
+ *   AC 50Hz → 1.02
+ *   AC 60Hz → 1.03
+ *
+ * AWG ↔ mm²:
+ *   d_mm = 0.127 × 92^((36 − AWG) / 39)
+ *   A_mm² = π × (d_mm / 2)²
+ *   AWG(A) ≈ 36 − 39 × log_92(d_mm / 0.127)
+ */
 
-// NEC 310.15(B)(16) — 60°C column, copper, single conductor in free air
-const AMPACITY_TABLE: Record<AwgValue, number> = {
-  "22": 3,
-  "20": 5,
-  "18": 7,
-  "16": 13,
-  "14": 15,
-  "12": 20,
-  "10": 30,
-  "8": 40,
-  "6": 55,
-  "4": 70,
-  "2": 95,
-  "1": 110,
-  "1/0": 125,
-  "2/0": 145,
-  "3/0": 165,
-  "4/0": 195,
+export const SIZE_UNITS = ["mm2", "awg"] as const;
+export type SizeUnit = (typeof SIZE_UNITS)[number];
+
+export const MATERIALS = ["copper", "aluminum"] as const;
+export type Material = (typeof MATERIALS)[number];
+
+export const FREQUENCIES = ["dc", "ac50", "ac60"] as const;
+export type Frequency = (typeof FREQUENCIES)[number];
+
+export const RHO: Record<Material, number> = {
+  copper: 1.724e-8, // Ω·m at 20 °C
+  aluminum: 2.82e-8, // Ω·m at 20 °C
 };
 
-// AWG numeric value for diameter formula
-// AWG 1/0=0, 2/0=-1, 3/0=-2, 4/0=-3 in standard notation; but formula uses AWG numeric
-// diameter_mm = 0.127 × 92^((36-AWG)/39)
-// For 1/0 (AWG=0), 2/0 (AWG=-1), 3/0 (AWG=-2), 4/0 (AWG=-3)
-const AWG_NUMERIC: Record<AwgValue, number> = {
-  "22": 22,
-  "20": 20,
-  "18": 18,
-  "16": 16,
-  "14": 14,
-  "12": 12,
-  "10": 10,
-  "8": 8,
-  "6": 6,
-  "4": 4,
-  "2": 2,
-  "1": 1,
-  "1/0": 0,
-  "2/0": -1,
-  "3/0": -2,
-  "4/0": -3,
+export const AC_FACTOR: Record<Frequency, number> = {
+  dc: 1.0,
+  ac50: 1.02,
+  ac60: 1.03,
 };
+
+/**
+ * NEC 310.16 ampacity (60 °C copper column, single conductor in raceway).
+ * Aluminum is derated to ~78 % of copper (typical NEC ratio).
+ * Indexed by nominal mm² size; nearest-rung lookup at runtime.
+ */
+const AMPACITY_TABLE_MM2_COPPER: ReadonlyArray<readonly [number, number]> = [
+  [0.5, 7],
+  [0.75, 10],
+  [1.0, 13],
+  [1.5, 15],
+  [2.5, 20],
+  [4, 25],
+  [6, 32],
+  [10, 50],
+  [16, 65],
+  [25, 85],
+  [35, 100],
+  [50, 125],
+  [70, 160],
+  [95, 200],
+  [120, 250],
+  [150, 285],
+  [185, 325],
+  [240, 380],
+  [300, 430],
+  [400, 510],
+  [500, 600],
+  [630, 690],
+  [800, 780],
+  [1000, 880],
+];
+
+const ALUMINUM_DERATE = 0.78;
 
 export const inputSchema = z.object({
-  awg: z.enum(AWG_VALUES),
-  current: z.number().min(0).max(400),
-  lengthM: z.number().min(0.1).max(1000),
-  loadCurrent: z.number().min(0).max(400).optional(),
+  sizeUnit: z.enum(SIZE_UNITS),
+  wireSize: z.number().positive(),
+  wireLength: z.number().positive(),
+  current: z.number().positive(),
+  material: z.enum(MATERIALS),
+  frequency: z.enum(FREQUENCIES),
 });
 
 export type WireGaugeInputs = z.infer<typeof inputSchema>;
 
 export interface WireGaugeResult extends Record<string, unknown> {
-  readonly diameterMm: number;
-  readonly areaMm2: number;
-  readonly resistancePerMeterOhm: number;
-  readonly ampacity: number;
+  readonly crossSectionArea: number;
+  readonly awgEquivalent: number;
+  readonly resistance: number;
   readonly voltageDrop: number;
-  readonly voltageDropPct: number;
-  readonly isSuitable: boolean;
+  readonly powerLoss: number;
+  readonly ampacityRating: number;
 }
 
-const RHO_COPPER = 1.724e-8; // Ω·m at 20°C
+/** AWG number → diameter in millimetres. AWG may be fractional or negative (1/0 = 0, 2/0 = -1 ...). */
+export function awgToDiameterMm(awg: number): number {
+  return 0.127 * Math.pow(92, (36 - awg) / 39);
+}
+
+/** AWG → cross-section area in mm². */
+export function awgToAreaMm2(awg: number): number {
+  const d = awgToDiameterMm(awg);
+  return Math.PI * (d / 2) ** 2;
+}
+
+/** mm² → equivalent AWG number (inverse of the diameter formula). */
+export function areaMm2ToAwg(areaMm2: number): number {
+  const dMm = 2 * Math.sqrt(areaMm2 / Math.PI);
+  // d = 0.127 × 92^((36 − AWG)/39)  →  AWG = 36 − 39 × log_92(d / 0.127)
+  return 36 - 39 * (Math.log(dMm / 0.127) / Math.log(92));
+}
+
+/** Interpolate-by-nearest copper ampacity (NEC 60 °C column) for an arbitrary area. */
+export function ampacityForAreaMm2(areaMm2: number, material: Material): number {
+  // Below the smallest table rung — scale linearly off the first entry.
+  const [firstA, firstAmps] = AMPACITY_TABLE_MM2_COPPER[0]!;
+  if (areaMm2 <= firstA) {
+    const cu = firstAmps * (areaMm2 / firstA);
+    return material === "aluminum" ? cu * ALUMINUM_DERATE : cu;
+  }
+  // Above the largest table rung — extrapolate linearly off the last two entries.
+  const last = AMPACITY_TABLE_MM2_COPPER[AMPACITY_TABLE_MM2_COPPER.length - 1]!;
+  if (areaMm2 >= last[0]) {
+    const prev = AMPACITY_TABLE_MM2_COPPER[AMPACITY_TABLE_MM2_COPPER.length - 2]!;
+    const slope = (last[1] - prev[1]) / (last[0] - prev[0]);
+    const cu = last[1] + slope * (areaMm2 - last[0]);
+    return material === "aluminum" ? cu * ALUMINUM_DERATE : cu;
+  }
+  // Linearly interpolate between the bracketing rungs.
+  for (let i = 1; i < AMPACITY_TABLE_MM2_COPPER.length; i++) {
+    const [a1, amps1] = AMPACITY_TABLE_MM2_COPPER[i - 1]!;
+    const [a2, amps2] = AMPACITY_TABLE_MM2_COPPER[i]!;
+    if (areaMm2 >= a1 && areaMm2 <= a2) {
+      const t = (areaMm2 - a1) / (a2 - a1);
+      const cu = amps1 + t * (amps2 - amps1);
+      return material === "aluminum" ? cu * ALUMINUM_DERATE : cu;
+    }
+  }
+  // Unreachable but keeps the compiler happy.
+  return material === "aluminum" ? firstAmps * ALUMINUM_DERATE : firstAmps;
+}
 
 export function compute(inputs: WireGaugeInputs): WireGaugeResult {
-  const { awg, current, lengthM, loadCurrent } = inputs;
-  const effectiveCurrent = loadCurrent !== undefined ? loadCurrent : current;
+  const { sizeUnit, wireSize, wireLength, current, material, frequency } = inputs;
 
-  const awgNum = AWG_NUMERIC[awg];
+  // 1. Resolve cross-section area (mm²) and AWG equivalent.
+  let crossSectionArea: number;
+  let awgEquivalent: number;
+  if (sizeUnit === "awg") {
+    crossSectionArea = awgToAreaMm2(wireSize);
+    awgEquivalent = wireSize;
+  } else {
+    crossSectionArea = wireSize;
+    awgEquivalent = areaMm2ToAwg(wireSize);
+  }
 
-  // AWG diameter formula: diameter_mm = 0.127 × 92^((36-AWG)/39)
-  const diameterMm = 0.127 * Math.pow(92, (36 - awgNum) / 39);
-  const diameterM = diameterMm / 1000;
-  const radiusM = diameterM / 2;
+  // 2. Round-trip resistance: R = 2 × L × ρ / A. (L in m, ρ in Ω·m, A in m².)
+  //    The factor of two accounts for both conductors in a real circuit
+  //    (supply + return), matching the conventional "voltage drop" formula
+  //    used in NEC tables and electrician handbooks.
+  const areaM2 = crossSectionArea * 1e-6;
+  const rDc = (2 * wireLength * RHO[material]) / areaM2;
+  const resistance = rDc * AC_FACTOR[frequency];
 
-  // Cross-sectional area in m²
-  const areaM2 = Math.PI * radiusM * radiusM;
-  const areaMm2 = areaM2 * 1e6;
+  // 3. Derived electrical losses.
+  const voltageDrop = current * resistance;
+  const powerLoss = current * current * resistance;
 
-  // Resistance per meter: R/m = ρ / A
-  const resistancePerMeterOhm = RHO_COPPER / areaM2;
-
-  // Ampacity from NEC table
-  const ampacity = AMPACITY_TABLE[awg];
-
-  // Voltage drop: V_drop = I × R_per_m × 2 × length (round trip)
-  const voltageDrop = effectiveCurrent * resistancePerMeterOhm * 2 * lengthM;
-
-  // Voltage drop percentage relative to nominal voltage (we use current as proxy for % calc)
-  // Standard practice: voltage drop % = V_drop / V_nominal × 100
-  // Without explicit voltage, we report as fraction of 120V (NEC standard assumption)
-  // Actually we compute the raw values and leave % relative to a 120V system
-  // Better: output V_drop and let user interpret; voltageDropPct is drop/120V × 100
-  const nominalVoltage = 120; // Standard NEC reference voltage
-  const voltageDropPct = (voltageDrop / nominalVoltage) * 100;
-
-  // Suitability check: loadCurrent <= ampacity AND voltageDropPct <= 3
-  const isSuitable = effectiveCurrent <= ampacity && voltageDropPct <= 3;
+  // 4. NEC ampacity (interpolated, with aluminum derate applied inside the helper).
+  const ampacityRating = ampacityForAreaMm2(crossSectionArea, material);
 
   return {
-    diameterMm,
-    areaMm2,
-    resistancePerMeterOhm,
-    ampacity,
+    crossSectionArea,
+    awgEquivalent,
+    resistance,
     voltageDrop,
-    voltageDropPct,
-    isSuitable,
+    powerLoss,
+    ampacityRating,
   };
 }
