@@ -81,8 +81,17 @@ export function InputField({ input, value, bundle, onChange }: InputFieldProps) 
             className={baseInputClass}
           >
             {selectType.options.map((opt) => {
+              // Lookup priority: nested (per-input) → flat (shared) → raw.
+              const opts = bundle.options;
+              const nested = opts?.[input.id];
               const optLabel =
-                bundle.options?.[input.id]?.[opt.value] ?? opt.value;
+                (typeof nested === "object" && nested !== null
+                  ? (nested as Record<string, string>)[opt.value]
+                  : undefined) ??
+                (typeof opts?.[opt.value] === "string"
+                  ? (opts[opt.value] as string)
+                  : undefined) ??
+                opt.value;
               return (
                 <option key={opt.value} value={opt.value}>
                   {optLabel}

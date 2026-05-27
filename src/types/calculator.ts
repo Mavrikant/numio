@@ -1,5 +1,10 @@
-import type { z, ZodTypeAny } from "zod";
+import type { z, ZodType } from "zod";
 import type { CalculatorI18n, Locale } from "./i18n";
+
+// In Zod 4 the `ZodTypeAny` shorthand is deprecated; ZodType<...> is the
+// canonical wide constraint. We narrow it to schemas whose output is an
+// object so calc inputs always look like Record<string, unknown>.
+type ZodObjectSchema = ZodType<Record<string, unknown>>;
 
 export type CalculatorCategory =
   | "health"
@@ -177,8 +182,15 @@ export interface CalculatorDefinition<
 
 export type AnyCalculatorDefinition = CalculatorDefinition<Record<string, unknown>, Record<string, unknown>>;
 
+// Helper alias: the schema-output type, narrowed so we can safely place it
+// into the `Record<string, unknown>` slot in `CalculatorDefinition`. In Zod
+// 4 `z.infer<TSchema>` resolves to `output<TSchema>` which the compiler
+// considers `unknown` without an explicit intersection.
+type SchemaOut<TSchema extends ZodObjectSchema> = z.infer<TSchema> &
+  Record<string, unknown>;
+
 export function defineCalculator<
-  TSchema extends ZodTypeAny,
+  TSchema extends ZodObjectSchema,
   TResult extends Record<string, unknown>,
 >(definition: {
   slug: string;
@@ -188,12 +200,12 @@ export function defineCalculator<
   inputs: ReadonlyArray<InputDef>;
   outputs: ReadonlyArray<OutputDef>;
   inputSchema: TSchema;
-  compute: (inputs: z.infer<TSchema>) => TResult;
-  visualizations?: ReadonlyArray<VisualizationDef<TResult, z.infer<TSchema>>>;
+  compute: (inputs: SchemaOut<TSchema>) => TResult;
+  visualizations?: ReadonlyArray<VisualizationDef<TResult, SchemaOut<TSchema>>>;
   i18n: CalculatorI18n;
   meta: CalculatorMeta;
   related?: ReadonlyArray<string>;
   tags?: ReadonlyArray<string>;
-}): CalculatorDefinition<z.infer<TSchema>, TResult> {
-  return definition as CalculatorDefinition<z.infer<TSchema>, TResult>;
+}): CalculatorDefinition<SchemaOut<TSchema>, TResult> {
+  return definition as CalculatorDefinition<SchemaOut<TSchema>, TResult>;
 }

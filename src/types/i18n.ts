@@ -33,7 +33,24 @@ export interface CalculatorI18nBundle {
   readonly keywords: readonly string[];
   readonly inputs: Readonly<Record<string, InputLabels>>;
   readonly outputs: Readonly<Record<string, OutputLabels>>;
-  readonly options?: Readonly<Record<string, Readonly<Record<string, string>>>>;
+  /**
+   * Translation map for select-input option labels.
+   *
+   * Two shapes are accepted to fit two authoring styles that grew up in
+   * this codebase:
+   *   1. Flat:    `{ binary: "Binary", decimal: "Decimal" }` — shared
+   *      label per option value (used by all conversion calcs whose
+   *      fromUnit and toUnit share the same option set).
+   *   2. Nested:  `{ unit: { metric: "Metric", imperial: "Imperial" } }`
+   *      — useful when two inputs use the same option value with
+   *      different meanings.
+   *
+   * InputField.tsx tries the nested lookup first, falls back to flat,
+   * then defaults to the raw `opt.value`.
+   */
+  readonly options?: Readonly<
+    Record<string, string | Readonly<Record<string, string>>>
+  >;
   readonly errors?: Readonly<Record<string, string>>;
   readonly faq?: ReadonlyArray<{ q: string; a: string }>;
 }
