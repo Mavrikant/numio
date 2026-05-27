@@ -1,4 +1,9 @@
 {
+  "one-rep-max": "1rm",
+  "body-surface-area": "superficie-corporea",
+  "waist-to-height-ratio": "rapporto-vita-altezza",
+  "protein-intake": "apporto-proteico",
+  "a1c-glucose-converter": "convertitore-a1c-glicemia",
   "week-number": "numero-settimana",
   "day-of-year": "giorno-anno",
   "add-business-days": "aggiungi-giorni-lavorativi",

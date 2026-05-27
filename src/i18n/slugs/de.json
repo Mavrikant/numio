@@ -1,4 +1,9 @@
 {
+  "one-rep-max": "one-rep-max",
+  "body-surface-area": "koerperoberflaeche",
+  "waist-to-height-ratio": "taille-groesse-verhaeltnis",
+  "protein-intake": "proteinbedarf",
+  "a1c-glucose-converter": "a1c-glukose-umrechner",
   "week-number": "kalenderwoche",
   "day-of-year": "tag-des-jahres",
   "add-business-days": "arbeitstage-addieren",
