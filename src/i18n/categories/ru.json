@@ -3,5 +3,6 @@
   "finance": "Финансы",
   "engineering": "Инженерия",
   "math": "Математика",
-  "conversion": "Конвертация"
+  "conversion": "Конвертация",
+  "datetime": "Дата и Время"
 }

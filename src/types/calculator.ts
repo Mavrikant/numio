@@ -11,7 +11,8 @@ export type CalculatorCategory =
   | "finance"
   | "engineering"
   | "math"
-  | "conversion";
+  | "conversion"
+  | "datetime";
 
 export const CATEGORIES: readonly CalculatorCategory[] = [
   "health",
@@ -19,6 +20,7 @@ export const CATEGORIES: readonly CalculatorCategory[] = [
   "engineering",
   "math",
   "conversion",
+  "datetime",
 ];
 
 export type UnitKey =

@@ -3,5 +3,6 @@
   "finance": "المالية",
   "engineering": "الهندسة",
   "math": "الرياضيات",
-  "conversion": "التحويل"
+  "conversion": "التحويل",
+  "datetime": "التاريخ والوقت"
 }

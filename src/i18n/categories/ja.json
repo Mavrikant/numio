@@ -3,5 +3,6 @@
   "finance": "金融",
   "engineering": "工学",
   "math": "数学",
-  "conversion": "換算"
+  "conversion": "換算",
+  "datetime": "日付と時刻"
 }

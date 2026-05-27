@@ -3,5 +3,6 @@
   "finance": "金融",
   "engineering": "工程",
   "math": "数学",
-  "conversion": "换算"
+  "conversion": "换算",
+  "datetime": "日期和时间"
 }

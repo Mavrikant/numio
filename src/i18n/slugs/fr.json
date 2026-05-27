@@ -1,4 +1,9 @@
 {
+  "age": "age",
+  "date-difference": "difference-dates",
+  "date-add": "ajouter-date",
+  "time-duration": "duree",
+  "gpa": "moyenne-gpa",
   "simple-interest": "interets-simples",
   "circle": "cercle",
   "slope": "pente",
