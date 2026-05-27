@@ -1,0 +1,26 @@
+import type { ToolI18n } from "@/types/tool";
+import { COMMON_UI } from "../_shared/ui";
+
+const data = {
+  en: { title: "Remove Accents & Diacritics", short: "Convert accented text to plain ASCII letters.", description: "Free accent remover. Strip diacritics and accents from text (é→e, ü→u, ç→c) and map common special letters (ß→ss, ø→o) to plain ASCII. Great for slugs, filenames and search keys.", keywords: ["remove accents", "remove diacritics", "strip accents", "unaccent text", "ascii fold"], placeholder: "Enter accented text…" },
+  tr: { title: "Aksanları ve Diyakritikleri Kaldır", short: "Aksanlı metni düz ASCII harflerine dönüştürün.", description: "Ücretsiz aksan kaldırıcı. Metinden diyakritikleri ve aksanları kaldırın (é→e, ü→u, ç→c) ve yaygın özel harfleri (ß→ss, ø→o) düz ASCII'ye eşleyin. Slug'lar, dosya adları ve arama anahtarları için harika.", keywords: ["aksanları kaldır", "diyakritikleri kaldır", "aksan temizle", "aksansız metin", "ascii"], placeholder: "Aksanlı metin girin…" },
+  de: { title: "Akzente & Diakritika Entfernen", short: "Akzentuierten Text in einfache ASCII-Buchstaben umwandeln.", description: "Kostenloser Akzent-Entferner. Entfernen Sie Diakritika und Akzente (é→e, ü→u, ç→c) und ordnen Sie gängige Sonderbuchstaben (ß→ss, ø→o) ASCII zu. Ideal für Slugs, Dateinamen und Suchschlüssel.", keywords: ["akzente entfernen", "diakritika entfernen", "akzente entfernen", "ohne akzente", "ascii"], placeholder: "Akzentuierten Text eingeben…" },
+  fr: { title: "Supprimer les Accents et Diacritiques", short: "Convertissez le texte accentué en lettres ASCII simples.", description: "Suppresseur d'accents gratuit. Retirez les diacritiques et accents (é→e, ü→u, ç→c) et convertissez les lettres spéciales courantes (ß→ss, ø→o) en ASCII. Idéal pour slugs, noms de fichiers et clés de recherche.", keywords: ["supprimer accents", "supprimer diacritiques", "retirer accents", "sans accents", "ascii"], placeholder: "Saisissez du texte accentué…" },
+  es: { title: "Eliminar Acentos y Diacríticos", short: "Convierte texto acentuado en letras ASCII simples.", description: "Eliminador de acentos gratuito. Quita diacríticos y acentos (é→e, ü→u, ç→c) y convierte letras especiales comunes (ß→ss, ø→o) a ASCII. Ideal para slugs, nombres de archivo y claves de búsqueda.", keywords: ["eliminar acentos", "quitar diacríticos", "quitar acentos", "sin acentos", "ascii"], placeholder: "Introduce texto acentuado…" },
+  it: { title: "Rimuovi Accenti e Diacritici", short: "Converti il testo accentato in semplici lettere ASCII.", description: "Rimuovi-accenti gratuito. Elimina diacritici e accenti (é→e, ü→u, ç→c) e converti lettere speciali comuni (ß→ss, ø→o) in ASCII. Ottimo per slug, nomi file e chiavi di ricerca.", keywords: ["rimuovi accenti", "rimuovi diacritici", "togliere accenti", "senza accenti", "ascii"], placeholder: "Inserisci testo accentato…" },
+  ar: { title: "إزالة التشكيل وعلامات النطق", short: "حوّل النص المُشكّل إلى أحرف ASCII بسيطة.", description: "أداة إزالة التشكيل مجانية. أزِل العلامات والتشكيل من النص (é→e، ü→u، ç→c) وحوّل الأحرف الخاصة الشائعة (ß→ss، ø→o) إلى ASCII. رائعة للـ slugs وأسماء الملفات ومفاتيح البحث.", keywords: ["إزالة التشكيل", "إزالة علامات النطق", "بدون تشكيل", "ascii"], placeholder: "أدخل نصًا مُشكّلاً…" },
+  ru: { title: "Удаление Акцентов и Диакритики", short: "Преобразуйте текст с акцентами в простые буквы ASCII.", description: "Бесплатное удаление акцентов. Уберите диакритику и акценты (é→e, ü→u, ç→c) и сопоставьте распространённые специальные буквы (ß→ss, ø→o) с ASCII. Отлично для слагов, имён файлов и ключей поиска.", keywords: ["удалить акценты", "удалить диакритику", "убрать акценты", "без акцентов", "ascii"], placeholder: "Введите текст с акцентами…" },
+  zh: { title: "去除重音符号", short: "将带重音符号的文本转换为纯 ASCII 字母。", description: "免费的重音去除器。从文本中去除变音符号和重音（é→e、ü→u、ç→c），并将常见特殊字母（ß→ss、ø→o）映射为 ASCII。适合 slug、文件名和搜索键。", keywords: ["去除重音", "去除变音符号", "去掉重音", "无重音", "ascii"], placeholder: "输入带重音的文本…" },
+  ja: { title: "アクセント記号の除去", short: "アクセント付きテキストを単純な ASCII 文字に変換します。", description: "無料のアクセント除去ツール。テキストからダイアクリティカルマークやアクセントを除去し（é→e、ü→u、ç→c）、一般的な特殊文字（ß→ss、ø→o）を ASCII に変換します。スラッグ、ファイル名、検索キーに最適。", keywords: ["アクセント除去", "ダイアクリティカル 除去", "アクセントなし", "ascii"], placeholder: "アクセント付きテキストを入力…" },
+  ko: { title: "악센트/분음 부호 제거", short: "악센트가 있는 텍스트를 단순 ASCII 문자로 변환합니다.", description: "무료 악센트 제거기. 텍스트에서 분음 부호와 악센트를 제거하고(é→e, ü→u, ç→c) 일반적인 특수 문자(ß→ss, ø→o)를 ASCII로 매핑합니다. 슬러그, 파일명, 검색 키에 적합합니다.", keywords: ["악센트 제거", "분음 부호 제거", "악센트 없이", "ascii"], placeholder: "악센트가 있는 텍스트 입력…" },
+  hi: { title: "एक्सेंट और डायक्रिटिक्स हटाएं", short: "एक्सेंट वाले टेक्स्ट को सादे ASCII अक्षरों में बदलें।", description: "मुफ्त एक्सेंट रिमूवर। टेक्स्ट से डायक्रिटिक्स और एक्सेंट हटाएं (é→e, ü→u, ç→c) और सामान्य विशेष अक्षरों (ß→ss, ø→o) को ASCII में मैप करें। स्लग, फ़ाइल नाम और खोज कुंजियों के लिए बढ़िया।", keywords: ["एक्सेंट हटाएं", "डायक्रिटिक्स हटाएं", "एक्सेंट रहित", "ascii"], placeholder: "एक्सेंट वाला टेक्स्ट दर्ज करें…" },
+};
+
+const i18n = Object.fromEntries(
+  (Object.keys(data) as Array<keyof typeof data>).map((loc) => {
+    const { title, short, description, keywords, ...rest } = data[loc];
+    return [loc, { title, short, description, keywords, ui: { ...COMMON_UI[loc], ...rest } }];
+  }),
+) as unknown as ToolI18n;
+
+export default i18n;
