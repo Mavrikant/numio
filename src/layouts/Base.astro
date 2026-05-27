@@ -49,6 +49,7 @@ const desc = description ?? t(locale, "site.description");
     {canonical && <link rel="canonical" href={canonical} />}
     <title>{fullTitle}</title>
     <link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}favicon.svg`} />
+    <link rel="manifest" href="/calculators/manifest.webmanifest" />
 
     {/* Open Graph */}
     <meta property="og:title" content={fullTitle} />
@@ -110,5 +111,37 @@ const desc = description ?? t(locale, "site.description");
     {!noFooter && (
       <Footer locale={locale} />
     )}
+
+    {/* PWA: service worker registration */}
+    <script is:inline>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function () {
+          navigator.serviceWorker.register('/calculators/sw.js', { scope: '/calculators/' }).catch(function () {});
+        });
+      }
+
+      // Install prompt — stash the event and show a button if supported
+      var _deferredInstallPrompt = null;
+      window.addEventListener('beforeinstallprompt', function (e) {
+        e.preventDefault();
+        _deferredInstallPrompt = e;
+        var btn = document.getElementById('pwa-install-btn');
+        if (btn) btn.classList.remove('hidden');
+      });
+      window.addEventListener('appinstalled', function () {
+        var btn = document.getElementById('pwa-install-btn');
+        if (btn) btn.classList.add('hidden');
+        _deferredInstallPrompt = null;
+      });
+      window._triggerPwaInstall = function () {
+        if (!_deferredInstallPrompt) return;
+        _deferredInstallPrompt.prompt();
+        _deferredInstallPrompt.userChoice.then(function () {
+          _deferredInstallPrompt = null;
+          var btn = document.getElementById('pwa-install-btn');
+          if (btn) btn.classList.add('hidden');
+        });
+      };
+    </script>
   </body>
 </html>
