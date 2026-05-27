@@ -1,79 +1,116 @@
-# Tel Kalınlığı / Ampacity Hesaplayıcı (AWG)
+# Tel Kalınlığı Hesaplayıcısı
 
-## AWG ve Tel Ampacity'si Nedir?
+## Tel Kalınlığı Nedir?
 
-American Wire Gauge (AWG) sistemi, Amerika Birleşik Devletleri, Kanada ve diğer birçok ülkede kullanılan standart tel boyutlandırma sistemidir. AWG numaraları sezgiye aykırı bir kurala göre çalışır: AWG numarası ne kadar büyükse tel o kadar ince olur. AWG 22, düşük güçlü sinyal devreleri için ince bir teldir; AWG 4/0 ise yüzlerce amper taşıyabilen ağır hizmet kablosudur.
+Tel kalınlığı, bir elektrik iletkeninin fiziksel çapı veya kesit alanını ifade eder. İki ana sistem vardır: Amerikan Tel Kalınlığı (AWG) ve metrik milimetre kare (mm²). AWG numaraları tel kalınlığı arttıkça azalır — örneğin 24 AWG, 12 AWG'den çok daha incedir. Bu hesaplayıcı AWG ile mm² arasında dönüşüm yapar ve iletken malzemesi ve devre uzunluğuna göre direnç, gerilim düşmesi ve güvenli akım kapasitesi gibi önemli elektriksel özellikleri hesaplar.
 
-**Ampacity** — "amper kapasitesi" kavramı — bir iletkenin güvenli çalışma sıcaklığını aşmadan taşıyabileceği maksimum sürekli akımdır. Ampacity'nin aşılması izolasyonun aşırı ısınmasına, bozulmasına ve potansiyel yangına neden olabilir. Bu hesaplayıcıdaki ampacity değerleri, 60°C'de serbest havadaki bakır iletkenler için NEC Tablo 310.15(B)(16)'dan alınmıştır.
+AWG sistemi 1850'lerde ortaya çıkmış olup Kuzey Amerika'da standart olmaya devam etmektedir. Metrik eşdeğeri olan IEC 60228, dünya genelinde kullanılır ve bakır ile alüminyum iletken boyutlarını tanımlar.
 
-Yuvarlak bakır iletken için temel ilişkiler:
+## Tel Boyutu Neden Önemlidir?
 
-**Çap (mm):** d = 0.127 × 92^((36 − AWG) / 39)
+Uygun olmayan tel boyutu birçok ciddi soruna neden olur:
 
-**Kesit Alanı (mm²):** A = π × (d/2)²
+1. **Gerilim düşmesi**: Dirençli kayıplar yükte kullanılabilir gerilimi azaltır, cihaz performansını etkiler
+2. **Güç kaybı**: Dirençli ısıtma enerjinin ısı olarak israf edilmesine neden olur, verimliliği azaltır
+3. **Güvenlik**: Yetersiz tell'de aşırı akım, yalıtım arızası ve yangın riskine neden olur
+4. **Verimlilik**: Undersized dağıtım hatları uzun mesafelerde kilovat kaybeder (güneş sistemleri, uzak güç)
 
-**Metre başına DC direnci:** R/m = ρ / A, bakır için ρ = 1.724 × 10⁻⁸ Ω·m (20°C'de)
+Çoğu ülkedeki elektrik kodları maksimum gerilim düşmesi sınırlarını uygular (genellikle dal devreleri için %3, genel olarak %5). Bu hesaplayıcı, kodu uyum sağlayan ve güvenli bir şekilde çalışan tel boyutları seçmenize yardımcı olur.
 
-**Gerilim düşümü (gidiş-dönüş):** V_düşüm = I × (R/m) × 2 × L
+## Fizik Mantığı
 
-NEC'e göre şube devresinde %3'ten fazla gerilim düşümü aşırı kabul edilir. 120V sistem için bu 3.6V'a karşılık gelir.
+Tel direnci Ohm yasasını takip eder: **R = ρL/A**
+
+Nerede:
+- R = direnç (Ω)
+- ρ (rho) = malzemenin özdirenç değeri (Ω·mm²/m) — bakır ≈ 0,0172, alüminyum ≈ 0,0282
+- L = iletken uzunluğu (m)
+- A = kesit alanı (mm²)
+
+Gerilim düşmesi: **V = IR** (DC'de; AC empedans etkilerini içerir)
+
+Güç kaybı: **P = I²R** (baskın ısıtma mekanizması)
+
+Maksimum akım kapasitesi, tel tablolarından ampirik olarak belirlenir ve yalıtım türü, kurulum yöntemi ve çevre sıcaklığına bağlıdır. Bu hesaplayıcı IEC 60364'e göre muhafazakar değerler kullanır.
 
 ## Nasıl Kullanılır?
 
-1. **Tel Kalınlığı (AWG) Seçin**: 22 AWG (en ince) ile 4/0 AWG (en kalın) arasından seçin. Konut tesisatında 14 AWG ve 12 AWG en yaygındır.
-2. **Devre Akımı (A) Girin**: Devrenizin taşıması için tasarlandığı akım; gerilim düşümü hesabında kullanılır.
-3. **Tek Yön Uzunluğu (m) Girin**: Güç kaynağından yüke uzaklık. Gidiş-dönüş gerilim düşümü için otomatik olarak iki katı kullanılır.
-4. **Yük Akımı (A) Girin** *(isteğe bağlı)*: Gerçek yük akımınız farklıysa uygunluk kontrolü için girin.
-5. **Sonuçları Okuyun**: İletken çapı, kesit alanı, metre başına direnç, ampacity, gerilim düşümü ve uygunluk kararı.
+1. **Boyut birimini seçin**: AWG (Amerikan standardı) veya mm² (metrik) seçin. Hesaplayıcı otomatik olarak aralarında dönüşüm yapar.
+2. **Tel kalınlığını girin**: AWG ise 0–40 arasında seçin. mm² ise kesit alanını girin (örn. 2,5, 4, 6, 10 mm²).
+3. **Tek yön mesafesini girin**: Telin çalıştığı mesafeyi belirtin. Gidiş ve dönüş yolları olan devre için sadece gidiş mesafesini girin.
+4. **Akımı girin**: Tellerde akan sabit akım (amper cinsinden).
+5. **Malzeme seçin**: Bakır daha iyi iletken (düşük özdirenç) olup alüminyumdan daha pahalıdır. Alüminyum eşdeğer kapasite için daha kalın boyutlar gerektirir.
+6. **Frekansı seçin**: DC (doğru akım) veya AC (50/60 Hz). AC, deri etkisinden dolayı ~%5 ceza ekler — yüksek frekanslarda akım tel yüzeyine yapışır.
+7. **Sonuçları gözden geçirin**: Hesaplayıcı kesit alanı, eşdeğer kalınlık, direnç, gerilim düşmesi, güç kaybı ve maksimum güvenli amperajı çıkar.
 
 ## Örnekler
 
-### Örnek 1 — Evsel 20A Mutfak Devresi
+### Örnek 1: Ev devreleri (12 AWG, 15 A dal devreleri)
+Girdi:
+- Boyut: 12 AWG
+- Uzunluk: 25 m (kesiciden prizye)
+- Akım: 15 A
+- Malzeme: Bakır
+- Frekans: AC 60 Hz
 
-20A mutfak devresi (AWG 12), mutfağın karşı ucuna 15 metre uzanıyor.
+Sonuç:
+- Direnç: ~0,207 Ω
+- Gerilim düşmesi: ~3,1 V (120V prizde kabul edilebilir)
+- Maksimum akım: >20 A ✓ 15A devre için güvenli
 
-- AWG 12 çapı ≈ 2.053mm, alan ≈ 3.309mm²
-- Ampacity: **20A** (devre kesicisiyle eşleşiyor)
-- R/m ≈ 0.00521 Ω/m
-- Gerilim düşümü = 20 × 0.00521 × 2 × 15 = **3.13V** (120V'da = %2.6 — NEC sınırı dahilinde)
-- Karar: **Uygun**
+### Örnek 2: Güneş enerjisi sistemi (100m bakır, 50A)
+Girdi:
+- Boyut: 10 mm²
+- Uzunluk: 100 m (panellerden kontrolöre DC)
+- Akım: 50 A
+- Malzeme: Bakır
+- Frekans: DC
 
-### Örnek 2 — Müstakil Yapıya Uzun Devre
+Sonuç:
+- Direnç: 0,172 Ω
+- Gerilim düşmesi: ~8,6 V (48V'de sorunlu — ~%18 düşüş)
+- Öneri: %5'in altında düşüş için 16 mm² (4 AWG) arttırın
 
-60A pano beslemesi (AWG 6), müstakil garaja 60 metre uzanıyor.
+### Örnek 3: Endüstriyel hatlar (4/0 AWG alüminyum, 30A, 50m)
+Girdi:
+- Boyut: 4/0 AWG (≈107 mm²)
+- Uzunluk: 50 m
+- Akım: 30 A
+- Malzeme: Alüminyum
+- Frekans: AC 60 Hz
 
-- Ampacity: **55A** ← 60A yük için yetersiz
-- Gerilim düşümü = 55 × 0.00130 × 2 × 60 = **8.57V** (120V'da = %7.1 — sınırı aşıyor)
-- Karar: **Uygun Değil** — AWG 4'e yükseltin veya daha büyük kesit kullanın
-
-### Örnek 3 — Düşük Gerilimli LED Şerit
-
-AWG 18 tel, 10 metre uzaktaki 5A LED şeridini 12V'dan besliyor.
-
-- Ampacity: **7A** (5A için yeterli)
-- R/m ≈ 0.02094 Ω/m
-- Gerilim düşümü = 5 × 0.02094 × 2 × 10 = **2.09V** (12V'da = %17.4 — kritik derecede yüksek!)
-- Karar: **Uygun Değil** — AWG 14 kullanın veya devre uzunluğunu kısaltın
+Sonuç:
+- Gerilim düşmesi: ~2,4 V (kabul edilebilir)
+- Güç kaybı: ~27,2 W
+- Maksimum akım: >700 A ✓ (dağıtımda yaygın)
 
 ## Sıkça Sorulan Sorular
 
-### NEC tel boyutlandırma hakkında ne diyor?
-NEC (NFPA 70), iletkenlerin ampacity'sinin sürekli olmayan yüke eşit, sürekli yükün ise %125'ine eşit olmasını gerektirir. NEC 310.15(B)(16), serbest havadaki iletkenler için temel ampacity tablosunu sunar.
+**S: AWG ile mm² arasındaki fark nedir?**
+C: AWG (Amerikan Tel Kalınlığı) eski Kuzey Amerika standardıdır. mm² (milimetre kare) dünya genelinde kullanılan metrik standarddır. Her ikisi de iletken kesit alanını ölçer ancak farklı ölçekler kullanırlar. Bu hesaplayıcı bunları anında dönüştürür.
 
-### AWG numaralandırması neden ters gibi görünüyor?
-AWG, tarihsel olarak belirli bir boyutta tel üretmek için gereken çekme adımı sayısına dayanır. Daha fazla çekme = daha küçük çap = daha büyük AWG numarası. Sistem, modern mühendislik notasyonundan önce geliştirildiğinden ters ilişki oluşmuştur.
+**S: Projelerim için doğru tel boyutunu nasıl biilirim?**
+C: Devre amperaj gereksiniminden (maksimum akım) başlayın, ardından yerel elektrik kodlarında gerilim düşmesi sınırlarını (tipik olarak dal devreler için ≤%3) kontrol edin. Gerilim düşmesini limitler içinde tutarken kapasiteyi aşan en küçük kalınlığı bulur.
 
-### Paketlenmiş kablolar için derating gerekli mi?
-Evet. Birden fazla akım taşıyan iletken bir kondüit içinde paketlendiğinde, ısı o kadar serbestçe dağılamaz. NEC Madde 310, 3-5 iletken için %80, 6-8 iletken için %70 derating gerektirir. Bu hesaplayıcı serbest havadaki tek bir iletkeni varsayar.
+**S: Neden alüminyum bakırdan daha kalın boyutlar gerektirir?**
+C: Alüminyumun bakırdan yaklaşık 1,6 kat daha yüksek özdirenç değeri vardır. Eşdeğer akımda alüminyum daha fazla ısıtır. Bakırın gerilim düşmesini tutturmak için 1,5–2 kat kesit alanı gerekir.
 
-### Maksimum önerilen gerilim düşümü nedir?
-NEC şu değerleri önermektedir: şube devreleri (ışıklar, prizler) ≤ %3; kombine besleyici + şube ≤ %5.
+**S: Deri etkisi nedir?**
+C: Yüksek AC frekanslarında elektromanyetik alan akımı iletkenin yüzeyine doğru iter. Bu efektif kesiti azaltır ve frekans/tel boyutuna göre direnci %5–15 artar.
 
-### 60°C ve 75°C ampacity arasındaki fark nedir?
-NEC, 60°C, 75°C ve 90°C dereceli izolasyon için ayrı ampacity sütunları sunar. Daha yüksek sıcaklık izolasyonu aynı iletken boyutu için daha fazla akıma izin verir. Ancak çoğu konut tesisatı cihazları ve bağlantılar yalnızca 60°C veya 75°C için derecelendirilmiştir.
+**S: Yalıtım kalınlığı gerilim düşmesini etkiler mi?**
+C: Hayır. Gerilim düşmesi sadece bakır/alüminyum çekirdeğe bağlıdır, plastik cekete değil. Yalıtım amperajı etkiler ama direnci değil.
+
+**S: Hem gidiş hem dönüş için bir tel kullanabilir miyim?**
+C: DC sistemlerde ayrı gidiş ve dönüş çalıştırırsınız. AC'de (ev/ticari) dönüş akımı ayrı bir iletkenden (nötr) veya topraklardan geçer. Her zaman tek yön olarak ölçün.
 
 ## Kaynaklar
 
-- [NEC 310.15(B)(16) — İzin Verilen Ampacity](https://www.nfpa.org/codes-and-standards/all-codes-and-standards/list-of-codes-and-standards/detail?code=70) — NFPA 70 (Ulusal Elektrik Kodu)
-- [AWG Bakır Tel Standardı](https://www.astm.org/b0258-02r14.html) — ASTM B258
-- [AWG Tel Kalınlığı Referansı](https://www.engineeringtoolbox.com/awg-wire-gauge-d_731.html) — Engineering Toolbox
+- **IEC 60228** — Yalıtılı kablolarda iletkenler (Uluslararası Elektriksel Komisyon)
+- **NEC Article 310** — Genel Tesisat Değerleri (Ulusal Elektrik Kodu)
+- **NIST SRM 1309a** — Bakır tel özdirenç standartları
+- **Adafruit Öğrenme Sistemi** — Tel kalınlığı ve Arduino güç kaynağı boyutlandırması
+
+---
+
+*Uyarı: Bu hesaplayıcı eğitim ve referans amacı için tasarlanmıştır. Elektrik tesisatı tasarımlamadan önce yerel kodları ve lisanslı elektrikçilere danışın.*

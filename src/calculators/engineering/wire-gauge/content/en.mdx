@@ -1,85 +1,116 @@
-# Wire Gauge / Ampacity Calculator (AWG)
+# Wire Gauge Calculator
 
-## What is AWG and Wire Ampacity?
+## What is Wire Gauge?
 
-The American Wire Gauge (AWG) system is the standard wire sizing specification used in the United States, Canada, and several other countries. AWG numbers follow a counterintuitive convention: the larger the AWG number, the smaller (thinner) the wire. AWG 22 is a fine wire used for low-power signal circuits, while AWG 4/0 is a heavy-duty cable capable of carrying hundreds of amperes.
+Wire gauge refers to the physical diameter or cross-sectional area of an electrical conductor. Two primary systems exist: American Wire Gauge (AWG) and metric millimetres squared (mm²). AWG numbers decrease as wire thickness increases — for example, 24 AWG is much thinner than 12 AWG. This calculator converts between AWG and mm², and computes key electrical properties like resistance, voltage drop, and safe current capacity based on conductor material and circuit length.
 
-**Ampacity** — the portmanteau of "ampere capacity" — is the maximum continuous electrical current that a conductor can carry without exceeding its safe operating temperature. Exceeding the ampacity causes the insulation to overheat, degrade, and potentially start a fire. The ampacity values in this calculator are drawn from NEC Table 310.15(B)(16), which covers copper conductors in free air at 60°C.
+The AWG system originated in the 1850s and remains standard in North America. IEC 60228, the metric equivalent, is used worldwide and defines copper and aluminum conductor sizes.
 
-The fundamental relationships for a round copper conductor are:
+## Why Does Wire Size Matter?
 
-**Diameter (mm):** d = 0.127 × 92^((36 − AWG) / 39)
+Improper wire sizing causes several serious problems:
 
-**Cross-sectional area (mm²):** A = π × (d/2)²
+1. **Voltage drop**: Resistive losses reduce the voltage available at the load, affecting device performance
+2. **Power loss**: Resistive heating wastes energy as heat, reducing efficiency
+3. **Safety**: Oversized currents in undersized wire cause overheating, insulation breakdown, and fire risk
+4. **Efficiency**: Undersized distribution lines lose kilowatts across long runs (solar systems, remote power)
 
-**DC resistance per meter:** R/m = ρ / A, where ρ (copper) = 1.724 × 10⁻⁸ Ω·m at 20°C
+Electrical codes in most countries enforce maximum voltage drop limits (typically 3% for branch circuits, 5% overall). This calculator helps you select wire sizes that comply and operate safely.
 
-**Voltage drop (round trip):** V_drop = I × (R/m) × 2 × L
+## The Physics Behind It
 
-A voltage drop of more than 3% on a branch circuit is considered excessive by the NEC. For a 120V system, 3% equals 3.6V — beyond this, equipment efficiency decreases and motor life is shortened.
+Wire resistance follows Ohm's law: **R = ρL/A**
 
-## How to Use This Calculator
+Where:
+- R = resistance (Ω)
+- ρ (rho) = resistivity of the material (Ω·mm²/m) — copper ≈ 0.0172, aluminum ≈ 0.0282
+- L = conductor length (m)
+- A = cross-sectional area (mm²)
 
-1. **Select Wire Gauge (AWG)**: Choose from 22 AWG (finest) down to 4/0 AWG (thickest). For residential wiring, 14 AWG and 12 AWG are the most common.
+Voltage drop: **V = IR** (in DC; AC includes impedance effects)
 
-2. **Enter Circuit Current (A)**: The current your circuit is designed to carry. This is used for voltage drop calculation.
+Power loss: **P = I²R** (dominant heating mechanism)
 
-3. **Enter One-Way Length (m)**: The distance from the power source to the load in meters. The calculator automatically uses twice this distance for the round-trip voltage drop.
+Ampacity (safe continuous current) is empirically determined from wire tables and depends on insulation type, installation method, and ambient temperature. This calculator uses conservative values per IEC 60364.
 
-4. **Enter Load Current (A)** *(optional)*: If your actual load current differs from the circuit current, enter it here for the suitability check. The wire is suitable when load current does not exceed ampacity.
+## How to Use
 
-5. **Read the Results**: You will see the conductor diameter, cross-sectional area, resistance per meter, ampacity, voltage drop, and a suitability verdict.
+1. **Select size unit**: Choose AWG (American standard) or mm² (metric). The calculator auto-converts between them.
+2. **Enter wire gauge**: If AWG, pick 0–40. If mm², enter the cross-section (e.g., 2.5, 4, 6, 10 mm²).
+3. **Enter one-way length**: Specify the distance the wire runs. For a circuit with outbound and return paths, enter just the outbound distance; voltage drop naturally accounts for the round trip.
+4. **Enter current**: The steady-state current (in amps) flowing through the wire.
+5. **Select material**: Copper conducts better (lower resistivity) than aluminum but costs more. Aluminum requires larger gauges for equivalent ampacity.
+6. **Choose frequency**: DC (direct current) or AC (50/60 Hz). AC adds a ~5% penalty due to skin effect — at high frequencies, current hugs the wire surface, increasing effective resistance.
+7. **Review results**: The calculator outputs cross-section, equivalent gauge, resistance, voltage drop, power loss, and maximum safe ampacity.
 
 ## Examples
 
-### Example 1 — Residential 20A Kitchen Circuit
+### Example 1: Home circuit (12 AWG, 15 A branch)
+Input:
+- Size: 12 AWG
+- Length: 25 m (one-way distance from breaker to outlet)
+- Current: 15 A
+- Material: Copper
+- Frequency: AC 60 Hz
 
-A 20A kitchen circuit (AWG 12) runs 15 meters to the far end of the kitchen.
+Result:
+- Resistance: ~0.207 Ω
+- Voltage drop: ~3.1 V (acceptable at 120 V outlet)
+- Ampacity: >20 A ✓ safe for 15 A circuit
 
-- AWG 12 diameter ≈ 2.053mm, area ≈ 3.309mm²
-- Ampacity: **20A** (matches the circuit breaker)
-- R/m ≈ 0.00521 Ω/m
-- Voltage drop = 20 × 0.00521 × 2 × 15 = **3.13V** (at 120V = 2.6% — within NEC limit)
-- Verdict: **Suitable**
+### Example 2: Solar PV system (100 m copper run, 50 A)
+Input:
+- Size: 10 mm²
+- Length: 100 m (DC from panels to controller)
+- Current: 50 A
+- Material: Copper
+- Frequency: DC
 
-### Example 2 — Long Run to Outbuilding
+Result:
+- Resistance: 0.172 Ω
+- Voltage drop: ~8.6 V (problematic at 48 V — ~18% drop)
+- Recommendation: Increase to 16 mm² (4 AWG) for <5% drop
 
-A 60A subpanel feed (AWG 6) runs 60 meters to a detached garage.
+### Example 3: Industrial feeder (4/0 AWG aluminum, 30 A, 50 m)
+Input:
+- Size: 4/0 AWG (≈107 mm²)
+- Length: 50 m
+- Current: 30 A
+- Material: Aluminum
+- Frequency: AC 60 Hz
 
-- AWG 6 diameter ≈ 4.115mm, area ≈ 13.30mm²
-- Ampacity: **55A** ← not sufficient for a 60A load
-- Voltage drop = 55 × 0.00130 × 2 × 60 = **8.57V** (at 120V = 7.1% — exceeds limit)
-- Verdict: **Not suitable** — upgrade to AWG 4 or use a larger gauge
+Result:
+- Voltage drop: ~2.4 V (acceptable)
+- Power loss: ~27.2 W
+- Ampacity: >700 A ✓ heavily overspecified (but common in distribution)
 
-### Example 3 — Low-Voltage LED Strip
+## Frequently Asked Questions
 
-AWG 18 wire powers a 5A LED strip 10 meters away (12V system).
+**Q: What's the difference between AWG and mm²?**
+A: AWG (American Wire Gauge) is the legacy North American standard. mm² (millimetres squared) is the metric standard used internationally. They measure the same thing — conductor cross-sectional area — but use different scales. This calculator converts between them instantly.
 
-- AWG 18 diameter ≈ 1.024mm, area ≈ 0.823mm²
-- Ampacity: **7A** (sufficient for 5A load)
-- R/m ≈ 0.02094 Ω/m
-- Voltage drop = 5 × 0.02094 × 2 × 10 = **2.09V** (at 12V = 17.4% — critically high!)
-- Verdict: **Not suitable** — use AWG 14 or shorten the run
+**Q: How do I know the correct wire size for my project?**
+A: Start with the circuit ampacity requirement (max current), then check local electrical codes for voltage drop limits (typically ≤3% for branch circuits). Use this calculator to find the smallest gauge that keeps voltage drop within limits while exceeding ampacity. Consult a licensed electrician for safety-critical installations.
 
-## FAQ
+**Q: Why does aluminum require larger sizes than copper?**
+A: Aluminum has about 1.6× higher resistivity than copper. At equivalent current, aluminum wire dissipates more heat. To match copper's voltage drop, you need ~1.5–2 times the cross-sectional area.
 
-### What does the NEC say about wire sizing?
-The National Electrical Code (NFPA 70) requires that conductors be sized for the load they serve, with ampacity equal to or greater than the non-continuous load plus 125% of the continuous load. NEC 310.15(B)(16) provides the base ampacity table for conductors in free air.
+**Q: What is skin effect?**
+A: At high AC frequencies, the electromagnetic field pushes current toward the conductor surface. This reduces effective cross-section and increases resistance by 5–15% depending on frequency and wire size. This calculator conservatively adds 5% for all AC cases.
 
-### Why does AWG numbering seem backwards?
-AWG is historically based on the number of drawing steps needed to produce a wire of that size. More draws = smaller diameter = larger AWG number. The system predates modern engineering notation, hence the inverse relationship.
+**Q: Does insulation thickness affect voltage drop?**
+A: No. Voltage drop depends only on the copper/aluminum core, not the plastic jacket. Insulation affects ampacity (higher-temperature ratings allow more current) and mechanical protection, but not electrical resistance.
 
-### What is the difference between 60°C and 75°C ampacity?
-The NEC provides separate ampacity columns for 60°C, 75°C, and 90°C rated insulation. Higher-temperature insulation allows more current for the same conductor size. However, most residential wiring devices and terminations are only rated for 60°C or 75°C, so the lower column must be used in practice.
-
-### Should I derate for bundled cables?
-Yes. When multiple current-carrying conductors are bundled together in a conduit, the heat cannot dissipate as freely. NEC Article 310 requires derating: 3–5 conductors = 80% of table ampacity, 6–8 conductors = 70%, etc. This calculator assumes a single conductor in free air.
-
-### What is the maximum recommended voltage drop?
-NEC recommends: branch circuits (lights, outlets) ≤ 3%; combined feeder + branch ≤ 5%. Some codes and jurisdictions have stricter requirements.
+**Q: Can I use one wire for both outbound and return?**
+A: In DC systems, you often run separate outbound and return. In AC systems (residential/commercial), the return current flows through a separate conductor (neutral or return wire) or the ground. Always measure length as one-way; the calculator assumes this convention.
 
 ## References
 
-- [NEC 310.15(B)(16) — Allowable Ampacities](https://www.nfpa.org/codes-and-standards/all-codes-and-standards/list-of-codes-and-standards/detail?code=70) — NFPA 70 (National Electrical Code)
-- [AWG Copper Wire Standard](https://www.astm.org/b0258-02r14.html) — ASTM B258
-- [AWG Wire Gauge Reference](https://www.engineeringtoolbox.com/awg-wire-gauge-d_731.html) — Engineering Toolbox
+- **IEC 60228** — Conductors of insulated cables (International Electrotechnical Commission)
+- **NEC Article 310** — Conductors for General Wiring (National Electrical Code)
+- **NIST SRM 1309a** — Copper wire resistivity standards
+- **Adafruit Learning System** — Wire gauge and Arduino power supply sizing
+
+---
+
+*Disclaimer: This calculator is for educational and reference purposes. Always consult local electrical codes and licensed professionals before designing electrical installations. Improper wiring creates fire and electrocution hazards.*

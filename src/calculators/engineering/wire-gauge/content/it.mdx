@@ -1,72 +1,72 @@
-# Calcolatore sezione cavo / Ampacity (AWG)
+# Wire Gauge Calculator (it)
 
-## Cosa sono AWG e ampacity?
+Wire gauge determines electrical conductor diameter or cross-section. This calculator converts between American Wire Gauge (AWG) and metric millimetres squared (mm²), calculating resistance, voltage drop, power loss, and ampacity.
 
-Il sistema American Wire Gauge (AWG) è la norma di dimensionamento dei cavi utilizzata negli USA, in Canada e in altri paesi. I numeri AWG seguono una convenzione contro-intuitiva: maggiore è il numero AWG, più sottile è il conduttore. AWG 22 è un filo sottile per circuiti di segnale a bassa potenza, AWG 4/0 è un cavo pesante per centinaia di ampere.
+## What is Wire Gauge?
 
-**Ampacity** è la corrente elettrica massima continua che un conduttore può trasportare senza superare la sua temperatura di esercizio sicura. I valori in questo calcolatore provengono dalla tabella NEC 310.15(B)(16) per conduttori in rame a 60°C in aria libera.
+The AWG (American Wire Gauge) system and metric mm² both measure conductor size. Lower AWG numbers indicate thicker wires. Selection affects circuit safety, efficiency, and compliance with electrical codes.
 
-**Diametro (mm):** d = 0,127 × 92^((36 − AWG) / 39)
+## Key Parameters
 
-**Sezione (mm²):** A = π × (d/2)²
+- **Size Unit**: AWG (North American) or mm² (metric international standard)
+- **Wire Size**: Conductor diameter or cross-section
+- **Wire Length**: Distance conductor spans (one-way)
+- **Current**: Steady-state electrical current in amperes
+- **Material**: Copper (lower resistance) or aluminum (lightweight)
+- **Frequency**: DC (direct) or AC at 50/60 Hz
 
-**Resistenza DC per metro:** R/m = ρ / A, rame: ρ = 1,724 × 10⁻⁸ Ω·m a 20°C
+## Physics
 
-**Caduta di tensione (andata e ritorno):** V_caduta = I × (R/m) × 2 × L
+Resistance: R = ρL/A where ρ is resistivity, L is length, A is cross-section.
 
-Una caduta di tensione superiore al 3% su un circuito di derivazione è considerata eccessiva secondo la NEC.
+Voltage drop: V = IR
 
-## Come usare il calcolatore
+Power loss: P = I²R (dominant heating mechanism)
 
-1. **Selezionare il calibro AWG**: Da 22 AWG (più fine) a 4/0 AWG (più spesso).
-2. **Inserire la corrente del circuito (A)**: Corrente nominale del circuito per il calcolo della caduta di tensione.
-3. **Inserire la lunghezza di andata (m)**: Distanza sorgente-carico; il calcolatore usa il doppio automaticamente.
-4. **Inserire la corrente di carico (A)** *(facoltativo)*: Per la verifica di idoneità se diversa dalla corrente di circuito.
-5. **Leggere i risultati**: Diametro, sezione, resistenza per metro, ampacity, caduta di tensione e valutazione.
+AC adds ~5% penalty due to skin effect — current concentrates on conductor surface at high frequencies.
 
-## Esempi
+## How to Use
 
-### Esempio 1 — Circuito cucina 20 A residenziale
+1. Select AWG or mm² units
+2. Enter wire gauge or cross-section
+3. Specify one-way conductor length
+4. Enter continuous current in amperes
+5. Choose material (copper/aluminum)
+6. Select frequency (DC/AC 50/60 Hz)
+7. Review calculated results
 
-AWG 12, 15 m, 20 A.
+## Example
 
-- Diametro ≈ 2,053 mm, sezione ≈ 3,309 mm²
-- Ampacity: **20 A**
-- Caduta di tensione = 20 × 0,00521 × 2 × 15 = **3,13 V** (120 V → 2,6% — entro il limite NEC)
-- Esito: **Adeguato**
-
-### Esempio 2 — Lunga tirata a edificio separato
-
-AWG 6, 60 m, alimentazione 60 A.
-
-- Ampacity: **55 A** ← insufficiente per 60 A
-- Caduta di tensione = 55 × 0,00130 × 2 × 60 = **8,57 V** (7,1% — troppo alta)
-- Esito: **Non adeguato** — passare ad AWG 4
-
-### Esempio 3 — Striscia LED a bassa tensione
-
-AWG 18, 5 A, 10 m, 12 V.
-
-- Ampacity: **7 A** (sufficiente per 5 A)
-- Caduta di tensione = 5 × 0,02094 × 2 × 10 = **2,09 V** (17,4% di 12 V — critico!)
-- Esito: **Non adeguato** — usare AWG 14 o ridurre la lunghezza
+For a 12 AWG copper conductor carrying 15 A over 25 m at 60 Hz AC:
+- Resistance: ~0.207 Ω
+- Voltage drop: ~3.1 V
+- Power loss: ~2.3 W
+- Safe ampacity: >20 A ✓
 
 ## FAQ
 
-### Cosa prevede la NEC per il dimensionamento dei cavi?
-La NEC (NFPA 70) richiede che i conduttori abbiano un'ampacity almeno pari al carico non continuo più il 125% del carico continuo.
+**Q: Difference between AWG and mm²?**
+A: AWG (American) and mm² (metric) measure the same thing — cross-sectional area — using different scales. Both determine conductor properties.
 
-### Perché la numerazione AWG sembra invertita?
-L'AWG si basa storicamente sul numero di passaggi di trafilatura necessari per produrre un filo di quella dimensione. Più trafilature = diametro minore = numero AWG maggiore.
+**Q: Why does aluminum require larger sizes?**
+A: Aluminum has ~60% higher resistivity than copper. For equivalent ampacity, use 1.5–2× cross-section.
 
-### È necessario declassare per cavi raggruppati?
-Sì. Quando più conduttori sono raggruppati in un condotto, la NEC Articolo 310 richiede un fattore di riduzione: 3-5 conduttori = 80%, 6-8 conduttori = 70%. Questo calcolatore presuppone un singolo conduttore in aria libera.
+**Q: What is skin effect?**
+A: At high AC frequencies, current crowds toward the conductor surface, increasing effective resistance 5–15%.
 
-### Qual è la massima caduta di tensione raccomandata?
-NEC raccomanda: circuiti di derivazione ≤ 3%; alimentatore + derivazione ≤ 5%.
+**Q: How do I avoid voltage drop problems?**
+A: Keep voltage drop ≤3% (branch circuits) or ≤5% (overall). Larger wire reduces both voltage drop and power loss.
 
-## Riferimenti
+**Q: Can I use one wire for return?**
+A: In AC systems, return current uses a separate conductor (neutral/return/ground). Measure length one-way; calculator accounts for this.
 
-- [NEC 310.15(B)(16) — Ampacity consentite](https://www.nfpa.org/codes-and-standards/all-codes-and-standards/list-of-codes-and-standards/detail?code=70) — NFPA 70
-- [Norma AWG filo di rame](https://www.astm.org/b0258-02r14.html) — ASTM B258
-- [Riferimento calibro AWG](https://www.engineeringtoolbox.com/awg-wire-gauge-d_731.html) — Engineering Toolbox
+## References
+
+- IEC 60228 — Conductors of insulated cables
+- NEC Article 310 — Conductors for General Wiring
+- NIST wire standards
+- Adafruit electrical tutorials
+
+---
+
+*Disclaimer: Educational and reference use only. Consult local electrical codes and licensed professionals before installation.*

@@ -1,72 +1,72 @@
-# Calculateur de section de câble / Ampacity (AWG)
+# Wire Gauge Calculator (fr)
 
-## Qu'est-ce que l'AWG et l'ampacity ?
+Wire gauge determines electrical conductor diameter or cross-section. This calculator converts between American Wire Gauge (AWG) and metric millimetres squared (mm²), calculating resistance, voltage drop, power loss, and ampacity.
 
-Le système American Wire Gauge (AWG) est la norme de dimensionnement des câbles utilisée aux États-Unis, au Canada et dans plusieurs autres pays. Les numéros AWG suivent une convention contre-intuitive : plus le numéro AWG est élevé, plus le câble est fin. L'AWG 22 est un fil fin pour circuits de signalisation basse puissance, tandis que l'AWG 4/0 est un câble robuste capable de transporter des centaines d'ampères.
+## What is Wire Gauge?
 
-**L'ampacity** désigne le courant électrique maximal qu'un conducteur peut transporter en continu sans dépasser sa température de fonctionnement nominale. Les valeurs de ce calculateur proviennent du tableau NEC 310.15(B)(16) pour conducteurs en cuivre à 60°C en air libre.
+The AWG (American Wire Gauge) system and metric mm² both measure conductor size. Lower AWG numbers indicate thicker wires. Selection affects circuit safety, efficiency, and compliance with electrical codes.
 
-**Diamètre (mm) :** d = 0,127 × 92^((36 − AWG) / 39)
+## Key Parameters
 
-**Section (mm²) :** A = π × (d/2)²
+- **Size Unit**: AWG (North American) or mm² (metric international standard)
+- **Wire Size**: Conductor diameter or cross-section
+- **Wire Length**: Distance conductor spans (one-way)
+- **Current**: Steady-state electrical current in amperes
+- **Material**: Copper (lower resistance) or aluminum (lightweight)
+- **Frequency**: DC (direct) or AC at 50/60 Hz
 
-**Résistance DC par mètre :** R/m = ρ / A, cuivre : ρ = 1,724 × 10⁻⁸ Ω·m à 20°C
+## Physics
 
-**Chute de tension (aller-retour) :** V_chute = I × (R/m) × 2 × L
+Resistance: R = ρL/A where ρ is resistivity, L is length, A is cross-section.
 
-Une chute de tension supérieure à 3 % sur un circuit de dérivation est considérée excessive selon la NEC.
+Voltage drop: V = IR
 
-## Comment utiliser ce calculateur
+Power loss: P = I²R (dominant heating mechanism)
 
-1. **Sélectionner le calibre AWG** : De 22 AWG (le plus fin) à 4/0 AWG (le plus épais).
-2. **Saisir le courant de circuit (A)** : Courant nominal du circuit pour le calcul de la chute de tension.
-3. **Saisir la longueur aller simple (m)** : Distance source-charge ; le calculateur utilise le double automatiquement.
-4. **Saisir le courant de charge (A)** *(facultatif)* : Pour le contrôle d'adéquation si différent du courant de circuit.
-5. **Lire les résultats** : Diamètre, section, résistance par mètre, ampacity, chute de tension et verdict d'adéquation.
+AC adds ~5% penalty due to skin effect — current concentrates on conductor surface at high frequencies.
 
-## Exemples
+## How to Use
 
-### Exemple 1 — Circuit de cuisine 20 A résidentiel
+1. Select AWG or mm² units
+2. Enter wire gauge or cross-section
+3. Specify one-way conductor length
+4. Enter continuous current in amperes
+5. Choose material (copper/aluminum)
+6. Select frequency (DC/AC 50/60 Hz)
+7. Review calculated results
 
-AWG 12, 15 m, 20 A.
+## Example
 
-- Diamètre ≈ 2,053 mm, section ≈ 3,309 mm²
-- Ampacity : **20 A**
-- Chute de tension = 20 × 0,00521 × 2 × 15 = **3,13 V** (120 V → 2,6 % — dans la limite NEC)
-- Verdict : **Adapté**
-
-### Exemple 2 — Long circuit vers un bâtiment annexe
-
-AWG 6, 60 m, alimentation 60 A.
-
-- Ampacity : **55 A** ← insuffisant pour 60 A
-- Chute de tension = 55 × 0,00130 × 2 × 60 = **8,57 V** (7,1 % — trop élevé)
-- Verdict : **Inadapté** — passer à l'AWG 4
-
-### Exemple 3 — Ruban LED basse tension
-
-AWG 18, 5 A, 10 m, 12 V.
-
-- Ampacity : **7 A** (suffisant pour 5 A)
-- Chute de tension = 5 × 0,02094 × 2 × 10 = **2,09 V** (17,4 % de 12 V — critique !)
-- Verdict : **Inadapté** — utiliser AWG 14 ou réduire la longueur
+For a 12 AWG copper conductor carrying 15 A over 25 m at 60 Hz AC:
+- Resistance: ~0.207 Ω
+- Voltage drop: ~3.1 V
+- Power loss: ~2.3 W
+- Safe ampacity: >20 A ✓
 
 ## FAQ
 
-### Que dit la NEC sur le dimensionnement des câbles ?
-La NEC (NFPA 70) exige que les conducteurs aient une ampacity au moins égale à la charge non permanente plus 125 % de la charge permanente.
+**Q: Difference between AWG and mm²?**
+A: AWG (American) and mm² (metric) measure the same thing — cross-sectional area — using different scales. Both determine conductor properties.
 
-### Pourquoi la numérotation AWG semble-t-elle inversée ?
-L'AWG est historiquement basé sur le nombre d'opérations d'étirage nécessaires pour produire un fil de cette taille. Plus d'étirages = diamètre plus petit = numéro AWG plus élevé.
+**Q: Why does aluminum require larger sizes?**
+A: Aluminum has ~60% higher resistivity than copper. For equivalent ampacity, use 1.5–2× cross-section.
 
-### Faut-il déclasser les câbles groupés ?
-Oui. Lorsque plusieurs conducteurs sont regroupés dans un conduit, la NEC Article 310 impose un coefficient de déclassement : 3-5 conducteurs = 80 %, 6-8 conducteurs = 70 %. Ce calculateur suppose un conducteur unique en air libre.
+**Q: What is skin effect?**
+A: At high AC frequencies, current crowds toward the conductor surface, increasing effective resistance 5–15%.
 
-### Quelle est la chute de tension maximale recommandée ?
-NEC recommande : circuits de dérivation ≤ 3 % ; alimentation + dérivation ≤ 5 %.
+**Q: How do I avoid voltage drop problems?**
+A: Keep voltage drop ≤3% (branch circuits) or ≤5% (overall). Larger wire reduces both voltage drop and power loss.
 
-## Références
+**Q: Can I use one wire for return?**
+A: In AC systems, return current uses a separate conductor (neutral/return/ground). Measure length one-way; calculator accounts for this.
 
-- [NEC 310.15(B)(16) — Ampacités autorisées](https://www.nfpa.org/codes-and-standards/all-codes-and-standards/list-of-codes-and-standards/detail?code=70) — NFPA 70
-- [Norme AWG fil de cuivre](https://www.astm.org/b0258-02r14.html) — ASTM B258
-- [Référence calibre AWG](https://www.engineeringtoolbox.com/awg-wire-gauge-d_731.html) — Engineering Toolbox
+## References
+
+- IEC 60228 — Conductors of insulated cables
+- NEC Article 310 — Conductors for General Wiring
+- NIST wire standards
+- Adafruit electrical tutorials
+
+---
+
+*Disclaimer: Educational and reference use only. Consult local electrical codes and licensed professionals before installation.*

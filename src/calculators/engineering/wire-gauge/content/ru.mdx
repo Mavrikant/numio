@@ -1,72 +1,72 @@
-# Калькулятор сечения провода / Допустимый ток (AWG)
+# Wire Gauge Calculator (ru)
 
-## Что такое AWG и допустимый ток?
+Wire gauge determines electrical conductor diameter or cross-section. This calculator converts between American Wire Gauge (AWG) and metric millimetres squared (mm²), calculating resistance, voltage drop, power loss, and ampacity.
 
-Система American Wire Gauge (AWG) — стандарт калибровки проводов, используемый в США, Канаде и ряде других стран. Нумерация AWG следует контрин туитивной логике: чем больше число AWG, тем тоньше провод. AWG 22 — тонкий провод для маломощных сигнальных цепей, AWG 4/0 — тяжелый кабель для сотен ампер.
+## What is Wire Gauge?
 
-**Допустимый ток (Ampacity)** — максимальный длительный электрический ток, который проводник может нести без превышения безопасной рабочей температуры. Значения в этом калькуляторе взяты из таблицы NEC 310.15(B)(16) для медных проводников в открытом воздухе при 60°C.
+The AWG (American Wire Gauge) system and metric mm² both measure conductor size. Lower AWG numbers indicate thicker wires. Selection affects circuit safety, efficiency, and compliance with electrical codes.
 
-**Диаметр (мм):** d = 0,127 × 92^((36 − AWG) / 39)
+## Key Parameters
 
-**Площадь сечения (мм²):** A = π × (d/2)²
+- **Size Unit**: AWG (North American) or mm² (metric international standard)
+- **Wire Size**: Conductor diameter or cross-section
+- **Wire Length**: Distance conductor spans (one-way)
+- **Current**: Steady-state electrical current in amperes
+- **Material**: Copper (lower resistance) or aluminum (lightweight)
+- **Frequency**: DC (direct) or AC at 50/60 Hz
 
-**Сопротивление на метр:** R/м = ρ / A, медь: ρ = 1,724 × 10⁻⁸ Ом·м при 20°C
+## Physics
 
-**Падение напряжения (туда и обратно):** V = I × (R/м) × 2 × L
+Resistance: R = ρL/A where ρ is resistivity, L is length, A is cross-section.
 
-Падение напряжения более 3% в ответвительной цепи считается избыточным согласно NEC.
+Voltage drop: V = IR
 
-## Как пользоваться калькулятором
+Power loss: P = I²R (dominant heating mechanism)
 
-1. **Выберите калибр AWG**: от 22 AWG (самый тонкий) до 4/0 AWG (самый толстый).
-2. **Введите ток цепи (А)**: Номинальный ток цепи для расчёта падения напряжения.
-3. **Введите длину в одну сторону (м)**: Расстояние от источника до нагрузки; калькулятор удвоит это значение автоматически.
-4. **Введите ток нагрузки (А)** *(необязательно)*: Для проверки пригодности, если он отличается от тока цепи.
-5. **Прочтите результаты**: Диаметр, сечение, сопротивление на метр, допустимый ток, падение напряжения и вывод о пригодности.
+AC adds ~5% penalty due to skin effect — current concentrates on conductor surface at high frequencies.
 
-## Примеры расчётов
+## How to Use
 
-### Пример 1 — Бытовая кухонная цепь 20 А
+1. Select AWG or mm² units
+2. Enter wire gauge or cross-section
+3. Specify one-way conductor length
+4. Enter continuous current in amperes
+5. Choose material (copper/aluminum)
+6. Select frequency (DC/AC 50/60 Hz)
+7. Review calculated results
 
-AWG 12, 15 м, 20 А.
+## Example
 
-- Диаметр ≈ 2,053 мм, сечение ≈ 3,309 мм²
-- Допустимый ток: **20 А**
-- Падение напряжения = 20 × 0,00521 × 2 × 15 = **3,13 В** (120 В → 2,6% — в пределах NEC)
-- Вывод: **Пригоден**
+For a 12 AWG copper conductor carrying 15 A over 25 m at 60 Hz AC:
+- Resistance: ~0.207 Ω
+- Voltage drop: ~3.1 V
+- Power loss: ~2.3 W
+- Safe ampacity: >20 A ✓
 
-### Пример 2 — Длинная подводка к хозяйственной постройке
+## FAQ
 
-AWG 6, 60 м, питание 60 А.
+**Q: Difference between AWG and mm²?**
+A: AWG (American) and mm² (metric) measure the same thing — cross-sectional area — using different scales. Both determine conductor properties.
 
-- Допустимый ток: **55 А** ← недостаточно для 60 А
-- Падение напряжения = 55 × 0,00130 × 2 × 60 = **8,57 В** (7,1% — превышает норму)
-- Вывод: **Не пригоден** — перейти на AWG 4
+**Q: Why does aluminum require larger sizes?**
+A: Aluminum has ~60% higher resistivity than copper. For equivalent ampacity, use 1.5–2× cross-section.
 
-### Пример 3 — Светодиодная лента 12 В
+**Q: What is skin effect?**
+A: At high AC frequencies, current crowds toward the conductor surface, increasing effective resistance 5–15%.
 
-AWG 18, 5 А, 10 м, 12 В.
+**Q: How do I avoid voltage drop problems?**
+A: Keep voltage drop ≤3% (branch circuits) or ≤5% (overall). Larger wire reduces both voltage drop and power loss.
 
-- Допустимый ток: **7 А** (достаточно для 5 А)
-- Падение напряжения = 5 × 0,02094 × 2 × 10 = **2,09 В** (17,4% от 12 В — критично!)
-- Вывод: **Не пригоден** — использовать AWG 14 или сократить длину
+**Q: Can I use one wire for return?**
+A: In AC systems, return current uses a separate conductor (neutral/return/ground). Measure length one-way; calculator accounts for this.
 
-## Часто задаваемые вопросы
+## References
 
-### Что говорит NEC о выборе сечения провода?
-NEC (NFPA 70) требует, чтобы допустимый ток проводников был не менее суммы непостоянной нагрузки плюс 125% постоянной нагрузки.
+- IEC 60228 — Conductors of insulated cables
+- NEC Article 310 — Conductors for General Wiring
+- NIST wire standards
+- Adafruit electrical tutorials
 
-### Почему нумерация AWG кажется обратной?
-AWG исторически основан на числе операций волочения, необходимых для изготовления провода данного размера. Больше волочений = меньший диаметр = большее число AWG.
+---
 
-### Нужно ли снижать допустимый ток для сгруппированных кабелей?
-Да. При укладке нескольких токоведущих проводников в кабелепроводе NEC Статья 310 требует коэффициентов снижения: 3–5 проводников = 80%, 6–8 проводников = 70%. Данный калькулятор рассчитан на одиночный проводник в открытом воздухе.
-
-### Какое максимальное падение напряжения рекомендуется?
-NEC рекомендует: ответвительные цепи ≤ 3%; питающий провод + ответвление ≤ 5%.
-
-## Источники
-
-- [NEC 310.15(B)(16) — Допустимые токи](https://www.nfpa.org/codes-and-standards/all-codes-and-standards/list-of-codes-and-standards/detail?code=70) — NFPA 70
-- [Стандарт медного провода AWG](https://www.astm.org/b0258-02r14.html) — ASTM B258
-- [Справочник по калибру AWG](https://www.engineeringtoolbox.com/awg-wire-gauge-d_731.html) — Engineering Toolbox
+*Disclaimer: Educational and reference use only. Consult local electrical codes and licensed professionals before installation.*

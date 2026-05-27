@@ -1,72 +1,72 @@
-# 导线规格/载流量计算器（AWG）
+# Wire Gauge Calculator (zh)
 
-## 什么是AWG和载流量？
+Wire gauge determines electrical conductor diameter or cross-section. This calculator converts between American Wire Gauge (AWG) and metric millimetres squared (mm²), calculating resistance, voltage drop, power loss, and ampacity.
 
-美国线规（AWG）是美国、加拿大及多个国家使用的标准导线规格系统。AWG数字遵循反直觉规则：数字越大，导线越细。AWG 22是低功率信号电路的细线，而AWG 4/0是可承载数百安培的重型电缆。
+## What is Wire Gauge?
 
-**载流量**是导体在不超过安全运行温度的情况下可连续承载的最大电流。本计算器的数值来自NEC表310.15(B)(16)，适用于空气中60°C铜导体。
+The AWG (American Wire Gauge) system and metric mm² both measure conductor size. Lower AWG numbers indicate thicker wires. Selection affects circuit safety, efficiency, and compliance with electrical codes.
 
-**直径（mm）：** d = 0.127 × 92^((36 − AWG) / 39)
+## Key Parameters
 
-**截面积（mm²）：** A = π × (d/2)²
+- **Size Unit**: AWG (North American) or mm² (metric international standard)
+- **Wire Size**: Conductor diameter or cross-section
+- **Wire Length**: Distance conductor spans (one-way)
+- **Current**: Steady-state electrical current in amperes
+- **Material**: Copper (lower resistance) or aluminum (lightweight)
+- **Frequency**: DC (direct) or AC at 50/60 Hz
 
-**每米直流电阻：** R/m = ρ / A，铜：ρ = 1.724 × 10⁻⁸ Ω·m（20°C）
+## Physics
 
-**电压降（往返）：** V = I × (R/m) × 2 × L
+Resistance: R = ρL/A where ρ is resistivity, L is length, A is cross-section.
 
-支路电路电压降超过3%视为过高。
+Voltage drop: V = IR
 
-## 如何使用计算器
+Power loss: P = I²R (dominant heating mechanism)
 
-1. **选择线规AWG**：从22 AWG（最细）到4/0 AWG（最粗）。
-2. **输入电路电流（A）**：电路额定电流，用于计算电压降。
-3. **输入单程长度（m）**：从电源到负载的距离；计算器自动使用两倍值。
-4. **输入负载电流（A）**（可选）：如与电路电流不同，用于适用性检查。
-5. **读取结果**：直径、截面积、每米电阻、载流量、电压降及适用性判断。
+AC adds ~5% penalty due to skin effect — current concentrates on conductor surface at high frequencies.
 
-## 计算示例
+## How to Use
 
-### 示例一 — 住宅厨房20A回路
+1. Select AWG or mm² units
+2. Enter wire gauge or cross-section
+3. Specify one-way conductor length
+4. Enter continuous current in amperes
+5. Choose material (copper/aluminum)
+6. Select frequency (DC/AC 50/60 Hz)
+7. Review calculated results
 
-AWG 12，15m，20A。
+## Example
 
-- 直径≈2.053mm，截面积≈3.309mm²
-- 载流量：**20A**
-- 电压降 = 20 × 0.00521 × 2 × 15 = **3.13V**（120V中占2.6%，在NEC限值内）
-- 结论：**适用**
+For a 12 AWG copper conductor carrying 15 A over 25 m at 60 Hz AC:
+- Resistance: ~0.207 Ω
+- Voltage drop: ~3.1 V
+- Power loss: ~2.3 W
+- Safe ampacity: >20 A ✓
 
-### 示例二 — 至附属建筑的长距离布线
+## FAQ
 
-AWG 6，60m，60A供电。
+**Q: Difference between AWG and mm²?**
+A: AWG (American) and mm² (metric) measure the same thing — cross-sectional area — using different scales. Both determine conductor properties.
 
-- 载流量：**55A** ← 不够60A
-- 电压降 = 55 × 0.00130 × 2 × 60 = **8.57V**（7.1%，超出限值）
-- 结论：**不适用**，升级至AWG 4
+**Q: Why does aluminum require larger sizes?**
+A: Aluminum has ~60% higher resistivity than copper. For equivalent ampacity, use 1.5–2× cross-section.
 
-### 示例三 — 低压LED灯条
+**Q: What is skin effect?**
+A: At high AC frequencies, current crowds toward the conductor surface, increasing effective resistance 5–15%.
 
-AWG 18，5A，10m，12V。
+**Q: How do I avoid voltage drop problems?**
+A: Keep voltage drop ≤3% (branch circuits) or ≤5% (overall). Larger wire reduces both voltage drop and power loss.
 
-- 载流量：**7A**（5A足够）
-- 电压降 = 5 × 0.02094 × 2 × 10 = **2.09V**（12V中占17.4%，严重超标！）
-- 结论：**不适用**，使用AWG 14或缩短布线
+**Q: Can I use one wire for return?**
+A: In AC systems, return current uses a separate conductor (neutral/return/ground). Measure length one-way; calculator accounts for this.
 
-## 常见问题
+## References
 
-### NEC对导线选型有何规定？
-NEC（NFPA 70）要求导体载流量不低于非连续负载加125%连续负载之和。
+- IEC 60228 — Conductors of insulated cables
+- NEC Article 310 — Conductors for General Wiring
+- NIST wire standards
+- Adafruit electrical tutorials
 
-### AWG编号为何看起来是反的？
-AWG历史上基于制造该尺寸导线所需的拉丝步骤数。拉丝次数越多=直径越小=AWG数字越大。
+---
 
-### 捆扎电缆需要降容吗？
-是的。多根载流导体捆扎在导管中时，NEC第310条要求降容系数：3-5根=80%，6-8根=70%。本计算器假设单根导体在空气中。
-
-### 建议的最大电压降是多少？
-NEC建议：支路电路≤3%；馈线+支路组合≤5%。
-
-## 参考资料
-
-- [NEC 310.15(B)(16) — 允许载流量](https://www.nfpa.org/codes-and-standards/all-codes-and-standards/list-of-codes-and-standards/detail?code=70) — NFPA 70
-- [AWG铜导线标准](https://www.astm.org/b0258-02r14.html) — ASTM B258
-- [AWG导线规格参考](https://www.engineeringtoolbox.com/awg-wire-gauge-d_731.html) — Engineering Toolbox
+*Disclaimer: Educational and reference use only. Consult local electrical codes and licensed professionals before installation.*

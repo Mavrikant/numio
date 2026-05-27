@@ -1,72 +1,72 @@
-# Calculadora de sección de cable / Ampacity (AWG)
+# Wire Gauge Calculator (es)
 
-## ¿Qué son AWG y ampacity?
+Wire gauge determines electrical conductor diameter or cross-section. This calculator converts between American Wire Gauge (AWG) and metric millimetres squared (mm²), calculating resistance, voltage drop, power loss, and ampacity.
 
-El sistema American Wire Gauge (AWG) es la norma de dimensionado de cables utilizada en EE. UU., Canadá y otros países. Los números AWG siguen una convención contraintuitiva: cuanto mayor es el número AWG, más delgado es el cable. El AWG 22 es un hilo fino para circuitos de señal de baja potencia, mientras que el AWG 4/0 es un cable de servicio pesado capaz de transportar cientos de amperios.
+## What is Wire Gauge?
 
-**Ampacity** es la corriente eléctrica máxima continua que puede transportar un conductor sin superar su temperatura de operación segura. Los valores en esta calculadora proceden de la tabla NEC 310.15(B)(16) para conductores de cobre a 60°C en aire libre.
+The AWG (American Wire Gauge) system and metric mm² both measure conductor size. Lower AWG numbers indicate thicker wires. Selection affects circuit safety, efficiency, and compliance with electrical codes.
 
-**Diámetro (mm):** d = 0,127 × 92^((36 − AWG) / 39)
+## Key Parameters
 
-**Sección (mm²):** A = π × (d/2)²
+- **Size Unit**: AWG (North American) or mm² (metric international standard)
+- **Wire Size**: Conductor diameter or cross-section
+- **Wire Length**: Distance conductor spans (one-way)
+- **Current**: Steady-state electrical current in amperes
+- **Material**: Copper (lower resistance) or aluminum (lightweight)
+- **Frequency**: DC (direct) or AC at 50/60 Hz
 
-**Resistencia CC por metro:** R/m = ρ / A, cobre: ρ = 1,724 × 10⁻⁸ Ω·m a 20°C
+## Physics
 
-**Caída de tensión (ida y vuelta):** V_caída = I × (R/m) × 2 × L
+Resistance: R = ρL/A where ρ is resistivity, L is length, A is cross-section.
 
-Una caída de tensión superior al 3% en un circuito de derivación se considera excesiva según la NEC.
+Voltage drop: V = IR
 
-## Cómo usar esta calculadora
+Power loss: P = I²R (dominant heating mechanism)
 
-1. **Seleccionar calibre AWG**: De 22 AWG (más fino) a 4/0 AWG (más grueso).
-2. **Introducir corriente del circuito (A)**: Corriente nominal del circuito para el cálculo de caída de tensión.
-3. **Introducir longitud de ida (m)**: Distancia fuente-carga; la calculadora usa el doble automáticamente.
-4. **Introducir corriente de carga (A)** *(opcional)*: Para verificación de idoneidad si difiere de la corriente de circuito.
-5. **Leer los resultados**: Diámetro, sección, resistencia por metro, ampacity, caída de tensión y veredicto.
+AC adds ~5% penalty due to skin effect — current concentrates on conductor surface at high frequencies.
 
-## Ejemplos
+## How to Use
 
-### Ejemplo 1 — Circuito de cocina 20 A residencial
+1. Select AWG or mm² units
+2. Enter wire gauge or cross-section
+3. Specify one-way conductor length
+4. Enter continuous current in amperes
+5. Choose material (copper/aluminum)
+6. Select frequency (DC/AC 50/60 Hz)
+7. Review calculated results
 
-AWG 12, 15 m, 20 A.
+## Example
 
-- Diámetro ≈ 2,053 mm, sección ≈ 3,309 mm²
-- Ampacity: **20 A**
-- Caída de tensión = 20 × 0,00521 × 2 × 15 = **3,13 V** (120 V → 2,6% — dentro del límite NEC)
-- Veredicto: **Adecuado**
+For a 12 AWG copper conductor carrying 15 A over 25 m at 60 Hz AC:
+- Resistance: ~0.207 Ω
+- Voltage drop: ~3.1 V
+- Power loss: ~2.3 W
+- Safe ampacity: >20 A ✓
 
-### Ejemplo 2 — Larga tirada a edificio auxiliar
+## FAQ
 
-AWG 6, 60 m, alimentación 60 A.
+**Q: Difference between AWG and mm²?**
+A: AWG (American) and mm² (metric) measure the same thing — cross-sectional area — using different scales. Both determine conductor properties.
 
-- Ampacity: **55 A** ← insuficiente para 60 A
-- Caída de tensión = 55 × 0,00130 × 2 × 60 = **8,57 V** (7,1% — demasiado alto)
-- Veredicto: **No adecuado** — cambiar a AWG 4
+**Q: Why does aluminum require larger sizes?**
+A: Aluminum has ~60% higher resistivity than copper. For equivalent ampacity, use 1.5–2× cross-section.
 
-### Ejemplo 3 — Tira LED de baja tensión
+**Q: What is skin effect?**
+A: At high AC frequencies, current crowds toward the conductor surface, increasing effective resistance 5–15%.
 
-AWG 18, 5 A, 10 m, 12 V.
+**Q: How do I avoid voltage drop problems?**
+A: Keep voltage drop ≤3% (branch circuits) or ≤5% (overall). Larger wire reduces both voltage drop and power loss.
 
-- Ampacity: **7 A** (suficiente para 5 A)
-- Caída de tensión = 5 × 0,02094 × 2 × 10 = **2,09 V** (17,4% de 12 V — ¡crítico!)
-- Veredicto: **No adecuado** — usar AWG 14 o acortar la tirada
+**Q: Can I use one wire for return?**
+A: In AC systems, return current uses a separate conductor (neutral/return/ground). Measure length one-way; calculator accounts for this.
 
-## Preguntas frecuentes
+## References
 
-### ¿Qué dice la NEC sobre el dimensionado de cables?
-La NEC (NFPA 70) exige que los conductores tengan una ampacity al menos igual a la carga no continua más el 125% de la carga continua.
+- IEC 60228 — Conductors of insulated cables
+- NEC Article 310 — Conductors for General Wiring
+- NIST wire standards
+- Adafruit electrical tutorials
 
-### ¿Por qué la numeración AWG parece invertida?
-El AWG se basa históricamente en el número de pasos de trefilado necesarios para producir un hilo de ese tamaño. Más trefilados = menor diámetro = mayor número AWG.
+---
 
-### ¿Es necesario desclasificar para cables agrupados?
-Sí. Cuando varios conductores están agrupados en un conducto, la NEC Artículo 310 requiere un factor de corrección: 3-5 conductores = 80%, 6-8 conductores = 70%. Esta calculadora asume un solo conductor en aire libre.
-
-### ¿Cuál es la caída de tensión máxima recomendada?
-NEC recomienda: circuitos de derivación ≤ 3%; alimentador + derivación ≤ 5%.
-
-## Referencias
-
-- [NEC 310.15(B)(16) — Ampacidades permitidas](https://www.nfpa.org/codes-and-standards/all-codes-and-standards/list-of-codes-and-standards/detail?code=70) — NFPA 70
-- [Norma AWG hilo de cobre](https://www.astm.org/b0258-02r14.html) — ASTM B258
-- [Referencia calibre AWG](https://www.engineeringtoolbox.com/awg-wire-gauge-d_731.html) — Engineering Toolbox
+*Disclaimer: Educational and reference use only. Consult local electrical codes and licensed professionals before installation.*
