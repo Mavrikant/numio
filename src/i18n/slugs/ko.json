@@ -1,4 +1,9 @@
 {
+  "rule-of-72": "rule-of-72",
+  "apy-apr-converter": "apy-apr-converter",
+  "present-value": "present-value",
+  "sales-commission": "sales-commission",
+  "overtime-pay": "overtime-pay",
   "one-rep-max": "one-rep-max",
   "body-surface-area": "body-surface-area",
   "waist-to-height-ratio": "waist-to-height-ratio",
