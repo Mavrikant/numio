@@ -9,7 +9,13 @@
 
 import type { LocalizedString } from "./i18n";
 
-export type ToolCategory = "data-analysis" | "visualization" | "statistics" | "security";
+export type ToolCategory =
+  | "data-analysis"
+  | "visualization"
+  | "statistics"
+  | "security"
+  | "text"
+  | "developer";
 
 export interface ToolI18nBundle {
   readonly title: string;
