@@ -133,6 +133,21 @@ const buildIsoForAttr = BUILD_TIME;
       <p>
         {t(locale, "footer.copyright")} {currentYear}
       </p>
+
+      {/* PWA install button — hidden by default; JS shows it on supported browsers */}
+      <button
+        id="pwa-install-btn"
+        onclick="window._triggerPwaInstall && window._triggerPwaInstall()"
+        class="hidden items-center gap-1.5 rounded-md border border-brand-500 px-3 py-1.5 text-xs font-medium text-brand-600 transition-colors hover:bg-brand-50 dark:border-brand-400 dark:text-brand-400 dark:hover:bg-brand-950"
+        aria-label={t(locale, "pwa.install")}
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 2v13m0 0-4-4m4 4 4-4"/>
+          <rect x="3" y="16" width="18" height="6" rx="2"/>
+        </svg>
+        {t(locale, "pwa.install")}
+      </button>
+
       <p>
         {t(locale, "footer.lastUpdated")}:{" "}
         <time datetime={buildIsoForAttr} lang={bcp47(locale)}>
