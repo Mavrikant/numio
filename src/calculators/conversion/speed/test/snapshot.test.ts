@@ -1,8 +1,12 @@
-import { describe, it, expect } from "vitest";
+import { describe, it } from "vitest";
 import calculator from "../definition";
+import { assertDefinitionShape } from "@/test-utils";
 
-describe("Speed definition — snapshot", () => {
-  it("matches expected definition shape", () => {
-    expect(calculator).toMatchSnapshot();
+describe("speed definition shape", () => {
+  it("satisfies the CalculatorDefinition contract", () => {
+    assertDefinitionShape(calculator, {
+      slug: "speed",
+      category: "conversion",
+    });
   });
 });

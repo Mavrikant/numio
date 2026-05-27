@@ -1,9 +1,12 @@
-import { describe, it, expect } from "vitest";
-import definition from "../definition";
+import { describe, it } from "vitest";
+import calculator from "../definition";
+import { assertDefinitionShape } from "@/test-utils";
 
-describe("Exponent — snapshot", () => {
-  it("has correct shape", () => {
-    expect(definition.slug).toBe("exponent");
-    expect(definition.inputs.length).toBeGreaterThan(0);
+describe("exponent definition shape", () => {
+  it("satisfies the CalculatorDefinition contract", () => {
+    assertDefinitionShape(calculator, {
+      slug: "exponent",
+      category: "math",
+    });
   });
 });

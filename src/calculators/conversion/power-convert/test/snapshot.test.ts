@@ -1,1 +1,12 @@
-import { describe, it, expect } from "vitest"; import definition from "../definition"; describe("power-convert — snapshot", () => { it("matches calculator definition shape", () => { expect(definition.slug).toBeDefined(); expect(definition.category).toBe("conversion"); expect(definition.inputs.length).toBeGreaterThan(0); expect(definition.outputs.length).toBeGreaterThan(0); }); });
+import { describe, it } from "vitest";
+import calculator from "../definition";
+import { assertDefinitionShape } from "@/test-utils";
+
+describe("power-convert definition shape", () => {
+  it("satisfies the CalculatorDefinition contract", () => {
+    assertDefinitionShape(calculator, {
+      slug: "power-convert",
+      category: "conversion",
+    });
+  });
+});

@@ -1,12 +1,12 @@
-import { describe, it, expect } from "vitest";
+import { describe, it } from "vitest";
 import calculator from "../definition";
+import { assertDefinitionShape } from "@/test-utils";
 
-describe("Wire Gauge — definition shape", () => {
-  it("matches calculator contract", () => {
-    expect(calculator.slug).toBe("wire-gauge");
-    expect(calculator.category).toBe("engineering");
-    expect(calculator.inputs.length).toBe(6);
-    expect(calculator.outputs.length).toBe(6);
-    expect(calculator.meta.references.length).toBeGreaterThanOrEqual(1);
+describe("wire-gauge definition shape", () => {
+  it("satisfies the CalculatorDefinition contract", () => {
+    assertDefinitionShape(calculator, {
+      slug: "wire-gauge",
+      category: "engineering",
+    });
   });
 });

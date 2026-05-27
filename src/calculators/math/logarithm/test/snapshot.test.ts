@@ -1,10 +1,12 @@
-import { describe, it, expect } from "vitest";
-import definition from "../definition";
+import { describe, it } from "vitest";
+import calculator from "../definition";
+import { assertDefinitionShape } from "@/test-utils";
 
-describe("Logarithm — snapshot", () => {
-  it("has correct shape", () => {
-    expect(definition.slug).toBe("logarithm");
-    expect(definition.inputs.length).toBe(2);
-    expect(definition.outputs.length).toBe(4);
+describe("logarithm definition shape", () => {
+  it("satisfies the CalculatorDefinition contract", () => {
+    assertDefinitionShape(calculator, {
+      slug: "logarithm",
+      category: "math",
+    });
   });
 });

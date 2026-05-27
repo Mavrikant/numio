@@ -1,12 +1,12 @@
-import { describe, it, expect } from "vitest";
+import { describe, it } from "vitest";
 import calculator from "../definition";
+import { assertDefinitionShape } from "@/test-utils";
 
-describe("Capacitor — definition shape", () => {
-  it("matches calculator contract", () => {
-    expect(calculator.slug).toBe("capacitor");
-    expect(calculator.category).toBe("engineering");
-    expect(calculator.inputs.length).toBe(3);
-    expect(calculator.outputs.length).toBe(4);
-    expect(calculator.meta.references.length).toBeGreaterThanOrEqual(1);
+describe("capacitor definition shape", () => {
+  it("satisfies the CalculatorDefinition contract", () => {
+    assertDefinitionShape(calculator, {
+      slug: "capacitor",
+      category: "engineering",
+    });
   });
 });

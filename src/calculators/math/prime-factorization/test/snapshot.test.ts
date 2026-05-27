@@ -1,8 +1,12 @@
-import { describe, it, expect } from "vitest";
-import definition from "../definition";
+import { describe, it } from "vitest";
+import calculator from "../definition";
+import { assertDefinitionShape } from "@/test-utils";
 
-describe("prime-factorization snapshot", () => {
-  it("definition shape is correct", () => {
-    expect(definition).toMatchSnapshot();
+describe("prime-factorization definition shape", () => {
+  it("satisfies the CalculatorDefinition contract", () => {
+    assertDefinitionShape(calculator, {
+      slug: "prime-factorization",
+      category: "math",
+    });
   });
 });

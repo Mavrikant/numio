@@ -1,8 +1,12 @@
-import { describe, it, expect } from "vitest";
-import definition from "../definition";
+import { describe, it } from "vitest";
+import calculator from "../definition";
+import { assertDefinitionShape } from "@/test-utils";
 
-describe("lcm-gcd snapshot", () => {
-  it("definition shape is correct", () => {
-    expect(definition).toMatchSnapshot();
+describe("lcm-gcd definition shape", () => {
+  it("satisfies the CalculatorDefinition contract", () => {
+    assertDefinitionShape(calculator, {
+      slug: "lcm-gcd",
+      category: "math",
+    });
   });
 });

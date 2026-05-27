@@ -1,9 +1,12 @@
-import { describe, it, expect } from "vitest";
-import definition from "../definition";
+import { describe, it } from "vitest";
+import calculator from "../definition";
+import { assertDefinitionShape } from "@/test-utils";
 
-describe("Quadratic — snapshot", () => {
-  it("has correct shape", () => {
-    expect(definition.slug).toBe("quadratic");
-    expect(definition.meta.references.length).toBeGreaterThan(0);
+describe("quadratic definition shape", () => {
+  it("satisfies the CalculatorDefinition contract", () => {
+    assertDefinitionShape(calculator, {
+      slug: "quadratic",
+      category: "math",
+    });
   });
 });

@@ -1,8 +1,12 @@
-import { describe, it, expect } from "vitest";
-import definition from "../definition";
+import { describe, it } from "vitest";
+import calculator from "../definition";
+import { assertDefinitionShape } from "@/test-utils";
 
-describe("Numeral System Converter - snapshot", () => {
-  it("should have correct definition shape", () => {
-    expect(definition).toMatchSnapshot();
+describe("numeral-system definition shape", () => {
+  it("satisfies the CalculatorDefinition contract", () => {
+    assertDefinitionShape(calculator, {
+      slug: "numeral-system",
+      category: "conversion",
+    });
   });
 });

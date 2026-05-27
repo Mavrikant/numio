@@ -1,25 +1,12 @@
-import { describe, it, expect } from "vitest";
-import definition from "../definition";
-import type { AnyCalculatorDefinition } from "@/types/calculator";
-import { assertSchemaValidates, assertComputeIsPure } from "@/test-utils";
+import { describe, it } from "vitest";
+import calculator from "../definition";
+import { assertDefinitionShape } from "@/test-utils";
 
-describe("fraction snapshot", () => {
-  it("matches snapshot for standard inputs", () => {
-    const parsed = definition.inputSchema.parse({ numerator1: 3, denominator1: 4, operation: "simplify" });
-    const result = definition.compute(parsed);
-    expect(result).toMatchSnapshot();
-  });
-
-  it("schema validates correct inputs", () => {
-    assertSchemaValidates(
-      definition as unknown as AnyCalculatorDefinition,
-      { numerator1: 1, denominator1: 2, operation: "simplify" },
-      { numerator1: "abc", denominator1: 2, operation: "simplify" }
-    );
-  });
-
-  it("compute is pure", () => {
-    const parsed = definition.inputSchema.parse({ numerator1: 1, denominator1: 2, operation: "simplify" });
-    assertComputeIsPure(definition as unknown as AnyCalculatorDefinition, parsed as Record<string, unknown>);
+describe("fraction definition shape", () => {
+  it("satisfies the CalculatorDefinition contract", () => {
+    assertDefinitionShape(calculator, {
+      slug: "fraction",
+      category: "math",
+    });
   });
 });

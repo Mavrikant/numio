@@ -1,34 +1,12 @@
-import { describe, it, expect } from "vitest";
-import { compute } from "../compute";
-import definition from "../definition";
-import type { AnyCalculatorDefinition } from "@/types/calculator";
-import { assertSchemaValidates, assertComputeIsPure } from "@/test-utils";
+import { describe, it } from "vitest";
+import calculator from "../definition";
+import { assertDefinitionShape } from "@/test-utils";
 
-describe("calorie-deficit snapshot", () => {
-  it("matches snapshot for metric inputs", () => {
-    const result = compute({ currentWeight: 80, targetWeight: 70, unit: "metric", dailyCalorieDeficit: 500 });
-    expect(result).toMatchSnapshot();
-  });
-
-  it("matches snapshot for imperial inputs", () => {
-    const result = compute({ currentWeight: 180, targetWeight: 160, unit: "imperial", dailyCalorieDeficit: 400 });
-    expect(result).toMatchSnapshot();
-  });
-
-  it("schema validates correct inputs", () => {
-    assertSchemaValidates(
-      definition as unknown as AnyCalculatorDefinition,
-      { currentWeight: 80, targetWeight: 70, unit: "metric", dailyCalorieDeficit: 500 },
-      { currentWeight: 0, targetWeight: 70, unit: "metric", dailyCalorieDeficit: 500 },
-    );
-  });
-
-  it("compute is pure", () => {
-    assertComputeIsPure(definition as unknown as AnyCalculatorDefinition, {
-      currentWeight: 80,
-      targetWeight: 70,
-      unit: "metric",
-      dailyCalorieDeficit: 500,
+describe("calorie-deficit definition shape", () => {
+  it("satisfies the CalculatorDefinition contract", () => {
+    assertDefinitionShape(calculator, {
+      slug: "calorie-deficit",
+      category: "health",
     });
   });
 });

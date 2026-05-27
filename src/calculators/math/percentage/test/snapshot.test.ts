@@ -1,8 +1,12 @@
-import { describe, it, expect } from "vitest";
-import definition from "../definition";
+import { describe, it } from "vitest";
+import calculator from "../definition";
+import { assertDefinitionShape } from "@/test-utils";
 
-describe("Percentage Calculator - Definition Snapshot", () => {
-  it("should match calculator definition shape", () => {
-    expect(definition).toMatchSnapshot();
+describe("percentage definition shape", () => {
+  it("satisfies the CalculatorDefinition contract", () => {
+    assertDefinitionShape(calculator, {
+      slug: "percentage",
+      category: "math",
+    });
   });
 });

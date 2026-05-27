@@ -1,12 +1,12 @@
-import { describe, it, expect } from "vitest";
-import definition from "../definition";
+import { describe, it } from "vitest";
+import calculator from "../definition";
+import { assertDefinitionShape } from "@/test-utils";
 
-describe("scientific-notation snapshot", () => {
-  it("definition has required fields", () => {
-    expect(definition.slug).toBeDefined();
-    expect(definition.category).toBe("math");
-    expect(definition.priority).toBeDefined();
-    expect(definition.inputs.length).toBeGreaterThan(0);
-    expect(definition.outputs.length).toBeGreaterThan(0);
+describe("scientific-notation definition shape", () => {
+  it("satisfies the CalculatorDefinition contract", () => {
+    assertDefinitionShape(calculator, {
+      slug: "scientific-notation",
+      category: "math",
+    });
   });
 });

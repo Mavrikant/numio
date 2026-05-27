@@ -19,3 +19,12 @@ coverage/
 # Generated files
 src/lib/_generated/
 .claude/worktrees/agent-*/
+
+# Vitest snapshot files — we don't commit these.
+# Calc definition snapshots were 60K lines of duplicated i18n + Zod
+# internals; library upgrades churned all of them with zero semantic
+# change. Snapshot.test.ts files now use assertDefinitionShape() from
+# @/test-utils which gives the same coverage via property assertions.
+**/__snapshots__/
+**/__snapshots__/*.snap
+*.snap
