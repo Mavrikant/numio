@@ -1,0 +1,29 @@
+# HMAC Generator
+
+Compute an **HMAC** (Hash-based Message Authentication Code) from a secret key and a message, right in your browser. HMAC proves two things at once: that a message came from someone who holds the shared secret key, and that it hasn't been altered in transit.
+
+## How HMAC differs from a plain hash
+
+A plain hash like SHA-256 can be computed by anyone, so it only detects accidental corruption — an attacker who changes the message can simply recompute the hash. HMAC mixes a **secret key** into the hashing process, so only parties who know the key can produce or verify a valid code. It's the standard building block for API request signing, webhook verification, and session tokens.
+
+## Using the tool
+
+1. Enter the **secret key** shared between sender and receiver.
+2. Enter the **message** to authenticate.
+3. Pick a hash — **HMAC-SHA256** is the common default; SHA-384 and SHA-512 offer larger outputs.
+4. Choose **hex** or **Base64** output to match what your API expects.
+
+Both key and message are treated as UTF-8 text.
+
+## Verifying instead of generating
+
+To verify a received message, compute the HMAC over it with the same key and compare against the code you were sent. In production code, always compare using a **constant-time** comparison to avoid timing side channels.
+
+## Privacy
+
+The key and message never leave your browser — the HMAC is computed locally with the Web Crypto API.
+
+## References
+
+- RFC 2104, *HMAC: Keyed-Hashing for Message Authentication*, IETF.
+- RFC 4231, *HMAC-SHA Identifiers and Test Vectors.*

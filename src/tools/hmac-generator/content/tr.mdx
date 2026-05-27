@@ -1,0 +1,29 @@
+# HMAC Üretici
+
+Bir gizli anahtar ve mesajdan **HMAC** (Hash tabanlı Mesaj Doğrulama Kodu) hesaplayın — doğrudan tarayıcınızda. HMAC iki şeyi aynı anda kanıtlar: mesajın paylaşılan gizli anahtarı bilen birinden geldiğini ve iletim sırasında değiştirilmediğini.
+
+## HMAC'in düz hash'ten farkı
+
+SHA-256 gibi düz bir hash herkes tarafından hesaplanabilir, bu yüzden yalnızca kazara bozulmayı tespit eder — mesajı değiştiren bir saldırgan hash'i kolayca yeniden hesaplayabilir. HMAC, hash'leme sürecine bir **gizli anahtar** karıştırır; böylece yalnızca anahtarı bilen taraflar geçerli bir kod üretebilir veya doğrulayabilir. API istek imzalama, webhook doğrulama ve oturum jetonları için standart yapı taşıdır.
+
+## Aracı kullanma
+
+1. Gönderici ve alıcı arasında paylaşılan **gizli anahtarı** girin.
+2. Doğrulanacak **mesajı** girin.
+3. Bir hash seçin — **HMAC-SHA256** yaygın varsayılandır; SHA-384 ve SHA-512 daha büyük çıktılar sunar.
+4. API'nizin beklediğine uyacak şekilde **hex** veya **Base64** çıktısı seçin.
+
+Hem anahtar hem de mesaj UTF-8 metin olarak ele alınır.
+
+## Üretmek yerine doğrulamak
+
+Alınan bir mesajı doğrulamak için aynı anahtarla onun HMAC'ini hesaplayın ve size gönderilen kodla karşılaştırın. Üretim kodunda, zamanlama yan kanallarından kaçınmak için her zaman **sabit zamanlı** karşılaştırma kullanın.
+
+## Gizlilik
+
+Anahtar ve mesaj tarayıcınızdan asla çıkmaz — HMAC, Web Crypto API ile yerel olarak hesaplanır.
+
+## Kaynaklar
+
+- RFC 2104, *HMAC: Keyed-Hashing for Message Authentication*, IETF.
+- RFC 4231, *HMAC-SHA Identifiers and Test Vectors.*

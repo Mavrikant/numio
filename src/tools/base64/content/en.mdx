@@ -1,0 +1,25 @@
+# Base64 Encoder / Decoder
+
+Convert text to Base64 and back, right in your browser. Base64 represents arbitrary bytes using 64 printable ASCII characters, which makes binary or non-ASCII data safe to embed in places that expect plain text — JSON fields, data URIs, email, and URLs.
+
+## Encoding and decoding
+
+- **Encode** turns your text into Base64. The text is first converted to **UTF-8 bytes**, so emoji and non-English characters round-trip perfectly.
+- **Decode** turns Base64 back into the original text. Whitespace is ignored, and both padded and unpadded input are accepted.
+
+## Options
+
+- **URL-safe** swaps the `+` and `/` characters for `-` and `_`, so the result can drop straight into a URL or filename without percent-encoding.
+- **Padding** controls the trailing `=` characters. Standard Base64 pads the output to a multiple of four characters; turning padding off produces the shorter, unpadded form that some APIs and JWT components expect.
+
+## Base64 is not encryption
+
+This is worth repeating: Base64 provides **no confidentiality**. It is a reversible encoding that anyone can decode in seconds. Never use it to "hide" passwords, tokens, or secrets. To protect data, use real encryption; to authenticate it, use an [HMAC](../hmac-generator/) or signature.
+
+## Privacy
+
+All encoding and decoding happen locally in your browser. Nothing is uploaded.
+
+## References
+
+- RFC 4648, *The Base16, Base32, and Base64 Data Encodings*, IETF.

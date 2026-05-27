@@ -1,0 +1,25 @@
+# Base64 Kodlayıcı / Çözücü
+
+Metni Base64'e ve geri dönüştürün — doğrudan tarayıcınızda. Base64, rastgele baytları 64 yazdırılabilir ASCII karakteriyle temsil eder; bu da ikili veya ASCII dışı verileri düz metin bekleyen yerlere — JSON alanları, veri URI'leri, e-posta ve URL'ler — güvenle gömmeyi sağlar.
+
+## Kodlama ve çözme
+
+- **Kodla**, metninizi Base64'e dönüştürür. Metin önce **UTF-8 baytlarına** çevrilir, böylece emoji ve Türkçe karakterler eksiksiz şekilde geri döner.
+- **Çöz**, Base64'ü orijinal metne geri dönüştürür. Boşluklar yok sayılır; hem dolgulu hem dolgusuz girdi kabul edilir.
+
+## Seçenekler
+
+- **URL-güvenli**, `+` ve `/` karakterlerini `-` ve `_` ile değiştirir; böylece sonuç yüzde kodlaması olmadan doğrudan bir URL veya dosya adına yerleştirilebilir.
+- **Dolgu**, sondaki `=` karakterlerini denetler. Standart Base64, çıktıyı dörtün katına tamamlar; dolguyu kapatmak, bazı API'lerin ve JWT bileşenlerinin beklediği daha kısa, dolgusuz biçimi üretir.
+
+## Base64 şifreleme değildir
+
+Tekrar etmekte fayda var: Base64 **hiçbir gizlilik sağlamaz**. Herkesin saniyeler içinde çözebileceği tersine çevrilebilir bir kodlamadır. Parolaları, jetonları veya sırları "gizlemek" için asla kullanmayın. Veriyi korumak için gerçek şifreleme; doğrulamak için bir [HMAC](../hmac-generator/) veya imza kullanın.
+
+## Gizlilik
+
+Tüm kodlama ve çözme işlemleri tarayıcınızda yerel olarak gerçekleşir. Hiçbir şey yüklenmez.
+
+## Kaynaklar
+
+- RFC 4648, *The Base16, Base32, and Base64 Data Encodings*, IETF.

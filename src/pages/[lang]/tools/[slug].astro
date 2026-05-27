@@ -15,6 +15,10 @@ import ScatterTool from "@/tools/scatter-plot/Tool";
 import TimeSeriesTool from "@/tools/time-series/Tool";
 import StatsTool from "@/tools/stats-dashboard/Tool";
 import PasswordGeneratorTool from "@/tools/password-generator/Tool";
+import HashGeneratorTool from "@/tools/hash-generator/Tool";
+import Base64Tool from "@/tools/base64/Tool";
+import UuidGeneratorTool from "@/tools/uuid-generator/Tool";
+import HmacGeneratorTool from "@/tools/hmac-generator/Tool";
 
 export async function getStaticPaths() {
   const tools = getAllTools();
@@ -123,6 +127,10 @@ const Content = mdxModule
         {tool.slug === "time-series" && <TimeSeriesTool client:only="react" locale={locale} />}
         {tool.slug === "stats-dashboard" && <StatsTool client:only="react" locale={locale} />}
         {tool.slug === "password-generator" && <PasswordGeneratorTool client:only="react" locale={locale} />}
+        {tool.slug === "hash-generator" && <HashGeneratorTool client:only="react" locale={locale} />}
+        {tool.slug === "base64" && <Base64Tool client:only="react" locale={locale} />}
+        {tool.slug === "uuid-generator" && <UuidGeneratorTool client:only="react" locale={locale} />}
+        {tool.slug === "hmac-generator" && <HmacGeneratorTool client:only="react" locale={locale} />}
       </div>
 
       {Content && (

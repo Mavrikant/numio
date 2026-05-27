@@ -1,0 +1,26 @@
+# UUID Generator
+
+Generate random **version-4 UUIDs** in your browser — one at a time or thousands at once. Each UUID is built from cryptographically-secure random bytes via `crypto.getRandomValues`, so the values are unpredictable and safe to use as identifiers.
+
+## What is a UUID?
+
+A UUID (Universally Unique IDentifier, also called a GUID) is a 128-bit value usually written as 32 hexadecimal digits in five hyphen-separated groups:
+
+> `xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx`
+
+The `4` marks it as version 4 (random), and the `y` is one of `8`, `9`, `a`, or `b`, encoding the variant. The remaining **122 bits are random**. That's enough entropy that you could generate billions of UUIDs and still have a vanishingly small chance of a collision — which is why they're ideal as database primary keys, request IDs, file names, and idempotency keys, without any central coordination.
+
+## Options
+
+- **How many** — generate up to 1000 at once for seeding test data.
+- **Uppercase** — emit `A–F` instead of `a–f`.
+- **Include hyphens** — turn off to get the compact 32-character form.
+
+## Privacy
+
+UUIDs are generated entirely in your browser. Nothing is sent anywhere.
+
+## References
+
+- RFC 9562, *Universally Unique IDentifiers (UUIDs)*, IETF.
+- MDN Web Docs, *Crypto.getRandomValues().*
