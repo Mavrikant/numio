@@ -119,9 +119,10 @@ export function CalculatorView({ calc, locale, initialInputs }: CalculatorViewPr
   }>(() => {
     const parsed = calc.inputSchema.safeParse(inputs);
     if (!parsed.success) {
-      const errs = parsed.error.errors.map(
-        (e: { path: (string | number)[]; message: string }) =>
-          `${e.path.join(".")}: ${e.message}`,
+      // Zod 4: issue.path is PropertyKey[] (string | number | symbol).
+      // We stringify each segment to format the error message safely.
+      const errs = parsed.error.issues.map(
+        (e) => `${e.path.map(String).join(".")}: ${e.message}`,
       );
       return { result: null, errors: errs };
     }
@@ -417,9 +418,10 @@ export function CalculatorViewWithViz({
   }>(() => {
     const parsed = calc.inputSchema.safeParse(inputs);
     if (!parsed.success) {
-      const errs = parsed.error.errors.map(
-        (e: { path: (string | number)[]; message: string }) =>
-          `${e.path.join(".")}: ${e.message}`,
+      // Zod 4: issue.path is PropertyKey[] (string | number | symbol).
+      // We stringify each segment to format the error message safely.
+      const errs = parsed.error.issues.map(
+        (e) => `${e.path.map(String).join(".")}: ${e.message}`,
       );
       return { result: null, errors: errs };
     }

@@ -37,7 +37,7 @@ const INGREDIENT_DENSITY: Record<string, number> = {
   oats: 0.5,
 };
 
-export interface CookingConversionResult {
+export interface CookingConversionResult extends Record<string, unknown> {
   fromValue: number;
   fromUnit: string;
   toValue: number;
@@ -60,7 +60,7 @@ export function compute(inputs: {
   // If we're converting TO grams and have an ingredient
   if (toUnit === "g" && ingredient) {
     // First convert volume to mL
-    const mlValue = convertVolumeToMl(value, fromUnit);
+    const mlValue = convertVolumeToMl(value, fromUnit as VolumeUnit);
     // Then use density to convert to grams
     const density = INGREDIENT_DENSITY[ingredient.toLowerCase()] || INGREDIENT_DENSITY.water;
     resultValue = mlValue * density;
@@ -70,7 +70,7 @@ export function compute(inputs: {
   else if (fromUnit === "g" && ingredient) {
     const density = INGREDIENT_DENSITY[ingredient.toLowerCase()] || INGREDIENT_DENSITY.water;
     const mlValue = value / density;
-    resultValue = convertMlToVolume(mlValue, toUnit);
+    resultValue = convertMlToVolume(mlValue, toUnit as VolumeUnit);
     weightGrams = value;
   }
   // Pure volume conversions
@@ -79,10 +79,10 @@ export function compute(inputs: {
     const density = INGREDIENT_DENSITY.water;
     if (fromUnit === "g") {
       const mlValue = value / density;
-      resultValue = convertMlToVolume(mlValue, toUnit);
+      resultValue = convertMlToVolume(mlValue, toUnit as VolumeUnit);
       weightGrams = value;
     } else {
-      const mlValue = convertVolumeToMl(value, fromUnit);
+      const mlValue = convertVolumeToMl(value, fromUnit as VolumeUnit);
       resultValue = mlValue * density;
       weightGrams = resultValue;
     }
@@ -105,7 +105,9 @@ export function compute(inputs: {
 /**
  * Convert any cooking volume unit to milliliters
  */
-function convertVolumeToMl(value: number, unit: "cup" | "tbsp" | "tsp" | "ml" | "l"): number {
+type VolumeUnit = "cup" | "tbsp" | "tsp" | "ml" | "l";
+
+function convertVolumeToMl(value: number, unit: VolumeUnit): number {
   const conversion = COOKING_VOLUME_CONVERSIONS[unit];
   if (!conversion) {
     throw new Error(`Unknown volume unit: ${unit}`);
@@ -116,7 +118,7 @@ function convertVolumeToMl(value: number, unit: "cup" | "tbsp" | "tsp" | "ml" | 
 /**
  * Convert milliliters to a specific cooking volume unit
  */
-function convertMlToVolume(ml: number, unit: "cup" | "tbsp" | "tsp" | "ml" | "l"): number {
+function convertMlToVolume(ml: number, unit: VolumeUnit): number {
   const conversion = COOKING_VOLUME_CONVERSIONS[unit];
   if (!conversion) {
     throw new Error(`Unknown volume unit: ${unit}`);

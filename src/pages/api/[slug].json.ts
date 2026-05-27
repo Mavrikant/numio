@@ -50,15 +50,28 @@ function serializeInput(inp: InputDef, calc: AnyCalculatorDefinition) {
   }
 
   if (t.kind === "select") {
-    // Resolve option labels from i18n.options if available
-    const optionLabels = i18nBundle.options?.[inp.id] ?? {};
+    // Resolve option labels from i18n.options if available.
+    // Bundle.options may be flat (`{ binary: "Binary" }`) or nested
+    // (`{ unit: { binary: "Binary" } }`). Try nested first, fall back to flat.
+    const opts = i18nBundle.options;
+    const nested = opts?.[inp.id];
+    const nestedMap: Record<string, string> | null =
+      typeof nested === "object" && nested !== null
+        ? (nested as Record<string, string>)
+        : null;
     return {
       ...base,
       type: "select",
-      options: t.options.map((o) => ({
-        value: o.value,
-        label: optionLabels[o.value] ?? o.value,
-      })),
+      options: t.options.map((o) => {
+        const flat = opts?.[o.value];
+        return {
+          value: o.value,
+          label:
+            nestedMap?.[o.value] ??
+            (typeof flat === "string" ? flat : undefined) ??
+            o.value,
+        };
+      }),
     };
   }
 

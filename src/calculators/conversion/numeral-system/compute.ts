@@ -4,7 +4,7 @@
  * Supports negative numbers and fractional parts
  */
 
-export interface NumeralSystemResult {
+export interface NumeralSystemResult extends Record<string, unknown> {
   decimal: string;
   binary: string;
   octal: string;

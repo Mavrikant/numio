@@ -20,7 +20,10 @@ export function runNumericTests<
   cases: ReadonlyArray<NumericTestCase<TInputs>>,
 ): void {
   for (const tc of cases) {
-    const parsed = calc.inputSchema.parse(tc.inputs);
+    // Zod 4 parse() returns the schema's output type, which the compiler
+    // sees as `unknown` from this generic perspective. Cast through the
+    // declared TInputs to keep the compute() call type-safe.
+    const parsed = calc.inputSchema.parse(tc.inputs) as TInputs;
     const result = calc.compute(parsed) as Record<string, unknown>;
     for (const [key, expected] of Object.entries(tc.expected)) {
       const actual = result[key];

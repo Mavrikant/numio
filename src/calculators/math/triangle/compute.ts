@@ -268,14 +268,18 @@ export function compute(inputs: TriangleInputs): TriangleResult {
       throw new Error("Unknown method");
   }
 
+  // TS 6 resolves `result.sideA` to `unknown` because `TriangleResult
+  // extends Record<string, unknown>` (the index signature wins over the
+  // declared `number` for inferred narrowing). Cast through `as number`
+  // here — the helper return types guarantee numeric values.
   const triangleType = classifyTriangle(
-    result.sideA,
-    result.sideB,
-    result.sideC
+    result.sideA as number,
+    result.sideB as number,
+    result.sideC as number,
   );
 
   return {
     ...result,
     triangleType,
-  };
+  } as TriangleResult;
 }

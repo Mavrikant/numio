@@ -30,6 +30,7 @@ export type UnitKey =
   | "percent" | "ratio"
   | "usd" | "eur" | "try" | "gbp" | "jpy"
   | "watt" | "kw" | "hp" | "joule" | "kcal" | "kj" | "cal" | "kwh" | "btu" | "ftlbf" | "ev"
+  | "farad" | "hertz" | "coulomb" | "count"
   | "volt" | "amp" | "ohm"
   | "pa" | "kpa" | "bar" | "psi" | "atm" | "mmhg" | "inhg"
   | "kmh" | "mph" | "ms" | "knots" | "fts"
@@ -48,7 +49,10 @@ export type SelectInputDef = {
   readonly kind: "select";
   readonly options: ReadonlyArray<{
     readonly value: string;
-    readonly i18nKey: string;
+    /** Translation lookup key (preferred). When omitted, `label` is shown. */
+    readonly i18nKey?: string;
+    /** Inline label (fallback when i18nKey/i18n lookup miss). */
+    readonly label?: string;
   }>;
 };
 
@@ -159,6 +163,8 @@ export interface CalculatorMeta {
   readonly compareEnabled?: boolean;
   /** When true, show the NaturalLanguageInput component above the form. */
   readonly nlEnabled?: boolean;
+  /** Free-form description placed near the formula (some calcs author one). */
+  readonly description?: string;
 }
 
 export interface CalculatorDefinition<
@@ -171,7 +177,7 @@ export interface CalculatorDefinition<
   readonly icon: string;
   readonly inputs: ReadonlyArray<InputDef>;
   readonly outputs: ReadonlyArray<OutputDef>;
-  readonly inputSchema: ZodTypeAny;
+  readonly inputSchema: ZodType;
   readonly compute: ComputeFn<TInputs, TResult>;
   readonly visualizations?: ReadonlyArray<VisualizationDef<TResult, TInputs>>;
   readonly i18n: CalculatorI18n;

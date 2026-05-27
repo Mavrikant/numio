@@ -52,7 +52,21 @@ export interface CalculatorI18nBundle {
     Record<string, string | Readonly<Record<string, string>>>
   >;
   readonly errors?: Readonly<Record<string, string>>;
-  readonly faq?: ReadonlyArray<{ q: string; a: string }>;
+  /**
+   * FAQ list. Two shapes are accepted to match the two authoring styles
+   * that grew up in this codebase:
+   *   - `{ q, a }` — terser; used by the golden-reference BMI calc and
+   *     newer Sonnet-generated bundles.
+   *   - `{ question, answer }` — more explicit; used by most conversion-
+   *     calc bundles.
+   * Consumers normalise to whichever fields are present.
+   */
+  readonly faq?: ReadonlyArray<{
+    readonly q?: string;
+    readonly a?: string;
+    readonly question?: string;
+    readonly answer?: string;
+  }>;
 }
 
 export interface InputLabels {

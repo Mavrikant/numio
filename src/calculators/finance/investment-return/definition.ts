@@ -44,7 +44,7 @@ export default defineCalculator({
     {
       id: "finalValue",
       type: { kind: "number", min: 1, max: 100_000_000, step: 100, unit: "usd" },
-      defaultValue: undefined,
+      defaultValue: 0,
       required: false,
     },
     {

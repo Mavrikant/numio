@@ -242,10 +242,10 @@ export function buildFaqJsonLd(
     "@type": "FAQPage",
     mainEntity: bundle.faq.map((item) => ({
       "@type": "Question",
-      name: item.q,
+      name: item.q ?? item.question ?? "",
       acceptedAnswer: {
         "@type": "Answer",
-        text: item.a,
+        text: item.a ?? item.answer ?? "",
       },
     })),
   };

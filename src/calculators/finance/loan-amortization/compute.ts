@@ -9,7 +9,7 @@ export const inputSchema = z.object({
 
 export type LoanAmortizationInputs = z.infer<typeof inputSchema>;
 
-export interface AmortizationRow {
+export interface AmortizationRow extends Record<string, unknown> {
   readonly month: number;
   readonly date?: string;
   readonly payment: number;
