@@ -150,10 +150,65 @@ const buildIsoForAttr = BUILD_TIME;
 
       <p>
         {t(locale, "footer.lastUpdated")}:{" "}
-        <time datetime={buildIsoForAttr} lang={bcp47(locale)}>
+        <time
+          datetime={buildIsoForAttr}
+          lang={bcp47(locale)}
+          data-local-datetime
+          data-local-format="datetime"
+        >
           {buildHuman}
         </time>
       </p>
     </div>
   </div>
 </footer>
+
+<!--
+  Client-side conversion of build-time UTC stamps into the visitor's
+  local timezone. We bake a deterministic UTC string at build time (good
+  for SEO + JSON-LD) and progressively enhance it after hydration so
+  users see the timestamp in their own clock.
+
+  Marker: `<time data-local-datetime data-local-format="date|datetime">`
+  Source of truth: the `datetime` attribute (ISO 8601 UTC).
+  Locale: `<html lang>` so a Turkish page still says "27 May 2026", just
+  in Europe/Istanbul time instead of UTC.
+-->
+<script is:inline>
+  (function () {
+    function localize() {
+      var nodes = document.querySelectorAll("time[data-local-datetime]");
+      if (!nodes.length) return;
+      var pageLang = document.documentElement.lang || undefined;
+      for (var i = 0; i < nodes.length; i++) {
+        var el = nodes[i];
+        var iso = el.getAttribute("datetime");
+        if (!iso) continue;
+        var d = new Date(iso);
+        if (isNaN(d.getTime())) continue;
+        var format = el.getAttribute("data-local-format") || "datetime";
+        var opts =
+          format === "date"
+            ? { year: "numeric", month: "short", day: "numeric" }
+            : {
+                year: "numeric",
+                month: "short",
+                day: "numeric",
+                hour: "2-digit",
+                minute: "2-digit",
+                hour12: false,
+              };
+        try {
+          el.textContent = new Intl.DateTimeFormat(pageLang, opts).format(d);
+        } catch (_) {
+          /* leave SSR fallback in place */
+        }
+      }
+    }
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", localize, { once: true });
+    } else {
+      localize();
+    }
+  })();
+</script>

@@ -27,8 +27,12 @@ export interface Props {
 
 const { calc, locale } = Astro.props;
 
-// Build-time date (YYYY-MM-DD)
-const lastReviewed = new Date().toISOString().slice(0, 10);
+// Build-time stamp. The `datetime` attribute keeps full ISO (UTC) for
+// SEO + JSON-LD; the visible text starts as a UTC YYYY-MM-DD fallback
+// and the shared `data-local-datetime` script in Footer.astro swaps it
+// to the visitor's local timezone after hydration.
+const lastReviewedIso = new Date().toISOString();
+const lastReviewed = lastReviewedIso.slice(0, 10);
 
 // i18n labels
 const labelFormula = t(locale, "authority.formula");
@@ -165,9 +169,18 @@ const hasContent = formulaHtml || hasRefs || accuracyNote || disclaimer;
         </div>
       )}
 
-      {/* Last reviewed */}
+      {/* Last reviewed — rendered in the visitor's local timezone by the
+          shared `data-local-datetime` enhancement in chrome/Footer.astro. */}
       <p class="text-xs text-slate-400 dark:text-slate-500">
-        {labelLastReviewed}: <time datetime={lastReviewed}>{lastReviewed}</time> {labelEditorialTeam}.
+        {labelLastReviewed}:{" "}
+        <time
+          datetime={lastReviewedIso}
+          data-local-datetime
+          data-local-format="date"
+        >
+          {lastReviewed}
+        </time>{" "}
+        {labelEditorialTeam}.
       </p>
 
     </div>
