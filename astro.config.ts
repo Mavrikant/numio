@@ -2,8 +2,13 @@ import { defineConfig } from "astro/config";
 import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
 import mdx from "@astrojs/mdx";
-import sitemap from "@astrojs/sitemap";
-import { SITE_URL, BASE_PATH, LOCALES, DEFAULT_LOCALE } from "./src/config/site";
+// @astrojs/sitemap is intentionally NOT used.
+// We ship a custom multi-sitemap suite under src/pages/sitemap-*.xml.ts with:
+//   - per-section split (calculators / tools / embed / api / pages)
+//   - <xhtml:link> hreflang annotations on every <url> entry
+//   - per-route <priority> and <changefreq> tuned for SEO
+//   - works in dev mode (the default integration only generates on build)
+import { SITE_URL, BASE_PATH } from "./src/config/site";
 
 export default defineConfig({
   site: SITE_URL,
@@ -17,12 +22,6 @@ export default defineConfig({
     react(),
     tailwind({ applyBaseStyles: false }),
     mdx(),
-    sitemap({
-      i18n: {
-        defaultLocale: DEFAULT_LOCALE,
-        locales: Object.fromEntries(LOCALES.map((l) => [l, l])),
-      },
-    }),
   ],
   vite: {
     resolve: {
