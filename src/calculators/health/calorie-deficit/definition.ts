@@ -88,6 +88,7 @@ export default defineCalculator({
   compute,
   i18n,
   meta: {
+    formulaLatex: "\\text{Weeks to Goal} = \\frac{\\text{Weight to Lose (kg)} \\times 7700}{\\text{Daily Deficit (kcal)} \\times 7}",
     references: [
       {
         title: "Hall KD et al. (2012). Quantification of the effect of energy imbalance on bodyweight.",

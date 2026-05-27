@@ -77,6 +77,7 @@ export default defineCalculator({
   compute,
   i18n,
   meta: {
+    formulaLatex: "\\text{BAC} = \\frac{\\text{alcohol (g)}}{\\text{weight (kg)} \\times r \\times 1000} \\times 100 - \\text{elimination rate} \\times t",
     references: [
       {
         title: "Widmark EMP (1932). Die theoretischen Grundlagen und die praktische Verwendbarkeit der gerichtlich-medizinischen Alkoholbestimmung.",

@@ -16,16 +16,15 @@ describe("bac snapshot", () => {
   });
 
   it("schema validates correct inputs", () => {
-    assertSchemaValidates(definition as AnyCalculatorDefinition, {
-      drinks: 2,
-      weightKg: 70,
-      sex: "male",
-      hoursElapsed: 1,
-    });
+    assertSchemaValidates(
+      definition as unknown as AnyCalculatorDefinition,
+      { drinks: 2, weightKg: 70, sex: "male", hoursElapsed: 1 },
+      { drinks: -1, weightKg: 70, sex: "male", hoursElapsed: 1 },
+    );
   });
 
   it("compute is pure", () => {
-    assertComputeIsPure(definition as AnyCalculatorDefinition, {
+    assertComputeIsPure(definition as unknown as AnyCalculatorDefinition, {
       drinks: 2,
       weightKg: 70,
       sex: "male",

@@ -5,6 +5,6 @@ import type { AnyCalculatorDefinition } from "@/types/calculator";
 
 describe("calorie-deficit i18n", () => {
   it("has all 12 locales with required fields", () => {
-    assertI18nComplete(definition as AnyCalculatorDefinition);
+    assertI18nComplete(definition as unknown as AnyCalculatorDefinition);
   });
 });

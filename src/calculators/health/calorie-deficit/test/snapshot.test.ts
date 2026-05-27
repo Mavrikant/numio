@@ -16,16 +16,15 @@ describe("calorie-deficit snapshot", () => {
   });
 
   it("schema validates correct inputs", () => {
-    assertSchemaValidates(definition as AnyCalculatorDefinition, {
-      currentWeight: 80,
-      targetWeight: 70,
-      unit: "metric",
-      dailyCalorieDeficit: 500,
-    });
+    assertSchemaValidates(
+      definition as unknown as AnyCalculatorDefinition,
+      { currentWeight: 80, targetWeight: 70, unit: "metric", dailyCalorieDeficit: 500 },
+      { currentWeight: 0, targetWeight: 70, unit: "metric", dailyCalorieDeficit: 500 },
+    );
   });
 
   it("compute is pure", () => {
-    assertComputeIsPure(definition as AnyCalculatorDefinition, {
+    assertComputeIsPure(definition as unknown as AnyCalculatorDefinition, {
       currentWeight: 80,
       targetWeight: 70,
       unit: "metric",
