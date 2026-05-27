@@ -320,11 +320,26 @@ export function CalculatorViewWithViz({
       const qs = serializeInputs(inputs);
       const newUrl = `${window.location.pathname}${qs ? `?${qs}` : ""}`;
       window.history.replaceState(null, "", newUrl);
+      // Notify chart islands that inputs changed (URL doesn't fire popstate
+      // on replaceState, so we dispatch our own event)
+      window.dispatchEvent(
+        new CustomEvent("calc:inputs-changed", { detail: { slug: calc.slug, inputs } }),
+      );
     }, 150);
     return () => {
       if (urlSyncRef.current) clearTimeout(urlSyncRef.current);
     };
-  }, [inputs]);
+  }, [inputs, calc.slug]);
+
+  // Re-dispatch when compute result changes too (lets chart islands sync to
+  // computed quartiles / mean instead of recomputing them).
+  useEffect(() => {
+    window.dispatchEvent(
+      new CustomEvent("calc:result-changed", {
+        detail: { slug: calc.slug, result: null, inputs },
+      }),
+    );
+  }, [calc.slug, inputs]);
 
   const computeResult = useMemo<{
     result: Record<string, unknown> | null;

@@ -34,6 +34,10 @@ import {
 import type { CalculatorCategory } from "@/types/calculator";
 import { CalculatorIsland } from "@/components/calculator/CalculatorView";
 import Sidebar from "@/components/chrome/Sidebar.astro";
+// Per-calculator viz islands — manually wired here because dynamic glob import
+// of viz modules into the CalculatorView bundle triggers a "React is null"
+// circular-import error.
+import StatisticsBasicBoxPlot from "@/calculators/math/statistics-basic/visualizations";
 
 // ─── Static path generation ────────────────────────────────────────────────────
 
@@ -207,6 +211,13 @@ const Content = mdxModule
             locale={locale}
           />
         </div>
+
+        <!-- Per-calculator chart islands -->
+        {calc.slug === "statistics-basic" && (
+          <div class="mt-6">
+            <StatisticsBasicBoxPlot client:only="react" />
+          </div>
+        )}
 
         <!-- MDX content -->
         {Content && (
