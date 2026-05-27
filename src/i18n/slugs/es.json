@@ -1,4 +1,9 @@
 {
+  "rule-of-72": "regla-del-72",
+  "apy-apr-converter": "conversor-apr-apy",
+  "present-value": "valor-presente",
+  "sales-commission": "comision-ventas",
+  "overtime-pay": "horas-extra",
   "one-rep-max": "1rm",
   "body-surface-area": "superficie-corporal",
   "waist-to-height-ratio": "indice-cintura-altura",
