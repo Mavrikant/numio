@@ -15,7 +15,12 @@
     "closeMenu": "Close menu",
     "skipToContent": "Skip to content",
     "mainNavigation": "Main navigation",
-    "tools": "Tools"
+    "tools": "Tools",
+    "sitemap": "Sitemap"
+  },
+  "sitemap": {
+    "title": "Sitemap",
+    "description": "Browse every calculator, converter, and tool on Numio in one place."
   },
   "actions": {
     "calculate": "Calculate",

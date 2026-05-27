@@ -15,7 +15,12 @@
     "closeMenu": "Menü schließen",
     "skipToContent": "Zum Inhalt springen",
     "mainNavigation": "Hauptnavigation",
-    "tools": "Werkzeuge"
+    "tools": "Werkzeuge",
+    "sitemap": "Sitemap"
+  },
+  "sitemap": {
+    "title": "Sitemap",
+    "description": "Durchsuchen Sie alle Rechner, Umrechner und Werkzeuge auf Numio an einem Ort."
   },
   "actions": {
     "calculate": "Berechnen",

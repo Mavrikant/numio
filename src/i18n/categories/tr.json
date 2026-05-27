@@ -4,5 +4,11 @@
   "engineering": "Mühendislik",
   "math": "Matematik",
   "conversion": "Dönüşüm",
-  "datetime": "Tarih ve Saat"
+  "datetime": "Tarih ve Saat",
+  "data-analysis": "Veri Analizi",
+  "visualization": "Görselleştirme",
+  "statistics": "İstatistik",
+  "security": "Güvenlik",
+  "text": "Metin",
+  "developer": "Geliştirici"
 }

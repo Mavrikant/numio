@@ -4,5 +4,11 @@
   "engineering": "Engineering",
   "math": "Math",
   "conversion": "Conversion",
-  "datetime": "Date & Time"
+  "datetime": "Date & Time",
+  "data-analysis": "Data Analysis",
+  "visualization": "Visualization",
+  "statistics": "Statistics",
+  "security": "Security",
+  "text": "Text",
+  "developer": "Developer"
 }

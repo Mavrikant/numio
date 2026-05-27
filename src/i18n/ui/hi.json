@@ -15,7 +15,12 @@
     "closeMenu": "मेनू बंद करें",
     "skipToContent": "सामग्री पर जाएं",
     "mainNavigation": "मुख्य नेविगेशन",
-    "tools": "उपकरण"
+    "tools": "उपकरण",
+    "sitemap": "साइटमैप"
+  },
+  "sitemap": {
+    "title": "साइटमैप",
+    "description": "Numio के सभी कैलकुलेटर, कन्वर्टर और टूल एक ही जगह पर देखें।"
   },
   "actions": {
     "calculate": "गणना करें",

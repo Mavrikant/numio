@@ -15,7 +15,12 @@
     "closeMenu": "메뉴 닫기",
     "skipToContent": "본문으로 건너뛰기",
     "mainNavigation": "주요 내비게이션",
-    "tools": "도구"
+    "tools": "도구",
+    "sitemap": "사이트맵"
+  },
+  "sitemap": {
+    "title": "사이트맵",
+    "description": "Numio의 모든 계산기, 변환기 및 도구를 한곳에서 둘러보세요."
   },
   "actions": {
     "calculate": "계산",

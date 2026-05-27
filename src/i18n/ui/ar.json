@@ -15,7 +15,12 @@
     "closeMenu": "إغلاق القائمة",
     "skipToContent": "تخطّ إلى المحتوى",
     "mainNavigation": "التنقل الرئيسي",
-    "tools": "أدوات"
+    "tools": "أدوات",
+    "sitemap": "خريطة الموقع"
+  },
+  "sitemap": {
+    "title": "خريطة الموقع",
+    "description": "تصفح جميع الحاسبات والمحولات والأدوات في Numio في مكان واحد."
   },
   "actions": {
     "calculate": "احسب",

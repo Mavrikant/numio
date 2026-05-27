@@ -15,7 +15,12 @@
     "closeMenu": "Menüyü kapat",
     "skipToContent": "İçeriğe geç",
     "mainNavigation": "Ana gezinti",
-    "tools": "Araçlar"
+    "tools": "Araçlar",
+    "sitemap": "Site Haritası"
+  },
+  "sitemap": {
+    "title": "Site Haritası",
+    "description": "Numio'daki tüm hesaplayıcıları, dönüştürücüleri ve araçları tek bir yerde inceleyin."
   },
   "actions": {
     "calculate": "Hesapla",
