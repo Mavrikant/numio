@@ -1,0 +1,26 @@
+import type { ToolI18n } from "@/types/tool";
+import { COMMON_UI } from "../_shared/ui";
+
+const data = {
+  en: { title: "Color Mixer", short: "Blend two colors and get the mixed hex code.", description: "Free color mixer. Pick two colors and a mix ratio to blend them in RGB space and get the resulting hex code with a live preview.", keywords: ["color mixer", "mix colors", "blend colors online", "color blender", "combine two colors"], color1: "Color 1", color2: "Color 2", ratio: "Mix ratio", mixed: "Mixed color" },
+  tr: { title: "Renk Karıştırıcı", short: "İki rengi karıştırın ve karışım hex kodunu alın.", description: "Ücretsiz renk karıştırıcı. İki renk ve bir karışım oranı seçerek bunları RGB uzayında karıştırın ve canlı önizlemeyle sonuç hex kodunu alın.", keywords: ["renk karıştırıcı", "renkleri karıştır", "online renk karıştırma", "renk harmanlayıcı", "iki rengi birleştir"], color1: "Renk 1", color2: "Renk 2", ratio: "Karışım oranı", mixed: "Karışık renk" },
+  de: { title: "Farbmischer", short: "Mischen Sie zwei Farben und erhalten Sie den Hex-Code.", description: "Kostenloser Farbmischer. Wählen Sie zwei Farben und ein Mischverhältnis, um sie im RGB-Raum zu mischen und den resultierenden Hex-Code mit Live-Vorschau zu erhalten.", keywords: ["farbmischer", "farben mischen", "farben mischen online", "farb-blender", "zwei farben kombinieren"], color1: "Farbe 1", color2: "Farbe 2", ratio: "Mischverhältnis", mixed: "Gemischte Farbe" },
+  fr: { title: "Mélangeur de Couleurs", short: "Mélangez deux couleurs et obtenez le code hex.", description: "Mélangeur de couleurs gratuit. Choisissez deux couleurs et un ratio de mélange pour les mélanger dans l'espace RGB et obtenir le code hex résultant avec aperçu en direct.", keywords: ["mélangeur couleurs", "mélanger couleurs", "mélange couleurs en ligne", "blender couleurs", "combiner deux couleurs"], color1: "Couleur 1", color2: "Couleur 2", ratio: "Ratio de mélange", mixed: "Couleur mélangée" },
+  es: { title: "Mezclador de Colores", short: "Mezcla dos colores y obtén el código hex resultante.", description: "Mezclador de colores gratuito. Elige dos colores y una proporción de mezcla para combinarlos en el espacio RGB y obtener el código hex resultante con vista previa en vivo.", keywords: ["mezclador colores", "mezclar colores", "mezcla colores online", "combinador colores", "combinar dos colores"], color1: "Color 1", color2: "Color 2", ratio: "Proporción de mezcla", mixed: "Color mezclado" },
+  it: { title: "Mixer di Colori", short: "Mescola due colori e ottieni il codice hex.", description: "Mixer di colori gratuito. Scegli due colori e un rapporto di miscelazione per fonderli nello spazio RGB e ottenere il codice hex risultante con anteprima dal vivo.", keywords: ["mixer colori", "mescola colori", "miscela colori online", "fusione colori", "combina due colori"], color1: "Colore 1", color2: "Colore 2", ratio: "Rapporto di mix", mixed: "Colore miscelato" },
+  ar: { title: "خلّاط الألوان", short: "امزج لونين واحصل على كود hex الناتج.", description: "خلّاط ألوان مجاني. اختر لونين ونسبة مزج لدمجهما في فضاء RGB والحصول على كود hex الناتج مع معاينة حية.", keywords: ["خلاط الألوان", "مزج الألوان", "مزج الألوان عبر الإنترنت", "دمج الألوان", "دمج لونين"], color1: "اللون 1", color2: "اللون 2", ratio: "نسبة المزج", mixed: "اللون الممزوج" },
+  ru: { title: "Смеситель цветов", short: "Смешайте два цвета и получите hex-код.", description: "Бесплатный смеситель цветов. Выберите два цвета и соотношение смешивания, чтобы смешать их в пространстве RGB и получить итоговый hex-код с живым превью.", keywords: ["смеситель цветов", "смешать цвета", "смешение цветов онлайн", "блендер цветов", "объединить два цвета"], color1: "Цвет 1", color2: "Цвет 2", ratio: "Соотношение смешивания", mixed: "Смешанный цвет" },
+  zh: { title: "颜色混合器", short: "混合两种颜色并获得混合后的十六进制代码。", description: "免费的颜色混合器。选择两种颜色和混合比例，在 RGB 空间中混合并获得结果十六进制代码，并实时预览。", keywords: ["颜色混合器", "混合颜色", "在线混色", "调色器", "合并两种颜色"], color1: "颜色 1", color2: "颜色 2", ratio: "混合比例", mixed: "混合颜色" },
+  ja: { title: "カラーミキサー", short: "2色を混ぜて混色の16進コードを取得。", description: "無料のカラーミキサー。2色と混合比を選ぶと、RGB空間で混ぜて結果の16進コードがライブプレビュー付きで得られます。", keywords: ["カラーミキサー", "色を混ぜる", "オンライン混色", "カラーブレンダー", "2色を組み合わせる"], color1: "色 1", color2: "色 2", ratio: "混合比", mixed: "混色" },
+  ko: { title: "색상 믹서", short: "두 색상을 섞고 혼합된 hex 코드를 얻습니다.", description: "무료 색상 믹서. 두 색상과 혼합 비율을 선택하면 RGB 공간에서 섞어 결과 hex 코드를 실시간 미리보기와 함께 얻습니다.", keywords: ["색상 믹서", "색상 혼합", "온라인 색상 혼합", "컬러 블렌더", "두 색상 결합"], color1: "색상 1", color2: "색상 2", ratio: "혼합 비율", mixed: "혼합 색상" },
+  hi: { title: "रंग मिक्सर", short: "दो रंगों को मिलाएं और मिश्रित hex कोड पाएं।", description: "मुफ्त रंग मिक्सर। दो रंग और एक मिश्रण अनुपात चुनें ताकि उन्हें RGB स्पेस में मिलाएं और लाइव प्रीव्यू के साथ परिणामी hex कोड पाएं।", keywords: ["रंग मिक्सर", "रंग मिलाएं", "ऑनलाइन रंग मिश्रण", "कलर ब्लेंडर", "दो रंग मिलाएं"], color1: "रंग 1", color2: "रंग 2", ratio: "मिश्रण अनुपात", mixed: "मिश्रित रंग" },
+};
+
+const i18n = Object.fromEntries(
+  (Object.keys(data) as Array<keyof typeof data>).map((loc) => {
+    const { title, short, description, keywords, ...rest } = data[loc];
+    return [loc, { title, short, description, keywords, ui: { ...COMMON_UI[loc], ...rest } }];
+  }),
+) as unknown as ToolI18n;
+
+export default i18n;
