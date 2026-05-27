@@ -23,6 +23,7 @@ import {
   getCalculatorsByCategory,
 } from "@/lib/registry";
 import type { CalculatorCategory } from "@/types/calculator";
+import JsonLd from "@/components/seo/JsonLd.astro";
 
 export async function getStaticPaths() {
   const categories = getAvailableCategories();
@@ -124,10 +125,8 @@ const pageDescription = t(locale, "site.description");
   </main>
 
   <!-- JSON-LD breadcrumb -->
-  <script
-    is:inline
-    type="application/ld+json"
-    set:html={JSON.stringify({
+  <JsonLd
+    data={{
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       itemListElement: [
@@ -144,6 +143,6 @@ const pageDescription = t(locale, "site.description");
           item: canonical,
         },
       ],
-    })}
+    }}
   />
 </Base>

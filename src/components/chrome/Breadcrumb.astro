@@ -1,5 +1,6 @@
 ---
 import { t, type Locale } from "@/lib/i18n";
+import JsonLd from "@/components/seo/JsonLd.astro";
 
 export interface BreadcrumbItem {
   label: string;
@@ -87,5 +88,5 @@ const breadcrumbJsonLd = {
   </ol>
 </nav>
 
-{/* JSON-LD slot — S-seo will integrate this */}
-<script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbJsonLd)} />
+{/* JSON-LD slot — rendered via the XSS-safe JsonLd component */}
+<JsonLd data={breadcrumbJsonLd} />
