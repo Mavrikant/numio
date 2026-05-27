@@ -1,6 +1,6 @@
 export const SITE_URL = "https://karaman.dev";
 export const BASE_PATH = "/calculators";
-export const SITE_NAME = "Karaman Calculators";
+export const SITE_NAME = "numio";
 
 export const LOCALES = [
   "en",

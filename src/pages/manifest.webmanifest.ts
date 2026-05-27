@@ -3,7 +3,7 @@ import { BASE_PATH } from "@/config/site";
 
 export const GET: APIRoute = () => {
   const manifest = {
-    name: "Karaman Calculators",
+    name: "numio",
     short_name: "Calcs",
     description:
       "Free calculators for health, finance, engineering, math, and conversion — in 12 languages.",

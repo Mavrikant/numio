@@ -1,6 +1,6 @@
 {
   "site": {
-    "name": "Karaman Calculators",
+    "name": "numio",
     "tagline": "Calcolatori gratuiti per la vita quotidiana — finanza, salute, ingegneria, matematica.",
     "description": "Usa calcolatori gratuiti e accurati in 12 lingue. Nessun accesso, nessun tracciamento, risultati istantanei."
   },
@@ -44,7 +44,7 @@
     "tooLarge": "Il valore è troppo grande"
   },
   "footer": {
-    "copyright": "© Karaman Calculators",
+    "copyright": "© numio",
     "disclaimer": "I risultati sono solo a scopo informativo. Verificare prima di utilizzarli per decisioni importanti.",
     "sourceCode": "Codice sorgente",
     "links": "Link",
@@ -106,7 +106,7 @@
     "accuracyNote": "Nota sulla precisione",
     "disclaimer": "Avvertenza",
     "lastReviewed": "Ultima revisione",
-    "editorialTeam": "dal team editoriale di Karaman Calculators"
+    "editorialTeam": "dal team editoriale di numio"
   },
   "seo": {
     "metaSuffix": "Gratuito, immediato, senza registrazione."
@@ -122,7 +122,7 @@
   "pdf": {
     "print": "Stampa",
     "download": "Scarica PDF",
-    "generated": "Generato da karaman.dev/calculators",
+    "generated": "Generato da numio",
     "title": "Risultati del calcolatore"
   },
   "pwa": {

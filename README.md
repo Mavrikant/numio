@@ -1,4 +1,4 @@
-# Karaman Calculators
+# numio
 
 Static, client-side calculator site — Astro + TypeScript + Tailwind + Zod.
 

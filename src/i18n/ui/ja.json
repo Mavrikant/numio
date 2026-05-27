@@ -1,6 +1,6 @@
 {
   "site": {
-    "name": "Karaman Calculators",
+    "name": "numio",
     "tagline": "日常生活のための無料計算ツール — 金融、健康、工学、数学。",
     "description": "12言語で無料かつ正確な計算ツールをご利用ください。ログイン不要、追跡なし、即時結果。"
   },
@@ -44,7 +44,7 @@
     "tooLarge": "値が大きすぎます"
   },
   "footer": {
-    "copyright": "© Karaman Calculators",
+    "copyright": "© numio",
     "disclaimer": "結果は情報提供のみを目的としています。重要な決定に使用する前に確認してください。",
     "sourceCode": "ソースコード",
     "links": "リンク",
@@ -106,7 +106,7 @@
     "accuracyNote": "精度に関する注記",
     "disclaimer": "免責事項",
     "lastReviewed": "最終確認日",
-    "editorialTeam": "Karaman Calculators 編集チームによる"
+    "editorialTeam": "numio 編集チームによる"
   },
   "seo": {
     "metaSuffix": "無料・即時・登録不要。"
@@ -122,7 +122,7 @@
   "pdf": {
     "print": "印刷",
     "download": "PDFをダウンロード",
-    "generated": "karaman.dev/calculators で作成",
+    "generated": "numio で作成",
     "title": "計算結果"
   },
   "pwa": {

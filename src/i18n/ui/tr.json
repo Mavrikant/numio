@@ -1,6 +1,6 @@
 {
   "site": {
-    "name": "Karaman Hesaplayıcılar",
+    "name": "numio",
     "tagline": "Günlük hayat için ücretsiz hesaplayıcılar — finans, sağlık, mühendislik, matematik.",
     "description": "12 dilde ücretsiz ve doğru hesaplayıcılar. Giriş gerekmez, takip yok, anında sonuç."
   },
@@ -44,7 +44,7 @@
     "tooLarge": "Değer çok büyük"
   },
   "footer": {
-    "copyright": "© Karaman Hesaplayıcılar",
+    "copyright": "© numio",
     "disclaimer": "Sonuçlar yalnızca bilgilendirme amaçlıdır. Kritik kararlarda doğrulayın.",
     "sourceCode": "Kaynak kod",
     "links": "Bağlantılar",
@@ -106,7 +106,7 @@
     "accuracyNote": "Doğruluk notu",
     "disclaimer": "Yasal Uyarı",
     "lastReviewed": "Son inceleme",
-    "editorialTeam": "Karaman Calculators editör ekibi tarafından"
+    "editorialTeam": "numio editör ekibi tarafından"
   },
   "seo": {
     "metaSuffix": "Ücretsiz, anında, kayıt gerekmez."
@@ -122,7 +122,7 @@
   "pdf": {
     "print": "Yazdır",
     "download": "PDF İndir",
-    "generated": "karaman.dev/calculators tarafından oluşturuldu",
+    "generated": "numio tarafından oluşturuldu",
     "title": "Hesaplayıcı sonuçları"
   },
   "pwa": {

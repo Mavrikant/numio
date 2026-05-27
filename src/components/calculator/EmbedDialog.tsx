@@ -41,24 +41,24 @@ function buildEmbedUrl(
 }
 
 function buildIframeSnippet(embedUrl: string): string {
-  return `<iframe\n  src="${embedUrl}"\n  width="100%"\n  height="600"\n  frameborder="0"\n  loading="lazy"\n  title="Calculator by karaman.dev"\n></iframe>`;
+  return `<iframe\n  src="${embedUrl}"\n  width="100%"\n  height="600"\n  frameborder="0"\n  loading="lazy"\n  title="Calculator by numio"\n></iframe>`;
 }
 
 function buildScriptSnippet(embedUrl: string): string {
-  return `<div id="karaman-calc"></div>
+  return `<div id="numio-calc"></div>
 <script>
 (function() {
-  var d = document.getElementById('karaman-calc');
+  var d = document.getElementById('numio-calc');
   var iframe = document.createElement('iframe');
   iframe.src = '${embedUrl}';
   iframe.width = '100%';
   iframe.height = '600';
   iframe.frameBorder = '0';
   iframe.loading = 'lazy';
-  iframe.title = 'Calculator by karaman.dev';
+  iframe.title = 'Calculator by numio';
   // Responsive height: listen for postMessage from the widget
   window.addEventListener('message', function(e) {
-    if (e.data && e.data.type === 'karaman:resize' && e.data.height) {
+    if (e.data && e.data.type === 'numio:resize' && e.data.height) {
       iframe.height = e.data.height;
     }
   });
@@ -298,7 +298,7 @@ export function EmbedDialog({ calc, locale: initialLocale }: EmbedDialogProps) {
 
           {/* Attribution note */}
           <p className="text-xs text-slate-400 dark:text-slate-500">
-            The widget includes a small "Powered by karaman.dev" attribution link — this is required for free embedding. Contact us if you need white-label options.
+            The widget includes a small "Powered by numio" attribution link — this is required for free embedding. Contact us if you need white-label options.
           </p>
         </div>
       </dialog>

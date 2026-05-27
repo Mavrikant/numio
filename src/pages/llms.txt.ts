@@ -32,7 +32,7 @@ export const GET: APIRoute = () => {
 
   const lines: string[] = [];
 
-  lines.push("# Karaman Calculators");
+  lines.push("# numio");
   lines.push("");
   lines.push(
     "> Free calculators across health, finance, engineering, math, and conversion — in 12 languages." +
