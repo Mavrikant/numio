@@ -1,0 +1,26 @@
+import type { ToolI18n } from "@/types/tool";
+import { COMMON_UI } from "../_shared/ui";
+
+const data = {
+  en: { title: "Upside Down Text Generator", short: "Flip your text upside down (˙uʍop ǝpᴉsdn) for fun social posts.", description: "Free upside-down text generator. Turn any text into rotated 180° look-alike characters (ʇxǝʇ uʍop-ǝpᴉsdn) you can paste into social media, usernames and messages. Runs in your browser.", keywords: ["upside down text", "flip text", "rotate text", "text flipper", "upside down letters"], placeholder: "Type text to flip…" },
+  tr: { title: "Ters Yazı Oluşturucu", short: "Yazınızı baş aşağı çevirin (˙uʍop ǝpᴉsdn) eğlenceli paylaşımlar için.", description: "Ücretsiz ters yazı oluşturucu. Herhangi bir metni 180° döndürülmüş benzer karakterlere çevirin; sosyal medyaya, kullanıcı adlarına ve mesajlara yapıştırabilirsiniz. Tarayıcınızda çalışır.", keywords: ["ters yazı", "yazıyı çevir", "metni döndür", "yazı çevirici", "ters harfler"], placeholder: "Çevirmek için yazın…" },
+  de: { title: "Umgedrehter-Text-Generator", short: "Drehen Sie Ihren Text auf den Kopf (˙uʍop ǝpᴉsdn) für lustige Posts.", description: "Kostenloser Umgedrehter-Text-Generator. Wandeln Sie Text in um 180° gedrehte ähnliche Zeichen um, die Sie in Social Media, Benutzernamen und Nachrichten einfügen können.", keywords: ["umgedrehter text", "text umdrehen", "text rotieren", "text flipper", "umgedrehte buchstaben"], placeholder: "Text zum Umdrehen eingeben…" },
+  fr: { title: "Générateur de Texte à l'Envers", short: "Retournez votre texte à l'envers (˙sɹǝʌuǝ,l à) pour des posts amusants.", description: "Générateur de texte à l'envers gratuit. Transformez tout texte en caractères ressemblants tournés à 180° que vous pouvez coller sur les réseaux sociaux, dans les pseudos et les messages.", keywords: ["texte à l'envers", "retourner texte", "texte inversé", "rotation texte", "lettres à l'envers"], placeholder: "Tapez le texte à retourner…" },
+  es: { title: "Generador de Texto al Revés", short: "Voltea tu texto al revés (˙sǝʌǝɹ lɐ) para publicaciones divertidas.", description: "Generador de texto al revés gratuito. Convierte cualquier texto en caracteres parecidos rotados 180° que puedes pegar en redes sociales, nombres de usuario y mensajes.", keywords: ["texto al revés", "voltear texto", "texto invertido", "rotar texto", "letras al revés"], placeholder: "Escribe el texto a voltear…" },
+  it: { title: "Generatore di Testo Capovolto", short: "Capovolgi il tuo testo (˙oʇloʌodɐɔ) per post divertenti.", description: "Generatore di testo capovolto gratuito. Trasforma qualsiasi testo in caratteri simili ruotati di 180° che puoi incollare su social, nomi utente e messaggi.", keywords: ["testo capovolto", "capovolgi testo", "testo rovesciato", "ruota testo", "lettere capovolte"], placeholder: "Digita il testo da capovolgere…" },
+  ar: { title: "مولّد النص المقلوب", short: "اقلب نصك رأسًا على عقب لمنشورات ممتعة.", description: "مولّد نص مقلوب مجاني. حوّل أي نص إلى أحرف مشابهة مدارة 180° يمكنك لصقها في وسائل التواصل وأسماء المستخدمين والرسائل. يعمل في متصفحك.", keywords: ["نص مقلوب", "قلب النص", "نص معكوس", "تدوير النص", "أحرف مقلوبة"], placeholder: "اكتب النص لقلبه…" },
+  ru: { title: "Генератор Перевёрнутого Текста", short: "Переверните текст вверх ногами (˙ɯʚdǝʚ) для весёлых постов.", description: "Бесплатный генератор перевёрнутого текста. Превратите любой текст в похожие символы, повёрнутые на 180°, которые можно вставить в соцсети, ники и сообщения. Работает в браузере.", keywords: ["перевёрнутый текст", "перевернуть текст", "текст вверх ногами", "повернуть текст", "перевёрнутые буквы"], placeholder: "Введите текст для переворота…" },
+  zh: { title: "颠倒文字生成器", short: "把文字上下颠倒（uʍop ǝpᴉsdn），用于有趣的社交帖子。", description: "免费的颠倒文字生成器。将任意文本转换为旋转 180° 的相似字符，可粘贴到社交媒体、用户名和消息中。在浏览器中运行。", keywords: ["颠倒文字", "翻转文字", "倒置文本", "旋转文字", "颠倒字母"], placeholder: "输入要翻转的文字…" },
+  ja: { title: "上下反転テキスト生成", short: "テキストを上下逆さま（uʍop ǝpᴉsdn）にして楽しい投稿に。", description: "無料の上下反転テキスト生成ツール。任意のテキストを 180° 回転した似た文字に変換し、SNS・ユーザー名・メッセージに貼り付けられます。ブラウザ内で動作します。", keywords: ["上下反転テキスト", "テキスト反転", "逆さ文字", "テキスト回転", "反転文字"], placeholder: "反転するテキストを入力…" },
+  ko: { title: "거꾸로 텍스트 생성기", short: "텍스트를 거꾸로 뒤집어(uʍop ǝpᴉsdn) 재미있는 게시물에 사용하세요.", description: "무료 거꾸로 텍스트 생성기. 임의의 텍스트를 180° 회전한 유사 문자로 변환하여 소셜 미디어, 사용자 이름, 메시지에 붙여넣을 수 있습니다. 브라우저에서 실행됩니다.", keywords: ["거꾸로 텍스트", "텍스트 뒤집기", "거꾸로 글자", "텍스트 회전", "뒤집힌 글자"], placeholder: "뒤집을 텍스트 입력…" },
+  hi: { title: "उल्टा टेक्स्ट जनरेटर", short: "अपने टेक्स्ट को उल्टा करें (uʍop ǝpᴉsdn) मज़ेदार पोस्ट के लिए।", description: "मुफ्त उल्टा टेक्स्ट जनरेटर। किसी भी टेक्स्ट को 180° घुमाए गए मिलते-जुलते वर्णों में बदलें जिन्हें आप सोशल मीडिया, यूज़रनेम और संदेशों में पेस्ट कर सकते हैं। ब्राउज़र में चलता है।", keywords: ["उल्टा टेक्स्ट", "टेक्स्ट पलटें", "उल्टे अक्षर", "टेक्स्ट घुमाएं", "उलटा टेक्स्ट"], placeholder: "पलटने के लिए टेक्स्ट टाइप करें…" },
+};
+
+const i18n = Object.fromEntries(
+  (Object.keys(data) as Array<keyof typeof data>).map((loc) => {
+    const { title, short, description, keywords, ...rest } = data[loc];
+    return [loc, { title, short, description, keywords, ui: { ...COMMON_UI[loc], ...rest } }];
+  }),
+) as unknown as ToolI18n;
+
+export default i18n;
