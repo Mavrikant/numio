@@ -11,7 +11,7 @@ export const GET: APIRoute = () => {
     scope: `${BASE_PATH}/`,
     display: "standalone",
     background_color: "#ffffff",
-    theme_color: "#0f172a",
+    theme_color: "#0ea5e9",
     lang: "en",
     dir: "ltr",
     icons: [
@@ -19,6 +19,18 @@ export const GET: APIRoute = () => {
         src: `${BASE_PATH}/icons/icon.svg`,
         sizes: "any",
         type: "image/svg+xml",
+        purpose: "any maskable",
+      },
+      {
+        src: `${BASE_PATH}/icons/icon-192.png`,
+        sizes: "192x192",
+        type: "image/png",
+        purpose: "any maskable",
+      },
+      {
+        src: `${BASE_PATH}/icons/icon-512.png`,
+        sizes: "512x512",
+        type: "image/png",
         purpose: "any maskable",
       },
     ],
