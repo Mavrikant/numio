@@ -1,4 +1,9 @@
 {
+  "simple-interest": "interes-simple",
+  "circle": "circulo",
+  "slope": "pendiente",
+  "roman-numerals": "numeros-romanos",
+  "running-pace": "ritmo-carrera",
   "bmi": "imc",
   "bmr": "tasa-metabolica-basal",
   "calorie": "calculadora-calorias",
