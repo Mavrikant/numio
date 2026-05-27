@@ -15,7 +15,8 @@ describe("Capacitor — edge cases", () => {
 
   it("very large capacitance (Farads)", () => {
     const result = parse({ capacitance: 1, voltage: 10, frequency: 0 });
-    expect(result.energy).toBeGreaterThan(50);
+    // E = ½·C·V² = 0.5·1·100 = 50 J exactly
+    expect(result.energy).toBeGreaterThanOrEqual(50);
   });
 
   it("DC frequency (0 Hz) produces null reactance", () => {

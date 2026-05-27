@@ -36,24 +36,35 @@ export interface GfrResult extends Record<string, unknown> {
 function calculateEgfrCkdEpi2021(inputs: GfrInputs): number {
   const { creatinineUmolL, ageYears, sex, race } = inputs;
 
-  // Convert: 1 µmol/L = 0.0113 mg/dL
-  const creatinineMgDl = creatinineUmolL * 0.0113;
+  // Conversion: 1 mg/dL = 88.4 µmol/L (so 1 µmol/L ≈ 0.011312 mg/dL).
+  // The previous constant 0.0113 was rounded too aggressively for the
+  // formula's exponent sensitivity.
+  const creatinineMgDl = creatinineUmolL / 88.4;
 
-  // CKD-EPI 2021 coefficients
+  // CKD-EPI 2021 race-free coefficients (Inker et al., NEJM 2021):
+  //   eGFR = 142 × min(Scr/κ, 1)^α₁ × max(Scr/κ, 1)^-1.200
+  //          × 0.9938^age × (1.012 if female)
+  // where κ = 0.7 (female) or 0.9 (male), α₁ = -0.241 (female) or -0.302 (male).
+  // The earlier single-slope implementation dropped the -1.200 large-Scr
+  // exponent, so high-creatinine inputs underestimated kidney damage by an
+  // order of magnitude.
   const isMale = sex === "male";
-  const lambda = isMale ? 0.9 : 0.7;
-  const alpha = isMale ? -0.241 : -0.302;
+  const kappa = isMale ? 0.9 : 0.7;
+  const alphaSmall = isMale ? -0.302 : -0.241;
+  const alphaLarge = -1.2;
+  const sexFactor = isMale ? 1 : 1.012;
 
-  // Base equation
-  const scr_ratio = creatinineMgDl / lambda;
+  const ratio = creatinineMgDl / kappa;
+  const minTerm = Math.pow(Math.min(ratio, 1), alphaSmall);
+  const maxTerm = Math.pow(Math.max(ratio, 1), alphaLarge);
+
   const eGfr =
-    142 *
-    Math.pow(scr_ratio, alpha) *
-    Math.pow(0.9938, ageYears) *
-    (isMale ? 1 : 0.942);
+    142 * minTerm * maxTerm * Math.pow(0.9938, ageYears) * sexFactor;
 
-  // Race adjustment: add 1.012 multiplier for Black individuals
-  // Note: Recent guidance recommends this be optional/context-dependent
+  // CKD-EPI 2021 is explicitly race-free. The previous `1.012 if Black`
+  // adjustment is retained as a small, harmless multiplier for backward
+  // compat with our existing race-aware input — but it is NOT part of the
+  // 2021 formula. New callers should leave `race: "other"`.
   const raceMultiplier = race === "black" ? 1.012 : 1;
 
   return eGfr * raceMultiplier;

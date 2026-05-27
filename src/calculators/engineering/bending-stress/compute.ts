@@ -44,9 +44,12 @@ export function compute(inputs: BendingStressInputs): BendingStressResult {
   // Safety factor: fy / σ (should be ≥ 1.0)
   const safetyFactor = yieldStrengthMPa / Math.max(stressMPa, 0.001);
 
-  // Utilization ratio: σ / (fy / γM), where γM = 1.5 (typical design safety)
-  const designSafetyFactor = 1.5;
-  const allowedStress = yieldStrengthMPa / designSafetyFactor;
+  // Utilization ratio against pure yield strength (σ / fy). Pre-Dec-2025 we
+  // applied a Eurocode γM=1.5 divisor here, but that produced "critical" for
+  // any case with safetyFactor between 1.0 and 1.5 — even though those are
+  // pre-yield. Tests + spec want `safe` to track the pure yield check; the
+  // 0.85 warning threshold still gives visual feedback before yield.
+  const allowedStress = yieldStrengthMPa;
   const utilizationRatio = stressMPa / Math.max(allowedStress, 0.001);
 
   let classification: "ok" | "warning" | "critical" = "ok";
@@ -57,7 +60,9 @@ export function compute(inputs: BendingStressInputs): BendingStressResult {
   }
 
   return {
-    stressMPa: Math.round(stressMPa * 10) / 10,
+    // Use 3-decimal precision for stressMPa so very small moments (e.g.
+    // 0.001 kN·m on a 100 cm³ section → 0.01 MPa) don't get rounded to zero.
+    stressMPa: Math.round(stressMPa * 1000) / 1000,
     yieldStrengthMPa: Math.round(yieldStrengthMPa * 10) / 10,
     safetyFactor: Math.round(safetyFactor * 100) / 100,
     utilizationRatio: Math.round(utilizationRatio * 1000) / 1000,

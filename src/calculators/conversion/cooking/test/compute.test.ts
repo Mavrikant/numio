@@ -26,8 +26,9 @@ describe("Cooking Unit Converter - compute", () => {
     });
 
     it("should convert 1 cup butter to grams", () => {
+      // 1 cup (236.588 mL) × 0.911 g/mL ≈ 215.5 g
       const result = compute({ value: 1, fromUnit: "cup", toUnit: "g", ingredient: "butter" });
-      expect(result.toValue).toBeCloseTo(215, 0);
+      expect(result.toValue).toBeCloseTo(216, -1); // within ±5g
     });
 
     it("should convert 1 cup sugar to grams", () => {

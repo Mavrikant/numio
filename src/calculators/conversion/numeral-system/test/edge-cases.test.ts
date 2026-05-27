@@ -25,9 +25,11 @@ describe("Numeral System Converter - edge cases", () => {
     });
 
     it("should handle very large integers", () => {
+      // 1,000,000 → hex F4240, octal 3641100 (verified by hand:
+      // 3·262144 + 6·32768 + 4·4096 + 1·512 + 1·64 + 0·8 + 0 = 1,000,000)
       const result = compute({ value: 1000000, sourceBase: "decimal" });
       expect(result.hexadecimal).toBe("F4240");
-      expect(result.octal).toContain("3567640");
+      expect(result.octal).toBe("3641100");
     });
   });
 

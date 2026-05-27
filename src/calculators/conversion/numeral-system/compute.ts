@@ -81,6 +81,13 @@ function convertFromBase(str: string, base: number): number {
 function convertToBase(num: number, base: number): string {
   if (num === 0) return "0";
 
+  // Guard against non-finite inputs (Infinity / NaN). Without this, the
+  // integer loop below `while (tempInt > 0)` runs forever when tempInt is
+  // Infinity, eating the vitest worker heap and crashing the test pool.
+  if (!Number.isFinite(num)) {
+    return Number.isNaN(num) ? "NaN" : num > 0 ? "Infinity" : "-Infinity";
+  }
+
   const isNegative = num < 0;
   let value = Math.abs(num);
 
