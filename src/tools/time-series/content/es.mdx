@@ -1,0 +1,48 @@
+# Visualizador de Series de Tiempo
+
+Suba un archivo CSV con una columna de fecha, seleccione una o más columnas de valores numéricos y obtenga al instante un gráfico de líneas interactivo — directamente en su navegador. Añada una media móvil centrada para suavizar el ruido y revelar las tendencias subyacentes.
+
+## ¿Qué es una serie de tiempo?
+
+Una **serie de tiempo** es una secuencia de datos indexados en orden cronológico: precios de acciones diarios, temperaturas horarias, tráfico web semanal. El tiempo siempre está en el eje de abscisas; una o más magnitudes numéricas, en el eje de ordenadas.
+
+Visualizar una serie de tiempo le ayuda a responder preguntas como:
+
+- ¿Existe una **tendencia** alcista o bajista en el período analizado?
+- ¿Hay **patrones estacionales** — picos y valles recurrentes a intervalos predecibles?
+- ¿Aparecen **saltos o caídas repentinas** que sugieren eventos externos?
+- ¿Cuánta **volatilidad** (variación a corto plazo) existe respecto a la tendencia general?
+
+## Media móvil
+
+Una **media móvil simple (MMS)** suaviza una serie reemplazando cada valor con el promedio de una ventana de valores circundantes. Este herramienta usa una MMS **centrada**: para un tamaño de ventana _w_, el valor suavizado en el índice _i_ es el promedio de los índices _i − ⌊w/2⌋_ a _i + ⌊w/2⌋_. Los puntos extremos sin ventana completa se omiten en lugar de rellenarse con ceros.
+
+**Cómo elegir el tamaño de ventana:**
+
+- **Pequeño (3–5):** suavizado leve, conserva detalles — bueno para datos diarios.
+- **Medio (7–14):** de una a dos semanas para datos diarios; clásico en gráficos bursátiles.
+- **Grande (30–90):** revela la tendencia a largo plazo, suprime la variación estacional.
+
+## Cómo usar esta herramienta
+
+1. Subir un CSV (arrastrar y soltar o pegar).
+2. Elegir la columna de tiempo en el menú desplegable — las columnas de fechas se detectan automáticamente.
+3. Marcar las columnas de valores; cada una genera una línea de color propia.
+4. Activar opcionalmente la media móvil y ajustar el tamaño de la ventana.
+5. Leer la tabla de resumen: mín, máx, media, último valor y variación total en porcentaje.
+
+## Casos de uso comunes
+
+- **Finanzas:** comparar precios de cierre diarios de varios activos.
+- **Meteorología:** visualizar temperatura o precipitaciones a lo largo de meses o años.
+- **Analítica web:** rastrear vistas de página, sesiones o conversiones por día o semana.
+- **Ciencias:** representar mediciones a lo largo de los pasos de un experimento.
+
+## Privacidad
+
+Todos los cálculos se ejecutan localmente en su navegador. No se transmite ningún dato a un servidor. Tamaño máximo de archivo: 5 MB.
+
+## Referencias
+
+- Chatfield, C. (2003). *The Analysis of Time Series: An Introduction.* Chapman & Hall/CRC.
+- Hyndman, R.J., Athanasopoulos, G. (2021). *Forecasting: Principles and Practice.* OTexts.

@@ -1,0 +1,71 @@
+# Zaman Serisi Görselleştirici
+
+Tarih veya zaman sütunu içeren bir CSV dosyası yükleyin, bir veya daha fazla sayısal değer sütunu seçin ve bunları doğrudan tarayıcınızda çizgi grafiği olarak anında görün. Gürültüyü gidermek ve altta yatan trendleri ortaya çıkarmak için ortalanmış hareketli ortalama katmanı ekleyin. Verileriniz hiçbir zaman bir sunucuya gönderilmez.
+
+## Zaman serisi nedir?
+
+**Zaman serisi**, zaman sırasına göre dizilmiş veri noktaları dizisidir: her gün kaydedilen hisse fiyatları, saatlik ölçülen sıcaklık, haftalık sayılan web sitesi trafiği. Zaman her zaman x ekseninde, bir veya daha fazla sayısal büyüklük ise y ekseninde yer alır.
+
+Bir zaman serisini görselleştirmek şu soruları yanıtlamanıza yardımcı olur:
+
+- Dönem boyunca yukarı ya da aşağı bir **trend** var mı?
+- Öngörülebilir aralıklarla tekrarlayan zirve veya çukurlar gibi **mevsimsel örüntüler** var mı?
+- Dış olayları işaret eden ani **sıçramalar veya düşüşler** var mı?
+- Genel trende kıyasla ne kadar **volatilite** (günden güne değişim) söz konusu?
+
+## Bu aracı nasıl kullanırım?
+
+1. **Verilerinizi yükleyin** — bir CSV dosyasını sürükleyip bırakın, "Dosya seç"e tıklayın veya CSV metnini doğrudan metin alanına yapıştırın. Araç ayraçları (virgül, noktalı virgül, sekme) ve ilk satırın başlık olup olmadığını otomatik algılar.
+2. **Zaman sütunu seçin** — değerleri tarih gibi görünen (ISO 8601, ABD tarih biçimleri vb.) tüm sütunlar otomatik olarak aday gösterilir. Zaman ekseniniz sayısal ise (ör. 1–365 gün indeksi) onu da seçebilirsiniz.
+3. **Değer sütunlarını seçin** — istediğiniz sayısal sütunları işaretleyin. Her biri grafikte kendi renkli çizgisi olur.
+4. **Hareketli ortalamayı etkinleştirin** (isteğe bağlı) — "Hareketli ortalamayı göster" kutusunu işaretleyin ve pencere boyutunu ayarlayın. _w_ pencereli ortalanmış hareketli ortalama, her noktayı kendisi merkezli _w_ noktanın ortalamasıyla değiştirir.
+5. **Özet tablosunu okuyun** — minimum, maksimum, ortalama, son değer ve toplam değişim (ilk ile son veri noktası arasında yüzde) grafiğin altında görünür.
+
+## Hareketli ortalama nasıl çalışır?
+
+**Basit hareketli ortalama (SMA)**, her değeri çevresindeki bir penceredeki değerlerin ortalamasıyla değiştirerek seriyi düzleştirir. Bu araç **ortalanmış** SMA kullanır: _w_ pencere boyutu için _i_ zaman indeksindeki düzleştirilmiş değer, _i − ⌊w/2⌋_ ile _i + ⌊w/2⌋_ arasındaki indekslerin ortalamasıdır.
+
+Her iki tarafta yeterli komşusu olmayan kenar noktaları, sıfır veya tekrar eden değerlerle doldurulmak yerine kaldırılır; bu da düzleştirilmiş çizginin başında ve sonunda bozulmuş değerlerin oluşmasını önler.
+
+**Pencere boyutu seçimi:**
+
+- **Küçük pencere (3–5):** çoğu ayrıntıyı korurken küçük gürültüyü giderir. Haftalık yapıyı görmek istediğinizde günlük veriler için iyidir.
+- **Orta pencere (7–14):** günlük veriler için bir ila iki haftalık ortalama. Hisse senedi grafikleri için klasik seçim.
+- **Büyük pencere (30–90):** uzun vadeli sürüklenmeyi ortaya çıkarır, mevsimsel değişimi bastırır. Aylık veya yıllık trend analizi için uygundur.
+
+## Desteklenen tarih biçimleri
+
+Araç, zaman sütunundaki her hücrede JavaScript'in yerleşik `Date.parse()` fonksiyonunu çağırır. Bu şunları destekler:
+
+- ISO 8601: `2024-01-15`, `2024-01-15T09:30:00Z`
+- Uzun biçimli İngilizce: `January 15 2024`, `15 Jan 2024`
+- Kısa ABD biçimi: `1/15/2024`, `01/15/24`
+- Tarayıcının JS motoru tarafından tanınan pek çok yerel biçim
+
+Bir sütun yalnızca sayı içeriyorsa sayısal indeks olarak işlenir.
+
+## Özet istatistikler
+
+Seçilen her değer serisi için özet tablo şunları gösterir:
+
+- **Min / Maks:** serinin tamamındaki en küçük ve en büyük değerler.
+- **Ortalama:** tüm değerlerin aritmetik ortalaması.
+- **Son:** veri setinin son satırındaki değer (en son veri noktası).
+- **Değişim:** ilk ile son veri noktası arasındaki yüzde değişimi — `(son − ilk) / |ilk| × 100%`. Pozitif değer (yeşil gösterilir) büyüme, negatif (kırmızı gösterilir) düşüş anlamına gelir.
+
+## Yaygın kullanım alanları
+
+- **Finans:** birden fazla varlığın günlük kapanış fiyatlarını yan yana çizin. Fiyatın trend üzerinde mi altında mı olduğunu görmek için 20 günlük hareketli ortalamayı etkinleştirin.
+- **Hava durumu ve iklim:** aylık veya yıllık bazda sıcaklık veya yağış miktarını görselleştirin. 30 günlük hareketli ortalama, mevsimsel şekli ortaya çıkarmak için kısa vadeli hava durumu gürültüsünü giderir.
+- **Web analitiği:** sayfaya göre günlük veya haftalık görüntülemeler, oturumlar veya dönüşümler. Haftalık büyümeyi gizleyen "hafta sonu düşüşü" etkisini gidermek için 7 günlük hareketli ortalamayı kullanın.
+- **Bilimsel deneyler:** deneme koşuları, zaman adımları veya deneysel koşullar boyunca ölçümleri izleyin.
+
+## Gizlilik ve dosya boyutu
+
+Tüm hesaplamalar JavaScript kullanılarak tarayıcınızda yerel olarak çalışır. Hiçbir şey herhangi bir sunucuya iletilmez. Araç 5 MB'a kadar CSV dosyalarını işler.
+
+## Referanslar
+
+- Chatfield, C. (2003). *The Analysis of Time Series: An Introduction.* Chapman & Hall/CRC.
+- Hyndman, R.J., Athanasopoulos, G. (2021). *Forecasting: Principles and Practice, 3. baskı.* OTexts.
+- Box, G.E.P., Jenkins, G.M., Reinsel, G.C., Ljung, G.M. (2015). *Time Series Analysis: Forecasting and Control.* Wiley.

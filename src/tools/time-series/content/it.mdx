@@ -1,0 +1,48 @@
+# Visualizzatore di Serie Temporali
+
+Carica un file CSV con una colonna data, seleziona una o più colonne di valori numerici e ottieni immediatamente un grafico a linee interattivo — direttamente nel browser. Aggiungi una media mobile centrata per attenuare il rumore e rivelare le tendenze sottostanti.
+
+## Che cos'è una serie temporale?
+
+Una **serie temporale** è una sequenza di dati indicizzati in ordine cronologico: prezzi azionari giornalieri, temperature orarie, traffico web settimanale. Il tempo è sempre sull'asse delle ascisse; una o più grandezze numeriche sull'asse delle ordinate.
+
+Visualizzare una serie temporale aiuta a rispondere a domande come:
+
+- C'è un **trend** rialzista o ribassista nel periodo analizzato?
+- Esistono **pattern stagionali** — picchi e valli ricorrenti a intervalli prevedibili?
+- Ci sono **salti o cali improvvisi** che suggeriscono eventi esterni?
+- Quanta **volatilità** (variazione a breve termine) esiste rispetto al trend generale?
+
+## Media mobile
+
+Una **media mobile semplice (MMS)** attenua una serie sostituendo ogni valore con la media di una finestra di valori circostanti. Questo strumento usa una MMS **centrata**: per una finestra di dimensione _w_, il valore smussato all'indice _i_ è la media degli indici _i − ⌊w/2⌋_ fino a _i + ⌊w/2⌋_. I punti ai bordi senza finestra completa vengono omessi anziché riempiti con zeri.
+
+**Come scegliere la dimensione della finestra:**
+
+- **Piccola (3–5):** attenuazione leggera, conserva i dettagli — adatta a dati giornalieri.
+- **Media (7–14):** da una a due settimane per dati giornalieri; classica nei grafici azionari.
+- **Grande (30–90):** rivela il trend a lungo termine, sopprime la variazione stagionale.
+
+## Come usare questo strumento
+
+1. Caricare un CSV (trascina e rilascia o incolla).
+2. Scegliere la colonna temporale nel menu a tendina — le colonne con date vengono rilevate automaticamente.
+3. Spuntare le colonne di valori; ognuna genera una linea colorata propria.
+4. Attivare opzionalmente la media mobile e regolare la dimensione della finestra.
+5. Leggere la tabella di riepilogo: min, max, media, ultimo valore e variazione totale in percentuale.
+
+## Casi d'uso comuni
+
+- **Finanza:** confrontare i prezzi di chiusura giornalieri di più asset.
+- **Meteorologia:** visualizzare temperatura o precipitazioni nel corso di mesi o anni.
+- **Web analytics:** monitorare visualizzazioni di pagina, sessioni o conversioni per giorno o settimana.
+- **Scienze:** rappresentare misurazioni nel corso dei passi di un esperimento.
+
+## Privacy
+
+Tutti i calcoli vengono eseguiti localmente nel browser. Nessun dato viene trasmesso a un server. Dimensione massima del file: 5 MB.
+
+## Riferimenti
+
+- Chatfield, C. (2003). *The Analysis of Time Series: An Introduction.* Chapman & Hall/CRC.
+- Hyndman, R.J., Athanasopoulos, G. (2021). *Forecasting: Principles and Practice.* OTexts.

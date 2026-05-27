@@ -1,0 +1,48 @@
+# Zeitreihen-Visualisierer
+
+Laden Sie eine CSV-Datei mit einer Datums- oder Zeitspalte hoch, wählen Sie eine oder mehrere numerische Wertspalten aus und erhalten Sie sofort ein interaktives Liniendiagramm — direkt im Browser. Legen Sie optional einen zentrierten gleitenden Durchschnitt über die Daten, um Rauschen zu reduzieren und Trends sichtbar zu machen.
+
+## Was ist eine Zeitreihe?
+
+Eine **Zeitreihe** ist eine Folge von Datenpunkten, die in zeitlicher Reihenfolge aufgezeichnet wurden: tägliche Aktienkurse, stündliche Temperaturmessungen oder wöchentliche Websitebesuche. Die Zeit liegt stets auf der x-Achse, eine oder mehrere Messgrößen auf der y-Achse.
+
+Zeitreihen helfen Ihnen folgende Fragen zu beantworten:
+
+- Gibt es einen steigenden oder fallenden **Trend** über den betrachteten Zeitraum?
+- Zeigen sich regelmäßige **saisonale Muster** — Peaks und Täler, die zu vorhersehbaren Zeitpunkten auftreten?
+- Sind plötzliche **Sprünge oder Einbrüche** vorhanden, die auf externe Ereignisse hindeuten?
+- Wie stark ist die **Volatilität** (kurzfristige Schwankungen) im Verhältnis zum langfristigen Trend?
+
+## Gleitender Durchschnitt
+
+Ein **gleitender Durchschnitt** (Moving Average, MA) glättet eine Zeitreihe, indem er jeden Wert durch den Durchschnitt einer umgebenden Fenstergruppe ersetzt. Dieses Tool verwendet einen **zentrierten** einfachen gleitenden Durchschnitt: Bei Fenstergröße _w_ wird für den Zeitpunkt _i_ der Mittelwert der Indizes _i − ⌊w/2⌋_ bis _i + ⌊w/2⌋_ berechnet. Randpunkte ohne vollständiges Fenster werden weggelassen, nicht mit Nullen aufgefüllt.
+
+**Richtige Fenstergröße wählen:**
+
+- **Klein (3–5):** leichte Glättung, Details bleiben erhalten — gut für tägliche Daten.
+- **Mittel (7–14):** ein bis zwei Wochen für Tagesdaten; klassisch in Aktiencharts.
+- **Groß (30–90):** Langzeittrend, saisonale Schwankungen werden unterdrückt.
+
+## Verwendung
+
+1. CSV hochladen (Drag & Drop oder Einfügen).
+2. Zeitspalte aus dem Dropdown wählen — Datumsspalten werden automatisch erkannt.
+3. Wertspalten als Checkboxen anklicken; jede ergibt eine eigene farbige Linie.
+4. Optional gleitenden Durchschnitt aktivieren und Fenstergröße einstellen.
+5. Zusammenfassungstabelle unter dem Diagramm für Min, Max, Mittelwert, letzten Wert und prozentuale Gesamtveränderung lesen.
+
+## Häufige Anwendungsfälle
+
+- **Finanzen:** Tagesschlusspreise mehrerer Wertpapiere vergleichen.
+- **Wetter:** Temperatur oder Niederschlag über Monate visualisieren.
+- **Web-Analyse:** Seitenaufrufe oder Conversions täglich oder wöchentlich verfolgen.
+- **Wissenschaft:** Messwerte über Versuchsschritte oder Zeitintervalle darstellen.
+
+## Datenschutz
+
+Alle Berechnungen laufen lokal im Browser. Es werden keine Daten an einen Server übertragen. Maximale Dateigröße: 5 MB.
+
+## Referenzen
+
+- Chatfield, C. (2003). *The Analysis of Time Series: An Introduction.* Chapman & Hall/CRC.
+- Hyndman, R.J., Athanasopoulos, G. (2021). *Forecasting: Principles and Practice.* OTexts.

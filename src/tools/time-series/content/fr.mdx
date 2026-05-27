@@ -1,0 +1,48 @@
+# Visualiseur de Séries Temporelles
+
+Importez un fichier CSV avec une colonne de date, sélectionnez une ou plusieurs colonnes de valeurs numériques et obtenez instantanément un graphique linéaire interactif — directement dans votre navigateur. Ajoutez une moyenne mobile centrée pour lisser le bruit et révéler les tendances sous-jacentes.
+
+## Qu'est-ce qu'une série temporelle ?
+
+Une **série temporelle** est une suite de données indexées dans l'ordre chronologique : cours boursiers journaliers, températures horaires, trafic web hebdomadaire. Le temps est toujours sur l'axe des abscisses, une ou plusieurs grandeurs numériques sur l'axe des ordonnées.
+
+La visualisation d'une série temporelle permet de répondre aux questions suivantes :
+
+- Y a-t-il une **tendance** haussière ou baissière sur la période ?
+- Existe-t-il des **patterns saisonniers** — pics et creux récurrents à intervalles prévisibles ?
+- Y a-t-il des **sauts ou chutes soudains** suggérant des événements externes ?
+- Quelle est la **volatilité** par rapport à la tendance générale ?
+
+## Moyenne mobile
+
+Une **moyenne mobile simple (MMS)** lisse une série en remplaçant chaque valeur par la moyenne d'une fenêtre de valeurs environnantes. Cet outil utilise une MMS **centrée** : pour une fenêtre de taille _w_, la valeur lissée à l'indice _i_ est la moyenne des indices _i − ⌊w/2⌋_ à _i + ⌊w/2⌋_. Les points de bord sans fenêtre complète sont omis plutôt que complétés par des zéros.
+
+**Choisir la bonne taille de fenêtre :**
+
+- **Petite (3–5) :** lissage léger, préserve les détails — idéal pour des données journalières.
+- **Moyenne (7–14) :** une à deux semaines pour des données quotidiennes ; classique en finance.
+- **Grande (30–90) :** révèle la tendance long terme, supprime les variations saisonnières.
+
+## Utilisation
+
+1. Importer un CSV (glisser-déposer ou coller).
+2. Choisir la colonne de temps dans la liste déroulante — les colonnes de dates sont auto-détectées.
+3. Cocher les colonnes de valeurs ; chacune produit une ligne colorée.
+4. Activer optionnellement la moyenne mobile et régler la taille de la fenêtre.
+5. Lire le tableau de synthèse : min, max, moyenne, dernière valeur et variation totale en pourcentage.
+
+## Cas d'usage courants
+
+- **Finance :** comparer les prix de clôture journaliers de plusieurs actifs.
+- **Météo :** visualiser la température ou les précipitations sur des mois ou des années.
+- **Analytique web :** suivre les vues de pages, sessions ou conversions par jour ou semaine.
+- **Sciences :** représenter des mesures au fil des étapes d'une expérience.
+
+## Confidentialité
+
+Tous les calculs s'effectuent localement dans votre navigateur. Aucune donnée n'est transmise à un serveur. Taille de fichier maximale : 5 Mo.
+
+## Références
+
+- Chatfield, C. (2003). *The Analysis of Time Series: An Introduction.* Chapman & Hall/CRC.
+- Hyndman, R.J., Athanasopoulos, G. (2021). *Forecasting: Principles and Practice.* OTexts.

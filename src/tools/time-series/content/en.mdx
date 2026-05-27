@@ -1,0 +1,81 @@
+# Time Series Visualizer
+
+Upload a CSV file with a date or time column, select one or more numeric value columns, and instantly plot them as a line chart — right in your browser. Add a centered moving average overlay to smooth noise and reveal underlying trends. No data is ever sent to a server.
+
+## What is a time series?
+
+A **time series** is a sequence of data points indexed in time order — stock prices recorded daily, temperature measured hourly, website traffic counted weekly. Time is always on the x-axis, and one or more numeric quantities are on the y-axis.
+
+Visualizing a time series helps you answer questions such as:
+
+- Is there an upward or downward **trend** over the period?
+- Are there **seasonal patterns** — recurring peaks or troughs at predictable intervals?
+- Are there sudden **jumps or drops** that suggest external events?
+- How much **volatility** (day-to-day variation) exists relative to the overall trend?
+
+## How to use this tool
+
+1. **Upload your data** — drag and drop a CSV file, click "Choose file", or paste CSV text directly into the text area. The tool auto-detects delimiters (comma, semicolon, tab) and whether the first row is a header.
+2. **Choose a time column** — any column whose values look like dates (ISO 8601, US date strings, etc.) is automatically offered as a candidate. If your time axis is numeric (e.g. day index 1–365), you can select that too.
+3. **Select value columns** — tick any combination of numeric columns. Each becomes its own colored line on the chart.
+4. **Enable moving average** (optional) — check the "Show moving average" box and set the window size. A centered moving average of window _w_ replaces each point with the mean of the _w_ points centered on it.
+5. **Read the summary table** — min, max, mean, latest value, and total change (as percentage from first to last data point) appear below the chart.
+
+## Understanding moving averages
+
+A **simple moving average (SMA)** smooths a series by replacing each value with the mean of a surrounding window of values. This tool uses a **centered** SMA: for window size _w_, the smoothed value at time index _i_ is the mean of indices _i − ⌊w/2⌋_ through _i + ⌊w/2⌋_.
+
+Edge points that lack enough neighbours on either side are dropped rather than padded with zeros or repeated values — this prevents distorted values at the start and end of the smoothed line.
+
+**Choosing a window size:**
+
+- **Small window (3–5):** removes minor noise while preserving most detail. Good for daily data when you want to see week-scale structure.
+- **Medium window (7–14):** a one- to two-week average for daily data. Classic for stock charts.
+- **Large window (30–90):** reveals long-term drift, suppresses seasonal variation. Good for monthly or annual trend analysis.
+
+If the window is larger than the available data, the tool will not render a moving average line — you'll see only the raw series.
+
+## Supported date formats
+
+The tool calls JavaScript's built-in `Date.parse()` on each cell in the time column. This handles:
+
+- ISO 8601: `2024-01-15`, `2024-01-15T09:30:00Z`
+- Long-form English: `January 15 2024`, `15 Jan 2024`
+- Short US format: `1/15/2024`, `01/15/24`
+- Many locale-specific formats recognized by the browser's JS engine
+
+If a column contains only numbers, it is treated as a numeric index (useful for experiment step numbers, row indices, or fiscal periods).
+
+## Summary statistics explained
+
+For each selected value series, the summary table shows:
+
+- **Min / Max:** the smallest and largest values in the full series.
+- **Mean:** the arithmetic average of all values.
+- **Latest:** the value at the last row of the dataset (most recent data point).
+- **Change:** the percentage change from the very first data point to the last — `(last − first) / |first| × 100%`. A positive value (shown in green) means growth; negative (shown in red) means decline.
+
+## Common use cases
+
+- **Finance:** plot daily closing prices of multiple assets side by side. Enable a 20-day moving average to see if price is above or below trend (a common momentum indicator).
+- **Weather & climate:** visualize temperature or rainfall over months or years. A 30-day MA smooths short-term weather noise to reveal seasonal shape.
+- **Web analytics:** chart page views, sessions, or conversions by day or week. Use a 7-day MA to remove the "weekend dip" effect that obscures weekly growth.
+- **IoT / sensor data:** compare readings from multiple sensors over time. Moving averages help distinguish drift from spikes.
+- **Scientific experiments:** track measurements across trial runs, time steps, or experimental conditions.
+
+## Privacy and file size
+
+Every calculation runs locally in your browser using JavaScript. Nothing is transmitted to any server. The tool handles CSV files up to 5 MB. For larger files, consider pre-filtering in a spreadsheet tool or splitting the dataset before uploading.
+
+## Tips for best results
+
+- Include a clear date column in your CSV. Column names like `date`, `time`, `timestamp`, `period`, or `datetime` are common; the tool examines the values, not the column name, to detect dates.
+- Keep numeric columns free of currency symbols, percentage signs, or units — strip those in your spreadsheet first. Values like `$1,234.56` may not parse correctly.
+- For high-frequency data (thousands of rows), Plotly's interactive chart lets you zoom and pan to inspect specific sub-ranges. Use the toolbar in the top-right corner of the chart.
+- If you have more than 10 series, consider grouping related columns into separate uploads for clarity.
+
+## References
+
+- Chatfield, C. (2003). *The Analysis of Time Series: An Introduction.* Chapman & Hall/CRC.
+- Hyndman, R.J., Athanasopoulos, G. (2021). *Forecasting: Principles and Practice, 3rd edition.* OTexts. Available at otexts.com/fpp3.
+- Box, G.E.P., Jenkins, G.M., Reinsel, G.C., Ljung, G.M. (2015). *Time Series Analysis: Forecasting and Control.* Wiley.
