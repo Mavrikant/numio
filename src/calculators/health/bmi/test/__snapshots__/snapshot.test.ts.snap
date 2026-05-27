@@ -1161,6 +1161,7 @@ exports[`BMI definition — shape snapshot > snapshot: definition shape matches 
     },
   ],
   "meta": {
+    "compareEnabled": true,
     "disclaimer": "BMI is a population-level screening tool. It does not diagnose body fatness or health. Consult a healthcare professional for individual assessment.",
     "formulaLatex": "\\text{BMI} = \\frac{\\text{weight (kg)}}{\\text{height (m)}^2}",
     "references": [

@@ -226,6 +226,14 @@ const Content = mdxModule
             client:only="react"
             slug={calc.slug}
             locale={locale}
+            compareLabels={{
+              toggle: t(locale, "compare.toggle"),
+              scenarioA: t(locale, "compare.scenarioA"),
+              scenarioB: t(locale, "compare.scenarioB"),
+              difference: t(locale, "compare.difference"),
+              exitCompare: t(locale, "compare.exitCompare"),
+              deltaLabel: t(locale, "compare.deltaLabel"),
+            }}
           />
         </div>
 

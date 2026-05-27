@@ -1285,6 +1285,7 @@ exports[`Auto Loan definition — shape snapshot > snapshot: definition shape 1`
     },
   ],
   "meta": {
+    "compareEnabled": true,
     "disclaimer": "This calculator estimates principal and interest only. Actual costs may include dealer fees, taxes, registration, and insurance.",
     "formulaLatex": "M = L \\cdot \\frac{r(1+r)^n}{(1+r)^n - 1}",
     "references": [

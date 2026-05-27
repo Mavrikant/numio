@@ -151,6 +151,7 @@ export interface CalculatorMeta {
   readonly references: ReadonlyArray<CalculatorReferences>;
   readonly accuracyNote?: string;
   readonly disclaimer?: string;
+  readonly compareEnabled?: boolean;
 }
 
 export interface CalculatorDefinition<

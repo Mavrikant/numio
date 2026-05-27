@@ -1274,6 +1274,7 @@ exports[`Mortgage definition — shape snapshot > snapshot: definition shape mat
     },
   ],
   "meta": {
+    "compareEnabled": true,
     "disclaimer": "This calculator provides estimates only. Actual payments may vary based on lender fees, insurance, property taxes, and other factors. Consult a licensed mortgage professional before making financial decisions.",
     "formulaLatex": "M = P \\cdot \\frac{r(1+r)^n}{(1+r)^n - 1}",
     "references": [

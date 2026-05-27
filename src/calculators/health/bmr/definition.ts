@@ -115,6 +115,7 @@ export default defineCalculator({
   compute,
   i18n,
   meta: {
+    compareEnabled: true,
     formulaLatex:
       "\\text{BMR (Mifflin)} = 10w + 6.25h - 5a + s \\quad (s=+5\\text{ male},\\ -161\\text{ female})",
     references: [

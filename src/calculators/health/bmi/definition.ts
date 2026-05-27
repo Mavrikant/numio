@@ -133,6 +133,7 @@ export default defineCalculator({
   compute,
   i18n,
   meta: {
+    compareEnabled: true,
     formulaLatex: "\\text{BMI} = \\frac{\\text{weight (kg)}}{\\text{height (m)}^2}",
     references: [
       {

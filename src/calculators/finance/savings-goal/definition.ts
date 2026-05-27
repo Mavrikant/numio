@@ -88,6 +88,7 @@ export default defineCalculator({
   compute,
   i18n,
   meta: {
+    compareEnabled: true,
     formulaLatex:
       "\\text{balance} = \\text{currentSavings} \\times (1+r)^n + \\text{PMT} \\times \\frac{(1+r)^n - 1}{r}",
     references: [

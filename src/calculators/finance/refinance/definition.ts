@@ -67,6 +67,7 @@ export default defineCalculator({
   compute,
   i18n,
   meta: {
+    compareEnabled: true,
     formulaLatex: "M_{new} = P \\cdot \\frac{r_{new}(1+r_{new})^{n_{new}}}{(1+r_{new})^{n_{new}} - 1}",
     references: [
       {

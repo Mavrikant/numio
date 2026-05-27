@@ -1285,6 +1285,7 @@ exports[`BMR definition — shape snapshot > snapshot: definition shape 1`] = `
     },
   ],
   "meta": {
+    "compareEnabled": true,
     "disclaimer": "BMR is an estimate of resting energy expenditure. Individual values may vary due to genetics, body composition, and health status. Consult a registered dietitian for personalised guidance.",
     "formulaLatex": "\\text{BMR (Mifflin)} = 10w + 6.25h - 5a + s \\quad (s=+5\\text{ male},\\ -161\\text{ female})",
     "references": [

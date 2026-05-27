@@ -1570,6 +1570,7 @@ exports[`Retirement definition — shape snapshot > snapshot: definition shape 1
     },
   ],
   "meta": {
+    "compareEnabled": true,
     "disclaimer": "This calculator is for illustrative purposes only. Actual investment returns vary and are not guaranteed. Consult a financial advisor for personalized retirement planning.",
     "formulaLatex": "FV = PV(1+r)^n + PMT \\cdot \\frac{(1+r)^n - 1}{r}",
     "references": [

@@ -1497,6 +1497,7 @@ exports[`Compound Interest definition — shape snapshot > snapshot: definition 
     },
   ],
   "meta": {
+    "compareEnabled": true,
     "disclaimer": "This calculator assumes a constant rate of return and regular contributions. Actual investment returns vary and are not guaranteed.",
     "formulaLatex": "FV = P\\left(1 + \\frac{r}{n}\\right)^{nt} + PMT \\cdot \\frac{\\left(1 + \\frac{r}{12}\\right)^{12t} - 1}{r/12}",
     "references": [

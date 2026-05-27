@@ -71,6 +71,7 @@ export default defineCalculator({
   compute,
   i18n,
   meta: {
+    compareEnabled: true,
     formulaLatex:
       "FV = P\\left(1 + \\frac{r}{n}\\right)^{nt} + PMT \\cdot \\frac{\\left(1 + \\frac{r}{12}\\right)^{12t} - 1}{r/12}",
     references: [
