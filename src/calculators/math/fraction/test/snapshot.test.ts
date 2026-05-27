@@ -12,7 +12,7 @@ describe("fraction snapshot", () => {
 
   it("schema validates correct inputs", () => {
     assertSchemaValidates(
-      definition as AnyCalculatorDefinition,
+      definition as unknown as AnyCalculatorDefinition,
       { numerator1: 1, denominator1: 2, operation: "simplify" },
       { numerator1: "abc", denominator1: 2, operation: "simplify" }
     );
@@ -20,6 +20,6 @@ describe("fraction snapshot", () => {
 
   it("compute is pure", () => {
     const parsed = definition.inputSchema.parse({ numerator1: 1, denominator1: 2, operation: "simplify" });
-    assertComputeIsPure(definition as AnyCalculatorDefinition, parsed as Record<string, unknown>);
+    assertComputeIsPure(definition as unknown as AnyCalculatorDefinition, parsed as Record<string, unknown>);
   });
 });

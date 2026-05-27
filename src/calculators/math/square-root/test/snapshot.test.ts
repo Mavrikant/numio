@@ -12,7 +12,7 @@ describe("square-root snapshot", () => {
 
   it("schema validates correct inputs", () => {
     assertSchemaValidates(
-      definition as AnyCalculatorDefinition,
+      definition as unknown as AnyCalculatorDefinition,
       { value: 9, nthRoot: 2 },
       { value: -1, nthRoot: 2 }
     );
@@ -20,6 +20,6 @@ describe("square-root snapshot", () => {
 
   it("compute is pure", () => {
     const parsed = definition.inputSchema.parse({ value: 144, nthRoot: 2 });
-    assertComputeIsPure(definition as AnyCalculatorDefinition, parsed as Record<string, unknown>);
+    assertComputeIsPure(definition as unknown as AnyCalculatorDefinition, parsed as Record<string, unknown>);
   });
 });

@@ -2,6 +2,10 @@
 
 exports[`square-root snapshot > matches snapshot for standard inputs 1`] = `
 {
-  "result": 10,
+  "isPerfectNthRoot": true,
+  "isPerfectSquare": true,
+  "root": 12,
+  "simplifiedCoefficient": 12,
+  "simplifiedRadicand": 1,
 }
 `;
