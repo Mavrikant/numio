@@ -1,0 +1,175 @@
+import { defineCalculator } from "@/types/calculator";
+import { compute, inputSchema } from "./compute";
+import i18n from "./i18n";
+
+export default defineCalculator({
+  slug: "debt-payoff",
+  category: "finance",
+  priority: "P1",
+  icon: "credit-card",
+  inputs: [
+    {
+      id: "debt1_balance",
+      type: { kind: "number", min: 0, max: 10_000_000, step: 100, unit: "usd" },
+      defaultValue: 5000,
+      required: true,
+      group: "debt1",
+    },
+    {
+      id: "debt1_apr",
+      type: { kind: "number", min: 0, max: 100, step: 0.01, unit: "percent" },
+      defaultValue: 22,
+      required: true,
+      group: "debt1",
+    },
+    {
+      id: "debt1_min",
+      type: { kind: "number", min: 0, max: 1_000_000, step: 10, unit: "usd" },
+      defaultValue: 150,
+      required: true,
+      group: "debt1",
+    },
+    {
+      id: "debt2_balance",
+      type: { kind: "number", min: 0, max: 10_000_000, step: 100, unit: "usd" },
+      defaultValue: 3000,
+      required: false,
+      group: "debt2",
+    },
+    {
+      id: "debt2_apr",
+      type: { kind: "number", min: 0, max: 100, step: 0.01, unit: "percent" },
+      defaultValue: 18,
+      required: false,
+      group: "debt2",
+    },
+    {
+      id: "debt2_min",
+      type: { kind: "number", min: 0, max: 1_000_000, step: 10, unit: "usd" },
+      defaultValue: 100,
+      required: false,
+      group: "debt2",
+    },
+    {
+      id: "debt3_balance",
+      type: { kind: "number", min: 0, max: 10_000_000, step: 100, unit: "usd" },
+      defaultValue: 0,
+      required: false,
+      group: "debt3",
+    },
+    {
+      id: "debt3_apr",
+      type: { kind: "number", min: 0, max: 100, step: 0.01, unit: "percent" },
+      defaultValue: 0,
+      required: false,
+      group: "debt3",
+    },
+    {
+      id: "debt3_min",
+      type: { kind: "number", min: 0, max: 1_000_000, step: 10, unit: "usd" },
+      defaultValue: 0,
+      required: false,
+      group: "debt3",
+    },
+    {
+      id: "debt4_balance",
+      type: { kind: "number", min: 0, max: 10_000_000, step: 100, unit: "usd" },
+      defaultValue: 0,
+      required: false,
+      group: "debt4",
+    },
+    {
+      id: "debt4_apr",
+      type: { kind: "number", min: 0, max: 100, step: 0.01, unit: "percent" },
+      defaultValue: 0,
+      required: false,
+      group: "debt4",
+    },
+    {
+      id: "debt4_min",
+      type: { kind: "number", min: 0, max: 1_000_000, step: 10, unit: "usd" },
+      defaultValue: 0,
+      required: false,
+      group: "debt4",
+    },
+    {
+      id: "debt5_balance",
+      type: { kind: "number", min: 0, max: 10_000_000, step: 100, unit: "usd" },
+      defaultValue: 0,
+      required: false,
+      group: "debt5",
+    },
+    {
+      id: "debt5_apr",
+      type: { kind: "number", min: 0, max: 100, step: 0.01, unit: "percent" },
+      defaultValue: 0,
+      required: false,
+      group: "debt5",
+    },
+    {
+      id: "debt5_min",
+      type: { kind: "number", min: 0, max: 1_000_000, step: 10, unit: "usd" },
+      defaultValue: 0,
+      required: false,
+      group: "debt5",
+    },
+    {
+      id: "strategy",
+      type: {
+        kind: "select",
+        options: [
+          { value: "avalanche", i18nKey: "avalanche" },
+          { value: "snowball", i18nKey: "snowball" },
+        ],
+      },
+      defaultValue: "avalanche",
+      required: true,
+    },
+    {
+      id: "extraMonthly",
+      type: { kind: "number", min: 0, max: 1_000_000, step: 10, unit: "usd" },
+      defaultValue: 200,
+      required: false,
+    },
+  ],
+  outputs: [
+    { id: "totalMonths", format: "number", precision: 0, highlight: true },
+    { id: "payoffYears", format: "number", precision: 2 },
+    { id: "totalInterest", format: "currency", precision: 2, highlight: true },
+    { id: "totalPaid", format: "currency", precision: 2 },
+    { id: "totalStartingBalance", format: "currency", precision: 2 },
+    { id: "perDebt", format: "list" },
+  ],
+  inputSchema,
+  compute,
+  i18n,
+  meta: {
+    compareEnabled: true,
+    formulaLatex:
+      "B_{t+1} = (B_t + B_t \\cdot \\tfrac{r}{12}) - p_t,\\quad p_t = \\text{min} + \\text{snowball}",
+    references: [
+      {
+        title: "Debt Avalanche vs. Debt Snowball: Which Should You Use?",
+        url: "https://www.consumerfinance.gov/about-us/blog/which-strategy-best-helps-you-pay-off-credit-card-debt/",
+        authority: "Consumer Financial Protection Bureau (CFPB)",
+      },
+      {
+        title: "How to Pay Off Debt: 7 Strategies",
+        url: "https://www.nerdwallet.com/article/finance/pay-off-debt",
+        authority: "NerdWallet (editorial)",
+      },
+    ],
+    disclaimer:
+      "This simulator assumes fixed APRs, fixed minimum payments, and that any extra payment is applied immediately at month-end. Real card minimums often decline with the balance and interest may compound daily; treat the months-to-payoff figure as an upper-bound estimate.",
+  },
+  related: ["credit-card-payoff", "loan-amortization", "budget"],
+  tags: [
+    "debt payoff",
+    "debt snowball",
+    "debt avalanche",
+    "credit card payoff",
+    "multi-debt planner",
+    "interest",
+    "finance",
+  ],
+});
