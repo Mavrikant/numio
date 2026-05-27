@@ -30,10 +30,14 @@ import {
   buildCalculatorSeoMeta,
   buildCalculatorJsonLd,
   buildHreflang,
+  buildHowToJsonLd,
+  buildFaqJsonLd,
 } from "@/lib/seo";
 import type { CalculatorCategory } from "@/types/calculator";
 import { CalculatorIsland } from "@/components/calculator/CalculatorView";
 import Sidebar from "@/components/chrome/Sidebar.astro";
+import QuickAnswer from "@/components/calculator/QuickAnswer.astro";
+import AuthorityFooter from "@/components/calculator/AuthorityFooter.astro";
 // Per-calculator viz islands — manually wired here because dynamic glob import
 // of viz modules into the CalculatorView bundle triggers a "React is null"
 // circular-import error.
@@ -100,6 +104,8 @@ if (calc.category !== cat) {
 
 const seo = buildCalculatorSeoMeta(calc, locale);
 const jsonLd = buildCalculatorJsonLd(calc, locale);
+const howToJsonLd = buildHowToJsonLd(calc, locale);
+const faqJsonLd = buildFaqJsonLd(calc, locale);
 const hreflangs = buildHreflang(cat, calc.slug);
 const bundle = calc.i18n[locale] ?? calc.i18n["en"];
 const categoryLabel = getCategoryLabel(locale, cat);
@@ -149,6 +155,14 @@ const Content = mdxModule
       content={seo.keywords.join(", ")}
       slot="head"
     />
+  )}
+
+  <!-- OG image for social sharing and AI/LLM discovery (D2) -->
+  {seo.ogImage && (
+    <meta property="og:image" content={seo.ogImage} slot="head" />
+  )}
+  {seo.ogImage && (
+    <meta name="twitter:image" content={seo.ogImage} slot="head" />
   )}
 
   <main>
@@ -203,6 +217,9 @@ const Content = mdxModule
       <Sidebar locale={locale} activeSlug={calc.slug} activeCategory={cat} />
 
       <div class="mt-6 flex-1 min-w-0 lg:mt-0">
+        <!-- Quick Answer block (A2 SEO) — above the calculator form -->
+        <QuickAnswer calc={calc} locale={locale} />
+
         <!-- CalculatorView island -->
         <div class="rounded-xl bg-slate-50 dark:bg-slate-900/50 py-2">
           <CalculatorIsland
@@ -229,6 +246,9 @@ const Content = mdxModule
             <Content />
           </section>
         )}
+
+        <!-- Authority & Trust footer (A1 SEO / E-E-A-T) -->
+        <AuthorityFooter calc={calc} locale={locale} />
 
         <!-- Related calculators -->
         {relatedCalcs.length > 0 && (
@@ -262,10 +282,28 @@ const Content = mdxModule
     </div>
   </main>
 
-  <!-- JSON-LD structured data -->
+  <!-- JSON-LD structured data: SoftwareApplication + BreadcrumbList -->
   <script
     is:inline
     type="application/ld+json"
     set:html={JSON.stringify(jsonLd)}
   />
+
+  <!-- JSON-LD: HowTo (math / conversion / engineering / formula calcs) -->
+  {howToJsonLd && (
+    <script
+      is:inline
+      type="application/ld+json"
+      set:html={JSON.stringify(howToJsonLd)}
+    />
+  )}
+
+  <!-- JSON-LD: FAQPage (calcs with faq[] bundle) -->
+  {faqJsonLd && (
+    <script
+      is:inline
+      type="application/ld+json"
+      set:html={JSON.stringify(faqJsonLd)}
+    />
+  )}
 </Base>
