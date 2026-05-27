@@ -80,7 +80,18 @@ function formatValue(
       return String(value);
 
     case "list":
-      return Array.isArray(value) ? (value as unknown[]).join(", ") : String(value);
+      if (!Array.isArray(value)) return String(value);
+      // Render arrays of strings/numbers as comma-separated. For arrays of
+      // objects (e.g. mortgage amortization schedule), summarise rather than
+      // dump "[object Object], [object Object]..." (which used to push the
+      // page hundreds of lines tall and hide everything below).
+      if (value.length === 0) return "—";
+      const first = value[0];
+      if (typeof first === "object" && first !== null) {
+        const keys = Object.keys(first).slice(0, 3).join(", ");
+        return `${value.length} entries · ${keys}…`;
+      }
+      return (value as unknown[]).join(", ");
 
     default:
       return String(value);
