@@ -1,0 +1,31 @@
+# Chart Builder — turn any CSV into a chart
+
+Upload a CSV file (or paste data), pick a chart type, choose the columns you want to plot, and download the result as a PNG or SVG image. Everything happens in your browser — your data never leaves your device.
+
+## Supported chart types
+
+- **Line** — trends over an ordered axis (time, categories). Optionally smooth the line into a spline.
+- **Bar** — compare values across categories. Plot several series side by side (grouped) or stack them.
+- **Scatter** — show the relationship between two numeric variables as a cloud of points.
+- **Area** — like a line chart but filled to the baseline, good for emphasizing magnitude.
+- **Pie** — show how a single numeric column breaks down across the categories in your X column.
+- **Histogram** — show the distribution of one or more numeric columns by binning their values.
+- **Box plot** — summarize a distribution with median, quartiles and outliers; great for comparing groups.
+
+## How to use it
+
+1. **Upload your data.** Drag and drop a CSV file, click *Choose file*, or paste comma/semicolon/tab-separated data into the textarea. The delimiter and header row are detected automatically, and both US (`1,234.56`) and EU (`1.234,56`) number formats are handled.
+2. **Pick a chart type.** Switch types at any time — the chart re-renders instantly.
+3. **Choose columns.** Select an X column for the categories or horizontal axis, then click one or more numeric columns to plot as Y series. For pie charts, the X column supplies the slice labels and a single numeric column supplies the values.
+4. **Customize.** Give the chart a title, stack bars, or smooth lines.
+5. **Download.** Use the *PNG image* or *SVG vector* buttons to save the chart. PNG is exported at 2× resolution for crisp screenshots; SVG stays sharp at any size and is ideal for print or further editing in design tools.
+
+## Privacy
+
+This tool is fully client-side. The CSV you upload is parsed and rendered with JavaScript in your own browser using [Plotly.js](https://plotly.com/javascript/). Nothing is transmitted to any server, so it is safe to use with private or confidential datasets.
+
+## Tips
+
+- Numeric columns are detected automatically (a column counts as numeric when at least 80% of its non-empty cells parse as numbers). Only numeric columns can be used as Y series.
+- To compare several metrics, select multiple Y columns — each becomes its own series with a distinct color and a legend entry.
+- Histograms and box plots ignore the X column; they work directly on the distribution of the selected numeric columns.

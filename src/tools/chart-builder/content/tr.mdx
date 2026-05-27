@@ -1,0 +1,31 @@
+# Grafik Oluşturucu — herhangi bir CSV'yi grafiğe dönüştürün
+
+Bir CSV dosyası yükleyin (veya veri yapıştırın), bir grafik türü seçin, çizmek istediğiniz sütunları belirleyin ve sonucu PNG veya SVG görsel olarak indirin. Her şey tarayıcınızda gerçekleşir — verileriniz hiçbir zaman cihazınızdan çıkmaz.
+
+## Desteklenen grafik türleri
+
+- **Çizgi** — sıralı bir eksende (zaman, kategoriler) eğilimler. İsteğe bağlı olarak çizgiyi yumuşatabilirsiniz.
+- **Çubuk** — kategoriler arası değerleri karşılaştırın. Birden fazla seriyi yan yana (gruplu) çizin veya üst üste yığın.
+- **Dağılım** — iki sayısal değişken arasındaki ilişkiyi nokta bulutu olarak gösterin.
+- **Alan** — çizgi grafiğine benzer ama taban çizgisine kadar doldurulur; büyüklüğü vurgulamak için idealdir.
+- **Pasta** — tek bir sayısal sütunun X sütunundaki kategorilere nasıl dağıldığını gösterin.
+- **Histogram** — bir veya daha fazla sayısal sütunun değerlerini gruplayarak dağılımını gösterin.
+- **Kutu grafiği** — bir dağılımı medyan, çeyrekler ve aykırı değerlerle özetleyin; grupları karşılaştırmak için harikadır.
+
+## Nasıl kullanılır
+
+1. **Verinizi yükleyin.** Bir CSV dosyasını sürükleyip bırakın, *Dosya seç*'e tıklayın veya virgül/noktalı virgül/sekme ile ayrılmış veriyi metin alanına yapıştırın. Ayraç ve başlık satırı otomatik algılanır; hem ABD (`1,234.56`) hem de AB (`1.234,56`) sayı biçimleri desteklenir.
+2. **Bir grafik türü seçin.** İstediğiniz zaman türü değiştirin — grafik anında yeniden çizilir.
+3. **Sütunları seçin.** Kategoriler veya yatay eksen için bir X sütunu seçin, ardından Y serisi olarak çizmek için bir veya daha fazla sayısal sütuna tıklayın. Pasta grafiklerinde X sütunu dilim etiketlerini, tek bir sayısal sütun ise değerleri sağlar.
+4. **Özelleştirin.** Grafiğe başlık verin, çubukları yığın veya çizgileri yumuşatın.
+5. **İndirin.** Grafiği kaydetmek için *PNG görsel* veya *SVG vektör* düğmelerini kullanın. PNG, net ekran görüntüleri için 2× çözünürlükte verilir; SVG her boyutta net kalır ve baskı ya da tasarım araçlarında düzenleme için idealdir.
+
+## Gizlilik
+
+Bu araç tamamen istemci taraflıdır. Yüklediğiniz CSV, kendi tarayıcınızda JavaScript ile [Plotly.js](https://plotly.com/javascript/) kullanılarak ayrıştırılır ve çizilir. Hiçbir veri herhangi bir sunucuya gönderilmez, bu yüzden özel veya gizli veri kümeleriyle güvenle kullanabilirsiniz.
+
+## İpuçları
+
+- Sayısal sütunlar otomatik algılanır (boş olmayan hücrelerin en az %80'i sayı olarak ayrıştırılıyorsa sütun sayısal sayılır). Yalnızca sayısal sütunlar Y serisi olarak kullanılabilir.
+- Birkaç ölçütü karşılaştırmak için birden fazla Y sütunu seçin — her biri kendi rengi ve gösterge girişiyle ayrı bir seri olur.
+- Histogram ve kutu grafikleri X sütununu yok sayar; doğrudan seçili sayısal sütunların dağılımı üzerinde çalışır.
