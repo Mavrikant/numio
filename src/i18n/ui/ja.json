@@ -15,7 +15,12 @@
     "closeMenu": "メニューを閉じる",
     "skipToContent": "コンテンツへスキップ",
     "mainNavigation": "メインナビゲーション",
-    "tools": "ツール"
+    "tools": "ツール",
+    "sitemap": "サイトマップ"
+  },
+  "sitemap": {
+    "title": "サイトマップ",
+    "description": "Numio のすべての計算ツール、変換ツール、ツールを一か所で閲覧できます。"
   },
   "actions": {
     "calculate": "計算する",

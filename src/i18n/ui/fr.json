@@ -15,7 +15,12 @@
     "closeMenu": "Fermer le menu",
     "skipToContent": "Aller au contenu",
     "mainNavigation": "Navigation principale",
-    "tools": "Outils"
+    "tools": "Outils",
+    "sitemap": "Plan du site"
+  },
+  "sitemap": {
+    "title": "Plan du site",
+    "description": "Parcourez tous les calculateurs, convertisseurs et outils de Numio en un seul endroit."
   },
   "actions": {
     "calculate": "Calculer",

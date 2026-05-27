@@ -19,7 +19,7 @@ import {
 } from "@/lib/sitemap";
 import { SITE_URL, BASE_PATH } from "@/config/site";
 
-const STATIC_PAGES = ["about", "contact", "privacy"] as const;
+const STATIC_PAGES = ["about", "contact", "privacy", "sitemap"] as const;
 
 export const GET: APIRoute = () => {
   const lastmod = todayIso();
