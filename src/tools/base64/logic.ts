@@ -1,66 +1,37 @@
-/**
- * Base64 encode/decode logic — pure and environment-agnostic.
- *
- * We convert text to/from UTF-8 bytes with TextEncoder/TextDecoder (available
- * in browsers and Node), then run a hand-written Base64 codec so behaviour is
- * identical everywhere and the URL-safe variant is easy to support.
- */
+const CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
 
-const STD = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
-const URL = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_";
-
-export interface Base64Options {
-  /** Use the URL-safe alphabet (- and _ instead of + and /). */
-  readonly urlSafe: boolean;
-  /** Emit `=` padding (standard) — when false, padding is stripped. */
-  readonly padding: boolean;
-}
-
-export function bytesToBase64(bytes: Uint8Array, options: Base64Options): string {
-  const table = options.urlSafe ? URL : STD;
+/** UTF-8 → Base64 (no external btoa dependency, works in any JS runtime). */
+export function encodeBase64(text: string): string {
+  const bytes = new TextEncoder().encode(text);
   let out = "";
   for (let i = 0; i < bytes.length; i += 3) {
     const b0 = bytes[i]!;
-    const b1 = i + 1 < bytes.length ? bytes[i + 1]! : 0;
-    const b2 = i + 2 < bytes.length ? bytes[i + 2]! : 0;
-    out += table[b0 >> 2];
-    out += table[((b0 & 0x03) << 4) | (b1 >> 4)];
-    out += i + 1 < bytes.length ? table[((b1 & 0x0f) << 2) | (b2 >> 6)] : "=";
-    out += i + 2 < bytes.length ? table[b2 & 0x3f] : "=";
+    const b1 = bytes[i + 1];
+    const b2 = bytes[i + 2];
+    out += CHARS[b0 >> 2];
+    out += CHARS[((b0 & 3) << 4) | ((b1 ?? 0) >> 4)];
+    out += b1 === undefined ? "=" : CHARS[((b1 & 15) << 2) | ((b2 ?? 0) >> 6)];
+    out += b2 === undefined ? "=" : CHARS[b2 & 63];
   }
-  if (!options.padding) out = out.replace(/=+$/, "");
   return out;
 }
 
-/** Decode Base64 (standard or URL-safe, padded or not) to raw bytes. */
-export function base64ToBytes(input: string): Uint8Array {
-  const clean = input.replace(/[\s]/g, "").replace(/-/g, "+").replace(/_/g, "/").replace(/=+$/, "");
-  const lookup = new Int16Array(128).fill(-1);
-  for (let i = 0; i < STD.length; i++) lookup[STD.charCodeAt(i)] = i;
+const LOOKUP: Record<string, number> = {};
+for (let i = 0; i < CHARS.length; i++) LOOKUP[CHARS[i]!] = i;
 
-  const out: number[] = [];
-  let buffer = 0;
-  let bits = 0;
-  for (const ch of clean) {
-    const code = ch.charCodeAt(0);
-    const val = code < 128 ? lookup[code]! : -1;
-    if (val < 0) throw new Error(`Invalid Base64 character: "${ch}"`);
-    buffer = (buffer << 6) | val;
-    bits += 6;
-    if (bits >= 8) {
-      bits -= 8;
-      out.push((buffer >> bits) & 0xff);
-    }
+/** Base64 → UTF-8 string. Throws on malformed input. */
+export function decodeBase64(b64: string): string {
+  const clean = b64.replace(/\s+/g, "").replace(/=+$/, "");
+  if (!/^[A-Za-z0-9+/]*$/.test(clean)) throw new Error("Invalid Base64");
+  const bytes: number[] = [];
+  for (let i = 0; i < clean.length; i += 4) {
+    const c0 = LOOKUP[clean[i]!]!;
+    const c1 = LOOKUP[clean[i + 1]!]!;
+    const c2 = clean[i + 2] !== undefined ? LOOKUP[clean[i + 2]!]! : undefined;
+    const c3 = clean[i + 3] !== undefined ? LOOKUP[clean[i + 3]!]! : undefined;
+    bytes.push((c0 << 2) | (c1 >> 4));
+    if (c2 !== undefined) bytes.push(((c1 & 15) << 4) | (c2 >> 2));
+    if (c3 !== undefined) bytes.push(((c2! & 3) << 6) | c3);
   }
-  return Uint8Array.from(out);
-}
-
-export function encodeText(text: string, options: Base64Options): string {
-  return bytesToBase64(new TextEncoder().encode(text), options);
-}
-
-/** Decode Base64 to a UTF-8 string. Throws on invalid input or bad UTF-8. */
-export function decodeText(input: string): string {
-  const bytes = base64ToBytes(input);
-  return new TextDecoder("utf-8", { fatal: true }).decode(bytes);
+  return new TextDecoder().decode(new Uint8Array(bytes));
 }

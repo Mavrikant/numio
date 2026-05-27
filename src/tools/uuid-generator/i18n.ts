@@ -1,244 +1,26 @@
 import type { ToolI18n } from "@/types/tool";
+import { COMMON_UI } from "../_shared/ui";
 
-const i18n: ToolI18n = {
-  en: {
-    title: "UUID Generator (v4)",
-    short: "Generate cryptographically-secure version-4 UUIDs, one or many at a time.",
-    description:
-      "Free online UUID/GUID generator. Create random version-4 UUIDs using the browser's cryptographically-secure random source. Generate one or thousands at once, toggle uppercase and hyphens, and copy with a click. Everything runs locally — nothing is transmitted.",
-    keywords: ["uuid generator", "guid generator", "uuid v4", "random uuid", "unique id", "online uuid"],
-    ui: {
-      count: "How many",
-      uppercase: "Uppercase",
-      hyphens: "Include hyphens",
-      generate: "Generate",
-      regenerate: "Regenerate",
-      copy: "Copy",
-      copyAll: "Copy all",
-      copied: "Copied!",
-      version: "Version 4 (random)",
-      result: "Generated UUIDs",
-    },
-    faq: [
-      { q: "What is a version-4 UUID?", a: "A 128-bit identifier with 122 random bits and 6 fixed bits marking the version and variant. The randomness makes collisions astronomically unlikely." },
-      { q: "Are these UUIDs random and unique?", a: "Yes. They use the Web Crypto API's secure random source, so they are suitable as database keys, request IDs, and similar uses." },
-      { q: "Can I generate many at once?", a: "Yes — set the count and generate up to 1000 UUIDs in one go, then copy them all." },
-    ],
-  },
-  tr: {
-    title: "UUID Üretici (v4)",
-    short: "Kriptografik olarak güvenli sürüm-4 UUID'leri tek tek veya toplu üretin.",
-    description:
-      "Ücretsiz çevrimiçi UUID/GUID üretici. Tarayıcının kriptografik olarak güvenli rastgele kaynağıyla rastgele sürüm-4 UUID'leri oluşturun. Tek veya binlercesini aynı anda üretin, büyük harf ve tireleri açıp kapatın ve tek tıkla kopyalayın. Her şey yerel çalışır — hiçbir şey gönderilmez.",
-    keywords: ["uuid üretici", "guid üretici", "uuid v4", "rastgele uuid", "benzersiz kimlik", "çevrimiçi uuid"],
-    ui: {
-      count: "Adet",
-      uppercase: "Büyük harf",
-      hyphens: "Tireleri dahil et",
-      generate: "Üret",
-      regenerate: "Yeniden üret",
-      copy: "Kopyala",
-      copyAll: "Tümünü kopyala",
-      copied: "Kopyalandı!",
-      version: "Sürüm 4 (rastgele)",
-      result: "Üretilen UUID'ler",
-    },
-    faq: [
-      { q: "Sürüm-4 UUID nedir?", a: "122 rastgele bit ve sürüm ile varyantı işaretleyen 6 sabit bitten oluşan 128 bitlik bir tanımlayıcıdır. Rastgelelik, çakışmaları astronomik derecede olanaksız kılar." },
-      { q: "Bu UUID'ler rastgele ve benzersiz mi?", a: "Evet. Web Crypto API'nin güvenli rastgele kaynağını kullanır; bu yüzden veritabanı anahtarları, istek kimlikleri ve benzeri kullanımlar için uygundur." },
-      { q: "Aynı anda çok sayıda üretebilir miyim?", a: "Evet — adedi belirleyin ve tek seferde 1000'e kadar UUID üretip hepsini kopyalayın." },
-    ],
-  },
-  de: {
-    title: "UUID-Generator (v4)",
-    short: "Erzeugen Sie kryptografisch sichere Version-4-UUIDs, einzeln oder viele auf einmal.",
-    description:
-      "Kostenloser Online-UUID/GUID-Generator. Erstellen Sie zufällige Version-4-UUIDs mit der kryptografisch sicheren Zufallsquelle des Browsers. Erzeugen Sie eine oder Tausende auf einmal, schalten Sie Großbuchstaben und Bindestriche um und kopieren Sie mit einem Klick. Alles läuft lokal — nichts wird übertragen.",
-    keywords: ["UUID-Generator", "GUID-Generator", "uuid v4", "zufällige uuid", "eindeutige ID", "online uuid"],
-    ui: {
-      count: "Anzahl",
-      uppercase: "Großbuchstaben",
-      hyphens: "Bindestriche einfügen",
-      generate: "Erzeugen",
-      regenerate: "Neu erzeugen",
-      copy: "Kopieren",
-      copyAll: "Alle kopieren",
-      copied: "Kopiert!",
-      version: "Version 4 (zufällig)",
-      result: "Erzeugte UUIDs",
-    },
-  },
-  fr: {
-    title: "Générateur d'UUID (v4)",
-    short: "Générez des UUID version 4 cryptographiquement sûrs, un seul ou plusieurs à la fois.",
-    description:
-      "Générateur d'UUID/GUID en ligne gratuit. Créez des UUID version 4 aléatoires avec la source aléatoire cryptographiquement sûre du navigateur. Générez-en un ou des milliers d'un coup, activez les majuscules et les tirets, et copiez en un clic. Tout est local — rien n'est transmis.",
-    keywords: ["générateur uuid", "générateur guid", "uuid v4", "uuid aléatoire", "identifiant unique", "uuid en ligne"],
-    ui: {
-      count: "Combien",
-      uppercase: "Majuscules",
-      hyphens: "Inclure les tirets",
-      generate: "Générer",
-      regenerate: "Régénérer",
-      copy: "Copier",
-      copyAll: "Tout copier",
-      copied: "Copié !",
-      version: "Version 4 (aléatoire)",
-      result: "UUID générés",
-    },
-  },
-  es: {
-    title: "Generador de UUID (v4)",
-    short: "Genera UUID versión 4 criptográficamente seguros, uno o muchos a la vez.",
-    description:
-      "Generador de UUID/GUID en línea gratuito. Crea UUID versión 4 aleatorios con la fuente aleatoria criptográficamente segura del navegador. Genera uno o miles a la vez, alterna mayúsculas y guiones, y copia con un clic. Todo es local: no se transmite nada.",
-    keywords: ["generador uuid", "generador guid", "uuid v4", "uuid aleatorio", "id único", "uuid en línea"],
-    ui: {
-      count: "Cuántos",
-      uppercase: "Mayúsculas",
-      hyphens: "Incluir guiones",
-      generate: "Generar",
-      regenerate: "Regenerar",
-      copy: "Copiar",
-      copyAll: "Copiar todo",
-      copied: "¡Copiado!",
-      version: "Versión 4 (aleatorio)",
-      result: "UUID generados",
-    },
-  },
-  it: {
-    title: "Generatore di UUID (v4)",
-    short: "Genera UUID versione 4 crittograficamente sicuri, uno o molti alla volta.",
-    description:
-      "Generatore di UUID/GUID online gratuito. Crea UUID versione 4 casuali con la sorgente casuale crittograficamente sicura del browser. Generane uno o migliaia in una volta, attiva maiuscole e trattini e copia con un clic. Tutto è locale: nulla viene trasmesso.",
-    keywords: ["generatore uuid", "generatore guid", "uuid v4", "uuid casuale", "id univoco", "uuid online"],
-    ui: {
-      count: "Quanti",
-      uppercase: "Maiuscolo",
-      hyphens: "Includi trattini",
-      generate: "Genera",
-      regenerate: "Rigenera",
-      copy: "Copia",
-      copyAll: "Copia tutto",
-      copied: "Copiato!",
-      version: "Versione 4 (casuale)",
-      result: "UUID generati",
-    },
-  },
-  ar: {
-    title: "مولّد UUID (الإصدار 4)",
-    short: "أنشئ معرّفات UUID من الإصدار 4 آمنة تشفيريًا، واحدًا أو عدة في المرة.",
-    description:
-      "مولّد UUID/GUID مجاني عبر الإنترنت. أنشئ معرّفات UUID عشوائية من الإصدار 4 باستخدام مصدر العشوائية الآمن تشفيريًا في المتصفح. أنشئ واحدًا أو آلافًا دفعة واحدة، بدّل الأحرف الكبيرة والشُّرَط، وانسخ بنقرة. كل شيء محلي — لا يُرسَل أي شيء.",
-    keywords: ["مولّد uuid", "مولّد guid", "uuid v4", "uuid عشوائي", "معرّف فريد", "uuid عبر الإنترنت"],
-    ui: {
-      count: "العدد",
-      uppercase: "أحرف كبيرة",
-      hyphens: "تضمين الشُّرَط",
-      generate: "توليد",
-      regenerate: "إعادة التوليد",
-      copy: "نسخ",
-      copyAll: "نسخ الكل",
-      copied: "تم النسخ!",
-      version: "الإصدار 4 (عشوائي)",
-      result: "معرّفات UUID المولّدة",
-    },
-  },
-  ru: {
-    title: "Генератор UUID (v4)",
-    short: "Генерируйте криптографически стойкие UUID версии 4 — по одному или сразу множество.",
-    description:
-      "Бесплатный онлайн-генератор UUID/GUID. Создавайте случайные UUID версии 4 с помощью криптографически стойкого источника случайности браузера. Генерируйте один или тысячи за раз, переключайте верхний регистр и дефисы, копируйте одним кликом. Всё работает локально — ничего не передаётся.",
-    keywords: ["генератор uuid", "генератор guid", "uuid v4", "случайный uuid", "уникальный id", "uuid онлайн"],
-    ui: {
-      count: "Количество",
-      uppercase: "Верхний регистр",
-      hyphens: "С дефисами",
-      generate: "Сгенерировать",
-      regenerate: "Сгенерировать заново",
-      copy: "Копировать",
-      copyAll: "Копировать всё",
-      copied: "Скопировано!",
-      version: "Версия 4 (случайная)",
-      result: "Сгенерированные UUID",
-    },
-  },
-  zh: {
-    title: "UUID 生成器（v4）",
-    short: "生成加密安全的版本 4 UUID，可一次生成一个或多个。",
-    description:
-      "免费在线 UUID/GUID 生成器。使用浏览器的加密安全随机源创建随机版本 4 UUID。一次生成一个或数千个，可切换大写和连字符，一键复制。一切在本地运行——不传输任何内容。",
-    keywords: ["uuid 生成器", "guid 生成器", "uuid v4", "随机 uuid", "唯一 id", "在线 uuid"],
-    ui: {
-      count: "数量",
-      uppercase: "大写",
-      hyphens: "包含连字符",
-      generate: "生成",
-      regenerate: "重新生成",
-      copy: "复制",
-      copyAll: "全部复制",
-      copied: "已复制！",
-      version: "版本 4（随机）",
-      result: "已生成的 UUID",
-    },
-  },
-  ja: {
-    title: "UUID 生成ツール（v4）",
-    short: "暗号学的に安全なバージョン 4 UUID を、1 つまたは複数まとめて生成します。",
-    description:
-      "無料のオンライン UUID/GUID 生成ツール。ブラウザの暗号学的に安全な乱数源を使ってランダムなバージョン 4 UUID を作成します。1 つから数千個まで一度に生成でき、大文字とハイフンを切り替え、ワンクリックでコピーできます。すべてローカルで動作し、何も送信されません。",
-    keywords: ["uuid 生成", "guid 生成", "uuid v4", "ランダム uuid", "一意の id", "オンライン uuid"],
-    ui: {
-      count: "個数",
-      uppercase: "大文字",
-      hyphens: "ハイフンを含める",
-      generate: "生成",
-      regenerate: "再生成",
-      copy: "コピー",
-      copyAll: "すべてコピー",
-      copied: "コピーしました！",
-      version: "バージョン 4（ランダム）",
-      result: "生成された UUID",
-    },
-  },
-  ko: {
-    title: "UUID 생성기 (v4)",
-    short: "암호학적으로 안전한 버전 4 UUID를 하나 또는 여러 개 생성합니다.",
-    description:
-      "무료 온라인 UUID/GUID 생성기. 브라우저의 암호학적으로 안전한 난수 소스를 사용해 무작위 버전 4 UUID를 생성합니다. 한 개부터 수천 개까지 한 번에 생성하고, 대문자와 하이픈을 전환하며, 클릭 한 번으로 복사하세요. 모든 처리는 로컬에서 이루어지며 아무것도 전송되지 않습니다.",
-    keywords: ["uuid 생성기", "guid 생성기", "uuid v4", "무작위 uuid", "고유 id", "온라인 uuid"],
-    ui: {
-      count: "개수",
-      uppercase: "대문자",
-      hyphens: "하이픈 포함",
-      generate: "생성",
-      regenerate: "다시 생성",
-      copy: "복사",
-      copyAll: "모두 복사",
-      copied: "복사됨!",
-      version: "버전 4 (무작위)",
-      result: "생성된 UUID",
-    },
-  },
-  hi: {
-    title: "UUID जनरेटर (v4)",
-    short: "क्रिप्टोग्राफ़िक रूप से सुरक्षित संस्करण-4 UUID एक या कई एक साथ बनाएं।",
-    description:
-      "मुफ्त ऑनलाइन UUID/GUID जनरेटर। ब्राउज़र के क्रिप्टोग्राफ़िक रूप से सुरक्षित रैंडम स्रोत से रैंडम संस्करण-4 UUID बनाएं। एक या हजारों एक साथ बनाएं, बड़े अक्षर और हाइफ़न टॉगल करें, और एक क्लिक में कॉपी करें। सब कुछ लोकल चलता है — कुछ भी संचारित नहीं होता।",
-    keywords: ["uuid जनरेटर", "guid जनरेटर", "uuid v4", "रैंडम uuid", "अद्वितीय id", "ऑनलाइन uuid"],
-    ui: {
-      count: "कितने",
-      uppercase: "बड़े अक्षर",
-      hyphens: "हाइफ़न शामिल करें",
-      generate: "बनाएं",
-      regenerate: "फिर से बनाएं",
-      copy: "कॉपी",
-      copyAll: "सभी कॉपी करें",
-      copied: "कॉपी हो गया!",
-      version: "संस्करण 4 (रैंडम)",
-      result: "बनाए गए UUID",
-    },
-  },
+const data = {
+  en: { title: "UUID Generator (v4)", short: "Generate random version-4 UUIDs in bulk, with formatting options.", description: "Free UUID/GUID generator. Create one or many cryptographically-random version-4 UUIDs, with options for uppercase and hyphen removal. Everything is generated locally with the Web Crypto API.", keywords: ["uuid generator", "guid generator", "uuid v4", "random uuid", "unique id generator"], count: "How many", uppercase: "Uppercase", hyphens: "Include hyphens", generate: "Generate" },
+  tr: { title: "UUID Üretici (v4)", short: "Toplu olarak rastgele sürüm-4 UUID üretin, biçimlendirme seçenekleriyle.", description: "Ücretsiz UUID/GUID üretici. Bir veya birçok kriptografik rastgele sürüm-4 UUID oluşturun; büyük harf ve tire kaldırma seçenekleriyle. Her şey Web Crypto API ile yerel üretilir.", keywords: ["uuid üretici", "guid üretici", "uuid v4", "rastgele uuid", "benzersiz kimlik"], count: "Adet", uppercase: "Büyük harf", hyphens: "Tireleri ekle", generate: "Üret" },
+  de: { title: "UUID-Generator (v4)", short: "Erzeugen Sie zufällige Version-4-UUIDs in großer Menge, mit Formatierungsoptionen.", description: "Kostenloser UUID/GUID-Generator. Erstellen Sie eine oder viele kryptografisch zufällige Version-4-UUIDs, mit Optionen für Großschreibung und Bindestrich-Entfernung. Alles lokal mit der Web Crypto API.", keywords: ["uuid generator", "guid generator", "uuid v4", "zufällige uuid", "eindeutige id"], count: "Anzahl", uppercase: "Großbuchstaben", hyphens: "Bindestriche einfügen", generate: "Erzeugen" },
+  fr: { title: "Générateur d'UUID (v4)", short: "Générez des UUID version 4 aléatoires en masse, avec options de format.", description: "Générateur d'UUID/GUID gratuit. Créez un ou plusieurs UUID version 4 cryptographiquement aléatoires, avec options de majuscules et de suppression des tirets. Tout est généré localement via la Web Crypto API.", keywords: ["générateur uuid", "générateur guid", "uuid v4", "uuid aléatoire", "id unique"], count: "Combien", uppercase: "Majuscules", hyphens: "Inclure les tirets", generate: "Générer" },
+  es: { title: "Generador de UUID (v4)", short: "Genera UUID versión 4 aleatorios en lote, con opciones de formato.", description: "Generador de UUID/GUID gratuito. Crea uno o varios UUID versión 4 criptográficamente aleatorios, con opciones de mayúsculas y eliminación de guiones. Todo se genera localmente con la Web Crypto API.", keywords: ["generador uuid", "generador guid", "uuid v4", "uuid aleatorio", "id único"], count: "Cuántos", uppercase: "Mayúsculas", hyphens: "Incluir guiones", generate: "Generar" },
+  it: { title: "Generatore di UUID (v4)", short: "Genera UUID versione 4 casuali in blocco, con opzioni di formato.", description: "Generatore di UUID/GUID gratuito. Crea uno o molti UUID versione 4 crittograficamente casuali, con opzioni per maiuscolo e rimozione dei trattini. Tutto generato localmente con la Web Crypto API.", keywords: ["generatore uuid", "generatore guid", "uuid v4", "uuid casuale", "id univoco"], count: "Quanti", uppercase: "Maiuscolo", hyphens: "Includi trattini", generate: "Genera" },
+  ar: { title: "مولّد UUID (v4)", short: "أنشئ معرّفات UUID عشوائية من الإصدار 4 بالجملة، مع خيارات التنسيق.", description: "مولّد UUID/GUID مجاني. أنشئ واحدًا أو عدة معرّفات UUID عشوائية تشفيريًا من الإصدار 4، مع خيارات الأحرف الكبيرة وإزالة الشرطات. كل شيء يُنشأ محليًا عبر Web Crypto API.", keywords: ["مولد uuid", "مولد guid", "uuid v4", "uuid عشوائي", "معرف فريد"], count: "العدد", uppercase: "أحرف كبيرة", hyphens: "تضمين الشرطات", generate: "توليد" },
+  ru: { title: "Генератор UUID (v4)", short: "Генерируйте случайные UUID версии 4 пакетами, с опциями форматирования.", description: "Бесплатный генератор UUID/GUID. Создавайте один или много криптографически случайных UUID версии 4, с опциями верхнего регистра и удаления дефисов. Всё генерируется локально через Web Crypto API.", keywords: ["генератор uuid", "генератор guid", "uuid v4", "случайный uuid", "уникальный id"], count: "Количество", uppercase: "Верхний регистр", hyphens: "С дефисами", generate: "Сгенерировать" },
+  zh: { title: "UUID 生成器 (v4)", short: "批量生成随机版本 4 UUID，并提供格式选项。", description: "免费的 UUID/GUID 生成器。生成一个或多个加密随机的版本 4 UUID，可选大写和去除连字符。一切都通过 Web Crypto API 在本地生成。", keywords: ["uuid生成器", "guid生成器", "uuid v4", "随机uuid", "唯一id"], count: "数量", uppercase: "大写", hyphens: "包含连字符", generate: "生成" },
+  ja: { title: "UUID ジェネレーター (v4)", short: "ランダムなバージョン 4 UUID を一括生成。書式オプション付き。", description: "無料の UUID/GUID ジェネレーター。暗号学的にランダムなバージョン 4 UUID を 1 つまたは複数生成。大文字化やハイフン除去のオプションあり。すべて Web Crypto API でローカル生成されます。", keywords: ["uuid ジェネレーター", "guid ジェネレーター", "uuid v4", "ランダム uuid", "一意 id"], count: "個数", uppercase: "大文字", hyphens: "ハイフンを含める", generate: "生成" },
+  ko: { title: "UUID 생성기 (v4)", short: "버전 4 랜덤 UUID를 대량 생성하며 형식 옵션을 제공합니다.", description: "무료 UUID/GUID 생성기. 암호학적으로 무작위인 버전 4 UUID를 하나 또는 여러 개 생성하며, 대문자 및 하이픈 제거 옵션을 제공합니다. 모든 것이 Web Crypto API로 로컬 생성됩니다.", keywords: ["uuid 생성기", "guid 생성기", "uuid v4", "랜덤 uuid", "고유 id"], count: "개수", uppercase: "대문자", hyphens: "하이픈 포함", generate: "생성" },
+  hi: { title: "UUID जनरेटर (v4)", short: "फॉर्मेटिंग विकल्पों के साथ बल्क में रैंडम संस्करण-4 UUID बनाएं।", description: "मुफ्त UUID/GUID जनरेटर। एक या कई क्रिप्टोग्राफ़िक रूप से रैंडम संस्करण-4 UUID बनाएं, अपरकेस और हाइफन हटाने के विकल्पों के साथ। सब कुछ Web Crypto API से स्थानीय रूप से बनता है।", keywords: ["uuid जनरेटर", "guid जनरेटर", "uuid v4", "रैंडम uuid", "अद्वितीय id"], count: "कितने", uppercase: "अपरकेस", hyphens: "हाइफन शामिल करें", generate: "बनाएं" },
 };
+
+const i18n = Object.fromEntries(
+  (Object.keys(data) as Array<keyof typeof data>).map((loc) => {
+    const { title, short, description, keywords, ...rest } = data[loc];
+    return [loc, { title, short, description, keywords, ui: { ...COMMON_UI[loc], ...rest } }];
+  }),
+) as unknown as ToolI18n;
 
 export default i18n;
