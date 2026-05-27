@@ -1,0 +1,26 @@
+import type { ToolI18n } from "@/types/tool";
+import { COMMON_UI } from "../_shared/ui";
+
+const data = {
+  en: { title: "Coin Flip", short: "Flip one or many coins and count heads vs tails.", description: "Free online coin flip. Toss a single coin for a quick heads-or-tails decision, or flip many at once to see the heads/tails tally. Uses the Web Crypto API for fair, unbiased flips.", keywords: ["coin flip", "flip a coin", "heads or tails", "coin toss", "random coin flip"], count: "Number of flips", flip: "Flip", heads: "Heads", tails: "Tails" },
+  tr: { title: "Yazı Tura", short: "Bir veya birçok parayı atın; yazı ve tura sayısını görün.", description: "Ücretsiz çevrimiçi yazı tura. Hızlı bir karar için tek para atın veya aynı anda birçok atıp yazı/tura sayımını görün. Adil, tarafsız atışlar için Web Crypto API kullanır.", keywords: ["yazı tura", "para at", "yazı mı tura mı", "para atışı", "rastgele yazı tura"], count: "Atış sayısı", flip: "At", heads: "Tura", tails: "Yazı" },
+  de: { title: "Münzwurf", short: "Werfen Sie eine oder viele Münzen und zählen Sie Kopf vs. Zahl.", description: "Kostenloser Online-Münzwurf. Werfen Sie eine Münze für eine schnelle Kopf-oder-Zahl-Entscheidung oder viele auf einmal, um die Bilanz zu sehen. Nutzt die Web Crypto API für faire Würfe.", keywords: ["münzwurf", "münze werfen", "kopf oder zahl", "münze flippen", "zufälliger münzwurf"], count: "Anzahl Würfe", flip: "Werfen", heads: "Kopf", tails: "Zahl" },
+  fr: { title: "Pile ou Face", short: "Lancez une ou plusieurs pièces et comptez pile vs face.", description: "Pile ou face en ligne gratuit. Lancez une pièce pour décider rapidement, ou plusieurs à la fois pour voir le décompte pile/face. Utilise la Web Crypto API pour des lancers équitables.", keywords: ["pile ou face", "lancer une pièce", "pile face", "tirage pièce", "pièce aléatoire"], count: "Nombre de lancers", flip: "Lancer", heads: "Face", tails: "Pile" },
+  es: { title: "Cara o Cruz", short: "Lanza una o varias monedas y cuenta caras vs cruces.", description: "Cara o cruz en línea gratuito. Lanza una moneda para una decisión rápida, o muchas a la vez para ver el recuento caras/cruces. Usa la Web Crypto API para lanzamientos justos.", keywords: ["cara o cruz", "lanzar una moneda", "cara cruz", "tirar moneda", "moneda aleatoria"], count: "Número de lanzamientos", flip: "Lanzar", heads: "Cara", tails: "Cruz" },
+  it: { title: "Testa o Croce", short: "Lancia una o più monete e conta testa vs croce.", description: "Testa o croce online gratuito. Lancia una moneta per una decisione rapida, o molte insieme per vedere il conteggio testa/croce. Usa la Web Crypto API per lanci equi.", keywords: ["testa o croce", "lancia una moneta", "testa croce", "lancio moneta", "moneta casuale"], count: "Numero di lanci", flip: "Lancia", heads: "Testa", tails: "Croce" },
+  ar: { title: "رمي العملة", short: "ارمِ عملة واحدة أو عدة عملات واحسب الصورة مقابل الكتابة.", description: "رمي عملة مجاني عبر الإنترنت. ارمِ عملة واحدة لقرار سريع، أو عدة عملات دفعة واحدة لرؤية حصيلة الصورة/الكتابة. يستخدم Web Crypto API لرميات عادلة.", keywords: ["رمي العملة", "ارمِ عملة", "صورة أم كتابة", "قذف العملة", "عملة عشوائية"], count: "عدد الرميات", flip: "ارمِ", heads: "صورة", tails: "كتابة" },
+  ru: { title: "Бросок Монеты", short: "Подбросьте одну или много монет и посчитайте орёл/решка.", description: "Бесплатный онлайн-бросок монеты. Подбросьте одну монету для быстрого решения или много сразу, чтобы увидеть счёт орёл/решка. Использует Web Crypto API для честных бросков.", keywords: ["бросок монеты", "подбросить монету", "орёл или решка", "подкинуть монетку", "случайная монета"], count: "Число бросков", flip: "Подбросить", heads: "Орёл", tails: "Решка" },
+  zh: { title: "抛硬币", short: "抛一枚或多枚硬币，统计正面与反面。", description: "免费的在线抛硬币。抛一枚硬币快速做决定，或一次抛多枚查看正反面统计。使用 Web Crypto API 保证公平无偏。", keywords: ["抛硬币", "投硬币", "正面还是反面", "硬币抛掷", "随机硬币"], count: "抛掷次数", flip: "抛", heads: "正面", tails: "反面" },
+  ja: { title: "コイントス", short: "1枚または複数枚のコインを投げ、表と裏を数えます。", description: "無料のオンラインコイントス。素早い決定に1枚、または一度に複数枚投げて表/裏の集計を確認。公平で偏りのない結果のため Web Crypto API を使用します。", keywords: ["コイントス", "コインを投げる", "表か裏か", "コイン投げ", "ランダム コイン"], count: "投げる回数", flip: "投げる", heads: "表", tails: "裏" },
+  ko: { title: "동전 던지기", short: "한 개 또는 여러 개의 동전을 던져 앞/뒷면을 셉니다.", description: "무료 온라인 동전 던지기. 빠른 결정을 위해 한 개를 던지거나 한 번에 여러 개를 던져 앞면/뒷면 집계를 확인하세요. 공정한 결과를 위해 Web Crypto API를 사용합니다.", keywords: ["동전 던지기", "동전 던지다", "앞면 뒷면", "동전 토스", "무작위 동전"], count: "던지는 횟수", flip: "던지기", heads: "앞면", tails: "뒷면" },
+  hi: { title: "सिक्का उछाल", short: "एक या कई सिक्के उछालें और हेड बनाम टेल गिनें।", description: "मुफ्त ऑनलाइन सिक्का उछाल। त्वरित निर्णय के लिए एक सिक्का उछालें, या एक साथ कई उछालकर हेड/टेल गिनती देखें। निष्पक्ष परिणाम के लिए Web Crypto API का उपयोग।", keywords: ["सिक्का उछाल", "सिक्का उछालें", "हेड या टेल", "सिक्का टॉस", "रैंडम सिक्का"], count: "उछाल की संख्या", flip: "उछालें", heads: "हेड", tails: "टेल" },
+};
+
+const i18n = Object.fromEntries(
+  (Object.keys(data) as Array<keyof typeof data>).map((loc) => {
+    const { title, short, description, keywords, ...rest } = data[loc];
+    return [loc, { title, short, description, keywords, ui: { ...COMMON_UI[loc], ...rest } }];
+  }),
+) as unknown as ToolI18n;
+
+export default i18n;

@@ -1,0 +1,26 @@
+import type { ToolI18n } from "@/types/tool";
+import { COMMON_UI } from "../_shared/ui";
+
+const data = {
+  en: { title: "Random Color Generator", short: "Generate random hex colors with one click.", description: "Free random color generator. Create one or many random hex colors, preview each swatch and copy the hex code. Handy for design inspiration, placeholders and testing.", keywords: ["random color generator", "random hex color", "color generator", "hex color picker", "random palette"], count: "How many", generate: "Generate" },
+  tr: { title: "Rastgele Renk Üretici", short: "Tek tıkla rastgele hex renkler üretin.", description: "Ücretsiz rastgele renk üretici. Bir veya birçok rastgele hex renk oluşturun, her örneği önizleyin ve hex kodunu kopyalayın. Tasarım ilhamı, yer tutucular ve test için kullanışlı.", keywords: ["rastgele renk üretici", "rastgele hex renk", "renk üretici", "hex renk seçici", "rastgele palet"], count: "Adet", generate: "Üret" },
+  de: { title: "Zufallsfarben-Generator", short: "Erzeugen Sie zufällige Hex-Farben mit einem Klick.", description: "Kostenloser Zufallsfarben-Generator. Erstellen Sie eine oder viele zufällige Hex-Farben, sehen Sie jede Farbprobe und kopieren Sie den Hex-Code. Praktisch für Design-Inspiration, Platzhalter und Tests.", keywords: ["zufallsfarben generator", "zufällige hex farbe", "farbgenerator", "hex farbwähler", "zufällige palette"], count: "Anzahl", generate: "Erzeugen" },
+  fr: { title: "Générateur de Couleurs Aléatoires", short: "Générez des couleurs hex aléatoires en un clic.", description: "Générateur de couleurs aléatoires gratuit. Créez une ou plusieurs couleurs hex aléatoires, prévisualisez chaque échantillon et copiez le code hex. Pratique pour l'inspiration, les placeholders et les tests.", keywords: ["générateur de couleurs aléatoires", "couleur hex aléatoire", "générateur de couleurs", "sélecteur hex", "palette aléatoire"], count: "Combien", generate: "Générer" },
+  es: { title: "Generador de Colores Aleatorios", short: "Genera colores hex aleatorios con un clic.", description: "Generador de colores aleatorios gratuito. Crea uno o varios colores hex aleatorios, previsualiza cada muestra y copia el código hex. Útil para inspiración de diseño, marcadores y pruebas.", keywords: ["generador de colores aleatorios", "color hex aleatorio", "generador de colores", "selector hex", "paleta aleatoria"], count: "Cuántos", generate: "Generar" },
+  it: { title: "Generatore di Colori Casuali", short: "Genera colori esadecimali casuali con un clic.", description: "Generatore di colori casuali gratuito. Crea uno o più colori esadecimali casuali, visualizza ogni campione e copia il codice hex. Utile per ispirazione di design, segnaposto e test.", keywords: ["generatore di colori casuali", "colore hex casuale", "generatore di colori", "selettore hex", "palette casuale"], count: "Quanti", generate: "Genera" },
+  ar: { title: "مولّد ألوان عشوائية", short: "أنشئ ألوان hex عشوائية بنقرة واحدة.", description: "مولّد ألوان عشوائية مجاني. أنشئ لونًا واحدًا أو عدة ألوان hex عشوائية، عاين كل عيّنة وانسخ رمز hex. مفيد لإلهام التصميم والعناصر النائبة والاختبار.", keywords: ["مولد ألوان عشوائية", "لون hex عشوائي", "مولد ألوان", "منتقي hex", "لوحة عشوائية"], count: "العدد", generate: "توليد" },
+  ru: { title: "Генератор Случайных Цветов", short: "Генерируйте случайные hex-цвета в один клик.", description: "Бесплатный генератор случайных цветов. Создавайте один или много случайных hex-цветов, смотрите образец и копируйте hex-код. Удобно для вдохновения, заглушек и тестов.", keywords: ["генератор случайных цветов", "случайный hex цвет", "генератор цветов", "выбор hex", "случайная палитра"], count: "Количество", generate: "Сгенерировать" },
+  zh: { title: "随机颜色生成器", short: "一键生成随机十六进制颜色。", description: "免费的随机颜色生成器。生成一个或多个随机十六进制颜色，预览每个色块并复制 hex 代码。适合设计灵感、占位和测试。", keywords: ["随机颜色生成器", "随机十六进制颜色", "颜色生成器", "hex颜色选择器", "随机调色板"], count: "数量", generate: "生成" },
+  ja: { title: "ランダムカラー生成", short: "ワンクリックでランダムな16進カラーを生成します。", description: "無料のランダムカラー生成ツール。1つまたは複数のランダムな16進カラーを生成し、各スウォッチをプレビューして hex コードをコピーできます。デザインのインスピレーションやプレースホルダー、テストに便利。", keywords: ["ランダムカラー生成", "ランダム 16進 カラー", "カラー生成", "hex カラーピッカー", "ランダム パレット"], count: "個数", generate: "生成" },
+  ko: { title: "랜덤 색상 생성기", short: "한 번의 클릭으로 무작위 16진수 색상을 생성합니다.", description: "무료 랜덤 색상 생성기. 하나 또는 여러 개의 무작위 16진수 색상을 생성하고 각 견본을 미리 보고 hex 코드를 복사하세요. 디자인 영감, 자리표시, 테스트에 유용합니다.", keywords: ["랜덤 색상 생성기", "무작위 16진수 색상", "색상 생성기", "hex 색상 선택기", "랜덤 팔레트"], count: "개수", generate: "생성" },
+  hi: { title: "रैंडम कलर जनरेटर", short: "एक क्लिक में रैंडम हेक्स रंग बनाएं।", description: "मुफ्त रैंडम कलर जनरेटर। एक या कई रैंडम हेक्स रंग बनाएं, हर स्वैच का पूर्वावलोकन करें और हेक्स कोड कॉपी करें। डिज़ाइन प्रेरणा, प्लेसहोल्डर और परीक्षण के लिए उपयोगी।", keywords: ["रैंडम कलर जनरेटर", "रैंडम हेक्स रंग", "कलर जनरेटर", "हेक्स कलर पिकर", "रैंडम पैलेट"], count: "कितने", generate: "बनाएं" },
+};
+
+const i18n = Object.fromEntries(
+  (Object.keys(data) as Array<keyof typeof data>).map((loc) => {
+    const { title, short, description, keywords, ...rest } = data[loc];
+    return [loc, { title, short, description, keywords, ui: { ...COMMON_UI[loc], ...rest } }];
+  }),
+) as unknown as ToolI18n;
+
+export default i18n;
