@@ -1,0 +1,16 @@
+import type { CalculatorI18n } from "@/types/i18n";
+const i18n: CalculatorI18n = {
+  en: {'title': 'Combinations', 'short': 'Combinations', 'description': 'Combinations', 'keywords': ['combinations'], 'inputs': {'n': {'label': 'n'}, 'r': {'label': 'r'}}, 'outputs': {'nCr': {'label': 'nCr'}, 'nPr': {'label': 'nPr'}}, 'errors': {}, 'faq': []},
+  tr: {'title': 'Combinations', 'short': 'Combinations', 'description': 'Combinations', 'keywords': ['combinations'], 'inputs': {'n': {'label': 'n'}, 'r': {'label': 'r'}}, 'outputs': {'nCr': {'label': 'nCr'}, 'nPr': {'label': 'nPr'}}, 'errors': {}, 'faq': []},
+  de: {'title': 'Combinations', 'short': 'Combinations', 'description': 'Combinations', 'keywords': ['combinations'], 'inputs': {'n': {'label': 'n'}, 'r': {'label': 'r'}}, 'outputs': {'nCr': {'label': 'nCr'}, 'nPr': {'label': 'nPr'}}, 'errors': {}, 'faq': []},
+  fr: {'title': 'Combinations', 'short': 'Combinations', 'description': 'Combinations', 'keywords': ['combinations'], 'inputs': {'n': {'label': 'n'}, 'r': {'label': 'r'}}, 'outputs': {'nCr': {'label': 'nCr'}, 'nPr': {'label': 'nPr'}}, 'errors': {}, 'faq': []},
+  es: {'title': 'Combinations', 'short': 'Combinations', 'description': 'Combinations', 'keywords': ['combinations'], 'inputs': {'n': {'label': 'n'}, 'r': {'label': 'r'}}, 'outputs': {'nCr': {'label': 'nCr'}, 'nPr': {'label': 'nPr'}}, 'errors': {}, 'faq': []},
+  it: {'title': 'Combinations', 'short': 'Combinations', 'description': 'Combinations', 'keywords': ['combinations'], 'inputs': {'n': {'label': 'n'}, 'r': {'label': 'r'}}, 'outputs': {'nCr': {'label': 'nCr'}, 'nPr': {'label': 'nPr'}}, 'errors': {}, 'faq': []},
+  ar: {'title': 'Combinations', 'short': 'Combinations', 'description': 'Combinations', 'keywords': ['combinations'], 'inputs': {'n': {'label': 'n'}, 'r': {'label': 'r'}}, 'outputs': {'nCr': {'label': 'nCr'}, 'nPr': {'label': 'nPr'}}, 'errors': {}, 'faq': []},
+  ru: {'title': 'Combinations', 'short': 'Combinations', 'description': 'Combinations', 'keywords': ['combinations'], 'inputs': {'n': {'label': 'n'}, 'r': {'label': 'r'}}, 'outputs': {'nCr': {'label': 'nCr'}, 'nPr': {'label': 'nPr'}}, 'errors': {}, 'faq': []},
+  zh: {'title': 'Combinations', 'short': 'Combinations', 'description': 'Combinations', 'keywords': ['combinations'], 'inputs': {'n': {'label': 'n'}, 'r': {'label': 'r'}}, 'outputs': {'nCr': {'label': 'nCr'}, 'nPr': {'label': 'nPr'}}, 'errors': {}, 'faq': []},
+  ja: {'title': 'Combinations', 'short': 'Combinations', 'description': 'Combinations', 'keywords': ['combinations'], 'inputs': {'n': {'label': 'n'}, 'r': {'label': 'r'}}, 'outputs': {'nCr': {'label': 'nCr'}, 'nPr': {'label': 'nPr'}}, 'errors': {}, 'faq': []},
+  ko: {'title': 'Combinations', 'short': 'Combinations', 'description': 'Combinations', 'keywords': ['combinations'], 'inputs': {'n': {'label': 'n'}, 'r': {'label': 'r'}}, 'outputs': {'nCr': {'label': 'nCr'}, 'nPr': {'label': 'nPr'}}, 'errors': {}, 'faq': []},
+  hi: {'title': 'Combinations', 'short': 'Combinations', 'description': 'Combinations', 'keywords': ['combinations'], 'inputs': {'n': {'label': 'n'}, 'r': {'label': 'r'}}, 'outputs': {'nCr': {'label': 'nCr'}, 'nPr': {'label': 'nPr'}}, 'errors': {}, 'faq': []},
+};
+export default i18n;

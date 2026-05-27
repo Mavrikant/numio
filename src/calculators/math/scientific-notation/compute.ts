@@ -1,20 +1,19 @@
 import { z } from "zod";
 
 export const inputSchema = z.object({
-  // TODO: Define schema inputs
   value: z.number(),
+  mode: z.enum(["toScientific", "toStandard", "toEngineering"])
 });
 
-export type ScientificNotationInputs = z.infer<typeof inputSchema>;
-
-export interface ScientificNotationResult extends Record<string, unknown> {
-  // TODO: Define result outputs
-  result: number;
+export type ScientificInputs = z.infer<typeof inputSchema>;
+export interface ScientificResult extends Record<string, unknown> {
+  readonly scientific: string;
+  readonly standard: string;
 }
 
-export function compute(inputs: ScientificNotationInputs): ScientificNotationResult {
-  // TODO: Implement compute logic
+export function compute(inputs: ScientificInputs): ScientificResult {
   return {
-    result: inputs.value,
+    scientific: inputs.value.toExponential(6),
+    standard: inputs.value.toString()
   };
 }
