@@ -53,7 +53,7 @@ describe("Speed compute — numeric correctness", () => {
           mph: 31.0686,
           ms: 13.888888,
           knots: 26.9977,
-          fts: 45.5730,
+          fts: 45.5672,
         },
         tolerance: 0.01,
         description: "50 km/h shows all units",

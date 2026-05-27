@@ -1,0 +1,1266 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Speed definition — snapshot > matches expected definition shape 1`] = `
+{
+  "category": "conversion",
+  "compute": [Function],
+  "i18n": {
+    "ar": {
+      "description": "محول وحدات السرعة المجاني. تحويل بين كم/س، ميل/س، م/ث، عقد، وقدم/ث. تحويلات فورية لقياسات السرعة.",
+      "errors": {},
+      "faq": [
+        {
+          "a": "تقيس الكيلومترات في الساعة (كم/س) المسافة بالكيلومترات خلال ساعة واحدة، بينما تقيس الأميال في الساعة (ميل/س) المسافة بالأميال خلال ساعة واحدة. 1 ميل/س ≈ 1.609 كم/س.",
+          "q": "ما الفرق بين كم/س وميل/س؟",
+        },
+        {
+          "a": "تُستخدم العقد (الأميال البحرية في الساعة) بشكل أساسي في الملاحة البحرية والجوية لقياس سرعة السفن والطائرات. 1 عقدة = 1.852 كم/س.",
+          "q": "ما استخدام العقد؟",
+        },
+        {
+          "a": "1 م/ث يساوي تقريباً 3.6 كم/س، 2.237 ميل/س، 1.944 عقدة، أو 3.281 قدم/ث.",
+          "q": "كم يساوي 1 م/ث بوحدات أخرى؟",
+        },
+        {
+          "a": "لتحويل أقدام في الثانية إلى كيلومترات في الساعة، اضرب قيمة قدم/ث بـ 1.09728. على سبيل المثال، 10 قدم/ث = 10 × 1.09728 = 10.9728 كم/س.",
+          "q": "كيف أحول قدم/ث إلى كم/س؟",
+        },
+      ],
+      "inputs": {
+        "fromUnit": {
+          "help": "حدد وحدة القيمة التي تقوم بتحويلها.",
+          "label": "من",
+        },
+        "toUnit": {
+          "help": "حدد الوحدة التي تريد التحويل إليها.",
+          "label": "إلى",
+        },
+        "value": {
+          "help": "أدخل قيمة السرعة التي تريد تحويلها.",
+          "label": "القيمة",
+        },
+      },
+      "keywords": [
+        "محول السرعة",
+        "وحدات السرعة",
+        "كم/س إلى ميل/س",
+        "محول السرعة",
+        "محول العقد",
+        "قياس السرعة",
+      ],
+      "options": {
+        "fromUnit": {
+          "fts": "قدم/ث",
+          "kmh": "كم/س",
+          "knots": "عقدة",
+          "mph": "ميل/س",
+          "ms": "م/ث",
+        },
+        "toUnit": {
+          "fts": "قدم/ث",
+          "kmh": "كم/س",
+          "knots": "عقدة",
+          "mph": "ميل/س",
+          "ms": "م/ث",
+        },
+      },
+      "outputs": {
+        "fts": {
+          "help": "السرعة بالأقدام في الثانية.",
+          "label": "أقدام في الثانية (قدم/ث)",
+        },
+        "kmh": {
+          "help": "السرعة بالكيلومترات في الساعة.",
+          "label": "كيلومترات في الساعة (كم/س)",
+        },
+        "knots": {
+          "help": "السرعة بالعقد.",
+          "label": "العقد",
+        },
+        "mph": {
+          "help": "السرعة بالأميال في الساعة.",
+          "label": "أميال في الساعة (ميل/س)",
+        },
+        "ms": {
+          "help": "السرعة بالأمتار في الثانية.",
+          "label": "أمتار في الثانية (م/ث)",
+        },
+        "result": {
+          "help": "قيمة السرعة المحولة.",
+          "label": "النتيجة",
+        },
+      },
+      "short": "تحويل بين وحدات السرعة المختلفة: كم/س، ميل/س، م/ث، عقد، وقدم/ث.",
+      "title": "محول السرعة",
+    },
+    "de": {
+      "description": "Kostenloser Geschwindigkeit-Einheiten-Rechner. Konvertieren Sie zwischen km/h, mph, m/s, Knoten und ft/s. Echtzeit-Umrechnungen für Geschwindigkeits- und Geschwindigkeitsmessungen.",
+      "errors": {},
+      "faq": [
+        {
+          "a": "Kilometer pro Stunde (km/h) misst die Entfernung in Kilometern über eine Stunde, während Meilen pro Stunde (mph) die Entfernung in Meilen über eine Stunde misst. 1 mph ≈ 1.609 km/h.",
+          "q": "Was ist der Unterschied zwischen km/h und mph?",
+        },
+        {
+          "a": "Knoten (Seemeilen pro Stunde) werden hauptsächlich in der Schifffahrt und Luftfahrt verwendet, um die Geschwindigkeit von Schiffen und Flugzeugen zu messen. 1 Knoten = 1.852 km/h.",
+          "q": "Wofür werden Knoten verwendet?",
+        },
+        {
+          "a": "1 m/s entspricht ungefähr 3.6 km/h, 2.237 mph, 1.944 Knoten oder 3.281 ft/s.",
+          "q": "Wie schnell ist 1 m/s in anderen Einheiten?",
+        },
+        {
+          "a": "Um Fuß pro Sekunde in Kilometer pro Stunde umzurechnen, multiplizieren Sie den ft/s-Wert mit 1.09728. Zum Beispiel, 10 ft/s = 10 × 1.09728 = 10.9728 km/h.",
+          "q": "Wie konvertiere ich ft/s in km/h?",
+        },
+      ],
+      "inputs": {
+        "fromUnit": {
+          "help": "Wählen Sie die Einheit des Wertes, den Sie konvertieren.",
+          "label": "Von",
+        },
+        "toUnit": {
+          "help": "Wählen Sie die Einheit, in die Sie konvertieren möchten.",
+          "label": "Zu",
+        },
+        "value": {
+          "help": "Geben Sie den Geschwindigkeitswert ein, den Sie konvertieren möchten.",
+          "label": "Wert",
+        },
+      },
+      "keywords": [
+        "Geschwindigkeit-Umrechner",
+        "Geschwindigkeitseinheiten",
+        "km/h zu mph",
+        "Geschwindigkeitskonverter",
+        "Knoten-Umrechner",
+        "Geschwindigkeitsmessung",
+      ],
+      "options": {
+        "fromUnit": {
+          "fts": "ft/s",
+          "kmh": "km/h",
+          "knots": "Knoten",
+          "mph": "mph",
+          "ms": "m/s",
+        },
+        "toUnit": {
+          "fts": "ft/s",
+          "kmh": "km/h",
+          "knots": "Knoten",
+          "mph": "mph",
+          "ms": "m/s",
+        },
+      },
+      "outputs": {
+        "fts": {
+          "help": "Geschwindigkeit in Fuß pro Sekunde.",
+          "label": "Fuß pro Sekunde (ft/s)",
+        },
+        "kmh": {
+          "help": "Geschwindigkeit in Kilometern pro Stunde.",
+          "label": "Kilometer pro Stunde (km/h)",
+        },
+        "knots": {
+          "help": "Geschwindigkeit in Knoten.",
+          "label": "Knoten",
+        },
+        "mph": {
+          "help": "Geschwindigkeit in Meilen pro Stunde.",
+          "label": "Meilen pro Stunde (mph)",
+        },
+        "ms": {
+          "help": "Geschwindigkeit in Metern pro Sekunde.",
+          "label": "Meter pro Sekunde (m/s)",
+        },
+        "result": {
+          "help": "Der konvertierte Geschwindigkeitswert.",
+          "label": "Ergebnis",
+        },
+      },
+      "short": "Konvertieren Sie zwischen verschiedenen Geschwindigkeitseinheiten: km/h, mph, m/s, Knoten und ft/s.",
+      "title": "Geschwindigkeit-Umrechner",
+    },
+    "en": {
+      "description": "Free speed unit converter. Convert between km/h, mph, m/s, knots, and ft/s. Real-time conversions for velocity and speed measurements.",
+      "errors": {},
+      "faq": [
+        {
+          "a": "Kilometers per hour (km/h) measures distance in kilometers over one hour, while miles per hour (mph) measures distance in miles over one hour. 1 mph ≈ 1.609 km/h.",
+          "q": "What is the difference between km/h and mph?",
+        },
+        {
+          "a": "Knots (nautical miles per hour) are primarily used in maritime and aviation contexts to measure the speed of ships and aircraft. 1 knot = 1.852 km/h.",
+          "q": "What are knots used for?",
+        },
+        {
+          "a": "1 m/s equals approximately 3.6 km/h, 2.237 mph, 1.944 knots, or 3.281 ft/s.",
+          "q": "How fast is 1 m/s in other units?",
+        },
+        {
+          "a": "To convert feet per second to kilometers per hour, multiply the ft/s value by 1.09728. For example, 10 ft/s = 10 × 1.09728 = 10.9728 km/h.",
+          "q": "How do I convert ft/s to km/h?",
+        },
+      ],
+      "inputs": {
+        "fromUnit": {
+          "help": "Select the unit of the value you are converting from.",
+          "label": "From",
+        },
+        "toUnit": {
+          "help": "Select the unit you want to convert to.",
+          "label": "To",
+        },
+        "value": {
+          "help": "Enter the speed value to convert.",
+          "label": "Value",
+        },
+      },
+      "keywords": [
+        "speed converter",
+        "velocity converter",
+        "km/h to mph",
+        "mph to km/h",
+        "knots converter",
+        "speed units",
+      ],
+      "options": {
+        "fromUnit": {
+          "fts": "ft/s",
+          "kmh": "km/h",
+          "knots": "knots",
+          "mph": "mph",
+          "ms": "m/s",
+        },
+        "toUnit": {
+          "fts": "ft/s",
+          "kmh": "km/h",
+          "knots": "knots",
+          "mph": "mph",
+          "ms": "m/s",
+        },
+      },
+      "outputs": {
+        "fts": {
+          "help": "Speed in feet per second.",
+          "label": "Feet per second (ft/s)",
+        },
+        "kmh": {
+          "help": "Speed in kilometers per hour.",
+          "label": "Kilometers per hour (km/h)",
+        },
+        "knots": {
+          "help": "Speed in nautical miles per hour.",
+          "label": "Knots",
+        },
+        "mph": {
+          "help": "Speed in miles per hour.",
+          "label": "Miles per hour (mph)",
+        },
+        "ms": {
+          "help": "Speed in meters per second.",
+          "label": "Meters per second (m/s)",
+        },
+        "result": {
+          "help": "The converted speed value.",
+          "label": "Result",
+        },
+      },
+      "short": "Convert between different speed units including km/h, mph, m/s, knots, and ft/s.",
+      "title": "Speed Converter",
+    },
+    "es": {
+      "description": "Convertidor de unidades de velocidad gratuito. Convierta entre km/h, mph, m/s, nudos y ft/s. Conversiones en tiempo real para mediciones de velocidad.",
+      "errors": {},
+      "faq": [
+        {
+          "a": "Los kilómetros por hora (km/h) miden la distancia en kilómetros durante una hora, mientras que las millas por hora (mph) miden la distancia en millas durante una hora. 1 mph ≈ 1.609 km/h.",
+          "q": "¿Cuál es la diferencia entre km/h y mph?",
+        },
+        {
+          "a": "Los nudos (millas náuticas por hora) se utilizan principalmente en navegación marina y aérea para medir la velocidad de barcos y aviones. 1 nudo = 1.852 km/h.",
+          "q": "¿Para qué se usan los nudos?",
+        },
+        {
+          "a": "1 m/s equivale aproximadamente a 3.6 km/h, 2.237 mph, 1.944 nudos o 3.281 ft/s.",
+          "q": "¿Cuánto es 1 m/s en otras unidades?",
+        },
+        {
+          "a": "Para convertir pies por segundo a kilómetros por hora, multiplique el valor en ft/s por 1.09728. Por ejemplo, 10 ft/s = 10 × 1.09728 = 10.9728 km/h.",
+          "q": "¿Cómo convierto ft/s a km/h?",
+        },
+      ],
+      "inputs": {
+        "fromUnit": {
+          "help": "Seleccione la unidad del valor que está convirtiendo.",
+          "label": "De",
+        },
+        "toUnit": {
+          "help": "Seleccione la unidad a la que desea convertir.",
+          "label": "A",
+        },
+        "value": {
+          "help": "Ingrese el valor de velocidad que desea convertir.",
+          "label": "Valor",
+        },
+      },
+      "keywords": [
+        "convertidor de velocidad",
+        "unidades de velocidad",
+        "km/h a mph",
+        "convertidor de velocidad",
+        "convertidor de nudos",
+        "medición de velocidad",
+      ],
+      "options": {
+        "fromUnit": {
+          "fts": "ft/s",
+          "kmh": "km/h",
+          "knots": "nudos",
+          "mph": "mph",
+          "ms": "m/s",
+        },
+        "toUnit": {
+          "fts": "ft/s",
+          "kmh": "km/h",
+          "knots": "nudos",
+          "mph": "mph",
+          "ms": "m/s",
+        },
+      },
+      "outputs": {
+        "fts": {
+          "help": "Velocidad en pies por segundo.",
+          "label": "Pies por segundo (ft/s)",
+        },
+        "kmh": {
+          "help": "Velocidad en kilómetros por hora.",
+          "label": "Kilómetros por hora (km/h)",
+        },
+        "knots": {
+          "help": "Velocidad en nudos.",
+          "label": "Nudos",
+        },
+        "mph": {
+          "help": "Velocidad en millas por hora.",
+          "label": "Millas por hora (mph)",
+        },
+        "ms": {
+          "help": "Velocidad en metros por segundo.",
+          "label": "Metros por segundo (m/s)",
+        },
+        "result": {
+          "help": "El valor de velocidad convertido.",
+          "label": "Resultado",
+        },
+      },
+      "short": "Convierta entre diferentes unidades de velocidad: km/h, mph, m/s, nudos y ft/s.",
+      "title": "Convertidor de Velocidad",
+    },
+    "fr": {
+      "description": "Convertisseur d'unités de vitesse gratuit. Convertissez entre km/h, mph, m/s, nœuds et ft/s. Conversions en temps réel pour les mesures de vitesse.",
+      "errors": {},
+      "faq": [
+        {
+          "a": "Les kilomètres par heure (km/h) mesurent la distance en kilomètres sur une heure, tandis que les milles par heure (mph) mesurent la distance en milles sur une heure. 1 mph ≈ 1.609 km/h.",
+          "q": "Quelle est la différence entre km/h et mph?",
+        },
+        {
+          "a": "Les nœuds (milles nautiques par heure) sont principalement utilisés en navigation maritime et aérienne pour mesurer la vitesse des navires et des avions. 1 nœud = 1.852 km/h.",
+          "q": "À quoi servent les nœuds?",
+        },
+        {
+          "a": "1 m/s équivaut approximativement à 3.6 km/h, 2.237 mph, 1.944 nœuds ou 3.281 ft/s.",
+          "q": "Combien vaut 1 m/s dans d'autres unités?",
+        },
+        {
+          "a": "Pour convertir pieds par seconde en kilomètres par heure, multipliez la valeur en ft/s par 1.09728. Par exemple, 10 ft/s = 10 × 1.09728 = 10.9728 km/h.",
+          "q": "Comment convertir ft/s en km/h?",
+        },
+      ],
+      "inputs": {
+        "fromUnit": {
+          "help": "Sélectionnez l'unité de la valeur que vous convertissez.",
+          "label": "De",
+        },
+        "toUnit": {
+          "help": "Sélectionnez l'unité vers laquelle vous voulez convertir.",
+          "label": "À",
+        },
+        "value": {
+          "help": "Entrez la valeur de vitesse à convertir.",
+          "label": "Valeur",
+        },
+      },
+      "keywords": [
+        "convertisseur de vitesse",
+        "unités de vitesse",
+        "km/h en mph",
+        "convertisseur de vélocité",
+        "convertisseur de nœuds",
+        "mesure de vitesse",
+      ],
+      "options": {
+        "fromUnit": {
+          "fts": "ft/s",
+          "kmh": "km/h",
+          "knots": "nœuds",
+          "mph": "mph",
+          "ms": "m/s",
+        },
+        "toUnit": {
+          "fts": "ft/s",
+          "kmh": "km/h",
+          "knots": "nœuds",
+          "mph": "mph",
+          "ms": "m/s",
+        },
+      },
+      "outputs": {
+        "fts": {
+          "help": "Vitesse en pieds par seconde.",
+          "label": "Pieds par seconde (ft/s)",
+        },
+        "kmh": {
+          "help": "Vitesse en kilomètres par heure.",
+          "label": "Kilomètres par heure (km/h)",
+        },
+        "knots": {
+          "help": "Vitesse en nœuds.",
+          "label": "Nœuds",
+        },
+        "mph": {
+          "help": "Vitesse en milles par heure.",
+          "label": "Milles par heure (mph)",
+        },
+        "ms": {
+          "help": "Vitesse en mètres par seconde.",
+          "label": "Mètres par seconde (m/s)",
+        },
+        "result": {
+          "help": "La valeur de vitesse convertie.",
+          "label": "Résultat",
+        },
+      },
+      "short": "Convertissez entre différentes unités de vitesse: km/h, mph, m/s, nœuds et ft/s.",
+      "title": "Convertisseur de Vitesse",
+    },
+    "hi": {
+      "description": "मुफ्त गति इकाई कनवर्टर। किमी/घंटा, मील/घंटा, मी/सेकंड, नॉट्स और फीट/सेकंड के बीच कनवर्ट करें। गति मापन के लिए रीयल-टाइम कनवर्सन।",
+      "errors": {},
+      "faq": [
+        {
+          "a": "किलोमीटर प्रति घंटा (किमी/घंटा) एक घंटे में किलोमीटर में दूरी को मापता है, जबकि मील प्रति घंटा (मील/घंटा) एक घंटे में मील में दूरी को मापता है। 1 मील/घंटा ≈ 1.609 किमी/घंटा।",
+          "q": "किमी/घंटा और मील/घंटा में क्या अंतर है?",
+        },
+        {
+          "a": "नॉट्स (समुद्री मील प्रति घंटा) का उपयोग मुख्य रूप से जहाजों और विमानों की गति को मापने के लिए समुद्री और विमानन नेविगेशन में किया जाता है। 1 नॉट = 1.852 किमी/घंटा।",
+          "q": "नॉट्स का उपयोग किसके लिए किया जाता है?",
+        },
+        {
+          "a": "1 मी/सेकंड लगभग 3.6 किमी/घंटा, 2.237 मील/घंटा, 1.944 नॉट्स या 3.281 फीट/सेकंड के बराबर है।",
+          "q": "1 मी/सेकंड अन्य इकाइयों में कितना है?",
+        },
+        {
+          "a": "फीट प्रति सेकंड को किलोमीटर प्रति घंटा में कनवर्ट करने के लिए, फीट/सेकंड मान को 1.09728 से गुणा करें। उदाहरण के लिए, 10 फीट/सेकंड = 10 × 1.09728 = 10.9728 किमी/घंटा।",
+          "q": "मैं फीट/सेकंड को किमी/घंटा में कैसे कनवर्ट करूं?",
+        },
+      ],
+      "inputs": {
+        "fromUnit": {
+          "help": "उस इकाई को चुनें जिसे आप कनवर्ट कर रहे हैं।",
+          "label": "से",
+        },
+        "toUnit": {
+          "help": "उस इकाई को चुनें जिसमें आप कनवर्ट करना चाहते हैं।",
+          "label": "को",
+        },
+        "value": {
+          "help": "कनवर्ट करने के लिए गति मान दर्ज करें।",
+          "label": "मान",
+        },
+      },
+      "keywords": [
+        "गति कनवर्टर",
+        "गति इकाइयां",
+        "किमी/घंटा से मील/घंटा",
+        "गति रूपांतरण",
+        "नॉट्स कनवर्टर",
+        "गति मापन",
+      ],
+      "options": {
+        "fromUnit": {
+          "fts": "फीट/सेकंड",
+          "kmh": "किमी/घंटा",
+          "knots": "नॉट्स",
+          "mph": "मील/घंटा",
+          "ms": "मी/सेकंड",
+        },
+        "toUnit": {
+          "fts": "फीट/सेकंड",
+          "kmh": "किमी/घंटा",
+          "knots": "नॉट्स",
+          "mph": "मील/घंटा",
+          "ms": "मी/सेकंड",
+        },
+      },
+      "outputs": {
+        "fts": {
+          "help": "फीट प्रति सेकंड में गति।",
+          "label": "फीट प्रति सेकंड (फीट/सेकंड)",
+        },
+        "kmh": {
+          "help": "किलोमीटर प्रति घंटा में गति।",
+          "label": "किलोमीटर प्रति घंटा (किमी/घंटा)",
+        },
+        "knots": {
+          "help": "नॉट्स में गति।",
+          "label": "नॉट्स",
+        },
+        "mph": {
+          "help": "मील प्रति घंटा में गति।",
+          "label": "मील प्रति घंटा (मील/घंटा)",
+        },
+        "ms": {
+          "help": "मीटर प्रति सेकंड में गति।",
+          "label": "मीटर प्रति सेकंड (मी/सेकंड)",
+        },
+        "result": {
+          "help": "कनवर्ट की गई गति मान।",
+          "label": "परिणाम",
+        },
+      },
+      "short": "विभिन्न गति इकाइयों के बीच कनवर्ट करें: किमी/घंटा, मील/घंटा, मी/सेकंड, नॉट्स और फीट/सेकंड।",
+      "title": "गति कनवर्टर",
+    },
+    "it": {
+      "description": "Convertitore di unità di velocità gratuito. Converti tra km/h, mph, m/s, nodi e ft/s. Conversioni in tempo reale per le misurazioni di velocità.",
+      "errors": {},
+      "faq": [
+        {
+          "a": "I chilometri all'ora (km/h) misurano la distanza in chilometri in un'ora, mentre le miglia all'ora (mph) misurano la distanza in miglia in un'ora. 1 mph ≈ 1.609 km/h.",
+          "q": "Qual è la differenza tra km/h e mph?",
+        },
+        {
+          "a": "I nodi (miglia nautiche all'ora) sono utilizzati principalmente nella navigazione marittima e aerea per misurare la velocità di navi e aerei. 1 nodo = 1.852 km/h.",
+          "q": "A cosa servono i nodi?",
+        },
+        {
+          "a": "1 m/s equivale approssimativamente a 3.6 km/h, 2.237 mph, 1.944 nodi o 3.281 ft/s.",
+          "q": "Quanto è 1 m/s in altre unità?",
+        },
+        {
+          "a": "Per convertire piedi al secondo in chilometri all'ora, moltiplica il valore in ft/s per 1.09728. Ad esempio, 10 ft/s = 10 × 1.09728 = 10.9728 km/h.",
+          "q": "Come converto ft/s in km/h?",
+        },
+      ],
+      "inputs": {
+        "fromUnit": {
+          "help": "Seleziona l'unità del valore che stai convertendo.",
+          "label": "Da",
+        },
+        "toUnit": {
+          "help": "Seleziona l'unità in cui desideri convertire.",
+          "label": "A",
+        },
+        "value": {
+          "help": "Inserisci il valore di velocità che desideri convertire.",
+          "label": "Valore",
+        },
+      },
+      "keywords": [
+        "convertitore di velocità",
+        "unità di velocità",
+        "km/h in mph",
+        "convertitore di velocità",
+        "convertitore di nodi",
+        "misurazione della velocità",
+      ],
+      "options": {
+        "fromUnit": {
+          "fts": "ft/s",
+          "kmh": "km/h",
+          "knots": "nodi",
+          "mph": "mph",
+          "ms": "m/s",
+        },
+        "toUnit": {
+          "fts": "ft/s",
+          "kmh": "km/h",
+          "knots": "nodi",
+          "mph": "mph",
+          "ms": "m/s",
+        },
+      },
+      "outputs": {
+        "fts": {
+          "help": "Velocità in piedi al secondo.",
+          "label": "Piedi al secondo (ft/s)",
+        },
+        "kmh": {
+          "help": "Velocità in chilometri all'ora.",
+          "label": "Chilometri all'ora (km/h)",
+        },
+        "knots": {
+          "help": "Velocità in nodi.",
+          "label": "Nodi",
+        },
+        "mph": {
+          "help": "Velocità in miglia all'ora.",
+          "label": "Miglia all'ora (mph)",
+        },
+        "ms": {
+          "help": "Velocità in metri al secondo.",
+          "label": "Metri al secondo (m/s)",
+        },
+        "result": {
+          "help": "Il valore di velocità convertito.",
+          "label": "Risultato",
+        },
+      },
+      "short": "Converti tra diverse unità di velocità: km/h, mph, m/s, nodi e ft/s.",
+      "title": "Convertitore di Velocità",
+    },
+    "ja": {
+      "description": "無料の速度単位コンバーター。時速キロメートル、時速マイル、メートル毎秒、ノット、フィート毎秒の間で変換します。速度測定のリアルタイム変換。",
+      "errors": {},
+      "faq": [
+        {
+          "a": "時速キロメートル（km/h）は1時間でのキロメートル距離を測定し、時速マイル（mph）は1時間でのマイル距離を測定します。1 mph≈1.609 km/h。",
+          "q": "km/hとmphの違いは何ですか？",
+        },
+        {
+          "a": "ノット（時速海里）は主に海事および航空ナビゲーションで船舶と航空機の速度を測定するために使用されます。1ノット=1.852 km/h。",
+          "q": "ノットは何に使われますか？",
+        },
+        {
+          "a": "1 m/sはおよそ3.6 km/h、2.237 mph、1.944ノット、または3.281 ft/sに相当します。",
+          "q": "1 m/sは他の単位でいくらですか？",
+        },
+        {
+          "a": "フィート毎秒をキロメートル毎時に変換するには、ft/sの値に1.09728を乗算します。例えば、10 ft/s = 10 × 1.09728 = 10.9728 km/h。",
+          "q": "ft/sをkm/hに変換するにはどうしますか？",
+        },
+      ],
+      "inputs": {
+        "fromUnit": {
+          "help": "変換する値の単位を選択します。",
+          "label": "から",
+        },
+        "toUnit": {
+          "help": "変換先の単位を選択します。",
+          "label": "へ",
+        },
+        "value": {
+          "help": "変換する速度値を入力します。",
+          "label": "値",
+        },
+      },
+      "keywords": [
+        "速度コンバーター",
+        "速度単位",
+        "km/hからmph",
+        "速度変換",
+        "ノットコンバーター",
+        "速度測定",
+      ],
+      "options": {
+        "fromUnit": {
+          "fts": "ft/s",
+          "kmh": "km/h",
+          "knots": "ノット",
+          "mph": "mph",
+          "ms": "m/s",
+        },
+        "toUnit": {
+          "fts": "ft/s",
+          "kmh": "km/h",
+          "knots": "ノット",
+          "mph": "mph",
+          "ms": "m/s",
+        },
+      },
+      "outputs": {
+        "fts": {
+          "help": "フィート毎秒単位の速度。",
+          "label": "フィート毎秒 (ft/s)",
+        },
+        "kmh": {
+          "help": "時速キロメートル単位の速度。",
+          "label": "時速キロメートル (km/h)",
+        },
+        "knots": {
+          "help": "ノット単位の速度。",
+          "label": "ノット",
+        },
+        "mph": {
+          "help": "時速マイル単位の速度。",
+          "label": "時速マイル (mph)",
+        },
+        "ms": {
+          "help": "メートル毎秒単位の速度。",
+          "label": "メートル毎秒 (m/s)",
+        },
+        "result": {
+          "help": "変換後の速度値。",
+          "label": "結果",
+        },
+      },
+      "short": "異なる速度単位を変換：時速キロメートル、時速マイル、メートル毎秒、ノット、フィート毎秒。",
+      "title": "速度コンバーター",
+    },
+    "ko": {
+      "description": "무료 속도 단위 변환기입니다. km/h, mph, m/s, 노트, ft/s 간에 변환하세요. 속도 측정을 위한 실시간 변환입니다.",
+      "errors": {},
+      "faq": [
+        {
+          "a": "시간당 킬로미터(km/h)는 1시간 동안의 킬로미터 거리를 측정하고, 시간당 마일(mph)은 1시간 동안의 마일 거리를 측정합니다. 1 mph ≈ 1.609 km/h.",
+          "q": "km/h와 mph의 차이는 무엇입니까?",
+        },
+        {
+          "a": "노트(시간당 해리)는 주로 해상 및 항공 항법에서 선박과 항공기의 속도를 측정하는 데 사용됩니다. 1 노트 = 1.852 km/h.",
+          "q": "노트는 무엇에 사용되나요?",
+        },
+        {
+          "a": "1 m/s는 약 3.6 km/h, 2.237 mph, 1.944 노트, 또는 3.281 ft/s와 같습니다.",
+          "q": "1 m/s는 다른 단위로 얼마입니까?",
+        },
+        {
+          "a": "초당 피트를 시간당 킬로미터로 변환하려면 ft/s 값에 1.09728을 곱합니다. 예를 들어, 10 ft/s = 10 × 1.09728 = 10.9728 km/h.",
+          "q": "ft/s를 km/h로 변환하려면 어떻게 해야 합니까?",
+        },
+      ],
+      "inputs": {
+        "fromUnit": {
+          "help": "변환하는 값의 단위를 선택하세요.",
+          "label": "다음에서",
+        },
+        "toUnit": {
+          "help": "변환할 단위를 선택하세요.",
+          "label": "다음으로",
+        },
+        "value": {
+          "help": "변환할 속도 값을 입력하세요.",
+          "label": "값",
+        },
+      },
+      "keywords": [
+        "속도 변환기",
+        "속도 단위",
+        "km/h에서 mph로",
+        "속도 변환",
+        "노트 변환기",
+        "속도 측정",
+      ],
+      "options": {
+        "fromUnit": {
+          "fts": "ft/s",
+          "kmh": "km/h",
+          "knots": "노트",
+          "mph": "mph",
+          "ms": "m/s",
+        },
+        "toUnit": {
+          "fts": "ft/s",
+          "kmh": "km/h",
+          "knots": "노트",
+          "mph": "mph",
+          "ms": "m/s",
+        },
+      },
+      "outputs": {
+        "fts": {
+          "help": "초당 피트 단위의 속도입니다.",
+          "label": "초당 피트 (ft/s)",
+        },
+        "kmh": {
+          "help": "시간당 킬로미터 단위의 속도입니다.",
+          "label": "시간당 킬로미터 (km/h)",
+        },
+        "knots": {
+          "help": "노트 단위의 속도입니다.",
+          "label": "노트",
+        },
+        "mph": {
+          "help": "시간당 마일 단위의 속도입니다.",
+          "label": "시간당 마일 (mph)",
+        },
+        "ms": {
+          "help": "초당 미터 단위의 속도입니다.",
+          "label": "초당 미터 (m/s)",
+        },
+        "result": {
+          "help": "변환된 속도 값입니다.",
+          "label": "결과",
+        },
+      },
+      "short": "다양한 속도 단위 변환: km/h, mph, m/s, 노트, ft/s.",
+      "title": "속도 변환기",
+    },
+    "ru": {
+      "description": "Бесплатный конвертер единиц скорости. Конвертируйте между км/ч, миль/ч, м/с, узлы и фт/с. Преобразования в реальном времени для измерений скорости.",
+      "errors": {},
+      "faq": [
+        {
+          "a": "Километры в час (км/ч) измеряют расстояние в километрах за один час, а мили в час (миль/ч) - расстояние в милях за один час. 1 миль/ч ≈ 1.609 км/ч.",
+          "q": "В чем разница между км/ч и миль/ч?",
+        },
+        {
+          "a": "Узлы (морские мили в час) в основном используются в морской и авиационной навигации для измерения скорости кораблей и самолетов. 1 узел = 1.852 км/ч.",
+          "q": "Для чего используются узлы?",
+        },
+        {
+          "a": "1 м/с равен примерно 3.6 км/ч, 2.237 миль/ч, 1.944 узлов или 3.281 фт/с.",
+          "q": "Сколько 1 м/с в других единицах?",
+        },
+        {
+          "a": "Чтобы преобразовать футы в секунду в километры в час, умножьте значение в фт/с на 1.09728. Например, 10 фт/с = 10 × 1.09728 = 10.9728 км/ч.",
+          "q": "Как преобразовать фт/с в км/ч?",
+        },
+      ],
+      "inputs": {
+        "fromUnit": {
+          "help": "Выберите единицу значения, которое вы преобразуете.",
+          "label": "От",
+        },
+        "toUnit": {
+          "help": "Выберите единицу, в которую хотите преобразовать.",
+          "label": "В",
+        },
+        "value": {
+          "help": "Введите значение скорости для преобразования.",
+          "label": "Значение",
+        },
+      },
+      "keywords": [
+        "конвертер скорости",
+        "единицы скорости",
+        "км/ч в миль/ч",
+        "конвертер скорости",
+        "конвертер узлов",
+        "измерение скорости",
+      ],
+      "options": {
+        "fromUnit": {
+          "fts": "фт/с",
+          "kmh": "км/ч",
+          "knots": "узлы",
+          "mph": "миль/ч",
+          "ms": "м/с",
+        },
+        "toUnit": {
+          "fts": "фт/с",
+          "kmh": "км/ч",
+          "knots": "узлы",
+          "mph": "миль/ч",
+          "ms": "м/с",
+        },
+      },
+      "outputs": {
+        "fts": {
+          "help": "Скорость в футах в секунду.",
+          "label": "Футы в секунду (фт/с)",
+        },
+        "kmh": {
+          "help": "Скорость в километрах в час.",
+          "label": "Километры в час (км/ч)",
+        },
+        "knots": {
+          "help": "Скорость в узлах.",
+          "label": "Узлы",
+        },
+        "mph": {
+          "help": "Скорость в милях в час.",
+          "label": "Мили в час (миль/ч)",
+        },
+        "ms": {
+          "help": "Скорость в метрах в секунду.",
+          "label": "Метры в секунду (м/с)",
+        },
+        "result": {
+          "help": "Преобразованное значение скорости.",
+          "label": "Результат",
+        },
+      },
+      "short": "Конвертируйте между различными единицами скорости: км/ч, миль/ч, м/с, узлы и фт/с.",
+      "title": "Конвертер скорости",
+    },
+    "tr": {
+      "description": "Ücretsiz hız birimi dönüştürücü. km/h, mph, m/s, knots ve ft/s arasında dönüştürme yapın. Hız ve velocity ölçümleri için gerçek zamanlı dönüşümler.",
+      "errors": {},
+      "faq": [
+        {
+          "a": "Kilometre/saat (km/h) bir saatte kilometre cinsinden mesafeyi, mil/saat (mph) ise bir saatte mil cinsinden mesafeyi ölçer. 1 mph ≈ 1.609 km/h.",
+          "q": "km/h ile mph arasındaki fark nedir?",
+        },
+        {
+          "a": "Knots (saatlik deniz mili), gemi ve uçak hızını ölçmek için denizcilikte ve havacılıkta kullanılır. 1 knot = 1.852 km/h.",
+          "q": "Knots ne için kullanılır?",
+        },
+        {
+          "a": "1 m/s yaklaşık 3.6 km/h, 2.237 mph, 1.944 knots veya 3.281 ft/s'ye eşittir.",
+          "q": "1 m/s diğer birimlerde kaç eder?",
+        },
+        {
+          "a": "Feet/saniyeyi kilometre/saate dönüştürmek için ft/s değerini 1.09728 ile çarpın. Örneğin, 10 ft/s = 10 × 1.09728 = 10.9728 km/h.",
+          "q": "ft/s'yi km/h'ye nasıl dönüştürüm?",
+        },
+      ],
+      "inputs": {
+        "fromUnit": {
+          "help": "Dönüştürme yapacağınız birimini seçin.",
+          "label": "Kaynak Birim",
+        },
+        "toUnit": {
+          "help": "Dönüştürmek istediğiniz birimi seçin.",
+          "label": "Hedef Birim",
+        },
+        "value": {
+          "help": "Dönüştürmek istediğiniz hız değerini girin.",
+          "label": "Değer",
+        },
+      },
+      "keywords": [
+        "hız dönüştürücü",
+        "hız birimi",
+        "km/h to mph",
+        "velocity converter",
+        "knots dönüştürme",
+        "hız ölçümü",
+      ],
+      "options": {
+        "fromUnit": {
+          "fts": "ft/s",
+          "kmh": "km/h",
+          "knots": "knots",
+          "mph": "mph",
+          "ms": "m/s",
+        },
+        "toUnit": {
+          "fts": "ft/s",
+          "kmh": "km/h",
+          "knots": "knots",
+          "mph": "mph",
+          "ms": "m/s",
+        },
+      },
+      "outputs": {
+        "fts": {
+          "help": "Hız (ft/s cinsinden).",
+          "label": "Saniye Başına Feet (ft/s)",
+        },
+        "kmh": {
+          "help": "Hız (km/h cinsinden).",
+          "label": "Saatlik Kilometre (km/h)",
+        },
+        "knots": {
+          "help": "Hız (knots cinsinden).",
+          "label": "Knots",
+        },
+        "mph": {
+          "help": "Hız (mph cinsinden).",
+          "label": "Saatlik Mil (mph)",
+        },
+        "ms": {
+          "help": "Hız (m/s cinsinden).",
+          "label": "Saniye Başına Metre (m/s)",
+        },
+        "result": {
+          "help": "Dönüştürülmüş hız değeri.",
+          "label": "Sonuç",
+        },
+      },
+      "short": "Farklı hız birimlerini dönüştürün: km/s, mph, m/s, knots ve ft/s.",
+      "title": "Hız Dönüştürücü",
+    },
+    "zh": {
+      "description": "免费速度单位转换器。转换公里/小时、英里/小时、米/秒、节和英尺/秒。实时转换速度测量。",
+      "errors": {},
+      "faq": [
+        {
+          "a": "公里/小时（km/h）以小时为单位测量公里距离，而英里/小时（mph）以小时为单位测量英里距离。1英里/小时≈1.609公里/小时。",
+          "q": "公里/小时和英里/小时有什么区别？",
+        },
+        {
+          "a": "节（每小时海里）主要用于海事和航空导航，用于测量船舶和飞机的速度。1节=1.852公里/小时。",
+          "q": "节用在哪里？",
+        },
+        {
+          "a": "1米/秒约等于3.6公里/小时、2.237英里/小时、1.944节或3.281英尺/秒。",
+          "q": "1米/秒等于其他单位中的多少？",
+        },
+        {
+          "a": "要将英尺/秒转换为公里/小时，请将英尺/秒的值乘以1.09728。例如，10英尺/秒=10×1.09728=10.9728公里/小时。",
+          "q": "如何将英尺/秒转换为公里/小时？",
+        },
+      ],
+      "inputs": {
+        "fromUnit": {
+          "help": "选择要转换的数值的单位。",
+          "label": "从",
+        },
+        "toUnit": {
+          "help": "选择要转换到的单位。",
+          "label": "至",
+        },
+        "value": {
+          "help": "输入要转换的速度值。",
+          "label": "数值",
+        },
+      },
+      "keywords": [
+        "速度转换器",
+        "速度单位",
+        "公里每小时到英里每小时",
+        "速度转换",
+        "节转换",
+        "速度测量",
+      ],
+      "options": {
+        "fromUnit": {
+          "fts": "ft/s",
+          "kmh": "km/h",
+          "knots": "节",
+          "mph": "mph",
+          "ms": "m/s",
+        },
+        "toUnit": {
+          "fts": "ft/s",
+          "kmh": "km/h",
+          "knots": "节",
+          "mph": "mph",
+          "ms": "m/s",
+        },
+      },
+      "outputs": {
+        "fts": {
+          "help": "速度（英尺/秒）。",
+          "label": "英尺/秒 (ft/s)",
+        },
+        "kmh": {
+          "help": "速度（公里/小时）。",
+          "label": "公里/小时 (km/h)",
+        },
+        "knots": {
+          "help": "速度（节）。",
+          "label": "节",
+        },
+        "mph": {
+          "help": "速度（英里/小时）。",
+          "label": "英里/小时 (mph)",
+        },
+        "ms": {
+          "help": "速度（米/秒）。",
+          "label": "米/秒 (m/s)",
+        },
+        "result": {
+          "help": "转换后的速度值。",
+          "label": "结果",
+        },
+      },
+      "short": "转换不同的速度单位：公里/小时、英里/小时、米/秒、节和英尺/秒。",
+      "title": "速度转换器",
+    },
+  },
+  "icon": "gauge",
+  "inputSchema": ZodObject {
+    "_cached": null,
+    "_def": {
+      "catchall": ZodNever {
+        "_def": {
+          "typeName": "ZodNever",
+        },
+        "and": [Function],
+        "array": [Function],
+        "brand": [Function],
+        "catch": [Function],
+        "default": [Function],
+        "describe": [Function],
+        "isNullable": [Function],
+        "isOptional": [Function],
+        "nullable": [Function],
+        "nullish": [Function],
+        "optional": [Function],
+        "or": [Function],
+        "parse": [Function],
+        "parseAsync": [Function],
+        "pipe": [Function],
+        "promise": [Function],
+        "readonly": [Function],
+        "refine": [Function],
+        "refinement": [Function],
+        "safeParse": [Function],
+        "safeParseAsync": [Function],
+        "spa": [Function],
+        "superRefine": [Function],
+        "transform": [Function],
+        "~standard": {
+          "validate": [Function],
+          "vendor": "zod",
+          "version": 1,
+        },
+      },
+      "shape": [Function],
+      "typeName": "ZodObject",
+      "unknownKeys": "strip",
+    },
+    "and": [Function],
+    "array": [Function],
+    "augment": [Function],
+    "brand": [Function],
+    "catch": [Function],
+    "default": [Function],
+    "describe": [Function],
+    "isNullable": [Function],
+    "isOptional": [Function],
+    "nonstrict": [Function],
+    "nullable": [Function],
+    "nullish": [Function],
+    "optional": [Function],
+    "or": [Function],
+    "parse": [Function],
+    "parseAsync": [Function],
+    "pipe": [Function],
+    "promise": [Function],
+    "readonly": [Function],
+    "refine": [Function],
+    "refinement": [Function],
+    "safeParse": [Function],
+    "safeParseAsync": [Function],
+    "spa": [Function],
+    "superRefine": [Function],
+    "transform": [Function],
+    "~standard": {
+      "validate": [Function],
+      "vendor": "zod",
+      "version": 1,
+    },
+  },
+  "inputs": [
+    {
+      "defaultValue": 100,
+      "id": "value",
+      "required": true,
+      "type": {
+        "kind": "number",
+        "step": 0.01,
+      },
+    },
+    {
+      "defaultValue": "kmh",
+      "id": "fromUnit",
+      "required": true,
+      "type": {
+        "kind": "select",
+        "options": [
+          {
+            "i18nKey": "kmh",
+            "value": "kmh",
+          },
+          {
+            "i18nKey": "mph",
+            "value": "mph",
+          },
+          {
+            "i18nKey": "ms",
+            "value": "ms",
+          },
+          {
+            "i18nKey": "knots",
+            "value": "knots",
+          },
+          {
+            "i18nKey": "fts",
+            "value": "fts",
+          },
+        ],
+      },
+    },
+    {
+      "defaultValue": "mph",
+      "id": "toUnit",
+      "required": true,
+      "type": {
+        "kind": "select",
+        "options": [
+          {
+            "i18nKey": "kmh",
+            "value": "kmh",
+          },
+          {
+            "i18nKey": "mph",
+            "value": "mph",
+          },
+          {
+            "i18nKey": "ms",
+            "value": "ms",
+          },
+          {
+            "i18nKey": "knots",
+            "value": "knots",
+          },
+          {
+            "i18nKey": "fts",
+            "value": "fts",
+          },
+        ],
+      },
+    },
+  ],
+  "meta": {
+    "references": [
+      {
+        "authority": "National Institute of Standards and Technology (NIST)",
+        "title": "SI Derived Units — Speed and Velocity",
+        "url": "https://www.nist.gov/pml/special-publication-330",
+      },
+      {
+        "authority": "Wikipedia",
+        "title": "Unit Conversions — Speed",
+        "url": "https://en.wikipedia.org/wiki/Speed",
+      },
+    ],
+  },
+  "outputs": [
+    {
+      "format": "number",
+      "highlight": true,
+      "id": "result",
+      "precision": 6,
+    },
+    {
+      "format": "number",
+      "id": "kmh",
+      "precision": 6,
+    },
+    {
+      "format": "number",
+      "id": "mph",
+      "precision": 6,
+    },
+    {
+      "format": "number",
+      "id": "ms",
+      "precision": 6,
+    },
+    {
+      "format": "number",
+      "id": "knots",
+      "precision": 6,
+    },
+    {
+      "format": "number",
+      "id": "fts",
+      "precision": 6,
+    },
+  ],
+  "priority": "P0",
+  "related": [
+    "area",
+    "volume",
+    "energy",
+    "pressure",
+  ],
+  "slug": "speed",
+}
+`;
