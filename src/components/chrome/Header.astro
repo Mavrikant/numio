@@ -27,35 +27,28 @@ const siteName = t(locale, "site.name");
         class="flex shrink-0 items-center gap-2 font-semibold text-slate-900 dark:text-slate-100 hover:opacity-80 transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 rounded"
         aria-label={siteName}
       >
-        {/* Brand mark — kept in sync with public/favicon.svg */}
+        {/* Calculator icon */}
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="h-7 w-7"
-          viewBox="0 0 32 32"
+          class="h-6 w-6 text-brand-600 dark:text-brand-400"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
           aria-hidden="true"
         >
-          <rect x="3" y="2" width="26" height="28" rx="4" fill="#0ea5e9" />
-          <rect x="6" y="5" width="20" height="6" rx="1.5" fill="#082f49" />
-          <rect x="22" y="6.5" width="3" height="3" rx="0.5" fill="#38bdf8" />
-          <g fill="#ffffff">
-            <circle cx="9" cy="16" r="1.5" />
-            <circle cx="14" cy="16" r="1.5" />
-            <circle cx="19" cy="16" r="1.5" />
-            <circle cx="9" cy="21" r="1.5" />
-            <circle cx="14" cy="21" r="1.5" />
-            <circle cx="9" cy="26" r="1.5" />
-            <circle cx="14" cy="26" r="1.5" />
-          </g>
-          <rect x="17" y="19.5" width="6" height="7.5" rx="1.5" fill="#f97316" />
-          <text
-            x="20"
-            y="25"
-            text-anchor="middle"
-            font-family="ui-sans-serif, system-ui, sans-serif"
-            font-size="5"
-            font-weight="700"
-            fill="#ffffff">=</text
-          >
+          <rect x="4" y="2" width="16" height="20" rx="2" />
+          <line x1="8" y1="6" x2="16" y2="6" />
+          <line x1="8" y1="10" x2="8" y2="10" />
+          <line x1="12" y1="10" x2="12" y2="10" />
+          <line x1="16" y1="10" x2="16" y2="10" />
+          <line x1="8" y1="14" x2="8" y2="14" />
+          <line x1="12" y1="14" x2="12" y2="14" />
+          <line x1="16" y1="14" x2="16" y2="14" />
+          <line x1="8" y1="18" x2="12" y2="18" />
+          <line x1="16" y1="18" x2="16" y2="18" />
         </svg>
         <span class="text-base">{siteName}</span>
       </a>
