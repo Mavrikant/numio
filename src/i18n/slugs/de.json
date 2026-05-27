@@ -1,4 +1,9 @@
 {
+  "rounding": "rundung",
+  "modulo": "modulo",
+  "fibonacci": "fibonacci",
+  "proportion-solver": "verhaeltnis-loeser",
+  "percent-error": "prozentualer-fehler",
   "rule-of-72": "72er-regel",
   "apy-apr-converter": "apr-apy-umrechner",
   "present-value": "barwert",

@@ -1,4 +1,9 @@
 {
+  "rounding": "yuvarlama",
+  "modulo": "mod-hesaplama",
+  "fibonacci": "fibonacci",
+  "proportion-solver": "oranti-cozucu",
+  "percent-error": "yuzde-hata",
   "rule-of-72": "72-kurali",
   "apy-apr-converter": "apr-apy-donusturucu",
   "present-value": "bugunku-deger",
