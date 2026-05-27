@@ -124,5 +124,8 @@
     "download": "Télécharger PDF",
     "generated": "Généré par karaman.dev/calculators",
     "title": "Résultats du calculateur"
+  },
+  "pwa": {
+    "install": "Installer l'app"
   }
 }

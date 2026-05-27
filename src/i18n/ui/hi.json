@@ -124,5 +124,8 @@
     "download": "PDF डाउनलोड करें",
     "generated": "karaman.dev/calculators द्वारा निर्मित",
     "title": "कैलकुलेटर परिणाम"
+  },
+  "pwa": {
+    "install": "ऐप इंस्टॉल करें"
   }
 }

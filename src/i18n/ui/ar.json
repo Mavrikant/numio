@@ -124,5 +124,8 @@
     "download": "تحميل PDF",
     "generated": "تم الإنشاء بواسطة karaman.dev/calculators",
     "title": "نتائج الحاسبة"
+  },
+  "pwa": {
+    "install": "تثبيت التطبيق"
   }
 }

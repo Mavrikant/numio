@@ -124,5 +124,8 @@
     "download": "PDF İndir",
     "generated": "karaman.dev/calculators tarafından oluşturuldu",
     "title": "Hesaplayıcı sonuçları"
+  },
+  "pwa": {
+    "install": "Uygulamayı yükle"
   }
 }

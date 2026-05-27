@@ -124,5 +124,8 @@
     "download": "Скачать PDF",
     "generated": "Создано на karaman.dev/calculators",
     "title": "Результаты калькулятора"
+  },
+  "pwa": {
+    "install": "Установить"
   }
 }

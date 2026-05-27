@@ -124,5 +124,8 @@
     "download": "PDF 다운로드",
     "generated": "karaman.dev/calculators에서 생성",
     "title": "계산기 결과"
+  },
+  "pwa": {
+    "install": "앱 설치"
   }
 }

@@ -124,5 +124,8 @@
     "download": "下载 PDF",
     "generated": "由 karaman.dev/calculators 生成",
     "title": "计算器结果"
+  },
+  "pwa": {
+    "install": "安装应用"
   }
 }
