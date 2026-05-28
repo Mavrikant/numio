@@ -12,6 +12,7 @@ import type {
   AnyCalculatorDefinition,
   CalculatorCategory,
 } from "../types/calculator";
+import type { ToolDefinition } from "../types/tool";
 
 export interface HreflangEntry {
   hreflang: string;
@@ -304,6 +305,102 @@ export function buildFaqJsonLd(
       acceptedAnswer: {
         "@type": "Answer",
         text: item.a ?? item.answer ?? "",
+      },
+    })),
+  };
+}
+
+// ─── Tool pages ────────────────────────────────────────────────────────────────
+
+function buildToolUrl(slug: string, locale: Locale): string {
+  const base = BASE_PATH.replace(/\/+$/, "");
+  return `${SITE_URL}${base}/${locale}/tools/${slug}/`;
+}
+
+export function buildToolOgImageUrl(slug: string): string {
+  const base = BASE_PATH.replace(/\/+$/, "");
+  return `${SITE_URL}${base}/og/tools/${slug}.svg`;
+}
+
+/**
+ * SoftwareApplication + BreadcrumbList graph for a tool, mirroring
+ * buildCalculatorJsonLd. The Tools section sits at /{locale}/tools/.
+ */
+export function buildToolJsonLd(
+  tool: ToolDefinition,
+  locale: Locale,
+): Record<string, unknown> {
+  const bundle = tool.i18n[locale] ?? tool.i18n[DEFAULT_LOCALE];
+  const url = buildToolUrl(tool.slug, locale);
+  const base = BASE_PATH.replace(/\/+$/, "");
+
+  const softwareApp = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: bundle.title,
+    description: bundle.description,
+    applicationCategory: "UtilityApplication",
+    operatingSystem: "Any",
+    url,
+    inLanguage: LOCALE_HTML_LANG[locale],
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "USD",
+    },
+  };
+
+  const breadcrumb = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: SITE_NAME,
+        item: `${SITE_URL}${base}/${locale}/`,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: t(locale, "nav.tools") ?? "Tools",
+        item: `${SITE_URL}${base}/${locale}/tools/`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: bundle.title,
+        item: url,
+      },
+    ],
+  };
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": [softwareApp, breadcrumb],
+  };
+}
+
+/**
+ * FAQPage schema for a tool, emitted only when the locale bundle declares
+ * a faq[] array. Mirrors buildFaqJsonLd for calculators.
+ */
+export function buildToolFaqJsonLd(
+  tool: ToolDefinition,
+  locale: Locale,
+): Record<string, unknown> | null {
+  const bundle = tool.i18n[locale] ?? tool.i18n[DEFAULT_LOCALE];
+  if (!bundle.faq || bundle.faq.length === 0) return null;
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: bundle.faq.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.a,
       },
     })),
   };

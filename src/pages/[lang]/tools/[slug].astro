@@ -11,7 +11,13 @@ import { LOCALES, isLocale, type Locale, SITE_URL } from "@/config/site";
 import { t } from "@/lib/i18n";
 import { getAllTools } from "@/lib/tools-registry";
 import ToolHost from "@/components/tools/ToolHost";
-import { buildToolHreflang } from "@/lib/seo";
+import {
+  buildToolHreflang,
+  buildToolJsonLd,
+  buildToolFaqJsonLd,
+  buildToolOgImageUrl,
+} from "@/lib/seo";
+import JsonLd from "@/components/seo/JsonLd.astro";
 
 export async function getStaticPaths() {
   const tools = getAllTools();
@@ -43,6 +49,9 @@ const bundle = tool.i18n[locale] ?? tool.i18n["en"];
 // SEO
 const canonical = `${SITE_URL}/numio/${locale}/tools/${tool.slug}/`;
 const hreflangs = buildToolHreflang(tool.slug);
+const toolJsonLd = buildToolJsonLd(tool, locale);
+const faqJsonLd = buildToolFaqJsonLd(tool, locale);
+const ogImage = buildToolOgImageUrl(tool.slug);
 
 // MDX content (optional)
 const allMdxModules = import.meta.glob<{ default: unknown; Content: unknown }>(
@@ -69,6 +78,12 @@ const Content = mdxModule
   {bundle.keywords && bundle.keywords.length > 0 && (
     <meta name="keywords" content={bundle.keywords.join(", ")} slot="head" />
   )}
+  <meta property="og:image" content={ogImage} slot="head" />
+  <meta property="og:image:alt" content={bundle.title} slot="head" />
+  <meta name="twitter:image" content={ogImage} slot="head" />
+
+  <JsonLd data={toolJsonLd} slot="head" />
+  {faqJsonLd && <JsonLd data={faqJsonLd} slot="head" />}
 
   <main>
     <div class="border-b border-slate-200 bg-slate-50 dark:border-slate-700 dark:bg-slate-800/50">
