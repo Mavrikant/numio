@@ -29,6 +29,7 @@ import {
   formatDate,
 } from "@/lib/intl";
 import type { OutputFormat } from "@/types/calculator";
+import { registerUnicodeFont } from "@/lib/pdf-font";
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 
@@ -138,6 +139,11 @@ export function PdfExport({
       const { jsPDF } = await import(/* webpackChunkName: "jspdf" */ "jspdf");
 
       const doc = new jsPDF({ unit: "mm", format: "a4", orientation: "portrait" });
+
+      // Register a Unicode-capable font (jsPDF's built-in helvetica only
+      // supports Latin-1, which mangles Turkish ş/ğ/ı, Cyrillic, Greek, etc.).
+      const fontFamily = await registerUnicodeFont(doc);
+
       const pageW = doc.internal.pageSize.getWidth();
       const pageH = doc.internal.pageSize.getHeight();
       const margin = 20;
@@ -149,7 +155,7 @@ export function PdfExport({
       doc.rect(0, 0, pageW, 12, "F");
       doc.setTextColor(255, 255, 255);
       doc.setFontSize(8);
-      doc.setFont("helvetica", "normal");
+      doc.setFont(fontFamily, "normal");
       doc.text("karaman.dev/numio", margin, 8);
       doc.text(todayISO(), pageW - margin, 8, { align: "right" });
 
@@ -158,14 +164,14 @@ export function PdfExport({
       // ── Calc title ──────────────────────────────────────────────────────
       doc.setTextColor(15, 23, 42); // slate-900
       doc.setFontSize(18);
-      doc.setFont("helvetica", "bold");
+      doc.setFont(fontFamily, "bold");
       doc.text(bundle.title, margin, y);
       y += 8;
 
       // Short description
       if (bundle.short) {
         doc.setFontSize(9);
-        doc.setFont("helvetica", "normal");
+        doc.setFont(fontFamily, "normal");
         doc.setTextColor(100, 116, 139); // slate-500
         const shortLines = doc.splitTextToSize(bundle.short, contentW);
         doc.text(shortLines, margin, y);
@@ -180,7 +186,7 @@ export function PdfExport({
 
       // ── Inputs table ────────────────────────────────────────────────────
       doc.setFontSize(11);
-      doc.setFont("helvetica", "bold");
+      doc.setFont(fontFamily, "bold");
       doc.setTextColor(15, 23, 42);
       doc.text(t(locale, "labels.inputs"), margin, y);
       y += 6;
@@ -207,13 +213,13 @@ export function PdfExport({
           doc.rect(margin, y - 4, contentW, 7, "F");
         }
 
-        doc.setFont("helvetica", "normal");
+        doc.setFont(fontFamily, "normal");
         doc.setTextColor(71, 85, 105); // slate-600
         const labelLines = doc.splitTextToSize(inputLabel, colLabelW);
         doc.text(labelLines, margin + 2, y);
 
         doc.setTextColor(15, 23, 42); // slate-900
-        doc.setFont("helvetica", "bold");
+        doc.setFont(fontFamily, "bold");
         doc.text(displayVal, colValueX, y, { align: "left" });
 
         y += Math.max(labelLines.length, 1) * 5 + 2;
@@ -230,7 +236,7 @@ export function PdfExport({
       // ── Results ─────────────────────────────────────────────────────────
       if (result) {
         doc.setFontSize(11);
-        doc.setFont("helvetica", "bold");
+        doc.setFont(fontFamily, "bold");
         doc.setTextColor(15, 23, 42);
         doc.text(t(locale, "labels.results"), margin, y);
         y += 6;
@@ -268,11 +274,11 @@ export function PdfExport({
           }
 
           doc.setFontSize(9);
-          doc.setFont("helvetica", "normal");
+          doc.setFont(fontFamily, "normal");
           doc.text(outputLabel, margin + 2, y);
 
           const valueText = suffix ? `${formatted} ${suffix}` : formatted;
-          doc.setFont("helvetica", "bold");
+          doc.setFont(fontFamily, "bold");
           if (output.highlight) {
             doc.setFontSize(11);
             doc.setTextColor(30, 58, 138); // blue-900
@@ -301,7 +307,7 @@ export function PdfExport({
         y += 8;
 
         doc.setFontSize(10);
-        doc.setFont("helvetica", "bold");
+        doc.setFont(fontFamily, "bold");
         doc.setTextColor(15, 23, 42);
         doc.text(t(locale, "authority.formula"), margin, y);
         y += 6;
@@ -320,7 +326,7 @@ export function PdfExport({
           .trim();
 
         doc.setFontSize(9);
-        doc.setFont("helvetica", "normal");
+        doc.setFont(fontFamily, "normal");
         doc.setTextColor(71, 85, 105);
         const formulaLines = doc.splitTextToSize(plainFormula, contentW - 8);
         doc.setFillColor(248, 250, 252);
@@ -343,13 +349,13 @@ export function PdfExport({
         y += 8;
 
         doc.setFontSize(10);
-        doc.setFont("helvetica", "bold");
+        doc.setFont(fontFamily, "bold");
         doc.setTextColor(15, 23, 42);
         doc.text(t(locale, "authority.sources"), margin, y);
         y += 6;
 
         doc.setFontSize(8);
-        doc.setFont("helvetica", "normal");
+        doc.setFont(fontFamily, "normal");
         for (const ref of refs) {
           if (y > pageH - 20) {
             doc.addPage();
@@ -379,7 +385,7 @@ export function PdfExport({
         doc.setFillColor(248, 250, 252);
         doc.rect(0, pageH - 10, pageW, 10, "F");
         doc.setFontSize(7);
-        doc.setFont("helvetica", "normal");
+        doc.setFont(fontFamily, "normal");
         doc.setTextColor(100, 116, 139);
         doc.text(
           `${labelGenerated} · ${window.location.href}`,
