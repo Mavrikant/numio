@@ -1,0 +1,26 @@
+import type { ToolI18n } from "@/types/tool";
+import { COMMON_UI } from "../_shared/ui";
+
+const data = {
+  en: { title: "HTML to Markdown", short: "Convert HTML back to Markdown, in your browser.", description: "Free HTML to Markdown converter. Paste HTML to get a clean Markdown source — headings, lists, code, quotes, links and emphasis are preserved.", keywords: ["html to markdown", "html2md", "convert html markdown", "html md converter", "markdown from html"], input: "HTML", output: "Markdown" },
+  tr: { title: "HTML'den Markdown'a", short: "HTML'i tarayıcınızda Markdown'a geri dönüştürün.", description: "Ücretsiz HTML'den Markdown'a dönüştürücü. HTML yapıştırın ve temiz Markdown kaynak alın — başlıklar, listeler, kod, alıntılar, bağlantılar ve vurgu korunur.", keywords: ["html markdown", "html2md", "html markdown dönüştürücü", "html md dönüştürücü", "html'den markdown"], input: "HTML", output: "Markdown" },
+  de: { title: "HTML zu Markdown", short: "Konvertieren Sie HTML im Browser zurück zu Markdown.", description: "Kostenloser HTML-zu-Markdown-Konverter. Fügen Sie HTML ein, um saubere Markdown-Quelle zu erhalten — Überschriften, Listen, Code, Zitate, Links und Hervorhebungen bleiben erhalten.", keywords: ["html zu markdown", "html2md", "html markdown konverter", "html md konverter", "markdown aus html"], input: "HTML", output: "Markdown" },
+  fr: { title: "HTML vers Markdown", short: "Convertissez HTML en Markdown, dans votre navigateur.", description: "Convertisseur HTML vers Markdown gratuit. Collez du HTML pour obtenir une source Markdown propre — titres, listes, code, citations, liens et emphase sont préservés.", keywords: ["html vers markdown", "html2md", "convertisseur html markdown", "html md converter", "markdown depuis html"], input: "HTML", output: "Markdown" },
+  es: { title: "HTML a Markdown", short: "Convierte HTML de vuelta a Markdown, en tu navegador.", description: "Convertidor HTML a Markdown gratuito. Pega HTML para obtener fuente Markdown limpia — encabezados, listas, código, citas, enlaces y énfasis se preservan.", keywords: ["html a markdown", "html2md", "convertidor html markdown", "html md converter", "markdown desde html"], input: "HTML", output: "Markdown" },
+  it: { title: "HTML a Markdown", short: "Converti HTML in Markdown nel browser.", description: "Convertitore HTML a Markdown gratuito. Incolla HTML per ottenere sorgente Markdown pulito — intestazioni, elenchi, codice, citazioni, link ed enfasi sono preservati.", keywords: ["html a markdown", "html2md", "convertitore html markdown", "html md converter", "markdown da html"], input: "HTML", output: "Markdown" },
+  ar: { title: "HTML إلى Markdown", short: "حوّل HTML إلى Markdown في متصفحك.", description: "محوّل HTML إلى Markdown مجاني. الصق HTML للحصول على مصدر Markdown نظيف — يتم الحفاظ على العناوين والقوائم والتعليمات البرمجية والاقتباسات والروابط والتوكيد.", keywords: ["html إلى markdown", "html2md", "محول html markdown", "html md", "markdown من html"], input: "HTML", output: "Markdown" },
+  ru: { title: "HTML в Markdown", short: "Конвертируйте HTML обратно в Markdown в браузере.", description: "Бесплатный конвертер HTML в Markdown. Вставьте HTML, чтобы получить чистый Markdown-источник — заголовки, списки, код, цитаты, ссылки и выделение сохраняются.", keywords: ["html в markdown", "html2md", "конвертер html markdown", "html md конвертер", "markdown из html"], input: "HTML", output: "Markdown" },
+  zh: { title: "HTML 转 Markdown", short: "在浏览器中将 HTML 转换回 Markdown。", description: "免费的 HTML 转 Markdown 转换器。粘贴 HTML 获得干净的 Markdown 源——标题、列表、代码、引用、链接和强调都将被保留。", keywords: ["html 转 markdown", "html2md", "html markdown 转换器", "html md 转换器", "从 html 到 markdown"], input: "HTML", output: "Markdown" },
+  ja: { title: "HTML から Markdown", short: "ブラウザで HTML を Markdown に戻して変換。", description: "無料の HTML から Markdown 変換ツール。HTML を貼り付けてクリーンな Markdown ソースを取得——見出し、リスト、コード、引用、リンク、強調が保持されます。", keywords: ["html から markdown", "html2md", "html markdown 変換", "html md 変換", "html から markdown"], input: "HTML", output: "Markdown" },
+  ko: { title: "HTML to Markdown", short: "브라우저에서 HTML을 다시 Markdown으로 변환합니다.", description: "무료 HTML to Markdown 변환기. HTML을 붙여넣어 깨끗한 Markdown 소스를 얻으세요 — 제목, 목록, 코드, 인용, 링크, 강조가 보존됩니다.", keywords: ["html to markdown", "html2md", "html markdown 변환기", "html md 변환기", "html에서 markdown"], input: "HTML", output: "Markdown" },
+  hi: { title: "HTML से Markdown", short: "अपने ब्राउज़र में HTML को वापस Markdown में बदलें।", description: "मुफ्त HTML से Markdown कन्वर्टर। HTML पेस्ट करके स्वच्छ Markdown स्रोत पाएं — शीर्षक, सूचियाँ, कोड, उद्धरण, लिंक और बल संरक्षित रहते हैं।", keywords: ["html से markdown", "html2md", "html markdown कन्वर्टर", "html md कन्वर्टर", "html से markdown"], input: "HTML", output: "Markdown" },
+};
+
+const i18n = Object.fromEntries(
+  (Object.keys(data) as Array<keyof typeof data>).map((loc) => {
+    const { title, short, description, keywords, ...rest } = data[loc];
+    return [loc, { title, short, description, keywords, ui: { ...COMMON_UI[loc], ...rest } }];
+  }),
+) as unknown as ToolI18n;
+
+export default i18n;
