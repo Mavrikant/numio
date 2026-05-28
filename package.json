@@ -40,6 +40,7 @@
     "jspdf": "^4.2.1",
     "katex": "^0.17.0",
     "papaparse": "^5.5.3",
+    "pdf-lib": "^1.17.1",
     "plotly.js-dist-min": "^3.5.1",
     "qrcode": "^1.5.4",
     "react": "^19.2.6",
