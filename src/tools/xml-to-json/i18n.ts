@@ -1,0 +1,26 @@
+import type { ToolI18n } from "@/types/tool";
+import { COMMON_UI } from "../_shared/ui";
+
+const data = {
+  en: { title: "XML to JSON Converter", short: "Convert XML to JSON in your browser.", description: "Free XML to JSON converter. Paste XML to get JSON where attributes use the `@` prefix and text nodes become `#text` — runs entirely in your browser.", keywords: ["xml to json", "convert xml to json", "xml json converter", "xml to json online", "parse xml"], input: "XML", output: "JSON" },
+  tr: { title: "XML'den JSON'a Dönüştürücü", short: "XML'i tarayıcınızda JSON'a dönüştürün.", description: "Ücretsiz XML'den JSON'a dönüştürücü. XML yapıştırın ve özniteliklerin `@` öneki ve metin düğümlerinin `#text` olduğu JSON alın — tamamen tarayıcınızda çalışır.", keywords: ["xml json", "xml'i json'a dönüştür", "xml json dönüştürücü", "xml json online", "xml ayrıştır"], input: "XML", output: "JSON" },
+  de: { title: "XML-zu-JSON-Konverter", short: "Konvertieren Sie XML im Browser zu JSON.", description: "Kostenloser XML-zu-JSON-Konverter. Fügen Sie XML ein, um JSON zu erhalten, wobei Attribute das `@`-Präfix verwenden und Textknoten zu `#text` werden — läuft vollständig im Browser.", keywords: ["xml zu json", "xml in json konvertieren", "xml json konverter", "xml zu json online", "xml parsen"], input: "XML", output: "JSON" },
+  fr: { title: "Convertisseur XML vers JSON", short: "Convertissez XML en JSON dans votre navigateur.", description: "Convertisseur XML vers JSON gratuit. Collez du XML pour obtenir du JSON où les attributs utilisent le préfixe `@` et les nœuds texte deviennent `#text` — fonctionne entièrement dans votre navigateur.", keywords: ["xml vers json", "convertir xml en json", "convertisseur xml json", "xml vers json en ligne", "parser xml"], input: "XML", output: "JSON" },
+  es: { title: "Convertidor XML a JSON", short: "Convierte XML a JSON en tu navegador.", description: "Convertidor XML a JSON gratuito. Pega XML para obtener JSON donde los atributos usan el prefijo `@` y los nodos de texto se convierten en `#text` — funciona completamente en tu navegador.", keywords: ["xml a json", "convertir xml a json", "convertidor xml json", "xml a json online", "parsear xml"], input: "XML", output: "JSON" },
+  it: { title: "Convertitore XML a JSON", short: "Converti XML in JSON nel tuo browser.", description: "Convertitore XML a JSON gratuito. Incolla XML per ottenere JSON dove gli attributi usano il prefisso `@` e i nodi di testo diventano `#text` — funziona interamente nel browser.", keywords: ["xml a json", "convertire xml in json", "convertitore xml json", "xml a json online", "parser xml"], input: "XML", output: "JSON" },
+  ar: { title: "محوّل XML إلى JSON", short: "حوّل XML إلى JSON في متصفحك.", description: "محوّل XML إلى JSON مجاني. الصق XML للحصول على JSON حيث تستخدم السمات بادئة `@` وتصبح عقد النص `#text` — يعمل بالكامل في متصفحك.", keywords: ["xml إلى json", "تحويل xml إلى json", "محول xml json", "xml إلى json عبر الإنترنت", "تحليل xml"], input: "XML", output: "JSON" },
+  ru: { title: "Конвертер XML в JSON", short: "Конвертируйте XML в JSON в браузере.", description: "Бесплатный конвертер XML в JSON. Вставьте XML, чтобы получить JSON, где атрибуты используют префикс `@`, а текстовые узлы становятся `#text` — работает полностью в браузере.", keywords: ["xml в json", "конвертировать xml в json", "конвертер xml json", "xml в json онлайн", "парсить xml"], input: "XML", output: "JSON" },
+  zh: { title: "XML 转 JSON 转换器", short: "在浏览器中将 XML 转换为 JSON。", description: "免费的 XML 转 JSON 转换器。粘贴 XML 获得 JSON，其中属性使用 `@` 前缀，文本节点变为 `#text`——完全在浏览器中运行。", keywords: ["xml 转 json", "将 xml 转换为 json", "xml json 转换器", "xml 转 json 在线", "解析 xml"], input: "XML", output: "JSON" },
+  ja: { title: "XML から JSON 変換", short: "ブラウザで XML を JSON に変換。", description: "無料の XML から JSON 変換ツール。XML を貼り付けると、属性は `@` プレフィックスを使い、テキストノードは `#text` になる JSON が得られます——すべてブラウザ内で動作します。", keywords: ["xml から json", "xml を json に変換", "xml json 変換", "xml から json オンライン", "xml 解析"], input: "XML", output: "JSON" },
+  ko: { title: "XML to JSON 변환기", short: "브라우저에서 XML을 JSON으로 변환합니다.", description: "무료 XML to JSON 변환기. XML을 붙여넣으면 속성은 `@` 접두사를 사용하고 텍스트 노드는 `#text`가 되는 JSON을 얻습니다 — 모두 브라우저에서 실행됩니다.", keywords: ["xml to json", "xml을 json으로 변환", "xml json 변환기", "xml to json 온라인", "xml 파싱"], input: "XML", output: "JSON" },
+  hi: { title: "XML से JSON कन्वर्टर", short: "अपने ब्राउज़र में XML को JSON में बदलें।", description: "मुफ्त XML से JSON कन्वर्टर। XML पेस्ट करें और JSON पाएं जहाँ विशेषताएँ `@` उपसर्ग का उपयोग करती हैं और टेक्स्ट नोड `#text` बन जाते हैं — पूरी तरह आपके ब्राउज़र में चलता है।", keywords: ["xml से json", "xml को json में बदलें", "xml json कन्वर्टर", "xml से json ऑनलाइन", "xml पार्स"], input: "XML", output: "JSON" },
+};
+
+const i18n = Object.fromEntries(
+  (Object.keys(data) as Array<keyof typeof data>).map((loc) => {
+    const { title, short, description, keywords, ...rest } = data[loc];
+    return [loc, { title, short, description, keywords, ui: { ...COMMON_UI[loc], ...rest } }];
+  }),
+) as unknown as ToolI18n;
+
+export default i18n;
