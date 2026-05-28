@@ -40,6 +40,64 @@ export function buildHreflang(
   return entries;
 }
 
+/**
+ * Hreflang entries for tool pages. Tool slugs are not localized
+ * (single canonical slug per tool), so this is simpler than
+ * buildHreflang() for calculators. Emits BCP-47 codes and x-default.
+ */
+export function buildToolHreflang(slug: string): HreflangEntry[] {
+  const base = BASE_PATH.replace(/\/+$/, "");
+  const entries: HreflangEntry[] = LOCALES.map((locale) => ({
+    hreflang: LOCALE_HTML_LANG[locale],
+    href: `${SITE_URL}${base}/${locale}/tools/${slug}/`,
+  }));
+  entries.push({
+    hreflang: "x-default",
+    href: `${SITE_URL}${base}/${DEFAULT_LOCALE}/tools/${slug}/`,
+  });
+  return entries;
+}
+
+/**
+ * Organization schema for the site. Emitted once on the homepage.
+ * Drives Google's Knowledge Panel / brand SERP cluster.
+ */
+export function buildOrganizationJsonLd(): Record<string, unknown> {
+  const base = BASE_PATH.replace(/\/+$/, "");
+  return {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: SITE_NAME,
+    url: `${SITE_URL}${base}/`,
+    logo: `${SITE_URL}${base}/og/numio-logo.svg`,
+  };
+}
+
+/**
+ * WebSite schema with a SearchAction. Enables Google's sitelinks
+ * search box on brand SERPs. The query placeholder targets the
+ * homepage's search/category browse, which serves as our entry point.
+ */
+export function buildWebSiteJsonLd(locale: Locale): Record<string, unknown> {
+  const base = BASE_PATH.replace(/\/+$/, "");
+  const home = `${SITE_URL}${base}/${locale}/`;
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: SITE_NAME,
+    url: home,
+    inLanguage: LOCALE_HTML_LANG[locale],
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: `${SITE_URL}${base}/${locale}/?q={search_term_string}`,
+      },
+      "query-input": "required name=search_term_string",
+    },
+  };
+}
+
 export function buildCalculatorJsonLd(
   calc: AnyCalculatorDefinition,
   locale: Locale,

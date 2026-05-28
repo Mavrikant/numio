@@ -4,6 +4,8 @@ import { LOCALES, isLocale, type Locale } from "@/config/site";
 import { t, buildAbsoluteUrl } from "@/lib/i18n";
 import { getAvailableCategories } from "@/lib/registry";
 import { getCategoryLabel } from "@/lib/i18n";
+import { buildOrganizationJsonLd, buildWebSiteJsonLd } from "@/lib/seo";
+import JsonLd from "@/components/seo/JsonLd.astro";
 
 export async function getStaticPaths() {
   return LOCALES.map((lang) => ({ params: { lang } }));
@@ -19,6 +21,8 @@ const canonical = buildAbsoluteUrl(locale);
 ---
 
 <Base locale={locale} canonical={canonical}>
+  <JsonLd data={buildOrganizationJsonLd()} slot="head" />
+  <JsonLd data={buildWebSiteJsonLd(locale)} slot="head" />
   <main class="container-page py-16">
     <header class="mb-12 text-center">
       <h1 class="text-4xl font-bold tracking-tight sm:text-5xl text-balance">
