@@ -8,9 +8,10 @@
  */
 import Base from "@/layouts/Base.astro";
 import { LOCALES, isLocale, type Locale, SITE_URL } from "@/config/site";
-import { t, buildAbsoluteUrl } from "@/lib/i18n";
+import { t } from "@/lib/i18n";
 import { getAllTools } from "@/lib/tools-registry";
 import ToolHost from "@/components/tools/ToolHost";
+import { buildToolHreflang } from "@/lib/seo";
 
 export async function getStaticPaths() {
   const tools = getAllTools();
@@ -41,10 +42,7 @@ const bundle = tool.i18n[locale] ?? tool.i18n["en"];
 
 // SEO
 const canonical = `${SITE_URL}/numio/${locale}/tools/${tool.slug}/`;
-const hreflangs = LOCALES.map((l) => ({
-  hreflang: l,
-  href: `${SITE_URL}/numio/${l}/tools/${tool.slug}/`,
-}));
+const hreflangs = buildToolHreflang(tool.slug);
 
 // MDX content (optional)
 const allMdxModules = import.meta.glob<{ default: unknown; Content: unknown }>(
