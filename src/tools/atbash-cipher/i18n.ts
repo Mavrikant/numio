@@ -1,0 +1,26 @@
+import type { ToolI18n } from "@/types/tool";
+import { COMMON_UI } from "../_shared/ui";
+
+const data = {
+  en: { title: "Atbash Cipher", short: "Encode and decode Atbash — the A↔Z substitution cipher.", description: "Free Atbash cipher tool. Map A→Z, B→Y, C→X, … and vice versa. The encode and decode steps are the same; non-letter characters pass through unchanged.", keywords: ["atbash cipher", "atbash decoder", "atbash encoder", "substitution cipher", "classic cipher"], input: "Text", output: "Result" },
+  tr: { title: "Atbash Şifresi", short: "A↔Z yer değiştirme şifresi Atbash'ı kodlayın ve çözün.", description: "Ücretsiz Atbash şifre aracı. A→Z, B→Y, C→X, … ve tersini eşleyin. Kodlama ve çözme aynı işlemdir; harf dışı karakterler değişmeden geçer.", keywords: ["atbash şifresi", "atbash çözücü", "atbash kodlayıcı", "yer değiştirme şifresi", "klasik şifre"], input: "Metin", output: "Sonuç" },
+  de: { title: "Atbash-Chiffre", short: "Atbash kodieren und dekodieren — die A↔Z-Substitutionschiffre.", description: "Kostenloses Atbash-Chiffre-Tool. Ordnet A→Z, B→Y, C→X, … und umgekehrt zu. Kodieren und Dekodieren sind dieselbe Operation; Nicht-Buchstaben passieren unverändert.", keywords: ["atbash chiffre", "atbash decoder", "atbash encoder", "substitutionschiffre", "klassische chiffre"], input: "Text", output: "Ergebnis" },
+  fr: { title: "Chiffre Atbash", short: "Encodez et décodez Atbash — le chiffre de substitution A↔Z.", description: "Outil Atbash gratuit. Mappe A→Z, B→Y, C→X, … et vice versa. Les étapes d'encodage et de décodage sont identiques ; les caractères non-alphabétiques passent inchangés.", keywords: ["chiffre atbash", "décodeur atbash", "encodeur atbash", "chiffre substitution", "chiffre classique"], input: "Texte", output: "Résultat" },
+  es: { title: "Cifrado Atbash", short: "Codifica y decodifica Atbash — el cifrado de sustitución A↔Z.", description: "Herramienta de cifrado Atbash gratuita. Mapea A→Z, B→Y, C→X, … y viceversa. Las etapas de codificación y decodificación son las mismas; los caracteres no alfabéticos pasan sin cambios.", keywords: ["cifrado atbash", "decodificador atbash", "codificador atbash", "cifrado sustitución", "cifrado clásico"], input: "Texto", output: "Resultado" },
+  it: { title: "Cifrario Atbash", short: "Codifica e decodifica Atbash — il cifrario di sostituzione A↔Z.", description: "Strumento cifrario Atbash gratuito. Mappa A→Z, B→Y, C→X, … e viceversa. Le fasi di codifica e decodifica sono le stesse; i caratteri non alfabetici passano invariati.", keywords: ["cifrario atbash", "decodificatore atbash", "codificatore atbash", "cifrario sostituzione", "cifrario classico"], input: "Testo", output: "Risultato" },
+  ar: { title: "شيفرة Atbash", short: "شفّر وفك تشفير Atbash — شيفرة استبدال A↔Z.", description: "أداة شيفرة Atbash مجانية. تعيّن A→Z و B→Y و C→X و… والعكس. خطوات التشفير وفك التشفير متطابقة؛ تمر الأحرف غير الأبجدية دون تغيير.", keywords: ["شيفرة atbash", "فاك تشفير atbash", "مرمّز atbash", "شيفرة الاستبدال", "شيفرة كلاسيكية"], input: "النص", output: "النتيجة" },
+  ru: { title: "Шифр Атбаш", short: "Кодируйте и декодируйте Атбаш — подстановочный шифр A↔Z.", description: "Бесплатный инструмент шифра Атбаш. Сопоставляет A→Z, B→Y, C→X, … и наоборот. Шаги кодирования и декодирования идентичны; не-буквенные символы проходят без изменений.", keywords: ["шифр атбаш", "декодер атбаш", "кодировщик атбаш", "подстановочный шифр", "классический шифр"], input: "Текст", output: "Результат" },
+  zh: { title: "Atbash 密码", short: "对 A↔Z 替换密码 Atbash 进行编码和解码。", description: "免费的 Atbash 密码工具。将 A→Z、B→Y、C→X、… 映射，反之亦然。编码和解码步骤相同；非字母字符保持不变。", keywords: ["atbash 密码", "atbash 解码器", "atbash 编码器", "替换密码", "经典密码"], input: "文本", output: "结果" },
+  ja: { title: "Atbash 暗号", short: "A↔Z 換字暗号 Atbash をエンコード・デコード。", description: "無料の Atbash 暗号ツール。A→Z、B→Y、C→X、… とその逆をマッピング。エンコードとデコードは同じ操作で、文字以外はそのまま通過します。", keywords: ["atbash 暗号", "atbash デコーダー", "atbash エンコーダー", "換字暗号", "古典暗号"], input: "テキスト", output: "結果" },
+  ko: { title: "Atbash 암호", short: "A↔Z 치환 암호 Atbash를 인코딩하고 디코딩합니다.", description: "무료 Atbash 암호 도구. A→Z, B→Y, C→X, … 및 그 반대로 매핑합니다. 인코딩과 디코딩 단계는 동일하며, 문자가 아닌 문자는 변경 없이 통과합니다.", keywords: ["atbash 암호", "atbash 디코더", "atbash 인코더", "치환 암호", "고전 암호"], input: "텍스트", output: "결과" },
+  hi: { title: "Atbash सिफर", short: "A↔Z प्रतिस्थापन सिफर Atbash को एन्कोड और डिकोड करें।", description: "मुफ्त Atbash सिफर टूल। A→Z, B→Y, C→X, … और इसके विपरीत मैप करें। एन्कोडिंग और डिकोडिंग चरण समान हैं; गैर-अक्षर वर्ण अपरिवर्तित गुजरते हैं।", keywords: ["atbash सिफर", "atbash डिकोडर", "atbash एन्कोडर", "प्रतिस्थापन सिफर", "क्लासिक सिफर"], input: "टेक्स्ट", output: "परिणाम" },
+};
+
+const i18n = Object.fromEntries(
+  (Object.keys(data) as Array<keyof typeof data>).map((loc) => {
+    const { title, short, description, keywords, ...rest } = data[loc];
+    return [loc, { title, short, description, keywords, ui: { ...COMMON_UI[loc], ...rest } }];
+  }),
+) as unknown as ToolI18n;
+
+export default i18n;
