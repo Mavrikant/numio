@@ -1,0 +1,26 @@
+import type { ToolI18n } from "@/types/tool";
+import { COMMON_UI } from "../_shared/ui";
+
+const data = {
+  en: { title: "JSON to XML Converter", short: "Convert JSON data to formatted XML.", description: "Free JSON to XML converter. Paste JSON to get clean, indented XML — object keys become elements and arrays repeat their tag. Runs entirely in your browser.", keywords: ["json to xml", "convert json to xml", "json xml converter", "json to xml online", "transform json to xml"], input: "JSON", output: "XML" },
+  tr: { title: "JSON'dan XML'e Dönüştürücü", short: "JSON verisini biçimlendirilmiş XML'e dönüştürün.", description: "Ücretsiz JSON'dan XML'e dönüştürücü. JSON yapıştırın, temiz, girintili XML alın — nesne anahtarları öğelere dönüşür ve diziler etiketlerini tekrarlar. Tamamen tarayıcınızda çalışır.", keywords: ["json xml", "json'u xml'e dönüştür", "json xml dönüştürücü", "json xml online", "json'u xml'e çevir"], input: "JSON", output: "XML" },
+  de: { title: "JSON-zu-XML-Konverter", short: "Konvertieren Sie JSON-Daten in formatiertes XML.", description: "Kostenloser JSON-zu-XML-Konverter. Fügen Sie JSON ein, um sauberes, eingerücktes XML zu erhalten — Objektschlüssel werden zu Elementen und Arrays wiederholen ihr Tag. Läuft vollständig im Browser.", keywords: ["json zu xml", "json in xml konvertieren", "json xml konverter", "json zu xml online", "json in xml umwandeln"], input: "JSON", output: "XML" },
+  fr: { title: "Convertisseur JSON vers XML", short: "Convertissez des données JSON en XML formaté.", description: "Convertisseur JSON vers XML gratuit. Collez du JSON pour obtenir du XML propre et indenté — les clés d'objet deviennent des éléments et les tableaux répètent leur balise. Fonctionne entièrement dans votre navigateur.", keywords: ["json vers xml", "convertir json en xml", "convertisseur json xml", "json vers xml en ligne", "transformer json en xml"], input: "JSON", output: "XML" },
+  es: { title: "Convertidor de JSON a XML", short: "Convierte datos JSON a XML formateado.", description: "Convertidor de JSON a XML gratuito. Pega JSON para obtener XML limpio e indentado — las claves de objeto se convierten en elementos y los arrays repiten su etiqueta. Funciona completamente en tu navegador.", keywords: ["json a xml", "convertir json a xml", "convertidor json xml", "json a xml online", "transformar json a xml"], input: "JSON", output: "XML" },
+  it: { title: "Convertitore da JSON a XML", short: "Converti dati JSON in XML formattato.", description: "Convertitore da JSON a XML gratuito. Incolla JSON per ottenere XML pulito e indentato — le chiavi degli oggetti diventano elementi e gli array ripetono il loro tag. Funziona interamente nel browser.", keywords: ["json a xml", "convertire json in xml", "convertitore json xml", "json a xml online", "trasformare json in xml"], input: "JSON", output: "XML" },
+  ar: { title: "محوّل JSON إلى XML", short: "حوّل بيانات JSON إلى XML منسّق.", description: "محوّل JSON إلى XML مجاني. الصق JSON للحصول على XML نظيف ومُزاح — تتحول مفاتيح الكائنات إلى عناصر وتكرر المصفوفات وسمها. يعمل بالكامل في متصفحك.", keywords: ["json إلى xml", "تحويل json إلى xml", "محول json xml", "json إلى xml عبر الإنترنت", "تحويل json"], input: "JSON", output: "XML" },
+  ru: { title: "Конвертер JSON в XML", short: "Преобразуйте данные JSON в форматированный XML.", description: "Бесплатный конвертер JSON в XML. Вставьте JSON, чтобы получить чистый XML с отступами — ключи объектов становятся элементами, а массивы повторяют свой тег. Работает полностью в браузере.", keywords: ["json в xml", "конвертировать json в xml", "конвертер json xml", "json в xml онлайн", "преобразовать json в xml"], input: "JSON", output: "XML" },
+  zh: { title: "JSON 转 XML 转换器", short: "将 JSON 数据转换为格式化的 XML。", description: "免费的 JSON 转 XML 转换器。粘贴 JSON 即可获得整洁、缩进的 XML——对象键成为元素，数组重复其标签。完全在浏览器中运行。", keywords: ["json 转 xml", "将 json 转换为 xml", "json xml 转换器", "json 转 xml 在线", "转换 json"], input: "JSON", output: "XML" },
+  ja: { title: "JSON から XML 変換", short: "JSON データを整形された XML に変換。", description: "無料の JSON から XML 変換ツール。JSON を貼り付けるとクリーンでインデントされた XML が得られます——オブジェクトキーは要素になり、配列はタグを繰り返します。すべてブラウザ内で動作します。", keywords: ["json から xml", "json を xml に変換", "json xml 変換", "json から xml オンライン", "json 変換"], input: "JSON", output: "XML" },
+  ko: { title: "JSON to XML 변환기", short: "JSON 데이터를 포맷된 XML로 변환합니다.", description: "무료 JSON to XML 변환기. JSON을 붙여넣으면 깔끔하고 들여쓰기된 XML을 얻습니다 — 객체 키는 요소가 되고 배열은 태그를 반복합니다. 모두 브라우저에서 실행됩니다.", keywords: ["json to xml", "json을 xml로 변환", "json xml 변환기", "json to xml 온라인", "json 변환"], input: "JSON", output: "XML" },
+  hi: { title: "JSON से XML कन्वर्टर", short: "JSON डेटा को फॉर्मेट किए गए XML में बदलें।", description: "मुफ्त JSON से XML कन्वर्टर। JSON पेस्ट करें और स्वच्छ, इंडेंट किया हुआ XML पाएं — ऑब्जेक्ट कुंजियाँ एलिमेंट बन जाती हैं और एरे अपने टैग को दोहराते हैं। पूरी तरह आपके ब्राउज़र में चलता है।", keywords: ["json से xml", "json को xml में बदलें", "json xml कन्वर्टर", "json से xml ऑनलाइन", "json रूपांतरण"], input: "JSON", output: "XML" },
+};
+
+const i18n = Object.fromEntries(
+  (Object.keys(data) as Array<keyof typeof data>).map((loc) => {
+    const { title, short, description, keywords, ...rest } = data[loc];
+    return [loc, { title, short, description, keywords, ui: { ...COMMON_UI[loc], ...rest } }];
+  }),
+) as unknown as ToolI18n;
+
+export default i18n;
