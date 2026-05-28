@@ -1,0 +1,26 @@
+import type { ToolI18n } from "@/types/tool";
+import { COMMON_UI } from "../_shared/ui";
+
+const data = {
+  en: { title: "NanoID Generator", short: "Generate compact, URL-safe unique IDs.", description: "Free NanoID generator. Create short, URL-safe unique IDs with a configurable length and alphabet — generated in your browser using crypto-grade randomness.", keywords: ["nanoid generator", "nano id", "short id generator", "url safe id", "random id generator"], count: "Count", size: "Size", alphabet: "Alphabet", generate: "Generate" },
+  tr: { title: "NanoID Oluşturucu", short: "Kompakt, URL güvenli benzersiz kimlikler oluşturun.", description: "Ücretsiz NanoID oluşturucu. Yapılandırılabilir uzunluk ve alfabe ile kısa, URL güvenli benzersiz kimlikler oluşturun — kripto sınıfı rastgelelikle tarayıcınızda oluşturulur.", keywords: ["nanoid oluşturucu", "nano id", "kısa id oluşturucu", "url güvenli id", "rastgele id"], count: "Adet", size: "Boyut", alphabet: "Alfabe", generate: "Oluştur" },
+  de: { title: "NanoID-Generator", short: "Erzeugen Sie kompakte, URL-sichere eindeutige IDs.", description: "Kostenloser NanoID-Generator. Erstellen Sie kurze, URL-sichere eindeutige IDs mit konfigurierbarer Länge und Alphabet — im Browser mit kryptographischer Zufälligkeit erzeugt.", keywords: ["nanoid generator", "nano id", "kurze id generator", "url sichere id", "zufällige id"], count: "Anzahl", size: "Größe", alphabet: "Alphabet", generate: "Erzeugen" },
+  fr: { title: "Générateur NanoID", short: "Générez des IDs uniques compacts et URL-safe.", description: "Générateur NanoID gratuit. Créez des IDs uniques courts et URL-safe avec longueur et alphabet configurables — généré dans votre navigateur avec un aléa cryptographique.", keywords: ["générateur nanoid", "nano id", "générateur id court", "id url safe", "id aléatoire"], count: "Nombre", size: "Taille", alphabet: "Alphabet", generate: "Générer" },
+  es: { title: "Generador NanoID", short: "Genera IDs únicos compactos y seguros para URL.", description: "Generador NanoID gratuito. Crea IDs únicos cortos y seguros para URL con longitud y alfabeto configurables — generado en tu navegador con aleatoriedad criptográfica.", keywords: ["generador nanoid", "nano id", "generador id corto", "id seguro url", "id aleatorio"], count: "Cantidad", size: "Tamaño", alphabet: "Alfabeto", generate: "Generar" },
+  it: { title: "Generatore NanoID", short: "Genera ID univoci compatti e URL-safe.", description: "Generatore NanoID gratuito. Crea ID univoci brevi e URL-safe con lunghezza e alfabeto configurabili — generato nel browser con casualità crittografica.", keywords: ["generatore nanoid", "nano id", "generatore id breve", "id url safe", "id casuale"], count: "Quantità", size: "Dimensione", alphabet: "Alfabeto", generate: "Genera" },
+  ar: { title: "مولّد NanoID", short: "أنشئ معرّفات فريدة مدمجة وآمنة لعنوان URL.", description: "مولّد NanoID مجاني. أنشئ معرّفات فريدة قصيرة وآمنة لعنوان URL بطول وأبجدية قابلين للتخصيص — يتم التوليد في متصفحك بعشوائية بمستوى تشفيري.", keywords: ["مولد nanoid", "nano id", "مولد معرف قصير", "معرف آمن url", "معرف عشوائي"], count: "العدد", size: "الحجم", alphabet: "الأبجدية", generate: "توليد" },
+  ru: { title: "Генератор NanoID", short: "Создавайте компактные, URL-безопасные уникальные ID.", description: "Бесплатный генератор NanoID. Создавайте короткие, URL-безопасные уникальные ID с настраиваемой длиной и алфавитом — генерируется в браузере с криптографической случайностью.", keywords: ["генератор nanoid", "nano id", "генератор короткого id", "url безопасный id", "случайный id"], count: "Количество", size: "Размер", alphabet: "Алфавит", generate: "Создать" },
+  zh: { title: "NanoID 生成器", short: "生成紧凑、URL 安全的唯一 ID。", description: "免费的 NanoID 生成器。使用可配置的长度和字母表创建短的、URL 安全的唯一 ID——在浏览器中使用加密级随机性生成。", keywords: ["nanoid 生成器", "nano id", "短 id 生成器", "url 安全 id", "随机 id"], count: "数量", size: "长度", alphabet: "字母表", generate: "生成" },
+  ja: { title: "NanoID 生成", short: "コンパクトで URL セーフなユニーク ID を生成。", description: "無料の NanoID 生成ツール。設定可能な長さとアルファベットで短く URL セーフなユニーク ID を作成します——ブラウザ内で暗号級の乱数で生成。", keywords: ["nanoid 生成", "nano id", "短い id 生成", "url セーフ id", "ランダム id"], count: "数", size: "長さ", alphabet: "アルファベット", generate: "生成" },
+  ko: { title: "NanoID 생성기", short: "컴팩트하고 URL 안전한 고유 ID를 생성합니다.", description: "무료 NanoID 생성기. 구성 가능한 길이와 알파벳으로 짧고 URL 안전한 고유 ID를 만듭니다 — 브라우저에서 암호화 수준의 난수로 생성됩니다.", keywords: ["nanoid 생성기", "nano id", "짧은 id 생성기", "url 안전 id", "랜덤 id"], count: "개수", size: "길이", alphabet: "알파벳", generate: "생성" },
+  hi: { title: "NanoID जनरेटर", short: "कॉम्पैक्ट, URL-सुरक्षित अद्वितीय ID बनाएं।", description: "मुफ्त NanoID जनरेटर। कॉन्फ़िगर करने योग्य लंबाई और वर्णमाला के साथ छोटे, URL-सुरक्षित अद्वितीय ID बनाएं — आपके ब्राउज़र में क्रिप्टो-ग्रेड यादृच्छिकता के साथ जनरेट होते हैं।", keywords: ["nanoid जनरेटर", "nano id", "छोटा id जनरेटर", "url सुरक्षित id", "रैंडम id"], count: "संख्या", size: "लंबाई", alphabet: "वर्णमाला", generate: "जनरेट करें" },
+};
+
+const i18n = Object.fromEntries(
+  (Object.keys(data) as Array<keyof typeof data>).map((loc) => {
+    const { title, short, description, keywords, ...rest } = data[loc];
+    return [loc, { title, short, description, keywords, ui: { ...COMMON_UI[loc], ...rest } }];
+  }),
+) as unknown as ToolI18n;
+
+export default i18n;
