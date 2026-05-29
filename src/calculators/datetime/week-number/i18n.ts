@@ -13,9 +13,9 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Week Number Calculator", short: "Find the ISO-8601 week number for any date.",
-    description: "Free week number calculator. Enter a date to get its ISO-8601 week number, the week-based year and the day of the year. Weeks start on Monday and week 1 contains the first Thursday.",
-    keywords: ["week number", "iso week", "what week is it", "current week number", "week of the year"],
+    title: "Calculadora de Número da Semana", short: "Descubra o número da semana ISO de qualquer data.",
+    description: "Calculadora gratuita de número da semana. Descubra o número da semana ISO 8601 e o dia da semana de qualquer data.",
+    keywords: ["número semana", "semana ISO", "ISO 8601", "número semana ano", "calendário ISO"],
     inputs: { date: { label: "Date" } },
     outputs: { week: { label: "Week number" }, weekYear: { label: "Week-based year" }, dayOfYear: { label: "Day of year" } },
     faq: [
@@ -24,9 +24,9 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Week Number Calculator", short: "Find the ISO-8601 week number for any date.",
-    description: "Free week number calculator. Enter a date to get its ISO-8601 week number, the week-based year and the day of the year. Weeks start on Monday and week 1 contains the first Thursday.",
-    keywords: ["week number", "iso week", "what week is it", "current week number", "week of the year"],
+    title: "Kalkulator Nomor Minggu", short: "Temukan nomor minggu ISO untuk tanggal apa pun.",
+    description: "Kalkulator nomor minggu gratis. Temukan nomor minggu ISO 8601 dan hari dalam minggu untuk tanggal apa pun.",
+    keywords: ["nomor minggu", "minggu ISO", "ISO 8601", "nomor minggu tahun", "kalender ISO"],
     inputs: { date: { label: "Date" } },
     outputs: { week: { label: "Week number" }, weekYear: { label: "Week-based year" }, dayOfYear: { label: "Day of year" } },
     faq: [

@@ -67,22 +67,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Descriptive Statistics Calculator",
-    short: "Get complete statistical summary: min, max, mean, median, mode, quartiles, variance, and standard deviation.",
+    title: "Calculadora de Estatística Básica",
+    short: "Calcule média, mediana, moda, desvio padrão e mais a partir de uma lista de números.",
     description:
-      "Free descriptive statistics calculator. Analyze your data with 12 key metrics including mean, median, quartiles, IQR, variance, and standard deviation for comprehensive data exploration.",
-    keywords: [
-      "descriptive statistics",
-      "data analysis calculator",
-      "statistical summary",
-      "five-number summary",
-      "quartiles calculator",
-      "IQR calculator",
-      "variance calculator",
-      "standard deviation calculator",
-      "median calculator",
-      "mode calculator",
-    ],
+      "Calculadora gratuita de estatística básica. Calcule média, mediana, moda, intervalo, variância, desvio padrão e quartis.",
+    keywords: ["estatística básica", "média mediana moda", "desvio padrão", "variância", "quartis"],
     inputs: {
       values: {
         label: "Data values",
@@ -132,22 +121,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Descriptive Statistics Calculator",
-    short: "Get complete statistical summary: min, max, mean, median, mode, quartiles, variance, and standard deviation.",
+    title: "Kalkulator Statistika Dasar",
+    short: "Hitung mean, median, modus, simpangan baku, dan lainnya dari daftar bilangan.",
     description:
-      "Free descriptive statistics calculator. Analyze your data with 12 key metrics including mean, median, quartiles, IQR, variance, and standard deviation for comprehensive data exploration.",
-    keywords: [
-      "descriptive statistics",
-      "data analysis calculator",
-      "statistical summary",
-      "five-number summary",
-      "quartiles calculator",
-      "IQR calculator",
-      "variance calculator",
-      "standard deviation calculator",
-      "median calculator",
-      "mode calculator",
-    ],
+      "Kalkulator statistika dasar gratis. Hitung mean, median, modus, rentang, varians, simpangan baku, dan kuartil.",
+    keywords: ["statistika dasar", "mean median modus", "simpangan baku", "varians", "kuartil"],
     inputs: {
       values: {
         label: "Data values",

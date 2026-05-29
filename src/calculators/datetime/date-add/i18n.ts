@@ -29,11 +29,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Date Add / Subtract Calculator",
-    short: "Add or subtract years, months, weeks and days from any date.",
+    title: "Calculadora de Soma de Datas",
+    short: "Some ou subtraia dias, semanas, meses ou anos a uma data.",
     description:
-      "Free add/subtract date calculator. Pick a start date, choose to add or subtract, and enter years, months, weeks and days to get the resulting date and the total day offset.",
-    keywords: ["add days to date", "subtract days from date", "date calculator", "date plus days", "future date calculator", "days from today"],
+      "Calculadora gratuita de soma de datas. Adicione ou subtraia dias, semanas, meses ou anos a uma data específica.",
+    keywords: ["somar datas", "subtrair datas", "adicionar dias", "calcular data futura", "data passada"],
     inputs: {
       startDate: { label: "Start date" },
       operation: { label: "Operation" },
@@ -54,11 +54,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Date Add / Subtract Calculator",
-    short: "Add or subtract years, months, weeks and days from any date.",
+    title: "Kalkulator Tambah Tanggal",
+    short: "Tambah atau kurangi hari, minggu, bulan, atau tahun pada tanggal.",
     description:
-      "Free add/subtract date calculator. Pick a start date, choose to add or subtract, and enter years, months, weeks and days to get the resulting date and the total day offset.",
-    keywords: ["add days to date", "subtract days from date", "date calculator", "date plus days", "future date calculator", "days from today"],
+      "Kalkulator tambah tanggal gratis. Tambah atau kurangi hari, minggu, bulan, atau tahun pada tanggal tertentu.",
+    keywords: ["tambah tanggal", "kurang tanggal", "tambah hari", "hitung tanggal depan", "tanggal lampau"],
     inputs: {
       startDate: { label: "Start date" },
       operation: { label: "Operation" },

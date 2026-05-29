@@ -77,19 +77,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Standard Deviation Calculator",
-    short: "Calculate population and sample standard deviation, variance, and mean for your dataset.",
+    title: "Calculadora de Desvio Padrão",
+    short: "Calcule o desvio padrão, variância e variabilidade de uma série de dados.",
     description:
-      "Free standard deviation calculator. Input numbers and get mean, variance, and standard deviation with both population and sample formulas. Ideal for statistics and data analysis.",
-    keywords: [
-      "standard deviation calculator",
-      "variance calculator",
-      "sample standard deviation",
-      "population standard deviation",
-      "statistics calculator",
-      "mean calculator",
-      "data spread calculator",
-    ],
+      "Calculadora gratuita de desvio padrão. Calcule desvio padrão amostral e populacional, variância e coeficiente de variação.",
+    keywords: ["desvio padrão", "variância", "dispersão", "estatística", "desvio padrão amostral"],
     inputs: {
       values: {
         label: "Data values",
@@ -152,19 +144,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Standard Deviation Calculator",
-    short: "Calculate population and sample standard deviation, variance, and mean for your dataset.",
+    title: "Kalkulator Simpangan Baku",
+    short: "Hitung simpangan baku, varians, dan variabilitas deret data.",
     description:
-      "Free standard deviation calculator. Input numbers and get mean, variance, and standard deviation with both population and sample formulas. Ideal for statistics and data analysis.",
-    keywords: [
-      "standard deviation calculator",
-      "variance calculator",
-      "sample standard deviation",
-      "population standard deviation",
-      "statistics calculator",
-      "mean calculator",
-      "data spread calculator",
-    ],
+      "Kalkulator simpangan baku gratis. Hitung simpangan baku sampel dan populasi, varians, dan koefisien variasi.",
+    keywords: ["simpangan baku", "standar deviasi", "varians", "dispersi", "statistik"],
     inputs: {
       values: {
         label: "Data values",

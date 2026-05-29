@@ -63,19 +63,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Combinations & Permutations Calculator",
-    short: "Calculate nCr (combinations) and nPr (permutations) for any n and r instantly.",
+    title: "Calculadora de Combinações e Permutações",
+    short: "Calcule combinações C(n,k) e permutações P(n,k) com facilidade.",
     description:
-      "Free combinations and permutations calculator. Enter n (total items) and r (chosen items) to compute C(n,r) and P(n,r) using exact factorial formulas. Ideal for probability, statistics, and combinatorics problems.",
-    keywords: [
-      "combinations calculator",
-      "permutations calculator",
-      "nCr calculator",
-      "nPr calculator",
-      "combinatorics",
-      "binomial coefficient",
-      "choose function",
-    ],
+      "Calculadora gratuita de combinatória. Calcule combinações C(n,k), permutações P(n,k) e arranjos com ou sem repetição.",
+    keywords: ["combinações", "permutações", "combinatória", "C(n,k)", "fatorial"],
     inputs: {
       n: {
         label: "n (total items)",
@@ -124,19 +116,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Combinations & Permutations Calculator",
-    short: "Calculate nCr (combinations) and nPr (permutations) for any n and r instantly.",
+    title: "Kalkulator Kombinasi dan Permutasi",
+    short: "Hitung kombinasi C(n,k) dan permutasi P(n,k) dengan mudah.",
     description:
-      "Free combinations and permutations calculator. Enter n (total items) and r (chosen items) to compute C(n,r) and P(n,r) using exact factorial formulas. Ideal for probability, statistics, and combinatorics problems.",
-    keywords: [
-      "combinations calculator",
-      "permutations calculator",
-      "nCr calculator",
-      "nPr calculator",
-      "combinatorics",
-      "binomial coefficient",
-      "choose function",
-    ],
+      "Kalkulator kombinatorik gratis. Hitung kombinasi C(n,k), permutasi P(n,k), dan susunan dengan atau tanpa pengulangan.",
+    keywords: ["kombinasi", "permutasi", "kombinatorik", "C(n,k)", "faktorial"],
     inputs: {
       n: {
         label: "n (total items)",

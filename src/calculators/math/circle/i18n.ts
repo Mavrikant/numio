@@ -33,11 +33,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Circle Calculator",
-    short: "From radius, diameter, circumference or area, find all the other circle properties.",
+    title: "Calculadora de Círculo",
+    short: "Calcule área, perímetro, diâmetro ou raio de um círculo.",
     description:
-      "Free circle calculator. Enter any one of radius, diameter, circumference or area and instantly get the other three, using d = 2r, C = 2πr and A = πr². Perfect for geometry homework and design work.",
-    keywords: ["circle calculator", "area of a circle", "circumference calculator", "radius", "diameter", "pi", "geometry"],
+      "Calculadora gratuita de círculo. A partir do raio, diâmetro, área ou perímetro, calcule as outras três medidas com π preciso.",
+    keywords: ["círculo", "área círculo", "perímetro círculo", "raio", "diâmetro"],
     inputs: {
       known: { label: "Known value", help: "Which circle property you are entering." },
       value: { label: "Value", help: "The numeric value of the property selected above." },
@@ -57,11 +57,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Circle Calculator",
-    short: "From radius, diameter, circumference or area, find all the other circle properties.",
+    title: "Kalkulator Lingkaran",
+    short: "Hitung luas, keliling, diameter, atau jari-jari lingkaran.",
     description:
-      "Free circle calculator. Enter any one of radius, diameter, circumference or area and instantly get the other three, using d = 2r, C = 2πr and A = πr². Perfect for geometry homework and design work.",
-    keywords: ["circle calculator", "area of a circle", "circumference calculator", "radius", "diameter", "pi", "geometry"],
+      "Kalkulator lingkaran gratis. Dari jari-jari, diameter, luas, atau keliling, hitung tiga ukuran lainnya dengan π presisi.",
+    keywords: ["lingkaran", "luas lingkaran", "keliling lingkaran", "jari-jari", "diameter"],
     inputs: {
       known: { label: "Known value", help: "Which circle property you are entering." },
       value: { label: "Value", help: "The numeric value of the property selected above." },

@@ -19,9 +19,9 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Day of the Year Calculator", short: "Find which day of the year a date is, and how many days remain.",
-    description: "Free day-of-year calculator. Enter a date to get its ordinal day number (1–366), the days remaining in the year, the total days in that year, and the percentage of the year elapsed.",
-    keywords: ["day of year", "ordinal date", "day number", "days left in year", "what day of the year"],
+    title: "Calculadora do Dia do Ano", short: "Descubra que dia do ano corresponde a uma data específica.",
+    description: "Calculadora gratuita do dia do ano. Descubra o número ordinal do dia (1-365 ou 366 em bissextos) para qualquer data.",
+    keywords: ["dia do ano", "ordinal data", "dia juliano", "calendário ordinal", "número dia"],
     inputs: { date: { label: "Date" } }, outputs: out("Day of year", "Days remaining", "Days in year", "Year elapsed"),
     faq: [
       { q: "What is the day of the year?", a: "It's the ordinal position of a date within its year — 1 January is day 1, 31 December is day 365 (or 366 in a leap year)." },
@@ -29,9 +29,9 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Day of the Year Calculator", short: "Find which day of the year a date is, and how many days remain.",
-    description: "Free day-of-year calculator. Enter a date to get its ordinal day number (1–366), the days remaining in the year, the total days in that year, and the percentage of the year elapsed.",
-    keywords: ["day of year", "ordinal date", "day number", "days left in year", "what day of the year"],
+    title: "Kalkulator Hari dalam Tahun", short: "Temukan hari ke berapa dalam tahun untuk tanggal tertentu.",
+    description: "Kalkulator hari dalam tahun gratis. Temukan nomor ordinal hari (1-365 atau 366 di tahun kabisat) untuk tanggal apa pun.",
+    keywords: ["hari dalam tahun", "tanggal ordinal", "hari Julian", "kalender ordinal", "nomor hari"],
     inputs: { date: { label: "Date" } }, outputs: out("Day of year", "Days remaining", "Days in year", "Year elapsed"),
     faq: [
       { q: "What is the day of the year?", a: "It's the ordinal position of a date within its year — 1 January is day 1, 31 December is day 365 (or 366 in a leap year)." },

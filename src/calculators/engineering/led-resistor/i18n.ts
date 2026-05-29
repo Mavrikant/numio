@@ -82,19 +82,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "LED Resistor Calculator",
-    short: "Calculate the correct current-limiting resistor for your LED circuit.",
+    title: "Calculadora de Resistor para LED",
+    short: "Calcule o resistor necessário para alimentar um LED.",
     description:
-      "Free LED resistor calculator. Enter supply voltage, LED forward voltage, and desired current to find the exact and standard E12 resistor value, power dissipation, and color code.",
-    keywords: [
-      "LED resistor calculator",
-      "current limiting resistor",
-      "LED circuit",
-      "E12 resistor series",
-      "resistor color code",
-      "LED forward voltage",
-      "electronics calculator",
-    ],
+      "Calculadora gratuita de resistor para LED. Calcule a resistência limitadora de corrente com base na tensão de alimentação, tensão e corrente do LED.",
+    keywords: ["resistor LED", "calculadora LED", "corrente LED", "tensão LED", "limitador corrente"],
     inputs: {
       supplyVoltage: {
         label: "Supply Voltage (V)",
@@ -162,19 +154,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "LED Resistor Calculator",
-    short: "Calculate the correct current-limiting resistor for your LED circuit.",
+    title: "Kalkulator Resistor LED",
+    short: "Hitung resistor yang diperlukan untuk mengoperasikan LED.",
     description:
-      "Free LED resistor calculator. Enter supply voltage, LED forward voltage, and desired current to find the exact and standard E12 resistor value, power dissipation, and color code.",
-    keywords: [
-      "LED resistor calculator",
-      "current limiting resistor",
-      "LED circuit",
-      "E12 resistor series",
-      "resistor color code",
-      "LED forward voltage",
-      "electronics calculator",
-    ],
+      "Kalkulator resistor LED gratis. Hitung resistansi pembatas arus berdasarkan tegangan sumber, tegangan dan arus LED.",
+    keywords: ["resistor LED", "kalkulator LED", "arus LED", "tegangan LED", "pembatas arus"],
     inputs: {
       supplyVoltage: {
         label: "Supply Voltage (V)",

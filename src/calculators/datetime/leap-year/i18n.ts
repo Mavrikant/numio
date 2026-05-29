@@ -17,9 +17,9 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Leap Year Calculator", short: "Check whether a year is a leap year and find the nearest leap years.",
-    description: "Free leap year calculator. Enter a year to see whether it's a leap year (366 days, February has 29), plus the next and previous leap years. Uses the Gregorian rule: divisible by 4, except centuries unless divisible by 400.",
-    keywords: ["leap year", "is it a leap year", "leap year checker", "days in february", "leap year list"],
+    title: "Calculadora de Ano Bissexto", short: "Verifique se um ano é bissexto.",
+    description: "Calculadora gratuita de ano bissexto. Verifique rapidamente se qualquer ano é bissexto e veja a lista dos próximos anos bissextos.",
+    keywords: ["ano bissexto", "anos bissextos", "fevereiro 29", "calendário", "ciclo bissextos"],
     ...io("Year", "Days in year", "Days in February", "Next leap year", "Previous leap year"),
     faq: [
       { q: "How do I know if a year is a leap year?", a: "A year is a leap year if it is divisible by 4 — except for century years (like 1900), which must also be divisible by 400. So 2000 and 2024 are leap years, but 1900 and 2100 are not." },
@@ -27,9 +27,9 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Leap Year Calculator", short: "Check whether a year is a leap year and find the nearest leap years.",
-    description: "Free leap year calculator. Enter a year to see whether it's a leap year (366 days, February has 29), plus the next and previous leap years. Uses the Gregorian rule: divisible by 4, except centuries unless divisible by 400.",
-    keywords: ["leap year", "is it a leap year", "leap year checker", "days in february", "leap year list"],
+    title: "Kalkulator Tahun Kabisat", short: "Periksa apakah suatu tahun adalah tahun kabisat.",
+    description: "Kalkulator tahun kabisat gratis. Periksa cepat apakah tahun apa pun adalah tahun kabisat dan lihat daftar tahun kabisat berikutnya.",
+    keywords: ["tahun kabisat", "kabisat", "29 Februari", "kalender", "tahun lompat"],
     ...io("Year", "Days in year", "Days in February", "Next leap year", "Previous leap year"),
     faq: [
       { q: "How do I know if a year is a leap year?", a: "A year is a leap year if it is divisible by 4 — except for century years (like 1900), which must also be divisible by 400. So 2000 and 2024 are leap years, but 1900 and 2100 are not." },

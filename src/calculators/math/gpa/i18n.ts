@@ -24,11 +24,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "GPA Calculator",
-    short: "Calculate your credit-weighted grade point average from grade points and credit hours.",
+    title: "Calculadora de Média Académica (GPA)",
+    short: "Calcule a sua média académica em escala 4.0, 5.0 ou 20.",
     description:
-      "Free GPA calculator. Enter your grade points and matching credit hours as comma-separated lists to get your weighted GPA, total credits and total quality points. Leave credits blank to weight every course equally.",
-    keywords: ["gpa calculator", "grade point average", "weighted gpa", "college gpa calculator", "semester gpa", "cumulative gpa"],
+      "Calculadora gratuita de média académica. Calcule o GPA em diferentes escalas com base nas notas e créditos das disciplinas.",
+    keywords: ["GPA", "média académica", "média notas", "escala 4.0", "calculadora notas"],
     inputs: {
       gradePoints: { label: "Grade points", help: "Comma-separated, e.g. 4, 3.7, 3.3 (use your school's scale)." },
       creditHours: { label: "Credit hours", help: "Comma-separated, matching each grade. Leave blank for equal weighting." },
@@ -46,11 +46,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "GPA Calculator",
-    short: "Calculate your credit-weighted grade point average from grade points and credit hours.",
+    title: "Kalkulator IPK",
+    short: "Hitung Indeks Prestasi Kumulatif (IPK) Anda dalam skala 4.0, 5.0, atau 100.",
     description:
-      "Free GPA calculator. Enter your grade points and matching credit hours as comma-separated lists to get your weighted GPA, total credits and total quality points. Leave credits blank to weight every course equally.",
-    keywords: ["gpa calculator", "grade point average", "weighted gpa", "college gpa calculator", "semester gpa", "cumulative gpa"],
+      "Kalkulator IPK gratis. Hitung IPK dalam berbagai skala berdasarkan nilai dan SKS mata kuliah.",
+    keywords: ["IPK", "indeks prestasi", "nilai akhir", "skala 4.0", "kalkulator nilai"],
     inputs: {
       gradePoints: { label: "Grade points", help: "Comma-separated, e.g. 4, 3.7, 3.3 (use your school's scale)." },
       creditHours: { label: "Credit hours", help: "Comma-separated, matching each grade. Leave blank for equal weighting." },

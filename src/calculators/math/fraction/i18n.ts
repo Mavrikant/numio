@@ -98,21 +98,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Fraction Calculator",
-    short: "Simplify fractions and perform addition, subtraction, multiplication, and division with exact results.",
+    title: "Calculadora de Frações",
+    short: "Some, subtraia, multiplique e divida frações com passos detalhados.",
     description:
-      "Free fraction calculator. Simplify any fraction to its lowest terms using GCD, or add, subtract, multiply, and divide two fractions. Instantly get the simplified fraction, decimal equivalent, and mixed number form.",
-    keywords: [
-      "fraction calculator",
-      "simplify fraction",
-      "fraction simplifier",
-      "add fractions",
-      "subtract fractions",
-      "multiply fractions",
-      "divide fractions",
-      "GCD",
-      "lowest terms",
-    ],
+      "Calculadora gratuita de frações. Some, subtraia, multiplique e divida frações com simplificação automática para o termo mínimo.",
+    keywords: ["frações", "calculadora frações", "somar frações", "simplificar frações", "frações mistas"],
     inputs: {
       numerator1: {
         label: "Numerator (top)",
@@ -194,21 +184,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Fraction Calculator",
-    short: "Simplify fractions and perform addition, subtraction, multiplication, and division with exact results.",
+    title: "Kalkulator Pecahan",
+    short: "Tambah, kurang, kali, dan bagi pecahan dengan langkah rinci.",
     description:
-      "Free fraction calculator. Simplify any fraction to its lowest terms using GCD, or add, subtract, multiply, and divide two fractions. Instantly get the simplified fraction, decimal equivalent, and mixed number form.",
-    keywords: [
-      "fraction calculator",
-      "simplify fraction",
-      "fraction simplifier",
-      "add fractions",
-      "subtract fractions",
-      "multiply fractions",
-      "divide fractions",
-      "GCD",
-      "lowest terms",
-    ],
+      "Kalkulator pecahan gratis. Tambah, kurang, kali, dan bagi pecahan dengan penyederhanaan otomatis ke bentuk paling sederhana.",
+    keywords: ["pecahan", "kalkulator pecahan", "operasi pecahan", "sederhanakan pecahan", "pecahan campuran"],
     inputs: {
       numerator1: {
         label: "Numerator (top)",

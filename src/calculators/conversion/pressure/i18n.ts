@@ -45,11 +45,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Pressure Converter",
-    short: "Convert between Pa, kPa, bar, psi, atm, mmHg and more pressure units.",
+    title: "Conversor de Pressão",
+    short: "Converta entre Pa, bar, psi, atm e outras unidades de pressão.",
     description:
-      "Free pressure unit converter. Convert between Pa, kPa, MPa, bar, psi, atm, mmHg, torr and inHg with NIST-grade precision.",
-    keywords: ["pressure converter", "psi to bar", "bar to kpa", "atm to mmhg", "pascal converter", "torr"],
+      "Conversor gratuito de pressão. Converta entre Pascal, bar, psi, atmosfera, mmHg, kPa e outras unidades.",
+    keywords: ["conversor pressão", "bar psi", "Pa atm", "mmHg", "unidades pressão"],
     inputs: {
       value: { label: "Value", help: "The pressure value to convert." },
       fromUnit: { label: "From", help: "Select the source unit." },
@@ -88,11 +88,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Pressure Converter",
-    short: "Convert between Pa, kPa, bar, psi, atm, mmHg and more pressure units.",
+    title: "Konverter Tekanan",
+    short: "Konversi antara Pa, bar, psi, atm, dan satuan tekanan lainnya.",
     description:
-      "Free pressure unit converter. Convert between Pa, kPa, MPa, bar, psi, atm, mmHg, torr and inHg with NIST-grade precision.",
-    keywords: ["pressure converter", "psi to bar", "bar to kpa", "atm to mmhg", "pascal converter", "torr"],
+      "Konverter tekanan gratis. Konversi antara Pascal, bar, psi, atmosfer, mmHg, kPa, dan satuan lainnya.",
+    keywords: ["konverter tekanan", "bar psi", "Pa atm", "mmHg", "satuan tekanan"],
     inputs: {
       value: { label: "Value", help: "The pressure value to convert." },
       fromUnit: { label: "From", help: "Select the source unit." },

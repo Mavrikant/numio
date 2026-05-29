@@ -118,19 +118,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Power Factor Calculator",
-    short: "Calculate power factor, kVA, kVAR, and correction capacitor for AC electrical systems.",
+    title: "Calculadora de Fator de Potência",
+    short: "Calcule e corrija o fator de potência de uma instalação elétrica.",
     description:
-      "Free power factor calculator. Compute PF from real and reactive power, find kW and kVAR from kVA and PF, or calculate the capacitor needed for power factor correction.",
-    keywords: [
-      "power factor calculator",
-      "kVA kW kVAR calculator",
-      "power factor correction capacitor",
-      "reactive power",
-      "apparent power",
-      "cos phi calculator",
-      "electrical power calculator",
-    ],
+      "Calculadora gratuita de fator de potência. Calcule cos φ, potência ativa, reativa e aparente, e dimensione condensadores de correção.",
+    keywords: ["fator potência", "cos φ", "potência reativa", "correção fator", "condensadores"],
     inputs: {
       mode: {
         label: "Calculation Mode",
@@ -234,19 +226,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Power Factor Calculator",
-    short: "Calculate power factor, kVA, kVAR, and correction capacitor for AC electrical systems.",
+    title: "Kalkulator Faktor Daya",
+    short: "Hitung dan koreksi faktor daya instalasi listrik.",
     description:
-      "Free power factor calculator. Compute PF from real and reactive power, find kW and kVAR from kVA and PF, or calculate the capacitor needed for power factor correction.",
-    keywords: [
-      "power factor calculator",
-      "kVA kW kVAR calculator",
-      "power factor correction capacitor",
-      "reactive power",
-      "apparent power",
-      "cos phi calculator",
-      "electrical power calculator",
-    ],
+      "Kalkulator faktor daya gratis. Hitung cos φ, daya aktif, reaktif, dan semu, serta hitung kapasitor untuk perbaikan.",
+    keywords: ["faktor daya", "cos φ", "daya reaktif", "perbaikan faktor daya", "kapasitor"],
     inputs: {
       mode: {
         label: "Calculation Mode",

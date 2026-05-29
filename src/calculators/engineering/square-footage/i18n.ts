@@ -96,19 +96,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Area / Square Footage Calculator",
-    short: "Calculate area and perimeter for rectangles, circles, and triangles in m² and ft².",
+    title: "Calculadora de Área (m² / ft²)",
+    short: "Calcule a área de uma sala ou superfície em m² ou ft².",
     description:
-      "Free area calculator for rectangles, circles, and triangles. Get instant results in square meters and square feet with perimeter calculations.",
-    keywords: [
-      "area calculator",
-      "square footage",
-      "square meter calculator",
-      "rectangle area",
-      "circle area",
-      "triangle area",
-      "perimeter calculator",
-    ],
+      "Calculadora gratuita de área. Calcule a área de espaços rectangulares, circulares ou triangulares em m² e ft².",
+    keywords: ["área m2", "área ft2", "metros quadrados", "calculadora área", "superfície"],
     inputs: {
       shape: {
         label: "Shape",
@@ -190,19 +182,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Area / Square Footage Calculator",
-    short: "Calculate area and perimeter for rectangles, circles, and triangles in m² and ft².",
+    title: "Kalkulator Luas (m² / ft²)",
+    short: "Hitung luas ruangan atau permukaan dalam m² atau ft².",
     description:
-      "Free area calculator for rectangles, circles, and triangles. Get instant results in square meters and square feet with perimeter calculations.",
-    keywords: [
-      "area calculator",
-      "square footage",
-      "square meter calculator",
-      "rectangle area",
-      "circle area",
-      "triangle area",
-      "perimeter calculator",
-    ],
+      "Kalkulator luas gratis. Hitung luas ruangan persegi panjang, lingkaran, atau segitiga dalam m² dan ft².",
+    keywords: ["luas m2", "luas ft2", "meter persegi", "kalkulator luas", "luas ruangan"],
     inputs: {
       shape: {
         label: "Shape",

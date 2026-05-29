@@ -26,11 +26,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Time Duration Calculator",
-    short: "Calculate the hours and minutes between a start and end time, minus breaks.",
+    title: "Calculadora de Duração de Tempo",
+    short: "Calcule a duração entre duas horas em horas, minutos e segundos.",
     description:
-      "Free time duration calculator. Enter a start and end time (and an optional break) to get the elapsed time as hours and minutes, total hours and total minutes. Handles overnight shifts that cross midnight.",
-    keywords: ["time duration calculator", "hours calculator", "time card calculator", "hours between two times", "timesheet calculator", "work hours"],
+      "Calculadora gratuita de duração. Calcule a diferença entre duas horas, com suporte para múltiplos formatos (24h, AM/PM).",
+    keywords: ["duração tempo", "horas entre", "calcular tempo", "diferença horas", "minutos segundos"],
     inputs: {
       startTime: { label: "Start time", help: "24-hour format, e.g. 09:00.", placeholder: "09:00" },
       endTime: { label: "End time", help: "24-hour format, e.g. 17:30. If earlier than start, crosses midnight.", placeholder: "17:30" },
@@ -50,11 +50,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Time Duration Calculator",
-    short: "Calculate the hours and minutes between a start and end time, minus breaks.",
+    title: "Kalkulator Durasi Waktu",
+    short: "Hitung durasi antara dua waktu dalam jam, menit, dan detik.",
     description:
-      "Free time duration calculator. Enter a start and end time (and an optional break) to get the elapsed time as hours and minutes, total hours and total minutes. Handles overnight shifts that cross midnight.",
-    keywords: ["time duration calculator", "hours calculator", "time card calculator", "hours between two times", "timesheet calculator", "work hours"],
+      "Kalkulator durasi gratis. Hitung selisih antara dua waktu, mendukung berbagai format (24 jam, AM/PM).",
+    keywords: ["durasi waktu", "jam antara", "hitung waktu", "selisih jam", "menit detik"],
     inputs: {
       startTime: { label: "Start time", help: "24-hour format, e.g. 09:00.", placeholder: "09:00" },
       endTime: { label: "End time", help: "24-hour format, e.g. 17:30. If earlier than start, crosses midnight.", placeholder: "17:30" },

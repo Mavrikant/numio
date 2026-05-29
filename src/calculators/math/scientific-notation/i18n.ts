@@ -69,19 +69,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Scientific Notation Converter",
-    short: "Convert numbers between standard, scientific, and engineering notation instantly.",
+    title: "Conversor de Notação Científica",
+    short: "Converta entre notação científica e decimal padrão.",
     description:
-      "Free scientific notation converter. Enter any number and choose a mode to instantly convert between standard decimal, scientific notation (a × 10^n), and engineering notation (exponents in multiples of 3). Great for physics, chemistry, and engineering calculations.",
-    keywords: [
-      "scientific notation converter",
-      "scientific notation calculator",
-      "standard form calculator",
-      "engineering notation",
-      "convert to scientific notation",
-      "powers of ten",
-      "exponential notation",
-    ],
+      "Calculadora gratuita de notação científica. Converta números muito grandes ou pequenos entre notação científica, decimal e engenharia.",
+    keywords: ["notação científica", "potência de 10", "ordem grandeza", "notação engenharia", "exponencial"],
     inputs: {
       value: {
         label: "Number",
@@ -136,19 +128,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Scientific Notation Converter",
-    short: "Convert numbers between standard, scientific, and engineering notation instantly.",
+    title: "Konverter Notasi Ilmiah",
+    short: "Konversi antara notasi ilmiah dan desimal standar.",
     description:
-      "Free scientific notation converter. Enter any number and choose a mode to instantly convert between standard decimal, scientific notation (a × 10^n), and engineering notation (exponents in multiples of 3). Great for physics, chemistry, and engineering calculations.",
-    keywords: [
-      "scientific notation converter",
-      "scientific notation calculator",
-      "standard form calculator",
-      "engineering notation",
-      "convert to scientific notation",
-      "powers of ten",
-      "exponential notation",
-    ],
+      "Kalkulator notasi ilmiah gratis. Konversi bilangan sangat besar atau kecil antara notasi ilmiah, desimal, dan teknik.",
+    keywords: ["notasi ilmiah", "pangkat 10", "orde besaran", "notasi teknik", "eksponensial"],
     inputs: {
       value: {
         label: "Number",

@@ -57,19 +57,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Percentage Change Calculator",
-    short: "Calculate percent change between two values: ((new − original) / |original|) × 100.",
+    title: "Calculadora de Variação Percentual",
+    short: "Calcule a variação percentual entre dois valores.",
     description:
-      "Free percentage change calculator. Enter an original and a new value to get the percent change, signed absolute change, relative change ratio, and the direction (increase / decrease / no change). Correctly handles negative bases by using |original| as the denominator.",
-    keywords: [
-      "percentage change calculator",
-      "percent change",
-      "percent increase",
-      "percent decrease",
-      "growth rate",
-      "relative change",
-      "delta percent",
-    ],
+      "Calculadora gratuita de variação percentual. Calcule o aumento ou diminuição percentual entre um valor inicial e final.",
+    keywords: ["variação percentual", "diferença percentual", "aumento percentual", "diminuição percentual", "delta percentual"],
     inputs: {
       originalValue: { label: "Original Value", help: "The starting value (V_old)." },
       newValue: { label: "New Value", help: "The ending value (V_new)." },
@@ -112,19 +104,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Percentage Change Calculator",
-    short: "Calculate percent change between two values: ((new − original) / |original|) × 100.",
+    title: "Kalkulator Perubahan Persentase",
+    short: "Hitung perubahan persentase antara dua nilai.",
     description:
-      "Free percentage change calculator. Enter an original and a new value to get the percent change, signed absolute change, relative change ratio, and the direction (increase / decrease / no change). Correctly handles negative bases by using |original| as the denominator.",
-    keywords: [
-      "percentage change calculator",
-      "percent change",
-      "percent increase",
-      "percent decrease",
-      "growth rate",
-      "relative change",
-      "delta percent",
-    ],
+      "Kalkulator perubahan persentase gratis. Hitung kenaikan atau penurunan persentase antara nilai awal dan akhir.",
+    keywords: ["perubahan persentase", "selisih persen", "kenaikan persen", "penurunan persen", "delta persen"],
     inputs: {
       originalValue: { label: "Original Value", help: "The starting value (V_old)." },
       newValue: { label: "New Value", help: "The ending value (V_new)." },

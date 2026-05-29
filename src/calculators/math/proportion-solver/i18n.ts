@@ -17,9 +17,9 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Proportion Solver", short: "Solve a/b = c/x for the unknown value x by cross-multiplication.",
-    description: "Free proportion solver. Enter three values of the proportion a/b = c/x and get the missing value x by cross-multiplication (x = b·c/a), plus the ratio a/b and the cross product.",
-    keywords: ["proportion solver", "cross multiplication calculator", "solve for x", "ratio proportion", "find missing value"],
+    title: "Resolvedor de Proporções", short: "Resolva proporções desconhecidas com a regra de três.",
+    description: "Calculadora gratuita de proporções. Resolva a/b = c/d quando uma das incógnitas falta — regra de três directa ou inversa.",
+    keywords: ["proporção", "regra de três", "razão", "calculadora proporção", "regra três"],
     ...io("x (solved)", "Ratio a/b", "Cross product b·c"),
     faq: [
       { q: "How do I solve a proportion?", a: "For a/b = c/x, cross-multiply to get a·x = b·c, then x = b·c/a. For 2/3 = 8/x, x = 3·8/2 = 12." },
@@ -27,9 +27,9 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Proportion Solver", short: "Solve a/b = c/x for the unknown value x by cross-multiplication.",
-    description: "Free proportion solver. Enter three values of the proportion a/b = c/x and get the missing value x by cross-multiplication (x = b·c/a), plus the ratio a/b and the cross product.",
-    keywords: ["proportion solver", "cross multiplication calculator", "solve for x", "ratio proportion", "find missing value"],
+    title: "Penyelesai Proporsi", short: "Selesaikan proporsi yang tidak diketahui dengan aturan tiga.",
+    description: "Kalkulator proporsi gratis. Selesaikan a/b = c/d ketika salah satu variabel tidak diketahui — aturan tiga lurus atau berbalik.",
+    keywords: ["proporsi", "aturan tiga", "perbandingan senilai", "kalkulator proporsi", "perbandingan"],
     ...io("x (solved)", "Ratio a/b", "Cross product b·c"),
     faq: [
       { q: "How do I solve a proportion?", a: "For a/b = c/x, cross-multiply to get a·x = b·c, then x = b·c/a. For 2/3 = 8/x, x = 3·8/2 = 12." },

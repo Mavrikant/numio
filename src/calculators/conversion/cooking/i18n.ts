@@ -27,10 +27,10 @@ const i18n: CalculatorI18n = {
     },
   },
   pt: {
-    title: "Cooking Converter",
-    short: "Convert between cooking units (cups, tablespoons, ml, grams) for any ingredient.",
-    description: "Free cooking unit converter. Switch between cups, tablespoons, teaspoons, milliliters, liters, and grams. Density-aware for common ingredients like flour, sugar, butter.",
-    keywords: ["cooking", "recipe", "measurement", "conversion", "baking", "kitchen"],
+    title: "Conversor de Medidas de Cozinha",
+    short: "Converta entre chávenas, colheres, gramas, mililitros e onças.",
+    description: "Conversor gratuito de medidas de cozinha. Converta receitas entre chávenas, colheres de sopa, colheres de chá, gramas, mililitros e onças.",
+    keywords: ["medidas cozinha", "chávena gramas", "colher sopa", "receitas", "ml onças"],
     inputs: {
       value: { label: "Value", help: "Amount to convert" },
       fromUnit: { label: "From", help: "Source unit" },
@@ -52,10 +52,10 @@ const i18n: CalculatorI18n = {
     },
   },
   id: {
-    title: "Cooking Converter",
-    short: "Convert between cooking units (cups, tablespoons, ml, grams) for any ingredient.",
-    description: "Free cooking unit converter. Switch between cups, tablespoons, teaspoons, milliliters, liters, and grams. Density-aware for common ingredients like flour, sugar, butter.",
-    keywords: ["cooking", "recipe", "measurement", "conversion", "baking", "kitchen"],
+    title: "Konverter Takaran Memasak",
+    short: "Konversi antara cangkir, sendok, gram, mililiter, dan ons.",
+    description: "Konverter takaran masak gratis. Konversi resep antara cangkir, sendok makan, sendok teh, gram, mililiter, dan ons.",
+    keywords: ["takaran masak", "cangkir gram", "sendok makan", "resep", "ml ons"],
     inputs: {
       value: { label: "Value", help: "Amount to convert" },
       fromUnit: { label: "From", help: "Source unit" },

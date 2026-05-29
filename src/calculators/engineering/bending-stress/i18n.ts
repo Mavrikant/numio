@@ -86,19 +86,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Bending Stress Calculator",
-    short: "Calculate maximum bending stress, safety factor, and material utilization from bending moment and section modulus.",
+    title: "Calculadora de Tensão de Flexão",
+    short: "Calcule a tensão de flexão numa viga sujeita a momento.",
     description:
-      "Free bending stress calculator for structural design. Enter bending moment (kN·m) and section modulus (cm³) to calculate maximum stress (MPa), safety factor, and utilization ratio for steel, aluminum, concrete, or timber.",
-    keywords: [
-      "bending stress calculator",
-      "maximum stress",
-      "section modulus",
-      "safety factor",
-      "structural design",
-      "mechanics of materials",
-      "stress analysis",
-    ],
+      "Calculadora gratuita de tensão de flexão. Calcule a tensão máxima de flexão (σ = M·c/I) numa viga e o seu factor de segurança.",
+    keywords: ["tensão flexão", "viga", "momento flector", "resistência materiais", "factor segurança"],
     inputs: {
       moment: {
         label: "Bending moment (kN·m)",
@@ -170,19 +162,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Bending Stress Calculator",
-    short: "Calculate maximum bending stress, safety factor, and material utilization from bending moment and section modulus.",
+    title: "Kalkulator Tegangan Lentur",
+    short: "Hitung tegangan lentur pada balok yang dikenai momen.",
     description:
-      "Free bending stress calculator for structural design. Enter bending moment (kN·m) and section modulus (cm³) to calculate maximum stress (MPa), safety factor, and utilization ratio for steel, aluminum, concrete, or timber.",
-    keywords: [
-      "bending stress calculator",
-      "maximum stress",
-      "section modulus",
-      "safety factor",
-      "structural design",
-      "mechanics of materials",
-      "stress analysis",
-    ],
+      "Kalkulator tegangan lentur gratis. Hitung tegangan lentur maksimum (σ = M·c/I) pada balok dan faktor keamanannya.",
+    keywords: ["tegangan lentur", "balok", "momen lentur", "kekuatan material", "faktor keamanan"],
     inputs: {
       moment: {
         label: "Bending moment (kN·m)",

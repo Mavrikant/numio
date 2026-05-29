@@ -97,19 +97,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Data Storage Converter",
-    short: "Convert between data storage units with binary (1024) or decimal (1000) mode.",
+    title: "Conversor de Armazenamento de Dados",
+    short: "Converta entre bytes, KB, MB, GB, TB e outras unidades digitais.",
     description:
-      "Free data storage converter supporting binary (KiB, MiB, GiB) and decimal (KB, MB, GB) conversions between bytes, kilobytes, megabytes, gigabytes, terabytes, and petabytes.",
-    keywords: [
-      "data storage converter",
-      "bytes converter",
-      "MB to GB",
-      "binary decimal conversion",
-      "storage units",
-      "disk space calculator",
-      "data size converter",
-    ],
+      "Conversor gratuito de armazenamento. Converta entre bytes, KB, MB, GB, TB, PB e unidades binárias (KiB, MiB, GiB).",
+    keywords: ["armazenamento dados", "bytes GB", "MB para KB", "binário decimal", "unidades digitais"],
     inputs: {
       value: {
         label: "Value",
@@ -192,19 +184,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Data Storage Converter",
-    short: "Convert between data storage units with binary (1024) or decimal (1000) mode.",
+    title: "Konverter Penyimpanan Data",
+    short: "Konversi antara byte, KB, MB, GB, TB, dan satuan digital lainnya.",
     description:
-      "Free data storage converter supporting binary (KiB, MiB, GiB) and decimal (KB, MB, GB) conversions between bytes, kilobytes, megabytes, gigabytes, terabytes, and petabytes.",
-    keywords: [
-      "data storage converter",
-      "bytes converter",
-      "MB to GB",
-      "binary decimal conversion",
-      "storage units",
-      "disk space calculator",
-      "data size converter",
-    ],
+      "Konverter penyimpanan data gratis. Konversi antara byte, KB, MB, GB, TB, PB, dan satuan biner (KiB, MiB, GiB).",
+    keywords: ["penyimpanan data", "byte GB", "MB ke KB", "biner desimal", "satuan digital"],
     inputs: {
       value: {
         label: "Value",

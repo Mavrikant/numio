@@ -25,11 +25,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Time Unit Converter",
-    short: "Convert between seconds, minutes, hours, days, weeks, months, and years.",
+    title: "Conversor de Tempo",
+    short: "Converta entre segundos, minutos, horas, dias e outras unidades de tempo.",
     description:
-      "Free time converter for converting between seconds, minutes, hours, days, weeks, months, and years using precise Gregorian calendar averages.",
-    keywords: ["time converter", "unit conversion", "hours to days", "days to years", "time calculator"],
+      "Conversor gratuito de tempo. Converta entre segundos, minutos, horas, dias, semanas, meses e anos.",
+    keywords: ["conversor tempo", "segundos minutos", "horas dias", "semanas meses", "unidades tempo"],
     inputs: {
       value: { label: "Value", help: "Amount to convert." },
       fromUnit: { label: "From unit", help: "Source time unit." },
@@ -48,11 +48,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Time Unit Converter",
-    short: "Convert between seconds, minutes, hours, days, weeks, months, and years.",
+    title: "Konverter Waktu",
+    short: "Konversi antara detik, menit, jam, hari, dan satuan waktu lainnya.",
     description:
-      "Free time converter for converting between seconds, minutes, hours, days, weeks, months, and years using precise Gregorian calendar averages.",
-    keywords: ["time converter", "unit conversion", "hours to days", "days to years", "time calculator"],
+      "Konverter waktu gratis. Konversi antara detik, menit, jam, hari, minggu, bulan, dan tahun.",
+    keywords: ["konverter waktu", "detik menit", "jam hari", "minggu bulan", "satuan waktu"],
     inputs: {
       value: { label: "Value", help: "Amount to convert." },
       fromUnit: { label: "From unit", help: "Source time unit." },

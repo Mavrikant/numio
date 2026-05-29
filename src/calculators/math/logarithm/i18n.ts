@@ -41,10 +41,10 @@ const i18n: CalculatorI18n = {
     },
   },
   pt: {
-    title: "Logarithm Calculator",
-    short: "Calculate logarithms with any base. Find log, ln, log₁₀, and log₂ in one step.",
-    description: "Free logarithm calculator using change of base formula. Calculate log with any base, natural log, common logarithm, and binary logarithm.",
-    keywords: ["logarithm calculator", "log calculator", "natural log", "common logarithm", "ln", "log base"],
+    title: "Calculadora de Logaritmo",
+    short: "Calcule logaritmos em qualquer base — natural, decimal ou binária.",
+    description: "Calculadora gratuita de logaritmo. Calcule log base 10, ln (natural), log base 2 e logaritmo em qualquer base personalizada.",
+    keywords: ["logaritmo", "log", "ln", "logaritmo natural", "logaritmo decimal"],
     inputs: {
       value: {
         label: "Value (x)",
@@ -80,10 +80,10 @@ const i18n: CalculatorI18n = {
     },
   },
   id: {
-    title: "Logarithm Calculator",
-    short: "Calculate logarithms with any base. Find log, ln, log₁₀, and log₂ in one step.",
-    description: "Free logarithm calculator using change of base formula. Calculate log with any base, natural log, common logarithm, and binary logarithm.",
-    keywords: ["logarithm calculator", "log calculator", "natural log", "common logarithm", "ln", "log base"],
+    title: "Kalkulator Logaritma",
+    short: "Hitung logaritma dalam basis apa pun — natural, desimal, atau biner.",
+    description: "Kalkulator logaritma gratis. Hitung log basis 10, ln (natural), log basis 2, dan logaritma dalam basis kustom apa pun.",
+    keywords: ["logaritma", "log", "ln", "logaritma natural", "logaritma desimal"],
     inputs: {
       value: {
         label: "Value (x)",

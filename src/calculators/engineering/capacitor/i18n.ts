@@ -47,10 +47,10 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Capacitor Calculator",
-    short: "Calculate capacitor charge, energy, reactance, and RC time constant.",
-    description: "Free capacitor calculator. Enter capacitance, voltage, and frequency to calculate charge (Coulombs), energy (Joules), reactance (Ohms), and RC time constant.",
-    keywords: ["capacitor", "capacitance", "charge", "energy", "reactance", "RC time constant", "electronics"],
+    title: "Calculadora de Condensador (Capacitor)",
+    short: "Calcule a capacitância em série e paralelo, energia armazenada e reactância.",
+    description: "Calculadora gratuita de condensador. Calcule capacitância equivalente em série/paralelo, energia armazenada e reactância capacitiva.",
+    keywords: ["condensador", "capacitor", "capacitância", "reactância capacitiva", "energia capacitor"],
     inputs: {
       capacitance: { label: "Capacitance", help: "Value in Farads (F). Use prefixes: μ=1e-6, n=1e-9, p=1e-12" },
       voltage: { label: "Voltage", help: "Voltage across capacitor in Volts" },
@@ -92,10 +92,10 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Capacitor Calculator",
-    short: "Calculate capacitor charge, energy, reactance, and RC time constant.",
-    description: "Free capacitor calculator. Enter capacitance, voltage, and frequency to calculate charge (Coulombs), energy (Joules), reactance (Ohms), and RC time constant.",
-    keywords: ["capacitor", "capacitance", "charge", "energy", "reactance", "RC time constant", "electronics"],
+    title: "Kalkulator Kapasitor",
+    short: "Hitung kapasitansi seri dan paralel, energi tersimpan, dan reaktansi.",
+    description: "Kalkulator kapasitor gratis. Hitung kapasitansi ekuivalen seri/paralel, energi tersimpan, dan reaktansi kapasitif.",
+    keywords: ["kapasitor", "kapasitansi", "reaktansi kapasitif", "energi kapasitor", "elektronika"],
     inputs: {
       capacitance: { label: "Capacitance", help: "Value in Farads (F). Use prefixes: μ=1e-6, n=1e-9, p=1e-12" },
       voltage: { label: "Voltage", help: "Voltage across capacitor in Volts" },

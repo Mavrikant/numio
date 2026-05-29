@@ -53,18 +53,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Energy Converter",
-    short: "Convert between joules, calories, kWh, BTU, electronvolts and more.",
+    title: "Conversor de Energia",
+    short: "Converta entre joules, calorias, kWh e outras unidades de energia.",
     description:
-      "Free energy unit converter. Convert between J, kJ, MJ, cal, kcal, Wh, kWh, BTU, ft·lb and eV with NIST-grade precision.",
-    keywords: [
-      "energy converter",
-      "joules to calories",
-      "kwh to btu",
-      "kcal to kj",
-      "electronvolt converter",
-      "ft-lb to joules",
-    ],
+      "Conversor gratuito de energia. Converta entre joules, calorias, kilocalorias, kWh, BTU e outras unidades de energia.",
+    keywords: ["conversor energia", "joules calorias", "kWh BTU", "kcal", "unidades energia"],
     inputs: {
       value: { label: "Value", help: "The energy value to convert." },
       fromUnit: { label: "From", help: "Select the source unit." },
@@ -104,18 +97,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Energy Converter",
-    short: "Convert between joules, calories, kWh, BTU, electronvolts and more.",
+    title: "Konverter Energi",
+    short: "Konversi antara joule, kalori, kWh, dan satuan energi lainnya.",
     description:
-      "Free energy unit converter. Convert between J, kJ, MJ, cal, kcal, Wh, kWh, BTU, ft·lb and eV with NIST-grade precision.",
-    keywords: [
-      "energy converter",
-      "joules to calories",
-      "kwh to btu",
-      "kcal to kj",
-      "electronvolt converter",
-      "ft-lb to joules",
-    ],
+      "Konverter energi gratis. Konversi antara joule, kalori, kilokalori, kWh, BTU, dan satuan energi lainnya.",
+    keywords: ["konverter energi", "joule kalori", "kWh BTU", "kkal", "satuan energi"],
     inputs: {
       value: { label: "Value", help: "The energy value to convert." },
       fromUnit: { label: "From", help: "Select the source unit." },

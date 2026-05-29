@@ -67,19 +67,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Square Root Calculator",
-    short: "Calculate square roots and nth roots, check perfect squares, and simplify radical expressions.",
+    title: "Calculadora de Raiz Quadrada",
+    short: "Calcule a raiz quadrada de qualquer número.",
     description:
-      "Free square root calculator. Compute the square root or any nth root of a number. Instantly check if the number is a perfect square, and get the simplified radical form (e.g., √12 = 2√3).",
-    keywords: [
-      "square root calculator",
-      "nth root calculator",
-      "perfect square checker",
-      "simplify radical",
-      "cube root calculator",
-      "radical expression",
-      "sqrt",
-    ],
+      "Calculadora gratuita de raiz quadrada. Calcule raízes quadradas exatas e aproximadas, incluindo raízes de números negativos (complexos).",
+    keywords: ["raiz quadrada", "calculadora raiz", "√", "radical", "raiz exata"],
     inputs: {
       value: {
         label: "Number",
@@ -132,19 +124,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Square Root Calculator",
-    short: "Calculate square roots and nth roots, check perfect squares, and simplify radical expressions.",
+    title: "Kalkulator Akar Kuadrat",
+    short: "Hitung akar kuadrat dari bilangan apa pun.",
     description:
-      "Free square root calculator. Compute the square root or any nth root of a number. Instantly check if the number is a perfect square, and get the simplified radical form (e.g., √12 = 2√3).",
-    keywords: [
-      "square root calculator",
-      "nth root calculator",
-      "perfect square checker",
-      "simplify radical",
-      "cube root calculator",
-      "radical expression",
-      "sqrt",
-    ],
+      "Kalkulator akar kuadrat gratis. Hitung akar kuadrat eksak dan perkiraan, termasuk akar dari bilangan negatif (kompleks).",
+    keywords: ["akar kuadrat", "kalkulator akar", "√", "radikal", "akar eksak"],
     inputs: {
       value: {
         label: "Number",

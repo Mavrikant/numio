@@ -54,18 +54,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Volume Converter",
-    short: "Convert between liters, gallons, cubic meters, fluid ounces and more.",
+    title: "Conversor de Volume",
+    short: "Converta entre litros, galões, mililitros e outras unidades de volume.",
     description:
-      "Free volume unit converter. Convert between m³, L, mL, cm³, ft³, in³, US/UK gallons, quarts, pints, and fluid ounces with NIST-grade precision.",
-    keywords: [
-      "volume converter",
-      "liters to gallons",
-      "ml to oz",
-      "cubic meters",
-      "us gallon vs uk gallon",
-      "fluid ounce",
-    ],
+      "Conversor gratuito de volume. Converta entre litros, mililitros, galões, onças fluidas, copos e outras unidades.",
+    keywords: ["conversor volume", "litros galões", "ml fl oz", "capacidade", "unidades volume"],
     inputs: {
       value: { label: "Value", help: "The volume value to convert." },
       fromUnit: { label: "From", help: "Select the source unit." },
@@ -106,18 +99,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Volume Converter",
-    short: "Convert between liters, gallons, cubic meters, fluid ounces and more.",
+    title: "Konverter Volume",
+    short: "Konversi antara liter, galon, mililiter, dan satuan volume lainnya.",
     description:
-      "Free volume unit converter. Convert between m³, L, mL, cm³, ft³, in³, US/UK gallons, quarts, pints, and fluid ounces with NIST-grade precision.",
-    keywords: [
-      "volume converter",
-      "liters to gallons",
-      "ml to oz",
-      "cubic meters",
-      "us gallon vs uk gallon",
-      "fluid ounce",
-    ],
+      "Konverter volume gratis. Konversi antara liter, mililiter, galon, fluid ounce, cup, dan satuan lainnya.",
+    keywords: ["konverter volume", "liter galon", "ml fl oz", "kapasitas", "satuan volume"],
     inputs: {
       value: { label: "Value", help: "The volume value to convert." },
       fromUnit: { label: "From", help: "Select the source unit." },

@@ -34,11 +34,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Dipole & Antenna Length Calculator",
-    short: "Calculate the physical length of a half-wave dipole, quarter-wave monopole or full-wave loop.",
+    title: "Calculadora de Comprimento de Antena Dipolo",
+    short: "Calcule o comprimento ideal de uma antena dipolo de meia onda.",
     description:
-      "Free antenna length calculator. Enter a frequency to get the cut length of a half-wave dipole, quarter-wave monopole or full-wave loop, including the velocity factor and per-leg length. Ideal for ham radio and antenna building.",
-    keywords: ["dipole length calculator", "antenna length", "half-wave dipole", "quarter-wave monopole", "ham radio antenna", "velocity factor", "resonant length"],
+      "Calculadora gratuita de antena dipolo. Calcule o comprimento ideal de uma antena dipolo λ/2 para uma frequência específica.",
+    keywords: ["antena dipolo", "λ/2", "antena meia onda", "rádio amador", "calculadora antena"],
     inputs: {
       frequencyMHz: { label: "Frequency (MHz)", help: "Resonant frequency, e.g. 14.1 for the 20 m amateur band." },
       type: { label: "Antenna type", help: "Half-wave dipole, quarter-wave monopole (needs a ground plane) or full-wave loop." },
@@ -66,11 +66,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Dipole & Antenna Length Calculator",
-    short: "Calculate the physical length of a half-wave dipole, quarter-wave monopole or full-wave loop.",
+    title: "Kalkulator Panjang Antena Dipol",
+    short: "Hitung panjang ideal antena dipol setengah gelombang.",
     description:
-      "Free antenna length calculator. Enter a frequency to get the cut length of a half-wave dipole, quarter-wave monopole or full-wave loop, including the velocity factor and per-leg length. Ideal for ham radio and antenna building.",
-    keywords: ["dipole length calculator", "antenna length", "half-wave dipole", "quarter-wave monopole", "ham radio antenna", "velocity factor", "resonant length"],
+      "Kalkulator antena dipol gratis. Hitung panjang ideal antena dipol λ/2 untuk frekuensi tertentu.",
+    keywords: ["antena dipol", "λ/2", "antena setengah gelombang", "radio amatir", "kalkulator antena"],
     inputs: {
       frequencyMHz: { label: "Frequency (MHz)", help: "Resonant frequency, e.g. 14.1 for the 20 m amateur band." },
       type: { label: "Antenna type", help: "Half-wave dipole, quarter-wave monopole (needs a ground plane) or full-wave loop." },

@@ -53,10 +53,10 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Matrix Calculator",
-    short: "Add, subtract, multiply 2×2 and 3×3 matrices, calculate determinants.",
-    description: "Free matrix calculator. Perform matrix addition, subtraction, multiplication, and determinant calculations for 2×2 and 3×3 matrices.",
-    keywords: ["matrix calculator", "matrix operations", "determinant", "matrix multiply", "linear algebra", "matrix addition"],
+    title: "Calculadora de Matrizes",
+    short: "Some, multiplique, calcule determinante e inverta matrizes.",
+    description: "Calculadora gratuita de matrizes. Soma, subtração, multiplicação, determinante, inversa e transposta de matrizes até 5×5.",
+    keywords: ["matrizes", "determinante", "matriz inversa", "multiplicação matrizes", "álgebra linear"],
     inputs: {
       operation: { label: "Operation", help: "Choose matrix operation" },
       matrixSize: { label: "Matrix size", help: "2×2 or 3×3" },
@@ -104,10 +104,10 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Matrix Calculator",
-    short: "Add, subtract, multiply 2×2 and 3×3 matrices, calculate determinants.",
-    description: "Free matrix calculator. Perform matrix addition, subtraction, multiplication, and determinant calculations for 2×2 and 3×3 matrices.",
-    keywords: ["matrix calculator", "matrix operations", "determinant", "matrix multiply", "linear algebra", "matrix addition"],
+    title: "Kalkulator Matriks",
+    short: "Tambah, kalikan, hitung determinan, dan invers matriks.",
+    description: "Kalkulator matriks gratis. Penjumlahan, pengurangan, perkalian, determinan, invers, dan transpos matriks hingga 5×5.",
+    keywords: ["matriks", "determinan", "matriks invers", "perkalian matriks", "aljabar linear"],
     inputs: {
       operation: { label: "Operation", help: "Choose matrix operation" },
       matrixSize: { label: "Matrix size", help: "2×2 or 3×3" },

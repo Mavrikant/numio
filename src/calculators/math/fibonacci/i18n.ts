@@ -17,9 +17,9 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Fibonacci Calculator", short: "Find the nth Fibonacci number, the sum of terms and the golden ratio.",
-    description: "Free Fibonacci calculator. Enter a position n to get the nth Fibonacci number (F₁ = F₂ = 1), the sum of the first n terms, and the ratio of consecutive terms that converges to the golden ratio φ ≈ 1.618.",
-    keywords: ["fibonacci calculator", "nth fibonacci number", "fibonacci sequence", "golden ratio", "fibonacci term"],
+    title: "Calculadora de Fibonacci", short: "Calcule qualquer termo da sequência de Fibonacci.",
+    description: "Calculadora gratuita de Fibonacci. Obtenha o n-ésimo termo da sequência de Fibonacci e a sequência completa até esse termo.",
+    keywords: ["Fibonacci", "sequência Fibonacci", "número áureo", "F(n)", "matemática"],
     ...io("Position (n)", "Fibonacci number (Fₙ)", "Sum of first n terms", "Ratio Fₙ/Fₙ₋₁"),
     faq: [
       { q: "What is the Fibonacci sequence?", a: "Each number is the sum of the two before it, starting 1, 1, 2, 3, 5, 8, 13… It appears throughout nature, art and computer science." },
@@ -27,9 +27,9 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Fibonacci Calculator", short: "Find the nth Fibonacci number, the sum of terms and the golden ratio.",
-    description: "Free Fibonacci calculator. Enter a position n to get the nth Fibonacci number (F₁ = F₂ = 1), the sum of the first n terms, and the ratio of consecutive terms that converges to the golden ratio φ ≈ 1.618.",
-    keywords: ["fibonacci calculator", "nth fibonacci number", "fibonacci sequence", "golden ratio", "fibonacci term"],
+    title: "Kalkulator Fibonacci", short: "Hitung suku ke-n dari deret Fibonacci.",
+    description: "Kalkulator Fibonacci gratis. Dapatkan suku ke-n dari deret Fibonacci dan deret lengkap sampai suku tersebut.",
+    keywords: ["Fibonacci", "deret Fibonacci", "golden ratio", "F(n)", "matematika"],
     ...io("Position (n)", "Fibonacci number (Fₙ)", "Sum of first n terms", "Ratio Fₙ/Fₙ₋₁"),
     faq: [
       { q: "What is the Fibonacci sequence?", a: "Each number is the sum of the two before it, starting 1, 1, 2, 3, 5, 8, 13… It appears throughout nature, art and computer science." },

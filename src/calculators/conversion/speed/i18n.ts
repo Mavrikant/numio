@@ -91,18 +91,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Speed Converter",
-    short: "Convert between different speed units including km/h, mph, m/s, knots, and ft/s.",
+    title: "Conversor de Velocidade",
+    short: "Converta entre km/h, m/s, mph, nós e outras unidades de velocidade.",
     description:
-      "Free speed unit converter. Convert between km/h, mph, m/s, knots, and ft/s. Real-time conversions for velocity and speed measurements.",
-    keywords: [
-      "speed converter",
-      "velocity converter",
-      "km/h to mph",
-      "mph to km/h",
-      "knots converter",
-      "speed units",
-    ],
+      "Conversor gratuito de velocidade. Converta entre km/h, m/s, mph, nós, pés por segundo e outras unidades.",
+    keywords: ["conversor velocidade", "km/h mph", "m/s nós", "milhas hora", "unidades velocidade"],
     inputs: {
       value: {
         label: "Value",
@@ -180,18 +173,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Speed Converter",
-    short: "Convert between different speed units including km/h, mph, m/s, knots, and ft/s.",
+    title: "Konverter Kecepatan",
+    short: "Konversi antara km/jam, m/dt, mph, knot, dan satuan kecepatan lainnya.",
     description:
-      "Free speed unit converter. Convert between km/h, mph, m/s, knots, and ft/s. Real-time conversions for velocity and speed measurements.",
-    keywords: [
-      "speed converter",
-      "velocity converter",
-      "km/h to mph",
-      "mph to km/h",
-      "knots converter",
-      "speed units",
-    ],
+      "Konverter kecepatan gratis. Konversi antara km/jam, m/dt, mph, knot, kaki per detik, dan satuan lainnya.",
+    keywords: ["konverter kecepatan", "km/jam mph", "m/dt knot", "mil per jam", "satuan kecepatan"],
     inputs: {
       value: {
         label: "Value",

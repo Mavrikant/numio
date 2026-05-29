@@ -17,9 +17,9 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Percent Error Calculator", short: "Compare a measured value to the true value as a percent error.",
-    description: "Free percent error calculator. Enter a measured (experimental) value and the actual (true) value to get the percent error, absolute error and relative error — commonly used in science labs and measurements.",
-    keywords: ["percent error calculator", "percentage error", "experimental error", "relative error", "absolute error"],
+    title: "Calculadora de Erro Percentual", short: "Calcule o erro percentual entre um valor experimental e o valor real.",
+    description: "Calculadora gratuita de erro percentual. Compare o valor medido com o valor real e obtenha o erro percentual absoluto.",
+    keywords: ["erro percentual", "erro absoluto", "erro relativo", "precisão", "cálculo erro"],
     ...io("Measured value", "Actual (true) value", "Percent error (%)", "Absolute error", "Relative error"),
     faq: [
       { q: "How do you calculate percent error?", a: "Percent error = |measured − actual| / |actual| × 100. If you measured 9.80 and the true value is 9.81, the percent error is about 0.10%." },
@@ -27,9 +27,9 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Percent Error Calculator", short: "Compare a measured value to the true value as a percent error.",
-    description: "Free percent error calculator. Enter a measured (experimental) value and the actual (true) value to get the percent error, absolute error and relative error — commonly used in science labs and measurements.",
-    keywords: ["percent error calculator", "percentage error", "experimental error", "relative error", "absolute error"],
+    title: "Kalkulator Persentase Kesalahan", short: "Hitung persentase kesalahan antara nilai eksperimen dan nilai sebenarnya.",
+    description: "Kalkulator persentase kesalahan gratis. Bandingkan nilai terukur dengan nilai sebenarnya dan dapatkan persentase kesalahan absolut.",
+    keywords: ["persentase kesalahan", "kesalahan absolut", "kesalahan relatif", "presisi", "perhitungan error"],
     ...io("Measured value", "Actual (true) value", "Percent error (%)", "Absolute error", "Relative error"),
     faq: [
       { q: "How do you calculate percent error?", a: "Percent error = |measured − actual| / |actual| × 100. If you measured 9.80 and the true value is 9.81, the percent error is about 0.10%." },

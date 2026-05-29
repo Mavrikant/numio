@@ -40,10 +40,10 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Pipe Flow Rate Calculator",
-    short: "Calculate velocity, Reynolds number, and head loss using Darcy-Weisbach equation.",
-    description: "Free pipe flow calculator with Darcy-Weisbach head loss, Reynolds number, and flow regime classification.",
-    keywords: ["pipe flow", "flow rate", "Darcy-Weisbach", "Reynolds number", "head loss", "velocity", "hydraulics"],
+    title: "Calculadora de Caudal",
+    short: "Calcule o caudal volumétrico, velocidade e número de Reynolds num tubo.",
+    description: "Calculadora gratuita de caudal. Calcule o caudal volumétrico, velocidade do fluido, número de Reynolds e regime de escoamento num tubo.",
+    keywords: ["caudal", "vazão", "velocidade fluido", "Reynolds", "escoamento"],
     inputs: {
       flowRateM3h: { label: "Flow Rate", help: "Volume flow rate in m³/h." },
       diameterMm: { label: "Pipe Diameter", help: "Inner diameter in mm." },
@@ -78,10 +78,10 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Pipe Flow Rate Calculator",
-    short: "Calculate velocity, Reynolds number, and head loss using Darcy-Weisbach equation.",
-    description: "Free pipe flow calculator with Darcy-Weisbach head loss, Reynolds number, and flow regime classification.",
-    keywords: ["pipe flow", "flow rate", "Darcy-Weisbach", "Reynolds number", "head loss", "velocity", "hydraulics"],
+    title: "Kalkulator Laju Aliran",
+    short: "Hitung laju aliran volumetrik, kecepatan, dan bilangan Reynolds dalam pipa.",
+    description: "Kalkulator laju aliran gratis. Hitung debit volumetrik, kecepatan fluida, bilangan Reynolds, dan rezim aliran dalam pipa.",
+    keywords: ["laju aliran", "debit", "kecepatan fluida", "Reynolds", "aliran fluida"],
     inputs: {
       flowRateM3h: { label: "Flow Rate", help: "Volume flow rate in m³/h." },
       diameterMm: { label: "Pipe Diameter", help: "Inner diameter in mm." },

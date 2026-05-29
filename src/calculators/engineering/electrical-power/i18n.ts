@@ -97,19 +97,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Electrical Power Calculator",
-    short: "Calculate voltage, current, resistance, and power consumption with energy cost estimation.",
+    title: "Calculadora de Potência Elétrica",
+    short: "Calcule a potência elétrica em circuitos DC e AC, monofásicos e trifásicos.",
     description:
-      "Electrical power calculator for P=VI calculations. Find V, I, R, P from any two inputs. Estimate energy consumption and monthly costs.",
-    keywords: [
-      "power calculator",
-      "voltage current",
-      "resistance calculator",
-      "electrical power",
-      "Ohm's law",
-      "energy cost",
-      "wattage",
-    ],
+      "Calculadora gratuita de potência elétrica. Calcule P = V·I em DC, P = V·I·cos φ em AC monofásica e trifásica.",
+    keywords: ["potência elétrica", "P=VI", "potência trifásica", "watts", "potência AC"],
     inputs: {
       knownQty1: {
         label: "First Known Quantity",
@@ -192,19 +184,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Electrical Power Calculator",
-    short: "Calculate voltage, current, resistance, and power consumption with energy cost estimation.",
+    title: "Kalkulator Daya Listrik",
+    short: "Hitung daya listrik di rangkaian DC dan AC, satu fasa dan tiga fasa.",
     description:
-      "Electrical power calculator for P=VI calculations. Find V, I, R, P from any two inputs. Estimate energy consumption and monthly costs.",
-    keywords: [
-      "power calculator",
-      "voltage current",
-      "resistance calculator",
-      "electrical power",
-      "Ohm's law",
-      "energy cost",
-      "wattage",
-    ],
+      "Kalkulator daya listrik gratis. Hitung P = V·I di DC, P = V·I·cos φ di AC satu fasa dan tiga fasa.",
+    keywords: ["daya listrik", "P=VI", "daya tiga fasa", "watt", "daya AC"],
     inputs: {
       knownQty1: {
         label: "First Known Quantity",

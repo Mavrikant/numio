@@ -85,19 +85,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Ohm's Law Calculator",
-    short: "Solve for voltage, current, resistance, or power — enter any two known values.",
+    title: "Calculadora da Lei de Ohm",
+    short: "Calcule tensão, corrente, resistência e potência usando a lei de Ohm.",
     description:
-      "Free Ohm's Law calculator. Enter any two of voltage (V), current (I), resistance (R), or power (P) and instantly calculate the other two using V=IR and P=VI.",
-    keywords: [
-      "Ohm's law calculator",
-      "voltage calculator",
-      "current calculator",
-      "resistance calculator",
-      "power calculator",
-      "V=IR",
-      "electronics calculator",
-    ],
+      "Calculadora gratuita da lei de Ohm. Dados dois valores entre tensão (V), corrente (I), resistência (R) e potência (P), calcule os outros dois.",
+    keywords: ["lei Ohm", "V=IR", "tensão corrente", "resistência", "potência elétrica"],
     inputs: {
       knownQty1: {
         label: "First known quantity",
@@ -168,19 +160,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Ohm's Law Calculator",
-    short: "Solve for voltage, current, resistance, or power — enter any two known values.",
+    title: "Kalkulator Hukum Ohm",
+    short: "Hitung tegangan, arus, resistansi, dan daya menggunakan hukum Ohm.",
     description:
-      "Free Ohm's Law calculator. Enter any two of voltage (V), current (I), resistance (R), or power (P) and instantly calculate the other two using V=IR and P=VI.",
-    keywords: [
-      "Ohm's law calculator",
-      "voltage calculator",
-      "current calculator",
-      "resistance calculator",
-      "power calculator",
-      "V=IR",
-      "electronics calculator",
-    ],
+      "Kalkulator hukum Ohm gratis. Dari dua nilai antara tegangan (V), arus (I), resistansi (R), dan daya (P), hitung dua nilai lainnya.",
+    keywords: ["hukum Ohm", "V=IR", "tegangan arus", "resistansi", "daya listrik"],
     inputs: {
       knownQty1: {
         label: "First known quantity",

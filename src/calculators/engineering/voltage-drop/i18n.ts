@@ -53,19 +53,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Voltage Drop Calculator",
-    short: "Calculate voltage drop in electrical cables for single-phase circuits per NEC guidelines.",
+    title: "Calculadora de Queda de Tensão",
+    short: "Calcule a queda de tensão num cabo elétrico de uma instalação.",
     description:
-      "Free voltage drop calculator for copper and aluminum conductors. Enter conductor size (AWG or mm²), one-way length, current, and system voltage to find voltage drop, percentage drop, and NEC compliance status.",
-    keywords: [
-      "voltage drop calculator",
-      "cable voltage drop",
-      "AWG voltage drop",
-      "NEC voltage drop",
-      "wire size calculator",
-      "electrical cable calculator",
-      "conductor voltage drop",
-    ],
+      "Calculadora gratuita de queda de tensão. Calcule a queda de tensão num condutor com base no comprimento, secção, corrente e tipo de material.",
+    keywords: ["queda tensão", "cabo elétrico", "secção cabo", "instalação elétrica", "perda voltagem"],
     inputs: {
       conductorMaterial: { label: "Conductor material", help: "Copper has lower resistivity than aluminum." },
       wireGaugeUnit: { label: "Wire gauge unit", help: "AWG (American Wire Gauge) or mm² cross-section." },
@@ -104,19 +96,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Voltage Drop Calculator",
-    short: "Calculate voltage drop in electrical cables for single-phase circuits per NEC guidelines.",
+    title: "Kalkulator Drop Tegangan",
+    short: "Hitung drop tegangan pada kabel listrik instalasi.",
     description:
-      "Free voltage drop calculator for copper and aluminum conductors. Enter conductor size (AWG or mm²), one-way length, current, and system voltage to find voltage drop, percentage drop, and NEC compliance status.",
-    keywords: [
-      "voltage drop calculator",
-      "cable voltage drop",
-      "AWG voltage drop",
-      "NEC voltage drop",
-      "wire size calculator",
-      "electrical cable calculator",
-      "conductor voltage drop",
-    ],
+      "Kalkulator drop tegangan gratis. Hitung drop tegangan pada penghantar berdasarkan panjang, luas penampang, arus, dan jenis material.",
+    keywords: ["drop tegangan", "kabel listrik", "penampang kabel", "instalasi listrik", "voltage drop"],
     inputs: {
       conductorMaterial: { label: "Conductor material", help: "Copper has lower resistivity than aluminum." },
       wireGaugeUnit: { label: "Wire gauge unit", help: "AWG (American Wire Gauge) or mm² cross-section." },
