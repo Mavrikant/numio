@@ -24,9 +24,9 @@ const i18n: ToolI18n = {
     ],
   },
   pt: {
-    title: "Histogram & Box Plot Generator",
-    short: "Upload CSV data, pick a numeric column, and see its distribution as a histogram or box plot.",
-    description: "Free histogram generator. Upload a CSV file or paste data, choose any numeric column, and instantly visualize its distribution. Automatic bin-width selection (Freedman-Diaconis), summary statistics, and a parallel box plot showing quartiles and outliers.",
+    title: "Gerador de Histogram & Box Plot",
+    short: "Upload CSV data, pick a numeric column, e see its distribution as a histogram ou box plot.",
+    description: "Gratuito - histogram generator. Upload a CSV file ou paste data, choose any numeric column, e instantaneamente visualize its distribution. Automatic bin-width selection (Freedman-Diaconis), summary statistics, e a parallel box plot showing quartiles e outliers.",
     keywords: ["histogram", "box plot", "distribution", "frequency", "data visualization", "csv", "statistics"],
     ui: {
       selectColumn: "Select numeric column",
@@ -46,9 +46,9 @@ const i18n: ToolI18n = {
     ],
   },
   id: {
-    title: "Histogram & Box Plot Generator",
-    short: "Upload CSV data, pick a numeric column, and see its distribution as a histogram or box plot.",
-    description: "Free histogram generator. Upload a CSV file or paste data, choose any numeric column, and instantly visualize its distribution. Automatic bin-width selection (Freedman-Diaconis), summary statistics, and a parallel box plot showing quartiles and outliers.",
+    title: "Generator Histogram & Box Plot",
+    short: "Upload CSV data, pick a numeric column, dan see its distribution as a histogram atau box plot.",
+    description: "Gratis - histogram generator. Upload a CSV file atau paste data, choose any numeric column, dan secara instan visualize its distribution. Automatic bin-width selection (Freedman-Diaconis), summary statistics, dan a parallel box plot showing quartiles dan outliers.",
     keywords: ["histogram", "box plot", "distribution", "frequency", "data visualization", "csv", "statistics"],
     ui: {
       selectColumn: "Select numeric column",

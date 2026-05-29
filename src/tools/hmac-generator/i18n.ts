@@ -29,9 +29,9 @@ const i18n: ToolI18n = {
   },
   pt: {
     title: "HMAC Generator (SHA-256 / SHA-384 / SHA-512)",
-    short: "Compute an HMAC message authentication code from a key and message, in hex or Base64.",
+    short: "Compute an HMAC message authentication code a partir de a key e message, em hex ou Base64.",
     description:
-      "Free online HMAC generator. Enter a secret key and a message to compute an HMAC-SHA256, HMAC-SHA384 or HMAC-SHA512 authentication code using the browser's Web Crypto API. Output in hex or Base64. Everything runs locally — your key and message never leave your device.",
+      "Gratuito - online HMAC generator. Enter a secret key e a message para compute an HMAC-SHA256, HMAC-SHA384 ou HMAC-SHA512 authentication code usando the browser's Web Crypto API. Output em hex ou Base64. Everything runs locally â seu key e message never leave seu device.",
     keywords: ["hmac generator", "hmac sha256", "hmac sha512", "message authentication", "hmac online", "mac"],
     ui: {
       keyLabel: "Secret key",
@@ -55,9 +55,9 @@ const i18n: ToolI18n = {
   },
   id: {
     title: "HMAC Generator (SHA-256 / SHA-384 / SHA-512)",
-    short: "Compute an HMAC message authentication code from a key and message, in hex or Base64.",
+    short: "Compute an HMAC message authentication code from a key dan message, in hex atau Base64.",
     description:
-      "Free online HMAC generator. Enter a secret key and a message to compute an HMAC-SHA256, HMAC-SHA384 or HMAC-SHA512 authentication code using the browser's Web Crypto API. Output in hex or Base64. Everything runs locally — your key and message never leave your device.",
+      "Gratis - online HMAC generator. Enter a secret key dan a message to compute an HMAC-SHA256, HMAC-SHA384 atau HMAC-SHA512 authentication code menggunakan the browser's Web Crypto API. Output in hex atau Base64. Everything runs locally â Anda key dan message never leave Anda device.",
     keywords: ["hmac generator", "hmac sha256", "hmac sha512", "message authentication", "hmac online", "mac"],
     ui: {
       keyLabel: "Secret key",

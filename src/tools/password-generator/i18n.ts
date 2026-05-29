@@ -52,9 +52,9 @@ const i18n: ToolI18n = {
     ],
   },
   pt: {
-    title: "Random Password Generator",
-    short: "Generate strong random passwords and see their entropy, strength rating, and estimated time to crack.",
-    description: "Free random password generator. Choose length and character types, generate cryptographically-secure passwords in your browser, and instantly see entropy in bits, a strength rating, and estimated crack times across different attack scenarios.",
+    title: "Gerador de Random Password",
+    short: "Gerar strong random passwords e see their entropy, strength rating, e estimated time para crack.",
+    description: "Gratuito - random password generator. Choose length e character types, gerar cryptographically-secure passwords no seu navegador, e instantaneamente see entropy em bits, a strength rating, e estimated crack times across different attack scenarios.",
     keywords: ["password generator", "random password", "strong password", "password entropy", "password strength", "time to crack", "secure password"],
     ui: {
       length: "Length",
@@ -102,9 +102,9 @@ const i18n: ToolI18n = {
     ],
   },
   id: {
-    title: "Random Password Generator",
-    short: "Generate strong random passwords and see their entropy, strength rating, and estimated time to crack.",
-    description: "Free random password generator. Choose length and character types, generate cryptographically-secure passwords in your browser, and instantly see entropy in bits, a strength rating, and estimated crack times across different attack scenarios.",
+    title: "Generator Random Password",
+    short: "Hasilkan strong random passwords dan see their entropy, strength rating, dan estimated time to crack.",
+    description: "Gratis - random password generator. Choose length dan character types, hasilkan cryptographically-secure passwords di browser Anda, dan secara instan see entropy in bits, a strength rating, dan estimated crack times across different attack scenarios.",
     keywords: ["password generator", "random password", "strong password", "password entropy", "password strength", "time to crack", "secure password"],
     ui: {
       length: "Length",

@@ -83,9 +83,9 @@ const i18n: ToolI18n = {
     ],
   },
   pt: {
-    title: "Chart Builder — CSV to Graph",
-    short: "Upload a CSV and build interactive line, bar, scatter, area, pie, histogram or box charts, then download them as PNG or SVG images.",
-    description: "Free online chart maker. Upload your own CSV file or paste data, choose any chart type — line, bar, scatter, area, pie, histogram, box plot — pick the columns to plot, and download the result as a high-resolution PNG or SVG image. Everything runs in your browser; your data is never uploaded.",
+    title: "Chart Builder â CSV to Graph",
+    short: "Upload a CSV e build interactive line, bar, scatter, area, pie, histogram ou box charts, then descarregar them as PNG ou SVG images.",
+    description: "Gratuito - online chart maker. Upload seu own CSV file ou paste data, choose any chart type â line, bar, scatter, area, pie, histogram, box plot â pick the columns para plot, e descarregar the result as a high-resolution PNG ou SVG image. Everything runs no seu navegador; seu data is never uploaded.",
     keywords: ["chart maker", "graph maker", "csv to chart", "online chart", "data visualization", "line chart", "bar chart", "pie chart", "scatter plot", "download chart image", "plotly"],
     ui: enUi,
     faq: [
@@ -108,9 +108,9 @@ const i18n: ToolI18n = {
     ],
   },
   id: {
-    title: "Chart Builder — CSV to Graph",
-    short: "Upload a CSV and build interactive line, bar, scatter, area, pie, histogram or box charts, then download them as PNG or SVG images.",
-    description: "Free online chart maker. Upload your own CSV file or paste data, choose any chart type — line, bar, scatter, area, pie, histogram, box plot — pick the columns to plot, and download the result as a high-resolution PNG or SVG image. Everything runs in your browser; your data is never uploaded.",
+    title: "Chart Builder â CSV to Graph",
+    short: "Upload a CSV dan build interactive line, bar, scatter, area, pie, histogram atau box charts, then unduh them as PNG atau SVG images.",
+    description: "Gratis - online chart maker. Upload Anda own CSV file atau paste data, choose any chart type â line, bar, scatter, area, pie, histogram, box plot â pick the columns to plot, dan unduh the result as a high-resolution PNG atau SVG image. Everything runs di browser Anda; Anda data is never uploaded.",
     keywords: ["chart maker", "graph maker", "csv to chart", "online chart", "data visualization", "line chart", "bar chart", "pie chart", "scatter plot", "download chart image", "plotly"],
     ui: enUi,
     faq: [

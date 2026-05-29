@@ -39,8 +39,8 @@ const i18n: ToolI18n = {
   },
   pt: {
     title: "Time Series Visualizer",
-    short: "Upload CSV with a date column, plot values over time with optional moving averages.",
-    description: "Free time-series chart tool. Upload CSV data with a date or numeric time column, choose one or more value columns, and plot trends with optional centered moving averages. Summary statistics per series included.",
+    short: "Upload CSV com a date column, plot values over time com optional moving averages.",
+    description: "Gratuito - time-series chart tool. Upload CSV data com a date ou numeric time column, choose one ou more value columns, e plot trends com optional centered moving averages. Summary statistics per series included.",
     keywords: ["time series", "line chart", "trend", "moving average", "csv", "data visualization", "date chart"],
     ui: {
       timeColumn: "Time column",
@@ -76,7 +76,7 @@ const i18n: ToolI18n = {
   id: {
     title: "Time Series Visualizer",
     short: "Upload CSV with a date column, plot values over time with optional moving averages.",
-    description: "Free time-series chart tool. Upload CSV data with a date or numeric time column, choose one or more value columns, and plot trends with optional centered moving averages. Summary statistics per series included.",
+    description: "Gratis - time-series chart tool. Upload CSV data with a date atau numeric time column, choose one atau more value columns, dan plot trends with optional centered moving averages. Summary statistics per series included.",
     keywords: ["time series", "line chart", "trend", "moving average", "csv", "data visualization", "date chart"],
     ui: {
       timeColumn: "Time column",
