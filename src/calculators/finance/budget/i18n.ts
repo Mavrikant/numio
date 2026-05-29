@@ -25,11 +25,11 @@ const i18n: CalculatorI18n = {
     },
   },
   pt: {
-    title: "Budget Planner (50/30/20 Rule)",
-    short: "Budget Planner",
+    title: "Calculadora de Orçamento Mensal",
+    short: "Crie um orçamento mensal e veja se as suas despesas estão equilibradas.",
     description:
-      "Plan your monthly budget using the 50/30/20 rule. Allocate income to needs, wants, and savings to reach your financial goals.",
-    keywords: ["budget", "50/30/20", "savings", "needs", "wants", "income", "financial planning"],
+      "Calculadora gratuita de orçamento. Distribua o seu rendimento entre necessidades, desejos e poupança seguindo a regra 50/30/20.",
+    keywords: ["orçamento mensal", "regra 50 30 20", "planeamento orçamento", "despesas mensais", "finanças pessoais"],
     inputs: {
       monthlyIncome: { label: "Monthly Income", help: "Your total take-home income per month" },
       needsPct: { label: "Needs %", help: "Percentage for essential expenses (recommended: 50%)" },
@@ -48,11 +48,11 @@ const i18n: CalculatorI18n = {
     },
   },
   id: {
-    title: "Budget Planner (50/30/20 Rule)",
-    short: "Budget Planner",
+    title: "Kalkulator Anggaran Bulanan",
+    short: "Buat anggaran bulanan dan lihat apakah pengeluaran Anda seimbang.",
     description:
-      "Plan your monthly budget using the 50/30/20 rule. Allocate income to needs, wants, and savings to reach your financial goals.",
-    keywords: ["budget", "50/30/20", "savings", "needs", "wants", "income", "financial planning"],
+      "Kalkulator anggaran gratis. Bagikan pendapatan Anda antara kebutuhan, keinginan, dan tabungan dengan aturan 50/30/20.",
+    keywords: ["anggaran bulanan", "aturan 50 30 20", "perencanaan anggaran", "pengeluaran bulanan", "keuangan pribadi"],
     inputs: {
       monthlyIncome: { label: "Monthly Income", help: "Your total take-home income per month" },
       needsPct: { label: "Needs %", help: "Percentage for essential expenses (recommended: 50%)" },

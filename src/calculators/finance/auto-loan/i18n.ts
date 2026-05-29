@@ -50,19 +50,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Auto Loan Calculator",
-    short: "Calculate your monthly car payment, total cost, and interest for any auto loan.",
+    title: "Calculadora de Crédito Automóvel",
+    short: "Calcule a prestação mensal do seu financiamento automóvel.",
     description:
-      "Free auto loan calculator. Enter the vehicle price, down payment, trade-in value, interest rate, and term to see your monthly payment and total loan cost.",
-    keywords: [
-      "auto loan calculator",
-      "car loan calculator",
-      "monthly car payment",
-      "vehicle financing",
-      "car payment calculator",
-      "auto loan interest",
-      "car financing calculator",
-    ],
+      "Calculadora gratuita de crédito automóvel. Introduza preço do veículo, entrada, taxa de juro e prazo para ver a prestação e o custo total.",
+    keywords: ["crédito automóvel", "financiamento carro", "prestação carro", "leasing automóvel", "calculadora carro"],
     inputs: {
       vehiclePrice: { label: "Vehicle Price", help: "The purchase price of the vehicle." },
       downPayment: { label: "Down Payment", help: "Amount paid upfront at purchase." },
@@ -98,19 +90,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Auto Loan Calculator",
-    short: "Calculate your monthly car payment, total cost, and interest for any auto loan.",
+    title: "Kalkulator Kredit Mobil",
+    short: "Hitung angsuran bulanan kredit mobil Anda.",
     description:
-      "Free auto loan calculator. Enter the vehicle price, down payment, trade-in value, interest rate, and term to see your monthly payment and total loan cost.",
-    keywords: [
-      "auto loan calculator",
-      "car loan calculator",
-      "monthly car payment",
-      "vehicle financing",
-      "car payment calculator",
-      "auto loan interest",
-      "car financing calculator",
-    ],
+      "Kalkulator kredit mobil gratis. Masukkan harga kendaraan, uang muka, suku bunga, dan jangka waktu untuk melihat angsuran dan total biaya.",
+    keywords: ["kredit mobil", "kalkulator mobil", "angsuran mobil", "leasing mobil", "DP mobil"],
     inputs: {
       vehiclePrice: { label: "Vehicle Price", help: "The purchase price of the vehicle." },
       downPayment: { label: "Down Payment", help: "Amount paid upfront at purchase." },

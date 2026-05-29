@@ -73,19 +73,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Savings Goal Calculator",
-    short: "Find out how many months it takes to reach your savings target.",
+    title: "Calculadora de Meta de Poupança",
+    short: "Calcule quanto poupar por mês para atingir o seu objetivo financeiro.",
     description:
-      "Free savings goal calculator. Enter your target amount, current savings, monthly contribution, and expected annual return to see exactly when you will reach your goal.",
-    keywords: [
-      "savings goal calculator",
-      "how long to save",
-      "monthly savings",
-      "compound interest savings",
-      "savings planner",
-      "reach savings goal",
-      "savings timeline",
-    ],
+      "Calculadora gratuita de meta de poupança. Defina o valor alvo, prazo e taxa de juro para saber a contribuição mensal necessária.",
+    keywords: ["meta poupança", "objetivo poupança", "poupar dinheiro", "planeamento financeiro", "contribuição mensal"],
     inputs: {
       targetAmount: {
         label: "Target Amount",
@@ -144,19 +136,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Savings Goal Calculator",
-    short: "Find out how many months it takes to reach your savings target.",
+    title: "Kalkulator Target Tabungan",
+    short: "Hitung berapa yang harus ditabung per bulan untuk mencapai target finansial.",
     description:
-      "Free savings goal calculator. Enter your target amount, current savings, monthly contribution, and expected annual return to see exactly when you will reach your goal.",
-    keywords: [
-      "savings goal calculator",
-      "how long to save",
-      "monthly savings",
-      "compound interest savings",
-      "savings planner",
-      "reach savings goal",
-      "savings timeline",
-    ],
+      "Kalkulator target tabungan gratis. Tetapkan jumlah target, jangka waktu, dan suku bunga untuk mengetahui setoran bulanan yang diperlukan.",
+    keywords: ["target tabungan", "tujuan tabungan", "menabung", "perencanaan keuangan", "setoran bulanan"],
     inputs: {
       targetAmount: {
         label: "Target Amount",

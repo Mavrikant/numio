@@ -57,19 +57,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Credit Card Payoff Calculator",
-    short: "See how long it takes to pay off your credit card and how much interest you will pay.",
+    title: "Calculadora de Pagamento de Cartão de Crédito",
+    short: "Veja quanto tempo demora a pagar o seu cartão e quanto vai pagar em juros.",
     description:
-      "Free credit card payoff calculator. Enter your balance, APR, and payment amount to see months to payoff, total interest, and a month-by-month amortization schedule.",
-    keywords: [
-      "credit card payoff calculator",
-      "how long to pay off credit card",
-      "credit card interest calculator",
-      "minimum payment calculator",
-      "debt payoff calculator",
-      "APR calculator",
-      "amortization schedule",
-    ],
+      "Calculadora gratuita de pagamento de cartão de crédito. Introduza o saldo, taxa de juro e pagamento mensal para ver o prazo de quitação.",
+    keywords: ["pagamento cartão crédito", "quitar cartão", "juros cartão crédito", "saldo cartão", "dívida cartão"],
     inputs: {
       balance: { label: "Current Balance", help: "Your current credit card balance." },
       apr: { label: "Annual Percentage Rate (APR)", help: "Your card's annual interest rate." },
@@ -112,19 +104,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Credit Card Payoff Calculator",
-    short: "See how long it takes to pay off your credit card and how much interest you will pay.",
+    title: "Kalkulator Pelunasan Kartu Kredit",
+    short: "Lihat berapa lama untuk melunasi kartu kredit dan total bunga yang dibayar.",
     description:
-      "Free credit card payoff calculator. Enter your balance, APR, and payment amount to see months to payoff, total interest, and a month-by-month amortization schedule.",
-    keywords: [
-      "credit card payoff calculator",
-      "how long to pay off credit card",
-      "credit card interest calculator",
-      "minimum payment calculator",
-      "debt payoff calculator",
-      "APR calculator",
-      "amortization schedule",
-    ],
+      "Kalkulator pelunasan kartu kredit gratis. Masukkan saldo, suku bunga, dan pembayaran bulanan untuk melihat jangka waktu pelunasan.",
+    keywords: ["pelunasan kartu kredit", "kalkulator kartu kredit", "bunga kartu kredit", "saldo kartu", "utang kartu"],
     inputs: {
       balance: { label: "Current Balance", help: "Your current credit card balance." },
       apr: { label: "Annual Percentage Rate (APR)", help: "Your card's annual interest rate." },

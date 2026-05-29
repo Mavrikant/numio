@@ -18,9 +18,9 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "A1C ⇄ Average Glucose Converter", short: "Convert HbA1c to estimated average glucose (mg/dL and mmol/L) and back.",
-    description: "Free A1C to glucose converter. Convert an HbA1c percentage to estimated average glucose (eAG) in mg/dL and mmol/L, or convert a glucose reading back to an estimated A1C, using the ADAG formula.",
-    keywords: ["a1c to glucose", "eag calculator", "hba1c converter", "average glucose calculator", "a1c chart"],
+    title: "Conversor A1c / Glicose", short: "Converta entre hemoglobina glicada (A1c) e glicose média estimada.",
+    description: "Conversor gratuito A1c. Converta entre o valor de hemoglobina A1c (%) e a glicose plasmática média estimada (mg/dL ou mmol/L).",
+    keywords: ["A1c", "hemoglobina glicada", "glicose média", "diabetes", "HbA1c"],
     ...io("Conversion", "Value", "A1C", "Glucose (mg/dL)", "Glucose (mmol/L)", "A1C → Glucose", "Glucose → A1C"),
     faq: [
       { q: "How is A1C converted to average glucose?", a: "Using the ADAG formula eAG(mg/dL) = 28.7 × A1C − 46.7. For example, an A1C of 6.5% ≈ 140 mg/dL (7.8 mmol/L)." },
@@ -28,9 +28,9 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "A1C ⇄ Average Glucose Converter", short: "Convert HbA1c to estimated average glucose (mg/dL and mmol/L) and back.",
-    description: "Free A1C to glucose converter. Convert an HbA1c percentage to estimated average glucose (eAG) in mg/dL and mmol/L, or convert a glucose reading back to an estimated A1C, using the ADAG formula.",
-    keywords: ["a1c to glucose", "eag calculator", "hba1c converter", "average glucose calculator", "a1c chart"],
+    title: "Konverter A1c / Glukosa", short: "Konversikan antara hemoglobin A1c dan estimasi glukosa rata-rata.",
+    description: "Konverter A1c gratis. Konversikan antara nilai hemoglobin A1c (%) dan estimasi glukosa darah rata-rata (mg/dL atau mmol/L).",
+    keywords: ["A1c", "HbA1c", "glukosa rata-rata", "diabetes", "gula darah"],
     ...io("Conversion", "Value", "A1C", "Glucose (mg/dL)", "Glucose (mmol/L)", "A1C → Glucose", "Glucose → A1C"),
     faq: [
       { q: "How is A1C converted to average glucose?", a: "Using the ADAG formula eAG(mg/dL) = 28.7 × A1C − 46.7. For example, an A1C of 6.5% ≈ 140 mg/dL (7.8 mmol/L)." },

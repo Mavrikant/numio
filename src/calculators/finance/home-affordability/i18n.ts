@@ -69,19 +69,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Home Affordability Calculator (28/36 Rule)",
-    short: "Find out how much house you can afford using the standard 28/36 debt-to-income rule with taxes and insurance included.",
+    title: "Calculadora de Capacidade de Compra de Imóvel",
+    short: "Veja que valor de imóvel pode comprar com o seu rendimento.",
     description:
-      "Free home-affordability calculator based on the 28/36 underwriting rule used by Fannie Mae and most US lenders. Enter your income, monthly debts, down payment, rate, term, and tax/insurance rates to see your maximum home price, loan amount, monthly PITI payment, and front/back-end DTI ratios.",
-    keywords: [
-      "home affordability calculator",
-      "28/36 rule",
-      "DTI calculator",
-      "max home price",
-      "PITI calculator",
-      "mortgage qualification",
-      "how much house can I afford",
-    ],
+      "Calculadora gratuita de capacidade de compra de imóvel. Saiba o valor máximo que pode pagar por uma casa com base no rendimento e dívidas.",
+    keywords: ["capacidade compra casa", "afford imóvel", "preço máximo casa", "comprar casa", "capacidade endividamento"],
     inputs: {
       annualIncome: { label: "Annual Gross Income", help: "Total yearly income before taxes." },
       monthlyDebts: { label: "Other Monthly Debts", help: "Sum of all non-housing recurring debts: car payments, student loans, credit-card minimums, alimony." },
@@ -136,19 +128,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Home Affordability Calculator (28/36 Rule)",
-    short: "Find out how much house you can afford using the standard 28/36 debt-to-income rule with taxes and insurance included.",
+    title: "Kalkulator Kemampuan Beli Rumah",
+    short: "Lihat harga rumah yang dapat Anda beli dengan pendapatan Anda.",
     description:
-      "Free home-affordability calculator based on the 28/36 underwriting rule used by Fannie Mae and most US lenders. Enter your income, monthly debts, down payment, rate, term, and tax/insurance rates to see your maximum home price, loan amount, monthly PITI payment, and front/back-end DTI ratios.",
-    keywords: [
-      "home affordability calculator",
-      "28/36 rule",
-      "DTI calculator",
-      "max home price",
-      "PITI calculator",
-      "mortgage qualification",
-      "how much house can I afford",
-    ],
+      "Kalkulator kemampuan beli rumah gratis. Ketahui harga maksimum rumah yang dapat dibayar berdasarkan pendapatan dan utang.",
+    keywords: ["kemampuan beli rumah", "afford rumah", "harga maksimum rumah", "beli rumah", "DSR"],
     inputs: {
       annualIncome: { label: "Annual Gross Income", help: "Total yearly income before taxes." },
       monthlyDebts: { label: "Other Monthly Debts", help: "Sum of all non-housing recurring debts: car payments, student loans, credit-card minimums, alimony." },

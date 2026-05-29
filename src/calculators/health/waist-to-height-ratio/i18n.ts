@@ -17,9 +17,9 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Waist-to-Height Ratio Calculator", short: "Calculate your waist-to-height ratio, a simple central-obesity indicator.",
-    description: "Free waist-to-height ratio (WHtR) calculator. Enter your waist and height to get the ratio, your waist as a percentage of height, and the healthy maximum waist (half your height). A ratio under 0.5 is the common target.",
-    keywords: ["waist to height ratio", "whtr calculator", "central obesity", "waist height ratio", "body shape index"],
+    title: "Calculadora de Relação Cintura-Altura", short: "Calcule a relação cintura-altura e o risco metabólico associado.",
+    description: "Calculadora gratuita de relação cintura-altura. Estime o risco de doenças cardiovasculares e metabólicas com base na proporção cintura-altura.",
+    keywords: ["relação cintura altura", "RCAlt", "WHtR", "risco metabólico", "obesidade abdominal"],
     ...io("Waist circumference", "Height", "Waist-to-height ratio", "Waist as % of height", "Healthy waist max (0.5×height)"),
     faq: [
       { q: "What is a healthy waist-to-height ratio?", a: "For most adults, keeping the ratio below 0.5 — i.e. waist less than half your height — is associated with lower cardiometabolic risk. Higher ratios indicate more central fat." },
@@ -27,9 +27,9 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Waist-to-Height Ratio Calculator", short: "Calculate your waist-to-height ratio, a simple central-obesity indicator.",
-    description: "Free waist-to-height ratio (WHtR) calculator. Enter your waist and height to get the ratio, your waist as a percentage of height, and the healthy maximum waist (half your height). A ratio under 0.5 is the common target.",
-    keywords: ["waist to height ratio", "whtr calculator", "central obesity", "waist height ratio", "body shape index"],
+    title: "Kalkulator Rasio Pinggang-Tinggi", short: "Hitung rasio pinggang-tinggi dan risiko metabolik terkait.",
+    description: "Kalkulator rasio pinggang-tinggi gratis. Estimasi risiko penyakit kardiovaskular dan metabolik berdasarkan rasio pinggang-tinggi (WHtR).",
+    keywords: ["rasio pinggang tinggi", "WHtR", "risiko metabolik", "obesitas sentral", "kesehatan jantung"],
     ...io("Waist circumference", "Height", "Waist-to-height ratio", "Waist as % of height", "Healthy waist max (0.5×height)"),
     faq: [
       { q: "What is a healthy waist-to-height ratio?", a: "For most adults, keeping the ratio below 0.5 — i.e. waist less than half your height — is associated with lower cardiometabolic risk. Higher ratios indicate more central fat." },

@@ -65,19 +65,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "TDEE Calculator — Daily Calorie Needs",
-    short: "Calculate your Total Daily Energy Expenditure using the Mifflin-St Jeor formula with detailed activity levels.",
+    title: "Calculadora de Gasto Calórico Diário (TDEE)",
+    short: "Calcule o seu gasto calórico diário total (TDEE) com base no nível de atividade.",
     description:
-      "Free TDEE calculator. Enter your weight, height, age, gender, and activity level to get your BMR, total daily calories, and macro targets (protein, carbs, fat) at maintenance.",
-    keywords: [
-      "TDEE calculator",
-      "total daily energy expenditure",
-      "calorie calculator",
-      "BMR calculator",
-      "Mifflin St Jeor",
-      "daily calorie needs",
-      "macro calculator",
-    ],
+      "Calculadora gratuita de TDEE. Estime o gasto calórico diário total combinando metabolismo basal e nível de atividade física.",
+    keywords: ["TDEE", "gasto calórico", "calorias diárias", "metabolismo total", "nível atividade"],
     inputs: {
       weight: { label: "Weight (kg)", help: "Your current body weight in kilograms." },
       height: { label: "Height (cm)", help: "Your height in centimetres." },
@@ -128,19 +120,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "TDEE Calculator — Daily Calorie Needs",
-    short: "Calculate your Total Daily Energy Expenditure using the Mifflin-St Jeor formula with detailed activity levels.",
+    title: "Kalkulator TDEE",
+    short: "Hitung total pengeluaran energi harian (TDEE) berdasarkan tingkat aktivitas.",
     description:
-      "Free TDEE calculator. Enter your weight, height, age, gender, and activity level to get your BMR, total daily calories, and macro targets (protein, carbs, fat) at maintenance.",
-    keywords: [
-      "TDEE calculator",
-      "total daily energy expenditure",
-      "calorie calculator",
-      "BMR calculator",
-      "Mifflin St Jeor",
-      "daily calorie needs",
-      "macro calculator",
-    ],
+      "Kalkulator TDEE gratis. Estimasi total pengeluaran energi harian dengan menggabungkan metabolisme basal dan tingkat aktivitas fisik.",
+    keywords: ["TDEE", "pengeluaran kalori", "kalori harian", "total metabolisme", "tingkat aktivitas"],
     inputs: {
       weight: { label: "Weight (kg)", help: "Your current body weight in kilograms." },
       height: { label: "Height (cm)", help: "Your height in centimetres." },

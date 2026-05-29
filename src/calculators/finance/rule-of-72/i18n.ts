@@ -17,9 +17,9 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Rule of 72 Calculator", short: "Estimate how many years it takes an investment to double.",
-    description: "Free Rule of 72 calculator. Enter an annual return to estimate how many years it takes your money to double, using the 72, 70 and 69.3 rules, alongside the mathematically exact doubling time.",
-    keywords: ["rule of 72", "doubling time calculator", "investment doubling", "rule of 70", "how long to double money"],
+    title: "Calculadora da Regra de 72", short: "Veja em quantos anos o seu dinheiro duplica com uma dada taxa de juro.",
+    description: "Calculadora gratuita da regra de 72. Estime rapidamente os anos necessários para duplicar um investimento dividindo 72 pela taxa anual.",
+    keywords: ["regra de 72", "duplicar dinheiro", "tempo duplicação", "investimento composto", "regra investimento"],
     ...io("Annual return rate", "Doubling time (÷72)", "Doubling time (÷70)", "Doubling time (÷69.3)", "Exact doubling time"),
     faq: [
       { q: "How does the Rule of 72 work?", a: "Divide 72 by the annual percentage return to estimate the years to double. At 8%, money doubles in about 72/8 = 9 years." },
@@ -27,9 +27,9 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Rule of 72 Calculator", short: "Estimate how many years it takes an investment to double.",
-    description: "Free Rule of 72 calculator. Enter an annual return to estimate how many years it takes your money to double, using the 72, 70 and 69.3 rules, alongside the mathematically exact doubling time.",
-    keywords: ["rule of 72", "doubling time calculator", "investment doubling", "rule of 70", "how long to double money"],
+    title: "Kalkulator Aturan 72", short: "Lihat berapa tahun uang Anda menggandakan diri dengan suku bunga tertentu.",
+    description: "Kalkulator aturan 72 gratis. Perkirakan dengan cepat tahun yang diperlukan untuk menggandakan investasi dengan membagi 72 dengan tingkat tahunan.",
+    keywords: ["aturan 72", "gandakan uang", "waktu penggandaan", "investasi majemuk", "aturan investasi"],
     ...io("Annual return rate", "Doubling time (÷72)", "Doubling time (÷70)", "Doubling time (÷69.3)", "Exact doubling time"),
     faq: [
       { q: "How does the Rule of 72 work?", a: "Divide 72 by the annual percentage return to estimate the years to double. At 8%, money doubles in about 72/8 = 9 years." },

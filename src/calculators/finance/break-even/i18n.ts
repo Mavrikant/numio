@@ -51,19 +51,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Break-Even Calculator",
-    short: "Find the sales volume where total revenue equals total cost — your break-even point.",
+    title: "Calculadora de Ponto de Equilíbrio",
+    short: "Calcule o ponto de equilíbrio entre custos e receitas.",
     description:
-      "Free break-even calculator using the standard cost-volume-profit (CVP) formula. Enter your fixed costs, variable cost per unit, and selling price to see how many units you must sell to cover all costs, along with contribution margin per unit and as a percentage of price.",
-    keywords: [
-      "break-even calculator",
-      "break-even analysis",
-      "contribution margin",
-      "CVP analysis",
-      "fixed cost calculator",
-      "business profitability",
-      "break-even point",
-    ],
+      "Calculadora gratuita de ponto de equilíbrio. Calcule as unidades necessárias para cobrir os custos fixos e variáveis.",
+    keywords: ["ponto equilíbrio", "break even", "análise custos", "lucro zero", "viabilidade negócio"],
     inputs: {
       fixedCosts: { label: "Fixed Costs ($)", help: "Total costs that do not change with output — rent, salaries, insurance, depreciation." },
       variableCostPerUnit: { label: "Variable Cost per Unit ($)", help: "Cost that varies with each unit produced — materials, direct labor, shipping." },
@@ -100,19 +92,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Break-Even Calculator",
-    short: "Find the sales volume where total revenue equals total cost — your break-even point.",
+    title: "Kalkulator Titik Impas",
+    short: "Hitung titik impas antara biaya dan pendapatan.",
     description:
-      "Free break-even calculator using the standard cost-volume-profit (CVP) formula. Enter your fixed costs, variable cost per unit, and selling price to see how many units you must sell to cover all costs, along with contribution margin per unit and as a percentage of price.",
-    keywords: [
-      "break-even calculator",
-      "break-even analysis",
-      "contribution margin",
-      "CVP analysis",
-      "fixed cost calculator",
-      "business profitability",
-      "break-even point",
-    ],
+      "Kalkulator titik impas (BEP) gratis. Hitung jumlah unit yang diperlukan untuk menutup biaya tetap dan variabel.",
+    keywords: ["titik impas", "BEP", "break even", "analisis biaya", "kelayakan usaha"],
     inputs: {
       fixedCosts: { label: "Fixed Costs ($)", help: "Total costs that do not change with output — rent, salaries, insurance, depreciation." },
       variableCostPerUnit: { label: "Variable Cost per Unit ($)", help: "Cost that varies with each unit produced — materials, direct labor, shipping." },

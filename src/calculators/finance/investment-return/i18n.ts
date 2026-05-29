@@ -47,19 +47,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Investment Return Calculator (ROI & CAGR)",
-    short: "Calculate ROI and CAGR for any investment over any time period.",
+    title: "Calculadora de Retorno de Investimento",
+    short: "Calcule o retorno de um investimento ao longo do tempo.",
     description:
-      "Free investment return calculator. Compute ROI (Return on Investment) and CAGR (Compound Annual Growth Rate) from initial and final values, or project a final value from an expected annual return.",
-    keywords: [
-      "ROI calculator",
-      "CAGR calculator",
-      "investment return calculator",
-      "compound annual growth rate",
-      "return on investment",
-      "investment growth calculator",
-      "annualized return",
-    ],
+      "Calculadora gratuita de retorno de investimento. Veja o valor final, ganho total e taxa anualizada com base nas contribuições.",
+    keywords: ["retorno investimento", "TIR", "yield investimento", "calculadora investimento", "rendibilidade"],
     inputs: {
       initialInvestment: { label: "Initial Investment", help: "The amount you invested at the start." },
       finalValue: { label: "Final Value", help: "The current or ending value of the investment. Leave blank if providing an annual return rate." },
@@ -92,19 +84,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Investment Return Calculator (ROI & CAGR)",
-    short: "Calculate ROI and CAGR for any investment over any time period.",
+    title: "Kalkulator Imbal Hasil Investasi",
+    short: "Hitung imbal hasil investasi sepanjang waktu.",
     description:
-      "Free investment return calculator. Compute ROI (Return on Investment) and CAGR (Compound Annual Growth Rate) from initial and final values, or project a final value from an expected annual return.",
-    keywords: [
-      "ROI calculator",
-      "CAGR calculator",
-      "investment return calculator",
-      "compound annual growth rate",
-      "return on investment",
-      "investment growth calculator",
-      "annualized return",
-    ],
+      "Kalkulator imbal hasil investasi gratis. Lihat nilai akhir, total keuntungan, dan tingkat tahunan berdasarkan setoran.",
+    keywords: ["imbal hasil investasi", "IRR", "yield investasi", "kalkulator investasi", "return investasi"],
     inputs: {
       initialInvestment: { label: "Initial Investment", help: "The amount you invested at the start." },
       finalValue: { label: "Final Value", help: "The current or ending value of the investment. Leave blank if providing an annual return rate." },

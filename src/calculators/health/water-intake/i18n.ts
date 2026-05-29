@@ -105,19 +105,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Daily Water Intake Calculator",
-    short: "Calculate your daily water needs based on weight, activity level, and climate.",
+    title: "Calculadora de Consumo de Água",
+    short: "Calcule a quantidade ideal de água a beber por dia.",
     description:
-      "Free daily water intake calculator. Enter your weight, activity level, and climate to find out exactly how much water you should drink each day.",
-    keywords: [
-      "water intake calculator",
-      "daily water needs",
-      "hydration calculator",
-      "how much water should I drink",
-      "water per day",
-      "daily hydration",
-      "water consumption",
-    ],
+      "Calculadora gratuita de consumo de água. Estime a quantidade ideal de água diária com base no peso, atividade e clima.",
+    keywords: ["consumo água", "hidratação", "litros água por dia", "quanta água beber", "água diária"],
     inputs: {
       weight: {
         label: "Body Weight",
@@ -208,19 +200,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Daily Water Intake Calculator",
-    short: "Calculate your daily water needs based on weight, activity level, and climate.",
+    title: "Kalkulator Asupan Air",
+    short: "Hitung jumlah air ideal yang harus diminum per hari.",
     description:
-      "Free daily water intake calculator. Enter your weight, activity level, and climate to find out exactly how much water you should drink each day.",
-    keywords: [
-      "water intake calculator",
-      "daily water needs",
-      "hydration calculator",
-      "how much water should I drink",
-      "water per day",
-      "daily hydration",
-      "water consumption",
-    ],
+      "Kalkulator asupan air gratis. Estimasi jumlah air ideal harian berdasarkan berat badan, aktivitas, dan iklim.",
+    keywords: ["asupan air", "hidrasi", "liter air per hari", "berapa air minum", "air harian"],
     inputs: {
       weight: {
         label: "Body Weight",

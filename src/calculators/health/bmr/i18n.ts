@@ -83,19 +83,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "BMR Calculator",
-    short: "Calculate your Basal Metabolic Rate — the calories your body burns at rest.",
+    title: "Calculadora de Taxa Metabólica Basal (TMB)",
+    short: "Calcule a sua taxa metabólica basal — calorias mínimas em repouso.",
     description:
-      "Free BMR calculator using Mifflin-St Jeor and Harris-Benedict formulas. Find out how many calories your body needs at complete rest to maintain vital functions.",
-    keywords: [
-      "BMR calculator",
-      "basal metabolic rate",
-      "resting metabolic rate",
-      "calories at rest",
-      "Mifflin St Jeor",
-      "Harris Benedict",
-      "metabolism calculator",
-    ],
+      "Calculadora gratuita de TMB (BMR). Estime a sua taxa metabólica basal pela fórmula Mifflin-St Jeor com base em idade, sexo, peso e altura.",
+    keywords: ["taxa metabólica basal", "TMB", "BMR", "Mifflin St Jeor", "metabolismo basal"],
     inputs: {
       formula: {
         label: "Formula",
@@ -164,19 +156,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "BMR Calculator",
-    short: "Calculate your Basal Metabolic Rate — the calories your body burns at rest.",
+    title: "Kalkulator BMR",
+    short: "Hitung Basal Metabolic Rate (BMR) Anda — kalori minimum saat istirahat.",
     description:
-      "Free BMR calculator using Mifflin-St Jeor and Harris-Benedict formulas. Find out how many calories your body needs at complete rest to maintain vital functions.",
-    keywords: [
-      "BMR calculator",
-      "basal metabolic rate",
-      "resting metabolic rate",
-      "calories at rest",
-      "Mifflin St Jeor",
-      "Harris Benedict",
-      "metabolism calculator",
-    ],
+      "Kalkulator BMR gratis. Estimasi laju metabolisme basal dengan rumus Mifflin-St Jeor berdasarkan usia, jenis kelamin, berat, dan tinggi.",
+    keywords: ["BMR", "metabolisme basal", "kalkulator BMR", "Mifflin St Jeor", "kalori minimum"],
     inputs: {
       formula: {
         label: "Formula",

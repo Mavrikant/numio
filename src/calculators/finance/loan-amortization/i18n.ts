@@ -48,19 +48,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Loan Amortization Schedule",
-    short: "Generate a full amortization table for any loan with monthly payment, interest, and balance breakdown.",
+    title: "Calculadora de Amortização de Empréstimo",
+    short: "Veja a tabela de amortização completa do seu empréstimo, mês a mês.",
     description:
-      "Free loan amortization calculator. Enter the principal, interest rate, and term to see your monthly payment and a complete month-by-month breakdown of principal, interest, and balance.",
-    keywords: [
-      "loan amortization schedule",
-      "amortization table",
-      "loan payment calculator",
-      "monthly payment breakdown",
-      "debt payoff schedule",
-      "loan interest calculator",
-      "principal vs interest",
-    ],
+      "Calculadora gratuita de amortização. Veja como cada prestação se divide entre capital e juros ao longo da vida do empréstimo.",
+    keywords: ["amortização empréstimo", "tabela amortização", "prestações empréstimo", "capital e juros", "calculadora crédito"],
     inputs: {
       principal: { label: "Loan Amount", help: "The total amount borrowed." },
       annualRate: { label: "Annual Interest Rate (%)", help: "The yearly interest rate on the loan." },
@@ -94,19 +86,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Loan Amortization Schedule",
-    short: "Generate a full amortization table for any loan with monthly payment, interest, and balance breakdown.",
+    title: "Kalkulator Amortisasi Pinjaman",
+    short: "Lihat tabel amortisasi lengkap pinjaman Anda, bulan demi bulan.",
     description:
-      "Free loan amortization calculator. Enter the principal, interest rate, and term to see your monthly payment and a complete month-by-month breakdown of principal, interest, and balance.",
-    keywords: [
-      "loan amortization schedule",
-      "amortization table",
-      "loan payment calculator",
-      "monthly payment breakdown",
-      "debt payoff schedule",
-      "loan interest calculator",
-      "principal vs interest",
-    ],
+      "Kalkulator amortisasi gratis. Lihat bagaimana setiap angsuran terbagi antara pokok dan bunga sepanjang masa pinjaman.",
+    keywords: ["amortisasi pinjaman", "tabel amortisasi", "angsuran pinjaman", "pokok dan bunga", "kalkulator kredit"],
     inputs: {
       principal: { label: "Loan Amount", help: "The total amount borrowed." },
       annualRate: { label: "Annual Interest Rate (%)", help: "The yearly interest rate on the loan." },

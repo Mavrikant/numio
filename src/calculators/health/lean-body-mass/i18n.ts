@@ -63,19 +63,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Lean Body Mass Calculator",
-    short: "Calculate your lean body mass using the Boer, James, or Hume formula.",
+    title: "Calculadora de Massa Magra",
+    short: "Calcule a sua massa magra (livre de gordura).",
     description:
-      "Free lean body mass calculator. Enter your gender, weight, and height to estimate your LBM, body fat mass, and body fat percentage using validated formulas.",
-    keywords: [
-      "lean body mass calculator",
-      "LBM calculator",
-      "body fat percentage",
-      "muscle mass",
-      "body composition",
-      "Boer formula",
-      "fat-free mass",
-    ],
+      "Calculadora gratuita de massa magra. Estime a sua massa muscular e óssea (livre de gordura) com base no peso e percentagem de gordura.",
+    keywords: ["massa magra", "massa muscular", "LBM", "composição corporal", "calculadora músculo"],
     inputs: {
       gender: { label: "Biological sex", help: "Sex affects the formula constants for LBM estimation." },
       weight: { label: "Weight (kg)", help: "Your current body weight in kilograms." },
@@ -124,19 +116,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Lean Body Mass Calculator",
-    short: "Calculate your lean body mass using the Boer, James, or Hume formula.",
+    title: "Kalkulator Massa Tubuh Tanpa Lemak",
+    short: "Hitung massa tubuh tanpa lemak (lean body mass) Anda.",
     description:
-      "Free lean body mass calculator. Enter your gender, weight, and height to estimate your LBM, body fat mass, and body fat percentage using validated formulas.",
-    keywords: [
-      "lean body mass calculator",
-      "LBM calculator",
-      "body fat percentage",
-      "muscle mass",
-      "body composition",
-      "Boer formula",
-      "fat-free mass",
-    ],
+      "Kalkulator massa tubuh tanpa lemak gratis. Estimasi massa otot dan tulang (tanpa lemak) berdasarkan berat dan persentase lemak.",
+    keywords: ["massa tanpa lemak", "massa otot", "LBM", "komposisi tubuh", "kalkulator otot"],
     inputs: {
       gender: { label: "Biological sex", help: "Sex affects the formula constants for LBM estimation." },
       weight: { label: "Weight (kg)", help: "Your current body weight in kilograms." },

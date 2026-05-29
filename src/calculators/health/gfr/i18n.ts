@@ -92,19 +92,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "eGFR Calculator",
-    short: "Calculate your estimated glomerular filtration rate using the CKD-EPI 2021 equation.",
+    title: "Calculadora de Taxa de Filtração Glomerular (TFG)",
+    short: "Estime a sua taxa de filtração glomerular — função renal.",
     description:
-      "Free eGFR calculator using CKD-EPI 2021 equation. Enter creatinine level, age, sex, and race to assess kidney function and CKD stage.",
-    keywords: [
-      "eGFR calculator",
-      "glomerular filtration rate",
-      "kidney function",
-      "CKD stage",
-      "creatinine",
-      "chronic kidney disease",
-      "GFR",
-    ],
+      "Calculadora gratuita de TFG (eGFR). Estime a função renal pela fórmula CKD-EPI com base na creatinina sérica, idade e sexo.",
+    keywords: ["TFG", "eGFR", "função renal", "creatinina", "doença renal"],
     inputs: {
       creatinineUmolL: {
         label: "Serum Creatinine",
@@ -182,19 +174,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "eGFR Calculator",
-    short: "Calculate your estimated glomerular filtration rate using the CKD-EPI 2021 equation.",
+    title: "Kalkulator Laju Filtrasi Glomerulus (LFG)",
+    short: "Estimasi laju filtrasi glomerulus Anda — fungsi ginjal.",
     description:
-      "Free eGFR calculator using CKD-EPI 2021 equation. Enter creatinine level, age, sex, and race to assess kidney function and CKD stage.",
-    keywords: [
-      "eGFR calculator",
-      "glomerular filtration rate",
-      "kidney function",
-      "CKD stage",
-      "creatinine",
-      "chronic kidney disease",
-      "GFR",
-    ],
+      "Kalkulator LFG (eGFR) gratis. Estimasi fungsi ginjal dengan rumus CKD-EPI berdasarkan kreatinin serum, usia, dan jenis kelamin.",
+    keywords: ["LFG", "eGFR", "fungsi ginjal", "kreatinin", "penyakit ginjal"],
     inputs: {
       creatinineUmolL: {
         label: "Serum Creatinine",

@@ -72,20 +72,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "US Paycheck Calculator",
-    short: "Estimate your US take-home pay per paycheck with federal income tax, FICA, state tax, and pretax deductions.",
+    title: "Calculadora de Recibo de Vencimento",
+    short: "Calcule o valor a receber no seu recibo de vencimento.",
     description:
-      "Free US paycheck calculator using 2024 IRS federal brackets, the Social Security wage base ($168,600), Medicare 1.45% plus the 0.9% additional Medicare tax, optional flat state tax, and pretax 401(k) and HSA deductions. See your gross, taxes, and net pay per pay period and per year.",
-    keywords: [
-      "paycheck calculator",
-      "take home pay calculator",
-      "net pay calculator",
-      "US payroll calculator",
-      "federal tax withholding",
-      "FICA calculator",
-      "401k take home",
-      "biweekly paycheck",
-    ],
+      "Calculadora gratuita de recibo de vencimento. Veja o valor líquido a receber com todos os descontos obrigatórios.",
+    keywords: ["recibo vencimento", "salário líquido", "descontos salário", "calculadora recibo", "ordenado líquido"],
     inputs: {
       grossSalary: { label: "Annual Gross Salary", help: "Your total yearly salary before any taxes or deductions." },
       payFrequency: { label: "Pay Frequency", help: "How often you are paid. Weekly = 52, biweekly = 26, semimonthly = 24, monthly = 12, annual = 1." },
@@ -142,20 +133,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "US Paycheck Calculator",
-    short: "Estimate your US take-home pay per paycheck with federal income tax, FICA, state tax, and pretax deductions.",
+    title: "Kalkulator Slip Gaji",
+    short: "Hitung jumlah yang Anda terima dalam slip gaji.",
     description:
-      "Free US paycheck calculator using 2024 IRS federal brackets, the Social Security wage base ($168,600), Medicare 1.45% plus the 0.9% additional Medicare tax, optional flat state tax, and pretax 401(k) and HSA deductions. See your gross, taxes, and net pay per pay period and per year.",
-    keywords: [
-      "paycheck calculator",
-      "take home pay calculator",
-      "net pay calculator",
-      "US payroll calculator",
-      "federal tax withholding",
-      "FICA calculator",
-      "401k take home",
-      "biweekly paycheck",
-    ],
+      "Kalkulator slip gaji gratis. Lihat jumlah bersih yang diterima dengan semua potongan wajib.",
+    keywords: ["slip gaji", "kalkulator slip gaji", "potongan gaji", "gaji take home pay", "THP"],
     inputs: {
       grossSalary: { label: "Annual Gross Salary", help: "Your total yearly salary before any taxes or deductions." },
       payFrequency: { label: "Pay Frequency", help: "How often you are paid. Weekly = 52, biweekly = 26, semimonthly = 24, monthly = 12, annual = 1." },

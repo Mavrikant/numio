@@ -18,9 +18,9 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Protein Intake Calculator", short: "Estimate your daily protein target from body weight and activity.",
-    description: "Free protein intake calculator. Enter your weight and activity level to get a recommended daily protein target in grams, the healthy range, and a per-meal figure based on grams of protein per kilogram of body weight.",
-    keywords: ["protein intake calculator", "daily protein", "how much protein", "protein per day", "grams of protein"],
+    title: "Calculadora de Ingestão de Proteína", short: "Calcule a sua ingestão diária recomendada de proteína.",
+    description: "Calculadora gratuita de proteína. Calcule a quantidade diária recomendada com base no seu peso, atividade e objetivo.",
+    keywords: ["proteína", "ingestão proteína", "gramas proteína", "musculação proteína", "dieta proteína"],
     ...io("Body weight", "Activity level", "Daily protein", "Range (low)", "Range (high)", "Per meal (×4)", "Sedentary (0.8–1.0 g/kg)", "Active (1.2–1.6 g/kg)", "Athlete (1.6–2.2 g/kg)"),
     faq: [
       { q: "How much protein do I need per day?", a: "It depends on activity: roughly 0.8–1.0 g/kg for sedentary adults, 1.2–1.6 g/kg if active, and 1.6–2.2 g/kg for athletes or those building muscle. This tool shows the range for your weight." },
@@ -28,9 +28,9 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Protein Intake Calculator", short: "Estimate your daily protein target from body weight and activity.",
-    description: "Free protein intake calculator. Enter your weight and activity level to get a recommended daily protein target in grams, the healthy range, and a per-meal figure based on grams of protein per kilogram of body weight.",
-    keywords: ["protein intake calculator", "daily protein", "how much protein", "protein per day", "grams of protein"],
+    title: "Kalkulator Asupan Protein", short: "Hitung asupan protein harian yang direkomendasikan.",
+    description: "Kalkulator protein gratis. Hitung jumlah protein harian yang direkomendasikan berdasarkan berat badan, aktivitas, dan tujuan.",
+    keywords: ["protein", "asupan protein", "gram protein", "protein gym", "diet protein"],
     ...io("Body weight", "Activity level", "Daily protein", "Range (low)", "Range (high)", "Per meal (×4)", "Sedentary (0.8–1.0 g/kg)", "Active (1.2–1.6 g/kg)", "Athlete (1.6–2.2 g/kg)"),
     faq: [
       { q: "How much protein do I need per day?", a: "It depends on activity: roughly 0.8–1.0 g/kg for sedentary adults, 1.2–1.6 g/kg if active, and 1.6–2.2 g/kg for athletes or those building muscle. This tool shows the range for your weight." },

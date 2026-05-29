@@ -93,19 +93,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Discount Calculator",
-    short: "Calculate sale price, savings, and final price after discount and tax.",
+    title: "Calculadora de Desconto",
+    short: "Calcule o preço final após aplicar um desconto percentual.",
     description:
-      "Free discount calculator. Find the discounted price, total savings, and final price after sales tax. Also calculate the discount percentage from original and sale prices.",
-    keywords: [
-      "discount calculator",
-      "sale price calculator",
-      "savings calculator",
-      "percent off calculator",
-      "sale discount",
-      "original price calculator",
-      "price reduction",
-    ],
+      "Calculadora gratuita de desconto. Introduza o preço original e a percentagem de desconto para ver o preço final e a poupança.",
+    keywords: ["desconto", "calculadora desconto", "preço promocional", "saldos", "promoção"],
     inputs: {
       mode: {
         label: "Calculation Mode",
@@ -184,19 +176,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Discount Calculator",
-    short: "Calculate sale price, savings, and final price after discount and tax.",
+    title: "Kalkulator Diskon",
+    short: "Hitung harga akhir setelah menerapkan diskon persentase.",
     description:
-      "Free discount calculator. Find the discounted price, total savings, and final price after sales tax. Also calculate the discount percentage from original and sale prices.",
-    keywords: [
-      "discount calculator",
-      "sale price calculator",
-      "savings calculator",
-      "percent off calculator",
-      "sale discount",
-      "original price calculator",
-      "price reduction",
-    ],
+      "Kalkulator diskon gratis. Masukkan harga asli dan persentase diskon untuk melihat harga akhir dan penghematan.",
+    keywords: ["diskon", "kalkulator diskon", "harga promo", "obral", "promosi"],
     inputs: {
       mode: {
         label: "Calculation Mode",

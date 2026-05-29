@@ -107,20 +107,12 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Down Payment Calculator",
+    title: "Calculadora de Entrada",
     short:
-      "Calculate your down payment, loan amount, monthly P&I, taxes, insurance, and PMI in one place.",
+      "Calcule a entrada necessária para comprar um imóvel.",
     description:
-      "Free home down payment calculator. Enter the home price and either a down-payment percentage or amount, and get your loan amount, monthly principal & interest, property tax, homeowner's insurance, and PMI when your down payment is under 20%.",
-    keywords: [
-      "down payment calculator",
-      "home down payment",
-      "PMI calculator",
-      "PITI",
-      "monthly mortgage payment",
-      "loan-to-value",
-      "mortgage down payment",
-    ],
+      "Calculadora gratuita de entrada. Veja qual o valor da entrada com base no preço do imóvel e na percentagem desejada.",
+    keywords: ["entrada casa", "calculadora entrada", "down payment", "comprar casa", "financiamento imóvel"],
     inputs: {
       homePrice: { label: "Home Price", help: "Total purchase price of the property." },
       downPaymentPercent: {
@@ -212,20 +204,12 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Down Payment Calculator",
+    title: "Kalkulator Uang Muka",
     short:
-      "Calculate your down payment, loan amount, monthly P&I, taxes, insurance, and PMI in one place.",
+      "Hitung uang muka yang diperlukan untuk membeli properti.",
     description:
-      "Free home down payment calculator. Enter the home price and either a down-payment percentage or amount, and get your loan amount, monthly principal & interest, property tax, homeowner's insurance, and PMI when your down payment is under 20%.",
-    keywords: [
-      "down payment calculator",
-      "home down payment",
-      "PMI calculator",
-      "PITI",
-      "monthly mortgage payment",
-      "loan-to-value",
-      "mortgage down payment",
-    ],
+      "Kalkulator uang muka (DP) gratis. Lihat jumlah uang muka berdasarkan harga properti dan persentase yang diinginkan.",
+    keywords: ["uang muka rumah", "kalkulator DP", "DP rumah", "beli rumah", "pembiayaan properti"],
     inputs: {
       homePrice: { label: "Home Price", help: "Total purchase price of the property." },
       downPaymentPercent: {

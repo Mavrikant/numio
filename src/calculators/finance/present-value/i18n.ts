@@ -17,9 +17,9 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Present Value Calculator", short: "Find what a future sum of money is worth today.",
-    description: "Free present value (PV) calculator. Enter a future amount, a discount rate and the number of periods to find what it's worth today, using PV = FV/(1+r)ⁿ, plus the total discount and discount factor.",
-    keywords: ["present value calculator", "pv calculator", "discounted value", "time value of money", "discount rate"],
+    title: "Calculadora de Valor Presente", short: "Calcule o valor presente de fluxos de caixa futuros.",
+    description: "Calculadora gratuita de valor presente (VP). Calcule quanto vale hoje uma quantia a receber no futuro, descontada pela taxa de desconto.",
+    keywords: ["valor presente", "VP", "valor atualizado", "fluxo de caixa descontado", "taxa desconto"],
     ...io("Future value", "Discount rate", "Periods (years)", "Present value", "Total discount", "Discount factor"),
     faq: [
       { q: "What is present value?", a: "It's how much a future amount is worth today, given a discount rate that reflects the time value of money. $10,000 in 10 years at 5% is worth about $6,139 today." },
@@ -27,9 +27,9 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Present Value Calculator", short: "Find what a future sum of money is worth today.",
-    description: "Free present value (PV) calculator. Enter a future amount, a discount rate and the number of periods to find what it's worth today, using PV = FV/(1+r)ⁿ, plus the total discount and discount factor.",
-    keywords: ["present value calculator", "pv calculator", "discounted value", "time value of money", "discount rate"],
+    title: "Kalkulator Nilai Sekarang", short: "Hitung nilai sekarang dari arus kas masa depan.",
+    description: "Kalkulator nilai sekarang (PV) gratis. Hitung berapa nilai sekarang dari jumlah yang akan diterima di masa depan, didiskon dengan tingkat diskonto.",
+    keywords: ["nilai sekarang", "PV", "discounted cash flow", "DCF", "tingkat diskonto"],
     ...io("Future value", "Discount rate", "Periods (years)", "Present value", "Total discount", "Discount factor"),
     faq: [
       { q: "What is present value?", a: "It's how much a future amount is worth today, given a discount rate that reflects the time value of money. $10,000 in 10 years at 5% is worth about $6,139 today." },

@@ -79,19 +79,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "ROI Calculator",
-    short: "Calculate your return on investment, annualized ROI (CAGR), and investment multiple.",
+    title: "Calculadora de ROI",
+    short: "Calcule o retorno sobre investimento (ROI) em percentagem.",
     description:
-      "Free ROI calculator. Enter your initial investment, final value, and time period to get ROI percentage, CAGR, net profit, and the Rule of 72.",
-    keywords: [
-      "ROI calculator",
-      "return on investment",
-      "CAGR calculator",
-      "investment return",
-      "annualized return",
-      "net profit calculator",
-      "investment multiple",
-    ],
+      "Calculadora gratuita de ROI. Calcule o retorno do investimento como a diferença entre ganho e custo dividida pelo custo.",
+    keywords: ["ROI", "retorno investimento", "rendibilidade", "lucratividade", "calculadora ROI"],
     inputs: {
       initialInvestment: {
         label: "Initial Investment",
@@ -156,19 +148,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "ROI Calculator",
-    short: "Calculate your return on investment, annualized ROI (CAGR), and investment multiple.",
+    title: "Kalkulator ROI",
+    short: "Hitung tingkat pengembalian investasi (ROI) dalam persentase.",
     description:
-      "Free ROI calculator. Enter your initial investment, final value, and time period to get ROI percentage, CAGR, net profit, and the Rule of 72.",
-    keywords: [
-      "ROI calculator",
-      "return on investment",
-      "CAGR calculator",
-      "investment return",
-      "annualized return",
-      "net profit calculator",
-      "investment multiple",
-    ],
+      "Kalkulator ROI gratis. Hitung pengembalian investasi sebagai selisih keuntungan dan biaya dibagi biaya.",
+    keywords: ["ROI", "tingkat pengembalian", "imbal hasil", "profitabilitas", "kalkulator ROI"],
     inputs: {
       initialInvestment: {
         label: "Initial Investment",

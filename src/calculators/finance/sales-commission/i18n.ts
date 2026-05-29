@@ -17,9 +17,9 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Sales Commission Calculator", short: "Calculate commission earnings from a sale amount and rate.",
-    description: "Free sales commission calculator. Enter a sale amount and commission rate (plus an optional base salary) to get the commission earned, total pay and your effective rate on the sale.",
-    keywords: ["sales commission calculator", "commission calculator", "commission rate", "base plus commission", "commission earnings"],
+    title: "Calculadora de Comissão de Vendas", short: "Calcule a sua comissão de vendas com base no valor vendido.",
+    description: "Calculadora gratuita de comissão. Calcule a comissão a receber com base no valor vendido e na percentagem acordada.",
+    keywords: ["comissão vendas", "calculadora comissão", "remuneração vendedor", "percentagem vendas", "vendedor"],
     ...io("Sale amount", "Commission rate", "Base salary (optional)", "Commission", "Total pay", "Effective rate"),
     faq: [
       { q: "How is sales commission calculated?", a: "Multiply the sale amount by the commission rate. A 5% commission on a $50,000 sale is $2,500. Add any base salary for total pay." },
@@ -27,9 +27,9 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Sales Commission Calculator", short: "Calculate commission earnings from a sale amount and rate.",
-    description: "Free sales commission calculator. Enter a sale amount and commission rate (plus an optional base salary) to get the commission earned, total pay and your effective rate on the sale.",
-    keywords: ["sales commission calculator", "commission calculator", "commission rate", "base plus commission", "commission earnings"],
+    title: "Kalkulator Komisi Penjualan", short: "Hitung komisi penjualan Anda berdasarkan jumlah penjualan.",
+    description: "Kalkulator komisi gratis. Hitung komisi yang diterima berdasarkan jumlah penjualan dan persentase yang disepakati.",
+    keywords: ["komisi penjualan", "kalkulator komisi", "gaji sales", "persentase penjualan", "sales"],
     ...io("Sale amount", "Commission rate", "Base salary (optional)", "Commission", "Total pay", "Effective rate"),
     faq: [
       { q: "How is sales commission calculated?", a: "Multiply the sale amount by the commission rate. A 5% commission on a $50,000 sale is $2,500. Add any base salary for total pay." },

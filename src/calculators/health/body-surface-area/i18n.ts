@@ -17,9 +17,9 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Body Surface Area (BSA) Calculator", short: "Estimate body surface area in m² from weight and height.",
-    description: "Free body surface area (BSA) calculator. Enter weight and height to estimate BSA in square metres using the Mosteller, Du Bois and Haycock formulas — commonly used for medication dosing and physiology.",
-    keywords: ["body surface area calculator", "bsa calculator", "mosteller formula", "du bois formula", "bsa m2"],
+    title: "Calculadora de Área de Superfície Corporal (ASC)", short: "Calcule a sua área de superfície corporal — útil em dosagens médicas.",
+    description: "Calculadora gratuita de ASC. Calcule a área de superfície corporal pelas fórmulas Mosteller, DuBois e Haycock — utilizada em quimioterapia e dosagem pediátrica.",
+    keywords: ["ASC", "área superfície corporal", "BSA", "Mosteller", "DuBois"],
     ...io("Weight", "Height", "BSA (Mosteller)", "BSA (Du Bois)", "BSA (Haycock)"),
     faq: [
       { q: "What is body surface area used for?", a: "BSA is used in medicine to scale drug doses (especially chemotherapy), cardiac index and metabolic rates, since it tracks metabolic mass better than weight alone." },
@@ -27,9 +27,9 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Body Surface Area (BSA) Calculator", short: "Estimate body surface area in m² from weight and height.",
-    description: "Free body surface area (BSA) calculator. Enter weight and height to estimate BSA in square metres using the Mosteller, Du Bois and Haycock formulas — commonly used for medication dosing and physiology.",
-    keywords: ["body surface area calculator", "bsa calculator", "mosteller formula", "du bois formula", "bsa m2"],
+    title: "Kalkulator Luas Permukaan Tubuh (LPT)", short: "Hitung luas permukaan tubuh Anda — berguna untuk dosis medis.",
+    description: "Kalkulator LPT (BSA) gratis. Hitung luas permukaan tubuh dengan rumus Mosteller, DuBois, dan Haycock — digunakan untuk kemoterapi dan dosis pediatrik.",
+    keywords: ["LPT", "luas permukaan tubuh", "BSA", "Mosteller", "DuBois"],
     ...io("Weight", "Height", "BSA (Mosteller)", "BSA (Du Bois)", "BSA (Haycock)"),
     faq: [
       { q: "What is body surface area used for?", a: "BSA is used in medicine to scale drug doses (especially chemotherapy), cardiac index and metabolic rates, since it tracks metabolic mass better than weight alone." },

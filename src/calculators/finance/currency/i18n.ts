@@ -50,19 +50,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Currency Converter",
-    short: "Convert between 25 major world currencies using static reference rates.",
+    title: "Conversor de Moeda",
+    short: "Converta valores entre as principais moedas do mundo.",
     description:
-      "Quick currency converter using a static mid-market reference rate snapshot from January 2025. Covers 25 popular currencies. Reference only — not live data.",
-    keywords: [
-      "currency converter",
-      "exchange rate",
-      "FX calculator",
-      "foreign exchange",
-      "money converter",
-      "USD EUR GBP",
-      "reference rate",
-    ],
+      "Conversor de moeda gratuito. Converta entre euros, dólares, libras, ienes e outras moedas com taxas de câmbio atualizadas.",
+    keywords: ["conversor moeda", "câmbio", "euro dólar", "taxa câmbio", "conversão moedas"],
     inputs: {
       amount: { label: "Amount", help: "Amount to convert in the source currency." },
       fromCurrency: { label: "From currency", help: "ISO 4217 currency code you are converting from." },
@@ -98,19 +90,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Currency Converter",
-    short: "Convert between 25 major world currencies using static reference rates.",
+    title: "Konverter Mata Uang",
+    short: "Konversikan nilai antara mata uang utama dunia.",
     description:
-      "Quick currency converter using a static mid-market reference rate snapshot from January 2025. Covers 25 popular currencies. Reference only — not live data.",
-    keywords: [
-      "currency converter",
-      "exchange rate",
-      "FX calculator",
-      "foreign exchange",
-      "money converter",
-      "USD EUR GBP",
-      "reference rate",
-    ],
+      "Konverter mata uang gratis. Konversikan antara rupiah, dolar, euro, yen, dan mata uang lainnya dengan kurs terkini.",
+    keywords: ["konverter mata uang", "kurs", "USD IDR", "kurs valas", "konversi mata uang"],
     inputs: {
       amount: { label: "Amount", help: "Amount to convert in the source currency." },
       fromCurrency: { label: "From currency", help: "ISO 4217 currency code you are converting from." },

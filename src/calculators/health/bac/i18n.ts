@@ -82,19 +82,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Blood Alcohol Content (BAC) Calculator",
-    short: "Estimate your BAC using the Widmark formula based on drinks, weight, sex, and time.",
+    title: "Calculadora de Taxa de Alcoolemia",
+    short: "Estime a sua taxa de álcool no sangue (TAS).",
     description:
-      "Educational BAC calculator using the Widmark formula. Estimate blood alcohol content from number of drinks, body weight, biological sex, and hours elapsed. For educational use only — never drive after drinking.",
-    keywords: [
-      "BAC calculator",
-      "blood alcohol content",
-      "Widmark formula",
-      "alcohol calculator",
-      "drunk driving",
-      "drink driving",
-      "alcohol level",
-    ],
+      "Calculadora gratuita de taxa de alcoolemia. Estime a TAS com base no álcool consumido, peso, sexo e tempo decorrido.",
+    keywords: ["taxa alcoolemia", "TAS", "álcool sangue", "Widmark", "álcool conduzir"],
     inputs: {
       drinks: {
         label: "Number of Drinks",
@@ -162,19 +154,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Blood Alcohol Content (BAC) Calculator",
-    short: "Estimate your BAC using the Widmark formula based on drinks, weight, sex, and time.",
+    title: "Kalkulator Kadar Alkohol Darah",
+    short: "Estimasi kadar alkohol darah (BAC) Anda.",
     description:
-      "Educational BAC calculator using the Widmark formula. Estimate blood alcohol content from number of drinks, body weight, biological sex, and hours elapsed. For educational use only — never drive after drinking.",
-    keywords: [
-      "BAC calculator",
-      "blood alcohol content",
-      "Widmark formula",
-      "alcohol calculator",
-      "drunk driving",
-      "drink driving",
-      "alcohol level",
-    ],
+      "Kalkulator BAC gratis. Estimasi kadar alkohol darah berdasarkan alkohol yang dikonsumsi, berat, jenis kelamin, dan waktu.",
+    keywords: ["BAC", "kadar alkohol", "alkohol darah", "Widmark", "mengemudi alkohol"],
     inputs: {
       drinks: {
         label: "Number of Drinks",

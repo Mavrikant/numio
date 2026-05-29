@@ -76,19 +76,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "VAT / Sales Tax Calculator",
-    short: "Calculate VAT-exclusive or VAT-inclusive prices, tax amount, and base price for any tax rate.",
+    title: "Calculadora de IVA",
+    short: "Some, retire ou calcule o IVA sobre um preço.",
     description:
-      "Free VAT calculator. Add tax to a base price or extract tax from a gross price. Supports any VAT, GST, or sales tax rate. Instantly shows base price, tax amount, and total.",
-    keywords: [
-      "VAT calculator",
-      "sales tax calculator",
-      "GST calculator",
-      "tax inclusive calculator",
-      "tax exclusive calculator",
-      "value added tax",
-      "price with tax",
-    ],
+      "Calculadora gratuita de IVA. Adicione, retire ou descubra o IVA aplicado a um preço com base na taxa em vigor.",
+    keywords: ["IVA", "calculadora IVA", "imposto valor acrescentado", "preço com IVA", "preço sem IVA"],
     inputs: {
       mode: {
         label: "Calculation Mode",
@@ -150,19 +142,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "VAT / Sales Tax Calculator",
-    short: "Calculate VAT-exclusive or VAT-inclusive prices, tax amount, and base price for any tax rate.",
+    title: "Kalkulator PPN",
+    short: "Tambah, kurangi, atau hitung PPN pada harga.",
     description:
-      "Free VAT calculator. Add tax to a base price or extract tax from a gross price. Supports any VAT, GST, or sales tax rate. Instantly shows base price, tax amount, and total.",
-    keywords: [
-      "VAT calculator",
-      "sales tax calculator",
-      "GST calculator",
-      "tax inclusive calculator",
-      "tax exclusive calculator",
-      "value added tax",
-      "price with tax",
-    ],
+      "Kalkulator PPN gratis. Tambahkan, kurangi, atau temukan PPN yang diterapkan pada harga berdasarkan tarif yang berlaku.",
+    keywords: ["PPN", "kalkulator PPN", "pajak pertambahan nilai", "harga dengan PPN", "harga tanpa PPN"],
     inputs: {
       mode: {
         label: "Calculation Mode",

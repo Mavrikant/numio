@@ -58,19 +58,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Body Fat Calculator",
-    short: "Estimate your body fat percentage using the US Navy circumference method.",
+    title: "Calculadora de Gordura Corporal",
+    short: "Estime a sua percentagem de gordura corporal pelo método da Marinha dos EUA.",
     description:
-      "Free body fat percentage calculator using the US Navy tape measure method (Hodgdon & Beckett, 1984). Enter neck, waist, and hip circumferences for an accurate estimate without equipment.",
-    keywords: [
-      "body fat calculator",
-      "body fat percentage",
-      "US Navy method",
-      "circumference method",
-      "lean mass calculator",
-      "fat mass",
-      "ACE body fat",
-    ],
+      "Calculadora gratuita de gordura corporal. Estime a percentagem de gordura usando o método das medidas corporais da Marinha dos EUA.",
+    keywords: ["gordura corporal", "percentagem gordura", "calculadora gordura", "composição corporal", "navy method"],
     inputs: {
       gender: { label: "Biological sex", help: "Female formula includes hip circumference." },
       height: { label: "Height", help: "Your height in centimetres." },
@@ -114,19 +106,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Body Fat Calculator",
-    short: "Estimate your body fat percentage using the US Navy circumference method.",
+    title: "Kalkulator Lemak Tubuh",
+    short: "Estimasi persentase lemak tubuh Anda dengan metode Angkatan Laut AS.",
     description:
-      "Free body fat percentage calculator using the US Navy tape measure method (Hodgdon & Beckett, 1984). Enter neck, waist, and hip circumferences for an accurate estimate without equipment.",
-    keywords: [
-      "body fat calculator",
-      "body fat percentage",
-      "US Navy method",
-      "circumference method",
-      "lean mass calculator",
-      "fat mass",
-      "ACE body fat",
-    ],
+      "Kalkulator lemak tubuh gratis. Estimasi persentase lemak menggunakan metode pengukuran tubuh Angkatan Laut AS.",
+    keywords: ["lemak tubuh", "persentase lemak", "kalkulator lemak", "komposisi tubuh", "navy method"],
     inputs: {
       gender: { label: "Biological sex", help: "Female formula includes hip circumference." },
       height: { label: "Height", help: "Your height in centimetres." },

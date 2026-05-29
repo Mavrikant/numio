@@ -85,19 +85,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Inflation Calculator",
-    short: "Calculate the future cost of goods or the present value of a future amount using inflation.",
+    title: "Calculadora de Inflação",
+    short: "Veja o poder de compra do seu dinheiro ajustado pela inflação.",
     description:
-      "Free inflation calculator. Find out how much your money is worth in the future, how purchasing power erodes, and what a future dollar is worth today.",
-    keywords: [
-      "inflation calculator",
-      "purchasing power",
-      "future value inflation",
-      "CPI calculator",
-      "cost of living calculator",
-      "inflation rate calculator",
-      "real value money",
-    ],
+      "Calculadora gratuita de inflação. Compare o poder de compra ao longo do tempo com base na taxa anual de inflação.",
+    keywords: ["inflação", "poder de compra", "calculadora inflação", "ajuste inflação", "IPC"],
     inputs: {
       amount: {
         label: "Amount",
@@ -168,19 +160,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Inflation Calculator",
-    short: "Calculate the future cost of goods or the present value of a future amount using inflation.",
+    title: "Kalkulator Inflasi",
+    short: "Lihat daya beli uang Anda yang disesuaikan dengan inflasi.",
     description:
-      "Free inflation calculator. Find out how much your money is worth in the future, how purchasing power erodes, and what a future dollar is worth today.",
-    keywords: [
-      "inflation calculator",
-      "purchasing power",
-      "future value inflation",
-      "CPI calculator",
-      "cost of living calculator",
-      "inflation rate calculator",
-      "real value money",
-    ],
+      "Kalkulator inflasi gratis. Bandingkan daya beli sepanjang waktu berdasarkan tingkat inflasi tahunan.",
+    keywords: ["inflasi", "daya beli", "kalkulator inflasi", "penyesuaian inflasi", "IHK"],
     inputs: {
       amount: {
         label: "Amount",

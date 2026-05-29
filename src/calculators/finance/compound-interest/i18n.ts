@@ -62,19 +62,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Compound Interest Calculator",
-    short: "Calculate how your savings grow over time with compound interest and regular contributions.",
+    title: "Calculadora de Juros Compostos",
+    short: "Veja como o seu investimento cresce com juros compostos ao longo do tempo.",
     description:
-      "Free compound interest calculator. Enter your principal, annual return, compounding frequency, and monthly contributions to see your future value and year-by-year growth.",
-    keywords: [
-      "compound interest calculator",
-      "investment growth calculator",
-      "savings calculator",
-      "future value calculator",
-      "compound growth",
-      "interest calculator",
-      "investment calculator",
-    ],
+      "Calculadora gratuita de juros compostos. Introduza o capital, taxa de juro, prazo e contribuições periódicas para projetar o valor final do seu investimento.",
+    keywords: ["juros compostos", "calculadora investimento", "crescimento composto", "investimento longo prazo", "poupança"],
     inputs: {
       principal: { label: "Initial Investment", help: "The amount you invest today." },
       annualRate: { label: "Annual Interest Rate (%)", help: "Expected annual return or interest rate." },
@@ -122,19 +114,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Compound Interest Calculator",
-    short: "Calculate how your savings grow over time with compound interest and regular contributions.",
+    title: "Kalkulator Bunga Majemuk",
+    short: "Lihat bagaimana investasi Anda tumbuh dengan bunga majemuk seiring waktu.",
     description:
-      "Free compound interest calculator. Enter your principal, annual return, compounding frequency, and monthly contributions to see your future value and year-by-year growth.",
-    keywords: [
-      "compound interest calculator",
-      "investment growth calculator",
-      "savings calculator",
-      "future value calculator",
-      "compound growth",
-      "interest calculator",
-      "investment calculator",
-    ],
+      "Kalkulator bunga majemuk gratis. Masukkan pokok, suku bunga, jangka waktu, dan setoran berkala untuk memproyeksikan nilai akhir investasi.",
+    keywords: ["bunga majemuk", "kalkulator investasi", "pertumbuhan investasi", "investasi jangka panjang", "tabungan"],
     inputs: {
       principal: { label: "Initial Investment", help: "The amount you invest today." },
       annualRate: { label: "Annual Interest Rate (%)", help: "Expected annual return or interest rate." },

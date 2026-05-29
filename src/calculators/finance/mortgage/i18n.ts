@@ -54,19 +54,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Mortgage Calculator",
-    short: "Calculate your monthly mortgage payment, total interest, and full amortization schedule.",
+    title: "Calculadora de Crédito Habitação",
+    short: "Calcule a prestação mensal, juros totais e amortização do seu crédito habitação.",
     description:
-      "Free mortgage calculator using the standard annuity formula. Enter your loan amount, interest rate, and term to get your monthly payment, total cost, and a complete amortization table.",
-    keywords: [
-      "mortgage calculator",
-      "monthly mortgage payment",
-      "home loan calculator",
-      "amortization schedule",
-      "mortgage interest",
-      "housing loan",
-      "PITI calculator",
-    ],
+      "Calculadora gratuita de crédito habitação. Introduza valor do imóvel, entrada, taxa de juro e prazo para ver a prestação mensal, juros totais pagos e tabela de amortização.",
+    keywords: ["calculadora crédito habitação", "prestação mensal", "amortização crédito", "juros crédito habitação", "taxa euribor"],
     inputs: {
       loanAmount: { label: "Home Price", help: "Total purchase price of the property." },
       downPayment: { label: "Down Payment", help: "Amount paid upfront; reduces the loan principal." },
@@ -106,19 +98,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Mortgage Calculator",
-    short: "Calculate your monthly mortgage payment, total interest, and full amortization schedule.",
+    title: "Kalkulator KPR",
+    short: "Hitung angsuran bulanan, total bunga, dan amortisasi KPR Anda.",
     description:
-      "Free mortgage calculator using the standard annuity formula. Enter your loan amount, interest rate, and term to get your monthly payment, total cost, and a complete amortization table.",
-    keywords: [
-      "mortgage calculator",
-      "monthly mortgage payment",
-      "home loan calculator",
-      "amortization schedule",
-      "mortgage interest",
-      "housing loan",
-      "PITI calculator",
-    ],
+      "Kalkulator KPR gratis. Masukkan harga properti, uang muka, suku bunga, dan jangka waktu untuk melihat angsuran bulanan, total bunga, dan tabel amortisasi.",
+    keywords: ["kalkulator KPR", "angsuran bulanan", "amortisasi KPR", "bunga KPR", "kalkulator rumah"],
     inputs: {
       loanAmount: { label: "Home Price", help: "Total purchase price of the property." },
       downPayment: { label: "Down Payment", help: "Amount paid upfront; reduces the loan principal." },

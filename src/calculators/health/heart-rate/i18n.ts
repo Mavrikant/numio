@@ -79,19 +79,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Target Heart Rate Zones — Karvonen Method",
-    short: "Calculate your 5 training heart rate zones using the Karvonen or simple percentage method.",
+    title: "Calculadora de Frequência Cardíaca",
+    short: "Calcule a sua frequência cardíaca máxima e zonas de treino.",
     description:
-      "Free heart rate zone calculator. Enter your age and resting heart rate to get your maximum HR and five training zones (recovery, base, aerobic, threshold, maximum) using the Karvonen or simple formula.",
-    keywords: [
-      "heart rate zone calculator",
-      "target heart rate",
-      "Karvonen formula",
-      "training zones",
-      "max heart rate",
-      "cardio zones",
-      "fitness calculator",
-    ],
+      "Calculadora gratuita de frequência cardíaca. Veja a frequência máxima e zonas de treino (queima gordura, aeróbica, anaeróbica).",
+    keywords: ["frequência cardíaca", "FCmáx", "zonas treino", "ritmo cardíaco", "treino aeróbico"],
     inputs: {
       age: {
         label: "Age (years)",
@@ -156,19 +148,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Target Heart Rate Zones — Karvonen Method",
-    short: "Calculate your 5 training heart rate zones using the Karvonen or simple percentage method.",
+    title: "Kalkulator Detak Jantung",
+    short: "Hitung detak jantung maksimum dan zona latihan Anda.",
     description:
-      "Free heart rate zone calculator. Enter your age and resting heart rate to get your maximum HR and five training zones (recovery, base, aerobic, threshold, maximum) using the Karvonen or simple formula.",
-    keywords: [
-      "heart rate zone calculator",
-      "target heart rate",
-      "Karvonen formula",
-      "training zones",
-      "max heart rate",
-      "cardio zones",
-      "fitness calculator",
-    ],
+      "Kalkulator detak jantung gratis. Lihat detak jantung maksimum dan zona latihan (pembakaran lemak, aerobik, anaerobik).",
+    keywords: ["detak jantung", "denyut nadi", "zona latihan", "detak maksimum", "latihan aerobik"],
     inputs: {
       age: {
         label: "Age (years)",
