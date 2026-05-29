@@ -1,0 +1,14 @@
+{
+  "health": "Kesehatan",
+  "finance": "Keuangan",
+  "engineering": "Teknik",
+  "math": "Matematika",
+  "conversion": "Konversi",
+  "datetime": "Tanggal & Waktu",
+  "data-analysis": "Analisis Data",
+  "visualization": "Visualisasi",
+  "statistics": "Statistik",
+  "security": "Keamanan",
+  "text": "Teks",
+  "developer": "Pengembang"
+}

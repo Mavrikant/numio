@@ -13,6 +13,8 @@ export const LOCALES = [
   "fr",
   "es",
   "it",
+  "pt",
+  "id",
   "ar",
   "ru",
   "zh",
@@ -38,6 +40,8 @@ export const LOCALE_NATIVE_NAMES: Record<Locale, string> = {
   fr: "Français",
   es: "Español",
   it: "Italiano",
+  pt: "Português",
+  id: "Bahasa Indonesia",
   ar: "العربية",
   ru: "Русский",
   zh: "中文",
@@ -53,6 +57,8 @@ export const LOCALE_ENGLISH_NAMES: Record<Locale, string> = {
   fr: "French",
   es: "Spanish",
   it: "Italian",
+  pt: "Portuguese",
+  id: "Indonesian",
   ar: "Arabic",
   ru: "Russian",
   zh: "Chinese (Simplified)",
@@ -68,6 +74,8 @@ export const LOCALE_HTML_LANG: Record<Locale, string> = {
   fr: "fr",
   es: "es",
   it: "it",
+  pt: "pt",
+  id: "id",
   ar: "ar",
   ru: "ru",
   zh: "zh-Hans",
@@ -85,7 +93,8 @@ export type CurrencyCode =
   | "RUB"
   | "CNY"
   | "KRW"
-  | "INR";
+  | "INR"
+  | "IDR";
 
 export const LOCALE_CURRENCY: Record<Locale, CurrencyCode> = {
   en: "USD",
@@ -94,6 +103,8 @@ export const LOCALE_CURRENCY: Record<Locale, CurrencyCode> = {
   fr: "EUR",
   es: "EUR",
   it: "EUR",
+  pt: "EUR",
+  id: "IDR",
   ar: "USD",
   ru: "RUB",
   zh: "CNY",

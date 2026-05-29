@@ -28,6 +28,61 @@ const i18n: CalculatorI18n = {
       { q: "What is a link budget?", a: "A link budget adds up all the gains and losses between transmitter and receiver. Here: received power = transmit power + transmit gain + receive gain − path loss. Cable losses and noise are not included." },
     ],
   },
+  pt: {
+    title: "Free-Space Path Loss (FSPL) Calculator",
+    short: "Compute radio path loss and a simple link budget from frequency and distance.",
+    description:
+      "Free FSPL calculator. Enter frequency and distance to get free-space path loss in dB, plus an instant link budget (EIRP and received power) from transmit power and antenna gains. Based on the Friis equation and ITU-R P.525.",
+    keywords: ["FSPL calculator", "free space path loss", "link budget", "RF path loss", "Friis equation", "dBm", "EIRP", "received power"],
+    inputs: {
+      frequencyMHz: { label: "Frequency (MHz)", help: "Carrier frequency, e.g. 2400 for 2.4 GHz WiFi." },
+      distanceKm: { label: "Distance (km)", help: "Line-of-sight distance between the two antennas." },
+      txPowerDbm: { label: "Transmit power (dBm)", help: "Transmitter output power. 30 dBm = 1 W. Set to 0 to ignore the link budget." },
+      txGainDbi: { label: "Transmit antenna gain (dBi)", help: "Gain of the transmitting antenna over isotropic." },
+      rxGainDbi: { label: "Receive antenna gain (dBi)", help: "Gain of the receiving antenna over isotropic." },
+    },
+    outputs: {
+      fsplDb: { label: "Free-space path loss", suffix: "dB", help: "Theoretical minimum attenuation over the link." },
+      wavelengthM: { label: "Wavelength", help: "λ = c / f for the chosen frequency." },
+      eirpDbm: { label: "EIRP", suffix: "dBm", help: "Effective isotropic radiated power = Tx power + Tx gain." },
+      rxPowerDbm: { label: "Received power", suffix: "dBm", help: "P_rx = EIRP + Rx gain − FSPL." },
+    },
+    errors: { nonPositive: "Frequency and distance must be greater than zero." },
+    faq: [
+      { q: "What is free-space path loss?", a: "FSPL is how much a radio signal weakens as it spreads out over distance in empty space, with clear line of sight and no obstacles. It is the theoretical best case; real links always lose more." },
+      { q: "How is FSPL calculated?", a: "FSPL(dB) = 20·log10(d) + 20·log10(f) + 20·log10(4π/c). With distance in metres and frequency in Hz this is 20·log10(d) + 20·log10(f) − 147.55. Equivalently, in km and GHz: 92.45 + 20·log10(d_km) + 20·log10(f_GHz)." },
+      { q: "Why does higher frequency mean more loss?", a: "Higher-frequency antennas capture energy over a smaller effective area (aperture shrinks with λ²), so for the same physical link the received power drops. Doubling frequency adds 6 dB of path loss." },
+      { q: "What is a link budget?", a: "A link budget adds up all the gains and losses between transmitter and receiver. Here: received power = transmit power + transmit gain + receive gain − path loss. Cable losses and noise are not included." },
+    ],
+  },
+  id: {
+    title: "Free-Space Path Loss (FSPL) Calculator",
+    short: "Compute radio path loss and a simple link budget from frequency and distance.",
+    description:
+      "Free FSPL calculator. Enter frequency and distance to get free-space path loss in dB, plus an instant link budget (EIRP and received power) from transmit power and antenna gains. Based on the Friis equation and ITU-R P.525.",
+    keywords: ["FSPL calculator", "free space path loss", "link budget", "RF path loss", "Friis equation", "dBm", "EIRP", "received power"],
+    inputs: {
+      frequencyMHz: { label: "Frequency (MHz)", help: "Carrier frequency, e.g. 2400 for 2.4 GHz WiFi." },
+      distanceKm: { label: "Distance (km)", help: "Line-of-sight distance between the two antennas." },
+      txPowerDbm: { label: "Transmit power (dBm)", help: "Transmitter output power. 30 dBm = 1 W. Set to 0 to ignore the link budget." },
+      txGainDbi: { label: "Transmit antenna gain (dBi)", help: "Gain of the transmitting antenna over isotropic." },
+      rxGainDbi: { label: "Receive antenna gain (dBi)", help: "Gain of the receiving antenna over isotropic." },
+    },
+    outputs: {
+      fsplDb: { label: "Free-space path loss", suffix: "dB", help: "Theoretical minimum attenuation over the link." },
+      wavelengthM: { label: "Wavelength", help: "λ = c / f for the chosen frequency." },
+      eirpDbm: { label: "EIRP", suffix: "dBm", help: "Effective isotropic radiated power = Tx power + Tx gain." },
+      rxPowerDbm: { label: "Received power", suffix: "dBm", help: "P_rx = EIRP + Rx gain − FSPL." },
+    },
+    errors: { nonPositive: "Frequency and distance must be greater than zero." },
+    faq: [
+      { q: "What is free-space path loss?", a: "FSPL is how much a radio signal weakens as it spreads out over distance in empty space, with clear line of sight and no obstacles. It is the theoretical best case; real links always lose more." },
+      { q: "How is FSPL calculated?", a: "FSPL(dB) = 20·log10(d) + 20·log10(f) + 20·log10(4π/c). With distance in metres and frequency in Hz this is 20·log10(d) + 20·log10(f) − 147.55. Equivalently, in km and GHz: 92.45 + 20·log10(d_km) + 20·log10(f_GHz)." },
+      { q: "Why does higher frequency mean more loss?", a: "Higher-frequency antennas capture energy over a smaller effective area (aperture shrinks with λ²), so for the same physical link the received power drops. Doubling frequency adds 6 dB of path loss." },
+      { q: "What is a link budget?", a: "A link budget adds up all the gains and losses between transmitter and receiver. Here: received power = transmit power + transmit gain + receive gain − path loss. Cable losses and noise are not included." },
+    ],
+  },
+
   tr: {
     title: "Serbest Uzay Yol Kaybı (FSPL) Hesaplayıcı",
     short: "Frekans ve mesafeden radyo yol kaybını ve basit bir link bütçesini hesaplayın.",

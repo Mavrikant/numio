@@ -33,6 +33,71 @@ const i18n: CalculatorI18n = {
       { q: "Are these lengths exact?", a: "They are practical starting points. Wire diameter, insulation, height above ground and nearby objects all shift resonance, so cut a little long and trim while measuring SWR." },
     ],
   },
+  pt: {
+    title: "Dipole & Antenna Length Calculator",
+    short: "Calculate the physical length of a half-wave dipole, quarter-wave monopole or full-wave loop.",
+    description:
+      "Free antenna length calculator. Enter a frequency to get the cut length of a half-wave dipole, quarter-wave monopole or full-wave loop, including the velocity factor and per-leg length. Ideal for ham radio and antenna building.",
+    keywords: ["dipole length calculator", "antenna length", "half-wave dipole", "quarter-wave monopole", "ham radio antenna", "velocity factor", "resonant length"],
+    inputs: {
+      frequencyMHz: { label: "Frequency (MHz)", help: "Resonant frequency, e.g. 14.1 for the 20 m amateur band." },
+      type: { label: "Antenna type", help: "Half-wave dipole, quarter-wave monopole (needs a ground plane) or full-wave loop." },
+      velocityFactorPct: { label: "Velocity factor (%)", help: "Wire shortening factor; ~95% for thin bare wire, lower for insulated/thick wire." },
+    },
+    outputs: {
+      lengthM: { label: "Total length", help: "Overall conductor length (dipole tip-to-tip, loop circumference)." },
+      lengthCm: { label: "Total length (cm)" },
+      legLengthM: { label: "Each leg / element", help: "For a dipole, the length of one of the two legs (= total / 2)." },
+      wavelengthM: { label: "Free-space wavelength", help: "λ = c / f, before the velocity factor." },
+    },
+    options: {
+      type: {
+        "half-wave-dipole": "Half-wave dipole (λ/2)",
+        "quarter-wave-monopole": "Quarter-wave monopole (λ/4)",
+        "full-wave-loop": "Full-wave loop (λ)",
+      },
+    },
+    errors: { nonPositive: "Frequency must be greater than zero." },
+    faq: [
+      { q: "How long should a half-wave dipole be?", a: "Approximately L(m) = 142.5 / f(MHz) for thin wire (velocity factor ≈ 0.95). For example, at 14.1 MHz a dipole is about 10.1 m tip-to-tip, or ~5.05 m per leg." },
+      { q: "What is the velocity factor?", a: "Wire antennas are slightly shorter than the ideal electrical length because of the end effect and the wave travelling a touch slower along the wire. A factor of ~0.95 is typical for bare wire; insulated or thick conductors use a lower value." },
+      { q: "Why is a quarter-wave monopole half the length of a dipole?", a: "A monopole over a ground plane mirrors itself electrically, behaving like half of a dipole. So its physical length is λ/4 — half of the λ/2 dipole at the same frequency." },
+      { q: "Are these lengths exact?", a: "They are practical starting points. Wire diameter, insulation, height above ground and nearby objects all shift resonance, so cut a little long and trim while measuring SWR." },
+    ],
+  },
+  id: {
+    title: "Dipole & Antenna Length Calculator",
+    short: "Calculate the physical length of a half-wave dipole, quarter-wave monopole or full-wave loop.",
+    description:
+      "Free antenna length calculator. Enter a frequency to get the cut length of a half-wave dipole, quarter-wave monopole or full-wave loop, including the velocity factor and per-leg length. Ideal for ham radio and antenna building.",
+    keywords: ["dipole length calculator", "antenna length", "half-wave dipole", "quarter-wave monopole", "ham radio antenna", "velocity factor", "resonant length"],
+    inputs: {
+      frequencyMHz: { label: "Frequency (MHz)", help: "Resonant frequency, e.g. 14.1 for the 20 m amateur band." },
+      type: { label: "Antenna type", help: "Half-wave dipole, quarter-wave monopole (needs a ground plane) or full-wave loop." },
+      velocityFactorPct: { label: "Velocity factor (%)", help: "Wire shortening factor; ~95% for thin bare wire, lower for insulated/thick wire." },
+    },
+    outputs: {
+      lengthM: { label: "Total length", help: "Overall conductor length (dipole tip-to-tip, loop circumference)." },
+      lengthCm: { label: "Total length (cm)" },
+      legLengthM: { label: "Each leg / element", help: "For a dipole, the length of one of the two legs (= total / 2)." },
+      wavelengthM: { label: "Free-space wavelength", help: "λ = c / f, before the velocity factor." },
+    },
+    options: {
+      type: {
+        "half-wave-dipole": "Half-wave dipole (λ/2)",
+        "quarter-wave-monopole": "Quarter-wave monopole (λ/4)",
+        "full-wave-loop": "Full-wave loop (λ)",
+      },
+    },
+    errors: { nonPositive: "Frequency must be greater than zero." },
+    faq: [
+      { q: "How long should a half-wave dipole be?", a: "Approximately L(m) = 142.5 / f(MHz) for thin wire (velocity factor ≈ 0.95). For example, at 14.1 MHz a dipole is about 10.1 m tip-to-tip, or ~5.05 m per leg." },
+      { q: "What is the velocity factor?", a: "Wire antennas are slightly shorter than the ideal electrical length because of the end effect and the wave travelling a touch slower along the wire. A factor of ~0.95 is typical for bare wire; insulated or thick conductors use a lower value." },
+      { q: "Why is a quarter-wave monopole half the length of a dipole?", a: "A monopole over a ground plane mirrors itself electrically, behaving like half of a dipole. So its physical length is λ/4 — half of the λ/2 dipole at the same frequency." },
+      { q: "Are these lengths exact?", a: "They are practical starting points. Wire diameter, insulation, height above ground and nearby objects all shift resonance, so cut a little long and trim while measuring SWR." },
+    ],
+  },
+
   tr: {
     title: "Dipol ve Anten Uzunluğu Hesaplayıcı",
     short: "Yarım dalga dipol, çeyrek dalga monopol veya tam dalga halka antenin fiziksel uzunluğunu hesaplayın.",

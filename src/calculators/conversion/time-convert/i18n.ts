@@ -24,6 +24,53 @@ const i18n: CalculatorI18n = {
       { q: "Why does 1 month ≈ 30.4375 days?", a: "Average calendar month: 365.25 days / 12 = 30.4375 days." },
     ],
   },
+  pt: {
+    title: "Time Unit Converter",
+    short: "Convert between seconds, minutes, hours, days, weeks, months, and years.",
+    description:
+      "Free time converter for converting between seconds, minutes, hours, days, weeks, months, and years using precise Gregorian calendar averages.",
+    keywords: ["time converter", "unit conversion", "hours to days", "days to years", "time calculator"],
+    inputs: {
+      value: { label: "Value", help: "Amount to convert." },
+      fromUnit: { label: "From unit", help: "Source time unit." },
+      toUnit: { label: "To unit", help: "Target time unit." },
+    },
+    outputs: {
+      result: { label: "Result", help: "Converted time value." },
+    },
+    options: {
+      second: "Second", minute: "Minute", hour: "Hour", day: "Day", week: "Week", month: "Month", year: "Year",
+    },
+    errors: { invalidValue: "Value must be positive." },
+    faq: [
+      { q: "Why does 1 year = 365.25 days?", a: "The Gregorian calendar averages leap years: every 4 years, with exceptions for centuries not divisible by 400." },
+      { q: "Why does 1 month ≈ 30.4375 days?", a: "Average calendar month: 365.25 days / 12 = 30.4375 days." },
+    ],
+  },
+  id: {
+    title: "Time Unit Converter",
+    short: "Convert between seconds, minutes, hours, days, weeks, months, and years.",
+    description:
+      "Free time converter for converting between seconds, minutes, hours, days, weeks, months, and years using precise Gregorian calendar averages.",
+    keywords: ["time converter", "unit conversion", "hours to days", "days to years", "time calculator"],
+    inputs: {
+      value: { label: "Value", help: "Amount to convert." },
+      fromUnit: { label: "From unit", help: "Source time unit." },
+      toUnit: { label: "To unit", help: "Target time unit." },
+    },
+    outputs: {
+      result: { label: "Result", help: "Converted time value." },
+    },
+    options: {
+      second: "Second", minute: "Minute", hour: "Hour", day: "Day", week: "Week", month: "Month", year: "Year",
+    },
+    errors: { invalidValue: "Value must be positive." },
+    faq: [
+      { q: "Why does 1 year = 365.25 days?", a: "The Gregorian calendar averages leap years: every 4 years, with exceptions for centuries not divisible by 400." },
+      { q: "Why does 1 month ≈ 30.4375 days?", a: "Average calendar month: 365.25 days / 12 = 30.4375 days." },
+    ],
+  },
+
 
   tr: {
     title: "Zaman Birimi Dönüştürücü",

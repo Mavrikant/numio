@@ -12,6 +12,29 @@ const i18n: CalculatorI18n = {
       { q: "Why can early January be week 52 or 53?", a: "If the first days of January fall before that year's first Thursday, they belong to the last week of the previous year — so 1 January can be week 52 or 53 of the prior week-year." },
     ],
   },
+  pt: {
+    title: "Week Number Calculator", short: "Find the ISO-8601 week number for any date.",
+    description: "Free week number calculator. Enter a date to get its ISO-8601 week number, the week-based year and the day of the year. Weeks start on Monday and week 1 contains the first Thursday.",
+    keywords: ["week number", "iso week", "what week is it", "current week number", "week of the year"],
+    inputs: { date: { label: "Date" } },
+    outputs: { week: { label: "Week number" }, weekYear: { label: "Week-based year" }, dayOfYear: { label: "Day of year" } },
+    faq: [
+      { q: "How is the ISO week number defined?", a: "ISO-8601 weeks start on Monday, and week 1 is the week that contains the year's first Thursday (equivalently, the week containing January 4). A year has 52 or 53 weeks." },
+      { q: "Why can early January be week 52 or 53?", a: "If the first days of January fall before that year's first Thursday, they belong to the last week of the previous year — so 1 January can be week 52 or 53 of the prior week-year." },
+    ],
+  },
+  id: {
+    title: "Week Number Calculator", short: "Find the ISO-8601 week number for any date.",
+    description: "Free week number calculator. Enter a date to get its ISO-8601 week number, the week-based year and the day of the year. Weeks start on Monday and week 1 contains the first Thursday.",
+    keywords: ["week number", "iso week", "what week is it", "current week number", "week of the year"],
+    inputs: { date: { label: "Date" } },
+    outputs: { week: { label: "Week number" }, weekYear: { label: "Week-based year" }, dayOfYear: { label: "Day of year" } },
+    faq: [
+      { q: "How is the ISO week number defined?", a: "ISO-8601 weeks start on Monday, and week 1 is the week that contains the year's first Thursday (equivalently, the week containing January 4). A year has 52 or 53 weeks." },
+      { q: "Why can early January be week 52 or 53?", a: "If the first days of January fall before that year's first Thursday, they belong to the last week of the previous year — so 1 January can be week 52 or 53 of the prior week-year." },
+    ],
+  },
+
   tr: {
     title: "Hafta Numarası Hesaplayıcı", short: "Herhangi bir tarih için ISO-8601 hafta numarasını bulun.",
     description: "Ücretsiz hafta numarası hesaplayıcı. Bir tarih girerek ISO-8601 hafta numarasını, hafta bazlı yılı ve yılın gününü öğrenin. Haftalar pazartesi başlar ve 1. hafta ilk perşembeyi içerir.",

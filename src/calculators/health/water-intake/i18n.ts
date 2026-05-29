@@ -104,6 +104,213 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  pt: {
+    title: "Daily Water Intake Calculator",
+    short: "Calculate your daily water needs based on weight, activity level, and climate.",
+    description:
+      "Free daily water intake calculator. Enter your weight, activity level, and climate to find out exactly how much water you should drink each day.",
+    keywords: [
+      "water intake calculator",
+      "daily water needs",
+      "hydration calculator",
+      "how much water should I drink",
+      "water per day",
+      "daily hydration",
+      "water consumption",
+    ],
+    inputs: {
+      weight: {
+        label: "Body Weight",
+        help: "Your current body weight in kilograms.",
+      },
+      activityLevel: {
+        label: "Activity Level",
+        help: "Your typical daily physical activity level.",
+      },
+      climate: {
+        label: "Climate",
+        help: "The general climate of where you live or spend most of your time.",
+      },
+      isPregnant: {
+        label: "Pregnant",
+        help: "Check if you are currently pregnant (+300 ml/day recommended).",
+      },
+      isBreastfeeding: {
+        label: "Breastfeeding",
+        help: "Check if you are currently breastfeeding (+700 ml/day recommended).",
+      },
+    },
+    outputs: {
+      dailyWaterMl: {
+        label: "Daily Water Intake",
+        help: "Your recommended daily water intake in millilitres.",
+        suffix: "ml",
+      },
+      dailyWaterL: {
+        label: "Daily Water (Litres)",
+        help: "Your recommended daily water intake in litres.",
+        suffix: "L",
+      },
+      dailyWaterOz: {
+        label: "Daily Water (Fluid Ounces)",
+        help: "Your recommended daily water intake in fluid ounces.",
+        suffix: "fl oz",
+      },
+      dailyWaterCups: {
+        label: "Daily Water (Cups)",
+        help: "Your recommended daily water intake in standard 240 ml cups.",
+        suffix: "cups",
+      },
+      glassesOf250ml: {
+        label: "Glasses (250 ml)",
+        help: "Number of 250 ml glasses you should drink per day.",
+        suffix: "glasses",
+      },
+    },
+    options: {
+      activityLevel: {
+        sedentary: "Sedentary (little or no exercise)",
+        light: "Light (1–3 days/week)",
+        moderate: "Moderate (3–5 days/week)",
+        active: "Active (6–7 days/week)",
+        very_active: "Very Active (hard exercise, physical job)",
+      },
+      climate: {
+        temperate: "Temperate (mild weather)",
+        hot: "Hot (warm/humid climate)",
+        very_hot: "Very Hot (desert, tropical heat)",
+      },
+    },
+    errors: {
+      weightOutOfRange: "Weight must be between 1 and 300 kg.",
+    },
+    faq: [
+      {
+        q: "How is daily water intake calculated?",
+        a: "The base calculation is 35 ml per kilogram of body weight. Additional amounts are added for activity level (up to +1,400 ml for very active individuals), climate (up to +700 ml in very hot conditions), pregnancy (+300 ml), and breastfeeding (+700 ml).",
+      },
+      {
+        q: "Does this include water from food?",
+        a: "No. This calculator estimates total fluid intake from drinks. In practice, roughly 20% of daily water intake comes from food — so your actual drinking target may be slightly lower if you eat plenty of fruits and vegetables.",
+      },
+      {
+        q: "Is the 8-glasses-a-day rule accurate?",
+        a: "The '8×8' rule (eight 8-ounce glasses) is a popular simplification, but individual needs vary widely based on body weight, activity, and climate. Using a weight-based formula provides a more personalised estimate.",
+      },
+      {
+        q: "Does coffee or tea count toward daily water intake?",
+        a: "Yes. Caffeinated beverages do contribute to fluid intake, although high caffeine consumption has a mild diuretic effect. Plain water, herbal teas, and non-caffeinated drinks are the best choices for hydration.",
+      },
+      {
+        q: "What are the signs of dehydration?",
+        a: "Common signs include dark yellow urine, dry mouth, headache, dizziness, and fatigue. Severe dehydration requires immediate medical attention.",
+      },
+    ],
+  },
+  id: {
+    title: "Daily Water Intake Calculator",
+    short: "Calculate your daily water needs based on weight, activity level, and climate.",
+    description:
+      "Free daily water intake calculator. Enter your weight, activity level, and climate to find out exactly how much water you should drink each day.",
+    keywords: [
+      "water intake calculator",
+      "daily water needs",
+      "hydration calculator",
+      "how much water should I drink",
+      "water per day",
+      "daily hydration",
+      "water consumption",
+    ],
+    inputs: {
+      weight: {
+        label: "Body Weight",
+        help: "Your current body weight in kilograms.",
+      },
+      activityLevel: {
+        label: "Activity Level",
+        help: "Your typical daily physical activity level.",
+      },
+      climate: {
+        label: "Climate",
+        help: "The general climate of where you live or spend most of your time.",
+      },
+      isPregnant: {
+        label: "Pregnant",
+        help: "Check if you are currently pregnant (+300 ml/day recommended).",
+      },
+      isBreastfeeding: {
+        label: "Breastfeeding",
+        help: "Check if you are currently breastfeeding (+700 ml/day recommended).",
+      },
+    },
+    outputs: {
+      dailyWaterMl: {
+        label: "Daily Water Intake",
+        help: "Your recommended daily water intake in millilitres.",
+        suffix: "ml",
+      },
+      dailyWaterL: {
+        label: "Daily Water (Litres)",
+        help: "Your recommended daily water intake in litres.",
+        suffix: "L",
+      },
+      dailyWaterOz: {
+        label: "Daily Water (Fluid Ounces)",
+        help: "Your recommended daily water intake in fluid ounces.",
+        suffix: "fl oz",
+      },
+      dailyWaterCups: {
+        label: "Daily Water (Cups)",
+        help: "Your recommended daily water intake in standard 240 ml cups.",
+        suffix: "cups",
+      },
+      glassesOf250ml: {
+        label: "Glasses (250 ml)",
+        help: "Number of 250 ml glasses you should drink per day.",
+        suffix: "glasses",
+      },
+    },
+    options: {
+      activityLevel: {
+        sedentary: "Sedentary (little or no exercise)",
+        light: "Light (1–3 days/week)",
+        moderate: "Moderate (3–5 days/week)",
+        active: "Active (6–7 days/week)",
+        very_active: "Very Active (hard exercise, physical job)",
+      },
+      climate: {
+        temperate: "Temperate (mild weather)",
+        hot: "Hot (warm/humid climate)",
+        very_hot: "Very Hot (desert, tropical heat)",
+      },
+    },
+    errors: {
+      weightOutOfRange: "Weight must be between 1 and 300 kg.",
+    },
+    faq: [
+      {
+        q: "How is daily water intake calculated?",
+        a: "The base calculation is 35 ml per kilogram of body weight. Additional amounts are added for activity level (up to +1,400 ml for very active individuals), climate (up to +700 ml in very hot conditions), pregnancy (+300 ml), and breastfeeding (+700 ml).",
+      },
+      {
+        q: "Does this include water from food?",
+        a: "No. This calculator estimates total fluid intake from drinks. In practice, roughly 20% of daily water intake comes from food — so your actual drinking target may be slightly lower if you eat plenty of fruits and vegetables.",
+      },
+      {
+        q: "Is the 8-glasses-a-day rule accurate?",
+        a: "The '8×8' rule (eight 8-ounce glasses) is a popular simplification, but individual needs vary widely based on body weight, activity, and climate. Using a weight-based formula provides a more personalised estimate.",
+      },
+      {
+        q: "Does coffee or tea count toward daily water intake?",
+        a: "Yes. Caffeinated beverages do contribute to fluid intake, although high caffeine consumption has a mild diuretic effect. Plain water, herbal teas, and non-caffeinated drinks are the best choices for hydration.",
+      },
+      {
+        q: "What are the signs of dehydration?",
+        a: "Common signs include dark yellow urine, dry mouth, headache, dizziness, and fatigue. Severe dehydration requires immediate medical attention.",
+      },
+    ],
+  },
+
 
   tr: {
     title: "Günlük Su İhtiyacı Hesaplayıcı",

@@ -38,6 +38,81 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  pt: {
+    title: "Temperature Converter",
+    short: "Convert between Celsius, Fahrenheit, and Kelvin scales instantly",
+    description: "Convert between Celsius, Fahrenheit, and Kelvin temperature scales with instant calculations",
+    keywords: ["temperature", "celsius", "fahrenheit", "kelvin", "conversion", "thermal"],
+    inputs: {
+      celsius: { label: "Celsius", help: "Temperature in Celsius" },
+      fahrenheit: { label: "Fahrenheit", help: "Temperature in Fahrenheit" },
+      kelvin: { label: "Kelvin", help: "Temperature in Kelvin" },
+    },
+    outputs: {
+      celsius: { label: "Celsius", help: "Result in Celsius" },
+      fahrenheit: { label: "Fahrenheit", help: "Result in Fahrenheit" },
+      kelvin: { label: "Kelvin", help: "Result in Kelvin" },
+    },
+    errors: { invalidTemperature: "Temperature must be a valid number" },
+    faq: [
+      {
+        question: "What is the difference between Celsius and Fahrenheit?",
+        answer:
+          "Celsius and Fahrenheit are two temperature scales with different reference points. Water freezes at 0°C (32°F) and boils at 100°C (212°F). Celsius is the metric standard, while Fahrenheit is commonly used in the US.",
+      },
+      {
+        question: "What is Kelvin and why is it important?",
+        answer:
+          "Kelvin is the SI unit of temperature used in science and engineering. It starts at absolute zero (−273.15°C) and is used in physics and thermodynamics because it has no negative values.",
+      },
+      {
+        question: "Is there a temperature where Celsius and Fahrenheit are equal?",
+        answer: "Yes! −40°C equals −40°F. This is the only point where both scales read the same value.",
+      },
+      {
+        question: "What is absolute zero?",
+        answer: "Absolute zero is 0 Kelvin (−273.15°C or −459.67°F), the lowest possible temperature where all molecular motion stops.",
+      },
+    ],
+  },
+  id: {
+    title: "Temperature Converter",
+    short: "Convert between Celsius, Fahrenheit, and Kelvin scales instantly",
+    description: "Convert between Celsius, Fahrenheit, and Kelvin temperature scales with instant calculations",
+    keywords: ["temperature", "celsius", "fahrenheit", "kelvin", "conversion", "thermal"],
+    inputs: {
+      celsius: { label: "Celsius", help: "Temperature in Celsius" },
+      fahrenheit: { label: "Fahrenheit", help: "Temperature in Fahrenheit" },
+      kelvin: { label: "Kelvin", help: "Temperature in Kelvin" },
+    },
+    outputs: {
+      celsius: { label: "Celsius", help: "Result in Celsius" },
+      fahrenheit: { label: "Fahrenheit", help: "Result in Fahrenheit" },
+      kelvin: { label: "Kelvin", help: "Result in Kelvin" },
+    },
+    errors: { invalidTemperature: "Temperature must be a valid number" },
+    faq: [
+      {
+        question: "What is the difference between Celsius and Fahrenheit?",
+        answer:
+          "Celsius and Fahrenheit are two temperature scales with different reference points. Water freezes at 0°C (32°F) and boils at 100°C (212°F). Celsius is the metric standard, while Fahrenheit is commonly used in the US.",
+      },
+      {
+        question: "What is Kelvin and why is it important?",
+        answer:
+          "Kelvin is the SI unit of temperature used in science and engineering. It starts at absolute zero (−273.15°C) and is used in physics and thermodynamics because it has no negative values.",
+      },
+      {
+        question: "Is there a temperature where Celsius and Fahrenheit are equal?",
+        answer: "Yes! −40°C equals −40°F. This is the only point where both scales read the same value.",
+      },
+      {
+        question: "What is absolute zero?",
+        answer: "Absolute zero is 0 Kelvin (−273.15°C or −459.67°F), the lowest possible temperature where all molecular motion stops.",
+      },
+    ],
+  },
+
   tr: {
     title: "Sıcaklık Dönüştürücü",
     short: "Celsius, Fahrenheit ve Kelvin ölçekleri arasında anında dönüşüm yapın",

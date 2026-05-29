@@ -82,6 +82,169 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  pt: {
+    title: "BMR Calculator",
+    short: "Calculate your Basal Metabolic Rate — the calories your body burns at rest.",
+    description:
+      "Free BMR calculator using Mifflin-St Jeor and Harris-Benedict formulas. Find out how many calories your body needs at complete rest to maintain vital functions.",
+    keywords: [
+      "BMR calculator",
+      "basal metabolic rate",
+      "resting metabolic rate",
+      "calories at rest",
+      "Mifflin St Jeor",
+      "Harris Benedict",
+      "metabolism calculator",
+    ],
+    inputs: {
+      formula: {
+        label: "Formula",
+        help: "Mifflin-St Jeor (1990) is recommended by most dietitians. Harris-Benedict (1984 revision) is an older alternative.",
+      },
+      gender: {
+        label: "Biological sex",
+        help: "Sex affects BMR due to differences in muscle mass and hormones.",
+      },
+      weight: {
+        label: "Weight",
+        help: "Your current body weight in kilograms.",
+      },
+      height: {
+        label: "Height",
+        help: "Your height in centimetres.",
+      },
+      age: {
+        label: "Age",
+        help: "Your age in years. BMR decreases roughly 2% per decade after age 20.",
+      },
+    },
+    outputs: {
+      bmr: {
+        label: "BMR",
+        help: "Basal Metabolic Rate — calories burned per day at complete rest.",
+        suffix: "kcal/day",
+      },
+    },
+    options: {
+      formula: {
+        mifflin: "Mifflin-St Jeor (recommended)",
+        harris: "Harris-Benedict (revised 1984)",
+      },
+      gender: {
+        male: "Male",
+        female: "Female",
+      },
+    },
+    errors: {
+      weightOutOfRange: "Weight must be between 1 and 300 kg.",
+      heightOutOfRange: "Height must be between 50 and 250 cm.",
+      ageOutOfRange: "Age must be between 1 and 120 years.",
+    },
+    faq: [
+      {
+        q: "What is BMR?",
+        a: "Basal Metabolic Rate (BMR) is the number of calories your body burns at complete rest to maintain essential functions such as breathing, circulation, cell production, and temperature regulation.",
+      },
+      {
+        q: "Which BMR formula is more accurate?",
+        a: "The Mifflin-St Jeor equation (1990) is generally considered more accurate for most modern populations and is endorsed by the Academy of Nutrition and Dietetics. The Harris-Benedict revised formula (1984) is slightly less precise but still widely used.",
+      },
+      {
+        q: "How is BMR different from TDEE?",
+        a: "BMR is the calories needed at complete rest. Total Daily Energy Expenditure (TDEE) multiplies BMR by an activity factor to account for physical activity. Use our Calorie calculator to compute your TDEE.",
+      },
+      {
+        q: "Does BMR decrease with age?",
+        a: "Yes. BMR typically declines by about 1–2% per decade from age 20, partly because muscle mass decreases with age. Resistance training can help slow this decline.",
+      },
+      {
+        q: "Can I eat fewer calories than my BMR?",
+        a: "Eating significantly below your BMR for extended periods can cause muscle loss, hormonal disruption, and nutrient deficiencies. Always consult a healthcare professional before attempting very-low-calorie diets.",
+      },
+    ],
+  },
+  id: {
+    title: "BMR Calculator",
+    short: "Calculate your Basal Metabolic Rate — the calories your body burns at rest.",
+    description:
+      "Free BMR calculator using Mifflin-St Jeor and Harris-Benedict formulas. Find out how many calories your body needs at complete rest to maintain vital functions.",
+    keywords: [
+      "BMR calculator",
+      "basal metabolic rate",
+      "resting metabolic rate",
+      "calories at rest",
+      "Mifflin St Jeor",
+      "Harris Benedict",
+      "metabolism calculator",
+    ],
+    inputs: {
+      formula: {
+        label: "Formula",
+        help: "Mifflin-St Jeor (1990) is recommended by most dietitians. Harris-Benedict (1984 revision) is an older alternative.",
+      },
+      gender: {
+        label: "Biological sex",
+        help: "Sex affects BMR due to differences in muscle mass and hormones.",
+      },
+      weight: {
+        label: "Weight",
+        help: "Your current body weight in kilograms.",
+      },
+      height: {
+        label: "Height",
+        help: "Your height in centimetres.",
+      },
+      age: {
+        label: "Age",
+        help: "Your age in years. BMR decreases roughly 2% per decade after age 20.",
+      },
+    },
+    outputs: {
+      bmr: {
+        label: "BMR",
+        help: "Basal Metabolic Rate — calories burned per day at complete rest.",
+        suffix: "kcal/day",
+      },
+    },
+    options: {
+      formula: {
+        mifflin: "Mifflin-St Jeor (recommended)",
+        harris: "Harris-Benedict (revised 1984)",
+      },
+      gender: {
+        male: "Male",
+        female: "Female",
+      },
+    },
+    errors: {
+      weightOutOfRange: "Weight must be between 1 and 300 kg.",
+      heightOutOfRange: "Height must be between 50 and 250 cm.",
+      ageOutOfRange: "Age must be between 1 and 120 years.",
+    },
+    faq: [
+      {
+        q: "What is BMR?",
+        a: "Basal Metabolic Rate (BMR) is the number of calories your body burns at complete rest to maintain essential functions such as breathing, circulation, cell production, and temperature regulation.",
+      },
+      {
+        q: "Which BMR formula is more accurate?",
+        a: "The Mifflin-St Jeor equation (1990) is generally considered more accurate for most modern populations and is endorsed by the Academy of Nutrition and Dietetics. The Harris-Benedict revised formula (1984) is slightly less precise but still widely used.",
+      },
+      {
+        q: "How is BMR different from TDEE?",
+        a: "BMR is the calories needed at complete rest. Total Daily Energy Expenditure (TDEE) multiplies BMR by an activity factor to account for physical activity. Use our Calorie calculator to compute your TDEE.",
+      },
+      {
+        q: "Does BMR decrease with age?",
+        a: "Yes. BMR typically declines by about 1–2% per decade from age 20, partly because muscle mass decreases with age. Resistance training can help slow this decline.",
+      },
+      {
+        q: "Can I eat fewer calories than my BMR?",
+        a: "Eating significantly below your BMR for extended periods can cause muscle loss, hormonal disruption, and nutrient deficiencies. Always consult a healthcare professional before attempting very-low-calorie diets.",
+      },
+    ],
+  },
+
 
   tr: {
     title: "BMR Hesaplayıcı",

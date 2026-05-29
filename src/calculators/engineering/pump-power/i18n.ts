@@ -60,6 +60,125 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  pt: {
+    title: "Pump Power Calculator",
+    short: "Calculate hydraulic, shaft, and electrical input power for a centrifugal pump.",
+    description:
+      "Free pump power calculator. Enter flow rate, head, fluid density and pump/motor efficiencies to compute hydraulic power (kW), shaft (brake) power, electrical input power, overall efficiency, annual energy use and operating cost.",
+    keywords: [
+      "pump power calculator",
+      "hydraulic power",
+      "shaft power",
+      "brake horsepower",
+      "centrifugal pump",
+      "pump efficiency",
+      "kW pump",
+      "pump energy cost",
+    ],
+    inputs: {
+      flowRate: { label: "Flow rate (Q)", help: "Volumetric flow delivered by the pump." },
+      flowUnit: { label: "Flow unit", help: "Choose cubic metres per hour (m³/h) or litres per second (L/s)." },
+      head: { label: "Total head (H)", help: "Total dynamic head the pump must develop, in metres of fluid column." },
+      density: { label: "Fluid density (ρ)", help: "Density of the pumped fluid in kg/m³. Use 1000 for water at 20°C." },
+      pumpEfficiency: { label: "Pump efficiency (η_p)", help: "Hydraulic-to-shaft efficiency of the pump in percent (typically 55–85% for centrifugal pumps)." },
+      motorEfficiency: { label: "Motor efficiency (η_m)", help: "Shaft-to-electrical efficiency of the drive motor in percent (typically 85–96% for IE3 motors)." },
+      energyCost: { label: "Electricity price", help: "Cost per kWh in your local currency. Default is $0.12/kWh (U.S. industrial average)." },
+      operatingHours: { label: "Operating hours per year", help: "Hours per year the pump runs at the rated operating point (8000 h ≈ continuous duty)." },
+    },
+    outputs: {
+      hydraulicPowerKw: { label: "Hydraulic power", help: "Useful power delivered to the fluid: P = ρ·g·Q·H." },
+      shaftPowerKw: { label: "Shaft power (brake)", help: "Mechanical power the motor must deliver to the pump shaft." },
+      electricalPowerKw: { label: "Electrical input power", help: "Electrical power drawn from the grid by the motor." },
+      overallEfficiency: { label: "Overall efficiency", help: "Wire-to-water efficiency = η_pump × η_motor." },
+      annualEnergyKwh: { label: "Annual energy use", help: "Electrical energy consumed per year at the given operating hours." },
+      annualCost: { label: "Annual operating cost", help: "Energy cost per year at the specified electricity price." },
+    },
+    options: {
+      flowUnit: { m3h: "m³/h (cubic metres per hour)", ls: "L/s (litres per second)" },
+    },
+    errors: {
+      nonPositive: "Flow, head, density and efficiencies must all be greater than zero.",
+      efficiencyTooHigh: "Efficiency cannot exceed 100%.",
+    },
+    faq: [
+      {
+        q: "What is hydraulic power?",
+        a: "Hydraulic power (also called water power) is the useful mechanical power transferred to the fluid: P = ρ·g·Q·H, where ρ is density (kg/m³), g = 9.81 m/s², Q is volumetric flow (m³/s) and H is the total dynamic head (m). It does not include pump or motor losses.",
+      },
+      {
+        q: "How is shaft (brake) power calculated?",
+        a: "Shaft power equals hydraulic power divided by the pump's hydraulic efficiency: P_shaft = P_hyd / η_pump. This is the mechanical power the motor must deliver to the pump shaft to achieve the desired flow and head.",
+      },
+      {
+        q: "What is a typical pump efficiency?",
+        a: "Centrifugal pumps typically operate at 55–85% efficiency near their best efficiency point (BEP). Small pumps and pumps far off their BEP can drop below 40%. Always size pumps to operate within ±10% of BEP.",
+      },
+      {
+        q: "Why does the calculator separate pump and motor efficiency?",
+        a: "Hydraulic, shaft and electrical input power are three different points in the energy chain. Separating them lets you isolate where losses occur — useful for retrofit decisions like upgrading to a premium-efficiency (IE3/IE4) motor or installing a VFD.",
+      },
+    ],
+  },
+  id: {
+    title: "Pump Power Calculator",
+    short: "Calculate hydraulic, shaft, and electrical input power for a centrifugal pump.",
+    description:
+      "Free pump power calculator. Enter flow rate, head, fluid density and pump/motor efficiencies to compute hydraulic power (kW), shaft (brake) power, electrical input power, overall efficiency, annual energy use and operating cost.",
+    keywords: [
+      "pump power calculator",
+      "hydraulic power",
+      "shaft power",
+      "brake horsepower",
+      "centrifugal pump",
+      "pump efficiency",
+      "kW pump",
+      "pump energy cost",
+    ],
+    inputs: {
+      flowRate: { label: "Flow rate (Q)", help: "Volumetric flow delivered by the pump." },
+      flowUnit: { label: "Flow unit", help: "Choose cubic metres per hour (m³/h) or litres per second (L/s)." },
+      head: { label: "Total head (H)", help: "Total dynamic head the pump must develop, in metres of fluid column." },
+      density: { label: "Fluid density (ρ)", help: "Density of the pumped fluid in kg/m³. Use 1000 for water at 20°C." },
+      pumpEfficiency: { label: "Pump efficiency (η_p)", help: "Hydraulic-to-shaft efficiency of the pump in percent (typically 55–85% for centrifugal pumps)." },
+      motorEfficiency: { label: "Motor efficiency (η_m)", help: "Shaft-to-electrical efficiency of the drive motor in percent (typically 85–96% for IE3 motors)." },
+      energyCost: { label: "Electricity price", help: "Cost per kWh in your local currency. Default is $0.12/kWh (U.S. industrial average)." },
+      operatingHours: { label: "Operating hours per year", help: "Hours per year the pump runs at the rated operating point (8000 h ≈ continuous duty)." },
+    },
+    outputs: {
+      hydraulicPowerKw: { label: "Hydraulic power", help: "Useful power delivered to the fluid: P = ρ·g·Q·H." },
+      shaftPowerKw: { label: "Shaft power (brake)", help: "Mechanical power the motor must deliver to the pump shaft." },
+      electricalPowerKw: { label: "Electrical input power", help: "Electrical power drawn from the grid by the motor." },
+      overallEfficiency: { label: "Overall efficiency", help: "Wire-to-water efficiency = η_pump × η_motor." },
+      annualEnergyKwh: { label: "Annual energy use", help: "Electrical energy consumed per year at the given operating hours." },
+      annualCost: { label: "Annual operating cost", help: "Energy cost per year at the specified electricity price." },
+    },
+    options: {
+      flowUnit: { m3h: "m³/h (cubic metres per hour)", ls: "L/s (litres per second)" },
+    },
+    errors: {
+      nonPositive: "Flow, head, density and efficiencies must all be greater than zero.",
+      efficiencyTooHigh: "Efficiency cannot exceed 100%.",
+    },
+    faq: [
+      {
+        q: "What is hydraulic power?",
+        a: "Hydraulic power (also called water power) is the useful mechanical power transferred to the fluid: P = ρ·g·Q·H, where ρ is density (kg/m³), g = 9.81 m/s², Q is volumetric flow (m³/s) and H is the total dynamic head (m). It does not include pump or motor losses.",
+      },
+      {
+        q: "How is shaft (brake) power calculated?",
+        a: "Shaft power equals hydraulic power divided by the pump's hydraulic efficiency: P_shaft = P_hyd / η_pump. This is the mechanical power the motor must deliver to the pump shaft to achieve the desired flow and head.",
+      },
+      {
+        q: "What is a typical pump efficiency?",
+        a: "Centrifugal pumps typically operate at 55–85% efficiency near their best efficiency point (BEP). Small pumps and pumps far off their BEP can drop below 40%. Always size pumps to operate within ±10% of BEP.",
+      },
+      {
+        q: "Why does the calculator separate pump and motor efficiency?",
+        a: "Hydraulic, shaft and electrical input power are three different points in the energy chain. Separating them lets you isolate where losses occur — useful for retrofit decisions like upgrading to a premium-efficiency (IE3/IE4) motor or installing a VFD.",
+      },
+    ],
+  },
+
 
   tr: {
     title: "Pompa Gücü Hesaplayıcı",

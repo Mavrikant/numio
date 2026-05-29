@@ -64,6 +64,133 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  pt: {
+    title: "TDEE Calculator — Daily Calorie Needs",
+    short: "Calculate your Total Daily Energy Expenditure using the Mifflin-St Jeor formula with detailed activity levels.",
+    description:
+      "Free TDEE calculator. Enter your weight, height, age, gender, and activity level to get your BMR, total daily calories, and macro targets (protein, carbs, fat) at maintenance.",
+    keywords: [
+      "TDEE calculator",
+      "total daily energy expenditure",
+      "calorie calculator",
+      "BMR calculator",
+      "Mifflin St Jeor",
+      "daily calorie needs",
+      "macro calculator",
+    ],
+    inputs: {
+      weight: { label: "Weight (kg)", help: "Your current body weight in kilograms." },
+      height: { label: "Height (cm)", help: "Your height in centimetres." },
+      age: { label: "Age (years)", help: "Your current age." },
+      gender: { label: "Biological sex", help: "Used for the Mifflin-St Jeor formula which has different constants for males and females." },
+      activityLevel: { label: "Activity level", help: "Choose the level that best matches your typical weekly routine." },
+    },
+    outputs: {
+      bmr: { label: "Basal Metabolic Rate (kcal/day)", help: "Calories your body burns at complete rest — breathing, circulation, and cell maintenance." },
+      tdee: { label: "TDEE (kcal/day)", help: "Total Daily Energy Expenditure — your maintenance calories at your current activity level." },
+      proteinTarget: { label: "Protein target (g/day)", help: "1.6 g/kg for active individuals, 0.8 g/kg for sedentary." },
+      carbTarget: { label: "Carbohydrate target (g/day)", help: "Remaining calories after protein and fat, divided by 4 kcal/g." },
+      fatTarget: { label: "Fat target (g/day)", help: "30% of total daily calories, divided by 9 kcal/g." },
+    },
+    options: {
+      gender: { male: "Male", female: "Female" },
+      activityLevel: {
+        sedentary: "Sedentary (desk job, no exercise)",
+        lightlyActive: "Lightly active (exercise 1–3 days/week)",
+        moderatelyActive: "Moderately active (exercise 3–5 days/week)",
+        veryActive: "Very active (hard exercise 6–7 days/week)",
+        extraActive: "Extra active (very hard exercise + physical job)",
+        athlete: "Athlete (twice-daily training)",
+      },
+    },
+    errors: {
+      weightOutOfRange: "Weight must be between 20 and 300 kg.",
+      heightOutOfRange: "Height must be between 100 and 250 cm.",
+      ageOutOfRange: "Age must be between 15 and 100 years.",
+    },
+    faq: [
+      {
+        q: "What is the Mifflin-St Jeor formula?",
+        a: "Developed by Mifflin et al. in 1990, it estimates basal metabolic rate: Male BMR = 10×weight(kg) + 6.25×height(cm) − 5×age + 5; Female BMR = 10×weight(kg) + 6.25×height(cm) − 5×age − 161. It is widely considered the most accurate formula for most adults.",
+      },
+      {
+        q: "What is TDEE?",
+        a: "TDEE (Total Daily Energy Expenditure) is the total number of calories you burn in a day, combining your BMR with the energy cost of your daily activities and exercise.",
+      },
+      {
+        q: "How accurate is this calculator?",
+        a: "For most adults, the Mifflin-St Jeor equation predicts resting energy expenditure within 10% of measured values. TDEE adds an activity multiplier, which adds further uncertainty. Use these figures as starting estimates and adjust based on real-world weight trends over 2–4 weeks.",
+      },
+      {
+        q: "Should I eat at my TDEE to maintain weight?",
+        a: "Yes. Eating at TDEE means consuming the same number of calories as you burn, resulting in weight maintenance over time. For fat loss, a deficit of 300–500 kcal/day is commonly recommended.",
+      },
+    ],
+  },
+  id: {
+    title: "TDEE Calculator — Daily Calorie Needs",
+    short: "Calculate your Total Daily Energy Expenditure using the Mifflin-St Jeor formula with detailed activity levels.",
+    description:
+      "Free TDEE calculator. Enter your weight, height, age, gender, and activity level to get your BMR, total daily calories, and macro targets (protein, carbs, fat) at maintenance.",
+    keywords: [
+      "TDEE calculator",
+      "total daily energy expenditure",
+      "calorie calculator",
+      "BMR calculator",
+      "Mifflin St Jeor",
+      "daily calorie needs",
+      "macro calculator",
+    ],
+    inputs: {
+      weight: { label: "Weight (kg)", help: "Your current body weight in kilograms." },
+      height: { label: "Height (cm)", help: "Your height in centimetres." },
+      age: { label: "Age (years)", help: "Your current age." },
+      gender: { label: "Biological sex", help: "Used for the Mifflin-St Jeor formula which has different constants for males and females." },
+      activityLevel: { label: "Activity level", help: "Choose the level that best matches your typical weekly routine." },
+    },
+    outputs: {
+      bmr: { label: "Basal Metabolic Rate (kcal/day)", help: "Calories your body burns at complete rest — breathing, circulation, and cell maintenance." },
+      tdee: { label: "TDEE (kcal/day)", help: "Total Daily Energy Expenditure — your maintenance calories at your current activity level." },
+      proteinTarget: { label: "Protein target (g/day)", help: "1.6 g/kg for active individuals, 0.8 g/kg for sedentary." },
+      carbTarget: { label: "Carbohydrate target (g/day)", help: "Remaining calories after protein and fat, divided by 4 kcal/g." },
+      fatTarget: { label: "Fat target (g/day)", help: "30% of total daily calories, divided by 9 kcal/g." },
+    },
+    options: {
+      gender: { male: "Male", female: "Female" },
+      activityLevel: {
+        sedentary: "Sedentary (desk job, no exercise)",
+        lightlyActive: "Lightly active (exercise 1–3 days/week)",
+        moderatelyActive: "Moderately active (exercise 3–5 days/week)",
+        veryActive: "Very active (hard exercise 6–7 days/week)",
+        extraActive: "Extra active (very hard exercise + physical job)",
+        athlete: "Athlete (twice-daily training)",
+      },
+    },
+    errors: {
+      weightOutOfRange: "Weight must be between 20 and 300 kg.",
+      heightOutOfRange: "Height must be between 100 and 250 cm.",
+      ageOutOfRange: "Age must be between 15 and 100 years.",
+    },
+    faq: [
+      {
+        q: "What is the Mifflin-St Jeor formula?",
+        a: "Developed by Mifflin et al. in 1990, it estimates basal metabolic rate: Male BMR = 10×weight(kg) + 6.25×height(cm) − 5×age + 5; Female BMR = 10×weight(kg) + 6.25×height(cm) − 5×age − 161. It is widely considered the most accurate formula for most adults.",
+      },
+      {
+        q: "What is TDEE?",
+        a: "TDEE (Total Daily Energy Expenditure) is the total number of calories you burn in a day, combining your BMR with the energy cost of your daily activities and exercise.",
+      },
+      {
+        q: "How accurate is this calculator?",
+        a: "For most adults, the Mifflin-St Jeor equation predicts resting energy expenditure within 10% of measured values. TDEE adds an activity multiplier, which adds further uncertainty. Use these figures as starting estimates and adjust based on real-world weight trends over 2–4 weeks.",
+      },
+      {
+        q: "Should I eat at my TDEE to maintain weight?",
+        a: "Yes. Eating at TDEE means consuming the same number of calories as you burn, resulting in weight maintenance over time. For fat loss, a deficit of 300–500 kcal/day is commonly recommended.",
+      },
+    ],
+  },
+
 
   tr: {
     title: "TDEE Hesaplayıcı — Günlük Kalori İhtiyacı",

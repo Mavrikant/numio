@@ -13,6 +13,29 @@ const i18n: ToolI18n = {
       { q: "Is my text uploaded anywhere?", a: "No. All counting runs locally in your browser — your text never leaves your device." },
     ],
   },
+  pt: {
+    title: "Word & Character Counter",
+    short: "Count words, characters, sentences, paragraphs and reading time as you type.",
+    description: "Free online word and character counter. Paste or type text to instantly see the number of words, characters (with and without spaces), sentences, paragraphs, lines and estimated reading time. Everything runs in your browser.",
+    keywords: ["word counter", "character counter", "letter counter", "word count", "reading time", "text statistics"],
+    ui: { ...COMMON_UI.en, placeholder: "Type or paste your text here…", characters: "Characters", charactersNoSpaces: "Characters (no spaces)", words: "Words", sentences: "Sentences", paragraphs: "Paragraphs", lines: "Lines", readingTime: "Reading time", min: "min" },
+    faq: [
+      { q: "How is reading time estimated?", a: "We divide the word count by 200 words per minute, an average adult silent-reading speed. Faster or slower readers will differ." },
+      { q: "Is my text uploaded anywhere?", a: "No. All counting runs locally in your browser — your text never leaves your device." },
+    ],
+  },
+  id: {
+    title: "Word & Character Counter",
+    short: "Count words, characters, sentences, paragraphs and reading time as you type.",
+    description: "Free online word and character counter. Paste or type text to instantly see the number of words, characters (with and without spaces), sentences, paragraphs, lines and estimated reading time. Everything runs in your browser.",
+    keywords: ["word counter", "character counter", "letter counter", "word count", "reading time", "text statistics"],
+    ui: { ...COMMON_UI.en, placeholder: "Type or paste your text here…", characters: "Characters", charactersNoSpaces: "Characters (no spaces)", words: "Words", sentences: "Sentences", paragraphs: "Paragraphs", lines: "Lines", readingTime: "Reading time", min: "min" },
+    faq: [
+      { q: "How is reading time estimated?", a: "We divide the word count by 200 words per minute, an average adult silent-reading speed. Faster or slower readers will differ." },
+      { q: "Is my text uploaded anywhere?", a: "No. All counting runs locally in your browser — your text never leaves your device." },
+    ],
+  },
+
   tr: {
     title: "Kelime ve Karakter Sayacı",
     short: "Yazarken kelime, karakter, cümle, paragraf sayısını ve okuma süresini sayın.",

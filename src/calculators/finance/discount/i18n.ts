@@ -92,6 +92,189 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  pt: {
+    title: "Discount Calculator",
+    short: "Calculate sale price, savings, and final price after discount and tax.",
+    description:
+      "Free discount calculator. Find the discounted price, total savings, and final price after sales tax. Also calculate the discount percentage from original and sale prices.",
+    keywords: [
+      "discount calculator",
+      "sale price calculator",
+      "savings calculator",
+      "percent off calculator",
+      "sale discount",
+      "original price calculator",
+      "price reduction",
+    ],
+    inputs: {
+      mode: {
+        label: "Calculation Mode",
+        help: "Discount %: enter original price and discount percentage to find sale price. Final Price: enter original and sale prices to find the discount percentage.",
+      },
+      originalPrice: {
+        label: "Original Price",
+        help: "The original or regular price before any discount.",
+      },
+      discountPct: {
+        label: "Discount (%)",
+        help: "The percentage discount applied to the original price.",
+      },
+      salePrice: {
+        label: "Sale Price",
+        help: "The discounted or sale price (used in final price mode to calculate the discount percentage).",
+      },
+      taxRate: {
+        label: "Sales Tax Rate (%)",
+        help: "Optional: add sales tax to the discounted price to get the final checkout price.",
+      },
+    },
+    outputs: {
+      salePrice: {
+        label: "Sale Price",
+        help: "The price after applying the discount.",
+      },
+      savings: {
+        label: "You Save",
+        help: "The dollar amount saved compared to the original price.",
+      },
+      discountPct: {
+        label: "Discount %",
+        help: "The percentage off the original price (shown in final price mode).",
+      },
+      finalPriceWithTax: {
+        label: "Final Price (with Tax)",
+        help: "Sale price plus sales tax — the actual amount you pay at checkout.",
+      },
+      savingsPct: {
+        label: "Savings %",
+        help: "Percentage savings relative to the original price.",
+      },
+    },
+    options: {
+      mode: {
+        discount_pct: "Discount %",
+        final_price: "Final Price → Discount %",
+      },
+    },
+    errors: {
+      originalPriceRequired: "Original price must be greater than zero.",
+      salePriceExceedsOriginal: "Sale price cannot exceed original price.",
+    },
+    faq: [
+      {
+        q: "How do I calculate a percentage discount?",
+        a: "Sale Price = Original Price × (1 − Discount% ÷ 100). For a 30% discount on $80: Sale Price = $80 × 0.70 = $56. You save $24.",
+      },
+      {
+        q: "How do I find the discount percentage from two prices?",
+        a: "Discount% = (Original Price − Sale Price) ÷ Original Price × 100. If an item was $120 and is now $84: Discount% = (120 − 84) ÷ 120 × 100 = 30%.",
+      },
+      {
+        q: "Does the discount apply before or after tax?",
+        a: "Discounts are always applied to the pre-tax price. Sales tax is then calculated on the discounted (sale) price. This calculator follows that order.",
+      },
+      {
+        q: "What is a compound discount?",
+        a: "A compound discount applies multiple discounts successively. For example, 20% off followed by an additional 10% off is not 30% off — it is 28% off (you pay 80% then 90% of that = 72%, saving 28%).",
+      },
+      {
+        q: "What is the difference between discount and markdown?",
+        a: "A discount is a temporary price reduction (a sale), while a markdown is a permanent price reduction because the item no longer sells at the original price. Both result in a lower selling price but have different retail accounting implications.",
+      },
+    ],
+  },
+  id: {
+    title: "Discount Calculator",
+    short: "Calculate sale price, savings, and final price after discount and tax.",
+    description:
+      "Free discount calculator. Find the discounted price, total savings, and final price after sales tax. Also calculate the discount percentage from original and sale prices.",
+    keywords: [
+      "discount calculator",
+      "sale price calculator",
+      "savings calculator",
+      "percent off calculator",
+      "sale discount",
+      "original price calculator",
+      "price reduction",
+    ],
+    inputs: {
+      mode: {
+        label: "Calculation Mode",
+        help: "Discount %: enter original price and discount percentage to find sale price. Final Price: enter original and sale prices to find the discount percentage.",
+      },
+      originalPrice: {
+        label: "Original Price",
+        help: "The original or regular price before any discount.",
+      },
+      discountPct: {
+        label: "Discount (%)",
+        help: "The percentage discount applied to the original price.",
+      },
+      salePrice: {
+        label: "Sale Price",
+        help: "The discounted or sale price (used in final price mode to calculate the discount percentage).",
+      },
+      taxRate: {
+        label: "Sales Tax Rate (%)",
+        help: "Optional: add sales tax to the discounted price to get the final checkout price.",
+      },
+    },
+    outputs: {
+      salePrice: {
+        label: "Sale Price",
+        help: "The price after applying the discount.",
+      },
+      savings: {
+        label: "You Save",
+        help: "The dollar amount saved compared to the original price.",
+      },
+      discountPct: {
+        label: "Discount %",
+        help: "The percentage off the original price (shown in final price mode).",
+      },
+      finalPriceWithTax: {
+        label: "Final Price (with Tax)",
+        help: "Sale price plus sales tax — the actual amount you pay at checkout.",
+      },
+      savingsPct: {
+        label: "Savings %",
+        help: "Percentage savings relative to the original price.",
+      },
+    },
+    options: {
+      mode: {
+        discount_pct: "Discount %",
+        final_price: "Final Price → Discount %",
+      },
+    },
+    errors: {
+      originalPriceRequired: "Original price must be greater than zero.",
+      salePriceExceedsOriginal: "Sale price cannot exceed original price.",
+    },
+    faq: [
+      {
+        q: "How do I calculate a percentage discount?",
+        a: "Sale Price = Original Price × (1 − Discount% ÷ 100). For a 30% discount on $80: Sale Price = $80 × 0.70 = $56. You save $24.",
+      },
+      {
+        q: "How do I find the discount percentage from two prices?",
+        a: "Discount% = (Original Price − Sale Price) ÷ Original Price × 100. If an item was $120 and is now $84: Discount% = (120 − 84) ÷ 120 × 100 = 30%.",
+      },
+      {
+        q: "Does the discount apply before or after tax?",
+        a: "Discounts are always applied to the pre-tax price. Sales tax is then calculated on the discounted (sale) price. This calculator follows that order.",
+      },
+      {
+        q: "What is a compound discount?",
+        a: "A compound discount applies multiple discounts successively. For example, 20% off followed by an additional 10% off is not 30% off — it is 28% off (you pay 80% then 90% of that = 72%, saving 28%).",
+      },
+      {
+        q: "What is the difference between discount and markdown?",
+        a: "A discount is a temporary price reduction (a sale), while a markdown is a permanent price reduction because the item no longer sells at the original price. Both result in a lower selling price but have different retail accounting implications.",
+      },
+    ],
+  },
+
 
   tr: {
     title: "İndirim Hesaplayıcı",

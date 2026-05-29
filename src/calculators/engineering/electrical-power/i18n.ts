@@ -96,6 +96,197 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  pt: {
+    title: "Electrical Power Calculator",
+    short: "Calculate voltage, current, resistance, and power consumption with energy cost estimation.",
+    description:
+      "Electrical power calculator for P=VI calculations. Find V, I, R, P from any two inputs. Estimate energy consumption and monthly costs.",
+    keywords: [
+      "power calculator",
+      "voltage current",
+      "resistance calculator",
+      "electrical power",
+      "Ohm's law",
+      "energy cost",
+      "wattage",
+    ],
+    inputs: {
+      knownQty1: {
+        label: "First Known Quantity",
+        help: "Choose voltage, current, resistance, or power.",
+      },
+      value1: {
+        label: "Value",
+        help: "Enter the numerical value.",
+      },
+      knownQty2: {
+        label: "Second Known Quantity",
+        help: "Must be different from the first.",
+      },
+      value2: {
+        label: "Value",
+        help: "Enter the numerical value.",
+      },
+    },
+    outputs: {
+      voltage: {
+        label: "Voltage",
+        help: "Electric potential difference in volts (V).",
+      },
+      current: {
+        label: "Current",
+        help: "Electric current in amperes (A).",
+      },
+      resistance: {
+        label: "Resistance",
+        help: "Electrical resistance in ohms (Ω).",
+      },
+      power: {
+        label: "Power",
+        help: "Electrical power in watts (W).",
+      },
+      energy24h: {
+        label: "Daily Energy",
+        help: "Energy consumed in 24 hours (kWh).",
+      },
+      energy30d: {
+        label: "Monthly Energy",
+        help: "Energy consumed in 30 days (kWh).",
+      },
+      costPerMonth: {
+        label: "Monthly Cost",
+        help: "Estimated cost based on average US rate ($0.15/kWh).",
+      },
+    },
+    options: {
+      voltage: "Voltage (V)",
+      current: "Current (A)",
+      resistance: "Resistance (Ω)",
+      power: "Power (W)",
+    },
+    errors: {
+      differentQuantities: "The two known quantities must be different.",
+      voltageRequired: "Voltage cannot be zero.",
+    },
+    faq: [
+      {
+        q: "What is power in electrical circuits?",
+        a: "Power (P) is the rate of energy transfer, measured in watts (W). It represents how much electrical energy is used per unit time. P = V × I (voltage times current).",
+      },
+      {
+        q: "How is monthly electricity cost calculated?",
+        a: "Cost = Power (kW) × Time (hours) × Rate ($/kWh). This calculator uses the US average rate of $0.15/kWh. Your actual rate may vary by location and utility company.",
+      },
+      {
+        q: "What's the difference between watts and watt-hours?",
+        a: "Watts measure instantaneous power (rate of energy use). Watt-hours (Wh) measure total energy consumed over time. 1 kilowatt-hour (kWh) = 1000 W × 1 hour.",
+      },
+      {
+        q: "Can I calculate power from resistance and voltage?",
+        a: "Yes. P = V² / R (voltage squared divided by resistance) gives power when you know voltage and resistance.",
+      },
+      {
+        q: "How do I reduce my electricity bill?",
+        a: "Use more efficient appliances (LED bulbs, ENERGY STAR devices), reduce idle consumption, use power strips, and monitor high-power devices like air conditioners and heaters.",
+      },
+    ],
+  },
+  id: {
+    title: "Electrical Power Calculator",
+    short: "Calculate voltage, current, resistance, and power consumption with energy cost estimation.",
+    description:
+      "Electrical power calculator for P=VI calculations. Find V, I, R, P from any two inputs. Estimate energy consumption and monthly costs.",
+    keywords: [
+      "power calculator",
+      "voltage current",
+      "resistance calculator",
+      "electrical power",
+      "Ohm's law",
+      "energy cost",
+      "wattage",
+    ],
+    inputs: {
+      knownQty1: {
+        label: "First Known Quantity",
+        help: "Choose voltage, current, resistance, or power.",
+      },
+      value1: {
+        label: "Value",
+        help: "Enter the numerical value.",
+      },
+      knownQty2: {
+        label: "Second Known Quantity",
+        help: "Must be different from the first.",
+      },
+      value2: {
+        label: "Value",
+        help: "Enter the numerical value.",
+      },
+    },
+    outputs: {
+      voltage: {
+        label: "Voltage",
+        help: "Electric potential difference in volts (V).",
+      },
+      current: {
+        label: "Current",
+        help: "Electric current in amperes (A).",
+      },
+      resistance: {
+        label: "Resistance",
+        help: "Electrical resistance in ohms (Ω).",
+      },
+      power: {
+        label: "Power",
+        help: "Electrical power in watts (W).",
+      },
+      energy24h: {
+        label: "Daily Energy",
+        help: "Energy consumed in 24 hours (kWh).",
+      },
+      energy30d: {
+        label: "Monthly Energy",
+        help: "Energy consumed in 30 days (kWh).",
+      },
+      costPerMonth: {
+        label: "Monthly Cost",
+        help: "Estimated cost based on average US rate ($0.15/kWh).",
+      },
+    },
+    options: {
+      voltage: "Voltage (V)",
+      current: "Current (A)",
+      resistance: "Resistance (Ω)",
+      power: "Power (W)",
+    },
+    errors: {
+      differentQuantities: "The two known quantities must be different.",
+      voltageRequired: "Voltage cannot be zero.",
+    },
+    faq: [
+      {
+        q: "What is power in electrical circuits?",
+        a: "Power (P) is the rate of energy transfer, measured in watts (W). It represents how much electrical energy is used per unit time. P = V × I (voltage times current).",
+      },
+      {
+        q: "How is monthly electricity cost calculated?",
+        a: "Cost = Power (kW) × Time (hours) × Rate ($/kWh). This calculator uses the US average rate of $0.15/kWh. Your actual rate may vary by location and utility company.",
+      },
+      {
+        q: "What's the difference between watts and watt-hours?",
+        a: "Watts measure instantaneous power (rate of energy use). Watt-hours (Wh) measure total energy consumed over time. 1 kilowatt-hour (kWh) = 1000 W × 1 hour.",
+      },
+      {
+        q: "Can I calculate power from resistance and voltage?",
+        a: "Yes. P = V² / R (voltage squared divided by resistance) gives power when you know voltage and resistance.",
+      },
+      {
+        q: "How do I reduce my electricity bill?",
+        a: "Use more efficient appliances (LED bulbs, ENERGY STAR devices), reduce idle consumption, use power strips, and monitor high-power devices like air conditioners and heaters.",
+      },
+    ],
+  },
+
 
   tr: {
     title: "Elektrik Gücü Hesaplayıcısı",

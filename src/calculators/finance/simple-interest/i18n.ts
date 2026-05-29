@@ -28,6 +28,57 @@ const i18n: CalculatorI18n = {
       { q: "When is simple interest used?", a: "It is common for short-term loans, some car loans, and certain bonds and Treasury instruments. Most savings accounts and mortgages use compound interest instead." },
     ],
   },
+  pt: {
+    title: "Simple Interest Calculator",
+    short: "Calculate interest earned or owed using the simple interest formula I = P·r·t.",
+    description:
+      "Free simple interest calculator. Enter a principal, annual rate and time period to get the interest and the total amount, using I = P·r·t. Unlike compound interest, simple interest accrues only on the original principal.",
+    keywords: ["simple interest calculator", "simple interest formula", "I=Prt", "principal interest", "interest calculator", "loan interest"],
+    inputs: {
+      principal: { label: "Principal amount", help: "The original sum invested or borrowed." },
+      annualRatePct: { label: "Annual interest rate (%)", help: "Yearly rate as a percentage." },
+      timeValue: { label: "Time period", help: "Length of the investment or loan." },
+      timeUnit: { label: "Time unit" },
+    },
+    outputs: {
+      interest: { label: "Interest", help: "Total simple interest over the period." },
+      totalAmount: { label: "Total amount", help: "Principal plus interest." },
+      years: { label: "Time in years", help: "Time period converted to years." },
+    },
+    options: { timeUnit: tu("Years", "Months", "Days") },
+    errors: { nonPositive: "Principal and time must be greater than zero." },
+    faq: [
+      { q: "What is simple interest?", a: "Simple interest is calculated only on the original principal, using I = P·r·t. It does not earn interest on previously earned interest, which is what makes it 'simple' compared with compound interest." },
+      { q: "How is simple interest different from compound interest?", a: "Simple interest grows linearly — the same amount each period. Compound interest grows faster because each period's interest is added to the balance and itself earns interest. Over long periods the difference is large." },
+      { q: "When is simple interest used?", a: "It is common for short-term loans, some car loans, and certain bonds and Treasury instruments. Most savings accounts and mortgages use compound interest instead." },
+    ],
+  },
+  id: {
+    title: "Simple Interest Calculator",
+    short: "Calculate interest earned or owed using the simple interest formula I = P·r·t.",
+    description:
+      "Free simple interest calculator. Enter a principal, annual rate and time period to get the interest and the total amount, using I = P·r·t. Unlike compound interest, simple interest accrues only on the original principal.",
+    keywords: ["simple interest calculator", "simple interest formula", "I=Prt", "principal interest", "interest calculator", "loan interest"],
+    inputs: {
+      principal: { label: "Principal amount", help: "The original sum invested or borrowed." },
+      annualRatePct: { label: "Annual interest rate (%)", help: "Yearly rate as a percentage." },
+      timeValue: { label: "Time period", help: "Length of the investment or loan." },
+      timeUnit: { label: "Time unit" },
+    },
+    outputs: {
+      interest: { label: "Interest", help: "Total simple interest over the period." },
+      totalAmount: { label: "Total amount", help: "Principal plus interest." },
+      years: { label: "Time in years", help: "Time period converted to years." },
+    },
+    options: { timeUnit: tu("Years", "Months", "Days") },
+    errors: { nonPositive: "Principal and time must be greater than zero." },
+    faq: [
+      { q: "What is simple interest?", a: "Simple interest is calculated only on the original principal, using I = P·r·t. It does not earn interest on previously earned interest, which is what makes it 'simple' compared with compound interest." },
+      { q: "How is simple interest different from compound interest?", a: "Simple interest grows linearly — the same amount each period. Compound interest grows faster because each period's interest is added to the balance and itself earns interest. Over long periods the difference is large." },
+      { q: "When is simple interest used?", a: "It is common for short-term loans, some car loans, and certain bonds and Treasury instruments. Most savings accounts and mortgages use compound interest instead." },
+    ],
+  },
+
   tr: {
     title: "Basit Faiz Hesaplayıcı",
     short: "I = P·r·t basit faiz formülüyle kazanılan veya ödenen faizi hesaplayın.",

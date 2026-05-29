@@ -1,0 +1,143 @@
+{
+  "site": {
+    "name": "Numio",
+    "tagline": "Calculadoras gratuitas para o dia a dia — finanças, saúde, engenharia, matemática.",
+    "description": "Utilize calculadoras gratuitas e precisas em 14 idiomas. Sem registo, sem rastreamento, resultados instantâneos."
+  },
+  "nav": {
+    "home": "Início",
+    "categories": "Categorias",
+    "search": "Pesquisar",
+    "about": "Sobre",
+    "contact": "Contacto",
+    "privacy": "Política de Privacidade",
+    "openMenu": "Abrir menu",
+    "closeMenu": "Fechar menu",
+    "skipToContent": "Saltar para o conteúdo",
+    "mainNavigation": "Navegação principal",
+    "tools": "Ferramentas",
+    "sitemap": "Mapa do site"
+  },
+  "sitemap": {
+    "title": "Mapa do site",
+    "description": "Explore todas as calculadoras, conversores e ferramentas da Numio num só lugar."
+  },
+  "actions": {
+    "calculate": "Calcular",
+    "reset": "Repor",
+    "copy": "Copiar",
+    "share": "Partilhar",
+    "print": "Imprimir",
+    "save": "Guardar"
+  },
+  "labels": {
+    "result": "Resultado",
+    "results": "Resultados",
+    "inputs": "Entradas",
+    "settings": "Definições",
+    "formula": "Fórmula",
+    "references": "Referências",
+    "related": "Calculadoras relacionadas",
+    "loading": "A carregar…",
+    "noResults": "Sem resultados"
+  },
+  "errors": {
+    "required": "Este campo é obrigatório",
+    "invalid": "Valor inválido",
+    "outOfRange": "Valor fora do intervalo",
+    "tooSmall": "Valor demasiado pequeno",
+    "tooLarge": "Valor demasiado grande"
+  },
+  "footer": {
+    "copyright": "© Numio",
+    "disclaimer": "Os resultados são apenas para fins informativos. Verifique antes de utilizar para decisões críticas.",
+    "sourceCode": "Código-fonte",
+    "links": "Ligações",
+    "lastUpdated": "Última atualização",
+    "allCalculators": "Todas as calculadoras",
+    "comingSoon": "Brevemente"
+  },
+  "theme": {
+    "toggle": "Alternar tema",
+    "light": "Claro",
+    "dark": "Escuro",
+    "auto": "Automático",
+    "switchToLight": "Mudar para modo claro",
+    "switchToDark": "Mudar para modo escuro",
+    "switchToAuto": "Mudar para tema do sistema"
+  },
+  "lang": {
+    "switchLanguage": "Mudar idioma",
+    "currentLanguage": "Idioma atual",
+    "selectLanguage": "Selecionar idioma"
+  },
+  "breadcrumb": {
+    "home": "Início",
+    "navigation": "Trilho de navegação"
+  },
+  "categories": {
+    "health": "Saúde",
+    "finance": "Finanças",
+    "engineering": "Engenharia",
+    "math": "Matemática",
+    "conversion": "Conversão",
+    "all": "Todas as categorias"
+  },
+  "consent": {
+    "title": "Valorizamos a sua privacidade",
+    "description": "Utilizamos cookies e tecnologias semelhantes para melhorar a sua experiência, analisar o tráfego e mostrar anúncios relevantes. Pode escolher quais as categorias a aceitar.",
+    "accept": "Aceitar tudo",
+    "reject": "Rejeitar tudo",
+    "customize": "Personalizar",
+    "privacyPolicy": "Política de Privacidade",
+    "customizeTitle": "Preferências de cookies",
+    "savePreferences": "Guardar preferências",
+    "back": "Voltar",
+    "essential": "Essenciais",
+    "essentialDesc": "Necessários para o funcionamento do site. Sempre ativos.",
+    "analytics": "Análise",
+    "analyticsDesc": "Ajuda-nos a perceber como os visitantes utilizam o site (anónimo).",
+    "ads": "Publicidade",
+    "adsDesc": "Permite-nos mostrar anúncios relevantes e suportar o acesso gratuito às calculadoras."
+  },
+  "tools": {
+    "description": "Carregue dados CSV e crie visualizações interativas — histogramas, gráficos de dispersão, séries temporais e estatísticas descritivas.",
+    "browseCatalog": "Ver todas as ferramentas",
+    "uploadData": "Carregar os seus dados"
+  },
+  "authority": {
+    "formula": "Fórmula",
+    "sources": "Fontes e referências",
+    "accuracyNote": "Nota sobre precisão",
+    "disclaimer": "Aviso legal",
+    "lastReviewed": "Última revisão",
+    "editorialTeam": "pela equipa editorial da Numio"
+  },
+  "seo": {
+    "metaSuffix": "Grátis, instantâneo, sem registo."
+  },
+  "compare": {
+    "toggle": "Comparar cenários",
+    "scenarioA": "Cenário A",
+    "scenarioB": "Cenário B",
+    "difference": "Diferença",
+    "exitCompare": "Sair da comparação",
+    "deltaLabel": "Δ"
+  },
+  "pdf": {
+    "print": "Imprimir",
+    "download": "Descarregar PDF",
+    "generated": "Gerado por Numio",
+    "title": "Resultados da calculadora"
+  },
+  "pwa": {
+    "install": "Instalar aplicação"
+  },
+  "nl": {
+    "toggle": "✨ Tente em português simples",
+    "placeholder": "Exemplo: Tenho 30 anos, 70 kg, 175 cm de altura",
+    "fill": "Preencher calculadora",
+    "matched": "Correspondência em {n} de {total} campos",
+    "unmatched": "Não foi possível corresponder: {fields}"
+  }
+}

@@ -26,6 +26,57 @@ const i18n: CalculatorI18n = {
       { q: "Does the order of dates matter?", a: "No. The calculator returns the absolute span, so swapping the start and end dates gives the same number of days." },
     ],
   },
+  pt: {
+    title: "Date Difference Calculator",
+    short: "Count the days, weeks, months and business days between two dates.",
+    description:
+      "Free date difference calculator. Enter a start and end date to get the total number of days, weeks and remaining days, the years/months/days breakdown, and the number of business days (Mon–Fri) between them.",
+    keywords: ["date difference calculator", "days between dates", "how many days", "weeks between dates", "business days calculator", "duration between dates"],
+    inputs: {
+      startDate: { label: "Start date" },
+      endDate: { label: "End date" },
+    },
+    outputs: {
+      totalDays: { label: "Total days" },
+      weeks: { label: "Full weeks" },
+      remainderDays: { label: "Remaining days" },
+      years: { label: "Years" },
+      months: { label: "Months" },
+      days: { label: "Days" },
+      businessDays: { label: "Business days (Mon–Fri)" },
+    },
+    faq: [
+      { q: "How many days are between two dates?", a: "Subtract the start date from the end date. This tool counts whole days in UTC, so a result of 30 means exactly 30 × 24 hours, unaffected by daylight-saving changes." },
+      { q: "What counts as a business day?", a: "Business days are Monday through Friday. The count excludes weekends but not public holidays, which differ by country — subtract those manually if needed." },
+      { q: "Does the order of dates matter?", a: "No. The calculator returns the absolute span, so swapping the start and end dates gives the same number of days." },
+    ],
+  },
+  id: {
+    title: "Date Difference Calculator",
+    short: "Count the days, weeks, months and business days between two dates.",
+    description:
+      "Free date difference calculator. Enter a start and end date to get the total number of days, weeks and remaining days, the years/months/days breakdown, and the number of business days (Mon–Fri) between them.",
+    keywords: ["date difference calculator", "days between dates", "how many days", "weeks between dates", "business days calculator", "duration between dates"],
+    inputs: {
+      startDate: { label: "Start date" },
+      endDate: { label: "End date" },
+    },
+    outputs: {
+      totalDays: { label: "Total days" },
+      weeks: { label: "Full weeks" },
+      remainderDays: { label: "Remaining days" },
+      years: { label: "Years" },
+      months: { label: "Months" },
+      days: { label: "Days" },
+      businessDays: { label: "Business days (Mon–Fri)" },
+    },
+    faq: [
+      { q: "How many days are between two dates?", a: "Subtract the start date from the end date. This tool counts whole days in UTC, so a result of 30 means exactly 30 × 24 hours, unaffected by daylight-saving changes." },
+      { q: "What counts as a business day?", a: "Business days are Monday through Friday. The count excludes weekends but not public holidays, which differ by country — subtract those manually if needed." },
+      { q: "Does the order of dates matter?", a: "No. The calculator returns the absolute span, so swapping the start and end dates gives the same number of days." },
+    ],
+  },
+
   tr: {
     title: "Tarih Farkı Hesaplama",
     short: "İki tarih arasındaki gün, hafta, ay ve iş günü sayısını hesaplayın.",

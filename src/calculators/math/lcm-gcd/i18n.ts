@@ -69,6 +69,143 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  pt: {
+    title: "GCD and LCM Calculator",
+    short: "Calculate the greatest common divisor and least common multiple of two numbers.",
+    description:
+      "Free GCD and LCM calculator using the Euclidean algorithm. Find both the greatest common divisor and least common multiple with step-by-step breakdown.",
+    keywords: [
+      "GCD calculator",
+      "LCM calculator",
+      "greatest common divisor",
+      "least common multiple",
+      "Euclidean algorithm",
+      "common divisor",
+      "common multiple",
+    ],
+    inputs: {
+      a: {
+        label: "First number",
+        help: "Enter an integer between 1 and 1,000,000.",
+      },
+      b: {
+        label: "Second number",
+        help: "Enter an integer between 1 and 1,000,000.",
+      },
+    },
+    outputs: {
+      gcdValue: {
+        label: "GCD (Greatest Common Divisor)",
+        help: "The largest number that divides both a and b without remainder.",
+      },
+      lcmValue: {
+        label: "LCM (Least Common Multiple)",
+        help: "The smallest number that is a multiple of both a and b.",
+      },
+      product: {
+        label: "Product (a × b)",
+        help: "The product of the two input numbers. Note: GCD(a,b) × LCM(a,b) = a × b.",
+      },
+      gcdSteps: {
+        label: "Euclidean Algorithm Steps",
+        help: "Step-by-step breakdown of the Euclidean algorithm used to compute GCD.",
+      },
+    },
+    errors: {
+      numberOutOfRange: "Both numbers must be between 1 and 1,000,000.",
+    },
+    faq: [
+      {
+        q: "What is GCD (Greatest Common Divisor)?",
+        a: "GCD is the largest number that divides both input numbers without leaving a remainder. For example, GCD(12, 18) = 6, because 6 divides both 12 and 18.",
+      },
+      {
+        q: "What is LCM (Least Common Multiple)?",
+        a: "LCM is the smallest number that is a multiple of both input numbers. For example, LCM(12, 18) = 36, because 36 is the smallest number divisible by both 12 and 18.",
+      },
+      {
+        q: "What is the Euclidean algorithm?",
+        a: "The Euclidean algorithm is an efficient method to compute GCD by repeatedly dividing and taking remainders: GCD(a, b) = GCD(b, a mod b) until b = 0. It is much faster than prime factorization for large numbers.",
+      },
+      {
+        q: "How are GCD and LCM related?",
+        a: "They are related by the formula: GCD(a, b) × LCM(a, b) = a × b. This identity is useful for computing LCM once GCD is known.",
+      },
+      {
+        q: "What is GCD of two coprime numbers?",
+        a: "Coprime numbers (also called relatively prime) have a GCD of 1, meaning they share no common factors other than 1. For example, GCD(7, 11) = 1.",
+      },
+    ],
+  },
+  id: {
+    title: "GCD and LCM Calculator",
+    short: "Calculate the greatest common divisor and least common multiple of two numbers.",
+    description:
+      "Free GCD and LCM calculator using the Euclidean algorithm. Find both the greatest common divisor and least common multiple with step-by-step breakdown.",
+    keywords: [
+      "GCD calculator",
+      "LCM calculator",
+      "greatest common divisor",
+      "least common multiple",
+      "Euclidean algorithm",
+      "common divisor",
+      "common multiple",
+    ],
+    inputs: {
+      a: {
+        label: "First number",
+        help: "Enter an integer between 1 and 1,000,000.",
+      },
+      b: {
+        label: "Second number",
+        help: "Enter an integer between 1 and 1,000,000.",
+      },
+    },
+    outputs: {
+      gcdValue: {
+        label: "GCD (Greatest Common Divisor)",
+        help: "The largest number that divides both a and b without remainder.",
+      },
+      lcmValue: {
+        label: "LCM (Least Common Multiple)",
+        help: "The smallest number that is a multiple of both a and b.",
+      },
+      product: {
+        label: "Product (a × b)",
+        help: "The product of the two input numbers. Note: GCD(a,b) × LCM(a,b) = a × b.",
+      },
+      gcdSteps: {
+        label: "Euclidean Algorithm Steps",
+        help: "Step-by-step breakdown of the Euclidean algorithm used to compute GCD.",
+      },
+    },
+    errors: {
+      numberOutOfRange: "Both numbers must be between 1 and 1,000,000.",
+    },
+    faq: [
+      {
+        q: "What is GCD (Greatest Common Divisor)?",
+        a: "GCD is the largest number that divides both input numbers without leaving a remainder. For example, GCD(12, 18) = 6, because 6 divides both 12 and 18.",
+      },
+      {
+        q: "What is LCM (Least Common Multiple)?",
+        a: "LCM is the smallest number that is a multiple of both input numbers. For example, LCM(12, 18) = 36, because 36 is the smallest number divisible by both 12 and 18.",
+      },
+      {
+        q: "What is the Euclidean algorithm?",
+        a: "The Euclidean algorithm is an efficient method to compute GCD by repeatedly dividing and taking remainders: GCD(a, b) = GCD(b, a mod b) until b = 0. It is much faster than prime factorization for large numbers.",
+      },
+      {
+        q: "How are GCD and LCM related?",
+        a: "They are related by the formula: GCD(a, b) × LCM(a, b) = a × b. This identity is useful for computing LCM once GCD is known.",
+      },
+      {
+        q: "What is GCD of two coprime numbers?",
+        a: "Coprime numbers (also called relatively prime) have a GCD of 1, meaning they share no common factors other than 1. For example, GCD(7, 11) = 1.",
+      },
+    ],
+  },
+
   tr: {
     title: "EBOB ve EKOK Hesaplayıcısı",
     short: "İki sayının en büyük ortak bölenini ve en küçük ortak katını hesaplayın.",

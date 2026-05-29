@@ -70,6 +70,145 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  pt: {
+    title: "Ovulation & Fertile Window Calculator",
+    short: "Find your most fertile days and predicted ovulation date based on your menstrual cycle.",
+    description:
+      "Free ovulation calculator. Enter your last menstrual period date and average cycle length to estimate your fertile window, ovulation date, LH surge, and next period.",
+    keywords: [
+      "ovulation calculator",
+      "fertile window",
+      "fertility calculator",
+      "when do I ovulate",
+      "ovulation date",
+      "cycle tracker",
+      "pregnancy planning",
+    ],
+    inputs: {
+      lmpDate: {
+        label: "Last menstrual period (LMP)",
+        help: "The first day of your most recent period.",
+      },
+      cycleLength: {
+        label: "Average cycle length (days)",
+        help: "The number of days from the first day of one period to the first day of the next. Average is 28 days (range: 21–45).",
+      },
+    },
+    outputs: {
+      ovulationDate: {
+        label: "Estimated ovulation date",
+        help: "The day your ovary is most likely to release an egg.",
+      },
+      fertileStart: {
+        label: "Fertile window start",
+        help: "Sperm can survive up to 5 days, so your fertile window begins 5 days before ovulation.",
+      },
+      fertileEnd: {
+        label: "Fertile window end",
+        help: "The day after ovulation — the egg survives about 24 hours.",
+      },
+      nextPeriod: {
+        label: "Next period (predicted)",
+        help: "Your predicted next menstrual period start date.",
+      },
+      lhSurgeDate: {
+        label: "LH surge (predicted)",
+        help: "The day before ovulation when the luteinising hormone surge is typically detected on ovulation tests.",
+      },
+    },
+    errors: {
+      invalidDate: "Please enter a valid date in YYYY-MM-DD format.",
+      cycleLengthOutOfRange: "Cycle length must be between 21 and 45 days.",
+    },
+    faq: [
+      {
+        q: "How is the fertile window calculated?",
+        a: "Ovulation typically occurs 14 days before your next period. Sperm can survive in the reproductive tract for up to 5 days, so the fertile window spans from 5 days before ovulation to 1 day after (6 days total).",
+      },
+      {
+        q: "What is an LH surge?",
+        a: "The luteinising hormone (LH) surge is a sudden increase in LH that triggers ovulation within 24–36 hours. Home ovulation predictor kits (OPKs) detect this surge in urine.",
+      },
+      {
+        q: "Can I use this calculator to avoid pregnancy?",
+        a: "No. This calculator is for educational and planning purposes only. It is not a contraceptive method. Ovulation timing varies and cannot be predicted with certainty. Consult a healthcare provider for reliable contraception.",
+      },
+      {
+        q: "What if my cycle is irregular?",
+        a: "This calculator assumes a regular cycle. If your cycle length varies significantly from month to month, the estimates will be less accurate. Basal body temperature tracking and ovulation test strips can help identify ovulation more precisely.",
+      },
+    ],
+  },
+  id: {
+    title: "Ovulation & Fertile Window Calculator",
+    short: "Find your most fertile days and predicted ovulation date based on your menstrual cycle.",
+    description:
+      "Free ovulation calculator. Enter your last menstrual period date and average cycle length to estimate your fertile window, ovulation date, LH surge, and next period.",
+    keywords: [
+      "ovulation calculator",
+      "fertile window",
+      "fertility calculator",
+      "when do I ovulate",
+      "ovulation date",
+      "cycle tracker",
+      "pregnancy planning",
+    ],
+    inputs: {
+      lmpDate: {
+        label: "Last menstrual period (LMP)",
+        help: "The first day of your most recent period.",
+      },
+      cycleLength: {
+        label: "Average cycle length (days)",
+        help: "The number of days from the first day of one period to the first day of the next. Average is 28 days (range: 21–45).",
+      },
+    },
+    outputs: {
+      ovulationDate: {
+        label: "Estimated ovulation date",
+        help: "The day your ovary is most likely to release an egg.",
+      },
+      fertileStart: {
+        label: "Fertile window start",
+        help: "Sperm can survive up to 5 days, so your fertile window begins 5 days before ovulation.",
+      },
+      fertileEnd: {
+        label: "Fertile window end",
+        help: "The day after ovulation — the egg survives about 24 hours.",
+      },
+      nextPeriod: {
+        label: "Next period (predicted)",
+        help: "Your predicted next menstrual period start date.",
+      },
+      lhSurgeDate: {
+        label: "LH surge (predicted)",
+        help: "The day before ovulation when the luteinising hormone surge is typically detected on ovulation tests.",
+      },
+    },
+    errors: {
+      invalidDate: "Please enter a valid date in YYYY-MM-DD format.",
+      cycleLengthOutOfRange: "Cycle length must be between 21 and 45 days.",
+    },
+    faq: [
+      {
+        q: "How is the fertile window calculated?",
+        a: "Ovulation typically occurs 14 days before your next period. Sperm can survive in the reproductive tract for up to 5 days, so the fertile window spans from 5 days before ovulation to 1 day after (6 days total).",
+      },
+      {
+        q: "What is an LH surge?",
+        a: "The luteinising hormone (LH) surge is a sudden increase in LH that triggers ovulation within 24–36 hours. Home ovulation predictor kits (OPKs) detect this surge in urine.",
+      },
+      {
+        q: "Can I use this calculator to avoid pregnancy?",
+        a: "No. This calculator is for educational and planning purposes only. It is not a contraceptive method. Ovulation timing varies and cannot be predicted with certainty. Consult a healthcare provider for reliable contraception.",
+      },
+      {
+        q: "What if my cycle is irregular?",
+        a: "This calculator assumes a regular cycle. If your cycle length varies significantly from month to month, the estimates will be less accurate. Basal body temperature tracking and ovulation test strips can help identify ovulation more precisely.",
+      },
+    ],
+  },
+
 
   tr: {
     title: "Ovülasyon ve Fertil Pencere Hesaplayıcı",

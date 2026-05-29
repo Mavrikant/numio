@@ -79,6 +79,163 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  pt: {
+    title: "Period & Menstrual Cycle Tracker",
+    short: "Predict your next period, ovulation date, and fertile window based on your cycle.",
+    description:
+      "Free period tracker and menstrual cycle calculator. Enter your last period date and cycle length to predict your next period, ovulation, and fertile window.",
+    keywords: [
+      "period calculator",
+      "menstrual cycle tracker",
+      "ovulation calculator",
+      "fertile window calculator",
+      "next period date",
+      "fertility calendar",
+      "period predictor",
+    ],
+    inputs: {
+      lastPeriodDate: {
+        label: "First day of last period",
+        help: "Enter the date your most recent period started (YYYY-MM-DD).",
+      },
+      cycleLength: {
+        label: "Cycle length (days)",
+        help: "The average number of days from the start of one period to the start of the next. Typical range: 21–35 days.",
+      },
+      periodLength: {
+        label: "Period length (days)",
+        help: "How many days your period typically lasts. Common range: 2–10 days.",
+      },
+    },
+    outputs: {
+      nextPeriodDate: {
+        label: "Next Period Date",
+        help: "Predicted start date of your next menstrual period.",
+      },
+      ovulationDate: {
+        label: "Ovulation Date",
+        help: "Estimated ovulation date, approximately 14 days before your next period.",
+      },
+      fertileWindowStart: {
+        label: "Fertile Window Start",
+        help: "Start of your fertile window — 5 days before estimated ovulation.",
+      },
+      fertileWindowEnd: {
+        label: "Fertile Window End",
+        help: "End of your fertile window — 1 day after estimated ovulation.",
+      },
+      daysUntilNextPeriod: {
+        label: "Days Until Next Period",
+        help: "Number of days from your last period start until your next predicted period.",
+      },
+    },
+    errors: {
+      invalidDate: "Please enter a valid date in YYYY-MM-DD format.",
+      cycleTooShort: "Cycle length must be at least 21 days.",
+      cycleTooLong: "Cycle length cannot exceed 35 days.",
+    },
+    faq: [
+      {
+        q: "How accurate is the period prediction?",
+        a: "Predictions are estimates based on an assumed regular cycle. Actual dates can vary due to stress, illness, hormonal changes, and other factors. The more consistent your cycle, the more accurate the prediction.",
+      },
+      {
+        q: "What is the fertile window?",
+        a: "The fertile window is the period of time during which pregnancy is possible. It spans approximately 6 days: the 5 days before ovulation and the day of ovulation itself. Sperm can survive in the reproductive tract for up to 5 days, while the egg is viable for about 24 hours after ovulation.",
+      },
+      {
+        q: "When does ovulation occur?",
+        a: "Ovulation typically occurs 14 days before the start of the next period, regardless of cycle length. For a 28-day cycle, that is around day 14. For a 35-day cycle, it is around day 21.",
+      },
+      {
+        q: "Can I use this calculator for birth control?",
+        a: "No. This calculator is for informational purposes only and is not a reliable form of contraception. Natural family planning methods require careful tracking over many cycles and guidance from a healthcare professional.",
+      },
+      {
+        q: "What if my cycle is irregular?",
+        a: "This calculator assumes a regular cycle length. If your periods are irregular, predictions will be less reliable. Track your cycle over several months to identify patterns, and consult a gynecologist if irregularity is a concern.",
+      },
+    ],
+  },
+  id: {
+    title: "Period & Menstrual Cycle Tracker",
+    short: "Predict your next period, ovulation date, and fertile window based on your cycle.",
+    description:
+      "Free period tracker and menstrual cycle calculator. Enter your last period date and cycle length to predict your next period, ovulation, and fertile window.",
+    keywords: [
+      "period calculator",
+      "menstrual cycle tracker",
+      "ovulation calculator",
+      "fertile window calculator",
+      "next period date",
+      "fertility calendar",
+      "period predictor",
+    ],
+    inputs: {
+      lastPeriodDate: {
+        label: "First day of last period",
+        help: "Enter the date your most recent period started (YYYY-MM-DD).",
+      },
+      cycleLength: {
+        label: "Cycle length (days)",
+        help: "The average number of days from the start of one period to the start of the next. Typical range: 21–35 days.",
+      },
+      periodLength: {
+        label: "Period length (days)",
+        help: "How many days your period typically lasts. Common range: 2–10 days.",
+      },
+    },
+    outputs: {
+      nextPeriodDate: {
+        label: "Next Period Date",
+        help: "Predicted start date of your next menstrual period.",
+      },
+      ovulationDate: {
+        label: "Ovulation Date",
+        help: "Estimated ovulation date, approximately 14 days before your next period.",
+      },
+      fertileWindowStart: {
+        label: "Fertile Window Start",
+        help: "Start of your fertile window — 5 days before estimated ovulation.",
+      },
+      fertileWindowEnd: {
+        label: "Fertile Window End",
+        help: "End of your fertile window — 1 day after estimated ovulation.",
+      },
+      daysUntilNextPeriod: {
+        label: "Days Until Next Period",
+        help: "Number of days from your last period start until your next predicted period.",
+      },
+    },
+    errors: {
+      invalidDate: "Please enter a valid date in YYYY-MM-DD format.",
+      cycleTooShort: "Cycle length must be at least 21 days.",
+      cycleTooLong: "Cycle length cannot exceed 35 days.",
+    },
+    faq: [
+      {
+        q: "How accurate is the period prediction?",
+        a: "Predictions are estimates based on an assumed regular cycle. Actual dates can vary due to stress, illness, hormonal changes, and other factors. The more consistent your cycle, the more accurate the prediction.",
+      },
+      {
+        q: "What is the fertile window?",
+        a: "The fertile window is the period of time during which pregnancy is possible. It spans approximately 6 days: the 5 days before ovulation and the day of ovulation itself. Sperm can survive in the reproductive tract for up to 5 days, while the egg is viable for about 24 hours after ovulation.",
+      },
+      {
+        q: "When does ovulation occur?",
+        a: "Ovulation typically occurs 14 days before the start of the next period, regardless of cycle length. For a 28-day cycle, that is around day 14. For a 35-day cycle, it is around day 21.",
+      },
+      {
+        q: "Can I use this calculator for birth control?",
+        a: "No. This calculator is for informational purposes only and is not a reliable form of contraception. Natural family planning methods require careful tracking over many cycles and guidance from a healthcare professional.",
+      },
+      {
+        q: "What if my cycle is irregular?",
+        a: "This calculator assumes a regular cycle length. If your periods are irregular, predictions will be less reliable. Track your cycle over several months to identify patterns, and consult a gynecologist if irregularity is a concern.",
+      },
+    ],
+  },
+
 
   tr: {
     title: "Adet & Menstrüasyon Döngüsü Takipçisi",

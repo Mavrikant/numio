@@ -76,6 +76,157 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  pt: {
+    title: "Resistor Color Code Calculator",
+    short: "Decode 4-band and 5-band resistor color codes to find resistance value and tolerance.",
+    description:
+      "Free resistor color code decoder. Select the color bands on your resistor to instantly identify the resistance value in ohms, the tolerance percentage, and the minimum and maximum resistance range.",
+    keywords: [
+      "resistor color code calculator",
+      "resistor band decoder",
+      "4 band resistor calculator",
+      "5 band resistor calculator",
+      "IEC 60062",
+      "electronics resistor",
+      "ohm color code",
+    ],
+    inputs: {
+      bandCount: { label: "Number of bands", help: "4-band resistors have 2 significant digits; 5-band have 3." },
+      band1: { label: "Band 1 (1st digit)", help: "First significant digit color." },
+      band2: { label: "Band 2 (2nd digit)", help: "Second significant digit color." },
+      band3: { label: "Band 3 (3rd digit)", help: "Third significant digit (5-band only)." },
+      multiplierBand: { label: "Multiplier band", help: "The multiplier color band." },
+      toleranceBand: { label: "Tolerance band", help: "The tolerance color band." },
+    },
+    outputs: {
+      resistance: { label: "Resistance (Ω)", help: "Nominal resistance value in ohms." },
+      tolerancePct: { label: "Tolerance (%)", help: "Tolerance as a percentage of the nominal value." },
+      minValue: { label: "Min value (Ω)", help: "Minimum resistance within tolerance." },
+      maxValue: { label: "Max value (Ω)", help: "Maximum resistance within tolerance." },
+      colorName1: { label: "Band 1 color" },
+      colorName2: { label: "Band 2 color" },
+      colorName3: { label: "Band 3 color" },
+      multiplierColorName: { label: "Multiplier color" },
+      toleranceColorName: { label: "Tolerance color" },
+    },
+    options: {
+      bandCount: { fourBand: "4 Bands", fiveBand: "5 Bands" },
+      band1: {
+        black: "Black (0)", brown: "Brown (1)", red: "Red (2)", orange: "Orange (3)",
+        yellow: "Yellow (4)", green: "Green (5)", blue: "Blue (6)", violet: "Violet (7)",
+        gray: "Gray (8)", white: "White (9)",
+      },
+      band2: {
+        black: "Black (0)", brown: "Brown (1)", red: "Red (2)", orange: "Orange (3)",
+        yellow: "Yellow (4)", green: "Green (5)", blue: "Blue (6)", violet: "Violet (7)",
+        gray: "Gray (8)", white: "White (9)",
+      },
+      band3: {
+        black: "Black (0)", brown: "Brown (1)", red: "Red (2)", orange: "Orange (3)",
+        yellow: "Yellow (4)", green: "Green (5)", blue: "Blue (6)", violet: "Violet (7)",
+        gray: "Gray (8)", white: "White (9)",
+      },
+      multiplierBand: {
+        black: "Black (×1)", brown: "Brown (×10)", red: "Red (×100)", orange: "Orange (×1k)",
+        yellow: "Yellow (×10k)", green: "Green (×100k)", blue: "Blue (×1M)", violet: "Violet (×10M)",
+        gray: "Gray (×100M)", white: "White (×1G)", gold: "Gold (×0.1)", silver: "Silver (×0.01)",
+      },
+      toleranceBand: {
+        brown: "Brown (±1%)", red: "Red (±2%)", green: "Green (±0.5%)", blue: "Blue (±0.25%)",
+        violet: "Violet (±0.1%)", gray: "Gray (±0.05%)", gold: "Gold (±5%)", silver: "Silver (±10%)",
+      },
+    },
+    faq: [
+      {
+        q: "How do I read a 4-band resistor?",
+        a: "A 4-band resistor has: Band 1 (first digit), Band 2 (second digit), Band 3 (multiplier), and Band 4 (tolerance). Read from left to right, starting from the band closest to one end of the resistor.",
+      },
+      {
+        q: "What is the difference between a 4-band and 5-band resistor?",
+        a: "A 5-band resistor has an additional significant digit (Band 3), giving three significant digits instead of two. This allows more precise resistance values. 5-band resistors are common for precision components (±1% or better).",
+      },
+      {
+        q: "What does the tolerance band mean?",
+        a: "The tolerance band indicates how much the actual resistance may deviate from the nominal value. A gold band (±5%) on a 1 kΩ resistor means the actual value is between 950 Ω and 1050 Ω.",
+      },
+    ],
+  },
+  id: {
+    title: "Resistor Color Code Calculator",
+    short: "Decode 4-band and 5-band resistor color codes to find resistance value and tolerance.",
+    description:
+      "Free resistor color code decoder. Select the color bands on your resistor to instantly identify the resistance value in ohms, the tolerance percentage, and the minimum and maximum resistance range.",
+    keywords: [
+      "resistor color code calculator",
+      "resistor band decoder",
+      "4 band resistor calculator",
+      "5 band resistor calculator",
+      "IEC 60062",
+      "electronics resistor",
+      "ohm color code",
+    ],
+    inputs: {
+      bandCount: { label: "Number of bands", help: "4-band resistors have 2 significant digits; 5-band have 3." },
+      band1: { label: "Band 1 (1st digit)", help: "First significant digit color." },
+      band2: { label: "Band 2 (2nd digit)", help: "Second significant digit color." },
+      band3: { label: "Band 3 (3rd digit)", help: "Third significant digit (5-band only)." },
+      multiplierBand: { label: "Multiplier band", help: "The multiplier color band." },
+      toleranceBand: { label: "Tolerance band", help: "The tolerance color band." },
+    },
+    outputs: {
+      resistance: { label: "Resistance (Ω)", help: "Nominal resistance value in ohms." },
+      tolerancePct: { label: "Tolerance (%)", help: "Tolerance as a percentage of the nominal value." },
+      minValue: { label: "Min value (Ω)", help: "Minimum resistance within tolerance." },
+      maxValue: { label: "Max value (Ω)", help: "Maximum resistance within tolerance." },
+      colorName1: { label: "Band 1 color" },
+      colorName2: { label: "Band 2 color" },
+      colorName3: { label: "Band 3 color" },
+      multiplierColorName: { label: "Multiplier color" },
+      toleranceColorName: { label: "Tolerance color" },
+    },
+    options: {
+      bandCount: { fourBand: "4 Bands", fiveBand: "5 Bands" },
+      band1: {
+        black: "Black (0)", brown: "Brown (1)", red: "Red (2)", orange: "Orange (3)",
+        yellow: "Yellow (4)", green: "Green (5)", blue: "Blue (6)", violet: "Violet (7)",
+        gray: "Gray (8)", white: "White (9)",
+      },
+      band2: {
+        black: "Black (0)", brown: "Brown (1)", red: "Red (2)", orange: "Orange (3)",
+        yellow: "Yellow (4)", green: "Green (5)", blue: "Blue (6)", violet: "Violet (7)",
+        gray: "Gray (8)", white: "White (9)",
+      },
+      band3: {
+        black: "Black (0)", brown: "Brown (1)", red: "Red (2)", orange: "Orange (3)",
+        yellow: "Yellow (4)", green: "Green (5)", blue: "Blue (6)", violet: "Violet (7)",
+        gray: "Gray (8)", white: "White (9)",
+      },
+      multiplierBand: {
+        black: "Black (×1)", brown: "Brown (×10)", red: "Red (×100)", orange: "Orange (×1k)",
+        yellow: "Yellow (×10k)", green: "Green (×100k)", blue: "Blue (×1M)", violet: "Violet (×10M)",
+        gray: "Gray (×100M)", white: "White (×1G)", gold: "Gold (×0.1)", silver: "Silver (×0.01)",
+      },
+      toleranceBand: {
+        brown: "Brown (±1%)", red: "Red (±2%)", green: "Green (±0.5%)", blue: "Blue (±0.25%)",
+        violet: "Violet (±0.1%)", gray: "Gray (±0.05%)", gold: "Gold (±5%)", silver: "Silver (±10%)",
+      },
+    },
+    faq: [
+      {
+        q: "How do I read a 4-band resistor?",
+        a: "A 4-band resistor has: Band 1 (first digit), Band 2 (second digit), Band 3 (multiplier), and Band 4 (tolerance). Read from left to right, starting from the band closest to one end of the resistor.",
+      },
+      {
+        q: "What is the difference between a 4-band and 5-band resistor?",
+        a: "A 5-band resistor has an additional significant digit (Band 3), giving three significant digits instead of two. This allows more precise resistance values. 5-band resistors are common for precision components (±1% or better).",
+      },
+      {
+        q: "What does the tolerance band mean?",
+        a: "The tolerance band indicates how much the actual resistance may deviate from the nominal value. A gold band (±5%) on a 1 kΩ resistor means the actual value is between 950 Ω and 1050 Ω.",
+      },
+    ],
+  },
+
 
   tr: {
     title: "Direnç Renk Kodu Hesaplayıcı",

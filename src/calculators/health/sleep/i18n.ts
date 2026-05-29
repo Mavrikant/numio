@@ -76,6 +76,157 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  pt: {
+    title: "Sleep Cycle Calculator",
+    short: "Find the best times to wake up or go to bed based on 90-minute sleep cycles.",
+    description:
+      "Free sleep cycle calculator. Enter your bedtime or desired wake time to get the optimal sleep and wake schedule based on natural 90-minute sleep cycles.",
+    keywords: [
+      "sleep cycle calculator",
+      "best time to wake up",
+      "sleep calculator",
+      "90 minute sleep cycle",
+      "what time should I go to bed",
+      "REM sleep calculator",
+      "sleep schedule",
+    ],
+    inputs: {
+      mode: {
+        label: "Calculation Mode",
+        help: "Choose whether you know your bedtime and want wake-up suggestions, or know your wake time and want bedtime suggestions.",
+      },
+      inputTime: {
+        label: "Time (HH:MM)",
+        help: "Enter the bedtime or desired wake time in 24-hour format (e.g., 23:00 for 11 PM).",
+      },
+      cycleCount: {
+        label: "Preferred Sleep Cycles",
+        help: "How many 90-minute cycles you want to complete. 5–6 cycles (7.5–9 hours) is ideal for most adults.",
+      },
+    },
+    outputs: {
+      recommendedTimes: {
+        label: "Recommended Times",
+        help: "Optimal wake-up or bedtimes for 4, 5, 6, and 7 sleep cycles.",
+      },
+      sleepDurationHours: {
+        label: "Sleep Duration",
+        help: "Total sleep time for your selected number of cycles.",
+        suffix: "hours",
+      },
+      cyclesOptions: {
+        label: "All Cycle Options",
+        help: "Breakdown of wake-up or bedtimes for different numbers of cycles.",
+      },
+    },
+    options: {
+      mode: {
+        from_bedtime: "I know my bedtime → show wake-up times",
+        from_waketime: "I know my wake time → show bedtimes",
+      },
+    },
+    errors: {
+      invalidTime: "Please enter a valid time in HH:MM format (e.g., 23:00).",
+    },
+    faq: [
+      {
+        q: "What is a sleep cycle?",
+        a: "A sleep cycle is a sequence of sleep stages — light sleep, deep sleep, and REM (rapid eye movement) sleep — that repeats roughly every 90 minutes throughout the night. Most adults complete 4–6 cycles per night.",
+      },
+      {
+        q: "Why does the calculator add 14 minutes to my bedtime?",
+        a: "On average, it takes about 14 minutes to fall asleep after going to bed. This 'sleep latency' is added so that your wake-up recommendations align with the end of a complete cycle, not 14 minutes into one.",
+      },
+      {
+        q: "How many sleep cycles do I need?",
+        a: "Most adults need 5–6 cycles (7.5–9 hours) for optimal cognitive function and physical recovery. Athletes and those doing heavy physical work may benefit from 6–7 cycles. Less than 4 cycles chronically is associated with impaired health.",
+      },
+      {
+        q: "What happens if I wake up in the middle of a cycle?",
+        a: "Waking mid-cycle — especially during deep NREM sleep — typically causes 'sleep inertia': grogginess, disorientation, and impaired performance that can last 15–60 minutes. Timing your alarm to coincide with the end of a cycle minimises this effect.",
+      },
+      {
+        q: "Is it better to get more sleep or to wake at the right cycle end?",
+        a: "Both matter. Sleeping fewer cycles at the right end-point may leave you feeling more alert than sleeping slightly longer but waking mid-cycle. Prioritise both adequate total sleep time and cycle-aligned wake timing for best results.",
+      },
+    ],
+  },
+  id: {
+    title: "Sleep Cycle Calculator",
+    short: "Find the best times to wake up or go to bed based on 90-minute sleep cycles.",
+    description:
+      "Free sleep cycle calculator. Enter your bedtime or desired wake time to get the optimal sleep and wake schedule based on natural 90-minute sleep cycles.",
+    keywords: [
+      "sleep cycle calculator",
+      "best time to wake up",
+      "sleep calculator",
+      "90 minute sleep cycle",
+      "what time should I go to bed",
+      "REM sleep calculator",
+      "sleep schedule",
+    ],
+    inputs: {
+      mode: {
+        label: "Calculation Mode",
+        help: "Choose whether you know your bedtime and want wake-up suggestions, or know your wake time and want bedtime suggestions.",
+      },
+      inputTime: {
+        label: "Time (HH:MM)",
+        help: "Enter the bedtime or desired wake time in 24-hour format (e.g., 23:00 for 11 PM).",
+      },
+      cycleCount: {
+        label: "Preferred Sleep Cycles",
+        help: "How many 90-minute cycles you want to complete. 5–6 cycles (7.5–9 hours) is ideal for most adults.",
+      },
+    },
+    outputs: {
+      recommendedTimes: {
+        label: "Recommended Times",
+        help: "Optimal wake-up or bedtimes for 4, 5, 6, and 7 sleep cycles.",
+      },
+      sleepDurationHours: {
+        label: "Sleep Duration",
+        help: "Total sleep time for your selected number of cycles.",
+        suffix: "hours",
+      },
+      cyclesOptions: {
+        label: "All Cycle Options",
+        help: "Breakdown of wake-up or bedtimes for different numbers of cycles.",
+      },
+    },
+    options: {
+      mode: {
+        from_bedtime: "I know my bedtime → show wake-up times",
+        from_waketime: "I know my wake time → show bedtimes",
+      },
+    },
+    errors: {
+      invalidTime: "Please enter a valid time in HH:MM format (e.g., 23:00).",
+    },
+    faq: [
+      {
+        q: "What is a sleep cycle?",
+        a: "A sleep cycle is a sequence of sleep stages — light sleep, deep sleep, and REM (rapid eye movement) sleep — that repeats roughly every 90 minutes throughout the night. Most adults complete 4–6 cycles per night.",
+      },
+      {
+        q: "Why does the calculator add 14 minutes to my bedtime?",
+        a: "On average, it takes about 14 minutes to fall asleep after going to bed. This 'sleep latency' is added so that your wake-up recommendations align with the end of a complete cycle, not 14 minutes into one.",
+      },
+      {
+        q: "How many sleep cycles do I need?",
+        a: "Most adults need 5–6 cycles (7.5–9 hours) for optimal cognitive function and physical recovery. Athletes and those doing heavy physical work may benefit from 6–7 cycles. Less than 4 cycles chronically is associated with impaired health.",
+      },
+      {
+        q: "What happens if I wake up in the middle of a cycle?",
+        a: "Waking mid-cycle — especially during deep NREM sleep — typically causes 'sleep inertia': grogginess, disorientation, and impaired performance that can last 15–60 minutes. Timing your alarm to coincide with the end of a cycle minimises this effect.",
+      },
+      {
+        q: "Is it better to get more sleep or to wake at the right cycle end?",
+        a: "Both matter. Sleeping fewer cycles at the right end-point may leave you feeling more alert than sleeping slightly longer but waking mid-cycle. Prioritise both adequate total sleep time and cycle-aligned wake timing for best results.",
+      },
+    ],
+  },
+
 
   tr: {
     title: "Uyku Döngüsü Hesaplayıcı",

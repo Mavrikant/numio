@@ -82,6 +82,57 @@ const i18n: ToolI18n = {
       },
     ],
   },
+  pt: {
+    title: "Chart Builder — CSV to Graph",
+    short: "Upload a CSV and build interactive line, bar, scatter, area, pie, histogram or box charts, then download them as PNG or SVG images.",
+    description: "Free online chart maker. Upload your own CSV file or paste data, choose any chart type — line, bar, scatter, area, pie, histogram, box plot — pick the columns to plot, and download the result as a high-resolution PNG or SVG image. Everything runs in your browser; your data is never uploaded.",
+    keywords: ["chart maker", "graph maker", "csv to chart", "online chart", "data visualization", "line chart", "bar chart", "pie chart", "scatter plot", "download chart image", "plotly"],
+    ui: enUi,
+    faq: [
+      {
+        q: "Does my data get uploaded to a server?",
+        a: "No. The CSV is read and rendered entirely in your browser using JavaScript. Nothing is sent over the network, so it's safe to use with private or sensitive data.",
+      },
+      {
+        q: "What chart types are supported?",
+        a: "Line, bar (grouped or stacked), scatter, area, pie, histogram, and box plot. Pick an X column for the categories or horizontal axis and one or more numeric Y columns for the values.",
+      },
+      {
+        q: "How do I download the chart as an image?",
+        a: "Use the Download buttons above the chart to save a PNG raster image or an SVG vector file. SVG stays sharp at any size and is ideal for print or further editing.",
+      },
+      {
+        q: "What file formats can I upload?",
+        a: "Any comma, semicolon, tab, or pipe-separated text file (.csv, .tsv, .txt). The delimiter and header row are auto-detected, and both US (1,234.56) and EU (1.234,56) number formats are handled.",
+      },
+    ],
+  },
+  id: {
+    title: "Chart Builder — CSV to Graph",
+    short: "Upload a CSV and build interactive line, bar, scatter, area, pie, histogram or box charts, then download them as PNG or SVG images.",
+    description: "Free online chart maker. Upload your own CSV file or paste data, choose any chart type — line, bar, scatter, area, pie, histogram, box plot — pick the columns to plot, and download the result as a high-resolution PNG or SVG image. Everything runs in your browser; your data is never uploaded.",
+    keywords: ["chart maker", "graph maker", "csv to chart", "online chart", "data visualization", "line chart", "bar chart", "pie chart", "scatter plot", "download chart image", "plotly"],
+    ui: enUi,
+    faq: [
+      {
+        q: "Does my data get uploaded to a server?",
+        a: "No. The CSV is read and rendered entirely in your browser using JavaScript. Nothing is sent over the network, so it's safe to use with private or sensitive data.",
+      },
+      {
+        q: "What chart types are supported?",
+        a: "Line, bar (grouped or stacked), scatter, area, pie, histogram, and box plot. Pick an X column for the categories or horizontal axis and one or more numeric Y columns for the values.",
+      },
+      {
+        q: "How do I download the chart as an image?",
+        a: "Use the Download buttons above the chart to save a PNG raster image or an SVG vector file. SVG stays sharp at any size and is ideal for print or further editing.",
+      },
+      {
+        q: "What file formats can I upload?",
+        a: "Any comma, semicolon, tab, or pipe-separated text file (.csv, .tsv, .txt). The delimiter and header row are auto-detected, and both US (1,234.56) and EU (1.234,56) number formats are handled.",
+      },
+    ],
+  },
+
   tr: {
     title: "Grafik Oluşturucu — CSV'den Grafiğe",
     short: "Bir CSV yükleyin; çizgi, çubuk, dağılım, alan, pasta, histogram veya kutu grafikleri oluşturun ve PNG ya da SVG görsel olarak indirin.",

@@ -68,6 +68,141 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  pt: {
+    title: "Scientific Notation Converter",
+    short: "Convert numbers between standard, scientific, and engineering notation instantly.",
+    description:
+      "Free scientific notation converter. Enter any number and choose a mode to instantly convert between standard decimal, scientific notation (a × 10^n), and engineering notation (exponents in multiples of 3). Great for physics, chemistry, and engineering calculations.",
+    keywords: [
+      "scientific notation converter",
+      "scientific notation calculator",
+      "standard form calculator",
+      "engineering notation",
+      "convert to scientific notation",
+      "powers of ten",
+      "exponential notation",
+    ],
+    inputs: {
+      value: {
+        label: "Number",
+        help: "Enter any real number, including very large or very small values (e.g., 0.000123 or 6020000).",
+      },
+      mode: {
+        label: "Conversion mode",
+        help: "Choose whether to express the number in scientific, engineering, or standard decimal notation.",
+      },
+    },
+    outputs: {
+      scientific: {
+        label: "Result (converted)",
+        help: "The number expressed in the chosen notation format.",
+      },
+      standard: {
+        label: "Standard decimal",
+        help: "The number written as a standard decimal without exponents.",
+      },
+    },
+    options: {
+      mode: {
+        toScientific: "To Scientific Notation (a × 10ⁿ)",
+        toStandard: "To Standard Decimal",
+        toEngineering: "To Engineering Notation (exponent multiple of 3)",
+      },
+    },
+    errors: {
+      invalidNumber: "Please enter a valid real number.",
+    },
+    faq: [
+      {
+        q: "What is scientific notation?",
+        a: "Scientific notation expresses a number as a product of a coefficient (between 1 and 10) and a power of ten. For example, 0.000123 = 1.23 × 10⁻⁴ and 6,020,000 = 6.02 × 10⁶. It simplifies working with very large or very small numbers.",
+      },
+      {
+        q: "What is engineering notation and how does it differ from scientific notation?",
+        a: "Engineering notation is similar to scientific notation but restricts the exponent to multiples of 3 (0, ±3, ±6, ±9, …), which align with SI prefixes (kilo, mega, giga, milli, micro, nano). The coefficient can range from 1 to 999. For example, 0.000123 = 123 × 10⁻⁶ (123 microunits).",
+      },
+      {
+        q: "How do I convert a number to scientific notation manually?",
+        a: "Move the decimal point until there is exactly one non-zero digit to the left of it. Count the number of places moved — this is your exponent. Moving left gives a positive exponent; moving right gives a negative exponent. Example: 45,600 → 4.56 × 10⁴.",
+      },
+      {
+        q: "What are SI prefixes and how do they relate to powers of ten?",
+        a: "SI prefixes are standardised multipliers used in science and engineering: nano (10⁻⁹), micro (10⁻⁶), milli (10⁻³), kilo (10³), mega (10⁶), giga (10⁹), tera (10¹²). Engineering notation uses these same exponents so that values can be directly expressed with SI prefix units.",
+      },
+      {
+        q: "Why do scientists use scientific notation instead of writing out all the zeros?",
+        a: "Writing 602,214,076,000,000,000,000,000 (Avogadro's number) is cumbersome and error-prone. Scientific notation — 6.02214076 × 10²³ — is more concise, avoids counting zero errors, and makes the order of magnitude immediately apparent. It is the universal convention in physics and chemistry.",
+      },
+    ],
+  },
+  id: {
+    title: "Scientific Notation Converter",
+    short: "Convert numbers between standard, scientific, and engineering notation instantly.",
+    description:
+      "Free scientific notation converter. Enter any number and choose a mode to instantly convert between standard decimal, scientific notation (a × 10^n), and engineering notation (exponents in multiples of 3). Great for physics, chemistry, and engineering calculations.",
+    keywords: [
+      "scientific notation converter",
+      "scientific notation calculator",
+      "standard form calculator",
+      "engineering notation",
+      "convert to scientific notation",
+      "powers of ten",
+      "exponential notation",
+    ],
+    inputs: {
+      value: {
+        label: "Number",
+        help: "Enter any real number, including very large or very small values (e.g., 0.000123 or 6020000).",
+      },
+      mode: {
+        label: "Conversion mode",
+        help: "Choose whether to express the number in scientific, engineering, or standard decimal notation.",
+      },
+    },
+    outputs: {
+      scientific: {
+        label: "Result (converted)",
+        help: "The number expressed in the chosen notation format.",
+      },
+      standard: {
+        label: "Standard decimal",
+        help: "The number written as a standard decimal without exponents.",
+      },
+    },
+    options: {
+      mode: {
+        toScientific: "To Scientific Notation (a × 10ⁿ)",
+        toStandard: "To Standard Decimal",
+        toEngineering: "To Engineering Notation (exponent multiple of 3)",
+      },
+    },
+    errors: {
+      invalidNumber: "Please enter a valid real number.",
+    },
+    faq: [
+      {
+        q: "What is scientific notation?",
+        a: "Scientific notation expresses a number as a product of a coefficient (between 1 and 10) and a power of ten. For example, 0.000123 = 1.23 × 10⁻⁴ and 6,020,000 = 6.02 × 10⁶. It simplifies working with very large or very small numbers.",
+      },
+      {
+        q: "What is engineering notation and how does it differ from scientific notation?",
+        a: "Engineering notation is similar to scientific notation but restricts the exponent to multiples of 3 (0, ±3, ±6, ±9, …), which align with SI prefixes (kilo, mega, giga, milli, micro, nano). The coefficient can range from 1 to 999. For example, 0.000123 = 123 × 10⁻⁶ (123 microunits).",
+      },
+      {
+        q: "How do I convert a number to scientific notation manually?",
+        a: "Move the decimal point until there is exactly one non-zero digit to the left of it. Count the number of places moved — this is your exponent. Moving left gives a positive exponent; moving right gives a negative exponent. Example: 45,600 → 4.56 × 10⁴.",
+      },
+      {
+        q: "What are SI prefixes and how do they relate to powers of ten?",
+        a: "SI prefixes are standardised multipliers used in science and engineering: nano (10⁻⁹), micro (10⁻⁶), milli (10⁻³), kilo (10³), mega (10⁶), giga (10⁹), tera (10¹²). Engineering notation uses these same exponents so that values can be directly expressed with SI prefix units.",
+      },
+      {
+        q: "Why do scientists use scientific notation instead of writing out all the zeros?",
+        a: "Writing 602,214,076,000,000,000,000,000 (Avogadro's number) is cumbersome and error-prone. Scientific notation — 6.02214076 × 10²³ — is more concise, avoids counting zero errors, and makes the order of magnitude immediately apparent. It is the universal convention in physics and chemistry.",
+      },
+    ],
+  },
+
 
   tr: {
     title: "Bilimsel Gösterim Dönüştürücü",

@@ -16,6 +16,27 @@ const i18n: CalculatorI18n = {
       { q: "What discount rate should I use?", a: "Use your required rate of return or cost of capital — e.g. an expected investment return, or an interest rate. Higher rates produce lower present values." },
     ],
   },
+  pt: {
+    title: "Present Value Calculator", short: "Find what a future sum of money is worth today.",
+    description: "Free present value (PV) calculator. Enter a future amount, a discount rate and the number of periods to find what it's worth today, using PV = FV/(1+r)ⁿ, plus the total discount and discount factor.",
+    keywords: ["present value calculator", "pv calculator", "discounted value", "time value of money", "discount rate"],
+    ...io("Future value", "Discount rate", "Periods (years)", "Present value", "Total discount", "Discount factor"),
+    faq: [
+      { q: "What is present value?", a: "It's how much a future amount is worth today, given a discount rate that reflects the time value of money. $10,000 in 10 years at 5% is worth about $6,139 today." },
+      { q: "What discount rate should I use?", a: "Use your required rate of return or cost of capital — e.g. an expected investment return, or an interest rate. Higher rates produce lower present values." },
+    ],
+  },
+  id: {
+    title: "Present Value Calculator", short: "Find what a future sum of money is worth today.",
+    description: "Free present value (PV) calculator. Enter a future amount, a discount rate and the number of periods to find what it's worth today, using PV = FV/(1+r)ⁿ, plus the total discount and discount factor.",
+    keywords: ["present value calculator", "pv calculator", "discounted value", "time value of money", "discount rate"],
+    ...io("Future value", "Discount rate", "Periods (years)", "Present value", "Total discount", "Discount factor"),
+    faq: [
+      { q: "What is present value?", a: "It's how much a future amount is worth today, given a discount rate that reflects the time value of money. $10,000 in 10 years at 5% is worth about $6,139 today." },
+      { q: "What discount rate should I use?", a: "Use your required rate of return or cost of capital — e.g. an expected investment return, or an interest rate. Higher rates produce lower present values." },
+    ],
+  },
+
   tr: {
     title: "Bugünkü Değer Hesaplayıcı", short: "Gelecekteki bir para tutarının bugün ne ettiğini bulun.",
     description: "Ücretsiz bugünkü değer (PV) hesaplayıcı. Gelecekteki tutarı, iskonto oranını ve dönem sayısını girerek PV = FV/(1+r)ⁿ ile bugünkü değerini, ayrıca toplam iskontoyu ve iskonto faktörünü öğrenin.",

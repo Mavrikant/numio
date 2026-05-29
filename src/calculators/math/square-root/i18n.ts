@@ -66,6 +66,137 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  pt: {
+    title: "Square Root Calculator",
+    short: "Calculate square roots and nth roots, check perfect squares, and simplify radical expressions.",
+    description:
+      "Free square root calculator. Compute the square root or any nth root of a number. Instantly check if the number is a perfect square, and get the simplified radical form (e.g., √12 = 2√3).",
+    keywords: [
+      "square root calculator",
+      "nth root calculator",
+      "perfect square checker",
+      "simplify radical",
+      "cube root calculator",
+      "radical expression",
+      "sqrt",
+    ],
+    inputs: {
+      value: {
+        label: "Number",
+        help: "Enter a non-negative number to find its root. Can be a decimal.",
+      },
+      nthRoot: {
+        label: "Root index (n)",
+        help: "Set to 2 for square root (default), 3 for cube root, etc.",
+      },
+    },
+    outputs: {
+      root: {
+        label: "Root Value",
+        help: "The computed nth root of the number, rounded to 6 decimal places.",
+      },
+      simplifiedCoefficient: {
+        label: "Simplified — Coefficient",
+        help: "The coefficient outside the radical sign after simplification (integer part).",
+      },
+      simplifiedRadicand: {
+        label: "Simplified — Radicand",
+        help: "The number remaining under the radical sign after simplification.",
+      },
+      isPerfectSquare: {
+        label: "Is Perfect Square?",
+        help: "True if the number is a perfect square (e.g., 4, 9, 16, 25).",
+      },
+      isPerfectNthRoot: {
+        label: "Is Perfect nth Root?",
+        help: "True if the nth root is an integer (no decimal remainder).",
+      },
+    },
+    faq: [
+      {
+        q: "What is a perfect square?",
+        a: "A perfect square is an integer that is the square of another integer. Examples: 0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100. Their square roots are all whole numbers.",
+      },
+      {
+        q: "What does simplified radical form mean?",
+        a: "Simplified radical form means pulling out any perfect-square factors from under the radical. For example, √12 = √(4×3) = 2√3. The coefficient is 2 and the radicand is 3.",
+      },
+      {
+        q: "How do you calculate the cube root?",
+        a: "Set the root index (n) to 3. The cube root of 27 = 27^(1/3) = 3. The cube root of 8 = 2.",
+      },
+      {
+        q: "Can you take the square root of a negative number?",
+        a: "In the real number system, negative numbers don't have square roots. This calculator requires a non-negative input. Imaginary numbers (i = √(−1)) are a separate topic in complex number theory.",
+      },
+    ],
+  },
+  id: {
+    title: "Square Root Calculator",
+    short: "Calculate square roots and nth roots, check perfect squares, and simplify radical expressions.",
+    description:
+      "Free square root calculator. Compute the square root or any nth root of a number. Instantly check if the number is a perfect square, and get the simplified radical form (e.g., √12 = 2√3).",
+    keywords: [
+      "square root calculator",
+      "nth root calculator",
+      "perfect square checker",
+      "simplify radical",
+      "cube root calculator",
+      "radical expression",
+      "sqrt",
+    ],
+    inputs: {
+      value: {
+        label: "Number",
+        help: "Enter a non-negative number to find its root. Can be a decimal.",
+      },
+      nthRoot: {
+        label: "Root index (n)",
+        help: "Set to 2 for square root (default), 3 for cube root, etc.",
+      },
+    },
+    outputs: {
+      root: {
+        label: "Root Value",
+        help: "The computed nth root of the number, rounded to 6 decimal places.",
+      },
+      simplifiedCoefficient: {
+        label: "Simplified — Coefficient",
+        help: "The coefficient outside the radical sign after simplification (integer part).",
+      },
+      simplifiedRadicand: {
+        label: "Simplified — Radicand",
+        help: "The number remaining under the radical sign after simplification.",
+      },
+      isPerfectSquare: {
+        label: "Is Perfect Square?",
+        help: "True if the number is a perfect square (e.g., 4, 9, 16, 25).",
+      },
+      isPerfectNthRoot: {
+        label: "Is Perfect nth Root?",
+        help: "True if the nth root is an integer (no decimal remainder).",
+      },
+    },
+    faq: [
+      {
+        q: "What is a perfect square?",
+        a: "A perfect square is an integer that is the square of another integer. Examples: 0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100. Their square roots are all whole numbers.",
+      },
+      {
+        q: "What does simplified radical form mean?",
+        a: "Simplified radical form means pulling out any perfect-square factors from under the radical. For example, √12 = √(4×3) = 2√3. The coefficient is 2 and the radicand is 3.",
+      },
+      {
+        q: "How do you calculate the cube root?",
+        a: "Set the root index (n) to 3. The cube root of 27 = 27^(1/3) = 3. The cube root of 8 = 2.",
+      },
+      {
+        q: "Can you take the square root of a negative number?",
+        a: "In the real number system, negative numbers don't have square roots. This calculator requires a non-negative input. Imaginary numbers (i = √(−1)) are a separate topic in complex number theory.",
+      },
+    ],
+  },
+
 
   tr: {
     title: "Karekök Hesaplayıcı",

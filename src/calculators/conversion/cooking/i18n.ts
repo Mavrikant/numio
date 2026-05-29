@@ -26,6 +26,57 @@ const i18n: CalculatorI18n = {
       water: { label: "Water" },
     },
   },
+  pt: {
+    title: "Cooking Converter",
+    short: "Convert between cooking units (cups, tablespoons, ml, grams) for any ingredient.",
+    description: "Free cooking unit converter. Switch between cups, tablespoons, teaspoons, milliliters, liters, and grams. Density-aware for common ingredients like flour, sugar, butter.",
+    keywords: ["cooking", "recipe", "measurement", "conversion", "baking", "kitchen"],
+    inputs: {
+      value: { label: "Value", help: "Amount to convert" },
+      fromUnit: { label: "From", help: "Source unit" },
+      toUnit: { label: "To", help: "Target unit" },
+      ingredient: { label: "Ingredient", help: "Density depends on ingredient" },
+    },
+    outputs: {
+      toValue: { label: "Result", help: "Converted amount" },
+      weightGrams: { label: "Weight (g)", help: "Equivalent weight in grams" },
+    },
+    options: {
+      cup: { label: "Cup" },
+      tbsp: { label: "Tablespoon" },
+      tsp: { label: "Teaspoon" },
+      ml: { label: "Milliliter" },
+      l: { label: "Liter" },
+      g: { label: "Gram" },
+      water: { label: "Water" },
+    },
+  },
+  id: {
+    title: "Cooking Converter",
+    short: "Convert between cooking units (cups, tablespoons, ml, grams) for any ingredient.",
+    description: "Free cooking unit converter. Switch between cups, tablespoons, teaspoons, milliliters, liters, and grams. Density-aware for common ingredients like flour, sugar, butter.",
+    keywords: ["cooking", "recipe", "measurement", "conversion", "baking", "kitchen"],
+    inputs: {
+      value: { label: "Value", help: "Amount to convert" },
+      fromUnit: { label: "From", help: "Source unit" },
+      toUnit: { label: "To", help: "Target unit" },
+      ingredient: { label: "Ingredient", help: "Density depends on ingredient" },
+    },
+    outputs: {
+      toValue: { label: "Result", help: "Converted amount" },
+      weightGrams: { label: "Weight (g)", help: "Equivalent weight in grams" },
+    },
+    options: {
+      cup: { label: "Cup" },
+      tbsp: { label: "Tablespoon" },
+      tsp: { label: "Teaspoon" },
+      ml: { label: "Milliliter" },
+      l: { label: "Liter" },
+      g: { label: "Gram" },
+      water: { label: "Water" },
+    },
+  },
+
   tr: {
     title: "Mutfak Çevirici",
     short: "Mutfak birimleri arasında (bardak, çorba kaşığı, ml, gram) dönüşüm yapın.",

@@ -99,6 +99,203 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  pt: {
+    title: "CD Yield Calculator",
+    short: "Calculate the yield and future value of a certificate of deposit with compound interest.",
+    description:
+      "Free CD yield calculator. Enter your principal, APR, and term to see APY, future value, interest earned, and early withdrawal penalty impact.",
+    keywords: [
+      "CD calculator",
+      "certificate of deposit calculator",
+      "CD yield",
+      "APY calculator",
+      "savings calculator",
+      "CD interest calculator",
+      "bank deposit calculator",
+    ],
+    inputs: {
+      principal: {
+        label: "Principal",
+        help: "The initial amount deposited into the certificate of deposit.",
+      },
+      apr: {
+        label: "Annual Interest Rate (APR)",
+        help: "The stated annual interest rate on the CD, before compounding.",
+      },
+      termMonths: {
+        label: "Term (months)",
+        help: "The duration of the CD in months. Common terms: 3, 6, 12, 24, 36, 60 months.",
+      },
+      compoundFreq: {
+        label: "Compounding Frequency",
+        help: "How often interest is compounded and added to the balance.",
+      },
+      earlyWithdrawalMonths: {
+        label: "Early Withdrawal Penalty Period (months)",
+        help: "Number of months of interest lost as a penalty for early withdrawal. Set to 0 if holding to maturity.",
+      },
+    },
+    outputs: {
+      futureValue: {
+        label: "Future Value at Maturity",
+        help: "Total value of the CD at maturity, including principal and all compounded interest.",
+      },
+      interestEarned: {
+        label: "Interest Earned",
+        help: "Total interest accumulated over the full CD term.",
+      },
+      apy: {
+        label: "APY",
+        help: "Annual Percentage Yield — the effective annual return accounting for compounding.",
+      },
+      effectiveYield: {
+        label: "Effective Yield",
+        help: "Total return as a percentage of principal over the full CD term.",
+      },
+      earlyWithdrawalPenalty: {
+        label: "Early Withdrawal Penalty",
+        help: "Interest forfeited if you withdraw before maturity, based on the penalty period.",
+      },
+      netReturnAfterPenalty: {
+        label: "Net Return After Penalty",
+        help: "Interest earned minus early withdrawal penalty.",
+      },
+    },
+    options: {
+      compoundFreq: {
+        "1": "Annually",
+        "4": "Quarterly",
+        "12": "Monthly",
+        "365": "Daily",
+      },
+    },
+    errors: {
+      principalTooLow: "Principal must be at least $1.",
+      aprOutOfRange: "APR must be between 0% and 20%.",
+      termOutOfRange: "Term must be between 1 and 120 months.",
+    },
+    faq: [
+      {
+        q: "What is the difference between APR and APY?",
+        a: "APR (Annual Percentage Rate) is the stated interest rate before compounding. APY (Annual Percentage Yield) reflects the effective annual return after accounting for compounding frequency. A CD with 5% APR compounded monthly has an APY of approximately 5.116%. The more frequently interest compounds, the higher the APY relative to APR.",
+      },
+      {
+        q: "Are CDs insured by the FDIC?",
+        a: "Yes. CDs held at FDIC-member banks are insured up to $250,000 per depositor, per insured bank, for each account ownership category. Credit union CDs are similarly insured by the NCUA. This makes CDs one of the safest savings vehicles available.",
+      },
+      {
+        q: "What happens if interest rates rise after I open a CD?",
+        a: "Fixed-rate CDs lock in your rate for the full term. If rates rise, you miss out on higher yields unless your CD matures. CD laddering—distributing deposits across multiple terms—helps manage this risk by keeping some money accessible to reinvest at higher rates.",
+      },
+      {
+        q: "Can I add money to a CD after opening it?",
+        a: "Traditional CDs do not allow additional deposits after opening. Some banks offer 'add-on CDs' that permit periodic deposits, typically at a lower rate. If you want to make regular contributions, a high-yield savings account may be more flexible.",
+      },
+      {
+        q: "How are CD earnings taxed?",
+        a: "CD interest is taxed as ordinary income in the year it is earned (not necessarily when received). Your bank will issue a 1099-INT form if you earn more than $10 in interest. Interest inside an IRA CD may be tax-deferred or tax-free depending on the account type.",
+      },
+    ],
+  },
+  id: {
+    title: "CD Yield Calculator",
+    short: "Calculate the yield and future value of a certificate of deposit with compound interest.",
+    description:
+      "Free CD yield calculator. Enter your principal, APR, and term to see APY, future value, interest earned, and early withdrawal penalty impact.",
+    keywords: [
+      "CD calculator",
+      "certificate of deposit calculator",
+      "CD yield",
+      "APY calculator",
+      "savings calculator",
+      "CD interest calculator",
+      "bank deposit calculator",
+    ],
+    inputs: {
+      principal: {
+        label: "Principal",
+        help: "The initial amount deposited into the certificate of deposit.",
+      },
+      apr: {
+        label: "Annual Interest Rate (APR)",
+        help: "The stated annual interest rate on the CD, before compounding.",
+      },
+      termMonths: {
+        label: "Term (months)",
+        help: "The duration of the CD in months. Common terms: 3, 6, 12, 24, 36, 60 months.",
+      },
+      compoundFreq: {
+        label: "Compounding Frequency",
+        help: "How often interest is compounded and added to the balance.",
+      },
+      earlyWithdrawalMonths: {
+        label: "Early Withdrawal Penalty Period (months)",
+        help: "Number of months of interest lost as a penalty for early withdrawal. Set to 0 if holding to maturity.",
+      },
+    },
+    outputs: {
+      futureValue: {
+        label: "Future Value at Maturity",
+        help: "Total value of the CD at maturity, including principal and all compounded interest.",
+      },
+      interestEarned: {
+        label: "Interest Earned",
+        help: "Total interest accumulated over the full CD term.",
+      },
+      apy: {
+        label: "APY",
+        help: "Annual Percentage Yield — the effective annual return accounting for compounding.",
+      },
+      effectiveYield: {
+        label: "Effective Yield",
+        help: "Total return as a percentage of principal over the full CD term.",
+      },
+      earlyWithdrawalPenalty: {
+        label: "Early Withdrawal Penalty",
+        help: "Interest forfeited if you withdraw before maturity, based on the penalty period.",
+      },
+      netReturnAfterPenalty: {
+        label: "Net Return After Penalty",
+        help: "Interest earned minus early withdrawal penalty.",
+      },
+    },
+    options: {
+      compoundFreq: {
+        "1": "Annually",
+        "4": "Quarterly",
+        "12": "Monthly",
+        "365": "Daily",
+      },
+    },
+    errors: {
+      principalTooLow: "Principal must be at least $1.",
+      aprOutOfRange: "APR must be between 0% and 20%.",
+      termOutOfRange: "Term must be between 1 and 120 months.",
+    },
+    faq: [
+      {
+        q: "What is the difference between APR and APY?",
+        a: "APR (Annual Percentage Rate) is the stated interest rate before compounding. APY (Annual Percentage Yield) reflects the effective annual return after accounting for compounding frequency. A CD with 5% APR compounded monthly has an APY of approximately 5.116%. The more frequently interest compounds, the higher the APY relative to APR.",
+      },
+      {
+        q: "Are CDs insured by the FDIC?",
+        a: "Yes. CDs held at FDIC-member banks are insured up to $250,000 per depositor, per insured bank, for each account ownership category. Credit union CDs are similarly insured by the NCUA. This makes CDs one of the safest savings vehicles available.",
+      },
+      {
+        q: "What happens if interest rates rise after I open a CD?",
+        a: "Fixed-rate CDs lock in your rate for the full term. If rates rise, you miss out on higher yields unless your CD matures. CD laddering—distributing deposits across multiple terms—helps manage this risk by keeping some money accessible to reinvest at higher rates.",
+      },
+      {
+        q: "Can I add money to a CD after opening it?",
+        a: "Traditional CDs do not allow additional deposits after opening. Some banks offer 'add-on CDs' that permit periodic deposits, typically at a lower rate. If you want to make regular contributions, a high-yield savings account may be more flexible.",
+      },
+      {
+        q: "How are CD earnings taxed?",
+        a: "CD interest is taxed as ordinary income in the year it is earned (not necessarily when received). Your bank will issue a 1099-INT form if you earn more than $10 in interest. Interest inside an IRA CD may be tax-deferred or tax-free depending on the account type.",
+      },
+    ],
+  },
+
 
   tr: {
     title: "Vadeli Mevduat Getiri Hesaplayıcısı",

@@ -52,6 +52,109 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  pt: {
+    title: "Voltage Drop Calculator",
+    short: "Calculate voltage drop in electrical cables for single-phase circuits per NEC guidelines.",
+    description:
+      "Free voltage drop calculator for copper and aluminum conductors. Enter conductor size (AWG or mm²), one-way length, current, and system voltage to find voltage drop, percentage drop, and NEC compliance status.",
+    keywords: [
+      "voltage drop calculator",
+      "cable voltage drop",
+      "AWG voltage drop",
+      "NEC voltage drop",
+      "wire size calculator",
+      "electrical cable calculator",
+      "conductor voltage drop",
+    ],
+    inputs: {
+      conductorMaterial: { label: "Conductor material", help: "Copper has lower resistivity than aluminum." },
+      wireGaugeUnit: { label: "Wire gauge unit", help: "AWG (American Wire Gauge) or mm² cross-section." },
+      wireGauge: { label: "Wire gauge / size", help: "AWG number (lower = thicker) or cross-section in mm²." },
+      lengthM: { label: "One-way length (m)", help: "Distance from source to load in metres. Total cable run is twice this." },
+      currentA: { label: "Current (A)", help: "Load current in amperes." },
+      voltage: { label: "Source voltage (V)", help: "Nominal system voltage at the source." },
+    },
+    outputs: {
+      voltageDrop: { label: "Voltage drop (V)", help: "Total voltage lost in both conductors (2-way path)." },
+      voltageDropPct: { label: "Voltage drop (%)", help: "Drop as percentage of source voltage. NEC recommends ≤3% for branch circuits." },
+      receivingVoltage: { label: "Receiving voltage (V)", help: "Actual voltage available at the load." },
+      recommendation: { label: "NEC status", help: "ok = ≤3%, warning = 3–5%, critical = >5%." },
+      areaMm2: { label: "Conductor area (mm²)", help: "Effective cross-sectional area of the conductor." },
+    },
+    options: {
+      conductorMaterial: { copper: "Copper (Cu)", aluminum: "Aluminum (Al)" },
+      wireGaugeUnit: { awg: "AWG (American Wire Gauge)", mm2: "mm² (cross-section)" },
+    },
+    errors: {
+      invalidGauge: "Wire gauge must be a positive number.",
+    },
+    faq: [
+      {
+        q: "What is the NEC 3% rule for voltage drop?",
+        a: "The National Electrical Code (NEC) recommends that voltage drop on branch circuits not exceed 3% of the source voltage under full load, with a combined feeder and branch circuit drop not exceeding 5%. Exceeding these limits can cause equipment malfunction, overheating, and reduced efficiency.",
+      },
+      {
+        q: "Why is copper better than aluminum for wiring?",
+        a: "Copper has a resistivity of 1.724×10⁻⁸ Ω·m compared to aluminum's 2.65×10⁻⁸ Ω·m. Copper conductors are about 61% more conductive, meaning less voltage drop for the same wire size. Aluminum is lighter and cheaper, so it is used for large feeders and utility distribution.",
+      },
+      {
+        q: "What does AWG mean?",
+        a: "AWG stands for American Wire Gauge, a standardized system for wire sizes. Lower AWG numbers indicate thicker wire with lower resistance. Common household circuits use AWG 14 (15A) or AWG 12 (20A).",
+      },
+    ],
+  },
+  id: {
+    title: "Voltage Drop Calculator",
+    short: "Calculate voltage drop in electrical cables for single-phase circuits per NEC guidelines.",
+    description:
+      "Free voltage drop calculator for copper and aluminum conductors. Enter conductor size (AWG or mm²), one-way length, current, and system voltage to find voltage drop, percentage drop, and NEC compliance status.",
+    keywords: [
+      "voltage drop calculator",
+      "cable voltage drop",
+      "AWG voltage drop",
+      "NEC voltage drop",
+      "wire size calculator",
+      "electrical cable calculator",
+      "conductor voltage drop",
+    ],
+    inputs: {
+      conductorMaterial: { label: "Conductor material", help: "Copper has lower resistivity than aluminum." },
+      wireGaugeUnit: { label: "Wire gauge unit", help: "AWG (American Wire Gauge) or mm² cross-section." },
+      wireGauge: { label: "Wire gauge / size", help: "AWG number (lower = thicker) or cross-section in mm²." },
+      lengthM: { label: "One-way length (m)", help: "Distance from source to load in metres. Total cable run is twice this." },
+      currentA: { label: "Current (A)", help: "Load current in amperes." },
+      voltage: { label: "Source voltage (V)", help: "Nominal system voltage at the source." },
+    },
+    outputs: {
+      voltageDrop: { label: "Voltage drop (V)", help: "Total voltage lost in both conductors (2-way path)." },
+      voltageDropPct: { label: "Voltage drop (%)", help: "Drop as percentage of source voltage. NEC recommends ≤3% for branch circuits." },
+      receivingVoltage: { label: "Receiving voltage (V)", help: "Actual voltage available at the load." },
+      recommendation: { label: "NEC status", help: "ok = ≤3%, warning = 3–5%, critical = >5%." },
+      areaMm2: { label: "Conductor area (mm²)", help: "Effective cross-sectional area of the conductor." },
+    },
+    options: {
+      conductorMaterial: { copper: "Copper (Cu)", aluminum: "Aluminum (Al)" },
+      wireGaugeUnit: { awg: "AWG (American Wire Gauge)", mm2: "mm² (cross-section)" },
+    },
+    errors: {
+      invalidGauge: "Wire gauge must be a positive number.",
+    },
+    faq: [
+      {
+        q: "What is the NEC 3% rule for voltage drop?",
+        a: "The National Electrical Code (NEC) recommends that voltage drop on branch circuits not exceed 3% of the source voltage under full load, with a combined feeder and branch circuit drop not exceeding 5%. Exceeding these limits can cause equipment malfunction, overheating, and reduced efficiency.",
+      },
+      {
+        q: "Why is copper better than aluminum for wiring?",
+        a: "Copper has a resistivity of 1.724×10⁻⁸ Ω·m compared to aluminum's 2.65×10⁻⁸ Ω·m. Copper conductors are about 61% more conductive, meaning less voltage drop for the same wire size. Aluminum is lighter and cheaper, so it is used for large feeders and utility distribution.",
+      },
+      {
+        q: "What does AWG mean?",
+        a: "AWG stands for American Wire Gauge, a standardized system for wire sizes. Lower AWG numbers indicate thicker wire with lower resistance. Common household circuits use AWG 14 (15A) or AWG 12 (20A).",
+      },
+    ],
+  },
+
 
   tr: {
     title: "Gerilim Düşümü Hesaplayıcı",

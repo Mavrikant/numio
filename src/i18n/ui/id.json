@@ -1,0 +1,143 @@
+{
+  "site": {
+    "name": "Numio",
+    "tagline": "Kalkulator gratis untuk kehidupan sehari-hari — keuangan, kesehatan, teknik, matematika.",
+    "description": "Gunakan kalkulator gratis dan akurat dalam 14 bahasa. Tanpa login, tanpa pelacakan, hasil instan."
+  },
+  "nav": {
+    "home": "Beranda",
+    "categories": "Kategori",
+    "search": "Cari",
+    "about": "Tentang",
+    "contact": "Kontak",
+    "privacy": "Kebijakan Privasi",
+    "openMenu": "Buka menu",
+    "closeMenu": "Tutup menu",
+    "skipToContent": "Lewati ke konten",
+    "mainNavigation": "Navigasi utama",
+    "tools": "Alat",
+    "sitemap": "Peta Situs"
+  },
+  "sitemap": {
+    "title": "Peta Situs",
+    "description": "Jelajahi semua kalkulator, konverter, dan alat di Numio dalam satu tempat."
+  },
+  "actions": {
+    "calculate": "Hitung",
+    "reset": "Atur Ulang",
+    "copy": "Salin",
+    "share": "Bagikan",
+    "print": "Cetak",
+    "save": "Simpan"
+  },
+  "labels": {
+    "result": "Hasil",
+    "results": "Hasil",
+    "inputs": "Input",
+    "settings": "Pengaturan",
+    "formula": "Rumus",
+    "references": "Referensi",
+    "related": "Kalkulator terkait",
+    "loading": "Memuat…",
+    "noResults": "Tidak ada hasil"
+  },
+  "errors": {
+    "required": "Bidang ini wajib diisi",
+    "invalid": "Nilai tidak valid",
+    "outOfRange": "Nilai di luar rentang",
+    "tooSmall": "Nilai terlalu kecil",
+    "tooLarge": "Nilai terlalu besar"
+  },
+  "footer": {
+    "copyright": "© Numio",
+    "disclaimer": "Hasil hanya untuk tujuan informasi. Verifikasi sebelum digunakan untuk keputusan penting.",
+    "sourceCode": "Kode sumber",
+    "links": "Tautan",
+    "lastUpdated": "Terakhir diperbarui",
+    "allCalculators": "Semua kalkulator",
+    "comingSoon": "Segera hadir"
+  },
+  "theme": {
+    "toggle": "Ganti tema",
+    "light": "Terang",
+    "dark": "Gelap",
+    "auto": "Otomatis",
+    "switchToLight": "Beralih ke mode terang",
+    "switchToDark": "Beralih ke mode gelap",
+    "switchToAuto": "Beralih ke tema sistem"
+  },
+  "lang": {
+    "switchLanguage": "Ganti bahasa",
+    "currentLanguage": "Bahasa saat ini",
+    "selectLanguage": "Pilih bahasa"
+  },
+  "breadcrumb": {
+    "home": "Beranda",
+    "navigation": "Remah roti"
+  },
+  "categories": {
+    "health": "Kesehatan",
+    "finance": "Keuangan",
+    "engineering": "Teknik",
+    "math": "Matematika",
+    "conversion": "Konversi",
+    "all": "Semua Kategori"
+  },
+  "consent": {
+    "title": "Kami menghargai privasi Anda",
+    "description": "Kami menggunakan cookie dan teknologi serupa untuk meningkatkan pengalaman Anda, menganalisis lalu lintas, dan menampilkan iklan yang relevan. Anda dapat memilih kategori mana yang diterima.",
+    "accept": "Terima semua",
+    "reject": "Tolak semua",
+    "customize": "Sesuaikan",
+    "privacyPolicy": "Kebijakan Privasi",
+    "customizeTitle": "Preferensi cookie",
+    "savePreferences": "Simpan preferensi",
+    "back": "Kembali",
+    "essential": "Esensial",
+    "essentialDesc": "Diperlukan agar situs berfungsi. Selalu aktif.",
+    "analytics": "Analitik",
+    "analyticsDesc": "Membantu kami memahami cara pengunjung menggunakan situs (anonim).",
+    "ads": "Iklan",
+    "adsDesc": "Memungkinkan kami menampilkan iklan yang relevan dan mendukung akses gratis ke kalkulator."
+  },
+  "tools": {
+    "description": "Unggah data CSV dan buat visualisasi interaktif — histogram, scatter plot, deret waktu, dan statistik deskriptif.",
+    "browseCatalog": "Jelajahi semua alat",
+    "uploadData": "Unggah data Anda"
+  },
+  "authority": {
+    "formula": "Rumus",
+    "sources": "Sumber & Referensi",
+    "accuracyNote": "Catatan akurasi",
+    "disclaimer": "Penafian",
+    "lastReviewed": "Terakhir ditinjau",
+    "editorialTeam": "oleh tim editorial Numio"
+  },
+  "seo": {
+    "metaSuffix": "Gratis, instan, tanpa pendaftaran."
+  },
+  "compare": {
+    "toggle": "Bandingkan skenario",
+    "scenarioA": "Skenario A",
+    "scenarioB": "Skenario B",
+    "difference": "Perbedaan",
+    "exitCompare": "Keluar dari perbandingan",
+    "deltaLabel": "Δ"
+  },
+  "pdf": {
+    "print": "Cetak",
+    "download": "Unduh PDF",
+    "generated": "Dibuat oleh Numio",
+    "title": "Hasil kalkulator"
+  },
+  "pwa": {
+    "install": "Instal aplikasi"
+  },
+  "nl": {
+    "toggle": "✨ Coba dalam bahasa Indonesia",
+    "placeholder": "Contoh: Saya berusia 30 tahun, 70 kg, tinggi 175 cm",
+    "fill": "Isi kalkulator",
+    "matched": "Cocok {n} dari {total} bidang",
+    "unmatched": "Tidak dapat mencocokkan: {fields}"
+  }
+}

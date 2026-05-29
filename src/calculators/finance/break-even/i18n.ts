@@ -50,6 +50,105 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  pt: {
+    title: "Break-Even Calculator",
+    short: "Find the sales volume where total revenue equals total cost — your break-even point.",
+    description:
+      "Free break-even calculator using the standard cost-volume-profit (CVP) formula. Enter your fixed costs, variable cost per unit, and selling price to see how many units you must sell to cover all costs, along with contribution margin per unit and as a percentage of price.",
+    keywords: [
+      "break-even calculator",
+      "break-even analysis",
+      "contribution margin",
+      "CVP analysis",
+      "fixed cost calculator",
+      "business profitability",
+      "break-even point",
+    ],
+    inputs: {
+      fixedCosts: { label: "Fixed Costs ($)", help: "Total costs that do not change with output — rent, salaries, insurance, depreciation." },
+      variableCostPerUnit: { label: "Variable Cost per Unit ($)", help: "Cost that varies with each unit produced — materials, direct labor, shipping." },
+      pricePerUnit: { label: "Selling Price per Unit ($)", help: "Price charged to the customer for each unit. Must exceed the variable cost per unit." },
+    },
+    outputs: {
+      breakEvenUnits: { label: "Break-Even Units", help: "Number of units you must sell so that total revenue exactly equals total cost." },
+      breakEvenRevenue: { label: "Break-Even Revenue", help: "Sales dollars required to cover all fixed and variable costs (break-even units × price)." },
+      contributionMarginPerUnit: { label: "Contribution Margin per Unit", help: "Price minus variable cost — the amount each unit contributes toward fixed costs and profit." },
+      contributionMarginPercent: { label: "Contribution Margin %", help: "Contribution margin as a percentage of selling price." },
+    },
+    errors: {
+      priceMustExceedVariableCost: "Selling price must be greater than the variable cost per unit.",
+      fixedCostsRange: "Fixed costs must be between $0 and $1,000,000,000.",
+      pricePositive: "Selling price must be greater than zero.",
+    },
+    faq: [
+      {
+        q: "What is the break-even point?",
+        a: "The break-even point is the sales volume at which total revenue exactly equals total cost (fixed + variable). Below this volume you lose money; above it you make a profit.",
+      },
+      {
+        q: "What is contribution margin?",
+        a: "Contribution margin per unit is the selling price minus the variable cost per unit. It represents the amount each unit sold contributes toward covering fixed costs — and, after the break-even point, toward profit.",
+      },
+      {
+        q: "Why must price exceed variable cost?",
+        a: "If the price is less than or equal to the variable cost, every unit sold loses money on the variable side, so no quantity of sales can ever cover the fixed costs. The break-even point is mathematically undefined.",
+      },
+      {
+        q: "Does this include taxes?",
+        a: "This calculator computes the operating (pre-tax) break-even point. To find the units required for a target after-tax profit, divide the target pre-tax profit (target after-tax profit / (1 − tax rate)) by the contribution margin per unit and add it to break-even units.",
+      },
+    ],
+  },
+  id: {
+    title: "Break-Even Calculator",
+    short: "Find the sales volume where total revenue equals total cost — your break-even point.",
+    description:
+      "Free break-even calculator using the standard cost-volume-profit (CVP) formula. Enter your fixed costs, variable cost per unit, and selling price to see how many units you must sell to cover all costs, along with contribution margin per unit and as a percentage of price.",
+    keywords: [
+      "break-even calculator",
+      "break-even analysis",
+      "contribution margin",
+      "CVP analysis",
+      "fixed cost calculator",
+      "business profitability",
+      "break-even point",
+    ],
+    inputs: {
+      fixedCosts: { label: "Fixed Costs ($)", help: "Total costs that do not change with output — rent, salaries, insurance, depreciation." },
+      variableCostPerUnit: { label: "Variable Cost per Unit ($)", help: "Cost that varies with each unit produced — materials, direct labor, shipping." },
+      pricePerUnit: { label: "Selling Price per Unit ($)", help: "Price charged to the customer for each unit. Must exceed the variable cost per unit." },
+    },
+    outputs: {
+      breakEvenUnits: { label: "Break-Even Units", help: "Number of units you must sell so that total revenue exactly equals total cost." },
+      breakEvenRevenue: { label: "Break-Even Revenue", help: "Sales dollars required to cover all fixed and variable costs (break-even units × price)." },
+      contributionMarginPerUnit: { label: "Contribution Margin per Unit", help: "Price minus variable cost — the amount each unit contributes toward fixed costs and profit." },
+      contributionMarginPercent: { label: "Contribution Margin %", help: "Contribution margin as a percentage of selling price." },
+    },
+    errors: {
+      priceMustExceedVariableCost: "Selling price must be greater than the variable cost per unit.",
+      fixedCostsRange: "Fixed costs must be between $0 and $1,000,000,000.",
+      pricePositive: "Selling price must be greater than zero.",
+    },
+    faq: [
+      {
+        q: "What is the break-even point?",
+        a: "The break-even point is the sales volume at which total revenue exactly equals total cost (fixed + variable). Below this volume you lose money; above it you make a profit.",
+      },
+      {
+        q: "What is contribution margin?",
+        a: "Contribution margin per unit is the selling price minus the variable cost per unit. It represents the amount each unit sold contributes toward covering fixed costs — and, after the break-even point, toward profit.",
+      },
+      {
+        q: "Why must price exceed variable cost?",
+        a: "If the price is less than or equal to the variable cost, every unit sold loses money on the variable side, so no quantity of sales can ever cover the fixed costs. The break-even point is mathematically undefined.",
+      },
+      {
+        q: "Does this include taxes?",
+        a: "This calculator computes the operating (pre-tax) break-even point. To find the units required for a target after-tax profit, divide the target pre-tax profit (target after-tax profit / (1 − tax rate)) by the contribution margin per unit and add it to break-even units.",
+      },
+    ],
+  },
+
 
   tr: {
     title: "Başabaş Noktası Hesaplayıcısı",

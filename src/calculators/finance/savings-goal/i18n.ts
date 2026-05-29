@@ -72,6 +72,149 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  pt: {
+    title: "Savings Goal Calculator",
+    short: "Find out how many months it takes to reach your savings target.",
+    description:
+      "Free savings goal calculator. Enter your target amount, current savings, monthly contribution, and expected annual return to see exactly when you will reach your goal.",
+    keywords: [
+      "savings goal calculator",
+      "how long to save",
+      "monthly savings",
+      "compound interest savings",
+      "savings planner",
+      "reach savings goal",
+      "savings timeline",
+    ],
+    inputs: {
+      targetAmount: {
+        label: "Target Amount",
+        help: "The total amount you want to save.",
+      },
+      currentSavings: {
+        label: "Current Savings",
+        help: "How much you have already saved toward this goal.",
+      },
+      monthlyContribution: {
+        label: "Monthly Contribution",
+        help: "The fixed amount you will add each month.",
+      },
+      annualReturn: {
+        label: "Annual Return (%)",
+        help: "Expected annual interest or investment return rate. Default is 5%.",
+      },
+    },
+    outputs: {
+      monthsToGoal: {
+        label: "Months to Goal",
+        help: "How many months until you reach your savings target.",
+      },
+      yearsToGoal: {
+        label: "Years to Goal",
+        help: "The same period expressed in years.",
+      },
+      totalContributions: {
+        label: "Total Contributions",
+        help: "Sum of your initial savings plus all monthly deposits.",
+      },
+      totalInterest: {
+        label: "Interest Earned",
+        help: "Growth from compound interest on top of your contributions.",
+      },
+    },
+    errors: {
+      targetTooLow: "Target amount must be greater than zero.",
+      contributionTooLow: "Monthly contribution must be greater than zero.",
+      goalNotReachable:
+        "With these inputs, the goal cannot be reached within 100 years.",
+    },
+    faq: [
+      {
+        q: "What annual return should I use?",
+        a: "A high-yield savings account might offer 4–5% APY. A diversified stock index fund has historically returned around 7–10% annually before inflation. Use a conservative estimate (4–6%) for short-term goals and a moderate estimate (6–8%) for long-term investing.",
+      },
+      {
+        q: "Does the calculator account for inflation?",
+        a: "No. Enter a 'real' return rate (nominal rate minus expected inflation, roughly 2–3%) to get inflation-adjusted results.",
+      },
+      {
+        q: "What if I cannot contribute the same amount every month?",
+        a: "Use your average monthly contribution as the input. You can re-run the calculator whenever your contribution amount changes.",
+      },
+    ],
+  },
+  id: {
+    title: "Savings Goal Calculator",
+    short: "Find out how many months it takes to reach your savings target.",
+    description:
+      "Free savings goal calculator. Enter your target amount, current savings, monthly contribution, and expected annual return to see exactly when you will reach your goal.",
+    keywords: [
+      "savings goal calculator",
+      "how long to save",
+      "monthly savings",
+      "compound interest savings",
+      "savings planner",
+      "reach savings goal",
+      "savings timeline",
+    ],
+    inputs: {
+      targetAmount: {
+        label: "Target Amount",
+        help: "The total amount you want to save.",
+      },
+      currentSavings: {
+        label: "Current Savings",
+        help: "How much you have already saved toward this goal.",
+      },
+      monthlyContribution: {
+        label: "Monthly Contribution",
+        help: "The fixed amount you will add each month.",
+      },
+      annualReturn: {
+        label: "Annual Return (%)",
+        help: "Expected annual interest or investment return rate. Default is 5%.",
+      },
+    },
+    outputs: {
+      monthsToGoal: {
+        label: "Months to Goal",
+        help: "How many months until you reach your savings target.",
+      },
+      yearsToGoal: {
+        label: "Years to Goal",
+        help: "The same period expressed in years.",
+      },
+      totalContributions: {
+        label: "Total Contributions",
+        help: "Sum of your initial savings plus all monthly deposits.",
+      },
+      totalInterest: {
+        label: "Interest Earned",
+        help: "Growth from compound interest on top of your contributions.",
+      },
+    },
+    errors: {
+      targetTooLow: "Target amount must be greater than zero.",
+      contributionTooLow: "Monthly contribution must be greater than zero.",
+      goalNotReachable:
+        "With these inputs, the goal cannot be reached within 100 years.",
+    },
+    faq: [
+      {
+        q: "What annual return should I use?",
+        a: "A high-yield savings account might offer 4–5% APY. A diversified stock index fund has historically returned around 7–10% annually before inflation. Use a conservative estimate (4–6%) for short-term goals and a moderate estimate (6–8%) for long-term investing.",
+      },
+      {
+        q: "Does the calculator account for inflation?",
+        a: "No. Enter a 'real' return rate (nominal rate minus expected inflation, roughly 2–3%) to get inflation-adjusted results.",
+      },
+      {
+        q: "What if I cannot contribute the same amount every month?",
+        a: "Use your average monthly contribution as the input. You can re-run the calculator whenever your contribution amount changes.",
+      },
+    ],
+  },
+
 
   tr: {
     title: "Tasarruf Hedefi Hesaplayıcı",

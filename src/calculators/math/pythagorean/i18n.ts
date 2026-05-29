@@ -16,6 +16,37 @@ const i18n: CalculatorI18n = {
       { q: "How do I calculate area of a right triangle?", a: "Area = (a × b) / 2, where a and b are the two legs." },
     ],
   },
+  pt: {
+    title: "Pythagorean Theorem Calculator",
+    short: "Find the missing side of a right triangle using the Pythagorean theorem.",
+    description: "Free Pythagorean theorem calculator. Find the hypotenuse or legs of a right triangle. Calculate area and perimeter.",
+    keywords: ["pythagorean", "theorem", "right triangle", "hypotenuse", "sides", "a2+b2=c2"],
+    inputs: { mode: { label: "What to find", help: "Select which side to calculate." }, a: { label: "Side A", help: "Length of side A (leg)." }, b: { label: "Side B", help: "Length of side B (leg)." }, c: { label: "Side C", help: "Length of side C (hypotenuse)." } },
+    outputs: { a: { label: "Side A" }, b: { label: "Side B" }, c: { label: "Hypotenuse (C)" }, area: { label: "Area" }, perimeter: { label: "Perimeter" } },
+    options: { mode: { findC: "Find hypotenuse (C)", findA: "Find leg (A)", findB: "Find leg (B)" } },
+    errors: {},
+    faq: [
+      { q: "What is the Pythagorean theorem?", a: "For right triangles: a² + b² = c², where c is the hypotenuse and a, b are legs." },
+      { q: "What is a hypotenuse?", a: "The hypotenuse is the longest side of a right triangle, opposite the 90° angle." },
+      { q: "How do I calculate area of a right triangle?", a: "Area = (a × b) / 2, where a and b are the two legs." },
+    ],
+  },
+  id: {
+    title: "Pythagorean Theorem Calculator",
+    short: "Find the missing side of a right triangle using the Pythagorean theorem.",
+    description: "Free Pythagorean theorem calculator. Find the hypotenuse or legs of a right triangle. Calculate area and perimeter.",
+    keywords: ["pythagorean", "theorem", "right triangle", "hypotenuse", "sides", "a2+b2=c2"],
+    inputs: { mode: { label: "What to find", help: "Select which side to calculate." }, a: { label: "Side A", help: "Length of side A (leg)." }, b: { label: "Side B", help: "Length of side B (leg)." }, c: { label: "Side C", help: "Length of side C (hypotenuse)." } },
+    outputs: { a: { label: "Side A" }, b: { label: "Side B" }, c: { label: "Hypotenuse (C)" }, area: { label: "Area" }, perimeter: { label: "Perimeter" } },
+    options: { mode: { findC: "Find hypotenuse (C)", findA: "Find leg (A)", findB: "Find leg (B)" } },
+    errors: {},
+    faq: [
+      { q: "What is the Pythagorean theorem?", a: "For right triangles: a² + b² = c², where c is the hypotenuse and a, b are legs." },
+      { q: "What is a hypotenuse?", a: "The hypotenuse is the longest side of a right triangle, opposite the 90° angle." },
+      { q: "How do I calculate area of a right triangle?", a: "Area = (a × b) / 2, where a and b are the two legs." },
+    ],
+  },
+
   tr: {
     title: "Pisagor Teoremi Hesaplayıcı",
     short: "Pisagor teoremini kullanarak dik üçgenin eksik kenarını bulun.",

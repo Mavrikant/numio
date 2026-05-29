@@ -48,6 +48,101 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  pt: {
+    title: "Ideal Weight Calculator",
+    short: "Calculate your ideal body weight using 4 validated formulas — Devine, Robinson, Miller, and Hamwi.",
+    description:
+      "Free ideal body weight calculator using Devine, Robinson, Miller, and Hamwi formulas. Enter your height and sex to see your ideal weight range from four evidence-based equations.",
+    keywords: [
+      "ideal weight calculator",
+      "ideal body weight",
+      "Devine formula",
+      "Robinson formula",
+      "IBW calculator",
+      "healthy weight",
+      "weight for height",
+    ],
+    inputs: {
+      unit: { label: "Unit system", help: "Choose metric (cm) or imperial (inches)." },
+      gender: { label: "Biological sex", help: "Sex is used in the formula constants." },
+      height: { label: "Height", help: "Your height in centimetres (metric) or inches (imperial)." },
+    },
+    outputs: {
+      devine: { label: "Devine (1974)", help: "Most commonly used in clinical pharmacology for drug dosing.", suffix: "kg" },
+      robinson: { label: "Robinson (1983)", help: "Robinson formula — updated estimate for modern populations.", suffix: "kg" },
+      miller: { label: "Miller (1983)", help: "Miller formula — tends to give slightly higher estimates.", suffix: "kg" },
+      hamwi: { label: "Hamwi (1964)", help: "Hamwi formula — oldest of the four, commonly used in dietetics.", suffix: "kg" },
+    },
+    options: {
+      unit: { metric: "Metric (cm)", imperial: "Imperial (inches)" },
+      gender: { male: "Male", female: "Female" },
+    },
+    errors: {
+      heightOutOfRange: "Height must be between 50 and 250 cm (or 20–100 inches).",
+    },
+    faq: [
+      {
+        q: "Which ideal weight formula is most accurate?",
+        a: "None of the four formulas was originally designed to define a 'healthy' weight for the general population — they were developed for drug dosing in clinical settings. The Devine formula is the most widely cited in pharmacology. For general health, BMI and body composition measurements are more relevant.",
+      },
+      {
+        q: "What if my actual weight is above my ideal weight?",
+        a: "These formulas provide a rough reference range, not a personal health target. A person can be at a higher weight and still be metabolically healthy depending on muscle mass, genetics, and lifestyle. Consult a healthcare provider for individualised guidance.",
+      },
+      {
+        q: "Why do the four formulas give different results?",
+        a: "Each formula was derived from different patient populations and measurement methods in different decades. The differences are typically 2–5 kg, reflecting measurement uncertainty rather than meaningful clinical differences.",
+      },
+    ],
+  },
+  id: {
+    title: "Ideal Weight Calculator",
+    short: "Calculate your ideal body weight using 4 validated formulas — Devine, Robinson, Miller, and Hamwi.",
+    description:
+      "Free ideal body weight calculator using Devine, Robinson, Miller, and Hamwi formulas. Enter your height and sex to see your ideal weight range from four evidence-based equations.",
+    keywords: [
+      "ideal weight calculator",
+      "ideal body weight",
+      "Devine formula",
+      "Robinson formula",
+      "IBW calculator",
+      "healthy weight",
+      "weight for height",
+    ],
+    inputs: {
+      unit: { label: "Unit system", help: "Choose metric (cm) or imperial (inches)." },
+      gender: { label: "Biological sex", help: "Sex is used in the formula constants." },
+      height: { label: "Height", help: "Your height in centimetres (metric) or inches (imperial)." },
+    },
+    outputs: {
+      devine: { label: "Devine (1974)", help: "Most commonly used in clinical pharmacology for drug dosing.", suffix: "kg" },
+      robinson: { label: "Robinson (1983)", help: "Robinson formula — updated estimate for modern populations.", suffix: "kg" },
+      miller: { label: "Miller (1983)", help: "Miller formula — tends to give slightly higher estimates.", suffix: "kg" },
+      hamwi: { label: "Hamwi (1964)", help: "Hamwi formula — oldest of the four, commonly used in dietetics.", suffix: "kg" },
+    },
+    options: {
+      unit: { metric: "Metric (cm)", imperial: "Imperial (inches)" },
+      gender: { male: "Male", female: "Female" },
+    },
+    errors: {
+      heightOutOfRange: "Height must be between 50 and 250 cm (or 20–100 inches).",
+    },
+    faq: [
+      {
+        q: "Which ideal weight formula is most accurate?",
+        a: "None of the four formulas was originally designed to define a 'healthy' weight for the general population — they were developed for drug dosing in clinical settings. The Devine formula is the most widely cited in pharmacology. For general health, BMI and body composition measurements are more relevant.",
+      },
+      {
+        q: "What if my actual weight is above my ideal weight?",
+        a: "These formulas provide a rough reference range, not a personal health target. A person can be at a higher weight and still be metabolically healthy depending on muscle mass, genetics, and lifestyle. Consult a healthcare provider for individualised guidance.",
+      },
+      {
+        q: "Why do the four formulas give different results?",
+        a: "Each formula was derived from different patient populations and measurement methods in different decades. The differences are typically 2–5 kg, reflecting measurement uncertainty rather than meaningful clinical differences.",
+      },
+    ],
+  },
+
 
   tr: {
     title: "İdeal Kilo Hesaplayıcı",

@@ -34,6 +34,73 @@ const i18n: CalculatorI18n = {
       invalidInput: "Invalid input values.",
     },
   },
+  pt: {
+    title: "Exponent Calculator",
+    short: "Calculate powers and exponents. Find base^exponent, expanded notation, and scientific notation.",
+    description: "Free exponent calculator. Calculate powers with any base and exponent. Get expanded notation and scientific notation. Handles negative exponents and special cases.",
+    keywords: ["exponent calculator", "power calculator", "base exponent", "scientific notation", "exponential"],
+    inputs: {
+      base: {
+        label: "Base",
+        help: "The number being raised to a power.",
+      },
+      exponent: {
+        label: "Exponent",
+        help: "The power to which the base is raised. Can be positive, negative, or zero.",
+      },
+    },
+    outputs: {
+      result: {
+        label: "Result",
+        help: "The value of base raised to the exponent.",
+      },
+      expanded: {
+        label: "Expanded",
+        help: "Shows the calculation in expanded form (for small exponents).",
+      },
+      scientific: {
+        label: "Scientific Notation",
+        help: "The result expressed in scientific notation.",
+      },
+    },
+    errors: {
+      invalidInput: "Invalid input values.",
+    },
+  },
+  id: {
+    title: "Exponent Calculator",
+    short: "Calculate powers and exponents. Find base^exponent, expanded notation, and scientific notation.",
+    description: "Free exponent calculator. Calculate powers with any base and exponent. Get expanded notation and scientific notation. Handles negative exponents and special cases.",
+    keywords: ["exponent calculator", "power calculator", "base exponent", "scientific notation", "exponential"],
+    inputs: {
+      base: {
+        label: "Base",
+        help: "The number being raised to a power.",
+      },
+      exponent: {
+        label: "Exponent",
+        help: "The power to which the base is raised. Can be positive, negative, or zero.",
+      },
+    },
+    outputs: {
+      result: {
+        label: "Result",
+        help: "The value of base raised to the exponent.",
+      },
+      expanded: {
+        label: "Expanded",
+        help: "Shows the calculation in expanded form (for small exponents).",
+      },
+      scientific: {
+        label: "Scientific Notation",
+        help: "The result expressed in scientific notation.",
+      },
+    },
+    errors: {
+      invalidInput: "Invalid input values.",
+    },
+  },
+
   tr: {
     title: "Üssü Hesaplayıcısı",
     short: "Kuvvet ve üssü hesaplayın. Taban^üssü, açılmış gösterim ve bilimsel gösterimi bulun.",

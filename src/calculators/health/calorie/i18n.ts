@@ -91,6 +91,187 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  pt: {
+    title: "Calorie Calculator",
+    short: "Calculate your daily calorie needs (TDEE) and set a target for your weight goal.",
+    description:
+      "Free TDEE calculator using the Mifflin-St Jeor equation. Enter your stats and activity level to find your maintenance calories, then adjust for weight loss or gain.",
+    keywords: [
+      "calorie calculator",
+      "TDEE calculator",
+      "daily calorie needs",
+      "weight loss calories",
+      "calorie deficit",
+      "maintenance calories",
+      "total daily energy expenditure",
+    ],
+    inputs: {
+      gender: { label: "Biological sex", help: "Sex affects BMR through differences in muscle mass and hormones." },
+      weight: { label: "Weight", help: "Your current body weight in kilograms." },
+      height: { label: "Height", help: "Your height in centimetres." },
+      age: { label: "Age", help: "Your age in years." },
+      activity: {
+        label: "Activity level",
+        help: "Choose the level that best matches your typical weekly activity, including exercise and daily movement.",
+      },
+      goal: {
+        label: "Goal",
+        help: "Select your weight goal. Lose/gain speeds are approximate guidelines.",
+      },
+    },
+    outputs: {
+      tdee: {
+        label: "Maintenance calories (TDEE)",
+        help: "Total Daily Energy Expenditure — calories needed to maintain your current weight.",
+        suffix: "kcal/day",
+      },
+      target: {
+        label: "Target calories",
+        help: "Recommended daily intake to reach your selected goal.",
+        suffix: "kcal/day",
+      },
+      deficit: {
+        label: "Daily surplus / deficit",
+        help: "Positive = calorie surplus (for gain). Negative = calorie deficit (for loss).",
+        suffix: "kcal/day",
+      },
+    },
+    options: {
+      gender: { male: "Male", female: "Female" },
+      activity: {
+        sedentary: "Sedentary (desk job, little exercise)",
+        light: "Lightly active (1–3 days/week)",
+        moderate: "Moderately active (3–5 days/week)",
+        active: "Very active (6–7 days/week)",
+        veryActive: "Extra active (physical job or 2× training)",
+      },
+      goal: {
+        maintain: "Maintain weight",
+        lose: "Lose weight (~0.5 kg/week)",
+        loseFast: "Lose weight fast (~1 kg/week)",
+        gain: "Gain weight (~0.5 kg/week)",
+        gainFast: "Gain weight fast (~1 kg/week)",
+      },
+    },
+    errors: {
+      weightOutOfRange: "Weight must be between 1 and 300 kg.",
+      heightOutOfRange: "Height must be between 50 and 250 cm.",
+      ageOutOfRange: "Age must be between 1 and 120 years.",
+    },
+    faq: [
+      {
+        q: "What is TDEE?",
+        a: "Total Daily Energy Expenditure (TDEE) is the total number of calories you burn in a day, accounting for your basal metabolic rate and physical activity. Eating at your TDEE maintains your current weight.",
+      },
+      {
+        q: "How fast can I safely lose weight?",
+        a: "Most guidelines recommend losing no more than 0.5–1 kg (1–2 lb) per week. Faster loss often leads to muscle loss and metabolic slowdown. The minimum safe intake is 1200 kcal/day for women and 1500 kcal/day for men.",
+      },
+      {
+        q: "Why is my target calorie number capped?",
+        a: "The calculator enforces a minimum safe calorie floor (1200 for women, 1500 for men) even when the goal demands more aggressive restriction, to protect against nutritional deficiencies.",
+      },
+      {
+        q: "How accurate is this calculator?",
+        a: "TDEE estimates are generally accurate within 10–20%. Individual variation in metabolism, muscle mass, and daily movement can cause real needs to differ. Track your weight over 2–4 weeks and adjust calories by 100–200 kcal if you are not progressing as expected.",
+      },
+      {
+        q: "Should I eat back my exercise calories?",
+        a: "If you selected an accurate activity level, exercise is already factored in. Eating back calories is only relevant if you use the 'sedentary' setting and then log exercise separately.",
+      },
+    ],
+  },
+  id: {
+    title: "Calorie Calculator",
+    short: "Calculate your daily calorie needs (TDEE) and set a target for your weight goal.",
+    description:
+      "Free TDEE calculator using the Mifflin-St Jeor equation. Enter your stats and activity level to find your maintenance calories, then adjust for weight loss or gain.",
+    keywords: [
+      "calorie calculator",
+      "TDEE calculator",
+      "daily calorie needs",
+      "weight loss calories",
+      "calorie deficit",
+      "maintenance calories",
+      "total daily energy expenditure",
+    ],
+    inputs: {
+      gender: { label: "Biological sex", help: "Sex affects BMR through differences in muscle mass and hormones." },
+      weight: { label: "Weight", help: "Your current body weight in kilograms." },
+      height: { label: "Height", help: "Your height in centimetres." },
+      age: { label: "Age", help: "Your age in years." },
+      activity: {
+        label: "Activity level",
+        help: "Choose the level that best matches your typical weekly activity, including exercise and daily movement.",
+      },
+      goal: {
+        label: "Goal",
+        help: "Select your weight goal. Lose/gain speeds are approximate guidelines.",
+      },
+    },
+    outputs: {
+      tdee: {
+        label: "Maintenance calories (TDEE)",
+        help: "Total Daily Energy Expenditure — calories needed to maintain your current weight.",
+        suffix: "kcal/day",
+      },
+      target: {
+        label: "Target calories",
+        help: "Recommended daily intake to reach your selected goal.",
+        suffix: "kcal/day",
+      },
+      deficit: {
+        label: "Daily surplus / deficit",
+        help: "Positive = calorie surplus (for gain). Negative = calorie deficit (for loss).",
+        suffix: "kcal/day",
+      },
+    },
+    options: {
+      gender: { male: "Male", female: "Female" },
+      activity: {
+        sedentary: "Sedentary (desk job, little exercise)",
+        light: "Lightly active (1–3 days/week)",
+        moderate: "Moderately active (3–5 days/week)",
+        active: "Very active (6–7 days/week)",
+        veryActive: "Extra active (physical job or 2× training)",
+      },
+      goal: {
+        maintain: "Maintain weight",
+        lose: "Lose weight (~0.5 kg/week)",
+        loseFast: "Lose weight fast (~1 kg/week)",
+        gain: "Gain weight (~0.5 kg/week)",
+        gainFast: "Gain weight fast (~1 kg/week)",
+      },
+    },
+    errors: {
+      weightOutOfRange: "Weight must be between 1 and 300 kg.",
+      heightOutOfRange: "Height must be between 50 and 250 cm.",
+      ageOutOfRange: "Age must be between 1 and 120 years.",
+    },
+    faq: [
+      {
+        q: "What is TDEE?",
+        a: "Total Daily Energy Expenditure (TDEE) is the total number of calories you burn in a day, accounting for your basal metabolic rate and physical activity. Eating at your TDEE maintains your current weight.",
+      },
+      {
+        q: "How fast can I safely lose weight?",
+        a: "Most guidelines recommend losing no more than 0.5–1 kg (1–2 lb) per week. Faster loss often leads to muscle loss and metabolic slowdown. The minimum safe intake is 1200 kcal/day for women and 1500 kcal/day for men.",
+      },
+      {
+        q: "Why is my target calorie number capped?",
+        a: "The calculator enforces a minimum safe calorie floor (1200 for women, 1500 for men) even when the goal demands more aggressive restriction, to protect against nutritional deficiencies.",
+      },
+      {
+        q: "How accurate is this calculator?",
+        a: "TDEE estimates are generally accurate within 10–20%. Individual variation in metabolism, muscle mass, and daily movement can cause real needs to differ. Track your weight over 2–4 weeks and adjust calories by 100–200 kcal if you are not progressing as expected.",
+      },
+      {
+        q: "Should I eat back my exercise calories?",
+        a: "If you selected an accurate activity level, exercise is already factored in. Eating back calories is only relevant if you use the 'sedentary' setting and then log exercise separately.",
+      },
+    ],
+  },
+
 
   tr: {
     title: "Kalori Hesaplayıcı",

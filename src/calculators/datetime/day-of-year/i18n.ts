@@ -18,6 +18,27 @@ const i18n: CalculatorI18n = {
       { q: "How many days are in a year?", a: "365 in a common year and 366 in a leap year (when February has 29 days). This tool detects leap years automatically." },
     ],
   },
+  pt: {
+    title: "Day of the Year Calculator", short: "Find which day of the year a date is, and how many days remain.",
+    description: "Free day-of-year calculator. Enter a date to get its ordinal day number (1–366), the days remaining in the year, the total days in that year, and the percentage of the year elapsed.",
+    keywords: ["day of year", "ordinal date", "day number", "days left in year", "what day of the year"],
+    inputs: { date: { label: "Date" } }, outputs: out("Day of year", "Days remaining", "Days in year", "Year elapsed"),
+    faq: [
+      { q: "What is the day of the year?", a: "It's the ordinal position of a date within its year — 1 January is day 1, 31 December is day 365 (or 366 in a leap year)." },
+      { q: "How many days are in a year?", a: "365 in a common year and 366 in a leap year (when February has 29 days). This tool detects leap years automatically." },
+    ],
+  },
+  id: {
+    title: "Day of the Year Calculator", short: "Find which day of the year a date is, and how many days remain.",
+    description: "Free day-of-year calculator. Enter a date to get its ordinal day number (1–366), the days remaining in the year, the total days in that year, and the percentage of the year elapsed.",
+    keywords: ["day of year", "ordinal date", "day number", "days left in year", "what day of the year"],
+    inputs: { date: { label: "Date" } }, outputs: out("Day of year", "Days remaining", "Days in year", "Year elapsed"),
+    faq: [
+      { q: "What is the day of the year?", a: "It's the ordinal position of a date within its year — 1 January is day 1, 31 December is day 365 (or 366 in a leap year)." },
+      { q: "How many days are in a year?", a: "365 in a common year and 366 in a leap year (when February has 29 days). This tool detects leap years automatically." },
+    ],
+  },
+
   tr: {
     title: "Yılın Günü Hesaplayıcı", short: "Bir tarihin yılın kaçıncı günü olduğunu ve kaç gün kaldığını bulun.",
     description: "Ücretsiz yılın günü hesaplayıcı. Bir tarih girerek sıra gün numarasını (1–366), yılda kalan günleri, o yıldaki toplam günü ve geçen yıl yüzdesini öğrenin.",

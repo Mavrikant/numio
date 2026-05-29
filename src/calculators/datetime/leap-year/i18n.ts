@@ -16,6 +16,27 @@ const i18n: CalculatorI18n = {
       { q: "Why do leap years exist?", a: "Earth takes about 365.2422 days to orbit the Sun. Adding a leap day (29 February) every four years keeps the calendar aligned with the seasons; the 100/400 rule fine-tunes the small remaining drift." },
     ],
   },
+  pt: {
+    title: "Leap Year Calculator", short: "Check whether a year is a leap year and find the nearest leap years.",
+    description: "Free leap year calculator. Enter a year to see whether it's a leap year (366 days, February has 29), plus the next and previous leap years. Uses the Gregorian rule: divisible by 4, except centuries unless divisible by 400.",
+    keywords: ["leap year", "is it a leap year", "leap year checker", "days in february", "leap year list"],
+    ...io("Year", "Days in year", "Days in February", "Next leap year", "Previous leap year"),
+    faq: [
+      { q: "How do I know if a year is a leap year?", a: "A year is a leap year if it is divisible by 4 — except for century years (like 1900), which must also be divisible by 400. So 2000 and 2024 are leap years, but 1900 and 2100 are not." },
+      { q: "Why do leap years exist?", a: "Earth takes about 365.2422 days to orbit the Sun. Adding a leap day (29 February) every four years keeps the calendar aligned with the seasons; the 100/400 rule fine-tunes the small remaining drift." },
+    ],
+  },
+  id: {
+    title: "Leap Year Calculator", short: "Check whether a year is a leap year and find the nearest leap years.",
+    description: "Free leap year calculator. Enter a year to see whether it's a leap year (366 days, February has 29), plus the next and previous leap years. Uses the Gregorian rule: divisible by 4, except centuries unless divisible by 400.",
+    keywords: ["leap year", "is it a leap year", "leap year checker", "days in february", "leap year list"],
+    ...io("Year", "Days in year", "Days in February", "Next leap year", "Previous leap year"),
+    faq: [
+      { q: "How do I know if a year is a leap year?", a: "A year is a leap year if it is divisible by 4 — except for century years (like 1900), which must also be divisible by 400. So 2000 and 2024 are leap years, but 1900 and 2100 are not." },
+      { q: "Why do leap years exist?", a: "Earth takes about 365.2422 days to orbit the Sun. Adding a leap day (29 February) every four years keeps the calendar aligned with the seasons; the 100/400 rule fine-tunes the small remaining drift." },
+    ],
+  },
+
   tr: {
     title: "Artık Yıl Hesaplayıcı", short: "Bir yılın artık yıl olup olmadığını kontrol edin ve en yakın artık yılları bulun.",
     description: "Ücretsiz artık yıl hesaplayıcı. Bir yıl girerek artık yıl olup olmadığını (366 gün, Şubat 29 çeker), ayrıca bir sonraki ve önceki artık yılları görün. Gregoryen kuralı: 4'e bölünen, 400'e bölünmedikçe yüzyıllar hariç.",

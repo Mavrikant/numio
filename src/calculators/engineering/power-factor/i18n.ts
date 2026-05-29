@@ -117,6 +117,239 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  pt: {
+    title: "Power Factor Calculator",
+    short: "Calculate power factor, kVA, kVAR, and correction capacitor for AC electrical systems.",
+    description:
+      "Free power factor calculator. Compute PF from real and reactive power, find kW and kVAR from kVA and PF, or calculate the capacitor needed for power factor correction.",
+    keywords: [
+      "power factor calculator",
+      "kVA kW kVAR calculator",
+      "power factor correction capacitor",
+      "reactive power",
+      "apparent power",
+      "cos phi calculator",
+      "electrical power calculator",
+    ],
+    inputs: {
+      mode: {
+        label: "Calculation Mode",
+        help: "Choose what to calculate: PF from power values, power components from PF, or correction capacitor.",
+      },
+      realPowerKw: {
+        label: "Real Power (kW)",
+        help: "Actual useful power consumed by the load. Also called active power.",
+      },
+      reactivePowerKvar: {
+        label: "Reactive Power (kVAR)",
+        help: "Power that oscillates between source and load (stored in inductors/capacitors).",
+      },
+      kva: {
+        label: "Apparent Power (kVA)",
+        help: "Total power drawn from the supply — the vector sum of kW and kVAR.",
+      },
+      pf: {
+        label: "Power Factor",
+        help: "Ratio of real power to apparent power (0 to 1). A PF of 1 means pure resistive load.",
+      },
+      currentPf: {
+        label: "Current Power Factor",
+        help: "Existing power factor of the installation before correction.",
+      },
+      targetPf: {
+        label: "Target Power Factor",
+        help: "Desired power factor after capacitor correction (must be higher than current PF).",
+      },
+      voltageV: {
+        label: "System Voltage (V)",
+        help: "Line-to-line (or line-to-neutral for single-phase) supply voltage.",
+      },
+      frequencyHz: {
+        label: "Frequency (Hz)",
+        help: "Supply frequency: 50Hz (Europe, Asia) or 60Hz (Americas).",
+      },
+    },
+    outputs: {
+      powerFactorPf: {
+        label: "Power Factor",
+        help: "PF = cos(φ) = P/S. Values close to 1 indicate efficient use of electrical supply.",
+      },
+      realPowerKw: {
+        label: "Real Power (kW)",
+        help: "Actual useful power that does work (heats, rotates, illuminates).",
+      },
+      apparentPowerKva: {
+        label: "Apparent Power (kVA)",
+        help: "Total power the supply must deliver: S = √(P² + Q²).",
+      },
+      reactivePowerKvar: {
+        label: "Reactive Power (kVAR)",
+        help: "Non-working power that magnetizes inductive loads: Q = √(S² - P²).",
+      },
+      phaseAngleDeg: {
+        label: "Phase Angle (°)",
+        help: "Angle between voltage and current waveforms: φ = arccos(PF).",
+      },
+      correctionCapacitorMicrofarad: {
+        label: "Correction Capacitor (µF)",
+        help: "Capacitance needed to improve PF: C = Q_cap / (2π × f × V²).",
+      },
+      kvarRequired: {
+        label: "kVAR Required for Correction",
+        help: "Reactive power the capacitor bank must supply: Q_cap = P × (tan φ1 - tan φ2).",
+      },
+    },
+    options: {
+      mode: {
+        pf_from_power: "Calculate PF from real & reactive power",
+        power_from_pf: "Calculate kW & kVAR from kVA & PF",
+        correction: "Calculate PF correction capacitor",
+      },
+      frequencyHz: {
+        "50hz": "50 Hz (Europe / Asia)",
+        "60hz": "60 Hz (Americas)",
+      },
+    },
+    errors: {
+      targetPfTooLow: "Target PF must be greater than current PF.",
+      invalidMode: "Please select a valid calculation mode.",
+    },
+    faq: [
+      {
+        q: "What is power factor?",
+        a: "Power factor (PF) is the ratio of real power (kW) to apparent power (kVA). It measures how efficiently electrical energy is being converted to useful work. A PF of 1.0 (unity) means all the supplied power does useful work; a low PF means significant reactive power is drawn from the supply.",
+      },
+      {
+        q: "Why is power factor important?",
+        a: "Utilities charge industrial customers for low power factor because reactive current flows in the supply cables and transformers without doing useful work, causing losses and requiring oversized equipment. Improving PF with capacitors reduces electricity bills and equipment size.",
+      },
+      {
+        q: "How does power factor correction work?",
+        a: "Inductive loads (motors, transformers) absorb reactive power (lagging PF). Capacitors supply reactive power locally, reducing the reactive current drawn from the grid. The net effect is that the supply sees a higher PF, reducing kVA demand.",
+      },
+      {
+        q: "What is a good power factor?",
+        a: "Most utilities require industrial customers to maintain PF above 0.90 or 0.95. Residential loads typically have PF between 0.85 and 0.95. Unity (1.0) is ideal but practically achieved only with unity-PF power supplies.",
+      },
+    ],
+  },
+  id: {
+    title: "Power Factor Calculator",
+    short: "Calculate power factor, kVA, kVAR, and correction capacitor for AC electrical systems.",
+    description:
+      "Free power factor calculator. Compute PF from real and reactive power, find kW and kVAR from kVA and PF, or calculate the capacitor needed for power factor correction.",
+    keywords: [
+      "power factor calculator",
+      "kVA kW kVAR calculator",
+      "power factor correction capacitor",
+      "reactive power",
+      "apparent power",
+      "cos phi calculator",
+      "electrical power calculator",
+    ],
+    inputs: {
+      mode: {
+        label: "Calculation Mode",
+        help: "Choose what to calculate: PF from power values, power components from PF, or correction capacitor.",
+      },
+      realPowerKw: {
+        label: "Real Power (kW)",
+        help: "Actual useful power consumed by the load. Also called active power.",
+      },
+      reactivePowerKvar: {
+        label: "Reactive Power (kVAR)",
+        help: "Power that oscillates between source and load (stored in inductors/capacitors).",
+      },
+      kva: {
+        label: "Apparent Power (kVA)",
+        help: "Total power drawn from the supply — the vector sum of kW and kVAR.",
+      },
+      pf: {
+        label: "Power Factor",
+        help: "Ratio of real power to apparent power (0 to 1). A PF of 1 means pure resistive load.",
+      },
+      currentPf: {
+        label: "Current Power Factor",
+        help: "Existing power factor of the installation before correction.",
+      },
+      targetPf: {
+        label: "Target Power Factor",
+        help: "Desired power factor after capacitor correction (must be higher than current PF).",
+      },
+      voltageV: {
+        label: "System Voltage (V)",
+        help: "Line-to-line (or line-to-neutral for single-phase) supply voltage.",
+      },
+      frequencyHz: {
+        label: "Frequency (Hz)",
+        help: "Supply frequency: 50Hz (Europe, Asia) or 60Hz (Americas).",
+      },
+    },
+    outputs: {
+      powerFactorPf: {
+        label: "Power Factor",
+        help: "PF = cos(φ) = P/S. Values close to 1 indicate efficient use of electrical supply.",
+      },
+      realPowerKw: {
+        label: "Real Power (kW)",
+        help: "Actual useful power that does work (heats, rotates, illuminates).",
+      },
+      apparentPowerKva: {
+        label: "Apparent Power (kVA)",
+        help: "Total power the supply must deliver: S = √(P² + Q²).",
+      },
+      reactivePowerKvar: {
+        label: "Reactive Power (kVAR)",
+        help: "Non-working power that magnetizes inductive loads: Q = √(S² - P²).",
+      },
+      phaseAngleDeg: {
+        label: "Phase Angle (°)",
+        help: "Angle between voltage and current waveforms: φ = arccos(PF).",
+      },
+      correctionCapacitorMicrofarad: {
+        label: "Correction Capacitor (µF)",
+        help: "Capacitance needed to improve PF: C = Q_cap / (2π × f × V²).",
+      },
+      kvarRequired: {
+        label: "kVAR Required for Correction",
+        help: "Reactive power the capacitor bank must supply: Q_cap = P × (tan φ1 - tan φ2).",
+      },
+    },
+    options: {
+      mode: {
+        pf_from_power: "Calculate PF from real & reactive power",
+        power_from_pf: "Calculate kW & kVAR from kVA & PF",
+        correction: "Calculate PF correction capacitor",
+      },
+      frequencyHz: {
+        "50hz": "50 Hz (Europe / Asia)",
+        "60hz": "60 Hz (Americas)",
+      },
+    },
+    errors: {
+      targetPfTooLow: "Target PF must be greater than current PF.",
+      invalidMode: "Please select a valid calculation mode.",
+    },
+    faq: [
+      {
+        q: "What is power factor?",
+        a: "Power factor (PF) is the ratio of real power (kW) to apparent power (kVA). It measures how efficiently electrical energy is being converted to useful work. A PF of 1.0 (unity) means all the supplied power does useful work; a low PF means significant reactive power is drawn from the supply.",
+      },
+      {
+        q: "Why is power factor important?",
+        a: "Utilities charge industrial customers for low power factor because reactive current flows in the supply cables and transformers without doing useful work, causing losses and requiring oversized equipment. Improving PF with capacitors reduces electricity bills and equipment size.",
+      },
+      {
+        q: "How does power factor correction work?",
+        a: "Inductive loads (motors, transformers) absorb reactive power (lagging PF). Capacitors supply reactive power locally, reducing the reactive current drawn from the grid. The net effect is that the supply sees a higher PF, reducing kVA demand.",
+      },
+      {
+        q: "What is a good power factor?",
+        a: "Most utilities require industrial customers to maintain PF above 0.90 or 0.95. Residential loads typically have PF between 0.85 and 0.95. Unity (1.0) is ideal but practically achieved only with unity-PF power supplies.",
+      },
+    ],
+  },
+
 
   tr: {
     title: "Güç Faktörü Hesaplayıcı",

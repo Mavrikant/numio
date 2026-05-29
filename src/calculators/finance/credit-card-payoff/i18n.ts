@@ -56,6 +56,117 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  pt: {
+    title: "Credit Card Payoff Calculator",
+    short: "See how long it takes to pay off your credit card and how much interest you will pay.",
+    description:
+      "Free credit card payoff calculator. Enter your balance, APR, and payment amount to see months to payoff, total interest, and a month-by-month amortization schedule.",
+    keywords: [
+      "credit card payoff calculator",
+      "how long to pay off credit card",
+      "credit card interest calculator",
+      "minimum payment calculator",
+      "debt payoff calculator",
+      "APR calculator",
+      "amortization schedule",
+    ],
+    inputs: {
+      balance: { label: "Current Balance", help: "Your current credit card balance." },
+      apr: { label: "Annual Percentage Rate (APR)", help: "Your card's annual interest rate." },
+      paymentMode: {
+        label: "Payment Strategy",
+        help: "Minimum payment: only pays the minimum each month. Fixed payment: pays a constant amount until paid off.",
+      },
+      fixedPayment: { label: "Fixed Monthly Payment", help: "The fixed amount you will pay each month. Must exceed the monthly interest charge." },
+      minimumPaymentPct: { label: "Minimum Payment %", help: "Percentage of balance used to calculate minimum payment. Typically 1–3 %." },
+    },
+    outputs: {
+      monthsToPayoff: { label: "Months to Pay Off", help: "Number of months until the balance reaches zero." },
+      totalPaid: { label: "Total Amount Paid", help: "Sum of all payments including principal and interest." },
+      totalInterest: { label: "Total Interest Paid", help: "How much you pay above the original balance." },
+      interestSavings: { label: "Interest Saved vs. Minimum", help: "How much less interest you pay compared to making only minimum payments." },
+    },
+    options: {
+      paymentMode: {
+        minimum: "Minimum Payment",
+        fixed: "Fixed Payment",
+      },
+    },
+    errors: {
+      paymentTooLow: "Fixed payment must be higher than the monthly interest charge to reduce the balance.",
+      balanceOutOfRange: "Balance must be between $1 and $500,000.",
+    },
+    faq: [
+      {
+        q: "Why does it take so long to pay off with minimum payments?",
+        a: "Minimum payments are calculated as a percentage of your balance. As the balance decreases, so does the minimum payment — meaning most of each payment goes to interest rather than principal. This dramatically extends payoff time.",
+      },
+      {
+        q: "What is APR vs. monthly interest rate?",
+        a: "APR (Annual Percentage Rate) is the yearly rate. To get the monthly rate, divide by 12. For a 20% APR, the monthly rate is approximately 1.67%.",
+      },
+      {
+        q: "Should I pay more than the minimum?",
+        a: "Yes, significantly more. Even $50–$100 extra per month can save thousands in interest and years of payments. The CFPB recommends paying as much as you can above the minimum.",
+      },
+    ],
+  },
+  id: {
+    title: "Credit Card Payoff Calculator",
+    short: "See how long it takes to pay off your credit card and how much interest you will pay.",
+    description:
+      "Free credit card payoff calculator. Enter your balance, APR, and payment amount to see months to payoff, total interest, and a month-by-month amortization schedule.",
+    keywords: [
+      "credit card payoff calculator",
+      "how long to pay off credit card",
+      "credit card interest calculator",
+      "minimum payment calculator",
+      "debt payoff calculator",
+      "APR calculator",
+      "amortization schedule",
+    ],
+    inputs: {
+      balance: { label: "Current Balance", help: "Your current credit card balance." },
+      apr: { label: "Annual Percentage Rate (APR)", help: "Your card's annual interest rate." },
+      paymentMode: {
+        label: "Payment Strategy",
+        help: "Minimum payment: only pays the minimum each month. Fixed payment: pays a constant amount until paid off.",
+      },
+      fixedPayment: { label: "Fixed Monthly Payment", help: "The fixed amount you will pay each month. Must exceed the monthly interest charge." },
+      minimumPaymentPct: { label: "Minimum Payment %", help: "Percentage of balance used to calculate minimum payment. Typically 1–3 %." },
+    },
+    outputs: {
+      monthsToPayoff: { label: "Months to Pay Off", help: "Number of months until the balance reaches zero." },
+      totalPaid: { label: "Total Amount Paid", help: "Sum of all payments including principal and interest." },
+      totalInterest: { label: "Total Interest Paid", help: "How much you pay above the original balance." },
+      interestSavings: { label: "Interest Saved vs. Minimum", help: "How much less interest you pay compared to making only minimum payments." },
+    },
+    options: {
+      paymentMode: {
+        minimum: "Minimum Payment",
+        fixed: "Fixed Payment",
+      },
+    },
+    errors: {
+      paymentTooLow: "Fixed payment must be higher than the monthly interest charge to reduce the balance.",
+      balanceOutOfRange: "Balance must be between $1 and $500,000.",
+    },
+    faq: [
+      {
+        q: "Why does it take so long to pay off with minimum payments?",
+        a: "Minimum payments are calculated as a percentage of your balance. As the balance decreases, so does the minimum payment — meaning most of each payment goes to interest rather than principal. This dramatically extends payoff time.",
+      },
+      {
+        q: "What is APR vs. monthly interest rate?",
+        a: "APR (Annual Percentage Rate) is the yearly rate. To get the monthly rate, divide by 12. For a 20% APR, the monthly rate is approximately 1.67%.",
+      },
+      {
+        q: "Should I pay more than the minimum?",
+        a: "Yes, significantly more. Even $50–$100 extra per month can save thousands in interest and years of payments. The CFPB recommends paying as much as you can above the minimum.",
+      },
+    ],
+  },
+
 
   tr: {
     title: "Kredi Kartı Borç Ödeme Hesaplayıcısı",

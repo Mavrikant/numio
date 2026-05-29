@@ -62,6 +62,129 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  pt: {
+    title: "Combinations & Permutations Calculator",
+    short: "Calculate nCr (combinations) and nPr (permutations) for any n and r instantly.",
+    description:
+      "Free combinations and permutations calculator. Enter n (total items) and r (chosen items) to compute C(n,r) and P(n,r) using exact factorial formulas. Ideal for probability, statistics, and combinatorics problems.",
+    keywords: [
+      "combinations calculator",
+      "permutations calculator",
+      "nCr calculator",
+      "nPr calculator",
+      "combinatorics",
+      "binomial coefficient",
+      "choose function",
+    ],
+    inputs: {
+      n: {
+        label: "n (total items)",
+        help: "Total number of items in the set. Must be a non-negative integer (0–1000).",
+      },
+      r: {
+        label: "r (items chosen)",
+        help: "Number of items to choose or arrange. Must be between 0 and n.",
+      },
+    },
+    outputs: {
+      nCr: {
+        label: "C(n, r) — Combinations",
+        help: "Number of ways to choose r items from n without regard to order.",
+      },
+      nPr: {
+        label: "P(n, r) — Permutations",
+        help: "Number of ways to arrange r items from n where order matters.",
+      },
+    },
+    errors: {
+      rGreaterThanN: "r cannot be greater than n.",
+      outOfRange: "n and r must be integers between 0 and 1000.",
+    },
+    faq: [
+      {
+        q: "What is the difference between combinations and permutations?",
+        a: "Combinations count selections where order does not matter — choosing a committee of 3 from 10 people. Permutations count arrangements where order matters — awarding 1st, 2nd, and 3rd place from 10 competitors. C(n,r) = n! / (r!(n-r)!) while P(n,r) = n! / (n-r)!.",
+      },
+      {
+        q: "Why is C(n,r) always less than or equal to P(n,r)?",
+        a: "For any selection of r items, there are r! ways to arrange those same items. So P(n,r) = C(n,r) × r!. Because r! ≥ 1, permutations are always at least as large as combinations (equal only when r = 0 or r = 1).",
+      },
+      {
+        q: "What does C(n, 0) equal and why?",
+        a: "C(n, 0) = 1 for any n. There is exactly one way to choose nothing from a set — the empty selection. Mathematically, 0! = 1 and the formula gives n! / (0! × n!) = 1.",
+      },
+      {
+        q: "Can r be larger than n?",
+        a: "No. You cannot choose more items than exist in the set. C(n,r) and P(n,r) are both defined as 0 when r > n.",
+      },
+      {
+        q: "Where are combinations used in real life?",
+        a: "Combinations appear in lottery odds, card game hands, genetic analysis, committee selection, network path counting, and the binomial theorem in algebra. Permutations arise in scheduling, password generation, race rankings, and cryptographic key counting.",
+      },
+    ],
+  },
+  id: {
+    title: "Combinations & Permutations Calculator",
+    short: "Calculate nCr (combinations) and nPr (permutations) for any n and r instantly.",
+    description:
+      "Free combinations and permutations calculator. Enter n (total items) and r (chosen items) to compute C(n,r) and P(n,r) using exact factorial formulas. Ideal for probability, statistics, and combinatorics problems.",
+    keywords: [
+      "combinations calculator",
+      "permutations calculator",
+      "nCr calculator",
+      "nPr calculator",
+      "combinatorics",
+      "binomial coefficient",
+      "choose function",
+    ],
+    inputs: {
+      n: {
+        label: "n (total items)",
+        help: "Total number of items in the set. Must be a non-negative integer (0–1000).",
+      },
+      r: {
+        label: "r (items chosen)",
+        help: "Number of items to choose or arrange. Must be between 0 and n.",
+      },
+    },
+    outputs: {
+      nCr: {
+        label: "C(n, r) — Combinations",
+        help: "Number of ways to choose r items from n without regard to order.",
+      },
+      nPr: {
+        label: "P(n, r) — Permutations",
+        help: "Number of ways to arrange r items from n where order matters.",
+      },
+    },
+    errors: {
+      rGreaterThanN: "r cannot be greater than n.",
+      outOfRange: "n and r must be integers between 0 and 1000.",
+    },
+    faq: [
+      {
+        q: "What is the difference between combinations and permutations?",
+        a: "Combinations count selections where order does not matter — choosing a committee of 3 from 10 people. Permutations count arrangements where order matters — awarding 1st, 2nd, and 3rd place from 10 competitors. C(n,r) = n! / (r!(n-r)!) while P(n,r) = n! / (n-r)!.",
+      },
+      {
+        q: "Why is C(n,r) always less than or equal to P(n,r)?",
+        a: "For any selection of r items, there are r! ways to arrange those same items. So P(n,r) = C(n,r) × r!. Because r! ≥ 1, permutations are always at least as large as combinations (equal only when r = 0 or r = 1).",
+      },
+      {
+        q: "What does C(n, 0) equal and why?",
+        a: "C(n, 0) = 1 for any n. There is exactly one way to choose nothing from a set — the empty selection. Mathematically, 0! = 1 and the formula gives n! / (0! × n!) = 1.",
+      },
+      {
+        q: "Can r be larger than n?",
+        a: "No. You cannot choose more items than exist in the set. C(n,r) and P(n,r) are both defined as 0 when r > n.",
+      },
+      {
+        q: "Where are combinations used in real life?",
+        a: "Combinations appear in lottery odds, card game hands, genetic analysis, committee selection, network path counting, and the binomial theorem in algebra. Permutations arise in scheduling, password generation, race rankings, and cryptographic key counting.",
+      },
+    ],
+  },
+
 
   tr: {
     title: "Kombinasyon ve Permütasyon Hesaplayıcı",

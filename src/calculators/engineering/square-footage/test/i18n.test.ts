@@ -1,22 +1,12 @@
 import { describe, it, expect } from "vitest";
 import i18n from "../i18n";
+import { LOCALES } from "@/config/site";
 
 describe("square-footage — i18n", () => {
-  it("should have all 12 required languages", () => {
+  it("has an entry for every required locale", () => {
     const languages = Object.keys(i18n);
-    expect(languages).toContain("en");
-    expect(languages).toContain("tr");
-    expect(languages).toContain("de");
-    expect(languages).toContain("fr");
-    expect(languages).toContain("es");
-    expect(languages).toContain("it");
-    expect(languages).toContain("ar");
-    expect(languages).toContain("ru");
-    expect(languages).toContain("zh");
-    expect(languages).toContain("ja");
-    expect(languages).toContain("ko");
-    expect(languages).toContain("hi");
-    expect(languages.length).toBe(12);
+    for (const loc of LOCALES) expect(languages).toContain(loc);
+    expect(languages.length).toBe(LOCALES.length);
   });
 
   it("should have required keys in each language", () => {

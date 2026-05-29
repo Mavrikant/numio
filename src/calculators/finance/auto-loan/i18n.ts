@@ -49,6 +49,103 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  pt: {
+    title: "Auto Loan Calculator",
+    short: "Calculate your monthly car payment, total cost, and interest for any auto loan.",
+    description:
+      "Free auto loan calculator. Enter the vehicle price, down payment, trade-in value, interest rate, and term to see your monthly payment and total loan cost.",
+    keywords: [
+      "auto loan calculator",
+      "car loan calculator",
+      "monthly car payment",
+      "vehicle financing",
+      "car payment calculator",
+      "auto loan interest",
+      "car financing calculator",
+    ],
+    inputs: {
+      vehiclePrice: { label: "Vehicle Price", help: "The purchase price of the vehicle." },
+      downPayment: { label: "Down Payment", help: "Amount paid upfront at purchase." },
+      tradeInValue: { label: "Trade-In Value", help: "Value of any vehicle you trade in. Reduces the financed amount." },
+      annualRate: { label: "Annual Interest Rate (%)", help: "The APR offered by your lender." },
+      termMonths: { label: "Loan Term (months)", help: "Length of the loan in months (e.g. 36, 48, 60, 72)." },
+    },
+    outputs: {
+      monthlyPayment: { label: "Monthly Payment", help: "Fixed amount due each month." },
+      loanAmount: { label: "Amount Financed", help: "Vehicle price minus down payment and trade-in value." },
+      totalPayment: { label: "Total Payment", help: "Sum of all monthly payments over the loan term." },
+      totalInterest: { label: "Total Interest", help: "Total interest paid over the life of the loan." },
+    },
+    errors: {
+      vehiclePriceRange: "Vehicle price must be between $1,000 and $500,000.",
+      downPaymentExceeds: "Down payment and trade-in cannot exceed vehicle price.",
+      rateRange: "Annual rate must be between 0% and 40%.",
+      termRange: "Loan term must be between 12 and 96 months.",
+    },
+    faq: [
+      {
+        q: "What is the best loan term for a car?",
+        a: "Shorter terms (36–48 months) cost less in total interest but have higher monthly payments. Longer terms (60–84 months) lower monthly payments but increase total interest and risk being 'underwater' on the loan (owing more than the car is worth).",
+      },
+      {
+        q: "How does a trade-in affect my auto loan?",
+        a: "The trade-in value is applied directly against the purchase price, reducing the amount you need to finance. This lowers both your monthly payment and total interest.",
+      },
+      {
+        q: "What is a good auto loan rate?",
+        a: "Rates vary by credit score, lender, and loan term. As of recent years, well-qualified buyers often receive rates between 4–7% for new cars and 6–12% for used cars. Always compare multiple lenders.",
+      },
+    ],
+  },
+  id: {
+    title: "Auto Loan Calculator",
+    short: "Calculate your monthly car payment, total cost, and interest for any auto loan.",
+    description:
+      "Free auto loan calculator. Enter the vehicle price, down payment, trade-in value, interest rate, and term to see your monthly payment and total loan cost.",
+    keywords: [
+      "auto loan calculator",
+      "car loan calculator",
+      "monthly car payment",
+      "vehicle financing",
+      "car payment calculator",
+      "auto loan interest",
+      "car financing calculator",
+    ],
+    inputs: {
+      vehiclePrice: { label: "Vehicle Price", help: "The purchase price of the vehicle." },
+      downPayment: { label: "Down Payment", help: "Amount paid upfront at purchase." },
+      tradeInValue: { label: "Trade-In Value", help: "Value of any vehicle you trade in. Reduces the financed amount." },
+      annualRate: { label: "Annual Interest Rate (%)", help: "The APR offered by your lender." },
+      termMonths: { label: "Loan Term (months)", help: "Length of the loan in months (e.g. 36, 48, 60, 72)." },
+    },
+    outputs: {
+      monthlyPayment: { label: "Monthly Payment", help: "Fixed amount due each month." },
+      loanAmount: { label: "Amount Financed", help: "Vehicle price minus down payment and trade-in value." },
+      totalPayment: { label: "Total Payment", help: "Sum of all monthly payments over the loan term." },
+      totalInterest: { label: "Total Interest", help: "Total interest paid over the life of the loan." },
+    },
+    errors: {
+      vehiclePriceRange: "Vehicle price must be between $1,000 and $500,000.",
+      downPaymentExceeds: "Down payment and trade-in cannot exceed vehicle price.",
+      rateRange: "Annual rate must be between 0% and 40%.",
+      termRange: "Loan term must be between 12 and 96 months.",
+    },
+    faq: [
+      {
+        q: "What is the best loan term for a car?",
+        a: "Shorter terms (36–48 months) cost less in total interest but have higher monthly payments. Longer terms (60–84 months) lower monthly payments but increase total interest and risk being 'underwater' on the loan (owing more than the car is worth).",
+      },
+      {
+        q: "How does a trade-in affect my auto loan?",
+        a: "The trade-in value is applied directly against the purchase price, reducing the amount you need to finance. This lowers both your monthly payment and total interest.",
+      },
+      {
+        q: "What is a good auto loan rate?",
+        a: "Rates vary by credit score, lender, and loan term. As of recent years, well-qualified buyers often receive rates between 4–7% for new cars and 6–12% for used cars. Always compare multiple lenders.",
+      },
+    ],
+  },
+
 
   tr: {
     title: "Araç Kredisi Hesaplayıcı",

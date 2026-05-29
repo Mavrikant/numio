@@ -16,6 +16,27 @@ const i18n: CalculatorI18n = {
       { q: "Does it count business days?", a: "Yes — it also shows the number of business days (Monday–Friday) in the period, excluding weekends but not public holidays." },
     ],
   },
+  pt: {
+    title: "Countdown Calculator", short: "Count the days, weeks and business days until a target date.",
+    description: "Free countdown calculator. Pick a target date to see how many days, full weeks and business days remain from today (or any start date), plus the years/months/days breakdown. Great for deadlines, holidays and events.",
+    keywords: ["countdown", "days until", "how many days until", "days remaining", "time until date"],
+    ...io("From date", "Target date", "Total days", "Full weeks", "Business days", "Years", "Months", "Days"),
+    faq: [
+      { q: "How many days until a date?", a: "Enter the target date and the tool counts whole days from today (the default start) to that date. Change the start date to count between any two dates." },
+      { q: "Does it count business days?", a: "Yes — it also shows the number of business days (Monday–Friday) in the period, excluding weekends but not public holidays." },
+    ],
+  },
+  id: {
+    title: "Countdown Calculator", short: "Count the days, weeks and business days until a target date.",
+    description: "Free countdown calculator. Pick a target date to see how many days, full weeks and business days remain from today (or any start date), plus the years/months/days breakdown. Great for deadlines, holidays and events.",
+    keywords: ["countdown", "days until", "how many days until", "days remaining", "time until date"],
+    ...io("From date", "Target date", "Total days", "Full weeks", "Business days", "Years", "Months", "Days"),
+    faq: [
+      { q: "How many days until a date?", a: "Enter the target date and the tool counts whole days from today (the default start) to that date. Change the start date to count between any two dates." },
+      { q: "Does it count business days?", a: "Yes — it also shows the number of business days (Monday–Friday) in the period, excluding weekends but not public holidays." },
+    ],
+  },
+
   tr: {
     title: "Geri Sayım Hesaplayıcı", short: "Bir hedef tarihe kadar gün, hafta ve iş günü sayın.",
     description: "Ücretsiz geri sayım hesaplayıcı. Bir hedef tarih seçin; bugünden (veya herhangi bir başlangıçtan) kaç gün, tam hafta ve iş günü kaldığını, ayrıca yıl/ay/gün dökümünü görün. Son tarihler, tatiller ve etkinlikler için harika.",

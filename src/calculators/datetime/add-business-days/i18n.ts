@@ -16,6 +16,27 @@ const i18n: CalculatorI18n = {
       { q: "Can I count backwards?", a: "Yes — enter a negative number of business days to find a date that many working days before the start date." },
     ],
   },
+  pt: {
+    title: "Add Business Days Calculator", short: "Add or subtract working days (Mon–Fri) from a date.",
+    description: "Free business days calculator. Add or subtract a number of working days (Monday–Friday) from a start date to find a deadline or delivery date. Shows the resulting date and how many calendar and weekend days were spanned.",
+    keywords: ["add business days", "working days calculator", "business days from date", "deadline calculator", "weekday calculator"],
+    ...io("Start date", "Business days (±)", "Result date", "Calendar days spanned", "Weekend days spanned"),
+    faq: [
+      { q: "What counts as a business day?", a: "Monday through Friday. Weekends (Saturday and Sunday) are skipped. Public holidays are not excluded since they differ by country." },
+      { q: "Can I count backwards?", a: "Yes — enter a negative number of business days to find a date that many working days before the start date." },
+    ],
+  },
+  id: {
+    title: "Add Business Days Calculator", short: "Add or subtract working days (Mon–Fri) from a date.",
+    description: "Free business days calculator. Add or subtract a number of working days (Monday–Friday) from a start date to find a deadline or delivery date. Shows the resulting date and how many calendar and weekend days were spanned.",
+    keywords: ["add business days", "working days calculator", "business days from date", "deadline calculator", "weekday calculator"],
+    ...io("Start date", "Business days (±)", "Result date", "Calendar days spanned", "Weekend days spanned"),
+    faq: [
+      { q: "What counts as a business day?", a: "Monday through Friday. Weekends (Saturday and Sunday) are skipped. Public holidays are not excluded since they differ by country." },
+      { q: "Can I count backwards?", a: "Yes — enter a negative number of business days to find a date that many working days before the start date." },
+    ],
+  },
+
   tr: {
     title: "İş Günü Ekleme Hesaplayıcı", short: "Bir tarihe iş günü (Pzt–Cum) ekleyin veya çıkarın.",
     description: "Ücretsiz iş günü hesaplayıcı. Bir başlangıç tarihine iş günü (Pazartesi–Cuma) ekleyin veya çıkarın; teslim veya son tarih bulun. Sonuç tarihini, kapsanan takvim ve hafta sonu günlerini gösterir.",

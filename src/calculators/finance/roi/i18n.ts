@@ -78,6 +78,161 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  pt: {
+    title: "ROI Calculator",
+    short: "Calculate your return on investment, annualized ROI (CAGR), and investment multiple.",
+    description:
+      "Free ROI calculator. Enter your initial investment, final value, and time period to get ROI percentage, CAGR, net profit, and the Rule of 72.",
+    keywords: [
+      "ROI calculator",
+      "return on investment",
+      "CAGR calculator",
+      "investment return",
+      "annualized return",
+      "net profit calculator",
+      "investment multiple",
+    ],
+    inputs: {
+      initialInvestment: {
+        label: "Initial Investment",
+        help: "The amount of money you invested at the start.",
+      },
+      finalValue: {
+        label: "Final Value",
+        help: "The current or ending value of your investment.",
+      },
+      years: {
+        label: "Time Period (Years)",
+        help: "The number of years you held the investment. Used to calculate annualized ROI (CAGR).",
+      },
+    },
+    outputs: {
+      roi: {
+        label: "ROI",
+        help: "Total return on investment as a percentage: (Final Value − Initial Investment) / Initial Investment × 100.",
+      },
+      annualizedRoi: {
+        label: "Annualized ROI (CAGR)",
+        help: "Compound Annual Growth Rate — the steady annual rate that would achieve the same total return.",
+      },
+      netProfit: {
+        label: "Net Profit / Loss",
+        help: "Final Value minus Initial Investment. Negative indicates a loss.",
+      },
+      moic: {
+        label: "Investment Multiple (MOIC)",
+        help: "Multiple on Invested Capital — how many times your initial investment has grown.",
+      },
+      ruleOf72Years: {
+        label: "Rule of 72 (Years to Double)",
+        help: "At the annualized ROI, how many years it would take for the investment to double (72 ÷ CAGR%).",
+      },
+    },
+    errors: {
+      initialInvestmentRequired: "Initial investment must be greater than zero.",
+      finalValueRequired: "Final value must be zero or greater.",
+    },
+    faq: [
+      {
+        q: "What is ROI?",
+        a: "Return on Investment (ROI) measures how much profit or loss an investment generates relative to its cost. It is expressed as a percentage: ROI = (Final Value − Initial Investment) / Initial Investment × 100.",
+      },
+      {
+        q: "What is the difference between ROI and CAGR?",
+        a: "ROI gives the total percentage return over the entire investment period regardless of duration. CAGR (Compound Annual Growth Rate) normalizes the return on an annual basis, making it easier to compare investments held for different lengths of time.",
+      },
+      {
+        q: "Can ROI be negative?",
+        a: "Yes. A negative ROI means you lost money on the investment. For example, investing $10,000 and ending with $8,000 gives an ROI of −20%.",
+      },
+      {
+        q: "What is the Rule of 72?",
+        a: "The Rule of 72 is a quick way to estimate how many years it takes an investment to double at a given annual rate. Divide 72 by the annual return percentage. At 8% per year, an investment doubles in approximately 72 ÷ 8 = 9 years.",
+      },
+      {
+        q: "What is MOIC?",
+        a: "MOIC (Multiple on Invested Capital) shows how many times your investment has grown. A MOIC of 2.0x means the investment doubled. It is Final Value divided by Initial Investment.",
+      },
+    ],
+  },
+  id: {
+    title: "ROI Calculator",
+    short: "Calculate your return on investment, annualized ROI (CAGR), and investment multiple.",
+    description:
+      "Free ROI calculator. Enter your initial investment, final value, and time period to get ROI percentage, CAGR, net profit, and the Rule of 72.",
+    keywords: [
+      "ROI calculator",
+      "return on investment",
+      "CAGR calculator",
+      "investment return",
+      "annualized return",
+      "net profit calculator",
+      "investment multiple",
+    ],
+    inputs: {
+      initialInvestment: {
+        label: "Initial Investment",
+        help: "The amount of money you invested at the start.",
+      },
+      finalValue: {
+        label: "Final Value",
+        help: "The current or ending value of your investment.",
+      },
+      years: {
+        label: "Time Period (Years)",
+        help: "The number of years you held the investment. Used to calculate annualized ROI (CAGR).",
+      },
+    },
+    outputs: {
+      roi: {
+        label: "ROI",
+        help: "Total return on investment as a percentage: (Final Value − Initial Investment) / Initial Investment × 100.",
+      },
+      annualizedRoi: {
+        label: "Annualized ROI (CAGR)",
+        help: "Compound Annual Growth Rate — the steady annual rate that would achieve the same total return.",
+      },
+      netProfit: {
+        label: "Net Profit / Loss",
+        help: "Final Value minus Initial Investment. Negative indicates a loss.",
+      },
+      moic: {
+        label: "Investment Multiple (MOIC)",
+        help: "Multiple on Invested Capital — how many times your initial investment has grown.",
+      },
+      ruleOf72Years: {
+        label: "Rule of 72 (Years to Double)",
+        help: "At the annualized ROI, how many years it would take for the investment to double (72 ÷ CAGR%).",
+      },
+    },
+    errors: {
+      initialInvestmentRequired: "Initial investment must be greater than zero.",
+      finalValueRequired: "Final value must be zero or greater.",
+    },
+    faq: [
+      {
+        q: "What is ROI?",
+        a: "Return on Investment (ROI) measures how much profit or loss an investment generates relative to its cost. It is expressed as a percentage: ROI = (Final Value − Initial Investment) / Initial Investment × 100.",
+      },
+      {
+        q: "What is the difference between ROI and CAGR?",
+        a: "ROI gives the total percentage return over the entire investment period regardless of duration. CAGR (Compound Annual Growth Rate) normalizes the return on an annual basis, making it easier to compare investments held for different lengths of time.",
+      },
+      {
+        q: "Can ROI be negative?",
+        a: "Yes. A negative ROI means you lost money on the investment. For example, investing $10,000 and ending with $8,000 gives an ROI of −20%.",
+      },
+      {
+        q: "What is the Rule of 72?",
+        a: "The Rule of 72 is a quick way to estimate how many years it takes an investment to double at a given annual rate. Divide 72 by the annual return percentage. At 8% per year, an investment doubles in approximately 72 ÷ 8 = 9 years.",
+      },
+      {
+        q: "What is MOIC?",
+        a: "MOIC (Multiple on Invested Capital) shows how many times your investment has grown. A MOIC of 2.0x means the investment doubled. It is Final Value divided by Initial Investment.",
+      },
+    ],
+  },
+
 
   tr: {
     title: "YGO Hesaplayıcı",

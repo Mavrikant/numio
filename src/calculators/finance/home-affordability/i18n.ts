@@ -68,6 +68,141 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  pt: {
+    title: "Home Affordability Calculator (28/36 Rule)",
+    short: "Find out how much house you can afford using the standard 28/36 debt-to-income rule with taxes and insurance included.",
+    description:
+      "Free home-affordability calculator based on the 28/36 underwriting rule used by Fannie Mae and most US lenders. Enter your income, monthly debts, down payment, rate, term, and tax/insurance rates to see your maximum home price, loan amount, monthly PITI payment, and front/back-end DTI ratios.",
+    keywords: [
+      "home affordability calculator",
+      "28/36 rule",
+      "DTI calculator",
+      "max home price",
+      "PITI calculator",
+      "mortgage qualification",
+      "how much house can I afford",
+    ],
+    inputs: {
+      annualIncome: { label: "Annual Gross Income", help: "Total yearly income before taxes." },
+      monthlyDebts: { label: "Other Monthly Debts", help: "Sum of all non-housing recurring debts: car payments, student loans, credit-card minimums, alimony." },
+      downPayment: { label: "Down Payment", help: "Cash you can put down. Lowers the loan but does not change DTI limits." },
+      annualRate: { label: "Mortgage Rate (%)", help: "Annual interest rate you expect to qualify for." },
+      termYears: { label: "Loan Term (years)", help: "Typically 30 years; shorter terms raise the monthly payment and reduce affordability." },
+      propertyTaxRate: { label: "Property Tax Rate (%)", help: "Annual property tax as % of home price (~1.2% US average; varies by state)." },
+      insuranceRate: { label: "Insurance Rate (%)", help: "Annual homeowner's insurance as % of home price (~0.35% typical)." },
+    },
+    outputs: {
+      maxHomePrice: { label: "Max Home Price", help: "Highest purchase price that keeps your PITI within both 28% (front-end) and 36% (back-end) limits." },
+      maxLoanAmount: { label: "Max Loan Amount", help: "Max home price minus your down payment." },
+      monthlyPaymentAtMax: { label: "Monthly PITI at Max", help: "Principal + interest + taxes + insurance at the maximum home price." },
+      monthlyPi: { label: "Monthly P&I", help: "Principal and interest portion of the payment." },
+      monthlyTax: { label: "Monthly Property Tax", help: "Estimated monthly property tax escrow." },
+      monthlyInsurance: { label: "Monthly Insurance", help: "Estimated monthly homeowner's insurance escrow." },
+      frontEndDti: { label: "Front-End DTI (%)", help: "Housing PITI as a percentage of gross monthly income. Target ≤ 28%." },
+      backEndDti: { label: "Back-End DTI (%)", help: "Housing PITI + other debts as a percentage of gross monthly income. Target ≤ 36%." },
+      bindingRule: { label: "Binding Rule", help: "Which of the 28% or 36% limits is actually constraining you." },
+      affordabilityCategory: { label: "Affordability Category", help: "How comfortable the resulting back-end DTI is." },
+    },
+    options: {
+      stretched: "Stretched (DTI > 42%)",
+      tight: "Tight (36–42%)",
+      comfortable: "Comfortable (28–36%)",
+      very_comfortable: "Very comfortable (≤ 28%)",
+      front: "Front-end 28% (housing-only)",
+      back: "Back-end 36% (housing + debts)",
+    },
+    errors: {
+      incomePositive: "Annual income must be positive.",
+      rateRange: "Mortgage rate must be between 0% and 30%.",
+      termRange: "Loan term must be between 1 and 40 years.",
+    },
+    faq: [
+      {
+        q: "What is the 28/36 rule?",
+        a: "It's a long-standing mortgage-underwriting heuristic. Your monthly housing payment (PITI — principal, interest, property tax, insurance) should be no more than 28% of your gross monthly income, and your housing payment plus all other recurring debts should be no more than 36%. Many conforming lenders allow up to 43–50% in special programs, but 28/36 is the conservative target.",
+      },
+      {
+        q: "What's the difference between front-end and back-end DTI?",
+        a: "Front-end DTI counts only your housing PITI. Back-end DTI also includes car loans, student loans, credit-card minimums, child support, and other recurring debts. The back-end ratio is usually what binds — that's why paying down a car or card boosts your home-buying budget.",
+      },
+      {
+        q: "Why isn't PMI in this calculator?",
+        a: "PMI (private mortgage insurance) kicks in when your down payment is below 20%. It depends on your credit score and loan program; we leave it out to keep the formula transparent. If you'll owe PMI, treat your max-home-price result as a ~5–10% upper bound.",
+      },
+      {
+        q: "Why does the 'binding rule' matter?",
+        a: "If front-end binds, you're limited by housing cost; raising your down payment or reducing the rate helps the most. If back-end binds, you're limited by other debts; paying off a car loan or credit card frees up the most affordability per dollar.",
+      },
+    ],
+  },
+  id: {
+    title: "Home Affordability Calculator (28/36 Rule)",
+    short: "Find out how much house you can afford using the standard 28/36 debt-to-income rule with taxes and insurance included.",
+    description:
+      "Free home-affordability calculator based on the 28/36 underwriting rule used by Fannie Mae and most US lenders. Enter your income, monthly debts, down payment, rate, term, and tax/insurance rates to see your maximum home price, loan amount, monthly PITI payment, and front/back-end DTI ratios.",
+    keywords: [
+      "home affordability calculator",
+      "28/36 rule",
+      "DTI calculator",
+      "max home price",
+      "PITI calculator",
+      "mortgage qualification",
+      "how much house can I afford",
+    ],
+    inputs: {
+      annualIncome: { label: "Annual Gross Income", help: "Total yearly income before taxes." },
+      monthlyDebts: { label: "Other Monthly Debts", help: "Sum of all non-housing recurring debts: car payments, student loans, credit-card minimums, alimony." },
+      downPayment: { label: "Down Payment", help: "Cash you can put down. Lowers the loan but does not change DTI limits." },
+      annualRate: { label: "Mortgage Rate (%)", help: "Annual interest rate you expect to qualify for." },
+      termYears: { label: "Loan Term (years)", help: "Typically 30 years; shorter terms raise the monthly payment and reduce affordability." },
+      propertyTaxRate: { label: "Property Tax Rate (%)", help: "Annual property tax as % of home price (~1.2% US average; varies by state)." },
+      insuranceRate: { label: "Insurance Rate (%)", help: "Annual homeowner's insurance as % of home price (~0.35% typical)." },
+    },
+    outputs: {
+      maxHomePrice: { label: "Max Home Price", help: "Highest purchase price that keeps your PITI within both 28% (front-end) and 36% (back-end) limits." },
+      maxLoanAmount: { label: "Max Loan Amount", help: "Max home price minus your down payment." },
+      monthlyPaymentAtMax: { label: "Monthly PITI at Max", help: "Principal + interest + taxes + insurance at the maximum home price." },
+      monthlyPi: { label: "Monthly P&I", help: "Principal and interest portion of the payment." },
+      monthlyTax: { label: "Monthly Property Tax", help: "Estimated monthly property tax escrow." },
+      monthlyInsurance: { label: "Monthly Insurance", help: "Estimated monthly homeowner's insurance escrow." },
+      frontEndDti: { label: "Front-End DTI (%)", help: "Housing PITI as a percentage of gross monthly income. Target ≤ 28%." },
+      backEndDti: { label: "Back-End DTI (%)", help: "Housing PITI + other debts as a percentage of gross monthly income. Target ≤ 36%." },
+      bindingRule: { label: "Binding Rule", help: "Which of the 28% or 36% limits is actually constraining you." },
+      affordabilityCategory: { label: "Affordability Category", help: "How comfortable the resulting back-end DTI is." },
+    },
+    options: {
+      stretched: "Stretched (DTI > 42%)",
+      tight: "Tight (36–42%)",
+      comfortable: "Comfortable (28–36%)",
+      very_comfortable: "Very comfortable (≤ 28%)",
+      front: "Front-end 28% (housing-only)",
+      back: "Back-end 36% (housing + debts)",
+    },
+    errors: {
+      incomePositive: "Annual income must be positive.",
+      rateRange: "Mortgage rate must be between 0% and 30%.",
+      termRange: "Loan term must be between 1 and 40 years.",
+    },
+    faq: [
+      {
+        q: "What is the 28/36 rule?",
+        a: "It's a long-standing mortgage-underwriting heuristic. Your monthly housing payment (PITI — principal, interest, property tax, insurance) should be no more than 28% of your gross monthly income, and your housing payment plus all other recurring debts should be no more than 36%. Many conforming lenders allow up to 43–50% in special programs, but 28/36 is the conservative target.",
+      },
+      {
+        q: "What's the difference between front-end and back-end DTI?",
+        a: "Front-end DTI counts only your housing PITI. Back-end DTI also includes car loans, student loans, credit-card minimums, child support, and other recurring debts. The back-end ratio is usually what binds — that's why paying down a car or card boosts your home-buying budget.",
+      },
+      {
+        q: "Why isn't PMI in this calculator?",
+        a: "PMI (private mortgage insurance) kicks in when your down payment is below 20%. It depends on your credit score and loan program; we leave it out to keep the formula transparent. If you'll owe PMI, treat your max-home-price result as a ~5–10% upper bound.",
+      },
+      {
+        q: "Why does the 'binding rule' matter?",
+        a: "If front-end binds, you're limited by housing cost; raising your down payment or reducing the rate helps the most. If back-end binds, you're limited by other debts; paying off a car loan or credit card frees up the most affordability per dollar.",
+      },
+    ],
+  },
+
 
   tr: {
     title: "Ev Bütçesi Hesaplayıcı (28/36 Kuralı)",

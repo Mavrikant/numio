@@ -13,6 +13,8 @@ export const COMMON_UI: Record<Locale, Record<string, string>> = {
   fr: { input: "Entrée", output: "Sortie", copy: "Copier", copied: "Copié !", clear: "Effacer", swap: "Inverser", result: "Résultat" },
   es: { input: "Entrada", output: "Salida", copy: "Copiar", copied: "¡Copiado!", clear: "Limpiar", swap: "Intercambiar", result: "Resultado" },
   it: { input: "Input", output: "Output", copy: "Copia", copied: "Copiato!", clear: "Cancella", swap: "Inverti", result: "Risultato" },
+  pt: { input: "Entrada", output: "Saída", copy: "Copiar", copied: "Copiado!", clear: "Limpar", swap: "Trocar", result: "Resultado" },
+  id: { input: "Input", output: "Output", copy: "Salin", copied: "Disalin!", clear: "Hapus", swap: "Tukar", result: "Hasil" },
   ar: { input: "المدخل", output: "المخرج", copy: "نسخ", copied: "تم النسخ!", clear: "مسح", swap: "تبديل", result: "النتيجة" },
   ru: { input: "Ввод", output: "Вывод", copy: "Копировать", copied: "Скопировано!", clear: "Очистить", swap: "Поменять", result: "Результат" },
   zh: { input: "输入", output: "输出", copy: "复制", copied: "已复制！", clear: "清除", swap: "交换", result: "结果" },
