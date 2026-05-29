@@ -35,10 +35,10 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Weight/Mass Converter",
-    short: "Convert between metric, imperial, and specialty weight units",
-    description: "Convert between metric, imperial, and specialty weight units with precision",
-    keywords: ["weight", "mass", "conversion", "kilogram", "pound", "ounce", "ton"],
+    title: "Conversor de Peso",
+    short: "Converta entre quilogramas, libras, onças e outras unidades de peso.",
+    description: "Conversor gratuito de peso. Converta entre kg, g, lb, oz, toneladas e outras unidades de massa.",
+    keywords: ["conversor peso", "kg libras", "onças gramas", "toneladas", "unidades peso"],
     inputs: {
       value: { label: "Value", help: "The weight value to convert" },
       fromUnit: { label: "From Unit", help: "Select source unit" },
@@ -68,10 +68,10 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Weight/Mass Converter",
-    short: "Convert between metric, imperial, and specialty weight units",
-    description: "Convert between metric, imperial, and specialty weight units with precision",
-    keywords: ["weight", "mass", "conversion", "kilogram", "pound", "ounce", "ton"],
+    title: "Konverter Berat",
+    short: "Konversi antara kilogram, pound, ons, dan satuan berat lainnya.",
+    description: "Konverter berat gratis. Konversi antara kg, g, lb, oz, ton, dan satuan massa lainnya.",
+    keywords: ["konverter berat", "kg pound", "ons gram", "ton", "satuan berat"],
     inputs: {
       value: { label: "Value", help: "The weight value to convert" },
       fromUnit: { label: "From Unit", help: "Select source unit" },

@@ -21,10 +21,10 @@ const i18n: CalculatorI18n = {
     },
   },
   pt: {
-    title: "Transformer Calculator",
-    short: "Calculate transformer turns ratio, secondary current, power, and efficiency.",
-    description: "Free transformer calculator. Enter primary voltage, primary current, secondary voltage, and efficiency to calculate turns ratio, secondary current, primary and secondary power, and power loss.",
-    keywords: ["transformer", "turns ratio", "voltage", "current", "power", "efficiency", "electrical"],
+    title: "Calculadora de Transformador",
+    short: "Calcule a tensão, corrente e relação de transformação de um transformador.",
+    description: "Calculadora gratuita de transformador. Calcule a tensão secundária, corrente, número de espiras e relação de transformação.",
+    keywords: ["transformador", "trafo", "relação transformação", "espiras", "potência transformador"],
     inputs: {
       primaryVoltage: { label: "Primary Voltage", help: "Voltage on the primary winding (V)" },
       primaryCurrent: { label: "Primary Current", help: "Current on the primary winding (A)" },
@@ -40,10 +40,10 @@ const i18n: CalculatorI18n = {
     },
   },
   id: {
-    title: "Transformer Calculator",
-    short: "Calculate transformer turns ratio, secondary current, power, and efficiency.",
-    description: "Free transformer calculator. Enter primary voltage, primary current, secondary voltage, and efficiency to calculate turns ratio, secondary current, primary and secondary power, and power loss.",
-    keywords: ["transformer", "turns ratio", "voltage", "current", "power", "efficiency", "electrical"],
+    title: "Kalkulator Transformator",
+    short: "Hitung tegangan, arus, dan rasio transformasi transformator.",
+    description: "Kalkulator transformator gratis. Hitung tegangan sekunder, arus, jumlah lilitan, dan rasio transformasi.",
+    keywords: ["transformator", "trafo", "rasio transformasi", "lilitan", "daya trafo"],
     inputs: {
       primaryVoltage: { label: "Primary Voltage", help: "Voltage on the primary winding (V)" },
       primaryCurrent: { label: "Primary Current", help: "Current on the primary winding (A)" },

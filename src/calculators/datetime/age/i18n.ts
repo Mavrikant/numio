@@ -28,11 +28,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Age Calculator",
-    short: "Find your exact age in years, months and days, plus totals and your next birthday.",
+    title: "Calculadora de Idade",
+    short: "Calcule a sua idade exacta em anos, meses, dias e horas.",
     description:
-      "Free age calculator. Enter your date of birth to see your exact age in years, months and days, your age in total months, weeks and days, and how long until your next birthday.",
-    keywords: ["age calculator", "how old am I", "age from date of birth", "exact age", "age in days", "next birthday calculator"],
+      "Calculadora gratuita de idade. Calcule a idade em anos, meses, dias, horas e até segundos a partir da data de nascimento.",
+    keywords: ["calculadora idade", "anos meses dias", "idade exacta", "data nascimento", "idade real"],
     inputs: {
       birthDate: { label: "Date of birth", help: "The day you were born." },
       asOfDate: { label: "Age at date", help: "Calculate age as of this date (defaults to today)." },
@@ -54,11 +54,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Age Calculator",
-    short: "Find your exact age in years, months and days, plus totals and your next birthday.",
+    title: "Kalkulator Usia",
+    short: "Hitung usia Anda dalam tahun, bulan, hari, dan jam yang tepat.",
     description:
-      "Free age calculator. Enter your date of birth to see your exact age in years, months and days, your age in total months, weeks and days, and how long until your next birthday.",
-    keywords: ["age calculator", "how old am I", "age from date of birth", "exact age", "age in days", "next birthday calculator"],
+      "Kalkulator usia gratis. Hitung usia dalam tahun, bulan, hari, jam, bahkan detik dari tanggal lahir.",
+    keywords: ["kalkulator usia", "tahun bulan hari", "usia tepat", "tanggal lahir", "umur"],
     inputs: {
       birthDate: { label: "Date of birth", help: "The day you were born." },
       asOfDate: { label: "Age at date", help: "Calculate age as of this date (defaults to today)." },

@@ -61,20 +61,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Pump Power Calculator",
-    short: "Calculate hydraulic, shaft, and electrical input power for a centrifugal pump.",
+    title: "Calculadora de Potência de Bomba",
+    short: "Calcule a potência necessária de uma bomba para um determinado caudal e altura.",
     description:
-      "Free pump power calculator. Enter flow rate, head, fluid density and pump/motor efficiencies to compute hydraulic power (kW), shaft (brake) power, electrical input power, overall efficiency, annual energy use and operating cost.",
-    keywords: [
-      "pump power calculator",
-      "hydraulic power",
-      "shaft power",
-      "brake horsepower",
-      "centrifugal pump",
-      "pump efficiency",
-      "kW pump",
-      "pump energy cost",
-    ],
+      "Calculadora gratuita de potência de bomba. Calcule a potência hidráulica e elétrica necessárias para o caudal, altura manométrica e eficiência.",
+    keywords: ["potência bomba", "potência hidráulica", "altura manométrica", "caudal bomba", "eficiência"],
     inputs: {
       flowRate: { label: "Flow rate (Q)", help: "Volumetric flow delivered by the pump." },
       flowUnit: { label: "Flow unit", help: "Choose cubic metres per hour (m³/h) or litres per second (L/s)." },
@@ -120,20 +111,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Pump Power Calculator",
-    short: "Calculate hydraulic, shaft, and electrical input power for a centrifugal pump.",
+    title: "Kalkulator Daya Pompa",
+    short: "Hitung daya yang diperlukan pompa untuk debit dan ketinggian tertentu.",
     description:
-      "Free pump power calculator. Enter flow rate, head, fluid density and pump/motor efficiencies to compute hydraulic power (kW), shaft (brake) power, electrical input power, overall efficiency, annual energy use and operating cost.",
-    keywords: [
-      "pump power calculator",
-      "hydraulic power",
-      "shaft power",
-      "brake horsepower",
-      "centrifugal pump",
-      "pump efficiency",
-      "kW pump",
-      "pump energy cost",
-    ],
+      "Kalkulator daya pompa gratis. Hitung daya hidraulik dan listrik yang diperlukan untuk debit, head, dan efisiensi.",
+    keywords: ["daya pompa", "daya hidraulik", "head pompa", "debit pompa", "efisiensi pompa"],
     inputs: {
       flowRate: { label: "Flow rate (Q)", help: "Volumetric flow delivered by the pump." },
       flowUnit: { label: "Flow unit", help: "Choose cubic metres per hour (m³/h) or litres per second (L/s)." },

@@ -35,10 +35,10 @@ const i18n: CalculatorI18n = {
     },
   },
   pt: {
-    title: "Exponent Calculator",
-    short: "Calculate powers and exponents. Find base^exponent, expanded notation, and scientific notation.",
-    description: "Free exponent calculator. Calculate powers with any base and exponent. Get expanded notation and scientific notation. Handles negative exponents and special cases.",
-    keywords: ["exponent calculator", "power calculator", "base exponent", "scientific notation", "exponential"],
+    title: "Calculadora de Potência (Expoente)",
+    short: "Calcule a potência de qualquer número com expoente inteiro ou decimal.",
+    description: "Calculadora gratuita de potência. Calcule base elevada a expoente, incluindo expoentes negativos e fracionários.",
+    keywords: ["potência", "expoente", "elevar", "base expoente", "potenciação"],
     inputs: {
       base: {
         label: "Base",
@@ -68,10 +68,10 @@ const i18n: CalculatorI18n = {
     },
   },
   id: {
-    title: "Exponent Calculator",
-    short: "Calculate powers and exponents. Find base^exponent, expanded notation, and scientific notation.",
-    description: "Free exponent calculator. Calculate powers with any base and exponent. Get expanded notation and scientific notation. Handles negative exponents and special cases.",
-    keywords: ["exponent calculator", "power calculator", "base exponent", "scientific notation", "exponential"],
+    title: "Kalkulator Eksponen (Pangkat)",
+    short: "Hitung pangkat dari bilangan apa pun dengan eksponen bulat atau desimal.",
+    description: "Kalkulator pangkat gratis. Hitung basis dipangkatkan eksponen, termasuk eksponen negatif dan pecahan.",
+    keywords: ["eksponen", "pangkat", "perpangkatan", "basis pangkat", "pangkat negatif"],
     inputs: {
       base: {
         label: "Base",

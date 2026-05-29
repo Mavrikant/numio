@@ -26,11 +26,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Roman Numeral Converter",
-    short: "Convert numbers to Roman numerals and Roman numerals back to numbers (1–3999).",
+    title: "Conversor de Numerais Romanos",
+    short: "Converta entre números arábicos e numerais romanos.",
     description:
-      "Free Roman numeral converter. Turn any number from 1 to 3999 into Roman numerals, or decode a Roman numeral back to a regular number. Uses standard subtractive notation (IV, IX, XL…).",
-    keywords: ["roman numeral converter", "roman numerals", "arabic to roman", "roman to number", "number to roman numerals", "convert roman numerals"],
+      "Conversor gratuito de numerais romanos. Converta entre números decimais e a notação romana (I, V, X, L, C, D, M).",
+    keywords: ["numerais romanos", "números romanos", "conversor romano", "I V X", "arábicos romanos"],
     inputs: {
       mode: { label: "Conversion direction" },
       value: { label: "Value", help: "A number (1–3999) or a Roman numeral, depending on the direction." },
@@ -48,11 +48,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Roman Numeral Converter",
-    short: "Convert numbers to Roman numerals and Roman numerals back to numbers (1–3999).",
+    title: "Konverter Angka Romawi",
+    short: "Konversi antara angka arab dan angka romawi.",
     description:
-      "Free Roman numeral converter. Turn any number from 1 to 3999 into Roman numerals, or decode a Roman numeral back to a regular number. Uses standard subtractive notation (IV, IX, XL…).",
-    keywords: ["roman numeral converter", "roman numerals", "arabic to roman", "roman to number", "number to roman numerals", "convert roman numerals"],
+      "Konverter angka romawi gratis. Konversi antara bilangan desimal dan notasi romawi (I, V, X, L, C, D, M).",
+    keywords: ["angka romawi", "numerasi romawi", "konverter romawi", "I V X", "arab romawi"],
     inputs: {
       mode: { label: "Conversion direction" },
       value: { label: "Value", help: "A number (1–3999) or a Roman numeral, depending on the direction." },

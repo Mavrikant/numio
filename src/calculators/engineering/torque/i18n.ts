@@ -60,11 +60,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Torque Calculator",
-    short: "Solve for torque from force and distance, or vice versa using τ = F × r.",
+    title: "Calculadora de Torque (Binário)",
+    short: "Calcule o torque a partir da força e do comprimento do braço.",
     description:
-      "Free torque calculator for rotational mechanics. Calculate torque (N·m) from force (N) and distance (m), or solve for force/distance given torque. Includes angular momentum, rotational inertia concepts.",
-    keywords: ["torque calculator", "moment", "rotational force", "angular momentum", "mechanics"],
+      "Calculadora gratuita de torque (binário). Calcule o momento de força em Nm, kgfm, ft·lbf ou outras unidades a partir de força e distância.",
+    keywords: ["torque", "binário", "momento força", "Nm", "ft-lbf"],
     inputs: {
       momentOrForce: {
         label: "Calculate",
@@ -118,11 +118,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Torque Calculator",
-    short: "Solve for torque from force and distance, or vice versa using τ = F × r.",
+    title: "Kalkulator Torsi",
+    short: "Hitung torsi dari gaya dan panjang lengan.",
     description:
-      "Free torque calculator for rotational mechanics. Calculate torque (N·m) from force (N) and distance (m), or solve for force/distance given torque. Includes angular momentum, rotational inertia concepts.",
-    keywords: ["torque calculator", "moment", "rotational force", "angular momentum", "mechanics"],
+      "Kalkulator torsi gratis. Hitung momen gaya dalam Nm, kgm, ft·lbf, atau satuan lain dari gaya dan jarak.",
+    keywords: ["torsi", "torque", "momen gaya", "Nm", "ft-lbf"],
     inputs: {
       momentOrForce: {
         label: "Calculate",

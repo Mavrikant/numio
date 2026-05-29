@@ -17,9 +17,9 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Add Business Days Calculator", short: "Add or subtract working days (Mon–Fri) from a date.",
-    description: "Free business days calculator. Add or subtract a number of working days (Monday–Friday) from a start date to find a deadline or delivery date. Shows the resulting date and how many calendar and weekend days were spanned.",
-    keywords: ["add business days", "working days calculator", "business days from date", "deadline calculator", "weekday calculator"],
+    title: "Adicionar Dias Úteis a uma Data", short: "Adicione ou subtraia dias úteis a uma data, excluindo fins de semana.",
+    description: "Calculadora gratuita de dias úteis. Adicione ou subtraia dias úteis a uma data, excluindo fins de semana e feriados configuráveis.",
+    keywords: ["dias úteis", "adicionar dias úteis", "calcular prazo", "dias trabalho", "calendário útil"],
     ...io("Start date", "Business days (±)", "Result date", "Calendar days spanned", "Weekend days spanned"),
     faq: [
       { q: "What counts as a business day?", a: "Monday through Friday. Weekends (Saturday and Sunday) are skipped. Public holidays are not excluded since they differ by country." },
@@ -27,9 +27,9 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Add Business Days Calculator", short: "Add or subtract working days (Mon–Fri) from a date.",
-    description: "Free business days calculator. Add or subtract a number of working days (Monday–Friday) from a start date to find a deadline or delivery date. Shows the resulting date and how many calendar and weekend days were spanned.",
-    keywords: ["add business days", "working days calculator", "business days from date", "deadline calculator", "weekday calculator"],
+    title: "Tambah Hari Kerja ke Tanggal", short: "Tambah atau kurangi hari kerja pada tanggal, tidak termasuk akhir pekan.",
+    description: "Kalkulator hari kerja gratis. Tambah atau kurangi hari kerja pada tanggal, tidak termasuk akhir pekan dan libur yang dapat dikonfigurasi.",
+    keywords: ["hari kerja", "tambah hari kerja", "hitung tenggat", "hari bisnis", "kalender kerja"],
     ...io("Start date", "Business days (±)", "Result date", "Calendar days spanned", "Weekend days spanned"),
     faq: [
       { q: "What counts as a business day?", a: "Monday through Friday. Weekends (Saturday and Sunday) are skipped. Public holidays are not excluded since they differ by country." },

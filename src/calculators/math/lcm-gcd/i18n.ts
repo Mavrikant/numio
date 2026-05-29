@@ -70,19 +70,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "GCD and LCM Calculator",
-    short: "Calculate the greatest common divisor and least common multiple of two numbers.",
+    title: "Calculadora de MMC e MDC",
+    short: "Calcule o mínimo múltiplo comum (MMC) e o máximo divisor comum (MDC).",
     description:
-      "Free GCD and LCM calculator using the Euclidean algorithm. Find both the greatest common divisor and least common multiple with step-by-step breakdown.",
-    keywords: [
-      "GCD calculator",
-      "LCM calculator",
-      "greatest common divisor",
-      "least common multiple",
-      "Euclidean algorithm",
-      "common divisor",
-      "common multiple",
-    ],
+      "Calculadora gratuita de MMC e MDC. Encontre o mínimo múltiplo comum e o máximo divisor comum de dois ou mais números inteiros.",
+    keywords: ["MMC", "MDC", "mínimo múltiplo comum", "máximo divisor comum", "Euclides"],
     inputs: {
       a: {
         label: "First number",
@@ -138,19 +130,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "GCD and LCM Calculator",
-    short: "Calculate the greatest common divisor and least common multiple of two numbers.",
+    title: "Kalkulator KPK dan FPB",
+    short: "Hitung Kelipatan Persekutuan terKecil (KPK) dan Faktor Persekutuan terBesar (FPB).",
     description:
-      "Free GCD and LCM calculator using the Euclidean algorithm. Find both the greatest common divisor and least common multiple with step-by-step breakdown.",
-    keywords: [
-      "GCD calculator",
-      "LCM calculator",
-      "greatest common divisor",
-      "least common multiple",
-      "Euclidean algorithm",
-      "common divisor",
-      "common multiple",
-    ],
+      "Kalkulator KPK dan FPB gratis. Temukan KPK dan FPB dari dua atau lebih bilangan bulat.",
+    keywords: ["KPK", "FPB", "kelipatan terkecil", "faktor terbesar", "Euclid"],
     inputs: {
       a: {
         label: "First number",

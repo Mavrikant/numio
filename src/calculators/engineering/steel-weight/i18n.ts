@@ -36,10 +36,10 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Steel / Metal Weight Calculator",
-    short: "Calculate weight of steel bars, rebars, pipes, and plates in kg and lb.",
-    description: "Free metal weight calculator for steel rebar, bars, pipes, and plates. Get exact weight per meter and total weight with material density lookup.",
-    keywords: ["steel weight calculator", "rebar weight", "pipe weight", "steel bar weight", "material weight", "kg lb conversion"],
+    title: "Calculadora de Peso de Aço",
+    short: "Calcule o peso de barras, tubos e chapas de aço, alumínio ou cobre.",
+    description: "Calculadora gratuita de peso de aço. Calcule o peso por metro de barras redondas, perfis e chapas com base nas dimensões e material.",
+    keywords: ["peso aço", "kg metro aço", "peso vergalhão", "peso tubo", "calculadora metal"],
     inputs: {
       type: { label: "Type", help: "Select product type." },
       material: { label: "Material", help: "Choose material (steel, aluminum, copper)." },
@@ -70,10 +70,10 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Steel / Metal Weight Calculator",
-    short: "Calculate weight of steel bars, rebars, pipes, and plates in kg and lb.",
-    description: "Free metal weight calculator for steel rebar, bars, pipes, and plates. Get exact weight per meter and total weight with material density lookup.",
-    keywords: ["steel weight calculator", "rebar weight", "pipe weight", "steel bar weight", "material weight", "kg lb conversion"],
+    title: "Kalkulator Berat Baja",
+    short: "Hitung berat batang, pipa, dan plat baja, aluminium, atau tembaga.",
+    description: "Kalkulator berat baja gratis. Hitung berat per meter batang bulat, profil, dan plat berdasarkan dimensi dan material.",
+    keywords: ["berat baja", "kg per meter baja", "berat besi beton", "berat pipa", "kalkulator logam"],
     inputs: {
       type: { label: "Type", help: "Select product type." },
       material: { label: "Material", help: "Choose material (steel, aluminum, copper)." },

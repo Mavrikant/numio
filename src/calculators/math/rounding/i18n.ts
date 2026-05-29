@@ -17,9 +17,9 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Rounding Calculator", short: "Round a number to any number of decimals — nearest, up, down or truncated.",
-    description: "Free rounding calculator. Enter a number and the decimal places to see it rounded to the nearest value, rounded up (ceiling), rounded down (floor) and truncated. Handy for math, finance and reports.",
-    keywords: ["rounding calculator", "round number", "round to decimal places", "round up", "round down", "truncate number"],
+    title: "Calculadora de Arredondamento", short: "Arredonde números com vários métodos — para cima, para baixo, normal.",
+    description: "Calculadora gratuita de arredondamento. Arredonde para o inteiro, para cima (ceiling), para baixo (floor) ou para um número específico de casas decimais.",
+    keywords: ["arredondamento", "arredondar números", "ceiling floor", "casas decimais", "round half"],
     ...io("Number", "Decimal places", "Rounded (nearest)", "Rounded up", "Rounded down", "Truncated"),
     faq: [
       { q: "What's the difference between rounding and truncating?", a: "Rounding goes to the nearest value (3.146 → 3.15 at 2 dp), while truncating just drops the extra digits (3.146 → 3.14). Round up always increases, round down always decreases." },
@@ -27,9 +27,9 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Rounding Calculator", short: "Round a number to any number of decimals — nearest, up, down or truncated.",
-    description: "Free rounding calculator. Enter a number and the decimal places to see it rounded to the nearest value, rounded up (ceiling), rounded down (floor) and truncated. Handy for math, finance and reports.",
-    keywords: ["rounding calculator", "round number", "round to decimal places", "round up", "round down", "truncate number"],
+    title: "Kalkulator Pembulatan", short: "Bulatkan bilangan dengan berbagai metode — ke atas, ke bawah, normal.",
+    description: "Kalkulator pembulatan gratis. Bulatkan ke bilangan bulat, ke atas (ceiling), ke bawah (floor), atau ke angka desimal tertentu.",
+    keywords: ["pembulatan", "bulatkan bilangan", "ceiling floor", "angka desimal", "round half"],
     ...io("Number", "Decimal places", "Rounded (nearest)", "Rounded up", "Rounded down", "Truncated"),
     faq: [
       { q: "What's the difference between rounding and truncating?", a: "Rounding goes to the nearest value (3.146 → 3.15 at 2 dp), while truncating just drops the extra digits (3.146 → 3.14). Round up always increases, round down always decreases." },

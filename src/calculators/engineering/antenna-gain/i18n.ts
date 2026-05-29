@@ -28,11 +28,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Parabolic Antenna Gain & Beamwidth Calculator",
-    short: "Find the gain (dBi), beamwidth and effective aperture of a dish antenna.",
+    title: "Calculadora de Ganho de Antena",
+    short: "Calcule o ganho de uma antena em dBi, dBd ou linear.",
     description:
-      "Free parabolic antenna calculator. Enter dish diameter, frequency and aperture efficiency to get gain in dBi, the −3 dB half-power beamwidth, linear gain and effective aperture. Useful for satellite, microwave and point-to-point links.",
-    keywords: ["antenna gain calculator", "parabolic dish gain", "dBi", "beamwidth", "HPBW", "effective aperture", "satellite dish", "microwave antenna"],
+      "Calculadora gratuita de ganho de antena. Converta entre dBi, dBd e ganho linear, e calcule o EIRP de um sistema rádio.",
+    keywords: ["ganho antena", "dBi", "dBd", "EIRP", "antena radiocomunicações"],
     inputs: {
       diameterM: { label: "Dish diameter (m)", help: "Physical diameter of the parabolic reflector." },
       frequencyMHz: { label: "Frequency (MHz)", help: "Operating frequency, e.g. 12000 for 12 GHz Ku-band." },
@@ -54,11 +54,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Parabolic Antenna Gain & Beamwidth Calculator",
-    short: "Find the gain (dBi), beamwidth and effective aperture of a dish antenna.",
+    title: "Kalkulator Gain Antena",
+    short: "Hitung gain antena dalam dBi, dBd, atau linear.",
     description:
-      "Free parabolic antenna calculator. Enter dish diameter, frequency and aperture efficiency to get gain in dBi, the −3 dB half-power beamwidth, linear gain and effective aperture. Useful for satellite, microwave and point-to-point links.",
-    keywords: ["antenna gain calculator", "parabolic dish gain", "dBi", "beamwidth", "HPBW", "effective aperture", "satellite dish", "microwave antenna"],
+      "Kalkulator gain antena gratis. Konversi antara dBi, dBd, dan gain linear, serta hitung EIRP sistem radio.",
+    keywords: ["gain antena", "dBi", "dBd", "EIRP", "antena radio"],
     inputs: {
       diameterM: { label: "Dish diameter (m)", help: "Physical diameter of the parabolic reflector." },
       frequencyMHz: { label: "Frequency (MHz)", help: "Operating frequency, e.g. 12000 for 12 GHz Ku-band." },

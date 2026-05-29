@@ -53,19 +53,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Concrete Volume Calculator",
-    short: "Calculate concrete volume and cement bags for slabs, columns, cylinders, and footings.",
+    title: "Calculadora de Betão",
+    short: "Calcule a quantidade de betão necessária para a sua obra.",
     description:
-      "Free concrete volume calculator for construction projects. Enter dimensions for slabs, columns, cylinders, or footings and get the concrete volume in m³ and yd³, plus the number of cement bags needed.",
-    keywords: [
-      "concrete volume calculator",
-      "cement bags calculator",
-      "concrete slab calculator",
-      "concrete footing calculator",
-      "concrete column calculator",
-      "construction calculator",
-      "concrete estimator",
-    ],
+      "Calculadora gratuita de betão. Calcule o volume de betão necessário para lajes, sapatas, colunas e outras estruturas.",
+    keywords: ["betão", "concreto", "volume betão", "calculadora obra", "construção"],
     inputs: {
       shape: { label: "Shape", help: "Select the concrete element type." },
       unit: { label: "Unit system", help: "Metric (metres) or imperial (feet)." },
@@ -104,19 +96,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Concrete Volume Calculator",
-    short: "Calculate concrete volume and cement bags for slabs, columns, cylinders, and footings.",
+    title: "Kalkulator Beton",
+    short: "Hitung jumlah beton yang diperlukan untuk proyek Anda.",
     description:
-      "Free concrete volume calculator for construction projects. Enter dimensions for slabs, columns, cylinders, or footings and get the concrete volume in m³ and yd³, plus the number of cement bags needed.",
-    keywords: [
-      "concrete volume calculator",
-      "cement bags calculator",
-      "concrete slab calculator",
-      "concrete footing calculator",
-      "concrete column calculator",
-      "construction calculator",
-      "concrete estimator",
-    ],
+      "Kalkulator beton gratis. Hitung volume beton yang dibutuhkan untuk plat lantai, pondasi, kolom, dan struktur lainnya.",
+    keywords: ["beton", "volume beton", "kalkulator konstruksi", "bangunan", "campuran beton"],
     inputs: {
       shape: { label: "Shape", help: "Select the concrete element type." },
       unit: { label: "Unit system", help: "Metric (metres) or imperial (feet)." },

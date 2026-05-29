@@ -67,11 +67,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Number Base Converter",
-    short: "Convert numbers between decimal, binary, octal, and hexadecimal bases.",
+    title: "Conversor de Sistema Numérico",
+    short: "Converta entre binário, decimal, octal e hexadecimal.",
     description:
-      "Free number base converter supporting decimal, binary, octal, and hexadecimal conversions. Handles negative numbers and fractional parts.",
-    keywords: ["base converter", "binary", "hexadecimal", "number system", "octal", "decimal conversion", "base 2 4 8 16"],
+      "Conversor gratuito de sistema numérico. Converta números entre bases 2 (binário), 8 (octal), 10 (decimal) e 16 (hexadecimal).",
+    keywords: ["sistema numérico", "binário decimal", "hexadecimal", "octal", "conversão bases"],
     inputs: {
       sourceBase: {
         label: "From base",
@@ -132,11 +132,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Number Base Converter",
-    short: "Convert numbers between decimal, binary, octal, and hexadecimal bases.",
+    title: "Konverter Sistem Bilangan",
+    short: "Konversi antara biner, desimal, oktal, dan heksadesimal.",
     description:
-      "Free number base converter supporting decimal, binary, octal, and hexadecimal conversions. Handles negative numbers and fractional parts.",
-    keywords: ["base converter", "binary", "hexadecimal", "number system", "octal", "decimal conversion", "base 2 4 8 16"],
+      "Konverter sistem bilangan gratis. Konversi bilangan antara basis 2 (biner), 8 (oktal), 10 (desimal), dan 16 (heksadesimal).",
+    keywords: ["sistem bilangan", "biner desimal", "heksadesimal", "oktal", "konversi basis"],
     inputs: {
       sourceBase: {
         label: "From base",

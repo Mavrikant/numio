@@ -65,19 +65,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Wire Gauge Calculator",
-    short: "Calculate wire resistance, voltage drop, and ampacity for AWG/mm² sizes.",
+    title: "Calculadora de Calibre de Fio (AWG)",
+    short: "Determine o calibre AWG necessário com base na corrente e comprimento.",
     description:
-      "Free wire gauge calculator. Enter AWG or mm², wire length, current, and material to calculate resistance, voltage drop, power loss, and ampacity rating.",
-    keywords: [
-      "wire gauge",
-      "AWG calculator",
-      "cable size",
-      "voltage drop",
-      "wire resistance",
-      "ampacity",
-      "copper wire",
-    ],
+      "Calculadora gratuita de calibre de fio AWG. Determine o calibre adequado para uma instalação com base em corrente, comprimento e queda de tensão admissível.",
+    keywords: ["AWG", "calibre fio", "secção condutor", "cabo elétrico", "ampacidade"],
     inputs: {
       sizeUnit: { label: "Size unit", help: "AWG (American Wire Gauge) or mm²" },
       wireSize: { label: "Wire size", help: "AWG number or cross-section in mm²" },
@@ -128,19 +120,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Wire Gauge Calculator",
-    short: "Calculate wire resistance, voltage drop, and ampacity for AWG/mm² sizes.",
+    title: "Kalkulator Ukuran Kawat (AWG)",
+    short: "Tentukan ukuran AWG yang diperlukan berdasarkan arus dan panjang.",
     description:
-      "Free wire gauge calculator. Enter AWG or mm², wire length, current, and material to calculate resistance, voltage drop, power loss, and ampacity rating.",
-    keywords: [
-      "wire gauge",
-      "AWG calculator",
-      "cable size",
-      "voltage drop",
-      "wire resistance",
-      "ampacity",
-      "copper wire",
-    ],
+      "Kalkulator ukuran kawat AWG gratis. Tentukan ukuran kawat yang sesuai untuk instalasi berdasarkan arus, panjang, dan drop tegangan yang diizinkan.",
+    keywords: ["AWG", "ukuran kawat", "luas penampang", "kabel listrik", "ampasitas"],
     inputs: {
       sizeUnit: { label: "Size unit", help: "AWG (American Wire Gauge) or mm²" },
       wireSize: { label: "Wire size", help: "AWG number or cross-section in mm²" },

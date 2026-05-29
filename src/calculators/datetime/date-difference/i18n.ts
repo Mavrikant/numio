@@ -27,11 +27,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Date Difference Calculator",
-    short: "Count the days, weeks, months and business days between two dates.",
+    title: "Calculadora de Diferença entre Datas",
+    short: "Calcule o intervalo entre duas datas em dias, semanas, meses ou anos.",
     description:
-      "Free date difference calculator. Enter a start and end date to get the total number of days, weeks and remaining days, the years/months/days breakdown, and the number of business days (Mon–Fri) between them.",
-    keywords: ["date difference calculator", "days between dates", "how many days", "weeks between dates", "business days calculator", "duration between dates"],
+      "Calculadora gratuita de diferença entre datas. Calcule o número exacto de dias, semanas, meses e anos entre duas datas.",
+    keywords: ["diferença datas", "dias entre datas", "calcular intervalo", "data até data", "dias úteis"],
     inputs: {
       startDate: { label: "Start date" },
       endDate: { label: "End date" },
@@ -52,11 +52,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Date Difference Calculator",
-    short: "Count the days, weeks, months and business days between two dates.",
+    title: "Kalkulator Selisih Tanggal",
+    short: "Hitung selisih antara dua tanggal dalam hari, minggu, bulan, atau tahun.",
     description:
-      "Free date difference calculator. Enter a start and end date to get the total number of days, weeks and remaining days, the years/months/days breakdown, and the number of business days (Mon–Fri) between them.",
-    keywords: ["date difference calculator", "days between dates", "how many days", "weeks between dates", "business days calculator", "duration between dates"],
+      "Kalkulator selisih tanggal gratis. Hitung jumlah hari, minggu, bulan, dan tahun yang tepat antara dua tanggal.",
+    keywords: ["selisih tanggal", "hari antara tanggal", "hitung interval", "tanggal ke tanggal", "hari kerja"],
     inputs: {
       startDate: { label: "Start date" },
       endDate: { label: "End date" },

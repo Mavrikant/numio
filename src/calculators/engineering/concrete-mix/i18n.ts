@@ -35,10 +35,10 @@ const i18n: CalculatorI18n = {
     },
   },
   pt: {
-    title: "Concrete Mix Calculator",
-    short: "Calculate cement, sand, aggregate and water quantities for concrete.",
-    keywords: ["concrete mix calculator", "cement calculator", "M20 mix", "concrete volume"],
-    description: "Calculate cement, sand, aggregate, and water quantities for any concrete mix grade.",
+    title: "Calculadora de Mistura de Betão",
+    short: "Calcule a proporção de cimento, areia, brita e água para a mistura de betão.",
+    keywords: ["mistura betão", "traço betão", "cimento areia brita", "construção", "obra"],
+    description: "Calculadora gratuita de mistura de betão. Calcule a quantidade de cada material necessária para a sua mistura com base no traço escolhido.",
     inputs: {
       mixGrade: { label: "Mix Grade", help: "Select a standard mix grade or enter a custom ratio." },
       volumeM3: { label: "Volume of Concrete (m³)", help: "Total volume of concrete required." },
@@ -68,10 +68,10 @@ const i18n: CalculatorI18n = {
     },
   },
   id: {
-    title: "Concrete Mix Calculator",
-    short: "Calculate cement, sand, aggregate and water quantities for concrete.",
-    keywords: ["concrete mix calculator", "cement calculator", "M20 mix", "concrete volume"],
-    description: "Calculate cement, sand, aggregate, and water quantities for any concrete mix grade.",
+    title: "Kalkulator Campuran Beton",
+    short: "Hitung proporsi semen, pasir, kerikil, dan air untuk campuran beton.",
+    keywords: ["campuran beton", "rasio beton", "semen pasir kerikil", "konstruksi", "bangunan"],
+    description: "Kalkulator campuran beton gratis. Hitung jumlah setiap material yang diperlukan untuk campuran berdasarkan komposisi yang dipilih.",
     inputs: {
       mixGrade: { label: "Mix Grade", help: "Select a standard mix grade or enter a custom ratio." },
       volumeM3: { label: "Volume of Concrete (m³)", help: "Total volume of concrete required." },

@@ -75,19 +75,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Ratio Simplifier",
-    short: "Simplify any ratio to its lowest terms and see equivalent scales.",
+    title: "Calculadora de Razão e Proporção",
+    short: "Simplifique razões e resolva proporções.",
     description:
-      "Free ratio simplifier calculator. Reduce ratios to simplest form using GCD, view decimal and percent values, and equivalent scales.",
-    keywords: [
-      "ratio simplifier",
-      "simplify ratio",
-      "lowest terms",
-      "GCD calculator",
-      "ratio equivalence",
-      "ratio to decimal",
-      "ratio solver",
-    ],
+      "Calculadora gratuita de razão. Simplifique uma razão para o termo mínimo e resolva proporções desconhecidas (regra de três).",
+    keywords: ["razão", "proporção", "simplificar razão", "regra de três", "calculadora razão"],
     inputs: {
       numerator: {
         label: "First number",
@@ -148,19 +140,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Ratio Simplifier",
-    short: "Simplify any ratio to its lowest terms and see equivalent scales.",
+    title: "Kalkulator Rasio dan Proporsi",
+    short: "Sederhanakan rasio dan selesaikan proporsi.",
     description:
-      "Free ratio simplifier calculator. Reduce ratios to simplest form using GCD, view decimal and percent values, and equivalent scales.",
-    keywords: [
-      "ratio simplifier",
-      "simplify ratio",
-      "lowest terms",
-      "GCD calculator",
-      "ratio equivalence",
-      "ratio to decimal",
-      "ratio solver",
-    ],
+      "Kalkulator rasio gratis. Sederhanakan rasio ke bentuk paling kecil dan selesaikan proporsi yang tidak diketahui.",
+    keywords: ["rasio", "proporsi", "sederhanakan rasio", "perbandingan", "kalkulator rasio"],
     inputs: {
       numerator: {
         label: "First number",

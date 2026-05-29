@@ -17,9 +17,9 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Countdown Calculator", short: "Count the days, weeks and business days until a target date.",
-    description: "Free countdown calculator. Pick a target date to see how many days, full weeks and business days remain from today (or any start date), plus the years/months/days breakdown. Great for deadlines, holidays and events.",
-    keywords: ["countdown", "days until", "how many days until", "days remaining", "time until date"],
+    title: "Contagem Regressiva", short: "Faça uma contagem regressiva até uma data futura.",
+    description: "Contagem regressiva gratuita. Conte os dias, horas, minutos e segundos restantes até uma data futura — Natal, casamento, viagem.",
+    keywords: ["contagem regressiva", "dias até", "countdown", "tempo restante", "evento futuro"],
     ...io("From date", "Target date", "Total days", "Full weeks", "Business days", "Years", "Months", "Days"),
     faq: [
       { q: "How many days until a date?", a: "Enter the target date and the tool counts whole days from today (the default start) to that date. Change the start date to count between any two dates." },
@@ -27,9 +27,9 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Countdown Calculator", short: "Count the days, weeks and business days until a target date.",
-    description: "Free countdown calculator. Pick a target date to see how many days, full weeks and business days remain from today (or any start date), plus the years/months/days breakdown. Great for deadlines, holidays and events.",
-    keywords: ["countdown", "days until", "how many days until", "days remaining", "time until date"],
+    title: "Hitung Mundur", short: "Hitung mundur menuju tanggal masa depan.",
+    description: "Hitung mundur gratis. Hitung hari, jam, menit, dan detik tersisa hingga tanggal masa depan — Natal, pernikahan, liburan.",
+    keywords: ["hitung mundur", "hari menuju", "countdown", "waktu tersisa", "acara mendatang"],
     ...io("From date", "Target date", "Total days", "Full weeks", "Business days", "Years", "Months", "Days"),
     faq: [
       { q: "How many days until a date?", a: "Enter the target date and the tool counts whole days from today (the default start) to that date. Change the start date to count between any two dates." },

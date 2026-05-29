@@ -55,18 +55,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Area Converter",
-    short: "Convert between square meters, hectares, acres, square feet and more.",
+    title: "Conversor de Área",
+    short: "Converta entre m², ft², acres, hectares e outras unidades de área.",
     description:
-      "Free area unit converter. Convert between m², cm², mm², km², hectares, acres, ft², in², yd² and mi² with NIST-grade precision.",
-    keywords: [
-      "area converter",
-      "square meters to square feet",
-      "hectares to acres",
-      "m2 to ft2",
-      "acre converter",
-      "land area",
-    ],
+      "Conversor gratuito de área. Converta entre metros quadrados, pés quadrados, acres, hectares e outras unidades.",
+    keywords: ["conversor área", "m² ft²", "acres hectares", "metros quadrados", "unidades área"],
     inputs: {
       value: { label: "Value", help: "The area value to convert." },
       fromUnit: { label: "From", help: "Select the source unit." },
@@ -108,18 +101,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Area Converter",
-    short: "Convert between square meters, hectares, acres, square feet and more.",
+    title: "Konverter Luas",
+    short: "Konversi antara m², ft², acre, hektar, dan satuan luas lainnya.",
     description:
-      "Free area unit converter. Convert between m², cm², mm², km², hectares, acres, ft², in², yd² and mi² with NIST-grade precision.",
-    keywords: [
-      "area converter",
-      "square meters to square feet",
-      "hectares to acres",
-      "m2 to ft2",
-      "acre converter",
-      "land area",
-    ],
+      "Konverter luas gratis. Konversi antara meter persegi, kaki persegi, acre, hektar, dan satuan lainnya.",
+    keywords: ["konverter luas", "m² ft²", "acre hektar", "meter persegi", "satuan luas"],
     inputs: {
       value: { label: "Value", help: "The area value to convert." },
       fromUnit: { label: "From", help: "Select the source unit." },

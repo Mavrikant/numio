@@ -39,10 +39,10 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Temperature Converter",
-    short: "Convert between Celsius, Fahrenheit, and Kelvin scales instantly",
-    description: "Convert between Celsius, Fahrenheit, and Kelvin temperature scales with instant calculations",
-    keywords: ["temperature", "celsius", "fahrenheit", "kelvin", "conversion", "thermal"],
+    title: "Conversor de Temperatura",
+    short: "Converta entre Celsius, Fahrenheit e Kelvin.",
+    description: "Conversor gratuito de temperatura. Converta instantaneamente entre graus Celsius (°C), Fahrenheit (°F) e Kelvin (K).",
+    keywords: ["conversor temperatura", "Celsius Fahrenheit", "Kelvin", "°C °F", "temperatura"],
     inputs: {
       celsius: { label: "Celsius", help: "Temperature in Celsius" },
       fahrenheit: { label: "Fahrenheit", help: "Temperature in Fahrenheit" },
@@ -76,10 +76,10 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Temperature Converter",
-    short: "Convert between Celsius, Fahrenheit, and Kelvin scales instantly",
-    description: "Convert between Celsius, Fahrenheit, and Kelvin temperature scales with instant calculations",
-    keywords: ["temperature", "celsius", "fahrenheit", "kelvin", "conversion", "thermal"],
+    title: "Konverter Suhu",
+    short: "Konversi antara Celsius, Fahrenheit, dan Kelvin.",
+    description: "Konverter suhu gratis. Konversi langsung antara derajat Celsius (°C), Fahrenheit (°F), dan Kelvin (K).",
+    keywords: ["konverter suhu", "Celsius Fahrenheit", "Kelvin", "°C °F", "suhu"],
     inputs: {
       celsius: { label: "Celsius", help: "Temperature in Celsius" },
       fahrenheit: { label: "Fahrenheit", help: "Temperature in Fahrenheit" },

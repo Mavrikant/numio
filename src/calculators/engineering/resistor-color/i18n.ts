@@ -77,19 +77,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Resistor Color Code Calculator",
-    short: "Decode 4-band and 5-band resistor color codes to find resistance value and tolerance.",
+    title: "Calculadora de Código de Cores de Resistor",
+    short: "Decodifique resistores de 3, 4, 5 ou 6 faixas de cor.",
     description:
-      "Free resistor color code decoder. Select the color bands on your resistor to instantly identify the resistance value in ohms, the tolerance percentage, and the minimum and maximum resistance range.",
-    keywords: [
-      "resistor color code calculator",
-      "resistor band decoder",
-      "4 band resistor calculator",
-      "5 band resistor calculator",
-      "IEC 60062",
-      "electronics resistor",
-      "ohm color code",
-    ],
+      "Calculadora gratuita de código de cores de resistor. Identifique o valor da resistência, tolerância e coeficiente de temperatura pelas faixas de cor.",
+    keywords: ["código cores resistor", "resistor", "faixas resistor", "tolerância resistor", "eletrónica"],
     inputs: {
       bandCount: { label: "Number of bands", help: "4-band resistors have 2 significant digits; 5-band have 3." },
       band1: { label: "Band 1 (1st digit)", help: "First significant digit color." },
@@ -152,19 +144,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Resistor Color Code Calculator",
-    short: "Decode 4-band and 5-band resistor color codes to find resistance value and tolerance.",
+    title: "Kalkulator Kode Warna Resistor",
+    short: "Dekode resistor dengan 3, 4, 5, atau 6 cincin warna.",
     description:
-      "Free resistor color code decoder. Select the color bands on your resistor to instantly identify the resistance value in ohms, the tolerance percentage, and the minimum and maximum resistance range.",
-    keywords: [
-      "resistor color code calculator",
-      "resistor band decoder",
-      "4 band resistor calculator",
-      "5 band resistor calculator",
-      "IEC 60062",
-      "electronics resistor",
-      "ohm color code",
-    ],
+      "Kalkulator kode warna resistor gratis. Identifikasi nilai resistansi, toleransi, dan koefisien suhu dari cincin warna.",
+    keywords: ["kode warna resistor", "resistor", "cincin resistor", "toleransi resistor", "elektronika"],
     inputs: {
       bandCount: { label: "Number of bands", help: "4-band resistors have 2 significant digits; 5-band have 3." },
       band1: { label: "Band 1 (1st digit)", help: "First significant digit color." },

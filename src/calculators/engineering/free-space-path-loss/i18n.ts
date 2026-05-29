@@ -29,11 +29,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Free-Space Path Loss (FSPL) Calculator",
-    short: "Compute radio path loss and a simple link budget from frequency and distance.",
+    title: "Calculadora de Perda em Espaço Livre (FSPL)",
+    short: "Calcule a perda de propagação em espaço livre para um sinal de rádio.",
     description:
-      "Free FSPL calculator. Enter frequency and distance to get free-space path loss in dB, plus an instant link budget (EIRP and received power) from transmit power and antenna gains. Based on the Friis equation and ITU-R P.525.",
-    keywords: ["FSPL calculator", "free space path loss", "link budget", "RF path loss", "Friis equation", "dBm", "EIRP", "received power"],
+      "Calculadora gratuita de FSPL. Calcule a perda de propagação em espaço livre em função da distância e frequência da onda.",
+    keywords: ["FSPL", "perda espaço livre", "propagação rádio", "atenuação sinal", "comunicações"],
     inputs: {
       frequencyMHz: { label: "Frequency (MHz)", help: "Carrier frequency, e.g. 2400 for 2.4 GHz WiFi." },
       distanceKm: { label: "Distance (km)", help: "Line-of-sight distance between the two antennas." },
@@ -56,11 +56,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Free-Space Path Loss (FSPL) Calculator",
-    short: "Compute radio path loss and a simple link budget from frequency and distance.",
+    title: "Kalkulator Free-Space Path Loss",
+    short: "Hitung kerugian propagasi di ruang bebas untuk sinyal radio.",
     description:
-      "Free FSPL calculator. Enter frequency and distance to get free-space path loss in dB, plus an instant link budget (EIRP and received power) from transmit power and antenna gains. Based on the Friis equation and ITU-R P.525.",
-    keywords: ["FSPL calculator", "free space path loss", "link budget", "RF path loss", "Friis equation", "dBm", "EIRP", "received power"],
+      "Kalkulator FSPL gratis. Hitung kerugian propagasi ruang bebas berdasarkan jarak dan frekuensi gelombang.",
+    keywords: ["FSPL", "free space path loss", "propagasi radio", "atenuasi sinyal", "telekomunikasi"],
     inputs: {
       frequencyMHz: { label: "Frequency (MHz)", help: "Carrier frequency, e.g. 2400 for 2.4 GHz WiFi." },
       distanceKm: { label: "Distance (km)", help: "Line-of-sight distance between the two antennas." },

@@ -67,19 +67,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Average Calculator",
-    short: "Calculate mean, median, mode, sum, and range for any list of numbers.",
+    title: "Calculadora de Média",
+    short: "Calcule a média aritmética, mediana e moda de uma série de números.",
     description:
-      "Free average calculator. Enter comma-separated numbers to instantly compute the arithmetic mean, median, mode, count, sum, and range of your data set. Ideal for students, teachers, and data analysts.",
-    keywords: [
-      "average calculator",
-      "mean calculator",
-      "median calculator",
-      "mode calculator",
-      "arithmetic mean",
-      "central tendency",
-      "statistics calculator",
-    ],
+      "Calculadora gratuita de média. Calcule média aritmética, mediana, moda e outras medidas de tendência central.",
+    keywords: ["média aritmética", "mediana", "moda", "calculadora média", "tendência central"],
     inputs: {
       values: {
         label: "Numbers",
@@ -132,19 +124,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Average Calculator",
-    short: "Calculate mean, median, mode, sum, and range for any list of numbers.",
+    title: "Kalkulator Rata-rata",
+    short: "Hitung rata-rata, median, dan modus dari deret bilangan.",
     description:
-      "Free average calculator. Enter comma-separated numbers to instantly compute the arithmetic mean, median, mode, count, sum, and range of your data set. Ideal for students, teachers, and data analysts.",
-    keywords: [
-      "average calculator",
-      "mean calculator",
-      "median calculator",
-      "mode calculator",
-      "arithmetic mean",
-      "central tendency",
-      "statistics calculator",
-    ],
+      "Kalkulator rata-rata gratis. Hitung mean aritmatika, median, modus, dan ukuran tendensi pusat lainnya.",
+    keywords: ["rata-rata", "median", "modus", "kalkulator rata-rata", "tendensi pusat"],
     inputs: {
       values: {
         label: "Numbers",

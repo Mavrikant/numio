@@ -59,20 +59,12 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Prime Factorization Calculator",
+    title: "Calculadora de Fatoração em Primos",
     short:
-      "Decompose any number into its prime factors and view the exponent notation.",
+      "Decomponha qualquer número inteiro nos seus fatores primos.",
     description:
-      "Free prime factorization tool. Enter a number and instantly see its prime factors with exponents. Learn the fundamental theorem of arithmetic.",
-    keywords: [
-      "prime factorization",
-      "prime factors",
-      "number theory",
-      "fundamental theorem",
-      "factorization calculator",
-      "prime decomposition",
-      "exponent notation",
-    ],
+      "Calculadora gratuita de fatoração. Encontre a decomposição em fatores primos de qualquer número inteiro positivo.",
+    keywords: ["fatoração primos", "fatores primos", "decomposição números", "calculadora primos", "fatorar"],
     inputs: {
       number: {
         label: "Number",
@@ -116,20 +108,12 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Prime Factorization Calculator",
+    title: "Kalkulator Faktorisasi Prima",
     short:
-      "Decompose any number into its prime factors and view the exponent notation.",
+      "Uraikan bilangan bulat menjadi faktor-faktor primanya.",
     description:
-      "Free prime factorization tool. Enter a number and instantly see its prime factors with exponents. Learn the fundamental theorem of arithmetic.",
-    keywords: [
-      "prime factorization",
-      "prime factors",
-      "number theory",
-      "fundamental theorem",
-      "factorization calculator",
-      "prime decomposition",
-      "exponent notation",
-    ],
+      "Kalkulator faktorisasi prima gratis. Temukan dekomposisi faktor prima dari bilangan bulat positif apa pun.",
+    keywords: ["faktorisasi prima", "faktor prima", "dekomposisi bilangan", "kalkulator prima", "faktor"],
     inputs: {
       number: {
         label: "Number",

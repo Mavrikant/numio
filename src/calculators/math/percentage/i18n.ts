@@ -71,17 +71,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Percentage Calculator",
-    short: "Calculate percentages instantly: X% of Y, X is what % of Y, or percentage change.",
+    title: "Calculadora de Percentagem",
+    short: "Calcule percentagens de qualquer valor — aumentar, diminuir, comparar.",
     description:
-      "Free 3-in-1 percentage calculator. Find what X% of Y is, calculate what percentage X is of Y, or compute percentage change between two values.",
-    keywords: [
-      "percentage calculator",
-      "percent calculator",
-      "percentage change calculator",
-      "what percentage of",
-      "percent of",
-    ],
+      "Calculadora gratuita de percentagens. Calcule X% de Y, que percentagem X é de Y, ou o valor após aumentar/diminuir por X%.",
+    keywords: ["percentagem", "calculadora percentagem", "calcular percentagem", "percentual", "regra três"],
     inputs: {
       mode: {
         label: "Problem type",
@@ -140,17 +134,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Percentage Calculator",
-    short: "Calculate percentages instantly: X% of Y, X is what % of Y, or percentage change.",
+    title: "Kalkulator Persentase",
+    short: "Hitung persentase dari nilai apa pun — kenaikan, penurunan, perbandingan.",
     description:
-      "Free 3-in-1 percentage calculator. Find what X% of Y is, calculate what percentage X is of Y, or compute percentage change between two values.",
-    keywords: [
-      "percentage calculator",
-      "percent calculator",
-      "percentage change calculator",
-      "what percentage of",
-      "percent of",
-    ],
+      "Kalkulator persentase gratis. Hitung X% dari Y, berapa persen X dari Y, atau nilai setelah ditambah/dikurangi X%.",
+    keywords: ["persentase", "kalkulator persentase", "hitung persen", "perhitungan persen", "persen"],
     inputs: {
       mode: {
         label: "Problem type",

@@ -32,11 +32,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Slope Calculator",
-    short: "Find the slope, y-intercept, distance, angle and midpoint between two points.",
+    title: "Calculadora de Declive (Slope)",
+    short: "Encontre o declive, intersecção em y, distância, ângulo e ponto médio entre dois pontos.",
     description:
-      "Free slope calculator. Enter two points (x₁,y₁) and (x₂,y₂) to get the slope, the line's y-intercept, the distance between the points, the angle of incline and the midpoint.",
-    keywords: ["slope calculator", "slope of a line", "y-intercept", "distance between two points", "midpoint", "gradient", "line equation"],
+      "Calculadora gratuita de declive. Introduza dois pontos (x₁,y₁) e (x₂,y₂) para obter o declive, intersecção em y, distância e ângulo da reta.",
+    keywords: ["declive", "slope", "intersecção y", "distância entre pontos", "ponto médio"],
     inputs: pts(),
     outputs: {
       slope: { label: "Slope (m)", help: "Rise over run: (y₂−y₁)/(x₂−x₁)." },
@@ -55,11 +55,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Slope Calculator",
-    short: "Find the slope, y-intercept, distance, angle and midpoint between two points.",
+    title: "Kalkulator Kemiringan (Slope)",
+    short: "Temukan kemiringan, perpotongan y, jarak, sudut, dan titik tengah antara dua titik.",
     description:
-      "Free slope calculator. Enter two points (x₁,y₁) and (x₂,y₂) to get the slope, the line's y-intercept, the distance between the points, the angle of incline and the midpoint.",
-    keywords: ["slope calculator", "slope of a line", "y-intercept", "distance between two points", "midpoint", "gradient", "line equation"],
+      "Kalkulator kemiringan gratis. Masukkan dua titik (x₁,y₁) dan (x₂,y₂) untuk mendapatkan kemiringan, perpotongan y, jarak, dan sudut garis.",
+    keywords: ["kemiringan", "slope", "perpotongan y", "jarak antar titik", "titik tengah"],
     inputs: pts(),
     outputs: {
       slope: { label: "Slope (m)", help: "Rise over run: (y₂−y₁)/(x₂−x₁)." },

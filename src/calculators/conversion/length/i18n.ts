@@ -35,10 +35,10 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Length Converter",
-    short: "Convert between metric and imperial length units instantly",
-    description: "Convert between metric and imperial length units with high precision",
-    keywords: ["length", "distance", "meter", "kilometer", "foot", "mile", "conversion"],
+    title: "Conversor de Comprimento",
+    short: "Converta entre metros, pés, polegadas, milhas e mais.",
+    description: "Conversor gratuito de comprimento. Converta entre metros, centímetros, polegadas, pés, milhas, quilómetros e outras unidades de comprimento.",
+    keywords: ["conversor comprimento", "metros para pés", "polegadas centímetros", "milhas km", "unidades comprimento"],
     inputs: {
       value: { label: "Value", help: "The length value to convert" },
       fromUnit: { label: "From Unit", help: "Select source unit" },
@@ -68,10 +68,10 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Length Converter",
-    short: "Convert between metric and imperial length units instantly",
-    description: "Convert between metric and imperial length units with high precision",
-    keywords: ["length", "distance", "meter", "kilometer", "foot", "mile", "conversion"],
+    title: "Konverter Panjang",
+    short: "Konversi antara meter, kaki, inci, mil, dan lainnya.",
+    description: "Konverter panjang gratis. Konversi antara meter, sentimeter, inci, kaki, mil, kilometer, dan satuan panjang lainnya.",
+    keywords: ["konverter panjang", "meter ke kaki", "inci sentimeter", "mil km", "satuan panjang"],
     inputs: {
       value: { label: "Value", help: "The length value to convert" },
       fromUnit: { label: "From Unit", help: "Select source unit" },

@@ -17,9 +17,9 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Modulo Calculator", short: "Find the remainder and quotient of a division, two ways.",
-    description: "Free modulo calculator. Enter a dividend and divisor to get the remainder (truncated, like a % b in most languages), the floored modulo (sign follows the divisor), and both the truncated and floored quotients.",
-    keywords: ["modulo calculator", "remainder calculator", "mod calculator", "modulus", "quotient and remainder"],
+    title: "Calculadora de Módulo (Resto)", short: "Calcule o resto da divisão (módulo) entre dois números.",
+    description: "Calculadora gratuita de módulo. Calcule a × mod b — o resto da divisão inteira — útil em programação e aritmética modular.",
+    keywords: ["módulo", "resto divisão", "mod", "aritmética modular", "operação módulo"],
     ...io("Dividend (a)", "Divisor (b)", "Remainder (a % b)", "Modulo (floored)", "Quotient (truncated)", "Quotient (floored)"),
     faq: [
       { q: "What is the modulo operation?", a: "It returns what's left over after dividing one number by another. 17 mod 5 = 2 because 17 = 3×5 + 2." },
@@ -27,9 +27,9 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Modulo Calculator", short: "Find the remainder and quotient of a division, two ways.",
-    description: "Free modulo calculator. Enter a dividend and divisor to get the remainder (truncated, like a % b in most languages), the floored modulo (sign follows the divisor), and both the truncated and floored quotients.",
-    keywords: ["modulo calculator", "remainder calculator", "mod calculator", "modulus", "quotient and remainder"],
+    title: "Kalkulator Modulo (Sisa Bagi)", short: "Hitung sisa pembagian (modulo) antara dua bilangan.",
+    description: "Kalkulator modulo gratis. Hitung a mod b — sisa pembagian bulat — berguna dalam pemrograman dan aritmatika modular.",
+    keywords: ["modulo", "sisa bagi", "mod", "aritmatika modular", "operasi modulo"],
     ...io("Dividend (a)", "Divisor (b)", "Remainder (a % b)", "Modulo (floored)", "Quotient (truncated)", "Quotient (floored)"),
     faq: [
       { q: "What is the modulo operation?", a: "It returns what's left over after dividing one number by another. 17 mod 5 = 2 because 17 = 3×5 + 2." },

@@ -58,19 +58,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Factorial Calculator — n! for Any Integer",
-    short: "Compute the factorial of any integer from 0 to 170, including large numbers using arbitrary precision.",
+    title: "Calculadora de Fatorial — n! para qualquer inteiro",
+    short: "Calcule o fatorial de qualquer inteiro de 0 a 170, incluindo números grandes.",
     description:
-      "Free factorial calculator. Enter n between 0 and 170 and instantly get n! — the product of all positive integers up to n. Handles huge numbers with BigInt precision above 21!. Perfect for combinatorics, probability, and math coursework.",
-    keywords: [
-      "factorial calculator",
-      "n factorial",
-      "n! calculator",
-      "factorial math",
-      "big factorial",
-      "combinatorics calculator",
-      "0 factorial",
-    ],
+      "Calculadora gratuita de fatorial. Introduza n entre 0 e 170 e obtenha n! — o produto de todos os inteiros positivos até n. Suporta números enormes com BigInt.",
+    keywords: ["fatorial", "calculadora fatorial", "n!", "0 fatorial", "combinatória fatorial"],
     inputs: {
       n: {
         label: "n (integer)",
@@ -114,19 +106,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Factorial Calculator — n! for Any Integer",
-    short: "Compute the factorial of any integer from 0 to 170, including large numbers using arbitrary precision.",
+    title: "Kalkulator Faktorial — n! untuk Bilangan Bulat",
+    short: "Hitung faktorial dari bilangan bulat 0 sampai 170, termasuk bilangan besar.",
     description:
-      "Free factorial calculator. Enter n between 0 and 170 and instantly get n! — the product of all positive integers up to n. Handles huge numbers with BigInt precision above 21!. Perfect for combinatorics, probability, and math coursework.",
-    keywords: [
-      "factorial calculator",
-      "n factorial",
-      "n! calculator",
-      "factorial math",
-      "big factorial",
-      "combinatorics calculator",
-      "0 factorial",
-    ],
+      "Kalkulator faktorial gratis. Masukkan n antara 0 dan 170 untuk mendapatkan n! — hasil perkalian semua bilangan positif sampai n. Mendukung bilangan besar dengan BigInt.",
+    keywords: ["faktorial", "kalkulator faktorial", "n!", "0 faktorial", "kombinatorik"],
     inputs: {
       n: {
         label: "n (integer)",

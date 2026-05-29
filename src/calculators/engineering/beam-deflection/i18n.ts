@@ -53,19 +53,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Beam Deflection Calculator",
-    short: "Calculate beam deflection, bending moment, and reactions for simply supported and cantilever beams.",
+    title: "Calculadora de Deflexão de Viga",
+    short: "Calcule a deflexão máxima de uma viga sob diferentes cargas.",
     description:
-      "Free structural beam deflection calculator. Enter beam type, load configuration, span, Young's modulus, and second moment of area to get maximum deflection (mm), bending moment (N·m), shear force (N), and support reactions.",
-    keywords: [
-      "beam deflection calculator",
-      "simply supported beam calculator",
-      "cantilever beam calculator",
-      "bending moment calculator",
-      "structural beam calculator",
-      "Euler-Bernoulli beam",
-      "beam shear force",
-    ],
+      "Calculadora gratuita de deflexão de viga. Calcule a deflexão de vigas simples, em balanço ou contínuas com carga pontual ou distribuída.",
+    keywords: ["deflexão viga", "flexão viga", "viga simples", "balanço", "resistência materiais"],
     inputs: {
       beamType: { label: "Beam type", help: "Simply supported (both ends pinned/rolled) or cantilever (one end fixed)." },
       loadType: { label: "Load type", help: "Point load at center, point load at free end (cantilever only), or uniform distributed load (UDL)." },
@@ -104,19 +96,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Beam Deflection Calculator",
-    short: "Calculate beam deflection, bending moment, and reactions for simply supported and cantilever beams.",
+    title: "Kalkulator Defleksi Balok",
+    short: "Hitung defleksi maksimum balok di bawah berbagai beban.",
     description:
-      "Free structural beam deflection calculator. Enter beam type, load configuration, span, Young's modulus, and second moment of area to get maximum deflection (mm), bending moment (N·m), shear force (N), and support reactions.",
-    keywords: [
-      "beam deflection calculator",
-      "simply supported beam calculator",
-      "cantilever beam calculator",
-      "bending moment calculator",
-      "structural beam calculator",
-      "Euler-Bernoulli beam",
-      "beam shear force",
-    ],
+      "Kalkulator defleksi balok gratis. Hitung defleksi balok sederhana, kantilever, atau menerus dengan beban titik atau merata.",
+    keywords: ["defleksi balok", "lendutan balok", "balok sederhana", "kantilever", "kekuatan material"],
     inputs: {
       beamType: { label: "Beam type", help: "Simply supported (both ends pinned/rolled) or cantilever (one end fixed)." },
       loadType: { label: "Load type", help: "Point load at center, point load at free end (cantilever only), or uniform distributed load (UDL)." },

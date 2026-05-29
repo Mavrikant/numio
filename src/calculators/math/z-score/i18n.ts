@@ -79,19 +79,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Z-Score Calculator",
-    short: "Calculate z-scores, percentiles, and p-values to standardize and interpret data relative to a normal distribution.",
+    title: "Calculadora de Z-Score",
+    short: "Calcule o z-score (pontuação padronizada) de um valor numa distribuição normal.",
     description:
-      "Free z-score calculator. Find the standardized score, percentile rank, one-tailed and two-tailed p-values for hypothesis testing and statistical analysis.",
-    keywords: [
-      "z-score calculator",
-      "percentile calculator",
-      "p-value calculator",
-      "standard normal distribution",
-      "hypothesis testing",
-      "statistical significance",
-      "normal distribution",
-    ],
+      "Calculadora gratuita de z-score. Calcule a pontuação padronizada e a probabilidade associada (área sob a curva normal).",
+    keywords: ["z-score", "pontuação padronizada", "distribuição normal", "estatística inferencial", "probabilidade"],
     inputs: {
       value: {
         label: "Observed value (x)",
@@ -156,19 +148,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Z-Score Calculator",
-    short: "Calculate z-scores, percentiles, and p-values to standardize and interpret data relative to a normal distribution.",
+    title: "Kalkulator Z-Score",
+    short: "Hitung z-score (skor baku) dari nilai dalam distribusi normal.",
     description:
-      "Free z-score calculator. Find the standardized score, percentile rank, one-tailed and two-tailed p-values for hypothesis testing and statistical analysis.",
-    keywords: [
-      "z-score calculator",
-      "percentile calculator",
-      "p-value calculator",
-      "standard normal distribution",
-      "hypothesis testing",
-      "statistical significance",
-      "normal distribution",
-    ],
+      "Kalkulator z-score gratis. Hitung skor terstandarisasi dan probabilitas terkait (luas di bawah kurva normal).",
+    keywords: ["z-score", "skor baku", "distribusi normal", "statistika inferensial", "probabilitas"],
     inputs: {
       value: {
         label: "Observed value (x)",

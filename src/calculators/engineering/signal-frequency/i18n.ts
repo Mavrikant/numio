@@ -65,20 +65,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Signal Frequency & Wavelength Calculator",
-    short: "Convert between frequency, wavelength and period for electromagnetic or acoustic waves.",
+    title: "Calculadora de Frequência de Sinal",
+    short: "Converta entre frequência, período e comprimento de onda.",
     description:
-      "Free wavelength-to-frequency calculator. Convert any value between frequency (Hz / kHz / MHz / GHz / THz), wavelength (km / m / cm / mm / µm) and period (seconds). Choose vacuum for electromagnetic waves (radio, WiFi, light) or air/water for sound, with NIST-grade physical constants.",
-    keywords: [
-      "frequency to wavelength",
-      "wavelength to frequency",
-      "RF calculator",
-      "radio wavelength",
-      "WiFi frequency",
-      "speed of light",
-      "speed of sound",
-      "period calculator",
-    ],
+      "Calculadora gratuita de frequência de sinal. Converta entre frequência (Hz), período (s) e comprimento de onda (m) para qualquer onda eletromagnética.",
+    keywords: ["frequência sinal", "período onda", "comprimento onda", "Hz", "ondas eletromagnéticas"],
     inputs: {
       mode: { label: "Calculation mode", help: "Choose which quantity you want to compute from the input value." },
       value: { label: "Input value", help: "Frequency in Hz, wavelength in metres, or period in seconds — depending on the mode selected." },
@@ -128,20 +119,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Signal Frequency & Wavelength Calculator",
-    short: "Convert between frequency, wavelength and period for electromagnetic or acoustic waves.",
+    title: "Kalkulator Frekuensi Sinyal",
+    short: "Konversi antara frekuensi, periode, dan panjang gelombang.",
     description:
-      "Free wavelength-to-frequency calculator. Convert any value between frequency (Hz / kHz / MHz / GHz / THz), wavelength (km / m / cm / mm / µm) and period (seconds). Choose vacuum for electromagnetic waves (radio, WiFi, light) or air/water for sound, with NIST-grade physical constants.",
-    keywords: [
-      "frequency to wavelength",
-      "wavelength to frequency",
-      "RF calculator",
-      "radio wavelength",
-      "WiFi frequency",
-      "speed of light",
-      "speed of sound",
-      "period calculator",
-    ],
+      "Kalkulator frekuensi sinyal gratis. Konversi antara frekuensi (Hz), periode (s), dan panjang gelombang (m) untuk gelombang elektromagnetik apa pun.",
+    keywords: ["frekuensi sinyal", "periode gelombang", "panjang gelombang", "Hz", "gelombang elektromagnetik"],
     inputs: {
       mode: { label: "Calculation mode", help: "Choose which quantity you want to compute from the input value." },
       value: { label: "Input value", help: "Frequency in Hz, wavelength in metres, or period in seconds — depending on the mode selected." },

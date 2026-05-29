@@ -17,10 +17,10 @@ const i18n: CalculatorI18n = {
     },
   },
   pt: {
-    title: "Heat Transfer Calculator",
-    short: "Calculate heat flux through a thermal resistance.",
-    description: "Free heat transfer calculator. Enter temperature difference and thermal resistance to calculate heat flux in Watts, kilowatts, and BTU/h.",
-    keywords: ["heat transfer", "thermal resistance", "HVAC", "energy", "building physics"],
+    title: "Calculadora de Transferência de Calor",
+    short: "Calcule a transferência de calor por condução, convecção ou radiação.",
+    description: "Calculadora gratuita de transferência de calor. Calcule o fluxo de calor através de paredes, isolamento ou superfícies por condução, convecção e radiação.",
+    keywords: ["transferência calor", "condução", "convecção", "radiação térmica", "fluxo calor"],
     inputs: {
       temperatureDifference: { label: "Temperature Difference", help: "ΔT between hot and cold side (°C)" },
       thermalResistance: { label: "Thermal Resistance", help: "R-value (m²·K/W)" },
@@ -32,10 +32,10 @@ const i18n: CalculatorI18n = {
     },
   },
   id: {
-    title: "Heat Transfer Calculator",
-    short: "Calculate heat flux through a thermal resistance.",
-    description: "Free heat transfer calculator. Enter temperature difference and thermal resistance to calculate heat flux in Watts, kilowatts, and BTU/h.",
-    keywords: ["heat transfer", "thermal resistance", "HVAC", "energy", "building physics"],
+    title: "Kalkulator Perpindahan Panas",
+    short: "Hitung perpindahan panas melalui konduksi, konveksi, atau radiasi.",
+    description: "Kalkulator perpindahan panas gratis. Hitung fluks panas melalui dinding, insulasi, atau permukaan secara konduksi, konveksi, dan radiasi.",
+    keywords: ["perpindahan panas", "konduksi", "konveksi", "radiasi termal", "fluks panas"],
     inputs: {
       temperatureDifference: { label: "Temperature Difference", help: "ΔT between hot and cold side (°C)" },
       thermalResistance: { label: "Thermal Resistance", help: "R-value (m²·K/W)" },

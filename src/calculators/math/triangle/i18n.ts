@@ -103,19 +103,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Triangle Calculator",
-    short: "Solve triangles using sides and angles. Calculate missing sides, angles, area, and type.",
+    title: "Calculadora de Triângulo",
+    short: "Calcule área, perímetro, ângulos e lados de um triângulo.",
     description:
-      "Free triangle calculator using law of cosines, law of sines, and Heron's formula. Solve SSS, SAS, ASA, AAS, or SSA triangles and find area, perimeter, and triangle type.",
-    keywords: [
-      "triangle calculator",
-      "triangle solver",
-      "law of cosines",
-      "law of sines",
-      "area calculator",
-      "geometry",
-      "triangle type",
-    ],
+      "Calculadora gratuita de triângulo. Calcule área (Heron), perímetro, ângulos internos e tipos de triângulo a partir dos lados ou ângulos.",
+    keywords: ["triângulo", "área triângulo", "Heron", "ângulos triângulo", "geometria"],
     inputs: {
       method: {
         label: "Solution method",
@@ -204,19 +196,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Triangle Calculator",
-    short: "Solve triangles using sides and angles. Calculate missing sides, angles, area, and type.",
+    title: "Kalkulator Segitiga",
+    short: "Hitung luas, keliling, sudut, dan sisi segitiga.",
     description:
-      "Free triangle calculator using law of cosines, law of sines, and Heron's formula. Solve SSS, SAS, ASA, AAS, or SSA triangles and find area, perimeter, and triangle type.",
-    keywords: [
-      "triangle calculator",
-      "triangle solver",
-      "law of cosines",
-      "law of sines",
-      "area calculator",
-      "geometry",
-      "triangle type",
-    ],
+      "Kalkulator segitiga gratis. Hitung luas (Heron), keliling, sudut dalam, dan jenis segitiga dari sisi atau sudut.",
+    keywords: ["segitiga", "luas segitiga", "Heron", "sudut segitiga", "geometri"],
     inputs: {
       method: {
         label: "Solution method",
