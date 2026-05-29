@@ -31,11 +31,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Running Pace Calculator",
-    short: "Find your pace per km and per mile, plus average speed, from a distance and time.",
+    title: "Calculadora de Ritmo de Corrida",
+    short: "Calcule o seu ritmo de corrida, tempo total e velocidade.",
     description:
-      "Free running pace calculator. Enter a distance and your finish time to get pace per kilometre, pace per mile and average speed in km/h and mph. Great for planning 5K, 10K, half-marathon and marathon training.",
-    keywords: ["pace calculator", "running pace", "min per km", "min per mile", "average speed", "marathon pace", "5k pace", "10k pace"],
+      "Calculadora gratuita de ritmo de corrida. Converta entre ritmo (min/km), tempo total e velocidade para o seu próximo treino ou prova.",
+    keywords: ["ritmo corrida", "pace corrida", "min por km", "calculadora corrida", "maratona"],
     inputs: {
       distanceValue: { label: "Distance", help: "How far you ran or plan to run." },
       distanceUnit: { label: "Distance unit" },
@@ -58,11 +58,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Running Pace Calculator",
-    short: "Find your pace per km and per mile, plus average speed, from a distance and time.",
+    title: "Kalkulator Pace Lari",
+    short: "Hitung pace lari, total waktu, dan kecepatan Anda.",
     description:
-      "Free running pace calculator. Enter a distance and your finish time to get pace per kilometre, pace per mile and average speed in km/h and mph. Great for planning 5K, 10K, half-marathon and marathon training.",
-    keywords: ["pace calculator", "running pace", "min per km", "min per mile", "average speed", "marathon pace", "5k pace", "10k pace"],
+      "Kalkulator pace lari gratis. Konversikan antara pace (menit/km), total waktu, dan kecepatan untuk latihan atau lomba berikutnya.",
+    keywords: ["pace lari", "menit per km", "kalkulator lari", "maraton", "kecepatan lari"],
     inputs: {
       distanceValue: { label: "Distance", help: "How far you ran or plan to run." },
       distanceUnit: { label: "Distance unit" },

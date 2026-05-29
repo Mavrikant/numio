@@ -74,19 +74,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Debt Payoff Calculator (Avalanche vs Snowball)",
-    short: "Plan how to pay off up to 5 debts using the avalanche or snowball method and see how an extra monthly payment shortens your payoff date.",
+    title: "Calculadora de Pagamento de Dívidas",
+    short: "Planeie a quitação das suas dívidas com estratégias avalanche e bola de neve.",
     description:
-      "Compare debt avalanche (highest APR first) vs snowball (smallest balance first) for up to 5 debts. Enter each balance, APR, and minimum payment, then optionally add an extra monthly amount to see total interest, total paid, and months to debt-free.",
-    keywords: [
-      "debt payoff calculator",
-      "debt avalanche calculator",
-      "debt snowball calculator",
-      "credit card payoff",
-      "multi-debt planner",
-      "pay off debt fast",
-      "interest savings",
-    ],
+      "Calculadora gratuita de pagamento de dívidas. Compare estratégias avalanche e bola de neve para quitar várias dívidas em menos tempo.",
+    keywords: ["pagamento dívidas", "quitar dívidas", "avalanche bola de neve", "consolidação dívidas", "estratégia dívida"],
     inputs: {
       debt1_balance: { label: "Debt 1 — Balance", help: "Current balance owed on debt 1." },
       debt1_apr: { label: "Debt 1 — APR (%)", help: "Annual interest rate for debt 1." },
@@ -143,19 +135,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Debt Payoff Calculator (Avalanche vs Snowball)",
-    short: "Plan how to pay off up to 5 debts using the avalanche or snowball method and see how an extra monthly payment shortens your payoff date.",
+    title: "Kalkulator Pelunasan Utang",
+    short: "Rencanakan pelunasan utang Anda dengan strategi avalanche dan snowball.",
     description:
-      "Compare debt avalanche (highest APR first) vs snowball (smallest balance first) for up to 5 debts. Enter each balance, APR, and minimum payment, then optionally add an extra monthly amount to see total interest, total paid, and months to debt-free.",
-    keywords: [
-      "debt payoff calculator",
-      "debt avalanche calculator",
-      "debt snowball calculator",
-      "credit card payoff",
-      "multi-debt planner",
-      "pay off debt fast",
-      "interest savings",
-    ],
+      "Kalkulator pelunasan utang gratis. Bandingkan strategi avalanche dan snowball untuk melunasi banyak utang lebih cepat.",
+    keywords: ["pelunasan utang", "lunasi utang", "avalanche snowball", "konsolidasi utang", "strategi utang"],
     inputs: {
       debt1_balance: { label: "Debt 1 — Balance", help: "Current balance owed on debt 1." },
       debt1_apr: { label: "Debt 1 — APR (%)", help: "Annual interest rate for debt 1." },

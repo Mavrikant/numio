@@ -100,19 +100,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "CD Yield Calculator",
-    short: "Calculate the yield and future value of a certificate of deposit with compound interest.",
+    title: "Calculadora de Rendimento de Depósito a Prazo",
+    short: "Calcule o rendimento de um depósito a prazo até à maturidade.",
     description:
-      "Free CD yield calculator. Enter your principal, APR, and term to see APY, future value, interest earned, and early withdrawal penalty impact.",
-    keywords: [
-      "CD calculator",
-      "certificate of deposit calculator",
-      "CD yield",
-      "APY calculator",
-      "savings calculator",
-      "CD interest calculator",
-      "bank deposit calculator",
-    ],
+      "Calculadora gratuita de depósito a prazo. Veja o valor final, juros pagos e taxa efetiva de um depósito a prazo.",
+    keywords: ["depósito a prazo", "DP", "rendimento DP", "TANB", "poupança banco"],
     inputs: {
       principal: {
         label: "Principal",
@@ -198,19 +190,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "CD Yield Calculator",
-    short: "Calculate the yield and future value of a certificate of deposit with compound interest.",
+    title: "Kalkulator Imbal Hasil Deposito",
+    short: "Hitung imbal hasil deposito hingga jatuh tempo.",
     description:
-      "Free CD yield calculator. Enter your principal, APR, and term to see APY, future value, interest earned, and early withdrawal penalty impact.",
-    keywords: [
-      "CD calculator",
-      "certificate of deposit calculator",
-      "CD yield",
-      "APY calculator",
-      "savings calculator",
-      "CD interest calculator",
-      "bank deposit calculator",
-    ],
+      "Kalkulator deposito gratis. Lihat nilai akhir, bunga yang dibayarkan, dan tingkat efektif deposito berjangka.",
+    keywords: ["deposito", "deposito berjangka", "bunga deposito", "kalkulator deposito", "tabungan bank"],
     inputs: {
       principal: {
         label: "Principal",

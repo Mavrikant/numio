@@ -60,19 +60,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Depreciation Calculator",
-    short: "Calculate annual depreciation, book value, and a year-by-year schedule using four standard methods.",
+    title: "Calculadora de Depreciação",
+    short: "Calcule a depreciação de ativos pelos métodos linear e degressivo.",
     description:
-      "Free depreciation calculator supporting straight-line, declining-balance, double-declining-balance, and sum-of-years-digits methods. Enter the asset cost, salvage value, useful life, and method to get a complete year-by-year schedule (opening value, depreciation, closing value), total depreciation, and ending book value.",
-    keywords: [
-      "depreciation calculator",
-      "straight line depreciation",
-      "declining balance",
-      "double declining",
-      "sum of years digits",
-      "asset depreciation schedule",
-      "book value calculator",
-    ],
+      "Calculadora gratuita de depreciação. Calcule a depreciação anual de ativos pelos métodos linear, degressivo e soma dos dígitos.",
+    keywords: ["depreciação", "amortização ativos", "depreciação linear", "depreciação acelerada", "contabilidade"],
     inputs: {
       assetCost: { label: "Asset Cost", help: "Total acquisition cost of the asset, including installation and freight." },
       salvageValue: { label: "Salvage Value", help: "Estimated value of the asset at the end of its useful life. Must not exceed asset cost." },
@@ -118,19 +110,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Depreciation Calculator",
-    short: "Calculate annual depreciation, book value, and a year-by-year schedule using four standard methods.",
+    title: "Kalkulator Depresiasi",
+    short: "Hitung depresiasi aset dengan metode garis lurus dan saldo menurun.",
     description:
-      "Free depreciation calculator supporting straight-line, declining-balance, double-declining-balance, and sum-of-years-digits methods. Enter the asset cost, salvage value, useful life, and method to get a complete year-by-year schedule (opening value, depreciation, closing value), total depreciation, and ending book value.",
-    keywords: [
-      "depreciation calculator",
-      "straight line depreciation",
-      "declining balance",
-      "double declining",
-      "sum of years digits",
-      "asset depreciation schedule",
-      "book value calculator",
-    ],
+      "Kalkulator depresiasi gratis. Hitung depresiasi tahunan aset dengan metode garis lurus, saldo menurun, dan jumlah angka tahun.",
+    keywords: ["depresiasi", "penyusutan aset", "depresiasi garis lurus", "depresiasi saldo menurun", "akuntansi"],
     inputs: {
       assetCost: { label: "Asset Cost", help: "Total acquisition cost of the asset, including installation and freight." },
       salvageValue: { label: "Salvage Value", help: "Estimated value of the asset at the end of its useful life. Must not exceed asset cost." },

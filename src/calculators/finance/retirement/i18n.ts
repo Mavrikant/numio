@@ -91,19 +91,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Retirement Savings Calculator",
-    short: "Calculate your retirement nest egg, monthly income, and years of income based on savings and returns.",
+    title: "Calculadora de Reforma",
+    short: "Planeie a sua reforma e veja se está no caminho certo para os seus objetivos.",
     description:
-      "Free retirement savings calculator. Enter your age, savings, monthly contributions, and expected return to project your retirement portfolio and estimated monthly income.",
-    keywords: [
-      "retirement calculator",
-      "retirement savings calculator",
-      "retirement planning",
-      "401k calculator",
-      "nest egg calculator",
-      "compound interest retirement",
-      "monthly retirement income",
-    ],
+      "Calculadora gratuita de reforma. Estime as poupanças necessárias para a reforma com base na sua idade, rendimento e contribuições atuais.",
+    keywords: ["calculadora reforma", "planeamento reforma", "poupança reforma", "fundo de pensões", "aposentação"],
     inputs: {
       currentAge: {
         label: "Current age",
@@ -180,19 +172,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Retirement Savings Calculator",
-    short: "Calculate your retirement nest egg, monthly income, and years of income based on savings and returns.",
+    title: "Kalkulator Pensiun",
+    short: "Rencanakan pensiun Anda dan lihat apakah Anda di jalur yang tepat menuju tujuan keuangan.",
     description:
-      "Free retirement savings calculator. Enter your age, savings, monthly contributions, and expected return to project your retirement portfolio and estimated monthly income.",
-    keywords: [
-      "retirement calculator",
-      "retirement savings calculator",
-      "retirement planning",
-      "401k calculator",
-      "nest egg calculator",
-      "compound interest retirement",
-      "monthly retirement income",
-    ],
+      "Kalkulator pensiun gratis. Perkirakan tabungan yang diperlukan untuk pensiun berdasarkan usia, pendapatan, dan kontribusi saat ini.",
+    keywords: ["kalkulator pensiun", "perencanaan pensiun", "tabungan pensiun", "dana pensiun", "pensiun dini"],
     inputs: {
       currentAge: {
         label: "Current age",

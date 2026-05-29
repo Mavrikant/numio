@@ -80,19 +80,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Pregnancy Due Date Calculator",
-    short: "Calculate your baby's due date using Naegele's Rule based on your last menstrual period.",
+    title: "Calculadora de Gravidez",
+    short: "Calcule a data prevista do parto e a idade gestacional.",
     description:
-      "Free pregnancy due date calculator. Enter your LMP date and cycle length to get your estimated due date, gestational age, trimester, and days remaining.",
-    keywords: [
-      "pregnancy due date calculator",
-      "due date calculator",
-      "gestational age calculator",
-      "LMP calculator",
-      "pregnancy week calculator",
-      "Naegele rule",
-      "pregnancy trimester",
-    ],
+      "Calculadora gratuita de gravidez. Calcule a data provável do parto, semanas de gestação e marcos importantes da gravidez.",
+    keywords: ["calculadora gravidez", "data parto", "idade gestacional", "DPP", "semanas gestação"],
     inputs: {
       lmpDate: {
         label: "First day of last menstrual period (LMP)",
@@ -158,19 +150,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Pregnancy Due Date Calculator",
-    short: "Calculate your baby's due date using Naegele's Rule based on your last menstrual period.",
+    title: "Kalkulator Kehamilan",
+    short: "Hitung perkiraan tanggal persalinan dan usia kehamilan.",
     description:
-      "Free pregnancy due date calculator. Enter your LMP date and cycle length to get your estimated due date, gestational age, trimester, and days remaining.",
-    keywords: [
-      "pregnancy due date calculator",
-      "due date calculator",
-      "gestational age calculator",
-      "LMP calculator",
-      "pregnancy week calculator",
-      "Naegele rule",
-      "pregnancy trimester",
-    ],
+      "Kalkulator kehamilan gratis. Hitung perkiraan tanggal persalinan (HPL), usia kehamilan dalam minggu, dan tonggak penting kehamilan.",
+    keywords: ["kalkulator kehamilan", "HPL", "usia kehamilan", "tanggal persalinan", "minggu kehamilan"],
     inputs: {
       lmpDate: {
         label: "First day of last menstrual period (LMP)",

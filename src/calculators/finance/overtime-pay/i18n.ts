@@ -17,9 +17,9 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Overtime Pay Calculator", short: "Calculate total pay from regular and overtime hours.",
-    description: "Free overtime pay calculator. Enter your hourly rate, regular hours, overtime hours and overtime multiplier (e.g. 1.5× for time-and-a-half) to get regular pay, overtime pay and total gross pay.",
-    keywords: ["overtime pay calculator", "overtime calculator", "time and a half", "hourly pay calculator", "overtime rate"],
+    title: "Calculadora de Horas Extras", short: "Calcule o valor a receber pelas horas extraordinárias trabalhadas.",
+    description: "Calculadora gratuita de horas extras. Calcule o valor a receber pelas horas extraordinárias com base na taxa horária e multiplicador legal.",
+    keywords: ["horas extras", "trabalho suplementar", "calculadora horas extras", "pagamento extras", "salário hora"],
     ...io("Hourly rate", "Regular hours", "Overtime hours", "Overtime multiplier", "Total pay", "Regular pay", "Overtime pay", "Overtime rate"),
     faq: [
       { q: "How is overtime pay calculated?", a: "Overtime hours are paid at your hourly rate times a multiplier — commonly 1.5× ('time and a half'). Total pay = regular hours × rate + overtime hours × (rate × multiplier)." },
@@ -27,9 +27,9 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Overtime Pay Calculator", short: "Calculate total pay from regular and overtime hours.",
-    description: "Free overtime pay calculator. Enter your hourly rate, regular hours, overtime hours and overtime multiplier (e.g. 1.5× for time-and-a-half) to get regular pay, overtime pay and total gross pay.",
-    keywords: ["overtime pay calculator", "overtime calculator", "time and a half", "hourly pay calculator", "overtime rate"],
+    title: "Kalkulator Upah Lembur", short: "Hitung jumlah yang Anda terima atas jam lembur kerja.",
+    description: "Kalkulator upah lembur gratis. Hitung jumlah yang diterima atas jam lembur berdasarkan tarif per jam dan pengali sesuai aturan.",
+    keywords: ["upah lembur", "kalkulator lembur", "jam lembur", "uang lembur", "gaji lembur"],
     ...io("Hourly rate", "Regular hours", "Overtime hours", "Overtime multiplier", "Total pay", "Regular pay", "Overtime pay", "Overtime rate"),
     faq: [
       { q: "How is overtime pay calculated?", a: "Overtime hours are paid at your hourly rate times a multiplier — commonly 1.5× ('time and a half'). Total pay = regular hours × rate + overtime hours × (rate × multiplier)." },

@@ -92,19 +92,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Calorie Calculator",
-    short: "Calculate your daily calorie needs (TDEE) and set a target for your weight goal.",
+    title: "Calculadora de Necessidades Calóricas",
+    short: "Calcule as suas necessidades diárias de calorias com base no objetivo.",
     description:
-      "Free TDEE calculator using the Mifflin-St Jeor equation. Enter your stats and activity level to find your maintenance calories, then adjust for weight loss or gain.",
-    keywords: [
-      "calorie calculator",
-      "TDEE calculator",
-      "daily calorie needs",
-      "weight loss calories",
-      "calorie deficit",
-      "maintenance calories",
-      "total daily energy expenditure",
-    ],
+      "Calculadora gratuita de calorias diárias. Estime as calorias que precisa para manter, perder ou ganhar peso com base no seu nível de atividade.",
+    keywords: ["calorias diárias", "necessidades calóricas", "TDEE", "calorias perder peso", "dieta calorias"],
     inputs: {
       gender: { label: "Biological sex", help: "Sex affects BMR through differences in muscle mass and hormones." },
       weight: { label: "Weight", help: "Your current body weight in kilograms." },
@@ -182,19 +174,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Calorie Calculator",
-    short: "Calculate your daily calorie needs (TDEE) and set a target for your weight goal.",
+    title: "Kalkulator Kebutuhan Kalori",
+    short: "Hitung kebutuhan kalori harian Anda berdasarkan tujuan.",
     description:
-      "Free TDEE calculator using the Mifflin-St Jeor equation. Enter your stats and activity level to find your maintenance calories, then adjust for weight loss or gain.",
-    keywords: [
-      "calorie calculator",
-      "TDEE calculator",
-      "daily calorie needs",
-      "weight loss calories",
-      "calorie deficit",
-      "maintenance calories",
-      "total daily energy expenditure",
-    ],
+      "Kalkulator kebutuhan kalori harian gratis. Estimasi kalori yang dibutuhkan untuk menjaga, menurunkan, atau menaikkan berat badan berdasarkan tingkat aktivitas.",
+    keywords: ["kalori harian", "kebutuhan kalori", "TDEE", "kalori diet", "defisit kalori"],
     inputs: {
       gender: { label: "Biological sex", help: "Sex affects BMR through differences in muscle mass and hormones." },
       weight: { label: "Weight", help: "Your current body weight in kilograms." },

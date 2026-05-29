@@ -31,11 +31,11 @@ const i18n: CalculatorI18n = {
     },
   },
   pt: {
-    title: "Net Worth Calculator",
-    short: "Net Worth",
+    title: "Calculadora de Patrimônio Líquido",
+    short: "Calcule o seu patrimônio líquido subtraindo dívidas dos ativos.",
     description:
-      "Calculate your net worth by subtracting total liabilities from total assets. Track your financial health and progress toward wealth-building goals.",
-    keywords: ["net worth", "assets", "liabilities", "wealth", "financial health", "balance sheet"],
+      "Calculadora gratuita de patrimônio líquido. Some os seus ativos e subtraia as dívidas para conhecer o seu valor líquido.",
+    keywords: ["patrimônio líquido", "net worth", "ativos passivos", "valor líquido", "saúde financeira"],
     inputs: {
       cashAndSavings: { label: "Cash & Savings", help: "Checking accounts, savings accounts, cash on hand" },
       investmentAccounts: { label: "Investment Accounts", help: "Stocks, bonds, mutual funds, ETFs (non-retirement)" },
@@ -60,11 +60,11 @@ const i18n: CalculatorI18n = {
     },
   },
   id: {
-    title: "Net Worth Calculator",
-    short: "Net Worth",
+    title: "Kalkulator Kekayaan Bersih",
+    short: "Hitung kekayaan bersih Anda dengan mengurangi utang dari aset.",
     description:
-      "Calculate your net worth by subtracting total liabilities from total assets. Track your financial health and progress toward wealth-building goals.",
-    keywords: ["net worth", "assets", "liabilities", "wealth", "financial health", "balance sheet"],
+      "Kalkulator kekayaan bersih gratis. Jumlahkan aset dan kurangi utang untuk mengetahui nilai bersih Anda.",
+    keywords: ["kekayaan bersih", "net worth", "aset pasiva", "nilai bersih", "kesehatan keuangan"],
     inputs: {
       cashAndSavings: { label: "Cash & Savings", help: "Checking accounts, savings accounts, cash on hand" },
       investmentAccounts: { label: "Investment Accounts", help: "Stocks, bonds, mutual funds, ETFs (non-retirement)" },

@@ -41,11 +41,11 @@ const i18n: CalculatorI18n = {
     },
   },
   pt: {
-    title: "Salary & Take-Home Pay Calculator",
-    short: "Take-Home Pay",
+    title: "Calculadora de Salário Líquido",
+    short: "Converta salário bruto em líquido com descontos de IRS, segurança social e taxas.",
     description:
-      "Estimate your US take-home pay after federal income tax, Social Security, Medicare, and state income tax.",
-    keywords: ["salary", "take-home pay", "net pay", "federal income tax", "FICA", "paycheck calculator"],
+      "Calculadora gratuita de salário. Veja o seu salário líquido a partir do bruto, com retenção de IRS, segurança social e outros descontos.",
+    keywords: ["salário líquido", "calculadora salário", "bruto líquido", "retenção fonte", "segurança social"],
     inputs: {
       annualSalary: { label: "Annual Salary", help: "Your gross annual salary before any taxes or deductions." },
       filingStatus: {
@@ -80,11 +80,11 @@ const i18n: CalculatorI18n = {
     },
   },
   id: {
-    title: "Salary & Take-Home Pay Calculator",
-    short: "Take-Home Pay",
+    title: "Kalkulator Gaji Bersih",
+    short: "Konversi gaji kotor menjadi gaji bersih dengan potongan PPh dan BPJS.",
     description:
-      "Estimate your US take-home pay after federal income tax, Social Security, Medicare, and state income tax.",
-    keywords: ["salary", "take-home pay", "net pay", "federal income tax", "FICA", "paycheck calculator"],
+      "Kalkulator gaji gratis. Lihat gaji bersih dari gaji kotor, dengan potongan PPh 21, BPJS Kesehatan, dan BPJS Ketenagakerjaan.",
+    keywords: ["gaji bersih", "kalkulator gaji", "gaji kotor", "PPh 21", "BPJS"],
     inputs: {
       annualSalary: { label: "Annual Salary", help: "Your gross annual salary before any taxes or deductions." },
       filingStatus: {

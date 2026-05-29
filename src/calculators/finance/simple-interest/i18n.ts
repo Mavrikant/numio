@@ -29,11 +29,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Simple Interest Calculator",
-    short: "Calculate interest earned or owed using the simple interest formula I = P·r·t.",
+    title: "Calculadora de Juros Simples",
+    short: "Calcule os juros simples sobre um capital ao longo de um prazo.",
     description:
-      "Free simple interest calculator. Enter a principal, annual rate and time period to get the interest and the total amount, using I = P·r·t. Unlike compound interest, simple interest accrues only on the original principal.",
-    keywords: ["simple interest calculator", "simple interest formula", "I=Prt", "principal interest", "interest calculator", "loan interest"],
+      "Calculadora gratuita de juros simples. Introduza o capital, taxa de juro anual e prazo para obter os juros pagos e o montante final.",
+    keywords: ["juros simples", "cálculo juros", "empréstimo simples", "taxa de juro", "interesse simples"],
     inputs: {
       principal: { label: "Principal amount", help: "The original sum invested or borrowed." },
       annualRatePct: { label: "Annual interest rate (%)", help: "Yearly rate as a percentage." },
@@ -54,11 +54,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Simple Interest Calculator",
-    short: "Calculate interest earned or owed using the simple interest formula I = P·r·t.",
+    title: "Kalkulator Bunga Sederhana",
+    short: "Hitung bunga sederhana atas pokok selama jangka waktu tertentu.",
     description:
-      "Free simple interest calculator. Enter a principal, annual rate and time period to get the interest and the total amount, using I = P·r·t. Unlike compound interest, simple interest accrues only on the original principal.",
-    keywords: ["simple interest calculator", "simple interest formula", "I=Prt", "principal interest", "interest calculator", "loan interest"],
+      "Kalkulator bunga sederhana gratis. Masukkan pokok, suku bunga tahunan, dan jangka waktu untuk mendapatkan bunga yang dibayarkan dan jumlah akhir.",
+    keywords: ["bunga sederhana", "kalkulator bunga", "pinjaman sederhana", "suku bunga", "perhitungan bunga"],
     inputs: {
       principal: { label: "Principal amount", help: "The original sum invested or borrowed." },
       annualRatePct: { label: "Annual interest rate (%)", help: "Yearly rate as a percentage." },

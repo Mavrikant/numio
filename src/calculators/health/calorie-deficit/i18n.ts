@@ -85,18 +85,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Calorie Deficit Calculator",
-    short: "Calculate how long it will take to reach your goal weight based on your daily calorie deficit.",
+    title: "Calculadora de Défice Calórico",
+    short: "Calcule o défice calórico necessário para perder peso de forma saudável.",
     description:
-      "Free calorie deficit calculator using the 7,700 kcal/kg rule. Enter your current weight, target weight, and daily calorie deficit to see your estimated timeline to goal, weekly loss rate, and total calories to burn.",
-    keywords: [
-      "calorie deficit calculator",
-      "weight loss calculator",
-      "how long to lose weight",
-      "calorie deficit",
-      "weight loss timeline",
-      "fat loss calculator",
-    ],
+      "Calculadora gratuita de défice calórico. Calcule o défice diário necessário para atingir o seu objetivo de perda de peso.",
+    keywords: ["défice calórico", "perder peso", "emagrecer", "calorias deficit", "balanço calórico"],
     inputs: {
       currentWeight: {
         label: "Current Weight",
@@ -168,18 +161,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Calorie Deficit Calculator",
-    short: "Calculate how long it will take to reach your goal weight based on your daily calorie deficit.",
+    title: "Kalkulator Defisit Kalori",
+    short: "Hitung defisit kalori yang diperlukan untuk menurunkan berat badan dengan sehat.",
     description:
-      "Free calorie deficit calculator using the 7,700 kcal/kg rule. Enter your current weight, target weight, and daily calorie deficit to see your estimated timeline to goal, weekly loss rate, and total calories to burn.",
-    keywords: [
-      "calorie deficit calculator",
-      "weight loss calculator",
-      "how long to lose weight",
-      "calorie deficit",
-      "weight loss timeline",
-      "fat loss calculator",
-    ],
+      "Kalkulator defisit kalori gratis. Hitung defisit harian yang diperlukan untuk mencapai target penurunan berat badan.",
+    keywords: ["defisit kalori", "turun berat", "diet", "kalori defisit", "neraca kalori"],
     inputs: {
       currentWeight: {
         label: "Current Weight",

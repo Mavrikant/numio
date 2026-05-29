@@ -49,19 +49,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Ideal Weight Calculator",
-    short: "Calculate your ideal body weight using 4 validated formulas — Devine, Robinson, Miller, and Hamwi.",
+    title: "Calculadora de Peso Ideal",
+    short: "Calcule o seu peso ideal segundo fórmulas médicas reconhecidas.",
     description:
-      "Free ideal body weight calculator using Devine, Robinson, Miller, and Hamwi formulas. Enter your height and sex to see your ideal weight range from four evidence-based equations.",
-    keywords: [
-      "ideal weight calculator",
-      "ideal body weight",
-      "Devine formula",
-      "Robinson formula",
-      "IBW calculator",
-      "healthy weight",
-      "weight for height",
-    ],
+      "Calculadora gratuita de peso ideal. Estime o seu peso ideal pelas fórmulas Devine, Robinson, Miller e Hamwi com base na altura e sexo.",
+    keywords: ["peso ideal", "calculadora peso ideal", "Devine", "peso saudável", "altura peso"],
     inputs: {
       unit: { label: "Unit system", help: "Choose metric (cm) or imperial (inches)." },
       gender: { label: "Biological sex", help: "Sex is used in the formula constants." },
@@ -96,19 +88,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Ideal Weight Calculator",
-    short: "Calculate your ideal body weight using 4 validated formulas — Devine, Robinson, Miller, and Hamwi.",
+    title: "Kalkulator Berat Badan Ideal",
+    short: "Hitung berat badan ideal Anda menurut rumus medis yang diakui.",
     description:
-      "Free ideal body weight calculator using Devine, Robinson, Miller, and Hamwi formulas. Enter your height and sex to see your ideal weight range from four evidence-based equations.",
-    keywords: [
-      "ideal weight calculator",
-      "ideal body weight",
-      "Devine formula",
-      "Robinson formula",
-      "IBW calculator",
-      "healthy weight",
-      "weight for height",
-    ],
+      "Kalkulator berat badan ideal gratis. Estimasi berat ideal dengan rumus Devine, Robinson, Miller, dan Hamwi berdasarkan tinggi dan jenis kelamin.",
+    keywords: ["berat badan ideal", "kalkulator BB ideal", "Devine", "berat sehat", "tinggi berat"],
     inputs: {
       unit: { label: "Unit system", help: "Choose metric (cm) or imperial (inches)." },
       gender: { label: "Biological sex", help: "Sex is used in the formula constants." },

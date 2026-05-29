@@ -64,19 +64,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Pregnancy Weight Gain Calculator",
-    short: "Track your pregnancy weight gain against IOM 2009 guidelines by trimester.",
+    title: "Calculadora de Ganho de Peso na Gravidez",
+    short: "Veja o ganho de peso recomendado durante a gravidez.",
     description:
-      "Free pregnancy weight gain calculator based on IOM 2009 guidelines. Enter your pre-pregnancy weight, height, and current gestational week to see your recommended total gain and whether you are on track.",
-    keywords: [
-      "pregnancy weight gain calculator",
-      "gestational weight gain",
-      "IOM pregnancy guidelines",
-      "prenatal weight",
-      "healthy pregnancy weight",
-      "pregnancy BMI",
-      "weight gain by trimester",
-    ],
+      "Calculadora gratuita de ganho de peso gestacional. Veja o intervalo recomendado de ganho de peso na gravidez com base no IMC pré-gestacional.",
+    keywords: ["ganho peso gravidez", "peso gestacional", "IMC gravidez", "peso saudável gravidez", "grávida"],
     inputs: {
       unit: { label: "Unit system", help: "Choose metric (kg/cm) or imperial (lb/in)." },
       prePregnancyWeight: { label: "Pre-pregnancy weight", help: "Your weight before pregnancy (before week 1)." },
@@ -126,19 +118,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Pregnancy Weight Gain Calculator",
-    short: "Track your pregnancy weight gain against IOM 2009 guidelines by trimester.",
+    title: "Kalkulator Kenaikan Berat Kehamilan",
+    short: "Lihat kenaikan berat badan yang direkomendasikan selama kehamilan.",
     description:
-      "Free pregnancy weight gain calculator based on IOM 2009 guidelines. Enter your pre-pregnancy weight, height, and current gestational week to see your recommended total gain and whether you are on track.",
-    keywords: [
-      "pregnancy weight gain calculator",
-      "gestational weight gain",
-      "IOM pregnancy guidelines",
-      "prenatal weight",
-      "healthy pregnancy weight",
-      "pregnancy BMI",
-      "weight gain by trimester",
-    ],
+      "Kalkulator kenaikan berat kehamilan gratis. Lihat rentang kenaikan berat yang direkomendasikan selama kehamilan berdasarkan IMT pra-kehamilan.",
+    keywords: ["kenaikan berat hamil", "berat kehamilan", "IMT hamil", "berat ideal hamil", "ibu hamil"],
     inputs: {
       unit: { label: "Unit system", help: "Choose metric (kg/cm) or imperial (lb/in)." },
       prePregnancyWeight: { label: "Pre-pregnancy weight", help: "Your weight before pregnancy (before week 1)." },

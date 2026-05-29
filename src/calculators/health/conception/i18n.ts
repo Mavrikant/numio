@@ -81,19 +81,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Conception Date Calculator",
-    short: "Estimate your conception date from your last menstrual period or due date.",
+    title: "Calculadora de Data de Concepção",
+    short: "Estime a data de concepção com base na última menstruação ou DPP.",
     description:
-      "Free conception date calculator. Enter your last menstrual period or due date to estimate when conception occurred and your fertile window.",
-    keywords: [
-      "conception date calculator",
-      "when did I conceive",
-      "fertile window calculator",
-      "ovulation calculator",
-      "due date calculator",
-      "last menstrual period",
-      "pregnancy conception",
-    ],
+      "Calculadora gratuita de data de concepção. Estime a data provável de concepção com base na última menstruação ou data prevista do parto.",
+    keywords: ["data concepção", "concepção bebé", "calculadora concepção", "DUM", "DPP"],
     inputs: {
       mode: {
         label: "Calculation mode",
@@ -160,19 +152,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Conception Date Calculator",
-    short: "Estimate your conception date from your last menstrual period or due date.",
+    title: "Kalkulator Tanggal Pembuahan",
+    short: "Estimasi tanggal pembuahan berdasarkan haid terakhir atau HPL.",
     description:
-      "Free conception date calculator. Enter your last menstrual period or due date to estimate when conception occurred and your fertile window.",
-    keywords: [
-      "conception date calculator",
-      "when did I conceive",
-      "fertile window calculator",
-      "ovulation calculator",
-      "due date calculator",
-      "last menstrual period",
-      "pregnancy conception",
-    ],
+      "Kalkulator tanggal pembuahan gratis. Estimasi perkiraan tanggal pembuahan berdasarkan haid terakhir atau perkiraan tanggal persalinan.",
+    keywords: ["tanggal pembuahan", "konsepsi", "kalkulator pembuahan", "HPHT", "HPL"],
     inputs: {
       mode: {
         label: "Calculation mode",

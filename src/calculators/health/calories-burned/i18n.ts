@@ -86,19 +86,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Calories Burned Calculator",
-    short: "Estimate calories burned for common activities using MET values.",
+    title: "Calculadora de Calorias Queimadas",
+    short: "Calcule as calorias queimadas durante a atividade física.",
     description:
-      "Free calories-burned calculator based on the 2011 Compendium of Physical Activities. Enter your activity, intensity, duration and weight to estimate energy expenditure in kcal.",
-    keywords: [
-      "calories burned calculator",
-      "MET calculator",
-      "exercise calories",
-      "activity calories",
-      "fitness calorie burn",
-      "workout calories",
-      "energy expenditure",
-    ],
+      "Calculadora gratuita de calorias queimadas. Calcule as calorias gastas em mais de 100 atividades com base no peso e duração.",
+    keywords: ["calorias queimadas", "gasto calórico exercício", "MET", "calorias exercício", "perder peso treino"],
     inputs: {
       activity: {
         label: "Activity",
@@ -170,19 +162,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Calories Burned Calculator",
-    short: "Estimate calories burned for common activities using MET values.",
+    title: "Kalkulator Kalori Terbakar",
+    short: "Hitung kalori yang terbakar selama aktivitas fisik.",
     description:
-      "Free calories-burned calculator based on the 2011 Compendium of Physical Activities. Enter your activity, intensity, duration and weight to estimate energy expenditure in kcal.",
-    keywords: [
-      "calories burned calculator",
-      "MET calculator",
-      "exercise calories",
-      "activity calories",
-      "fitness calorie burn",
-      "workout calories",
-      "energy expenditure",
-    ],
+      "Kalkulator kalori terbakar gratis. Hitung kalori yang dibakar dalam lebih dari 100 aktivitas berdasarkan berat badan dan durasi.",
+    keywords: ["kalori terbakar", "pengeluaran kalori olahraga", "MET", "kalori olahraga", "turun berat olahraga"],
     inputs: {
       activity: {
         label: "Activity",

@@ -61,19 +61,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Income Tax Estimator",
-    short: "Estimate your federal income tax for the US (2024) or Turkey.",
+    title: "Calculadora de IRS",
+    short: "Estime o seu imposto sobre o rendimento com base nos escalões em vigor.",
     description:
-      "Free income tax estimator for the US (2024 federal brackets) and Turkey (2024 GVK brackets). Enter your gross income and filing status to see estimated tax, effective rate, and bracket breakdown.",
-    keywords: [
-      "income tax calculator",
-      "federal tax estimator",
-      "2024 tax brackets",
-      "Turkey income tax",
-      "US federal income tax",
-      "effective tax rate",
-      "tax calculator",
-    ],
+      "Calculadora gratuita de IRS. Estime o imposto a pagar com base no seu rendimento bruto, deduções e escalões progressivos.",
+    keywords: ["IRS", "imposto rendimento", "escalão IRS", "calculadora impostos", "rendimento líquido"],
     inputs: {
       country: { label: "Country", help: "Select your country: United States or Turkey." },
       grossIncome: { label: "Gross Income", help: "Your total annual income before any deductions." },
@@ -120,19 +112,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Income Tax Estimator",
-    short: "Estimate your federal income tax for the US (2024) or Turkey.",
+    title: "Kalkulator Pajak Penghasilan",
+    short: "Estimasi pajak penghasilan Anda berdasarkan tarif progresif yang berlaku.",
     description:
-      "Free income tax estimator for the US (2024 federal brackets) and Turkey (2024 GVK brackets). Enter your gross income and filing status to see estimated tax, effective rate, and bracket breakdown.",
-    keywords: [
-      "income tax calculator",
-      "federal tax estimator",
-      "2024 tax brackets",
-      "Turkey income tax",
-      "US federal income tax",
-      "effective tax rate",
-      "tax calculator",
-    ],
+      "Kalkulator pajak penghasilan (PPh) gratis. Hitung pajak berdasarkan penghasilan bruto, pengurangan, dan tarif progresif.",
+    keywords: ["PPh", "pajak penghasilan", "kalkulator pajak", "PTKP", "penghasilan bersih"],
     inputs: {
       country: { label: "Country", help: "Select your country: United States or Turkey." },
       grossIncome: { label: "Gross Income", help: "Your total annual income before any deductions." },

@@ -71,19 +71,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Ovulation & Fertile Window Calculator",
-    short: "Find your most fertile days and predicted ovulation date based on your menstrual cycle.",
+    title: "Calculadora de Ovulação",
+    short: "Calcule o seu período fértil e dias de ovulação.",
     description:
-      "Free ovulation calculator. Enter your last menstrual period date and average cycle length to estimate your fertile window, ovulation date, LH surge, and next period.",
-    keywords: [
-      "ovulation calculator",
-      "fertile window",
-      "fertility calculator",
-      "when do I ovulate",
-      "ovulation date",
-      "cycle tracker",
-      "pregnancy planning",
-    ],
+      "Calculadora gratuita de ovulação. Identifique o seu período fértil e dia de ovulação com base no ciclo menstrual.",
+    keywords: ["ovulação", "período fértil", "calculadora ovulação", "engravidar", "ciclo menstrual"],
     inputs: {
       lmpDate: {
         label: "Last menstrual period (LMP)",
@@ -140,19 +132,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Ovulation & Fertile Window Calculator",
-    short: "Find your most fertile days and predicted ovulation date based on your menstrual cycle.",
+    title: "Kalkulator Ovulasi",
+    short: "Hitung masa subur dan hari ovulasi Anda.",
     description:
-      "Free ovulation calculator. Enter your last menstrual period date and average cycle length to estimate your fertile window, ovulation date, LH surge, and next period.",
-    keywords: [
-      "ovulation calculator",
-      "fertile window",
-      "fertility calculator",
-      "when do I ovulate",
-      "ovulation date",
-      "cycle tracker",
-      "pregnancy planning",
-    ],
+      "Kalkulator ovulasi gratis. Identifikasi masa subur dan hari ovulasi berdasarkan siklus menstruasi.",
+    keywords: ["ovulasi", "masa subur", "kalkulator ovulasi", "program hamil", "siklus haid"],
     inputs: {
       lmpDate: {
         label: "Last menstrual period (LMP)",

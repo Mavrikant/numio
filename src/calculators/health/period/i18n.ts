@@ -80,19 +80,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Period & Menstrual Cycle Tracker",
-    short: "Predict your next period, ovulation date, and fertile window based on your cycle.",
+    title: "Calendário Menstrual",
+    short: "Acompanhe o seu ciclo menstrual e preveja os próximos períodos.",
     description:
-      "Free period tracker and menstrual cycle calculator. Enter your last period date and cycle length to predict your next period, ovulation, and fertile window.",
-    keywords: [
-      "period calculator",
-      "menstrual cycle tracker",
-      "ovulation calculator",
-      "fertile window calculator",
-      "next period date",
-      "fertility calendar",
-      "period predictor",
-    ],
+      "Calendário menstrual gratuito. Acompanhe o seu ciclo, preveja os próximos períodos e identifique o período fértil.",
+    keywords: ["calendário menstrual", "ciclo menstrual", "período", "menstruação", "previsão período"],
     inputs: {
       lastPeriodDate: {
         label: "First day of last period",
@@ -158,19 +150,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Period & Menstrual Cycle Tracker",
-    short: "Predict your next period, ovulation date, and fertile window based on your cycle.",
+    title: "Kalender Haid",
+    short: "Pantau siklus menstruasi dan prediksi periode haid berikutnya.",
     description:
-      "Free period tracker and menstrual cycle calculator. Enter your last period date and cycle length to predict your next period, ovulation, and fertile window.",
-    keywords: [
-      "period calculator",
-      "menstrual cycle tracker",
-      "ovulation calculator",
-      "fertile window calculator",
-      "next period date",
-      "fertility calendar",
-      "period predictor",
-    ],
+      "Kalender haid gratis. Pantau siklus, prediksi haid berikutnya, dan identifikasi masa subur.",
+    keywords: ["kalender haid", "siklus menstruasi", "periode haid", "menstruasi", "prediksi haid"],
     inputs: {
       lastPeriodDate: {
         label: "First day of last period",

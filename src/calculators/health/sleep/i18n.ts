@@ -77,19 +77,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Sleep Cycle Calculator",
-    short: "Find the best times to wake up or go to bed based on 90-minute sleep cycles.",
+    title: "Calculadora de Sono",
+    short: "Descubra a melhor hora para deitar ou acordar para um sono reparador.",
     description:
-      "Free sleep cycle calculator. Enter your bedtime or desired wake time to get the optimal sleep and wake schedule based on natural 90-minute sleep cycles.",
-    keywords: [
-      "sleep cycle calculator",
-      "best time to wake up",
-      "sleep calculator",
-      "90 minute sleep cycle",
-      "what time should I go to bed",
-      "REM sleep calculator",
-      "sleep schedule",
-    ],
+      "Calculadora gratuita de sono. Descubra a melhor hora para deitar ou acordar com base nos ciclos de sono de 90 minutos.",
+    keywords: ["calculadora sono", "ciclos sono", "horas dormir", "qualidade sono", "REM sono"],
     inputs: {
       mode: {
         label: "Calculation Mode",
@@ -152,19 +144,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Sleep Cycle Calculator",
-    short: "Find the best times to wake up or go to bed based on 90-minute sleep cycles.",
+    title: "Kalkulator Tidur",
+    short: "Temukan waktu terbaik untuk tidur atau bangun demi tidur berkualitas.",
     description:
-      "Free sleep cycle calculator. Enter your bedtime or desired wake time to get the optimal sleep and wake schedule based on natural 90-minute sleep cycles.",
-    keywords: [
-      "sleep cycle calculator",
-      "best time to wake up",
-      "sleep calculator",
-      "90 minute sleep cycle",
-      "what time should I go to bed",
-      "REM sleep calculator",
-      "sleep schedule",
-    ],
+      "Kalkulator tidur gratis. Temukan waktu terbaik untuk tidur atau bangun berdasarkan siklus tidur 90 menit.",
+    keywords: ["kalkulator tidur", "siklus tidur", "jam tidur", "kualitas tidur", "REM"],
     inputs: {
       mode: {
         label: "Calculation Mode",

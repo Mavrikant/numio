@@ -82,19 +82,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Tip Calculator",
-    short: "Calculate tip amount, total bill, and split the check evenly among your group.",
+    title: "Calculadora de Gorjeta",
+    short: "Calcule a gorjeta e divida a conta entre os comensais.",
     description:
-      "Free tip calculator. Enter your bill amount, tip percentage, and number of people to instantly see the tip, total, and per-person amounts.",
-    keywords: [
-      "tip calculator",
-      "gratuity calculator",
-      "split bill calculator",
-      "restaurant tip",
-      "how much to tip",
-      "tip percentage",
-      "bill splitter",
-    ],
+      "Calculadora gratuita de gorjeta. Introduza o valor da conta, a percentagem e o número de pessoas para dividir a despesa.",
+    keywords: ["gorjeta", "calculadora gorjeta", "dividir conta", "percentagem gorjeta", "restaurante"],
     inputs: {
       billAmount: {
         label: "Bill Amount",
@@ -162,19 +154,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Tip Calculator",
-    short: "Calculate tip amount, total bill, and split the check evenly among your group.",
+    title: "Kalkulator Tip",
+    short: "Hitung tip dan bagi tagihan di antara teman.",
     description:
-      "Free tip calculator. Enter your bill amount, tip percentage, and number of people to instantly see the tip, total, and per-person amounts.",
-    keywords: [
-      "tip calculator",
-      "gratuity calculator",
-      "split bill calculator",
-      "restaurant tip",
-      "how much to tip",
-      "tip percentage",
-      "bill splitter",
-    ],
+      "Kalkulator tip gratis. Masukkan jumlah tagihan, persentase, dan jumlah orang untuk membagi biaya.",
+    keywords: ["tip restoran", "kalkulator tip", "bagi tagihan", "persentase tip", "service charge"],
     inputs: {
       billAmount: {
         label: "Bill Amount",

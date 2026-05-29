@@ -44,19 +44,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Mortgage Refinance Break-Even Calculator",
-    short: "Find out when refinancing your mortgage pays off with the break-even calculator.",
+    title: "Calculadora de Refinanciamento",
+    short: "Veja se compensa refinanciar o seu crédito habitação.",
     description:
-      "Free mortgage refinance calculator. Enter your current loan details and new rate to see monthly savings, break-even months, and lifetime interest saved.",
-    keywords: [
-      "mortgage refinance calculator",
-      "refinance break-even",
-      "refinance savings calculator",
-      "mortgage calculator",
-      "home loan refinance",
-      "break-even point refinance",
-      "monthly payment comparison",
-    ],
+      "Calculadora gratuita de refinanciamento. Compare o crédito atual com novas condições para ver a poupança total.",
+    keywords: ["refinanciamento", "renegociar crédito", "trocar de banco", "poupar crédito", "transferência crédito"],
     inputs: {
       currentBalance: { label: "Current Loan Balance", help: "The remaining principal balance on your current mortgage." },
       currentAPR: { label: "Current Interest Rate (APR)", help: "The annual interest rate on your current mortgage." },
@@ -86,19 +78,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Mortgage Refinance Break-Even Calculator",
-    short: "Find out when refinancing your mortgage pays off with the break-even calculator.",
+    title: "Kalkulator Refinancing",
+    short: "Lihat apakah refinancing KPR Anda menguntungkan.",
     description:
-      "Free mortgage refinance calculator. Enter your current loan details and new rate to see monthly savings, break-even months, and lifetime interest saved.",
-    keywords: [
-      "mortgage refinance calculator",
-      "refinance break-even",
-      "refinance savings calculator",
-      "mortgage calculator",
-      "home loan refinance",
-      "break-even point refinance",
-      "monthly payment comparison",
-    ],
+      "Kalkulator refinancing gratis. Bandingkan kredit saat ini dengan syarat baru untuk melihat total penghematan.",
+    keywords: ["refinancing KPR", "take over KPR", "pindah bank", "hemat KPR", "transfer kredit"],
     inputs: {
       currentBalance: { label: "Current Loan Balance", help: "The remaining principal balance on your current mortgage." },
       currentAPR: { label: "Current Interest Rate (APR)", help: "The annual interest rate on your current mortgage." },

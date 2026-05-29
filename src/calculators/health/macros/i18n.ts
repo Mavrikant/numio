@@ -105,19 +105,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Macro Calculator",
-    short: "Calculate your daily protein, fat, and carb targets from your TDEE and fitness goal.",
+    title: "Calculadora de Macronutrientes",
+    short: "Calcule a distribuição ideal de proteína, hidratos e gordura para a sua dieta.",
     description:
-      "Free macro calculator. Enter your total daily energy expenditure and fitness goal to get your optimal protein, fat, and carbohydrate targets in grams and calories.",
-    keywords: [
-      "macro calculator",
-      "macronutrient calculator",
-      "protein fat carbs calculator",
-      "TDEE macros",
-      "cutting macros",
-      "bulking macros",
-      "diet macros",
-    ],
+      "Calculadora gratuita de macros. Calcule as gramas diárias de proteína, hidratos e gordura com base no seu objetivo calórico.",
+    keywords: ["macronutrientes", "macros", "proteína hidratos gordura", "distribuição macros", "calculadora macros"],
     inputs: {
       tdee: {
         label: "Total Daily Energy Expenditure (TDEE)",
@@ -208,19 +200,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Macro Calculator",
-    short: "Calculate your daily protein, fat, and carb targets from your TDEE and fitness goal.",
+    title: "Kalkulator Makronutrien",
+    short: "Hitung distribusi ideal protein, karbohidrat, dan lemak untuk diet Anda.",
     description:
-      "Free macro calculator. Enter your total daily energy expenditure and fitness goal to get your optimal protein, fat, and carbohydrate targets in grams and calories.",
-    keywords: [
-      "macro calculator",
-      "macronutrient calculator",
-      "protein fat carbs calculator",
-      "TDEE macros",
-      "cutting macros",
-      "bulking macros",
-      "diet macros",
-    ],
+      "Kalkulator makro gratis. Hitung gram harian protein, karbohidrat, dan lemak berdasarkan target kalori Anda.",
+    keywords: ["makronutrien", "makro", "protein karbohidrat lemak", "distribusi makro", "kalkulator makro"],
     inputs: {
       tdee: {
         label: "Total Daily Energy Expenditure (TDEE)",

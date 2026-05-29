@@ -18,9 +18,9 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "One-Rep Max Calculator", short: "Estimate your 1RM from a weight and reps, with training-load percentages.",
-    description: "Free one-rep max (1RM) calculator. Enter the weight you lifted and for how many reps to estimate your one-rep maximum using the Epley and Brzycki formulas, plus suggested loads at 90% and 80% for training.",
-    keywords: ["one rep max calculator", "1rm calculator", "max lift estimate", "epley formula", "brzycki formula", "strength calculator"],
+    title: "Calculadora de 1RM (Uma Repetição Máxima)", short: "Estime a sua repetição máxima (1RM) em exercícios de força.",
+    description: "Calculadora gratuita de 1RM. Estime a sua uma repetição máxima a partir do peso levantado e número de repetições.",
+    keywords: ["1RM", "repetição máxima", "força máxima", "levantamento peso", "musculação"],
     ...io("Weight lifted", "Repetitions", "Estimated 1RM (avg)", "Epley 1RM", "Brzycki 1RM", "90% load", "80% load"),
     faq: [
       { q: "How is one-rep max estimated?", a: "From a sub-maximal set: Epley gives 1RM = weight × (1 + reps/30); Brzycki gives weight × 36/(37 − reps). We show both and their average." },
@@ -29,9 +29,9 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "One-Rep Max Calculator", short: "Estimate your 1RM from a weight and reps, with training-load percentages.",
-    description: "Free one-rep max (1RM) calculator. Enter the weight you lifted and for how many reps to estimate your one-rep maximum using the Epley and Brzycki formulas, plus suggested loads at 90% and 80% for training.",
-    keywords: ["one rep max calculator", "1rm calculator", "max lift estimate", "epley formula", "brzycki formula", "strength calculator"],
+    title: "Kalkulator 1RM", short: "Estimasi 1 repetisi maksimum (1RM) Anda dalam latihan beban.",
+    description: "Kalkulator 1RM gratis. Estimasi one rep max berdasarkan beban yang diangkat dan jumlah repetisi.",
+    keywords: ["1RM", "one rep max", "kekuatan maksimum", "angkat beban", "gym"],
     ...io("Weight lifted", "Repetitions", "Estimated 1RM (avg)", "Epley 1RM", "Brzycki 1RM", "90% load", "80% load"),
     faq: [
       { q: "How is one-rep max estimated?", a: "From a sub-maximal set: Epley gives 1RM = weight × (1 + reps/30); Brzycki gives weight × 36/(37 − reps). We show both and their average." },

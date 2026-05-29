@@ -54,19 +54,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Pension Drawdown Calculator",
-    short: "Project your pension pot, safe income, and drawdown longevity.",
+    title: "Calculadora de Pensão",
+    short: "Estime a pensão de reforma com base nas suas contribuições.",
     description:
-      "Estimate your retirement pot, the 4%-rule safe income, how long the pot will last at a target spending level, and its inflation-adjusted real value.",
-    keywords: [
-      "pension calculator",
-      "retirement drawdown",
-      "4 percent rule",
-      "safe withdrawal rate",
-      "FIRE calculator",
-      "retirement income",
-      "pension pot",
-    ],
+      "Calculadora gratuita de pensão. Estime o valor da pensão a receber na reforma com base no histórico de contribuições.",
+    keywords: ["pensão reforma", "calculadora pensão", "reforma segurança social", "pensão velhice", "valor pensão"],
     inputs: {
       currentPot: { label: "Current pension pot", help: "Total value of your existing pension and retirement savings today." },
       currentAge: { label: "Current age", help: "Your age in years right now." },
@@ -106,19 +98,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Pension Drawdown Calculator",
-    short: "Project your pension pot, safe income, and drawdown longevity.",
+    title: "Kalkulator Dana Pensiun",
+    short: "Estimasi dana pensiun berdasarkan iuran Anda.",
     description:
-      "Estimate your retirement pot, the 4%-rule safe income, how long the pot will last at a target spending level, and its inflation-adjusted real value.",
-    keywords: [
-      "pension calculator",
-      "retirement drawdown",
-      "4 percent rule",
-      "safe withdrawal rate",
-      "FIRE calculator",
-      "retirement income",
-      "pension pot",
-    ],
+      "Kalkulator dana pensiun gratis. Estimasi jumlah pensiun yang akan diterima berdasarkan riwayat iuran.",
+    keywords: ["dana pensiun", "kalkulator pensiun", "BPJS pensiun", "tunjangan pensiun", "nilai pensiun"],
     inputs: {
       currentPot: { label: "Current pension pot", help: "Total value of your existing pension and retirement savings today." },
       currentAge: { label: "Current age", help: "Your age in years right now." },

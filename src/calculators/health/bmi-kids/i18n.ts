@@ -60,19 +60,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "BMI Calculator for Children & Teens (Ages 2–20)",
-    short: "Calculate BMI-for-age for children using CDC growth chart percentiles.",
+    title: "Calculadora de IMC Infantil",
+    short: "Calcule o IMC de crianças e adolescentes com percentil por idade.",
     description:
-      "Free pediatric BMI calculator for ages 2–20. Enter age, sex, height, and weight to find your child's BMI, weight status, and growth chart percentile estimate.",
-    keywords: [
-      "BMI calculator children",
-      "pediatric BMI",
-      "BMI for age",
-      "child BMI percentile",
-      "CDC growth chart",
-      "kids BMI calculator",
-      "teen BMI",
-    ],
+      "Calculadora gratuita de IMC para crianças. Use percentis específicos da idade para avaliar o IMC de crianças e adolescentes.",
+    keywords: ["IMC criança", "IMC infantil", "percentil criança", "crescimento criança", "obesidade infantil"],
     inputs: {
       gender: { label: "Sex", help: "Sex affects the CDC growth chart percentile thresholds." },
       age: { label: "Age (years)", help: "Child's age in whole years (2 to 20)." },
@@ -118,19 +110,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "BMI Calculator for Children & Teens (Ages 2–20)",
-    short: "Calculate BMI-for-age for children using CDC growth chart percentiles.",
+    title: "Kalkulator IMT Anak",
+    short: "Hitung IMT anak-anak dan remaja dengan persentil sesuai usia.",
     description:
-      "Free pediatric BMI calculator for ages 2–20. Enter age, sex, height, and weight to find your child's BMI, weight status, and growth chart percentile estimate.",
-    keywords: [
-      "BMI calculator children",
-      "pediatric BMI",
-      "BMI for age",
-      "child BMI percentile",
-      "CDC growth chart",
-      "kids BMI calculator",
-      "teen BMI",
-    ],
+      "Kalkulator IMT untuk anak gratis. Gunakan persentil khusus usia untuk menilai IMT anak-anak dan remaja.",
+    keywords: ["IMT anak", "BMI anak", "persentil anak", "pertumbuhan anak", "obesitas anak"],
     inputs: {
       gender: { label: "Sex", help: "Sex affects the CDC growth chart percentile thresholds." },
       age: { label: "Age (years)", help: "Child's age in whole years (2 to 20)." },

@@ -81,19 +81,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Cholesterol Calculator",
-    short: "Evaluate cardiovascular risk from your lipid panel (TC, HDL, LDL, TG).",
+    title: "Calculadora de Colesterol",
+    short: "Avalie os seus valores de colesterol total, LDL, HDL e triglicéridos.",
     description:
-      "Free cholesterol calculator using the Friedewald equation and NCEP ATP III thresholds. Enter total cholesterol, HDL, triglycerides (and optionally LDL) to get ratios, non-HDL cholesterol and an LDL risk category.",
-    keywords: [
-      "cholesterol calculator",
-      "LDL calculator",
-      "HDL ratio",
-      "Friedewald equation",
-      "lipid panel",
-      "non-HDL cholesterol",
-      "cardiovascular risk",
-    ],
+      "Calculadora gratuita de colesterol. Veja a sua relação de colesterol e classificação de risco cardiovascular.",
+    keywords: ["colesterol", "LDL HDL", "triglicéridos", "colesterol mau", "risco cardiovascular"],
     inputs: {
       totalCholesterol: {
         label: "Total cholesterol",
@@ -160,19 +152,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Cholesterol Calculator",
-    short: "Evaluate cardiovascular risk from your lipid panel (TC, HDL, LDL, TG).",
+    title: "Kalkulator Kolesterol",
+    short: "Evaluasi nilai kolesterol total, LDL, HDL, dan trigliserida Anda.",
     description:
-      "Free cholesterol calculator using the Friedewald equation and NCEP ATP III thresholds. Enter total cholesterol, HDL, triglycerides (and optionally LDL) to get ratios, non-HDL cholesterol and an LDL risk category.",
-    keywords: [
-      "cholesterol calculator",
-      "LDL calculator",
-      "HDL ratio",
-      "Friedewald equation",
-      "lipid panel",
-      "non-HDL cholesterol",
-      "cardiovascular risk",
-    ],
+      "Kalkulator kolesterol gratis. Lihat rasio kolesterol dan klasifikasi risiko kardiovaskular.",
+    keywords: ["kolesterol", "LDL HDL", "trigliserida", "kolesterol jahat", "risiko jantung"],
     inputs: {
       totalCholesterol: {
         label: "Total cholesterol",

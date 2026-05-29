@@ -58,19 +58,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Waist-to-Hip Ratio Calculator",
-    short: "Calculate your waist-to-hip ratio and assess your metabolic health risk.",
+    title: "Calculadora de Relação Cintura-Quadril",
+    short: "Calcule a relação cintura-quadril e o risco cardiovascular associado.",
     description:
-      "Free waist-to-hip ratio calculator based on WHO guidelines. Enter your waist and hip measurements to get your WHR and cardiovascular risk category.",
-    keywords: [
-      "waist-to-hip ratio calculator",
-      "WHR calculator",
-      "central obesity",
-      "abdominal fat",
-      "cardiovascular risk",
-      "waist circumference",
-      "body fat distribution",
-    ],
+      "Calculadora gratuita de relação cintura-quadril (RCQ). Estime o risco cardiovascular com base na distribuição da gordura abdominal.",
+    keywords: ["relação cintura quadril", "RCQ", "gordura abdominal", "risco cardiovascular", "obesidade abdominal"],
     inputs: {
       gender: { label: "Biological sex", help: "Sex determines the WHO risk category thresholds." },
       unit: { label: "Unit system", help: "Choose metric (cm) or imperial (inches)." },
@@ -114,19 +106,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Waist-to-Hip Ratio Calculator",
-    short: "Calculate your waist-to-hip ratio and assess your metabolic health risk.",
+    title: "Kalkulator Rasio Pinggang-Pinggul",
+    short: "Hitung rasio pinggang-pinggul dan risiko kardiovaskular yang terkait.",
     description:
-      "Free waist-to-hip ratio calculator based on WHO guidelines. Enter your waist and hip measurements to get your WHR and cardiovascular risk category.",
-    keywords: [
-      "waist-to-hip ratio calculator",
-      "WHR calculator",
-      "central obesity",
-      "abdominal fat",
-      "cardiovascular risk",
-      "waist circumference",
-      "body fat distribution",
-    ],
+      "Kalkulator rasio pinggang-pinggul (RPP) gratis. Estimasi risiko kardiovaskular berdasarkan distribusi lemak perut.",
+    keywords: ["rasio pinggang pinggul", "WHR", "lemak perut", "risiko jantung", "obesitas sentral"],
     inputs: {
       gender: { label: "Biological sex", help: "Sex determines the WHO risk category thresholds." },
       unit: { label: "Unit system", help: "Choose metric (cm) or imperial (inches)." },

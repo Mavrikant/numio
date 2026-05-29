@@ -92,19 +92,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Student Loan Payoff Calculator",
-    short: "Calculate your monthly student loan payment and total interest over the life of the loan.",
+    title: "Calculadora de Crédito Estudante",
+    short: "Calcule a prestação mensal e o custo total do seu crédito estudante.",
     description:
-      "Free student loan payoff calculator. Enter your loan balance, APR, and term to see monthly payments, total interest, and how extra payments accelerate payoff.",
-    keywords: [
-      "student loan calculator",
-      "loan payoff calculator",
-      "student debt calculator",
-      "monthly loan payment",
-      "student loan interest",
-      "loan amortization",
-      "extra payment savings",
-    ],
+      "Calculadora gratuita de crédito estudante. Introduza o valor, taxa e prazo para ver a prestação e os juros totais.",
+    keywords: ["crédito estudante", "empréstimo estudante", "financiamento estudos", "prestação estudante", "juros estudante"],
     inputs: {
       balance: {
         label: "Loan Balance",
@@ -182,19 +174,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Student Loan Payoff Calculator",
-    short: "Calculate your monthly student loan payment and total interest over the life of the loan.",
+    title: "Kalkulator Pinjaman Pelajar",
+    short: "Hitung angsuran bulanan dan total biaya pinjaman pelajar Anda.",
     description:
-      "Free student loan payoff calculator. Enter your loan balance, APR, and term to see monthly payments, total interest, and how extra payments accelerate payoff.",
-    keywords: [
-      "student loan calculator",
-      "loan payoff calculator",
-      "student debt calculator",
-      "monthly loan payment",
-      "student loan interest",
-      "loan amortization",
-      "extra payment savings",
-    ],
+      "Kalkulator pinjaman pelajar gratis. Masukkan jumlah, suku bunga, dan jangka waktu untuk melihat angsuran dan total bunga.",
+    keywords: ["pinjaman pelajar", "kredit mahasiswa", "pembiayaan kuliah", "angsuran pelajar", "bunga pelajar"],
     inputs: {
       balance: {
         label: "Loan Balance",

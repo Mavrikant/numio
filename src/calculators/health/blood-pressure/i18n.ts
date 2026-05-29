@@ -83,19 +83,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Blood Pressure Categories — AHA 2017",
-    short: "Classify your blood pressure reading using the AHA/ACC 2017 guidelines.",
+    title: "Calculadora de Pressão Arterial",
+    short: "Classifique a sua pressão arterial segundo as categorias médicas atuais.",
     description:
-      "Free blood pressure category checker based on the 2017 AHA/ACC guidelines. Enter your systolic and diastolic readings to find your blood pressure category and receive health guidance.",
-    keywords: [
-      "blood pressure calculator",
-      "hypertension categories",
-      "AHA blood pressure",
-      "systolic diastolic",
-      "high blood pressure",
-      "blood pressure chart",
-      "BP classification",
-    ],
+      "Calculadora gratuita de pressão arterial. Veja se a sua tensão é normal, elevada ou hipertensa com base nos valores sistólico e diastólico.",
+    keywords: ["pressão arterial", "tensão arterial", "hipertensão", "sistólica diastólica", "categorias pressão"],
     inputs: {
       systolic: {
         label: "Systolic pressure (mmHg)",
@@ -164,19 +156,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Blood Pressure Categories — AHA 2017",
-    short: "Classify your blood pressure reading using the AHA/ACC 2017 guidelines.",
+    title: "Kalkulator Tekanan Darah",
+    short: "Klasifikasikan tekanan darah Anda menurut kategori medis terkini.",
     description:
-      "Free blood pressure category checker based on the 2017 AHA/ACC guidelines. Enter your systolic and diastolic readings to find your blood pressure category and receive health guidance.",
-    keywords: [
-      "blood pressure calculator",
-      "hypertension categories",
-      "AHA blood pressure",
-      "systolic diastolic",
-      "high blood pressure",
-      "blood pressure chart",
-      "BP classification",
-    ],
+      "Kalkulator tekanan darah gratis. Lihat apakah tekanan Anda normal, tinggi, atau hipertensi berdasarkan nilai sistolik dan diastolik.",
+    keywords: ["tekanan darah", "hipertensi", "darah tinggi", "sistolik diastolik", "kategori tekanan"],
     inputs: {
       systolic: {
         label: "Systolic pressure (mmHg)",

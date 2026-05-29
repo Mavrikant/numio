@@ -75,19 +75,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "VO₂max Calculator",
-    short: "Estimate aerobic fitness (VO₂max) from a Cooper 12-min run or 1.5-mile run.",
+    title: "Calculadora de VO2 Máximo",
+    short: "Estime o seu VO2 máximo — capacidade aeróbica.",
     description:
-      "Free VO₂max calculator using Cooper's 12-minute run formula or the 1.5-mile run test. Enter your test result, age and sex to estimate maximal oxygen uptake (ml/kg/min) and an ACSM fitness category.",
-    keywords: [
-      "VO2max calculator",
-      "Cooper test",
-      "1.5 mile run",
-      "aerobic fitness",
-      "cardio fitness",
-      "maximal oxygen uptake",
-      "ACSM fitness category",
-    ],
+      "Calculadora gratuita de VO2max. Estime a sua capacidade aeróbica máxima com base no teste de Cooper ou frequência cardíaca em repouso.",
+    keywords: ["VO2 max", "capacidade aeróbica", "teste Cooper", "fitness aeróbico", "calculadora VO2"],
     inputs: {
       testType: {
         label: "Test type",
@@ -148,19 +140,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "VO₂max Calculator",
-    short: "Estimate aerobic fitness (VO₂max) from a Cooper 12-min run or 1.5-mile run.",
+    title: "Kalkulator VO2 Max",
+    short: "Estimasi VO2 max Anda — kapasitas aerobik.",
     description:
-      "Free VO₂max calculator using Cooper's 12-minute run formula or the 1.5-mile run test. Enter your test result, age and sex to estimate maximal oxygen uptake (ml/kg/min) and an ACSM fitness category.",
-    keywords: [
-      "VO2max calculator",
-      "Cooper test",
-      "1.5 mile run",
-      "aerobic fitness",
-      "cardio fitness",
-      "maximal oxygen uptake",
-      "ACSM fitness category",
-    ],
+      "Kalkulator VO2max gratis. Estimasi kapasitas aerobik maksimum berdasarkan tes Cooper atau denyut nadi istirahat.",
+    keywords: ["VO2 max", "kapasitas aerobik", "tes Cooper", "kebugaran aerobik", "kalkulator VO2"],
     inputs: {
       testType: {
         label: "Test type",

@@ -81,19 +81,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "BMI Calculator",
-    short: "Calculate your Body Mass Index and find your healthy weight range.",
+    title: "Calculadora de IMC",
+    short: "Calcule o seu Índice de Massa Corporal (IMC) a partir do peso e altura.",
     description:
-      "Free BMI calculator based on WHO guidelines. Enter your height and weight to get your BMI, category, and ideal weight range.",
-    keywords: [
-      "BMI calculator",
-      "body mass index",
-      "healthy weight",
-      "BMI chart",
-      "weight calculator",
-      "obesity calculator",
-      "ideal weight",
-    ],
+      "Calculadora gratuita de IMC. Introduza o peso e a altura para descobrir o seu Índice de Massa Corporal e a categoria — magreza, normal, excesso de peso ou obesidade.",
+    keywords: ["IMC", "índice massa corporal", "calculadora IMC", "peso ideal", "obesidade"],
     inputs: {
       unit: {
         label: "Unit system",
@@ -160,19 +152,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "BMI Calculator",
-    short: "Calculate your Body Mass Index and find your healthy weight range.",
+    title: "Kalkulator IMT",
+    short: "Hitung Indeks Massa Tubuh (IMT) Anda dari berat dan tinggi badan.",
     description:
-      "Free BMI calculator based on WHO guidelines. Enter your height and weight to get your BMI, category, and ideal weight range.",
-    keywords: [
-      "BMI calculator",
-      "body mass index",
-      "healthy weight",
-      "BMI chart",
-      "weight calculator",
-      "obesity calculator",
-      "ideal weight",
-    ],
+      "Kalkulator IMT gratis. Masukkan berat dan tinggi badan untuk mengetahui Indeks Massa Tubuh dan kategorinya — kurus, normal, kelebihan berat, atau obesitas.",
+    keywords: ["IMT", "indeks massa tubuh", "kalkulator IMT", "berat ideal", "obesitas"],
     inputs: {
       unit: {
         label: "Unit system",

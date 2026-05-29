@@ -61,19 +61,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   pt: {
-    title: "Margin & Markup Calculator",
-    short: "Calculate profit, profit margin %, and markup % — or back out the price needed to hit a target margin or markup.",
+    title: "Calculadora de Margem de Lucro",
+    short: "Calcule a margem de lucro e o markup sobre um produto.",
     description:
-      "Free margin and markup calculator. Enter cost and revenue to compute profit, gross margin percentage, and markup percentage. Or pick a mode to derive the revenue (selling price) needed to achieve a target margin or markup, given the cost.",
-    keywords: [
-      "margin calculator",
-      "markup calculator",
-      "profit margin calculator",
-      "gross margin",
-      "markup vs margin",
-      "pricing calculator",
-      "selling price calculator",
-    ],
+      "Calculadora gratuita de margem de lucro. Calcule a margem percentual, markup e preço de venda com base no custo.",
+    keywords: ["margem lucro", "markup", "calculadora margem", "preço venda", "rentabilidade"],
     inputs: {
       mode: { label: "Mode", help: "Compute margin from cost + revenue, or derive revenue from cost + target margin/markup." },
       cost: { label: "Cost ($)", help: "Cost of goods sold or production cost per unit / order." },
@@ -120,19 +112,11 @@ const i18n: CalculatorI18n = {
     ],
   },
   id: {
-    title: "Margin & Markup Calculator",
-    short: "Calculate profit, profit margin %, and markup % — or back out the price needed to hit a target margin or markup.",
+    title: "Kalkulator Margin Keuntungan",
+    short: "Hitung margin keuntungan dan markup atas produk.",
     description:
-      "Free margin and markup calculator. Enter cost and revenue to compute profit, gross margin percentage, and markup percentage. Or pick a mode to derive the revenue (selling price) needed to achieve a target margin or markup, given the cost.",
-    keywords: [
-      "margin calculator",
-      "markup calculator",
-      "profit margin calculator",
-      "gross margin",
-      "markup vs margin",
-      "pricing calculator",
-      "selling price calculator",
-    ],
+      "Kalkulator margin keuntungan gratis. Hitung margin persentase, markup, dan harga jual berdasarkan biaya.",
+    keywords: ["margin keuntungan", "markup", "kalkulator margin", "harga jual", "profitabilitas"],
     inputs: {
       mode: { label: "Mode", help: "Compute margin from cost + revenue, or derive revenue from cost + target margin/markup." },
       cost: { label: "Cost ($)", help: "Cost of goods sold or production cost per unit / order." },
