@@ -14,9 +14,9 @@ const i18n: ToolI18n = {
     ],
   },
   pt: {
-    title: "Word & Character Counter",
-    short: "Count words, characters, sentences, paragraphs and reading time as you type.",
-    description: "Free online word and character counter. Paste or type text to instantly see the number of words, characters (with and without spaces), sentences, paragraphs, lines and estimated reading time. Everything runs in your browser.",
+    title: "Contador de Word & Character",
+    short: "Count words, characters, sentences, paragraphs e reading time as you type.",
+    description: "Gratuito - online word e character counter. Paste ou type text para instantaneamente see the number de words, characters (com e without spaces), sentences, paragraphs, lines e estimated reading time. Everything runs no seu navegador.",
     keywords: ["word counter", "character counter", "letter counter", "word count", "reading time", "text statistics"],
     ui: { ...COMMON_UI.en, placeholder: "Type or paste your text here…", characters: "Characters", charactersNoSpaces: "Characters (no spaces)", words: "Words", sentences: "Sentences", paragraphs: "Paragraphs", lines: "Lines", readingTime: "Reading time", min: "min" },
     faq: [
@@ -25,9 +25,9 @@ const i18n: ToolI18n = {
     ],
   },
   id: {
-    title: "Word & Character Counter",
-    short: "Count words, characters, sentences, paragraphs and reading time as you type.",
-    description: "Free online word and character counter. Paste or type text to instantly see the number of words, characters (with and without spaces), sentences, paragraphs, lines and estimated reading time. Everything runs in your browser.",
+    title: "Penghitung Word & Character",
+    short: "Count words, characters, sentences, paragraphs dan reading time as you type.",
+    description: "Gratis - online word dan character counter. Paste atau type text to secara instan see the number dari words, characters (with dan without spaces), sentences, paragraphs, lines dan estimated reading time. Everything runs di browser Anda.",
     keywords: ["word counter", "character counter", "letter counter", "word count", "reading time", "text statistics"],
     ui: { ...COMMON_UI.en, placeholder: "Type or paste your text here…", characters: "Characters", charactersNoSpaces: "Characters (no spaces)", words: "Words", sentences: "Sentences", paragraphs: "Paragraphs", lines: "Lines", readingTime: "Reading time", min: "min" },
     faq: [

@@ -44,8 +44,8 @@ const i18n: ToolI18n = {
   },
   pt: {
     title: "Descriptive Statistics Dashboard",
-    short: "Upload CSV data and get a full statistical summary of every numeric column with mini-histograms and a correlation matrix.",
-    description: "Free descriptive statistics dashboard. Upload a CSV file and instantly see count, mean, median, mode, standard deviation, variance, quartiles, IQR, range, skewness, and kurtosis for every numeric column — plus mini-histograms and a Pearson correlation heatmap.",
+    short: "Upload CSV data e get a full statistical summary de every numeric column com mini-histograms e a correlation matrix.",
+    description: "Gratuito - descriptive statistics dashboard. Upload a CSV file e instantaneamente see count, mean, median, mode, standard deviation, variance, quartiles, IQR, range, skewness, e kurtosis para every numeric column â plus mini-histograms e a Pearson correlation heatmap.",
     keywords: ["descriptive statistics", "summary statistics", "mean", "median", "standard deviation", "correlation matrix", "data analysis", "csv", "histogram", "kurtosis", "skewness"],
     ui: {
       datasetOverview: "Dataset overview",
@@ -85,8 +85,8 @@ const i18n: ToolI18n = {
   },
   id: {
     title: "Descriptive Statistics Dashboard",
-    short: "Upload CSV data and get a full statistical summary of every numeric column with mini-histograms and a correlation matrix.",
-    description: "Free descriptive statistics dashboard. Upload a CSV file and instantly see count, mean, median, mode, standard deviation, variance, quartiles, IQR, range, skewness, and kurtosis for every numeric column — plus mini-histograms and a Pearson correlation heatmap.",
+    short: "Upload CSV data dan get a full statistical summary dari every numeric column with mini-histograms dan a correlation matrix.",
+    description: "Gratis - descriptive statistics dashboard. Upload a CSV file dan secara instan see count, mean, median, mode, standard deviation, variance, quartiles, IQR, range, skewness, dan kurtosis for every numeric column â plus mini-histograms dan a Pearson correlation heatmap.",
     keywords: ["descriptive statistics", "summary statistics", "mean", "median", "standard deviation", "correlation matrix", "data analysis", "csv", "histogram", "kurtosis", "skewness"],
     ui: {
       datasetOverview: "Dataset overview",

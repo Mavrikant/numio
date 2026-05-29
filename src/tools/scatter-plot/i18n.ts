@@ -40,8 +40,8 @@ const i18n: ToolI18n = {
   },
   pt: {
     title: "Scatter Plot & Correlation",
-    short: "Upload CSV data, pick X and Y columns, and instantly visualize relationships with Pearson correlation and optional linear regression.",
-    description: "Free scatter plot tool. Upload a CSV file or paste data, choose two numeric columns, and instantly see the relationship. Computes Pearson correlation coefficient (r), R², and optionally overlays a linear regression line with slope and intercept.",
+    short: "Upload CSV data, pick X e Y columns, e instantaneamente visualize relationships com Pearson correlation e optional linear regression.",
+    description: "Gratuito - scatter plot tool. Upload a CSV file ou paste data, choose two numeric columns, e instantaneamente see the relationship. Computes Pearson correlation coefficient (r), RÂ², e optionally overlays a linear regression line com slope e intercept.",
     keywords: ["scatter plot", "correlation", "pearson", "regression", "linear regression", "data visualization", "csv", "r squared", "statistics"],
     ui: {
       selectXColumn: "X axis (independent variable)",
@@ -77,8 +77,8 @@ const i18n: ToolI18n = {
   },
   id: {
     title: "Scatter Plot & Correlation",
-    short: "Upload CSV data, pick X and Y columns, and instantly visualize relationships with Pearson correlation and optional linear regression.",
-    description: "Free scatter plot tool. Upload a CSV file or paste data, choose two numeric columns, and instantly see the relationship. Computes Pearson correlation coefficient (r), R², and optionally overlays a linear regression line with slope and intercept.",
+    short: "Upload CSV data, pick X dan Y columns, dan secara instan visualize relationships with Pearson correlation dan optional linear regression.",
+    description: "Gratis - scatter plot tool. Upload a CSV file atau paste data, choose two numeric columns, dan secara instan see the relationship. Computes Pearson correlation coefficient (r), RÂ², dan optionally overlays a linear regression line with slope dan intercept.",
     keywords: ["scatter plot", "correlation", "pearson", "regression", "linear regression", "data visualization", "csv", "r squared", "statistics"],
     ui: {
       selectXColumn: "X axis (independent variable)",
