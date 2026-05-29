@@ -85,6 +85,175 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  pt: {
+    title: "Bending Stress Calculator",
+    short: "Calculate maximum bending stress, safety factor, and material utilization from bending moment and section modulus.",
+    description:
+      "Free bending stress calculator for structural design. Enter bending moment (kN·m) and section modulus (cm³) to calculate maximum stress (MPa), safety factor, and utilization ratio for steel, aluminum, concrete, or timber.",
+    keywords: [
+      "bending stress calculator",
+      "maximum stress",
+      "section modulus",
+      "safety factor",
+      "structural design",
+      "mechanics of materials",
+      "stress analysis",
+    ],
+    inputs: {
+      moment: {
+        label: "Bending moment (kN·m)",
+        help: "Maximum bending moment acting on the beam section.",
+      },
+      sectionModulus: {
+        label: "Section modulus (cm³)",
+        help: "Section modulus (Z) of the beam cross-section. Found in section property tables or calculated from I/c.",
+      },
+      materialType: {
+        label: "Material type",
+        help: "Select the beam material to determine yield strength and safety limits.",
+      },
+    },
+    outputs: {
+      stressMPa: {
+        label: "Bending stress (MPa)",
+        help: "Maximum bending stress in the extreme fiber, calculated as M/Z.",
+      },
+      yieldStrengthMPa: {
+        label: "Yield strength (MPa)",
+        help: "Material yield strength (or compressive strength for concrete).",
+      },
+      safetyFactor: {
+        label: "Safety factor",
+        help: "Ratio of yield strength to actual stress. Should exceed 1.0 for safe design.",
+      },
+      utilizationRatio: {
+        label: "Utilization ratio",
+        help: "Percentage of allowable stress used (stress / (fy / γM)). Should be ≤100%.",
+      },
+      classification: {
+        label: "Classification",
+        help: "Safety classification: OK (≤85%), Warning (85–100%), Critical (>100%).",
+      },
+    },
+    options: {
+      materialType: {
+        steel: "Steel (S275)",
+        aluminum: "Aluminum (6061-T6)",
+        concrete: "Concrete (C30)",
+        timber: "Timber (softwood)",
+      },
+    },
+    errors: {
+      invalidInputs: "Moment and section modulus must be positive.",
+    },
+    faq: [
+      {
+        q: "What is section modulus (Z)?",
+        a: "Section modulus is a measure of a beam's resistance to bending. It is calculated as Z = I/c, where I is the second moment of area and c is the distance from the neutral axis to the extreme fiber. For a rectangular section: Z = b×h²/6.",
+      },
+      {
+        q: "What does the safety factor mean?",
+        a: "The safety factor is the ratio of yield strength to actual stress (fy/σ). A safety factor > 1.5 is typically required for structural designs under static loading. Values <1.0 indicate overstress.",
+      },
+      {
+        q: "When is the design critical?",
+        a: "A design becomes critical when the utilization ratio exceeds 100%, meaning the actual stress surpasses the allowable stress (fy/γM). This requires redesign with a larger section or stronger material.",
+      },
+      {
+        q: "How are different materials compared?",
+        a: "Different materials have different yield strengths: steel ≈250 MPa, aluminum ≈240 MPa, concrete ≈30 MPa, timber ≈10 MPa. Selection depends on availability, cost, weight, and environmental conditions.",
+      },
+      {
+        q: "Can I use this for dynamic loads?",
+        a: "This calculator assumes static loading. Dynamic loads require fatigue analysis and higher safety factors. Consult a structural engineer for dynamic applications.",
+      },
+    ],
+  },
+  id: {
+    title: "Bending Stress Calculator",
+    short: "Calculate maximum bending stress, safety factor, and material utilization from bending moment and section modulus.",
+    description:
+      "Free bending stress calculator for structural design. Enter bending moment (kN·m) and section modulus (cm³) to calculate maximum stress (MPa), safety factor, and utilization ratio for steel, aluminum, concrete, or timber.",
+    keywords: [
+      "bending stress calculator",
+      "maximum stress",
+      "section modulus",
+      "safety factor",
+      "structural design",
+      "mechanics of materials",
+      "stress analysis",
+    ],
+    inputs: {
+      moment: {
+        label: "Bending moment (kN·m)",
+        help: "Maximum bending moment acting on the beam section.",
+      },
+      sectionModulus: {
+        label: "Section modulus (cm³)",
+        help: "Section modulus (Z) of the beam cross-section. Found in section property tables or calculated from I/c.",
+      },
+      materialType: {
+        label: "Material type",
+        help: "Select the beam material to determine yield strength and safety limits.",
+      },
+    },
+    outputs: {
+      stressMPa: {
+        label: "Bending stress (MPa)",
+        help: "Maximum bending stress in the extreme fiber, calculated as M/Z.",
+      },
+      yieldStrengthMPa: {
+        label: "Yield strength (MPa)",
+        help: "Material yield strength (or compressive strength for concrete).",
+      },
+      safetyFactor: {
+        label: "Safety factor",
+        help: "Ratio of yield strength to actual stress. Should exceed 1.0 for safe design.",
+      },
+      utilizationRatio: {
+        label: "Utilization ratio",
+        help: "Percentage of allowable stress used (stress / (fy / γM)). Should be ≤100%.",
+      },
+      classification: {
+        label: "Classification",
+        help: "Safety classification: OK (≤85%), Warning (85–100%), Critical (>100%).",
+      },
+    },
+    options: {
+      materialType: {
+        steel: "Steel (S275)",
+        aluminum: "Aluminum (6061-T6)",
+        concrete: "Concrete (C30)",
+        timber: "Timber (softwood)",
+      },
+    },
+    errors: {
+      invalidInputs: "Moment and section modulus must be positive.",
+    },
+    faq: [
+      {
+        q: "What is section modulus (Z)?",
+        a: "Section modulus is a measure of a beam's resistance to bending. It is calculated as Z = I/c, where I is the second moment of area and c is the distance from the neutral axis to the extreme fiber. For a rectangular section: Z = b×h²/6.",
+      },
+      {
+        q: "What does the safety factor mean?",
+        a: "The safety factor is the ratio of yield strength to actual stress (fy/σ). A safety factor > 1.5 is typically required for structural designs under static loading. Values <1.0 indicate overstress.",
+      },
+      {
+        q: "When is the design critical?",
+        a: "A design becomes critical when the utilization ratio exceeds 100%, meaning the actual stress surpasses the allowable stress (fy/γM). This requires redesign with a larger section or stronger material.",
+      },
+      {
+        q: "How are different materials compared?",
+        a: "Different materials have different yield strengths: steel ≈250 MPa, aluminum ≈240 MPa, concrete ≈30 MPa, timber ≈10 MPa. Selection depends on availability, cost, weight, and environmental conditions.",
+      },
+      {
+        q: "Can I use this for dynamic loads?",
+        a: "This calculator assumes static loading. Dynamic loads require fatigue analysis and higher safety factors. Consult a structural engineer for dynamic applications.",
+      },
+    ],
+  },
+
 
   tr: {
     title: "Eğilme Gerilmesi Hesaplayıcı",

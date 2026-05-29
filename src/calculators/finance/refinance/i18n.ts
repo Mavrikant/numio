@@ -43,6 +43,91 @@ const i18n: CalculatorI18n = {
       { q: "Can I roll closing costs into the refinance?", a: "Yes, most lenders allow you to add closing costs to the loan balance (called a no-closing-cost refinance). This eliminates upfront costs but increases your loan balance and monthly payment." },
     ],
   },
+  pt: {
+    title: "Mortgage Refinance Break-Even Calculator",
+    short: "Find out when refinancing your mortgage pays off with the break-even calculator.",
+    description:
+      "Free mortgage refinance calculator. Enter your current loan details and new rate to see monthly savings, break-even months, and lifetime interest saved.",
+    keywords: [
+      "mortgage refinance calculator",
+      "refinance break-even",
+      "refinance savings calculator",
+      "mortgage calculator",
+      "home loan refinance",
+      "break-even point refinance",
+      "monthly payment comparison",
+    ],
+    inputs: {
+      currentBalance: { label: "Current Loan Balance", help: "The remaining principal balance on your current mortgage." },
+      currentAPR: { label: "Current Interest Rate (APR)", help: "The annual interest rate on your current mortgage." },
+      currentRemainingYears: { label: "Remaining Term (years)", help: "Years left on your current mortgage." },
+      newAPR: { label: "New Interest Rate (APR)", help: "The annual interest rate offered for the refinanced mortgage." },
+      newTermYears: { label: "New Loan Term (years)", help: "The term of the new mortgage (commonly 15 or 30 years)." },
+      closingCosts: { label: "Closing Costs", help: "Upfront costs to refinance, typically 2-5% of the loan balance." },
+    },
+    outputs: {
+      currentMonthlyPayment: { label: "Current Monthly Payment", help: "Your current required monthly mortgage payment." },
+      newMonthlyPayment: { label: "New Monthly Payment", help: "Estimated monthly payment after refinancing." },
+      monthlySavings: { label: "Monthly Savings", help: "Difference between current and new monthly payment." },
+      breakEvenMonths: { label: "Break-Even (months)", help: "Months until closing costs are recovered through monthly savings." },
+      lifetimeInterestSaved: { label: "Lifetime Interest Saved", help: "Total interest savings over the remaining loan life, minus closing costs." },
+      isWorthRefinancing: { label: "Worth Refinancing?", help: "Whether break-even occurs before the end of your remaining loan term." },
+    },
+    errors: {
+      balanceTooLow: "Loan balance must be at least $1.",
+      aprOutOfRange: "Interest rate must be between 0% and 20%.",
+    },
+    faq: [
+      { q: "What is the break-even point for refinancing?", a: "The break-even point is the number of months it takes for your accumulated monthly savings to equal the closing costs you paid upfront. If you plan to stay in your home past this point, refinancing is likely beneficial." },
+      { q: "When does refinancing make sense?", a: "Refinancing typically makes sense when: (1) you can lower your rate by at least 0.5-1%, (2) you plan to stay in your home past the break-even period, and (3) your credit score has improved since your original loan." },
+      { q: "What are typical refinancing closing costs?", a: "Closing costs typically range from 2-5% of the loan balance, including lender fees, title insurance, appraisal, and prepaid items. On a $300,000 loan, expect $6,000-$15,000 in closing costs." },
+      { q: "Should I refinance to a shorter term?", a: "Refinancing from a 30-year to a 15-year mortgage increases monthly payments but can save tens of thousands in interest and build equity faster. Calculate whether the higher payment fits your budget." },
+      { q: "Can I roll closing costs into the refinance?", a: "Yes, most lenders allow you to add closing costs to the loan balance (called a no-closing-cost refinance). This eliminates upfront costs but increases your loan balance and monthly payment." },
+    ],
+  },
+  id: {
+    title: "Mortgage Refinance Break-Even Calculator",
+    short: "Find out when refinancing your mortgage pays off with the break-even calculator.",
+    description:
+      "Free mortgage refinance calculator. Enter your current loan details and new rate to see monthly savings, break-even months, and lifetime interest saved.",
+    keywords: [
+      "mortgage refinance calculator",
+      "refinance break-even",
+      "refinance savings calculator",
+      "mortgage calculator",
+      "home loan refinance",
+      "break-even point refinance",
+      "monthly payment comparison",
+    ],
+    inputs: {
+      currentBalance: { label: "Current Loan Balance", help: "The remaining principal balance on your current mortgage." },
+      currentAPR: { label: "Current Interest Rate (APR)", help: "The annual interest rate on your current mortgage." },
+      currentRemainingYears: { label: "Remaining Term (years)", help: "Years left on your current mortgage." },
+      newAPR: { label: "New Interest Rate (APR)", help: "The annual interest rate offered for the refinanced mortgage." },
+      newTermYears: { label: "New Loan Term (years)", help: "The term of the new mortgage (commonly 15 or 30 years)." },
+      closingCosts: { label: "Closing Costs", help: "Upfront costs to refinance, typically 2-5% of the loan balance." },
+    },
+    outputs: {
+      currentMonthlyPayment: { label: "Current Monthly Payment", help: "Your current required monthly mortgage payment." },
+      newMonthlyPayment: { label: "New Monthly Payment", help: "Estimated monthly payment after refinancing." },
+      monthlySavings: { label: "Monthly Savings", help: "Difference between current and new monthly payment." },
+      breakEvenMonths: { label: "Break-Even (months)", help: "Months until closing costs are recovered through monthly savings." },
+      lifetimeInterestSaved: { label: "Lifetime Interest Saved", help: "Total interest savings over the remaining loan life, minus closing costs." },
+      isWorthRefinancing: { label: "Worth Refinancing?", help: "Whether break-even occurs before the end of your remaining loan term." },
+    },
+    errors: {
+      balanceTooLow: "Loan balance must be at least $1.",
+      aprOutOfRange: "Interest rate must be between 0% and 20%.",
+    },
+    faq: [
+      { q: "What is the break-even point for refinancing?", a: "The break-even point is the number of months it takes for your accumulated monthly savings to equal the closing costs you paid upfront. If you plan to stay in your home past this point, refinancing is likely beneficial." },
+      { q: "When does refinancing make sense?", a: "Refinancing typically makes sense when: (1) you can lower your rate by at least 0.5-1%, (2) you plan to stay in your home past the break-even period, and (3) your credit score has improved since your original loan." },
+      { q: "What are typical refinancing closing costs?", a: "Closing costs typically range from 2-5% of the loan balance, including lender fees, title insurance, appraisal, and prepaid items. On a $300,000 loan, expect $6,000-$15,000 in closing costs." },
+      { q: "Should I refinance to a shorter term?", a: "Refinancing from a 30-year to a 15-year mortgage increases monthly payments but can save tens of thousands in interest and build equity faster. Calculate whether the higher payment fits your budget." },
+      { q: "Can I roll closing costs into the refinance?", a: "Yes, most lenders allow you to add closing costs to the loan balance (called a no-closing-cost refinance). This eliminates upfront costs but increases your loan balance and monthly payment." },
+    ],
+  },
+
 
   tr: {
     title: "İpotek Yeniden Finansman Başabaş Noktası Hesaplayıcısı",

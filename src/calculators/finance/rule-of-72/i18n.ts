@@ -16,6 +16,27 @@ const i18n: CalculatorI18n = {
       { q: "When should I use 70 or 69.3 instead?", a: "72 is easiest for mental math and is most accurate around 6–10%. The 70 and 69.3 variants are closer for lower rates and continuous compounding." },
     ],
   },
+  pt: {
+    title: "Rule of 72 Calculator", short: "Estimate how many years it takes an investment to double.",
+    description: "Free Rule of 72 calculator. Enter an annual return to estimate how many years it takes your money to double, using the 72, 70 and 69.3 rules, alongside the mathematically exact doubling time.",
+    keywords: ["rule of 72", "doubling time calculator", "investment doubling", "rule of 70", "how long to double money"],
+    ...io("Annual return rate", "Doubling time (÷72)", "Doubling time (÷70)", "Doubling time (÷69.3)", "Exact doubling time"),
+    faq: [
+      { q: "How does the Rule of 72 work?", a: "Divide 72 by the annual percentage return to estimate the years to double. At 8%, money doubles in about 72/8 = 9 years." },
+      { q: "When should I use 70 or 69.3 instead?", a: "72 is easiest for mental math and is most accurate around 6–10%. The 70 and 69.3 variants are closer for lower rates and continuous compounding." },
+    ],
+  },
+  id: {
+    title: "Rule of 72 Calculator", short: "Estimate how many years it takes an investment to double.",
+    description: "Free Rule of 72 calculator. Enter an annual return to estimate how many years it takes your money to double, using the 72, 70 and 69.3 rules, alongside the mathematically exact doubling time.",
+    keywords: ["rule of 72", "doubling time calculator", "investment doubling", "rule of 70", "how long to double money"],
+    ...io("Annual return rate", "Doubling time (÷72)", "Doubling time (÷70)", "Doubling time (÷69.3)", "Exact doubling time"),
+    faq: [
+      { q: "How does the Rule of 72 work?", a: "Divide 72 by the annual percentage return to estimate the years to double. At 8%, money doubles in about 72/8 = 9 years." },
+      { q: "When should I use 70 or 69.3 instead?", a: "72 is easiest for mental math and is most accurate around 6–10%. The 70 and 69.3 variants are closer for lower rates and continuous compounding." },
+    ],
+  },
+
   tr: {
     title: "72 Kuralı Hesaplayıcı", short: "Bir yatırımın kaç yılda ikiye katlanacağını tahmin edin.",
     description: "Ücretsiz 72 Kuralı hesaplayıcı. Yıllık getiriyi girerek paranızın kaç yılda ikiye katlanacağını 72, 70 ve 69,3 kurallarıyla, ayrıca matematiksel olarak tam katlanma süresiyle birlikte tahmin edin.",

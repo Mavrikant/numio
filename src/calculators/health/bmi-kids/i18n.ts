@@ -59,6 +59,123 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  pt: {
+    title: "BMI Calculator for Children & Teens (Ages 2–20)",
+    short: "Calculate BMI-for-age for children using CDC growth chart percentiles.",
+    description:
+      "Free pediatric BMI calculator for ages 2–20. Enter age, sex, height, and weight to find your child's BMI, weight status, and growth chart percentile estimate.",
+    keywords: [
+      "BMI calculator children",
+      "pediatric BMI",
+      "BMI for age",
+      "child BMI percentile",
+      "CDC growth chart",
+      "kids BMI calculator",
+      "teen BMI",
+    ],
+    inputs: {
+      gender: { label: "Sex", help: "Sex affects the CDC growth chart percentile thresholds." },
+      age: { label: "Age (years)", help: "Child's age in whole years (2 to 20)." },
+      unit: { label: "Unit system", help: "Choose metric (kg/cm) or imperial (lb/in)." },
+      weight: { label: "Weight", help: "Child's current body weight." },
+      height: { label: "Height", help: "Child's height in centimetres (metric) or inches (imperial)." },
+    },
+    outputs: {
+      bmi: { label: "BMI", help: "Body Mass Index: weight(kg) ÷ height(m)²." },
+      weightStatus: { label: "Weight status", help: "CDC category based on BMI-for-age percentile." },
+      percentileEstimate: { label: "Percentile estimate", help: "Approximate BMI-for-age percentile based on CDC 2000 growth chart cutoffs." },
+    },
+    options: {
+      gender: { male: "Male (boy)", female: "Female (girl)" },
+      unit: { metric: "Metric (kg, cm)", imperial: "Imperial (lb, in)" },
+    },
+    errors: {
+      ageOutOfRange: "Age must be between 2 and 20 years.",
+      weightOutOfRange: "Please enter a valid weight.",
+      heightOutOfRange: "Please enter a valid height.",
+    },
+    faq: [
+      {
+        q: "Why can't I use the adult BMI categories for children?",
+        a: "Adult BMI cutoffs (underweight <18.5, healthy 18.5–24.9, etc.) do not apply to children because body fat changes significantly with age and differs between boys and girls. Children's BMI is interpreted using age- and sex-specific percentile charts developed from large reference populations.",
+      },
+      {
+        q: "What do the BMI-for-age categories mean?",
+        a: "The CDC uses four categories: Underweight (below the 5th percentile), Healthy weight (5th to below 85th percentile), Overweight (85th to below 95th percentile), and Obese (at or above the 95th percentile). These percentiles describe how a child's BMI compares to other children of the same age and sex in the reference population.",
+      },
+      {
+        q: "Is a high BMI always a health problem for children?",
+        a: "Not necessarily. BMI is a screening tool, not a diagnostic test. Some children with high BMI have high muscle mass rather than excess fat. A healthcare provider can perform a full assessment including physical examination, family history, and additional measurements to determine if a child's weight is a health concern.",
+      },
+      {
+        q: "How accurate is this calculator's percentile estimate?",
+        a: "This calculator uses simplified lookup tables based on the CDC 2000 growth charts. The weight status categories (underweight/healthy/overweight/obese) are accurate. The numeric percentile estimate is approximate and uses linear interpolation. For precise clinical percentile calculation, use the CDC's official BMI-for-age calculator or a licensed growth chart tool.",
+      },
+      {
+        q: "What is a healthy growth pattern for children?",
+        a: "Healthy children generally follow a consistent growth curve over time, tracking at a similar percentile from year to year. A sudden shift in percentile rank (e.g., jumping from the 50th to the 85th percentile within one year) is more concerning than a child who has consistently tracked at the 70th percentile for years. Regular check-ups with a paediatrician are the best way to monitor growth.",
+      },
+    ],
+  },
+  id: {
+    title: "BMI Calculator for Children & Teens (Ages 2–20)",
+    short: "Calculate BMI-for-age for children using CDC growth chart percentiles.",
+    description:
+      "Free pediatric BMI calculator for ages 2–20. Enter age, sex, height, and weight to find your child's BMI, weight status, and growth chart percentile estimate.",
+    keywords: [
+      "BMI calculator children",
+      "pediatric BMI",
+      "BMI for age",
+      "child BMI percentile",
+      "CDC growth chart",
+      "kids BMI calculator",
+      "teen BMI",
+    ],
+    inputs: {
+      gender: { label: "Sex", help: "Sex affects the CDC growth chart percentile thresholds." },
+      age: { label: "Age (years)", help: "Child's age in whole years (2 to 20)." },
+      unit: { label: "Unit system", help: "Choose metric (kg/cm) or imperial (lb/in)." },
+      weight: { label: "Weight", help: "Child's current body weight." },
+      height: { label: "Height", help: "Child's height in centimetres (metric) or inches (imperial)." },
+    },
+    outputs: {
+      bmi: { label: "BMI", help: "Body Mass Index: weight(kg) ÷ height(m)²." },
+      weightStatus: { label: "Weight status", help: "CDC category based on BMI-for-age percentile." },
+      percentileEstimate: { label: "Percentile estimate", help: "Approximate BMI-for-age percentile based on CDC 2000 growth chart cutoffs." },
+    },
+    options: {
+      gender: { male: "Male (boy)", female: "Female (girl)" },
+      unit: { metric: "Metric (kg, cm)", imperial: "Imperial (lb, in)" },
+    },
+    errors: {
+      ageOutOfRange: "Age must be between 2 and 20 years.",
+      weightOutOfRange: "Please enter a valid weight.",
+      heightOutOfRange: "Please enter a valid height.",
+    },
+    faq: [
+      {
+        q: "Why can't I use the adult BMI categories for children?",
+        a: "Adult BMI cutoffs (underweight <18.5, healthy 18.5–24.9, etc.) do not apply to children because body fat changes significantly with age and differs between boys and girls. Children's BMI is interpreted using age- and sex-specific percentile charts developed from large reference populations.",
+      },
+      {
+        q: "What do the BMI-for-age categories mean?",
+        a: "The CDC uses four categories: Underweight (below the 5th percentile), Healthy weight (5th to below 85th percentile), Overweight (85th to below 95th percentile), and Obese (at or above the 95th percentile). These percentiles describe how a child's BMI compares to other children of the same age and sex in the reference population.",
+      },
+      {
+        q: "Is a high BMI always a health problem for children?",
+        a: "Not necessarily. BMI is a screening tool, not a diagnostic test. Some children with high BMI have high muscle mass rather than excess fat. A healthcare provider can perform a full assessment including physical examination, family history, and additional measurements to determine if a child's weight is a health concern.",
+      },
+      {
+        q: "How accurate is this calculator's percentile estimate?",
+        a: "This calculator uses simplified lookup tables based on the CDC 2000 growth charts. The weight status categories (underweight/healthy/overweight/obese) are accurate. The numeric percentile estimate is approximate and uses linear interpolation. For precise clinical percentile calculation, use the CDC's official BMI-for-age calculator or a licensed growth chart tool.",
+      },
+      {
+        q: "What is a healthy growth pattern for children?",
+        a: "Healthy children generally follow a consistent growth curve over time, tracking at a similar percentile from year to year. A sudden shift in percentile rank (e.g., jumping from the 50th to the 85th percentile within one year) is more concerning than a child who has consistently tracked at the 70th percentile for years. Regular check-ups with a paediatrician are the best way to monitor growth.",
+      },
+    ],
+  },
+
 
   tr: {
     title: "Çocuklar ve Gençler İçin BMI Hesaplayıcı (2–20 Yaş)",

@@ -75,6 +75,155 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  pt: {
+    title: "VAT / Sales Tax Calculator",
+    short: "Calculate VAT-exclusive or VAT-inclusive prices, tax amount, and base price for any tax rate.",
+    description:
+      "Free VAT calculator. Add tax to a base price or extract tax from a gross price. Supports any VAT, GST, or sales tax rate. Instantly shows base price, tax amount, and total.",
+    keywords: [
+      "VAT calculator",
+      "sales tax calculator",
+      "GST calculator",
+      "tax inclusive calculator",
+      "tax exclusive calculator",
+      "value added tax",
+      "price with tax",
+    ],
+    inputs: {
+      mode: {
+        label: "Calculation Mode",
+        help: "Add VAT to price: enter the pre-tax base price and get the total. Extract VAT from price: enter the gross (tax-included) price and get the base and tax amount.",
+      },
+      amount: {
+        label: "Amount",
+        help: "Enter the base price (exclusive mode) or the gross price including tax (inclusive mode).",
+      },
+      vatRate: {
+        label: "VAT / Tax Rate (%)",
+        help: "Common rates: UK/France/AU 20%, Germany 19%, India 18%, US varies by state, Saudi Arabia 15%, UAE 5%.",
+      },
+    },
+    outputs: {
+      totalPrice: {
+        label: "Total Price (incl. VAT)",
+        help: "The final price the customer pays, including tax.",
+      },
+      basePrice: {
+        label: "Base Price (excl. VAT)",
+        help: "The pre-tax price before adding VAT.",
+      },
+      vatAmount: {
+        label: "VAT Amount",
+        help: "The tax amount — the difference between the total and base price.",
+      },
+      effectiveRate: {
+        label: "Effective Rate",
+        help: "VAT as a percentage of the base price. In standard scenarios this equals the stated VAT rate.",
+      },
+    },
+    options: {
+      mode: {
+        exclusive: "Add VAT to price",
+        inclusive: "Extract VAT from price",
+      },
+    },
+    errors: {
+      amountRequired: "Amount must be greater than zero.",
+    },
+    faq: [
+      {
+        q: "What is VAT?",
+        a: "Value-Added Tax (VAT) is a consumption tax levied on the value added at each stage of production and distribution. The final consumer pays the full accumulated VAT. It is used in over 160 countries, including all EU member states.",
+      },
+      {
+        q: "What is the difference between VAT-exclusive and VAT-inclusive pricing?",
+        a: "VAT-exclusive (or ex-VAT) means the price shown does not include tax — you add tax on top. VAT-inclusive (or inc-VAT, also called gross price) means tax is already embedded in the displayed price. Businesses typically quote prices ex-VAT; consumer retail prices are usually inc-VAT.",
+      },
+      {
+        q: "How do I extract VAT from a gross price?",
+        a: "Use the inclusive mode formula: Base Price = Gross Price ÷ (1 + VAT Rate ÷ 100). For example, £120 inc. 20% VAT: Base = £120 ÷ 1.20 = £100. VAT = £120 − £100 = £20.",
+      },
+      {
+        q: "What is the difference between VAT and sales tax?",
+        a: "Sales tax (common in the USA) is collected only at the final point of sale. VAT is collected at every stage of the supply chain, but businesses claim back the VAT they paid on inputs. The end cost to the consumer is similar, but the collection mechanism differs.",
+      },
+    ],
+  },
+  id: {
+    title: "VAT / Sales Tax Calculator",
+    short: "Calculate VAT-exclusive or VAT-inclusive prices, tax amount, and base price for any tax rate.",
+    description:
+      "Free VAT calculator. Add tax to a base price or extract tax from a gross price. Supports any VAT, GST, or sales tax rate. Instantly shows base price, tax amount, and total.",
+    keywords: [
+      "VAT calculator",
+      "sales tax calculator",
+      "GST calculator",
+      "tax inclusive calculator",
+      "tax exclusive calculator",
+      "value added tax",
+      "price with tax",
+    ],
+    inputs: {
+      mode: {
+        label: "Calculation Mode",
+        help: "Add VAT to price: enter the pre-tax base price and get the total. Extract VAT from price: enter the gross (tax-included) price and get the base and tax amount.",
+      },
+      amount: {
+        label: "Amount",
+        help: "Enter the base price (exclusive mode) or the gross price including tax (inclusive mode).",
+      },
+      vatRate: {
+        label: "VAT / Tax Rate (%)",
+        help: "Common rates: UK/France/AU 20%, Germany 19%, India 18%, US varies by state, Saudi Arabia 15%, UAE 5%.",
+      },
+    },
+    outputs: {
+      totalPrice: {
+        label: "Total Price (incl. VAT)",
+        help: "The final price the customer pays, including tax.",
+      },
+      basePrice: {
+        label: "Base Price (excl. VAT)",
+        help: "The pre-tax price before adding VAT.",
+      },
+      vatAmount: {
+        label: "VAT Amount",
+        help: "The tax amount — the difference between the total and base price.",
+      },
+      effectiveRate: {
+        label: "Effective Rate",
+        help: "VAT as a percentage of the base price. In standard scenarios this equals the stated VAT rate.",
+      },
+    },
+    options: {
+      mode: {
+        exclusive: "Add VAT to price",
+        inclusive: "Extract VAT from price",
+      },
+    },
+    errors: {
+      amountRequired: "Amount must be greater than zero.",
+    },
+    faq: [
+      {
+        q: "What is VAT?",
+        a: "Value-Added Tax (VAT) is a consumption tax levied on the value added at each stage of production and distribution. The final consumer pays the full accumulated VAT. It is used in over 160 countries, including all EU member states.",
+      },
+      {
+        q: "What is the difference between VAT-exclusive and VAT-inclusive pricing?",
+        a: "VAT-exclusive (or ex-VAT) means the price shown does not include tax — you add tax on top. VAT-inclusive (or inc-VAT, also called gross price) means tax is already embedded in the displayed price. Businesses typically quote prices ex-VAT; consumer retail prices are usually inc-VAT.",
+      },
+      {
+        q: "How do I extract VAT from a gross price?",
+        a: "Use the inclusive mode formula: Base Price = Gross Price ÷ (1 + VAT Rate ÷ 100). For example, £120 inc. 20% VAT: Base = £120 ÷ 1.20 = £100. VAT = £120 − £100 = £20.",
+      },
+      {
+        q: "What is the difference between VAT and sales tax?",
+        a: "Sales tax (common in the USA) is collected only at the final point of sale. VAT is collected at every stage of the supply chain, but businesses claim back the VAT they paid on inputs. The end cost to the consumer is similar, but the collection mechanism differs.",
+      },
+    ],
+  },
+
 
   tr: {
     title: "KDV / Satış Vergisi Hesaplayıcısı",

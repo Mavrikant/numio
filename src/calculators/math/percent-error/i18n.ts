@@ -16,6 +16,27 @@ const i18n: CalculatorI18n = {
       { q: "What's the difference between absolute and relative error?", a: "Absolute error is the raw difference |measured − actual|. Relative error divides that by the true value; multiply by 100 for percent error." },
     ],
   },
+  pt: {
+    title: "Percent Error Calculator", short: "Compare a measured value to the true value as a percent error.",
+    description: "Free percent error calculator. Enter a measured (experimental) value and the actual (true) value to get the percent error, absolute error and relative error — commonly used in science labs and measurements.",
+    keywords: ["percent error calculator", "percentage error", "experimental error", "relative error", "absolute error"],
+    ...io("Measured value", "Actual (true) value", "Percent error (%)", "Absolute error", "Relative error"),
+    faq: [
+      { q: "How do you calculate percent error?", a: "Percent error = |measured − actual| / |actual| × 100. If you measured 9.80 and the true value is 9.81, the percent error is about 0.10%." },
+      { q: "What's the difference between absolute and relative error?", a: "Absolute error is the raw difference |measured − actual|. Relative error divides that by the true value; multiply by 100 for percent error." },
+    ],
+  },
+  id: {
+    title: "Percent Error Calculator", short: "Compare a measured value to the true value as a percent error.",
+    description: "Free percent error calculator. Enter a measured (experimental) value and the actual (true) value to get the percent error, absolute error and relative error — commonly used in science labs and measurements.",
+    keywords: ["percent error calculator", "percentage error", "experimental error", "relative error", "absolute error"],
+    ...io("Measured value", "Actual (true) value", "Percent error (%)", "Absolute error", "Relative error"),
+    faq: [
+      { q: "How do you calculate percent error?", a: "Percent error = |measured − actual| / |actual| × 100. If you measured 9.80 and the true value is 9.81, the percent error is about 0.10%." },
+      { q: "What's the difference between absolute and relative error?", a: "Absolute error is the raw difference |measured − actual|. Relative error divides that by the true value; multiply by 100 for percent error." },
+    ],
+  },
+
   tr: {
     title: "Yüzde Hata Hesaplayıcı", short: "Ölçülen değeri gerçek değerle yüzde hata olarak karşılaştırın.",
     description: "Ücretsiz yüzde hata hesaplayıcı. Ölçülen (deneysel) değeri ve gerçek değeri girerek yüzde hatayı, mutlak hatayı ve bağıl hatayı öğrenin — bilim laboratuvarları ve ölçümlerde yaygın kullanılır.",

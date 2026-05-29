@@ -17,6 +17,27 @@ const i18n: CalculatorI18n = {
       { q: "Is estimated average glucose the same as my meter reading?", a: "No. eAG is a long-term average derived from A1C; individual meter readings vary throughout the day and may differ from this estimate." },
     ],
   },
+  pt: {
+    title: "A1C ⇄ Average Glucose Converter", short: "Convert HbA1c to estimated average glucose (mg/dL and mmol/L) and back.",
+    description: "Free A1C to glucose converter. Convert an HbA1c percentage to estimated average glucose (eAG) in mg/dL and mmol/L, or convert a glucose reading back to an estimated A1C, using the ADAG formula.",
+    keywords: ["a1c to glucose", "eag calculator", "hba1c converter", "average glucose calculator", "a1c chart"],
+    ...io("Conversion", "Value", "A1C", "Glucose (mg/dL)", "Glucose (mmol/L)", "A1C → Glucose", "Glucose → A1C"),
+    faq: [
+      { q: "How is A1C converted to average glucose?", a: "Using the ADAG formula eAG(mg/dL) = 28.7 × A1C − 46.7. For example, an A1C of 6.5% ≈ 140 mg/dL (7.8 mmol/L)." },
+      { q: "Is estimated average glucose the same as my meter reading?", a: "No. eAG is a long-term average derived from A1C; individual meter readings vary throughout the day and may differ from this estimate." },
+    ],
+  },
+  id: {
+    title: "A1C ⇄ Average Glucose Converter", short: "Convert HbA1c to estimated average glucose (mg/dL and mmol/L) and back.",
+    description: "Free A1C to glucose converter. Convert an HbA1c percentage to estimated average glucose (eAG) in mg/dL and mmol/L, or convert a glucose reading back to an estimated A1C, using the ADAG formula.",
+    keywords: ["a1c to glucose", "eag calculator", "hba1c converter", "average glucose calculator", "a1c chart"],
+    ...io("Conversion", "Value", "A1C", "Glucose (mg/dL)", "Glucose (mmol/L)", "A1C → Glucose", "Glucose → A1C"),
+    faq: [
+      { q: "How is A1C converted to average glucose?", a: "Using the ADAG formula eAG(mg/dL) = 28.7 × A1C − 46.7. For example, an A1C of 6.5% ≈ 140 mg/dL (7.8 mmol/L)." },
+      { q: "Is estimated average glucose the same as my meter reading?", a: "No. eAG is a long-term average derived from A1C; individual meter readings vary throughout the day and may differ from this estimate." },
+    ],
+  },
+
   tr: {
     title: "A1C ⇄ Ortalama Glikoz Dönüştürücü", short: "HbA1c'yi tahmini ortalama glikoza (mg/dL ve mmol/L) ve geri çevirin.",
     description: "Ücretsiz A1C'den glikoza dönüştürücü. ADAG formülünü kullanarak bir HbA1c yüzdesini mg/dL ve mmol/L cinsinden tahmini ortalama glikoza (eAG) çevirin veya bir glikoz değerini tahmini A1C'ye geri dönüştürün.",

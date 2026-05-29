@@ -25,6 +25,55 @@ const i18n: CalculatorI18n = {
       { q: "Why convert to decimal hours?", a: "Payroll systems often use decimal hours — 8 hours 30 minutes is 8.5 hours. The 'Total hours' output gives this directly." },
     ],
   },
+  pt: {
+    title: "Time Duration Calculator",
+    short: "Calculate the hours and minutes between a start and end time, minus breaks.",
+    description:
+      "Free time duration calculator. Enter a start and end time (and an optional break) to get the elapsed time as hours and minutes, total hours and total minutes. Handles overnight shifts that cross midnight.",
+    keywords: ["time duration calculator", "hours calculator", "time card calculator", "hours between two times", "timesheet calculator", "work hours"],
+    inputs: {
+      startTime: { label: "Start time", help: "24-hour format, e.g. 09:00.", placeholder: "09:00" },
+      endTime: { label: "End time", help: "24-hour format, e.g. 17:30. If earlier than start, crosses midnight.", placeholder: "17:30" },
+      breakMinutes: { label: "Break (minutes)", help: "Unpaid break time to subtract." },
+    },
+    outputs: {
+      formatted: { label: "Duration" },
+      totalHours: { label: "Total hours" },
+      totalMinutes: { label: "Total minutes" },
+      hoursPart: { label: "Hours" },
+      minutesPart: { label: "Minutes" },
+    },
+    faq: [
+      { q: "How do I calculate hours between two times?", a: "Subtract the start time from the end time. For 09:00 to 17:30 that is 8 hours 30 minutes; subtracting a 30-minute break leaves 8 hours." },
+      { q: "What about overnight shifts?", a: "If the end time is earlier than the start time (e.g. 22:00 to 06:00), the calculator assumes the shift crosses midnight and adds 24 hours, giving 8 hours." },
+      { q: "Why convert to decimal hours?", a: "Payroll systems often use decimal hours — 8 hours 30 minutes is 8.5 hours. The 'Total hours' output gives this directly." },
+    ],
+  },
+  id: {
+    title: "Time Duration Calculator",
+    short: "Calculate the hours and minutes between a start and end time, minus breaks.",
+    description:
+      "Free time duration calculator. Enter a start and end time (and an optional break) to get the elapsed time as hours and minutes, total hours and total minutes. Handles overnight shifts that cross midnight.",
+    keywords: ["time duration calculator", "hours calculator", "time card calculator", "hours between two times", "timesheet calculator", "work hours"],
+    inputs: {
+      startTime: { label: "Start time", help: "24-hour format, e.g. 09:00.", placeholder: "09:00" },
+      endTime: { label: "End time", help: "24-hour format, e.g. 17:30. If earlier than start, crosses midnight.", placeholder: "17:30" },
+      breakMinutes: { label: "Break (minutes)", help: "Unpaid break time to subtract." },
+    },
+    outputs: {
+      formatted: { label: "Duration" },
+      totalHours: { label: "Total hours" },
+      totalMinutes: { label: "Total minutes" },
+      hoursPart: { label: "Hours" },
+      minutesPart: { label: "Minutes" },
+    },
+    faq: [
+      { q: "How do I calculate hours between two times?", a: "Subtract the start time from the end time. For 09:00 to 17:30 that is 8 hours 30 minutes; subtracting a 30-minute break leaves 8 hours." },
+      { q: "What about overnight shifts?", a: "If the end time is earlier than the start time (e.g. 22:00 to 06:00), the calculator assumes the shift crosses midnight and adds 24 hours, giving 8 hours." },
+      { q: "Why convert to decimal hours?", a: "Payroll systems often use decimal hours — 8 hours 30 minutes is 8.5 hours. The 'Total hours' output gives this directly." },
+    ],
+  },
+
   tr: {
     title: "Süre Hesaplama",
     short: "Başlangıç ve bitiş saati arasındaki saat ve dakikayı, molalar düşülerek hesaplayın.",

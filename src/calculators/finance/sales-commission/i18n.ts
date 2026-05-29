@@ -16,6 +16,27 @@ const i18n: CalculatorI18n = {
       { q: "What is the effective rate?", a: "It's total pay (commission plus base) as a percentage of the sale amount — useful when a base salary is included." },
     ],
   },
+  pt: {
+    title: "Sales Commission Calculator", short: "Calculate commission earnings from a sale amount and rate.",
+    description: "Free sales commission calculator. Enter a sale amount and commission rate (plus an optional base salary) to get the commission earned, total pay and your effective rate on the sale.",
+    keywords: ["sales commission calculator", "commission calculator", "commission rate", "base plus commission", "commission earnings"],
+    ...io("Sale amount", "Commission rate", "Base salary (optional)", "Commission", "Total pay", "Effective rate"),
+    faq: [
+      { q: "How is sales commission calculated?", a: "Multiply the sale amount by the commission rate. A 5% commission on a $50,000 sale is $2,500. Add any base salary for total pay." },
+      { q: "What is the effective rate?", a: "It's total pay (commission plus base) as a percentage of the sale amount — useful when a base salary is included." },
+    ],
+  },
+  id: {
+    title: "Sales Commission Calculator", short: "Calculate commission earnings from a sale amount and rate.",
+    description: "Free sales commission calculator. Enter a sale amount and commission rate (plus an optional base salary) to get the commission earned, total pay and your effective rate on the sale.",
+    keywords: ["sales commission calculator", "commission calculator", "commission rate", "base plus commission", "commission earnings"],
+    ...io("Sale amount", "Commission rate", "Base salary (optional)", "Commission", "Total pay", "Effective rate"),
+    faq: [
+      { q: "How is sales commission calculated?", a: "Multiply the sale amount by the commission rate. A 5% commission on a $50,000 sale is $2,500. Add any base salary for total pay." },
+      { q: "What is the effective rate?", a: "It's total pay (commission plus base) as a percentage of the sale amount — useful when a base salary is included." },
+    ],
+  },
+
   tr: {
     title: "Satış Komisyonu Hesaplayıcı", short: "Satış tutarı ve orandan komisyon kazancını hesaplayın.",
     description: "Ücretsiz satış komisyonu hesaplayıcı. Bir satış tutarı ve komisyon oranı (ve isteğe bağlı bir taban maaş) girerek kazanılan komisyonu, toplam ödemeyi ve satıştaki efektif oranınızı öğrenin.",

@@ -78,6 +78,161 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  pt: {
+    title: "Target Heart Rate Zones — Karvonen Method",
+    short: "Calculate your 5 training heart rate zones using the Karvonen or simple percentage method.",
+    description:
+      "Free heart rate zone calculator. Enter your age and resting heart rate to get your maximum HR and five training zones (recovery, base, aerobic, threshold, maximum) using the Karvonen or simple formula.",
+    keywords: [
+      "heart rate zone calculator",
+      "target heart rate",
+      "Karvonen formula",
+      "training zones",
+      "max heart rate",
+      "cardio zones",
+      "fitness calculator",
+    ],
+    inputs: {
+      age: {
+        label: "Age (years)",
+        help: "Your current age. Used to estimate maximum heart rate: 220 − age.",
+      },
+      restingHeartRate: {
+        label: "Resting heart rate (bpm)",
+        help: "Measure first thing in the morning before getting out of bed. Normal range: 60–100 bpm.",
+      },
+      formula: {
+        label: "Formula",
+        help: "Karvonen uses heart rate reserve (more personalised). Simple uses a percentage of max HR only.",
+      },
+    },
+    outputs: {
+      maxHR: {
+        label: "Maximum heart rate (bpm)",
+        help: "Estimated maximum HR = 220 − age.",
+      },
+      hrr: {
+        label: "Heart rate reserve (bpm)",
+        help: "HRR = Max HR − Resting HR. Used in the Karvonen formula.",
+      },
+      zone1Min: { label: "Zone 1 min (Recovery)", help: "50–60% intensity. Active recovery, very easy effort." },
+      zone1Max: { label: "Zone 1 max (Recovery)" },
+      zone2Min: { label: "Zone 2 min (Base aerobic)", help: "60–70% intensity. Fat-burning zone, conversational pace." },
+      zone2Max: { label: "Zone 2 max (Base aerobic)" },
+      zone3Min: { label: "Zone 3 min (Aerobic)", help: "70–80% intensity. Aerobic fitness improvement." },
+      zone3Max: { label: "Zone 3 max (Aerobic)" },
+      zone4Min: { label: "Zone 4 min (Threshold)", help: "80–90% intensity. Lactate threshold training, hard effort." },
+      zone4Max: { label: "Zone 4 max (Threshold)" },
+      zone5Min: { label: "Zone 5 min (Maximum)", help: "90–100% intensity. Maximum effort, short intervals only." },
+      zone5Max: { label: "Zone 5 max (Maximum)" },
+    },
+    options: {
+      formula: {
+        simple: "Simple (% of Max HR)",
+        karvonen: "Karvonen (Heart Rate Reserve)",
+      },
+    },
+    errors: {
+      ageOutOfRange: "Age must be between 10 and 100 years.",
+      rhrOutOfRange: "Resting heart rate must be between 30 and 100 bpm.",
+    },
+    faq: [
+      {
+        q: "What is the Karvonen formula?",
+        a: "The Karvonen method calculates target heart rate zones using heart rate reserve (HRR = max HR − resting HR): Target HR = (HRR × intensity%) + resting HR. It is more personalised than the simple percentage method because it accounts for your fitness level (reflected in resting HR).",
+      },
+      {
+        q: "How accurate is 220 minus age?",
+        a: "The formula 220 − age is an average estimate with a standard deviation of approximately ±10–12 bpm. Some individuals' true maxHR may differ significantly. For more accuracy, perform a graded exercise test under medical supervision.",
+      },
+      {
+        q: "Which formula should I use?",
+        a: "Karvonen is generally preferred for personalised training plans because it accounts for individual fitness. The simple formula is fine for general guidance or if you do not know your resting heart rate.",
+      },
+      {
+        q: "What is Zone 2 training?",
+        a: "Zone 2 (60–70% of max HR or equivalent Karvonen) is associated with improved mitochondrial density, fat oxidation, and aerobic base. Many endurance athletes and health experts recommend spending the majority of training time in Zone 2.",
+      },
+    ],
+  },
+  id: {
+    title: "Target Heart Rate Zones — Karvonen Method",
+    short: "Calculate your 5 training heart rate zones using the Karvonen or simple percentage method.",
+    description:
+      "Free heart rate zone calculator. Enter your age and resting heart rate to get your maximum HR and five training zones (recovery, base, aerobic, threshold, maximum) using the Karvonen or simple formula.",
+    keywords: [
+      "heart rate zone calculator",
+      "target heart rate",
+      "Karvonen formula",
+      "training zones",
+      "max heart rate",
+      "cardio zones",
+      "fitness calculator",
+    ],
+    inputs: {
+      age: {
+        label: "Age (years)",
+        help: "Your current age. Used to estimate maximum heart rate: 220 − age.",
+      },
+      restingHeartRate: {
+        label: "Resting heart rate (bpm)",
+        help: "Measure first thing in the morning before getting out of bed. Normal range: 60–100 bpm.",
+      },
+      formula: {
+        label: "Formula",
+        help: "Karvonen uses heart rate reserve (more personalised). Simple uses a percentage of max HR only.",
+      },
+    },
+    outputs: {
+      maxHR: {
+        label: "Maximum heart rate (bpm)",
+        help: "Estimated maximum HR = 220 − age.",
+      },
+      hrr: {
+        label: "Heart rate reserve (bpm)",
+        help: "HRR = Max HR − Resting HR. Used in the Karvonen formula.",
+      },
+      zone1Min: { label: "Zone 1 min (Recovery)", help: "50–60% intensity. Active recovery, very easy effort." },
+      zone1Max: { label: "Zone 1 max (Recovery)" },
+      zone2Min: { label: "Zone 2 min (Base aerobic)", help: "60–70% intensity. Fat-burning zone, conversational pace." },
+      zone2Max: { label: "Zone 2 max (Base aerobic)" },
+      zone3Min: { label: "Zone 3 min (Aerobic)", help: "70–80% intensity. Aerobic fitness improvement." },
+      zone3Max: { label: "Zone 3 max (Aerobic)" },
+      zone4Min: { label: "Zone 4 min (Threshold)", help: "80–90% intensity. Lactate threshold training, hard effort." },
+      zone4Max: { label: "Zone 4 max (Threshold)" },
+      zone5Min: { label: "Zone 5 min (Maximum)", help: "90–100% intensity. Maximum effort, short intervals only." },
+      zone5Max: { label: "Zone 5 max (Maximum)" },
+    },
+    options: {
+      formula: {
+        simple: "Simple (% of Max HR)",
+        karvonen: "Karvonen (Heart Rate Reserve)",
+      },
+    },
+    errors: {
+      ageOutOfRange: "Age must be between 10 and 100 years.",
+      rhrOutOfRange: "Resting heart rate must be between 30 and 100 bpm.",
+    },
+    faq: [
+      {
+        q: "What is the Karvonen formula?",
+        a: "The Karvonen method calculates target heart rate zones using heart rate reserve (HRR = max HR − resting HR): Target HR = (HRR × intensity%) + resting HR. It is more personalised than the simple percentage method because it accounts for your fitness level (reflected in resting HR).",
+      },
+      {
+        q: "How accurate is 220 minus age?",
+        a: "The formula 220 − age is an average estimate with a standard deviation of approximately ±10–12 bpm. Some individuals' true maxHR may differ significantly. For more accuracy, perform a graded exercise test under medical supervision.",
+      },
+      {
+        q: "Which formula should I use?",
+        a: "Karvonen is generally preferred for personalised training plans because it accounts for individual fitness. The simple formula is fine for general guidance or if you do not know your resting heart rate.",
+      },
+      {
+        q: "What is Zone 2 training?",
+        a: "Zone 2 (60–70% of max HR or equivalent Karvonen) is associated with improved mitochondrial density, fat oxidation, and aerobic base. Many endurance athletes and health experts recommend spending the majority of training time in Zone 2.",
+      },
+    ],
+  },
+
 
   tr: {
     title: "Hedef Kalp Atış Hızı Bölgeleri — Karvonen Yöntemi",

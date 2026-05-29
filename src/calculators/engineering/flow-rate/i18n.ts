@@ -39,6 +39,83 @@ const i18n: CalculatorI18n = {
       { q: "What affects friction factor?", a: "Reynolds number and pipe roughness. Use Swamee-Jain for turbulent flow." },
     ],
   },
+  pt: {
+    title: "Pipe Flow Rate Calculator",
+    short: "Calculate velocity, Reynolds number, and head loss using Darcy-Weisbach equation.",
+    description: "Free pipe flow calculator with Darcy-Weisbach head loss, Reynolds number, and flow regime classification.",
+    keywords: ["pipe flow", "flow rate", "Darcy-Weisbach", "Reynolds number", "head loss", "velocity", "hydraulics"],
+    inputs: {
+      flowRateM3h: { label: "Flow Rate", help: "Volume flow rate in m³/h." },
+      diameterMm: { label: "Pipe Diameter", help: "Inner diameter in mm." },
+      pipeLength: { label: "Pipe Length", help: "Length in meters." },
+      pipeType: { label: "Pipe Type", help: "Material type (affects roughness)." },
+      fluidType: { label: "Fluid", help: "Water or oil." },
+    },
+    outputs: {
+      velocityMs: { label: "Velocity (m/s)" },
+      flowRateM3s: { label: "Flow Rate (m³/s)" },
+      flowRateLs: { label: "Flow Rate (L/s)" },
+      reynoldsNumber: { label: "Reynolds Number" },
+      flowRegime: { label: "Flow Regime" },
+      frictionFactor: { label: "Friction Factor" },
+      headLossM: { label: "Head Loss (m)" },
+      headLossPa: { label: "Pressure Loss (Pa)" },
+    },
+    options: {
+      pipeType: {
+        smooth_pvc: "Smooth PVC (ε=0.0015mm)",
+        commercial_steel: "Commercial Steel (ε=0.045mm)",
+        galvanized_iron: "Galvanized Iron (ε=0.15mm)",
+        concrete: "Concrete (ε=0.3mm)",
+      },
+      fluidType: { water: "Water", oil: "Oil" },
+    },
+    errors: { invalidInput: "Please provide valid parameters." },
+    faq: [
+      { q: "What is Reynolds number?", a: "Re = vD/ν. It determines flow regime: <2300=laminar, 2300-4000=transition, >4000=turbulent." },
+      { q: "How is head loss calculated?", a: "Darcy-Weisbach: hf = f(L/D)(v²/2g), where f is friction factor." },
+      { q: "What affects friction factor?", a: "Reynolds number and pipe roughness. Use Swamee-Jain for turbulent flow." },
+    ],
+  },
+  id: {
+    title: "Pipe Flow Rate Calculator",
+    short: "Calculate velocity, Reynolds number, and head loss using Darcy-Weisbach equation.",
+    description: "Free pipe flow calculator with Darcy-Weisbach head loss, Reynolds number, and flow regime classification.",
+    keywords: ["pipe flow", "flow rate", "Darcy-Weisbach", "Reynolds number", "head loss", "velocity", "hydraulics"],
+    inputs: {
+      flowRateM3h: { label: "Flow Rate", help: "Volume flow rate in m³/h." },
+      diameterMm: { label: "Pipe Diameter", help: "Inner diameter in mm." },
+      pipeLength: { label: "Pipe Length", help: "Length in meters." },
+      pipeType: { label: "Pipe Type", help: "Material type (affects roughness)." },
+      fluidType: { label: "Fluid", help: "Water or oil." },
+    },
+    outputs: {
+      velocityMs: { label: "Velocity (m/s)" },
+      flowRateM3s: { label: "Flow Rate (m³/s)" },
+      flowRateLs: { label: "Flow Rate (L/s)" },
+      reynoldsNumber: { label: "Reynolds Number" },
+      flowRegime: { label: "Flow Regime" },
+      frictionFactor: { label: "Friction Factor" },
+      headLossM: { label: "Head Loss (m)" },
+      headLossPa: { label: "Pressure Loss (Pa)" },
+    },
+    options: {
+      pipeType: {
+        smooth_pvc: "Smooth PVC (ε=0.0015mm)",
+        commercial_steel: "Commercial Steel (ε=0.045mm)",
+        galvanized_iron: "Galvanized Iron (ε=0.15mm)",
+        concrete: "Concrete (ε=0.3mm)",
+      },
+      fluidType: { water: "Water", oil: "Oil" },
+    },
+    errors: { invalidInput: "Please provide valid parameters." },
+    faq: [
+      { q: "What is Reynolds number?", a: "Re = vD/ν. It determines flow regime: <2300=laminar, 2300-4000=transition, >4000=turbulent." },
+      { q: "How is head loss calculated?", a: "Darcy-Weisbach: hf = f(L/D)(v²/2g), where f is friction factor." },
+      { q: "What affects friction factor?", a: "Reynolds number and pipe roughness. Use Swamee-Jain for turbulent flow." },
+    ],
+  },
+
 
   tr: {
     title: "Boru Akış Hızı Hesaplayıcı",

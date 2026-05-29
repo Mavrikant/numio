@@ -53,6 +53,111 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  pt: {
+    title: "Volume Converter",
+    short: "Convert between liters, gallons, cubic meters, fluid ounces and more.",
+    description:
+      "Free volume unit converter. Convert between m³, L, mL, cm³, ft³, in³, US/UK gallons, quarts, pints, and fluid ounces with NIST-grade precision.",
+    keywords: [
+      "volume converter",
+      "liters to gallons",
+      "ml to oz",
+      "cubic meters",
+      "us gallon vs uk gallon",
+      "fluid ounce",
+    ],
+    inputs: {
+      value: { label: "Value", help: "The volume value to convert." },
+      fromUnit: { label: "From", help: "Select the source unit." },
+      toUnit: { label: "To", help: "Select the target unit." },
+    },
+    outputs: { result: { label: "Result", help: "The converted volume value." } },
+    options: {
+      m3: "Cubic meter (m³)",
+      L: "Liter (L)",
+      mL: "Milliliter (mL)",
+      cm3: "Cubic centimeter (cm³)",
+      ft3: "Cubic foot (ft³)",
+      in3: "Cubic inch (in³)",
+      gal_us: "US gallon",
+      gal_uk: "UK (imperial) gallon",
+      qt_us: "US quart",
+      pt_us: "US pint",
+      fl_oz_us: "US fluid ounce",
+    },
+    errors: { invalidVolume: "Volume must be a positive number." },
+    faq: [
+      {
+        question: "What is the difference between a US gallon and a UK gallon?",
+        answer: "A US gallon is 3.78541 L while a UK (imperial) gallon is 4.54609 L — the imperial gallon is about 20% larger.",
+      },
+      {
+        question: "How many milliliters are in a US fluid ounce?",
+        answer: "1 US fluid ounce equals exactly 29.5735295625 mL (about 29.57 mL).",
+      },
+      {
+        question: "How many liters are in a cubic meter?",
+        answer: "1 cubic meter equals exactly 1,000 liters (1 m³ = 1000 L).",
+      },
+      {
+        question: "How do I convert cubic feet to liters?",
+        answer: "Multiply the cubic feet value by 28.3168466 to get liters. For example, 10 ft³ ≈ 283.17 L.",
+      },
+    ],
+  },
+  id: {
+    title: "Volume Converter",
+    short: "Convert between liters, gallons, cubic meters, fluid ounces and more.",
+    description:
+      "Free volume unit converter. Convert between m³, L, mL, cm³, ft³, in³, US/UK gallons, quarts, pints, and fluid ounces with NIST-grade precision.",
+    keywords: [
+      "volume converter",
+      "liters to gallons",
+      "ml to oz",
+      "cubic meters",
+      "us gallon vs uk gallon",
+      "fluid ounce",
+    ],
+    inputs: {
+      value: { label: "Value", help: "The volume value to convert." },
+      fromUnit: { label: "From", help: "Select the source unit." },
+      toUnit: { label: "To", help: "Select the target unit." },
+    },
+    outputs: { result: { label: "Result", help: "The converted volume value." } },
+    options: {
+      m3: "Cubic meter (m³)",
+      L: "Liter (L)",
+      mL: "Milliliter (mL)",
+      cm3: "Cubic centimeter (cm³)",
+      ft3: "Cubic foot (ft³)",
+      in3: "Cubic inch (in³)",
+      gal_us: "US gallon",
+      gal_uk: "UK (imperial) gallon",
+      qt_us: "US quart",
+      pt_us: "US pint",
+      fl_oz_us: "US fluid ounce",
+    },
+    errors: { invalidVolume: "Volume must be a positive number." },
+    faq: [
+      {
+        question: "What is the difference between a US gallon and a UK gallon?",
+        answer: "A US gallon is 3.78541 L while a UK (imperial) gallon is 4.54609 L — the imperial gallon is about 20% larger.",
+      },
+      {
+        question: "How many milliliters are in a US fluid ounce?",
+        answer: "1 US fluid ounce equals exactly 29.5735295625 mL (about 29.57 mL).",
+      },
+      {
+        question: "How many liters are in a cubic meter?",
+        answer: "1 cubic meter equals exactly 1,000 liters (1 m³ = 1000 L).",
+      },
+      {
+        question: "How do I convert cubic feet to liters?",
+        answer: "Multiply the cubic feet value by 28.3168466 to get liters. For example, 10 ft³ ≈ 283.17 L.",
+      },
+    ],
+  },
+
   tr: {
     title: "Hacim Dönüştürücü",
     short: "Litre, galon, metreküp, sıvı ons ve daha fazlası arasında dönüşüm yapın.",

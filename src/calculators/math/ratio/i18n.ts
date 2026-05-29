@@ -74,6 +74,153 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  pt: {
+    title: "Ratio Simplifier",
+    short: "Simplify any ratio to its lowest terms and see equivalent scales.",
+    description:
+      "Free ratio simplifier calculator. Reduce ratios to simplest form using GCD, view decimal and percent values, and equivalent scales.",
+    keywords: [
+      "ratio simplifier",
+      "simplify ratio",
+      "lowest terms",
+      "GCD calculator",
+      "ratio equivalence",
+      "ratio to decimal",
+      "ratio solver",
+    ],
+    inputs: {
+      numerator: {
+        label: "First number",
+        help: "The numerator of the ratio.",
+      },
+      denominator: {
+        label: "Second number",
+        help: "The denominator of the ratio.",
+      },
+    },
+    outputs: {
+      simplifiedNumerator: {
+        label: "Simplified first",
+        help: "The first number after reduction by GCD.",
+      },
+      simplifiedDenominator: {
+        label: "Simplified second",
+        help: "The second number after reduction by GCD.",
+      },
+      decimal: {
+        label: "Decimal value",
+        help: "The ratio expressed as a decimal number.",
+      },
+      percentValue: {
+        label: "Percent",
+        help: "The ratio expressed as a percentage.",
+      },
+      oneToXForm: {
+        label: "1:x form",
+        help: "Ratio scaled so first number equals 1.",
+      },
+      xToOneForm: {
+        label: "x:1 form",
+        help: "Ratio scaled so second number equals 1.",
+      },
+    },
+    options: {},
+    errors: {
+      invalidRatio: "Both numbers must be positive integers.",
+    },
+    faq: [
+      {
+        q: "What is ratio simplification?",
+        a: "Ratio simplification reduces a ratio to its simplest form by dividing both numbers by their Greatest Common Divisor (GCD). For example, 12:18 simplifies to 2:3.",
+      },
+      {
+        q: "What is the GCD algorithm?",
+        a: "The Euclidean algorithm repeatedly divides and takes remainders until reaching 0. GCD(12, 18): 18 mod 12 = 6, then 12 mod 6 = 0, so GCD = 6.",
+      },
+      {
+        q: "What does 1:x form mean?",
+        a: "The 1:x form scales the ratio so the first number becomes 1. Example: 2:3 becomes 1:1.5, meaning for every 1 unit of the first, there are 1.5 units of the second.",
+      },
+      {
+        q: "How do I convert a ratio to a percentage?",
+        a: "Divide the first number by the second and multiply by 100. A ratio of 3:4 equals 3÷4 = 0.75 = 75%.",
+      },
+    ],
+  },
+  id: {
+    title: "Ratio Simplifier",
+    short: "Simplify any ratio to its lowest terms and see equivalent scales.",
+    description:
+      "Free ratio simplifier calculator. Reduce ratios to simplest form using GCD, view decimal and percent values, and equivalent scales.",
+    keywords: [
+      "ratio simplifier",
+      "simplify ratio",
+      "lowest terms",
+      "GCD calculator",
+      "ratio equivalence",
+      "ratio to decimal",
+      "ratio solver",
+    ],
+    inputs: {
+      numerator: {
+        label: "First number",
+        help: "The numerator of the ratio.",
+      },
+      denominator: {
+        label: "Second number",
+        help: "The denominator of the ratio.",
+      },
+    },
+    outputs: {
+      simplifiedNumerator: {
+        label: "Simplified first",
+        help: "The first number after reduction by GCD.",
+      },
+      simplifiedDenominator: {
+        label: "Simplified second",
+        help: "The second number after reduction by GCD.",
+      },
+      decimal: {
+        label: "Decimal value",
+        help: "The ratio expressed as a decimal number.",
+      },
+      percentValue: {
+        label: "Percent",
+        help: "The ratio expressed as a percentage.",
+      },
+      oneToXForm: {
+        label: "1:x form",
+        help: "Ratio scaled so first number equals 1.",
+      },
+      xToOneForm: {
+        label: "x:1 form",
+        help: "Ratio scaled so second number equals 1.",
+      },
+    },
+    options: {},
+    errors: {
+      invalidRatio: "Both numbers must be positive integers.",
+    },
+    faq: [
+      {
+        q: "What is ratio simplification?",
+        a: "Ratio simplification reduces a ratio to its simplest form by dividing both numbers by their Greatest Common Divisor (GCD). For example, 12:18 simplifies to 2:3.",
+      },
+      {
+        q: "What is the GCD algorithm?",
+        a: "The Euclidean algorithm repeatedly divides and takes remainders until reaching 0. GCD(12, 18): 18 mod 12 = 6, then 12 mod 6 = 0, so GCD = 6.",
+      },
+      {
+        q: "What does 1:x form mean?",
+        a: "The 1:x form scales the ratio so the first number becomes 1. Example: 2:3 becomes 1:1.5, meaning for every 1 unit of the first, there are 1.5 units of the second.",
+      },
+      {
+        q: "How do I convert a ratio to a percentage?",
+        a: "Divide the first number by the second and multiply by 100. A ratio of 3:4 equals 3÷4 = 0.75 = 75%.",
+      },
+    ],
+  },
+
 
   tr: {
     title: "Oran Sadeleştirici",

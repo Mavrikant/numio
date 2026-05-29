@@ -16,6 +16,27 @@ const i18n: CalculatorI18n = {
       { q: "How does 'round half' work here?", a: "We use standard round-half-up via Math.round, so 2.5 rounds to 3 and −2.5 rounds to −2 (toward +∞ at the half)." },
     ],
   },
+  pt: {
+    title: "Rounding Calculator", short: "Round a number to any number of decimals — nearest, up, down or truncated.",
+    description: "Free rounding calculator. Enter a number and the decimal places to see it rounded to the nearest value, rounded up (ceiling), rounded down (floor) and truncated. Handy for math, finance and reports.",
+    keywords: ["rounding calculator", "round number", "round to decimal places", "round up", "round down", "truncate number"],
+    ...io("Number", "Decimal places", "Rounded (nearest)", "Rounded up", "Rounded down", "Truncated"),
+    faq: [
+      { q: "What's the difference between rounding and truncating?", a: "Rounding goes to the nearest value (3.146 → 3.15 at 2 dp), while truncating just drops the extra digits (3.146 → 3.14). Round up always increases, round down always decreases." },
+      { q: "How does 'round half' work here?", a: "We use standard round-half-up via Math.round, so 2.5 rounds to 3 and −2.5 rounds to −2 (toward +∞ at the half)." },
+    ],
+  },
+  id: {
+    title: "Rounding Calculator", short: "Round a number to any number of decimals — nearest, up, down or truncated.",
+    description: "Free rounding calculator. Enter a number and the decimal places to see it rounded to the nearest value, rounded up (ceiling), rounded down (floor) and truncated. Handy for math, finance and reports.",
+    keywords: ["rounding calculator", "round number", "round to decimal places", "round up", "round down", "truncate number"],
+    ...io("Number", "Decimal places", "Rounded (nearest)", "Rounded up", "Rounded down", "Truncated"),
+    faq: [
+      { q: "What's the difference between rounding and truncating?", a: "Rounding goes to the nearest value (3.146 → 3.15 at 2 dp), while truncating just drops the extra digits (3.146 → 3.14). Round up always increases, round down always decreases." },
+      { q: "How does 'round half' work here?", a: "We use standard round-half-up via Math.round, so 2.5 rounds to 3 and −2.5 rounds to −2 (toward +∞ at the half)." },
+    ],
+  },
+
   tr: {
     title: "Yuvarlama Hesaplayıcı", short: "Bir sayıyı istediğiniz ondalığa yuvarlayın — en yakın, yukarı, aşağı veya kesme.",
     description: "Ücretsiz yuvarlama hesaplayıcı. Bir sayı ve ondalık basamak sayısı girerek en yakın değere yuvarlanmış, yukarı (tavan), aşağı (taban) yuvarlanmış ve kesilmiş halini görün. Matematik, finans ve raporlar için kullanışlı.",

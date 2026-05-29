@@ -40,6 +40,85 @@ const i18n: CalculatorI18n = {
       baseCannotBeOne: "Base cannot be 1.",
     },
   },
+  pt: {
+    title: "Logarithm Calculator",
+    short: "Calculate logarithms with any base. Find log, ln, log₁₀, and log₂ in one step.",
+    description: "Free logarithm calculator using change of base formula. Calculate log with any base, natural log, common logarithm, and binary logarithm.",
+    keywords: ["logarithm calculator", "log calculator", "natural log", "common logarithm", "ln", "log base"],
+    inputs: {
+      value: {
+        label: "Value (x)",
+        help: "The number to find the logarithm of. Must be positive.",
+      },
+      base: {
+        label: "Base",
+        help: "The logarithm base. Must be positive and not equal to 1.",
+      },
+    },
+    outputs: {
+      result: {
+        label: "Log (result)",
+        help: "The logarithm with specified base.",
+      },
+      natural_log: {
+        label: "Natural Log (ln)",
+        help: "The natural logarithm (base e).",
+      },
+      log10: {
+        label: "Common Log (log₁₀)",
+        help: "The common logarithm (base 10).",
+      },
+      log2: {
+        label: "Binary Log (log₂)",
+        help: "The binary logarithm (base 2).",
+      },
+    },
+    errors: {
+      valueNotPositive: "Value must be positive.",
+      baseNotPositive: "Base must be positive.",
+      baseCannotBeOne: "Base cannot be 1.",
+    },
+  },
+  id: {
+    title: "Logarithm Calculator",
+    short: "Calculate logarithms with any base. Find log, ln, log₁₀, and log₂ in one step.",
+    description: "Free logarithm calculator using change of base formula. Calculate log with any base, natural log, common logarithm, and binary logarithm.",
+    keywords: ["logarithm calculator", "log calculator", "natural log", "common logarithm", "ln", "log base"],
+    inputs: {
+      value: {
+        label: "Value (x)",
+        help: "The number to find the logarithm of. Must be positive.",
+      },
+      base: {
+        label: "Base",
+        help: "The logarithm base. Must be positive and not equal to 1.",
+      },
+    },
+    outputs: {
+      result: {
+        label: "Log (result)",
+        help: "The logarithm with specified base.",
+      },
+      natural_log: {
+        label: "Natural Log (ln)",
+        help: "The natural logarithm (base e).",
+      },
+      log10: {
+        label: "Common Log (log₁₀)",
+        help: "The common logarithm (base 10).",
+      },
+      log2: {
+        label: "Binary Log (log₂)",
+        help: "The binary logarithm (base 2).",
+      },
+    },
+    errors: {
+      valueNotPositive: "Value must be positive.",
+      baseNotPositive: "Base must be positive.",
+      baseCannotBeOne: "Base cannot be 1.",
+    },
+  },
+
   tr: {
     title: "Logaritma Hesaplayıcısı",
     short: "Herhangi bir tabanda logaritma hesaplayın. Log, ln, log₁₀ ve log₂'yi tek adımda bulun.",

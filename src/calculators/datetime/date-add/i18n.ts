@@ -28,6 +28,57 @@ const i18n: CalculatorI18n = {
       { q: "What is the total day offset?", a: "It is the net number of calendar days between the start date and the result — positive when adding, negative when subtracting." },
     ],
   },
+  pt: {
+    title: "Date Add / Subtract Calculator",
+    short: "Add or subtract years, months, weeks and days from any date.",
+    description:
+      "Free add/subtract date calculator. Pick a start date, choose to add or subtract, and enter years, months, weeks and days to get the resulting date and the total day offset.",
+    keywords: ["add days to date", "subtract days from date", "date calculator", "date plus days", "future date calculator", "days from today"],
+    inputs: {
+      startDate: { label: "Start date" },
+      operation: { label: "Operation" },
+      years: { label: "Years" },
+      months: { label: "Months" },
+      weeks: { label: "Weeks" },
+      days: { label: "Days" },
+    },
+    outputs: {
+      resultDate: { label: "Result date" },
+      totalDaysOffset: { label: "Total day offset" },
+    },
+    options: { operation: op("Add (+)", "Subtract (−)") },
+    faq: [
+      { q: "How do I add days to a date?", a: "Pick the start date, leave the operation on 'Add', and enter the number of days (and optionally weeks, months, years). The result date updates instantly." },
+      { q: "How are months and years added?", a: "Years and months are applied first as calendar units, clamping to the last valid day (Jan 31 + 1 month = Feb 28/29). Weeks and days are then added as exact 24-hour days." },
+      { q: "What is the total day offset?", a: "It is the net number of calendar days between the start date and the result — positive when adding, negative when subtracting." },
+    ],
+  },
+  id: {
+    title: "Date Add / Subtract Calculator",
+    short: "Add or subtract years, months, weeks and days from any date.",
+    description:
+      "Free add/subtract date calculator. Pick a start date, choose to add or subtract, and enter years, months, weeks and days to get the resulting date and the total day offset.",
+    keywords: ["add days to date", "subtract days from date", "date calculator", "date plus days", "future date calculator", "days from today"],
+    inputs: {
+      startDate: { label: "Start date" },
+      operation: { label: "Operation" },
+      years: { label: "Years" },
+      months: { label: "Months" },
+      weeks: { label: "Weeks" },
+      days: { label: "Days" },
+    },
+    outputs: {
+      resultDate: { label: "Result date" },
+      totalDaysOffset: { label: "Total day offset" },
+    },
+    options: { operation: op("Add (+)", "Subtract (−)") },
+    faq: [
+      { q: "How do I add days to a date?", a: "Pick the start date, leave the operation on 'Add', and enter the number of days (and optionally weeks, months, years). The result date updates instantly." },
+      { q: "How are months and years added?", a: "Years and months are applied first as calendar units, clamping to the last valid day (Jan 31 + 1 month = Feb 28/29). Weeks and days are then added as exact 24-hour days." },
+      { q: "What is the total day offset?", a: "It is the net number of calendar days between the start date and the result — positive when adding, negative when subtracting." },
+    ],
+  },
+
   tr: {
     title: "Tarih Ekle / Çıkar Hesaplama",
     short: "Herhangi bir tarihe yıl, ay, hafta ve gün ekleyin veya çıkarın.",

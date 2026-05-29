@@ -54,6 +54,113 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  pt: {
+    title: "Area Converter",
+    short: "Convert between square meters, hectares, acres, square feet and more.",
+    description:
+      "Free area unit converter. Convert between m², cm², mm², km², hectares, acres, ft², in², yd² and mi² with NIST-grade precision.",
+    keywords: [
+      "area converter",
+      "square meters to square feet",
+      "hectares to acres",
+      "m2 to ft2",
+      "acre converter",
+      "land area",
+    ],
+    inputs: {
+      value: { label: "Value", help: "The area value to convert." },
+      fromUnit: { label: "From", help: "Select the source unit." },
+      toUnit: { label: "To", help: "Select the target unit." },
+    },
+    outputs: {
+      result: { label: "Result", help: "The converted area value." },
+    },
+    options: {
+      m2: "Square meter (m²)",
+      cm2: "Square centimeter (cm²)",
+      mm2: "Square millimeter (mm²)",
+      km2: "Square kilometer (km²)",
+      ha: "Hectare (ha)",
+      acre: "Acre",
+      ft2: "Square foot (ft²)",
+      in2: "Square inch (in²)",
+      yd2: "Square yard (yd²)",
+      mi2: "Square mile (mi²)",
+    },
+    errors: { invalidArea: "Area must be a positive number." },
+    faq: [
+      {
+        question: "How many square feet are in a square meter?",
+        answer: "1 square meter equals approximately 10.7639 square feet (1 m² = 10.7639 ft²).",
+      },
+      {
+        question: "How many acres are in a hectare?",
+        answer: "1 hectare equals approximately 2.4711 acres. Conversely, 1 acre ≈ 0.4047 hectares.",
+      },
+      {
+        question: "What is a hectare used for?",
+        answer: "The hectare (10,000 m²) is the standard metric unit for land and agricultural areas in most countries.",
+      },
+      {
+        question: "How big is an acre?",
+        answer: "1 acre is defined as exactly 4,046.8564224 square meters (43,560 ft²), originally the area one team of oxen could plough in a day.",
+      },
+    ],
+  },
+  id: {
+    title: "Area Converter",
+    short: "Convert between square meters, hectares, acres, square feet and more.",
+    description:
+      "Free area unit converter. Convert between m², cm², mm², km², hectares, acres, ft², in², yd² and mi² with NIST-grade precision.",
+    keywords: [
+      "area converter",
+      "square meters to square feet",
+      "hectares to acres",
+      "m2 to ft2",
+      "acre converter",
+      "land area",
+    ],
+    inputs: {
+      value: { label: "Value", help: "The area value to convert." },
+      fromUnit: { label: "From", help: "Select the source unit." },
+      toUnit: { label: "To", help: "Select the target unit." },
+    },
+    outputs: {
+      result: { label: "Result", help: "The converted area value." },
+    },
+    options: {
+      m2: "Square meter (m²)",
+      cm2: "Square centimeter (cm²)",
+      mm2: "Square millimeter (mm²)",
+      km2: "Square kilometer (km²)",
+      ha: "Hectare (ha)",
+      acre: "Acre",
+      ft2: "Square foot (ft²)",
+      in2: "Square inch (in²)",
+      yd2: "Square yard (yd²)",
+      mi2: "Square mile (mi²)",
+    },
+    errors: { invalidArea: "Area must be a positive number." },
+    faq: [
+      {
+        question: "How many square feet are in a square meter?",
+        answer: "1 square meter equals approximately 10.7639 square feet (1 m² = 10.7639 ft²).",
+      },
+      {
+        question: "How many acres are in a hectare?",
+        answer: "1 hectare equals approximately 2.4711 acres. Conversely, 1 acre ≈ 0.4047 hectares.",
+      },
+      {
+        question: "What is a hectare used for?",
+        answer: "The hectare (10,000 m²) is the standard metric unit for land and agricultural areas in most countries.",
+      },
+      {
+        question: "How big is an acre?",
+        answer: "1 acre is defined as exactly 4,046.8564224 square meters (43,560 ft²), originally the area one team of oxen could plough in a day.",
+      },
+    ],
+  },
+
   tr: {
     title: "Alan Dönüştürücü",
     short: "Metrekare, hektar, dönüm, fit kare ve daha fazlası arasında dönüşüm yapın.",

@@ -60,6 +60,125 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  pt: {
+    title: "Income Tax Estimator",
+    short: "Estimate your federal income tax for the US (2024) or Turkey.",
+    description:
+      "Free income tax estimator for the US (2024 federal brackets) and Turkey (2024 GVK brackets). Enter your gross income and filing status to see estimated tax, effective rate, and bracket breakdown.",
+    keywords: [
+      "income tax calculator",
+      "federal tax estimator",
+      "2024 tax brackets",
+      "Turkey income tax",
+      "US federal income tax",
+      "effective tax rate",
+      "tax calculator",
+    ],
+    inputs: {
+      country: { label: "Country", help: "Select your country: United States or Turkey." },
+      grossIncome: { label: "Gross Income", help: "Your total annual income before any deductions." },
+      filingStatus: {
+        label: "Filing Status",
+        help: "US only: your IRS filing status. Single, married filing jointly, or head of household.",
+      },
+      deductions: {
+        label: "Additional Deductions",
+        help: "US: itemized deductions in addition to the standard deduction. Turkey: deductions from gross income before tax.",
+      },
+    },
+    outputs: {
+      estimatedTax: { label: "Estimated Tax", help: "Total federal income tax owed." },
+      effectiveRate: { label: "Effective Tax Rate", help: "Your tax as a percentage of gross income." },
+      taxableIncome: { label: "Taxable Income", help: "Income after deductions — the amount tax is calculated on." },
+      afterTaxIncome: { label: "After-Tax Income", help: "What you keep after paying federal tax." },
+    },
+    options: {
+      country: { us: "United States", tr: "Turkey" },
+      filingStatus: {
+        single: "Single",
+        married: "Married Filing Jointly",
+        head: "Head of Household",
+      },
+    },
+    errors: {
+      negativeIncome: "Gross income cannot be negative.",
+      negativeDeductions: "Deductions cannot be negative.",
+    },
+    faq: [
+      {
+        q: "Does this include state taxes?",
+        a: "No. This calculator covers federal income tax only. State and local taxes vary significantly by location.",
+      },
+      {
+        q: "What is the standard deduction for 2024?",
+        a: "For 2024: single filers $14,600; married filing jointly $29,200; head of household $21,900.",
+      },
+      {
+        q: "How does the Turkish income tax work?",
+        a: "Turkey uses progressive brackets under the Gelir Vergisi Kanunu (GVK). For 2024, rates range from 15% up to 40% for income above 3,000,000 TL.",
+      },
+    ],
+  },
+  id: {
+    title: "Income Tax Estimator",
+    short: "Estimate your federal income tax for the US (2024) or Turkey.",
+    description:
+      "Free income tax estimator for the US (2024 federal brackets) and Turkey (2024 GVK brackets). Enter your gross income and filing status to see estimated tax, effective rate, and bracket breakdown.",
+    keywords: [
+      "income tax calculator",
+      "federal tax estimator",
+      "2024 tax brackets",
+      "Turkey income tax",
+      "US federal income tax",
+      "effective tax rate",
+      "tax calculator",
+    ],
+    inputs: {
+      country: { label: "Country", help: "Select your country: United States or Turkey." },
+      grossIncome: { label: "Gross Income", help: "Your total annual income before any deductions." },
+      filingStatus: {
+        label: "Filing Status",
+        help: "US only: your IRS filing status. Single, married filing jointly, or head of household.",
+      },
+      deductions: {
+        label: "Additional Deductions",
+        help: "US: itemized deductions in addition to the standard deduction. Turkey: deductions from gross income before tax.",
+      },
+    },
+    outputs: {
+      estimatedTax: { label: "Estimated Tax", help: "Total federal income tax owed." },
+      effectiveRate: { label: "Effective Tax Rate", help: "Your tax as a percentage of gross income." },
+      taxableIncome: { label: "Taxable Income", help: "Income after deductions — the amount tax is calculated on." },
+      afterTaxIncome: { label: "After-Tax Income", help: "What you keep after paying federal tax." },
+    },
+    options: {
+      country: { us: "United States", tr: "Turkey" },
+      filingStatus: {
+        single: "Single",
+        married: "Married Filing Jointly",
+        head: "Head of Household",
+      },
+    },
+    errors: {
+      negativeIncome: "Gross income cannot be negative.",
+      negativeDeductions: "Deductions cannot be negative.",
+    },
+    faq: [
+      {
+        q: "Does this include state taxes?",
+        a: "No. This calculator covers federal income tax only. State and local taxes vary significantly by location.",
+      },
+      {
+        q: "What is the standard deduction for 2024?",
+        a: "For 2024: single filers $14,600; married filing jointly $29,200; head of household $21,900.",
+      },
+      {
+        q: "How does the Turkish income tax work?",
+        a: "Turkey uses progressive brackets under the Gelir Vergisi Kanunu (GVK). For 2024, rates range from 15% up to 40% for income above 3,000,000 TL.",
+      },
+    ],
+  },
+
 
   tr: {
     title: "Gelir Vergisi Tahmincisi",

@@ -44,6 +44,93 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  pt: {
+    title: "Pressure Converter",
+    short: "Convert between Pa, kPa, bar, psi, atm, mmHg and more pressure units.",
+    description:
+      "Free pressure unit converter. Convert between Pa, kPa, MPa, bar, psi, atm, mmHg, torr and inHg with NIST-grade precision.",
+    keywords: ["pressure converter", "psi to bar", "bar to kpa", "atm to mmhg", "pascal converter", "torr"],
+    inputs: {
+      value: { label: "Value", help: "The pressure value to convert." },
+      fromUnit: { label: "From", help: "Select the source unit." },
+      toUnit: { label: "To", help: "Select the target unit." },
+    },
+    outputs: { result: { label: "Result", help: "The converted pressure value." } },
+    options: {
+      Pa: "Pascal (Pa)",
+      kPa: "Kilopascal (kPa)",
+      MPa: "Megapascal (MPa)",
+      bar: "Bar",
+      psi: "Pounds per square inch (psi)",
+      atm: "Standard atmosphere (atm)",
+      mmHg: "Millimeters of mercury (mmHg)",
+      torr: "Torr",
+      inHg: "Inches of mercury (inHg)",
+    },
+    errors: { invalidPressure: "Pressure must be a positive number." },
+    faq: [
+      {
+        question: "What is the difference between bar and psi?",
+        answer: "1 bar = 100,000 Pa ≈ 14.5038 psi. Bar is metric (used in Europe), psi is US customary (used for tires, hydraulics).",
+      },
+      {
+        question: "How many pascals are in one atmosphere?",
+        answer: "1 standard atmosphere (atm) equals exactly 101,325 Pa by definition (about 1.01325 bar or 14.696 psi).",
+      },
+      {
+        question: "What is the difference between mmHg and torr?",
+        answer: "They are nearly identical: 1 torr = 1/760 atm ≈ 133.3224 Pa, while 1 mmHg = 133.3224 Pa. The values differ by less than 1 part in 10⁷.",
+      },
+      {
+        question: "How do I convert psi to kPa?",
+        answer: "Multiply psi by 6.894757 to get kPa. For example, 30 psi ≈ 206.84 kPa (typical car tire pressure).",
+      },
+    ],
+  },
+  id: {
+    title: "Pressure Converter",
+    short: "Convert between Pa, kPa, bar, psi, atm, mmHg and more pressure units.",
+    description:
+      "Free pressure unit converter. Convert between Pa, kPa, MPa, bar, psi, atm, mmHg, torr and inHg with NIST-grade precision.",
+    keywords: ["pressure converter", "psi to bar", "bar to kpa", "atm to mmhg", "pascal converter", "torr"],
+    inputs: {
+      value: { label: "Value", help: "The pressure value to convert." },
+      fromUnit: { label: "From", help: "Select the source unit." },
+      toUnit: { label: "To", help: "Select the target unit." },
+    },
+    outputs: { result: { label: "Result", help: "The converted pressure value." } },
+    options: {
+      Pa: "Pascal (Pa)",
+      kPa: "Kilopascal (kPa)",
+      MPa: "Megapascal (MPa)",
+      bar: "Bar",
+      psi: "Pounds per square inch (psi)",
+      atm: "Standard atmosphere (atm)",
+      mmHg: "Millimeters of mercury (mmHg)",
+      torr: "Torr",
+      inHg: "Inches of mercury (inHg)",
+    },
+    errors: { invalidPressure: "Pressure must be a positive number." },
+    faq: [
+      {
+        question: "What is the difference between bar and psi?",
+        answer: "1 bar = 100,000 Pa ≈ 14.5038 psi. Bar is metric (used in Europe), psi is US customary (used for tires, hydraulics).",
+      },
+      {
+        question: "How many pascals are in one atmosphere?",
+        answer: "1 standard atmosphere (atm) equals exactly 101,325 Pa by definition (about 1.01325 bar or 14.696 psi).",
+      },
+      {
+        question: "What is the difference between mmHg and torr?",
+        answer: "They are nearly identical: 1 torr = 1/760 atm ≈ 133.3224 Pa, while 1 mmHg = 133.3224 Pa. The values differ by less than 1 part in 10⁷.",
+      },
+      {
+        question: "How do I convert psi to kPa?",
+        answer: "Multiply psi by 6.894757 to get kPa. For example, 30 psi ≈ 206.84 kPa (typical car tire pressure).",
+      },
+    ],
+  },
+
   tr: {
     title: "Basınç Dönüştürücü",
     short: "Pa, kPa, bar, psi, atm, mmHg ve daha fazla basınç birimi arasında dönüşüm.",

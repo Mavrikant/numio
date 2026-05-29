@@ -60,6 +60,125 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  pt: {
+    title: "Margin & Markup Calculator",
+    short: "Calculate profit, profit margin %, and markup % — or back out the price needed to hit a target margin or markup.",
+    description:
+      "Free margin and markup calculator. Enter cost and revenue to compute profit, gross margin percentage, and markup percentage. Or pick a mode to derive the revenue (selling price) needed to achieve a target margin or markup, given the cost.",
+    keywords: [
+      "margin calculator",
+      "markup calculator",
+      "profit margin calculator",
+      "gross margin",
+      "markup vs margin",
+      "pricing calculator",
+      "selling price calculator",
+    ],
+    inputs: {
+      mode: { label: "Mode", help: "Compute margin from cost + revenue, or derive revenue from cost + target margin/markup." },
+      cost: { label: "Cost ($)", help: "Cost of goods sold or production cost per unit / order." },
+      revenue: { label: "Revenue ($)", help: "Selling price or revenue. Used in compute-margin mode." },
+      marginPercent: { label: "Target Margin (%)", help: "Desired profit margin as a percentage of revenue. Used in compute-revenue-from-margin mode." },
+      markupPercent: { label: "Target Markup (%)", help: "Desired markup as a percentage of cost. Used in compute-revenue-from-markup mode." },
+    },
+    outputs: {
+      cost: { label: "Cost", help: "Cost (echoed for clarity)." },
+      revenue: { label: "Revenue / Selling Price", help: "Selling price required (in derive modes) or that you entered (in compute-margin mode)." },
+      profit: { label: "Profit", help: "Revenue minus cost (gross profit before operating expenses)." },
+      profitMarginPercent: { label: "Profit Margin %", help: "Profit as a percentage of revenue: (R − C) / R × 100." },
+      markupPercent: { label: "Markup %", help: "Profit as a percentage of cost: (R − C) / C × 100." },
+    },
+    errors: {
+      revenuePositive: "Revenue must be greater than 0 when computing margin.",
+      marginBelow100: "Target margin must be less than 100% (a 100% margin requires zero cost).",
+      costRange: "Cost must be between 0 and 1,000,000,000.",
+    },
+    options: {
+      mode: {
+        "compute-margin": "Compute margin from cost + revenue",
+        "compute-revenue-from-margin": "Compute revenue from cost + target margin",
+        "compute-revenue-from-markup": "Compute revenue from cost + target markup",
+      },
+    },
+    faq: [
+      {
+        q: "What is the difference between margin and markup?",
+        a: "Margin is profit as a percentage of revenue: (Revenue − Cost) / Revenue. Markup is profit as a percentage of cost: (Revenue − Cost) / Cost. The same dollar profit produces a smaller margin percentage than markup percentage (e.g. 50% markup = 33.3% margin).",
+      },
+      {
+        q: "How do I price for a 40% margin?",
+        a: "Use compute-revenue-from-margin mode and set target margin to 40. The formula is: Revenue = Cost / (1 − Margin/100). At $60 cost: 60 / 0.6 = $100 selling price.",
+      },
+      {
+        q: "Why can't margin be 100%?",
+        a: "100% margin would mean profit equals revenue, which only happens when cost is zero. As cost approaches zero, margin approaches but never reaches 100%.",
+      },
+      {
+        q: "Is this gross or net margin?",
+        a: "Gross. It does not account for operating expenses, taxes, or interest. To estimate net profit margin, subtract those items from gross profit before dividing by revenue.",
+      },
+    ],
+  },
+  id: {
+    title: "Margin & Markup Calculator",
+    short: "Calculate profit, profit margin %, and markup % — or back out the price needed to hit a target margin or markup.",
+    description:
+      "Free margin and markup calculator. Enter cost and revenue to compute profit, gross margin percentage, and markup percentage. Or pick a mode to derive the revenue (selling price) needed to achieve a target margin or markup, given the cost.",
+    keywords: [
+      "margin calculator",
+      "markup calculator",
+      "profit margin calculator",
+      "gross margin",
+      "markup vs margin",
+      "pricing calculator",
+      "selling price calculator",
+    ],
+    inputs: {
+      mode: { label: "Mode", help: "Compute margin from cost + revenue, or derive revenue from cost + target margin/markup." },
+      cost: { label: "Cost ($)", help: "Cost of goods sold or production cost per unit / order." },
+      revenue: { label: "Revenue ($)", help: "Selling price or revenue. Used in compute-margin mode." },
+      marginPercent: { label: "Target Margin (%)", help: "Desired profit margin as a percentage of revenue. Used in compute-revenue-from-margin mode." },
+      markupPercent: { label: "Target Markup (%)", help: "Desired markup as a percentage of cost. Used in compute-revenue-from-markup mode." },
+    },
+    outputs: {
+      cost: { label: "Cost", help: "Cost (echoed for clarity)." },
+      revenue: { label: "Revenue / Selling Price", help: "Selling price required (in derive modes) or that you entered (in compute-margin mode)." },
+      profit: { label: "Profit", help: "Revenue minus cost (gross profit before operating expenses)." },
+      profitMarginPercent: { label: "Profit Margin %", help: "Profit as a percentage of revenue: (R − C) / R × 100." },
+      markupPercent: { label: "Markup %", help: "Profit as a percentage of cost: (R − C) / C × 100." },
+    },
+    errors: {
+      revenuePositive: "Revenue must be greater than 0 when computing margin.",
+      marginBelow100: "Target margin must be less than 100% (a 100% margin requires zero cost).",
+      costRange: "Cost must be between 0 and 1,000,000,000.",
+    },
+    options: {
+      mode: {
+        "compute-margin": "Compute margin from cost + revenue",
+        "compute-revenue-from-margin": "Compute revenue from cost + target margin",
+        "compute-revenue-from-markup": "Compute revenue from cost + target markup",
+      },
+    },
+    faq: [
+      {
+        q: "What is the difference between margin and markup?",
+        a: "Margin is profit as a percentage of revenue: (Revenue − Cost) / Revenue. Markup is profit as a percentage of cost: (Revenue − Cost) / Cost. The same dollar profit produces a smaller margin percentage than markup percentage (e.g. 50% markup = 33.3% margin).",
+      },
+      {
+        q: "How do I price for a 40% margin?",
+        a: "Use compute-revenue-from-margin mode and set target margin to 40. The formula is: Revenue = Cost / (1 − Margin/100). At $60 cost: 60 / 0.6 = $100 selling price.",
+      },
+      {
+        q: "Why can't margin be 100%?",
+        a: "100% margin would mean profit equals revenue, which only happens when cost is zero. As cost approaches zero, margin approaches but never reaches 100%.",
+      },
+      {
+        q: "Is this gross or net margin?",
+        a: "Gross. It does not account for operating expenses, taxes, or interest. To estimate net profit margin, subtract those items from gross profit before dividing by revenue.",
+      },
+    ],
+  },
+
 
   tr: {
     title: "Kâr Marjı ve Kâr Oranı Hesaplayıcısı",

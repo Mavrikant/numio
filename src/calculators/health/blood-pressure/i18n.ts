@@ -82,6 +82,169 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  pt: {
+    title: "Blood Pressure Categories — AHA 2017",
+    short: "Classify your blood pressure reading using the AHA/ACC 2017 guidelines.",
+    description:
+      "Free blood pressure category checker based on the 2017 AHA/ACC guidelines. Enter your systolic and diastolic readings to find your blood pressure category and receive health guidance.",
+    keywords: [
+      "blood pressure calculator",
+      "hypertension categories",
+      "AHA blood pressure",
+      "systolic diastolic",
+      "high blood pressure",
+      "blood pressure chart",
+      "BP classification",
+    ],
+    inputs: {
+      systolic: {
+        label: "Systolic pressure (mmHg)",
+        help: "The upper number — pressure when the heart beats. Normal is below 120.",
+      },
+      diastolic: {
+        label: "Diastolic pressure (mmHg)",
+        help: "The lower number — pressure when the heart rests between beats. Normal is below 80.",
+      },
+    },
+    outputs: {
+      category: {
+        label: "Blood pressure category",
+        help: "Your overall classification according to AHA/ACC 2017 guidelines.",
+      },
+      systolicCategory: {
+        label: "Systolic category",
+        help: "Classification based on systolic reading alone.",
+      },
+      diastolicCategory: {
+        label: "Diastolic category",
+        help: "Classification based on diastolic reading alone.",
+      },
+      recommendation: {
+        label: "Recommendation",
+        help: "General health action based on your blood pressure category.",
+      },
+    },
+    options: {
+      category: {
+        normal: "Normal",
+        elevated: "Elevated",
+        stage1: "High Blood Pressure Stage 1",
+        stage2: "High Blood Pressure Stage 2",
+        crisis: "Hypertensive Crisis",
+      },
+      recommendation: {
+        healthy_lifestyle: "Maintain a healthy lifestyle with regular exercise and a balanced diet.",
+        lifestyle_changes: "Adopt heart-healthy lifestyle changes; monitor regularly.",
+        consult_doctor: "Consult your doctor. Lifestyle changes and possibly medication may be needed.",
+        see_doctor_soon: "See a doctor soon. Medication is likely required.",
+        emergency_care: "Seek emergency medical care immediately if you have symptoms such as chest pain, shortness of breath, or vision changes.",
+      },
+    },
+    errors: {
+      systolicOutOfRange: "Systolic pressure must be between 60 and 250 mmHg.",
+      diastolicOutOfRange: "Diastolic pressure must be between 40 and 150 mmHg.",
+    },
+    faq: [
+      {
+        q: "What changed in the 2017 AHA/ACC guidelines?",
+        a: "The 2017 update lowered the threshold for hypertension from 140/90 to 130/80 mmHg and eliminated the 'prehypertension' category, replacing it with 'Elevated' (120–129/<80) and 'Stage 1' (130–139 or 80–89).",
+      },
+      {
+        q: "How many readings are needed for a diagnosis?",
+        a: "A diagnosis of hypertension requires elevated readings on at least two separate occasions. White-coat hypertension (elevated readings only in clinical settings) and masked hypertension (normal in clinic, high at home) are recognised phenomena.",
+      },
+      {
+        q: "What is a hypertensive crisis?",
+        a: "A hypertensive crisis (systolic >180 or diastolic >120) is a medical emergency. If accompanied by symptoms such as chest pain, shortness of breath, back pain, numbness, visual changes, or difficulty speaking, call emergency services immediately.",
+      },
+      {
+        q: "Does this calculator replace a doctor's assessment?",
+        a: "No. This tool is for educational awareness only. A single measurement is insufficient for diagnosis, and blood pressure varies throughout the day. Always consult a qualified healthcare professional.",
+      },
+    ],
+  },
+  id: {
+    title: "Blood Pressure Categories — AHA 2017",
+    short: "Classify your blood pressure reading using the AHA/ACC 2017 guidelines.",
+    description:
+      "Free blood pressure category checker based on the 2017 AHA/ACC guidelines. Enter your systolic and diastolic readings to find your blood pressure category and receive health guidance.",
+    keywords: [
+      "blood pressure calculator",
+      "hypertension categories",
+      "AHA blood pressure",
+      "systolic diastolic",
+      "high blood pressure",
+      "blood pressure chart",
+      "BP classification",
+    ],
+    inputs: {
+      systolic: {
+        label: "Systolic pressure (mmHg)",
+        help: "The upper number — pressure when the heart beats. Normal is below 120.",
+      },
+      diastolic: {
+        label: "Diastolic pressure (mmHg)",
+        help: "The lower number — pressure when the heart rests between beats. Normal is below 80.",
+      },
+    },
+    outputs: {
+      category: {
+        label: "Blood pressure category",
+        help: "Your overall classification according to AHA/ACC 2017 guidelines.",
+      },
+      systolicCategory: {
+        label: "Systolic category",
+        help: "Classification based on systolic reading alone.",
+      },
+      diastolicCategory: {
+        label: "Diastolic category",
+        help: "Classification based on diastolic reading alone.",
+      },
+      recommendation: {
+        label: "Recommendation",
+        help: "General health action based on your blood pressure category.",
+      },
+    },
+    options: {
+      category: {
+        normal: "Normal",
+        elevated: "Elevated",
+        stage1: "High Blood Pressure Stage 1",
+        stage2: "High Blood Pressure Stage 2",
+        crisis: "Hypertensive Crisis",
+      },
+      recommendation: {
+        healthy_lifestyle: "Maintain a healthy lifestyle with regular exercise and a balanced diet.",
+        lifestyle_changes: "Adopt heart-healthy lifestyle changes; monitor regularly.",
+        consult_doctor: "Consult your doctor. Lifestyle changes and possibly medication may be needed.",
+        see_doctor_soon: "See a doctor soon. Medication is likely required.",
+        emergency_care: "Seek emergency medical care immediately if you have symptoms such as chest pain, shortness of breath, or vision changes.",
+      },
+    },
+    errors: {
+      systolicOutOfRange: "Systolic pressure must be between 60 and 250 mmHg.",
+      diastolicOutOfRange: "Diastolic pressure must be between 40 and 150 mmHg.",
+    },
+    faq: [
+      {
+        q: "What changed in the 2017 AHA/ACC guidelines?",
+        a: "The 2017 update lowered the threshold for hypertension from 140/90 to 130/80 mmHg and eliminated the 'prehypertension' category, replacing it with 'Elevated' (120–129/<80) and 'Stage 1' (130–139 or 80–89).",
+      },
+      {
+        q: "How many readings are needed for a diagnosis?",
+        a: "A diagnosis of hypertension requires elevated readings on at least two separate occasions. White-coat hypertension (elevated readings only in clinical settings) and masked hypertension (normal in clinic, high at home) are recognised phenomena.",
+      },
+      {
+        q: "What is a hypertensive crisis?",
+        a: "A hypertensive crisis (systolic >180 or diastolic >120) is a medical emergency. If accompanied by symptoms such as chest pain, shortness of breath, back pain, numbness, visual changes, or difficulty speaking, call emergency services immediately.",
+      },
+      {
+        q: "Does this calculator replace a doctor's assessment?",
+        a: "No. This tool is for educational awareness only. A single measurement is insufficient for diagnosis, and blood pressure varies throughout the day. Always consult a qualified healthcare professional.",
+      },
+    ],
+  },
+
 
   tr: {
     title: "Kan Basıncı Kategorileri — AHA 2017",

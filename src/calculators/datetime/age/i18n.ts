@@ -27,6 +27,59 @@ const i18n: CalculatorI18n = {
       { q: "Can I calculate age at a past or future date?", a: "Yes — change the 'Age at date' field. It defaults to today, but you can set any date to find someone's age then." },
     ],
   },
+  pt: {
+    title: "Age Calculator",
+    short: "Find your exact age in years, months and days, plus totals and your next birthday.",
+    description:
+      "Free age calculator. Enter your date of birth to see your exact age in years, months and days, your age in total months, weeks and days, and how long until your next birthday.",
+    keywords: ["age calculator", "how old am I", "age from date of birth", "exact age", "age in days", "next birthday calculator"],
+    inputs: {
+      birthDate: { label: "Date of birth", help: "The day you were born." },
+      asOfDate: { label: "Age at date", help: "Calculate age as of this date (defaults to today)." },
+    },
+    outputs: {
+      ageYears: { label: "Years", help: "Completed calendar years." },
+      ageMonths: { label: "Months", help: "Months beyond the completed years." },
+      ageDays: { label: "Days", help: "Days beyond the completed months." },
+      totalMonths: { label: "Age in months" },
+      totalWeeks: { label: "Age in weeks" },
+      totalDays: { label: "Age in days" },
+      nextBirthday: { label: "Next birthday" },
+      daysToNextBirthday: { label: "Days to next birthday" },
+    },
+    faq: [
+      { q: "How is age calculated?", a: "We count completed calendar years from your birth date to the chosen date, then the leftover months and days. For example, someone born 1990-06-15 is 33 years, 0 months and 0 days old on 2023-06-15." },
+      { q: "How is a Feb 29 birthday handled?", a: "For the next-birthday calculation in a non-leap year, a Feb 29 birthday is treated as Feb 28. The exact-age count itself is unaffected." },
+      { q: "Can I calculate age at a past or future date?", a: "Yes — change the 'Age at date' field. It defaults to today, but you can set any date to find someone's age then." },
+    ],
+  },
+  id: {
+    title: "Age Calculator",
+    short: "Find your exact age in years, months and days, plus totals and your next birthday.",
+    description:
+      "Free age calculator. Enter your date of birth to see your exact age in years, months and days, your age in total months, weeks and days, and how long until your next birthday.",
+    keywords: ["age calculator", "how old am I", "age from date of birth", "exact age", "age in days", "next birthday calculator"],
+    inputs: {
+      birthDate: { label: "Date of birth", help: "The day you were born." },
+      asOfDate: { label: "Age at date", help: "Calculate age as of this date (defaults to today)." },
+    },
+    outputs: {
+      ageYears: { label: "Years", help: "Completed calendar years." },
+      ageMonths: { label: "Months", help: "Months beyond the completed years." },
+      ageDays: { label: "Days", help: "Days beyond the completed months." },
+      totalMonths: { label: "Age in months" },
+      totalWeeks: { label: "Age in weeks" },
+      totalDays: { label: "Age in days" },
+      nextBirthday: { label: "Next birthday" },
+      daysToNextBirthday: { label: "Days to next birthday" },
+    },
+    faq: [
+      { q: "How is age calculated?", a: "We count completed calendar years from your birth date to the chosen date, then the leftover months and days. For example, someone born 1990-06-15 is 33 years, 0 months and 0 days old on 2023-06-15." },
+      { q: "How is a Feb 29 birthday handled?", a: "For the next-birthday calculation in a non-leap year, a Feb 29 birthday is treated as Feb 28. The exact-age count itself is unaffected." },
+      { q: "Can I calculate age at a past or future date?", a: "Yes — change the 'Age at date' field. It defaults to today, but you can set any date to find someone's age then." },
+    ],
+  },
+
   tr: {
     title: "Yaş Hesaplama",
     short: "Tam yaşınızı yıl, ay ve gün olarak, toplamlarla ve bir sonraki doğum gününüzle birlikte bulun.",

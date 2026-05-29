@@ -16,6 +16,27 @@ const i18n: CalculatorI18n = {
       { q: "Which formula should I use?", a: "Mosteller is the simplest and most common in clinical practice. Du Bois and Haycock are classic alternatives; results usually agree within a few percent." },
     ],
   },
+  pt: {
+    title: "Body Surface Area (BSA) Calculator", short: "Estimate body surface area in m² from weight and height.",
+    description: "Free body surface area (BSA) calculator. Enter weight and height to estimate BSA in square metres using the Mosteller, Du Bois and Haycock formulas — commonly used for medication dosing and physiology.",
+    keywords: ["body surface area calculator", "bsa calculator", "mosteller formula", "du bois formula", "bsa m2"],
+    ...io("Weight", "Height", "BSA (Mosteller)", "BSA (Du Bois)", "BSA (Haycock)"),
+    faq: [
+      { q: "What is body surface area used for?", a: "BSA is used in medicine to scale drug doses (especially chemotherapy), cardiac index and metabolic rates, since it tracks metabolic mass better than weight alone." },
+      { q: "Which formula should I use?", a: "Mosteller is the simplest and most common in clinical practice. Du Bois and Haycock are classic alternatives; results usually agree within a few percent." },
+    ],
+  },
+  id: {
+    title: "Body Surface Area (BSA) Calculator", short: "Estimate body surface area in m² from weight and height.",
+    description: "Free body surface area (BSA) calculator. Enter weight and height to estimate BSA in square metres using the Mosteller, Du Bois and Haycock formulas — commonly used for medication dosing and physiology.",
+    keywords: ["body surface area calculator", "bsa calculator", "mosteller formula", "du bois formula", "bsa m2"],
+    ...io("Weight", "Height", "BSA (Mosteller)", "BSA (Du Bois)", "BSA (Haycock)"),
+    faq: [
+      { q: "What is body surface area used for?", a: "BSA is used in medicine to scale drug doses (especially chemotherapy), cardiac index and metabolic rates, since it tracks metabolic mass better than weight alone." },
+      { q: "Which formula should I use?", a: "Mosteller is the simplest and most common in clinical practice. Du Bois and Haycock are classic alternatives; results usually agree within a few percent." },
+    ],
+  },
+
   tr: {
     title: "Vücut Yüzey Alanı (BSA) Hesaplayıcı", short: "Kilo ve boydan vücut yüzey alanını m² olarak tahmin edin.",
     description: "Ücretsiz vücut yüzey alanı (BSA) hesaplayıcı. Kilo ve boy girerek Mosteller, Du Bois ve Haycock formülleriyle BSA'yı metrekare olarak tahmin edin — ilaç dozajı ve fizyolojide yaygın kullanılır.",

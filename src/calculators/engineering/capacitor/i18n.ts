@@ -46,6 +46,97 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  pt: {
+    title: "Capacitor Calculator",
+    short: "Calculate capacitor charge, energy, reactance, and RC time constant.",
+    description: "Free capacitor calculator. Enter capacitance, voltage, and frequency to calculate charge (Coulombs), energy (Joules), reactance (Ohms), and RC time constant.",
+    keywords: ["capacitor", "capacitance", "charge", "energy", "reactance", "RC time constant", "electronics"],
+    inputs: {
+      capacitance: { label: "Capacitance", help: "Value in Farads (F). Use prefixes: μ=1e-6, n=1e-9, p=1e-12" },
+      voltage: { label: "Voltage", help: "Voltage across capacitor in Volts" },
+      frequency: { label: "Frequency", help: "AC frequency in Hz. Leave 0 for DC." },
+    },
+    outputs: {
+      charge: { label: "Charge", help: "Charge stored in Coulombs (Q = CV)" },
+      energy: { label: "Energy", help: "Energy stored in Joules (E = 0.5 * C * V²)" },
+      reactance: { label: "Reactance", help: "Capacitive reactance in Ohms (Xc = 1/(2πfC))" },
+      timeConstantFor1k: { label: "RC time constant (1kΩ)", help: "Time to charge to 63% with 1kΩ resistor" },
+    },
+    options: {},
+    errors: {
+      capacitancePositive: "Capacitance must be positive.",
+      voltagePositive: "Voltage must be positive.",
+      frequencyNonNegative: "Frequency must be non-negative.",
+    },
+    faq: [
+      {
+        q: "What is capacitance?",
+        a: "Capacitance is the ability of a device (capacitor) to store electrical charge. It is measured in Farads (F). Common prefixes: μF (microfarad = 1e-6 F), nF (nanofarad = 1e-9 F), pF (picofarad = 1e-12 F).",
+      },
+      {
+        q: "What is charge on a capacitor?",
+        a: "Charge (Q) is the amount of electrical charge stored, measured in Coulombs (C). Formula: Q = C × V. A 1 μF capacitor at 10 V stores 10 μC of charge.",
+      },
+      {
+        q: "What is capacitor energy?",
+        a: "Energy (E) stored in a charged capacitor is measured in Joules. Formula: E = 0.5 × C × V². A 1 mF capacitor at 100 V stores 5 Joules.",
+      },
+      {
+        q: "What is capacitive reactance?",
+        a: "Reactance (Xc) is the opposition to AC current offered by a capacitor, measured in Ohms. Xc = 1/(2πfC). At higher frequencies or larger capacitances, reactance decreases.",
+      },
+      {
+        q: "What is the RC time constant?",
+        a: "The RC time constant (τ = R × C) is the time for a capacitor to charge to 63% of applied voltage through a resistor. Used in timing circuits and filters.",
+      },
+    ],
+  },
+  id: {
+    title: "Capacitor Calculator",
+    short: "Calculate capacitor charge, energy, reactance, and RC time constant.",
+    description: "Free capacitor calculator. Enter capacitance, voltage, and frequency to calculate charge (Coulombs), energy (Joules), reactance (Ohms), and RC time constant.",
+    keywords: ["capacitor", "capacitance", "charge", "energy", "reactance", "RC time constant", "electronics"],
+    inputs: {
+      capacitance: { label: "Capacitance", help: "Value in Farads (F). Use prefixes: μ=1e-6, n=1e-9, p=1e-12" },
+      voltage: { label: "Voltage", help: "Voltage across capacitor in Volts" },
+      frequency: { label: "Frequency", help: "AC frequency in Hz. Leave 0 for DC." },
+    },
+    outputs: {
+      charge: { label: "Charge", help: "Charge stored in Coulombs (Q = CV)" },
+      energy: { label: "Energy", help: "Energy stored in Joules (E = 0.5 * C * V²)" },
+      reactance: { label: "Reactance", help: "Capacitive reactance in Ohms (Xc = 1/(2πfC))" },
+      timeConstantFor1k: { label: "RC time constant (1kΩ)", help: "Time to charge to 63% with 1kΩ resistor" },
+    },
+    options: {},
+    errors: {
+      capacitancePositive: "Capacitance must be positive.",
+      voltagePositive: "Voltage must be positive.",
+      frequencyNonNegative: "Frequency must be non-negative.",
+    },
+    faq: [
+      {
+        q: "What is capacitance?",
+        a: "Capacitance is the ability of a device (capacitor) to store electrical charge. It is measured in Farads (F). Common prefixes: μF (microfarad = 1e-6 F), nF (nanofarad = 1e-9 F), pF (picofarad = 1e-12 F).",
+      },
+      {
+        q: "What is charge on a capacitor?",
+        a: "Charge (Q) is the amount of electrical charge stored, measured in Coulombs (C). Formula: Q = C × V. A 1 μF capacitor at 10 V stores 10 μC of charge.",
+      },
+      {
+        q: "What is capacitor energy?",
+        a: "Energy (E) stored in a charged capacitor is measured in Joules. Formula: E = 0.5 × C × V². A 1 mF capacitor at 100 V stores 5 Joules.",
+      },
+      {
+        q: "What is capacitive reactance?",
+        a: "Reactance (Xc) is the opposition to AC current offered by a capacitor, measured in Ohms. Xc = 1/(2πfC). At higher frequencies or larger capacitances, reactance decreases.",
+      },
+      {
+        q: "What is the RC time constant?",
+        a: "The RC time constant (τ = R × C) is the time for a capacitor to charge to 63% of applied voltage through a resistor. Used in timing circuits and filters.",
+      },
+    ],
+  },
+
   tr: {
     title: "Kapasitör Hesaplayıcısı",
     short: "Kapasitör yükü, enerjisi, reaktansı ve RC zaman sabitini hesaplayın.",

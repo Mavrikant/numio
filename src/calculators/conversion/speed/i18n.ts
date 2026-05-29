@@ -90,6 +90,185 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  pt: {
+    title: "Speed Converter",
+    short: "Convert between different speed units including km/h, mph, m/s, knots, and ft/s.",
+    description:
+      "Free speed unit converter. Convert between km/h, mph, m/s, knots, and ft/s. Real-time conversions for velocity and speed measurements.",
+    keywords: [
+      "speed converter",
+      "velocity converter",
+      "km/h to mph",
+      "mph to km/h",
+      "knots converter",
+      "speed units",
+    ],
+    inputs: {
+      value: {
+        label: "Value",
+        help: "Enter the speed value to convert.",
+      },
+      fromUnit: {
+        label: "From",
+        help: "Select the unit of the value you are converting from.",
+      },
+      toUnit: {
+        label: "To",
+        help: "Select the unit you want to convert to.",
+      },
+    },
+    outputs: {
+      result: {
+        label: "Result",
+        help: "The converted speed value.",
+      },
+      kmh: {
+        label: "Kilometers per hour (km/h)",
+        help: "Speed in kilometers per hour.",
+      },
+      mph: {
+        label: "Miles per hour (mph)",
+        help: "Speed in miles per hour.",
+      },
+      ms: {
+        label: "Meters per second (m/s)",
+        help: "Speed in meters per second.",
+      },
+      knots: {
+        label: "Knots",
+        help: "Speed in nautical miles per hour.",
+      },
+      fts: {
+        label: "Feet per second (ft/s)",
+        help: "Speed in feet per second.",
+      },
+    },
+    options: {
+      fromUnit: {
+        kmh: "km/h",
+        mph: "mph",
+        ms: "m/s",
+        knots: "knots",
+        fts: "ft/s",
+      },
+      toUnit: {
+        kmh: "km/h",
+        mph: "mph",
+        ms: "m/s",
+        knots: "knots",
+        fts: "ft/s",
+      },
+    },
+    errors: {},
+    faq: [
+      {
+        q: "What is the difference between km/h and mph?",
+        a: "Kilometers per hour (km/h) measures distance in kilometers over one hour, while miles per hour (mph) measures distance in miles over one hour. 1 mph ≈ 1.609 km/h.",
+      },
+      {
+        q: "What are knots used for?",
+        a: "Knots (nautical miles per hour) are primarily used in maritime and aviation contexts to measure the speed of ships and aircraft. 1 knot = 1.852 km/h.",
+      },
+      {
+        q: "How fast is 1 m/s in other units?",
+        a: "1 m/s equals approximately 3.6 km/h, 2.237 mph, 1.944 knots, or 3.281 ft/s.",
+      },
+      {
+        q: "How do I convert ft/s to km/h?",
+        a: "To convert feet per second to kilometers per hour, multiply the ft/s value by 1.09728. For example, 10 ft/s = 10 × 1.09728 = 10.9728 km/h.",
+      },
+    ],
+  },
+  id: {
+    title: "Speed Converter",
+    short: "Convert between different speed units including km/h, mph, m/s, knots, and ft/s.",
+    description:
+      "Free speed unit converter. Convert between km/h, mph, m/s, knots, and ft/s. Real-time conversions for velocity and speed measurements.",
+    keywords: [
+      "speed converter",
+      "velocity converter",
+      "km/h to mph",
+      "mph to km/h",
+      "knots converter",
+      "speed units",
+    ],
+    inputs: {
+      value: {
+        label: "Value",
+        help: "Enter the speed value to convert.",
+      },
+      fromUnit: {
+        label: "From",
+        help: "Select the unit of the value you are converting from.",
+      },
+      toUnit: {
+        label: "To",
+        help: "Select the unit you want to convert to.",
+      },
+    },
+    outputs: {
+      result: {
+        label: "Result",
+        help: "The converted speed value.",
+      },
+      kmh: {
+        label: "Kilometers per hour (km/h)",
+        help: "Speed in kilometers per hour.",
+      },
+      mph: {
+        label: "Miles per hour (mph)",
+        help: "Speed in miles per hour.",
+      },
+      ms: {
+        label: "Meters per second (m/s)",
+        help: "Speed in meters per second.",
+      },
+      knots: {
+        label: "Knots",
+        help: "Speed in nautical miles per hour.",
+      },
+      fts: {
+        label: "Feet per second (ft/s)",
+        help: "Speed in feet per second.",
+      },
+    },
+    options: {
+      fromUnit: {
+        kmh: "km/h",
+        mph: "mph",
+        ms: "m/s",
+        knots: "knots",
+        fts: "ft/s",
+      },
+      toUnit: {
+        kmh: "km/h",
+        mph: "mph",
+        ms: "m/s",
+        knots: "knots",
+        fts: "ft/s",
+      },
+    },
+    errors: {},
+    faq: [
+      {
+        q: "What is the difference between km/h and mph?",
+        a: "Kilometers per hour (km/h) measures distance in kilometers over one hour, while miles per hour (mph) measures distance in miles over one hour. 1 mph ≈ 1.609 km/h.",
+      },
+      {
+        q: "What are knots used for?",
+        a: "Knots (nautical miles per hour) are primarily used in maritime and aviation contexts to measure the speed of ships and aircraft. 1 knot = 1.852 km/h.",
+      },
+      {
+        q: "How fast is 1 m/s in other units?",
+        a: "1 m/s equals approximately 3.6 km/h, 2.237 mph, 1.944 knots, or 3.281 ft/s.",
+      },
+      {
+        q: "How do I convert ft/s to km/h?",
+        a: "To convert feet per second to kilometers per hour, multiply the ft/s value by 1.09728. For example, 10 ft/s = 10 × 1.09728 = 10.9728 km/h.",
+      },
+    ],
+  },
+
 
   tr: {
     title: "Hız Dönüştürücü",

@@ -24,6 +24,53 @@ const i18n: CalculatorI18n = {
       monthlyEmergencyFund: { label: "Emergency Fund Target (3 months)", help: "Three months of essential expenses as emergency reserve" },
     },
   },
+  pt: {
+    title: "Budget Planner (50/30/20 Rule)",
+    short: "Budget Planner",
+    description:
+      "Plan your monthly budget using the 50/30/20 rule. Allocate income to needs, wants, and savings to reach your financial goals.",
+    keywords: ["budget", "50/30/20", "savings", "needs", "wants", "income", "financial planning"],
+    inputs: {
+      monthlyIncome: { label: "Monthly Income", help: "Your total take-home income per month" },
+      needsPct: { label: "Needs %", help: "Percentage for essential expenses (recommended: 50%)" },
+      wantsPct: { label: "Wants %", help: "Percentage for discretionary spending (recommended: 30%)" },
+      savingsPct: { label: "Savings %", help: "Percentage for savings and debt repayment (recommended: 20%)" },
+    },
+    outputs: {
+      needsAmount: { label: "Needs Budget", help: "Monthly amount allocated to essential expenses" },
+      wantsAmount: { label: "Wants Budget", help: "Monthly amount allocated to discretionary spending" },
+      savingsAmount: { label: "Savings Amount", help: "Monthly amount saved or used for debt repayment" },
+      annualIncome: { label: "Annual Income", help: "Your income over a full year" },
+      annualSavings: { label: "Annual Savings", help: "Total savings accumulated over a year" },
+      savingsRate: { label: "Savings Rate", help: "Percentage of income being saved" },
+      isBalanced: { label: "Budget Balanced?", help: "Whether savings rate meets the 10% minimum recommendation" },
+      monthlyEmergencyFund: { label: "Emergency Fund Target (3 months)", help: "Three months of essential expenses as emergency reserve" },
+    },
+  },
+  id: {
+    title: "Budget Planner (50/30/20 Rule)",
+    short: "Budget Planner",
+    description:
+      "Plan your monthly budget using the 50/30/20 rule. Allocate income to needs, wants, and savings to reach your financial goals.",
+    keywords: ["budget", "50/30/20", "savings", "needs", "wants", "income", "financial planning"],
+    inputs: {
+      monthlyIncome: { label: "Monthly Income", help: "Your total take-home income per month" },
+      needsPct: { label: "Needs %", help: "Percentage for essential expenses (recommended: 50%)" },
+      wantsPct: { label: "Wants %", help: "Percentage for discretionary spending (recommended: 30%)" },
+      savingsPct: { label: "Savings %", help: "Percentage for savings and debt repayment (recommended: 20%)" },
+    },
+    outputs: {
+      needsAmount: { label: "Needs Budget", help: "Monthly amount allocated to essential expenses" },
+      wantsAmount: { label: "Wants Budget", help: "Monthly amount allocated to discretionary spending" },
+      savingsAmount: { label: "Savings Amount", help: "Monthly amount saved or used for debt repayment" },
+      annualIncome: { label: "Annual Income", help: "Your income over a full year" },
+      annualSavings: { label: "Annual Savings", help: "Total savings accumulated over a year" },
+      savingsRate: { label: "Savings Rate", help: "Percentage of income being saved" },
+      isBalanced: { label: "Budget Balanced?", help: "Whether savings rate meets the 10% minimum recommendation" },
+      monthlyEmergencyFund: { label: "Emergency Fund Target (3 months)", help: "Three months of essential expenses as emergency reserve" },
+    },
+  },
+
   tr: {
     title: "Bütçe Planlayıcı (50/30/20 Kuralı)",
     short: "Bütçe Planlayıcı",

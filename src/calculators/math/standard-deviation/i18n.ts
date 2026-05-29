@@ -76,6 +76,157 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  pt: {
+    title: "Standard Deviation Calculator",
+    short: "Calculate population and sample standard deviation, variance, and mean for your dataset.",
+    description:
+      "Free standard deviation calculator. Input numbers and get mean, variance, and standard deviation with both population and sample formulas. Ideal for statistics and data analysis.",
+    keywords: [
+      "standard deviation calculator",
+      "variance calculator",
+      "sample standard deviation",
+      "population standard deviation",
+      "statistics calculator",
+      "mean calculator",
+      "data spread calculator",
+    ],
+    inputs: {
+      values: {
+        label: "Data values",
+        help: "Enter numbers separated by commas (e.g., 2, 4, 5, 6, 8). Must have at least one number.",
+      },
+      type: {
+        label: "Type",
+        help: "Choose population (σ) for entire datasets, or sample (s) for data samples.",
+      },
+    },
+    outputs: {
+      count: {
+        label: "Count (n)",
+        help: "Number of data points in your dataset.",
+      },
+      mean: {
+        label: "Mean (μ or x̄)",
+        help: "The average of all values.",
+      },
+      variance: {
+        label: "Variance (σ² or s²)",
+        help: "Average squared deviation from the mean. Measure of spread.",
+      },
+      standardDeviation: {
+        label: "Standard Deviation (σ or s)",
+        help: "Square root of variance. Measures how spread out data is from the mean.",
+      },
+    },
+    options: {
+      type: {
+        population: "Population (σ) — use n divisor",
+        sample: "Sample (s) — use n-1 divisor",
+      },
+    },
+    errors: {
+      invalidInput: "Please enter valid comma-separated numbers.",
+      emptyData: "At least one number is required.",
+    },
+    faq: [
+      {
+        q: "What is the difference between population and sample standard deviation?",
+        a: "Population standard deviation (σ) is used when you have data for an entire population and divides by n. Sample standard deviation (s) is used for samples from a larger population and divides by n-1 to provide an unbiased estimate (Bessel's correction).",
+      },
+      {
+        q: "What does a low vs high standard deviation mean?",
+        a: "A low standard deviation means data points are close to the mean (less spread). A high standard deviation means data is more spread out. For example, heights in a group of similar-aged people have lower deviation than heights across all ages.",
+      },
+      {
+        q: "How do I use standard deviation to understand my data?",
+        a: "Standard deviation helps quantify variability. In a normal distribution, ~68% of data falls within 1σ, ~95% within 2σ, and ~99.7% within 3σ of the mean. Use it to identify outliers or compare spread between datasets.",
+      },
+      {
+        q: "Why is variance different from standard deviation?",
+        a: "Variance is the average squared deviation, while standard deviation is its square root. Standard deviation is preferred because it's in the same units as the original data, making it more interpretable.",
+      },
+      {
+        q: "When should I use sample vs population standard deviation?",
+        a: "Use population (n) if you have the complete dataset you're analyzing. Use sample (n-1) if your data is a sample from a larger population — this avoids underestimating the true population standard deviation.",
+      },
+    ],
+  },
+  id: {
+    title: "Standard Deviation Calculator",
+    short: "Calculate population and sample standard deviation, variance, and mean for your dataset.",
+    description:
+      "Free standard deviation calculator. Input numbers and get mean, variance, and standard deviation with both population and sample formulas. Ideal for statistics and data analysis.",
+    keywords: [
+      "standard deviation calculator",
+      "variance calculator",
+      "sample standard deviation",
+      "population standard deviation",
+      "statistics calculator",
+      "mean calculator",
+      "data spread calculator",
+    ],
+    inputs: {
+      values: {
+        label: "Data values",
+        help: "Enter numbers separated by commas (e.g., 2, 4, 5, 6, 8). Must have at least one number.",
+      },
+      type: {
+        label: "Type",
+        help: "Choose population (σ) for entire datasets, or sample (s) for data samples.",
+      },
+    },
+    outputs: {
+      count: {
+        label: "Count (n)",
+        help: "Number of data points in your dataset.",
+      },
+      mean: {
+        label: "Mean (μ or x̄)",
+        help: "The average of all values.",
+      },
+      variance: {
+        label: "Variance (σ² or s²)",
+        help: "Average squared deviation from the mean. Measure of spread.",
+      },
+      standardDeviation: {
+        label: "Standard Deviation (σ or s)",
+        help: "Square root of variance. Measures how spread out data is from the mean.",
+      },
+    },
+    options: {
+      type: {
+        population: "Population (σ) — use n divisor",
+        sample: "Sample (s) — use n-1 divisor",
+      },
+    },
+    errors: {
+      invalidInput: "Please enter valid comma-separated numbers.",
+      emptyData: "At least one number is required.",
+    },
+    faq: [
+      {
+        q: "What is the difference between population and sample standard deviation?",
+        a: "Population standard deviation (σ) is used when you have data for an entire population and divides by n. Sample standard deviation (s) is used for samples from a larger population and divides by n-1 to provide an unbiased estimate (Bessel's correction).",
+      },
+      {
+        q: "What does a low vs high standard deviation mean?",
+        a: "A low standard deviation means data points are close to the mean (less spread). A high standard deviation means data is more spread out. For example, heights in a group of similar-aged people have lower deviation than heights across all ages.",
+      },
+      {
+        q: "How do I use standard deviation to understand my data?",
+        a: "Standard deviation helps quantify variability. In a normal distribution, ~68% of data falls within 1σ, ~95% within 2σ, and ~99.7% within 3σ of the mean. Use it to identify outliers or compare spread between datasets.",
+      },
+      {
+        q: "Why is variance different from standard deviation?",
+        a: "Variance is the average squared deviation, while standard deviation is its square root. Standard deviation is preferred because it's in the same units as the original data, making it more interpretable.",
+      },
+      {
+        q: "When should I use sample vs population standard deviation?",
+        a: "Use population (n) if you have the complete dataset you're analyzing. Use sample (n-1) if your data is a sample from a larger population — this avoids underestimating the true population standard deviation.",
+      },
+    ],
+  },
+
 
   tr: {
     title: "Standart Sapma Hesaplayıcı",

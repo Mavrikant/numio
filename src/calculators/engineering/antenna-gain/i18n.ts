@@ -27,6 +27,59 @@ const i18n: CalculatorI18n = {
       { q: "Why does doubling the diameter add 6 dB?", a: "Gain scales with diameter squared, and 10·log10(2²) = 6 dB. Likewise, doubling the frequency also adds about 6 dB of gain for the same dish." },
     ],
   },
+  pt: {
+    title: "Parabolic Antenna Gain & Beamwidth Calculator",
+    short: "Find the gain (dBi), beamwidth and effective aperture of a dish antenna.",
+    description:
+      "Free parabolic antenna calculator. Enter dish diameter, frequency and aperture efficiency to get gain in dBi, the −3 dB half-power beamwidth, linear gain and effective aperture. Useful for satellite, microwave and point-to-point links.",
+    keywords: ["antenna gain calculator", "parabolic dish gain", "dBi", "beamwidth", "HPBW", "effective aperture", "satellite dish", "microwave antenna"],
+    inputs: {
+      diameterM: { label: "Dish diameter (m)", help: "Physical diameter of the parabolic reflector." },
+      frequencyMHz: { label: "Frequency (MHz)", help: "Operating frequency, e.g. 12000 for 12 GHz Ku-band." },
+      efficiencyPct: { label: "Aperture efficiency (%)", help: "Typically 50–70%. Accounts for feed spillover, illumination taper and surface error." },
+    },
+    outputs: {
+      gainDbi: { label: "Gain", suffix: "dBi", help: "Boresight gain relative to an isotropic radiator." },
+      gainLinear: { label: "Gain (linear)", help: "Same gain as a plain ratio (not in dB)." },
+      beamwidthDeg: { label: "Half-power beamwidth", suffix: "°", help: "−3 dB beamwidth ≈ 70·λ/D." },
+      wavelengthM: { label: "Wavelength", help: "λ = c / f." },
+      effectiveApertureM2: { label: "Effective aperture", help: "A_eff = G·λ² / 4π." },
+    },
+    errors: { nonPositive: "Diameter and frequency must be greater than zero." },
+    faq: [
+      { q: "How is parabolic antenna gain calculated?", a: "Gain = η·(π·D/λ)², where D is the diameter, λ the wavelength and η the aperture efficiency. In dB: G(dBi) = 10·log10(η) + 20·log10(π·D·f/c)." },
+      { q: "What aperture efficiency should I use?", a: "Real dishes run about 50–70%. 55% is a common default for a prime-focus dish; high-performance Cassegrain feeds can reach 65–70%." },
+      { q: "What is half-power beamwidth?", a: "HPBW is the angular width where the radiated power falls to half (−3 dB) of the peak. For a dish it is roughly 70·λ/D degrees — bigger dishes and higher frequencies give narrower, more directional beams." },
+      { q: "Why does doubling the diameter add 6 dB?", a: "Gain scales with diameter squared, and 10·log10(2²) = 6 dB. Likewise, doubling the frequency also adds about 6 dB of gain for the same dish." },
+    ],
+  },
+  id: {
+    title: "Parabolic Antenna Gain & Beamwidth Calculator",
+    short: "Find the gain (dBi), beamwidth and effective aperture of a dish antenna.",
+    description:
+      "Free parabolic antenna calculator. Enter dish diameter, frequency and aperture efficiency to get gain in dBi, the −3 dB half-power beamwidth, linear gain and effective aperture. Useful for satellite, microwave and point-to-point links.",
+    keywords: ["antenna gain calculator", "parabolic dish gain", "dBi", "beamwidth", "HPBW", "effective aperture", "satellite dish", "microwave antenna"],
+    inputs: {
+      diameterM: { label: "Dish diameter (m)", help: "Physical diameter of the parabolic reflector." },
+      frequencyMHz: { label: "Frequency (MHz)", help: "Operating frequency, e.g. 12000 for 12 GHz Ku-band." },
+      efficiencyPct: { label: "Aperture efficiency (%)", help: "Typically 50–70%. Accounts for feed spillover, illumination taper and surface error." },
+    },
+    outputs: {
+      gainDbi: { label: "Gain", suffix: "dBi", help: "Boresight gain relative to an isotropic radiator." },
+      gainLinear: { label: "Gain (linear)", help: "Same gain as a plain ratio (not in dB)." },
+      beamwidthDeg: { label: "Half-power beamwidth", suffix: "°", help: "−3 dB beamwidth ≈ 70·λ/D." },
+      wavelengthM: { label: "Wavelength", help: "λ = c / f." },
+      effectiveApertureM2: { label: "Effective aperture", help: "A_eff = G·λ² / 4π." },
+    },
+    errors: { nonPositive: "Diameter and frequency must be greater than zero." },
+    faq: [
+      { q: "How is parabolic antenna gain calculated?", a: "Gain = η·(π·D/λ)², where D is the diameter, λ the wavelength and η the aperture efficiency. In dB: G(dBi) = 10·log10(η) + 20·log10(π·D·f/c)." },
+      { q: "What aperture efficiency should I use?", a: "Real dishes run about 50–70%. 55% is a common default for a prime-focus dish; high-performance Cassegrain feeds can reach 65–70%." },
+      { q: "What is half-power beamwidth?", a: "HPBW is the angular width where the radiated power falls to half (−3 dB) of the peak. For a dish it is roughly 70·λ/D degrees — bigger dishes and higher frequencies give narrower, more directional beams." },
+      { q: "Why does doubling the diameter add 6 dB?", a: "Gain scales with diameter squared, and 10·log10(2²) = 6 dB. Likewise, doubling the frequency also adds about 6 dB of gain for the same dish." },
+    ],
+  },
+
   tr: {
     title: "Parabolik Anten Kazancı ve Hüzme Genişliği Hesaplayıcı",
     short: "Bir çanak antenin kazancını (dBi), hüzme genişliğini ve etkin açıklığını bulun.",

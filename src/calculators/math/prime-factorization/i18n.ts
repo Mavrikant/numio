@@ -58,6 +58,121 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  pt: {
+    title: "Prime Factorization Calculator",
+    short:
+      "Decompose any number into its prime factors and view the exponent notation.",
+    description:
+      "Free prime factorization tool. Enter a number and instantly see its prime factors with exponents. Learn the fundamental theorem of arithmetic.",
+    keywords: [
+      "prime factorization",
+      "prime factors",
+      "number theory",
+      "fundamental theorem",
+      "factorization calculator",
+      "prime decomposition",
+      "exponent notation",
+    ],
+    inputs: {
+      number: {
+        label: "Number",
+        help: "Enter an integer between 2 and 1,000,000 to factorize.",
+      },
+    },
+    outputs: {
+      notation: {
+        label: "Prime Factorization",
+        help: "The number expressed as a product of prime powers (e.g., 2³ × 3² × 5).",
+      },
+      factors: {
+        label: "Prime Factors",
+        help: "List of prime factors with their exponents.",
+      },
+    },
+    errors: {
+      numberOutOfRange: "Number must be between 2 and 1,000,000.",
+    },
+    faq: [
+      {
+        q: "What is prime factorization?",
+        a: "Prime factorization is the process of expressing a number as a product of its prime factors. Every integer greater than 1 has a unique prime factorization (Fundamental Theorem of Arithmetic).",
+      },
+      {
+        q: "What is a prime number?",
+        a: "A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself. Examples: 2, 3, 5, 7, 11, 13.",
+      },
+      {
+        q: "What does the exponent mean?",
+        a: "The exponent indicates how many times a prime factor appears in the factorization. For example, in 2³, the exponent 3 means 2 × 2 × 2.",
+      },
+      {
+        q: "Why is prime factorization important?",
+        a: "Prime factorization is fundamental in number theory, cryptography, and mathematics. It helps simplify fractions, find GCD/LCM, and understand the structure of numbers.",
+      },
+      {
+        q: "Can 1 be factorized?",
+        a: "No. Prime factorization is only defined for integers greater than 1, since 1 has no prime factors.",
+      },
+    ],
+  },
+  id: {
+    title: "Prime Factorization Calculator",
+    short:
+      "Decompose any number into its prime factors and view the exponent notation.",
+    description:
+      "Free prime factorization tool. Enter a number and instantly see its prime factors with exponents. Learn the fundamental theorem of arithmetic.",
+    keywords: [
+      "prime factorization",
+      "prime factors",
+      "number theory",
+      "fundamental theorem",
+      "factorization calculator",
+      "prime decomposition",
+      "exponent notation",
+    ],
+    inputs: {
+      number: {
+        label: "Number",
+        help: "Enter an integer between 2 and 1,000,000 to factorize.",
+      },
+    },
+    outputs: {
+      notation: {
+        label: "Prime Factorization",
+        help: "The number expressed as a product of prime powers (e.g., 2³ × 3² × 5).",
+      },
+      factors: {
+        label: "Prime Factors",
+        help: "List of prime factors with their exponents.",
+      },
+    },
+    errors: {
+      numberOutOfRange: "Number must be between 2 and 1,000,000.",
+    },
+    faq: [
+      {
+        q: "What is prime factorization?",
+        a: "Prime factorization is the process of expressing a number as a product of its prime factors. Every integer greater than 1 has a unique prime factorization (Fundamental Theorem of Arithmetic).",
+      },
+      {
+        q: "What is a prime number?",
+        a: "A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself. Examples: 2, 3, 5, 7, 11, 13.",
+      },
+      {
+        q: "What does the exponent mean?",
+        a: "The exponent indicates how many times a prime factor appears in the factorization. For example, in 2³, the exponent 3 means 2 × 2 × 2.",
+      },
+      {
+        q: "Why is prime factorization important?",
+        a: "Prime factorization is fundamental in number theory, cryptography, and mathematics. It helps simplify fractions, find GCD/LCM, and understand the structure of numbers.",
+      },
+      {
+        q: "Can 1 be factorized?",
+        a: "No. Prime factorization is only defined for integers greater than 1, since 1 has no prime factors.",
+      },
+    ],
+  },
+
   tr: {
     title: "Asal Çarpanlarına Ayırma Hesaplayıcısı",
     short:

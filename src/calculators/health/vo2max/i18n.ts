@@ -74,6 +74,153 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  pt: {
+    title: "VO₂max Calculator",
+    short: "Estimate aerobic fitness (VO₂max) from a Cooper 12-min run or 1.5-mile run.",
+    description:
+      "Free VO₂max calculator using Cooper's 12-minute run formula or the 1.5-mile run test. Enter your test result, age and sex to estimate maximal oxygen uptake (ml/kg/min) and an ACSM fitness category.",
+    keywords: [
+      "VO2max calculator",
+      "Cooper test",
+      "1.5 mile run",
+      "aerobic fitness",
+      "cardio fitness",
+      "maximal oxygen uptake",
+      "ACSM fitness category",
+    ],
+    inputs: {
+      testType: {
+        label: "Test type",
+        help: "Cooper 12-min run (distance) or 1.5-mile run (time).",
+      },
+      sex: { label: "Sex", help: "Biological sex — used only for fitness-category norms." },
+      age: { label: "Age", help: "Your age in years (10–90)." },
+      distance: {
+        label: "Distance covered (12 min)",
+        help: "Total distance covered in 12 minutes (Cooper test), in metres.",
+      },
+      timeMinutes: {
+        label: "1.5-mile time",
+        help: "Time taken to run 1.5 miles (2.41 km), in minutes (decimals allowed).",
+      },
+    },
+    outputs: {
+      vo2maxMlKgMin: {
+        label: "VO₂max (ml/kg/min)",
+        help: "Estimated maximal oxygen uptake — the standard measure of aerobic fitness.",
+      },
+      fitnessCategory: {
+        label: "Fitness category",
+        help: "ACSM age- and sex-adjusted category: poor / fair / good / excellent / superior.",
+      },
+    },
+    options: {
+      testType: {
+        "cooper-12min": "Cooper 12-min run (distance)",
+        "mile-and-half": "1.5-mile run (time)",
+      },
+      sex: { male: "Male", female: "Female" },
+    },
+    errors: {
+      ageOutOfRange: "Age must be between 10 and 90 years.",
+      distanceRequired: "Distance is required for the Cooper 12-minute test.",
+      distanceOutOfRange: "Distance must be between 500 and 6000 metres.",
+      timeRequired: "Time is required for the 1.5-mile run test.",
+      timeOutOfRange: "Time must be between 5 and 30 minutes.",
+    },
+    faq: [
+      {
+        q: "What is VO₂max?",
+        a: "VO₂max is the maximum volume of oxygen your body can use per minute per kilogram of body weight (ml/kg/min). It reflects aerobic capacity and is one of the best predictors of cardiorespiratory fitness.",
+      },
+      {
+        q: "How accurate is the Cooper test?",
+        a: "Cooper's original 1968 study reported r ≈ 0.90 with treadmill VO₂max for healthy young men. Real-world precision is ±10–15% — sufficient to categorise fitness but not to replace lab measurement.",
+      },
+      {
+        q: "Which test should I pick?",
+        a: "Both are field tests with similar accuracy. The Cooper 12-min run is timed; the 1.5-mile run uses a fixed distance. Choose whichever matches your track or familiar route.",
+      },
+      {
+        q: "Is it safe for me?",
+        a: "Field VO₂max tests are maximal-effort runs. If you are over 40, sedentary, or have any cardiac risk factors, get medical clearance before testing.",
+      },
+    ],
+  },
+  id: {
+    title: "VO₂max Calculator",
+    short: "Estimate aerobic fitness (VO₂max) from a Cooper 12-min run or 1.5-mile run.",
+    description:
+      "Free VO₂max calculator using Cooper's 12-minute run formula or the 1.5-mile run test. Enter your test result, age and sex to estimate maximal oxygen uptake (ml/kg/min) and an ACSM fitness category.",
+    keywords: [
+      "VO2max calculator",
+      "Cooper test",
+      "1.5 mile run",
+      "aerobic fitness",
+      "cardio fitness",
+      "maximal oxygen uptake",
+      "ACSM fitness category",
+    ],
+    inputs: {
+      testType: {
+        label: "Test type",
+        help: "Cooper 12-min run (distance) or 1.5-mile run (time).",
+      },
+      sex: { label: "Sex", help: "Biological sex — used only for fitness-category norms." },
+      age: { label: "Age", help: "Your age in years (10–90)." },
+      distance: {
+        label: "Distance covered (12 min)",
+        help: "Total distance covered in 12 minutes (Cooper test), in metres.",
+      },
+      timeMinutes: {
+        label: "1.5-mile time",
+        help: "Time taken to run 1.5 miles (2.41 km), in minutes (decimals allowed).",
+      },
+    },
+    outputs: {
+      vo2maxMlKgMin: {
+        label: "VO₂max (ml/kg/min)",
+        help: "Estimated maximal oxygen uptake — the standard measure of aerobic fitness.",
+      },
+      fitnessCategory: {
+        label: "Fitness category",
+        help: "ACSM age- and sex-adjusted category: poor / fair / good / excellent / superior.",
+      },
+    },
+    options: {
+      testType: {
+        "cooper-12min": "Cooper 12-min run (distance)",
+        "mile-and-half": "1.5-mile run (time)",
+      },
+      sex: { male: "Male", female: "Female" },
+    },
+    errors: {
+      ageOutOfRange: "Age must be between 10 and 90 years.",
+      distanceRequired: "Distance is required for the Cooper 12-minute test.",
+      distanceOutOfRange: "Distance must be between 500 and 6000 metres.",
+      timeRequired: "Time is required for the 1.5-mile run test.",
+      timeOutOfRange: "Time must be between 5 and 30 minutes.",
+    },
+    faq: [
+      {
+        q: "What is VO₂max?",
+        a: "VO₂max is the maximum volume of oxygen your body can use per minute per kilogram of body weight (ml/kg/min). It reflects aerobic capacity and is one of the best predictors of cardiorespiratory fitness.",
+      },
+      {
+        q: "How accurate is the Cooper test?",
+        a: "Cooper's original 1968 study reported r ≈ 0.90 with treadmill VO₂max for healthy young men. Real-world precision is ±10–15% — sufficient to categorise fitness but not to replace lab measurement.",
+      },
+      {
+        q: "Which test should I pick?",
+        a: "Both are field tests with similar accuracy. The Cooper 12-min run is timed; the 1.5-mile run uses a fixed distance. Choose whichever matches your track or familiar route.",
+      },
+      {
+        q: "Is it safe for me?",
+        a: "Field VO₂max tests are maximal-effort runs. If you are over 40, sedentary, or have any cardiac risk factors, get medical clearance before testing.",
+      },
+    ],
+  },
+
 
   tr: {
     title: "VO₂max Hesaplayıcı",

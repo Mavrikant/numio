@@ -96,6 +96,197 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  pt: {
+    title: "Data Storage Converter",
+    short: "Convert between data storage units with binary (1024) or decimal (1000) mode.",
+    description:
+      "Free data storage converter supporting binary (KiB, MiB, GiB) and decimal (KB, MB, GB) conversions between bytes, kilobytes, megabytes, gigabytes, terabytes, and petabytes.",
+    keywords: [
+      "data storage converter",
+      "bytes converter",
+      "MB to GB",
+      "binary decimal conversion",
+      "storage units",
+      "disk space calculator",
+      "data size converter",
+    ],
+    inputs: {
+      value: {
+        label: "Value",
+        help: "The amount to convert.",
+      },
+      fromUnit: {
+        label: "From unit",
+        help: "Source unit of measurement.",
+      },
+      toUnit: {
+        label: "To unit",
+        help: "Target unit of measurement.",
+      },
+      mode: {
+        label: "Conversion mode",
+        help: "Binary uses base 1024 (standard for RAM and SSDs). Decimal uses base 1000 (standard for HDD manufacturers).",
+      },
+    },
+    outputs: {
+      result: {
+        label: "Result",
+        help: "Converted value in target unit.",
+      },
+      explanation: {
+        label: "Mode",
+        help: "Explains which conversion standard was used.",
+      },
+    },
+    options: {
+      fromUnit: {
+        B: "Byte (B)",
+        KB: "Kilobyte",
+        MB: "Megabyte",
+        GB: "Gigabyte",
+        TB: "Terabyte",
+        PB: "Petabyte",
+      },
+      toUnit: {
+        B: "Byte (B)",
+        KB: "Kilobyte",
+        MB: "Megabyte",
+        GB: "Gigabyte",
+        TB: "Terabyte",
+        PB: "Petabyte",
+      },
+      mode: {
+        binary: "Binary (1024-based)",
+        decimal: "Decimal (1000-based)",
+      },
+      byte: "Byte",
+      kilobyte: "Kilobyte",
+      megabyte: "Megabyte",
+      gigabyte: "Gigabyte",
+      terabyte: "Terabyte",
+      petabyte: "Petabyte",
+      binary: "Binary",
+      decimal: "Decimal",
+    },
+    errors: {
+      invalidValue: "Value must be non-negative.",
+      sameUnit: "Source and target units must be different.",
+    },
+    faq: [
+      {
+        q: "What is the difference between binary and decimal?",
+        a: "Binary (KiB, MiB) uses base 1024: 1 KiB = 1024 bytes. Decimal (KB, MB) uses base 1000: 1 KB = 1000 bytes. RAM and SSDs use binary; hard drive manufacturers traditionally use decimal.",
+      },
+      {
+        q: "Why does my 1 TB hard drive show as 931 GB?",
+        a: "Hard drives use decimal (1000-based) capacity labeling, while Windows often displays sizes in binary (1024-based). 1,000,000,000,000 bytes ÷ 1,073,741,824 bytes/GiB ≈ 931 GiB.",
+      },
+      {
+        q: "Which mode should I use?",
+        a: "Use binary for RAM, SSDs, and USB drives. Use decimal for comparing manufacturer specifications of hard drives and external storage.",
+      },
+      {
+        q: "What are the exact conversion factors?",
+        a: "Binary: 1 KB=1024 B, 1 MB=1024² B, 1 GB=1024³ B. Decimal: 1 KB=1000 B, 1 MB=1000² B, 1 GB=1000³ B.",
+      },
+    ],
+  },
+  id: {
+    title: "Data Storage Converter",
+    short: "Convert between data storage units with binary (1024) or decimal (1000) mode.",
+    description:
+      "Free data storage converter supporting binary (KiB, MiB, GiB) and decimal (KB, MB, GB) conversions between bytes, kilobytes, megabytes, gigabytes, terabytes, and petabytes.",
+    keywords: [
+      "data storage converter",
+      "bytes converter",
+      "MB to GB",
+      "binary decimal conversion",
+      "storage units",
+      "disk space calculator",
+      "data size converter",
+    ],
+    inputs: {
+      value: {
+        label: "Value",
+        help: "The amount to convert.",
+      },
+      fromUnit: {
+        label: "From unit",
+        help: "Source unit of measurement.",
+      },
+      toUnit: {
+        label: "To unit",
+        help: "Target unit of measurement.",
+      },
+      mode: {
+        label: "Conversion mode",
+        help: "Binary uses base 1024 (standard for RAM and SSDs). Decimal uses base 1000 (standard for HDD manufacturers).",
+      },
+    },
+    outputs: {
+      result: {
+        label: "Result",
+        help: "Converted value in target unit.",
+      },
+      explanation: {
+        label: "Mode",
+        help: "Explains which conversion standard was used.",
+      },
+    },
+    options: {
+      fromUnit: {
+        B: "Byte (B)",
+        KB: "Kilobyte",
+        MB: "Megabyte",
+        GB: "Gigabyte",
+        TB: "Terabyte",
+        PB: "Petabyte",
+      },
+      toUnit: {
+        B: "Byte (B)",
+        KB: "Kilobyte",
+        MB: "Megabyte",
+        GB: "Gigabyte",
+        TB: "Terabyte",
+        PB: "Petabyte",
+      },
+      mode: {
+        binary: "Binary (1024-based)",
+        decimal: "Decimal (1000-based)",
+      },
+      byte: "Byte",
+      kilobyte: "Kilobyte",
+      megabyte: "Megabyte",
+      gigabyte: "Gigabyte",
+      terabyte: "Terabyte",
+      petabyte: "Petabyte",
+      binary: "Binary",
+      decimal: "Decimal",
+    },
+    errors: {
+      invalidValue: "Value must be non-negative.",
+      sameUnit: "Source and target units must be different.",
+    },
+    faq: [
+      {
+        q: "What is the difference between binary and decimal?",
+        a: "Binary (KiB, MiB) uses base 1024: 1 KiB = 1024 bytes. Decimal (KB, MB) uses base 1000: 1 KB = 1000 bytes. RAM and SSDs use binary; hard drive manufacturers traditionally use decimal.",
+      },
+      {
+        q: "Why does my 1 TB hard drive show as 931 GB?",
+        a: "Hard drives use decimal (1000-based) capacity labeling, while Windows often displays sizes in binary (1024-based). 1,000,000,000,000 bytes ÷ 1,073,741,824 bytes/GiB ≈ 931 GiB.",
+      },
+      {
+        q: "Which mode should I use?",
+        a: "Use binary for RAM, SSDs, and USB drives. Use decimal for comparing manufacturer specifications of hard drives and external storage.",
+      },
+      {
+        q: "What are the exact conversion factors?",
+        a: "Binary: 1 KB=1024 B, 1 MB=1024² B, 1 GB=1024³ B. Decimal: 1 KB=1000 B, 1 MB=1000² B, 1 GB=1000³ B.",
+      },
+    ],
+  },
+
 
   tr: {
     title: "Veri Depolama Dönüştürücü",

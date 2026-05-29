@@ -16,6 +16,27 @@ const i18n: CalculatorI18n = {
       { q: "What is the golden ratio connection?", a: "The ratio of consecutive Fibonacci numbers approaches the golden ratio φ = (1+√5)/2 ≈ 1.618 as n grows." },
     ],
   },
+  pt: {
+    title: "Fibonacci Calculator", short: "Find the nth Fibonacci number, the sum of terms and the golden ratio.",
+    description: "Free Fibonacci calculator. Enter a position n to get the nth Fibonacci number (F₁ = F₂ = 1), the sum of the first n terms, and the ratio of consecutive terms that converges to the golden ratio φ ≈ 1.618.",
+    keywords: ["fibonacci calculator", "nth fibonacci number", "fibonacci sequence", "golden ratio", "fibonacci term"],
+    ...io("Position (n)", "Fibonacci number (Fₙ)", "Sum of first n terms", "Ratio Fₙ/Fₙ₋₁"),
+    faq: [
+      { q: "What is the Fibonacci sequence?", a: "Each number is the sum of the two before it, starting 1, 1, 2, 3, 5, 8, 13… It appears throughout nature, art and computer science." },
+      { q: "What is the golden ratio connection?", a: "The ratio of consecutive Fibonacci numbers approaches the golden ratio φ = (1+√5)/2 ≈ 1.618 as n grows." },
+    ],
+  },
+  id: {
+    title: "Fibonacci Calculator", short: "Find the nth Fibonacci number, the sum of terms and the golden ratio.",
+    description: "Free Fibonacci calculator. Enter a position n to get the nth Fibonacci number (F₁ = F₂ = 1), the sum of the first n terms, and the ratio of consecutive terms that converges to the golden ratio φ ≈ 1.618.",
+    keywords: ["fibonacci calculator", "nth fibonacci number", "fibonacci sequence", "golden ratio", "fibonacci term"],
+    ...io("Position (n)", "Fibonacci number (Fₙ)", "Sum of first n terms", "Ratio Fₙ/Fₙ₋₁"),
+    faq: [
+      { q: "What is the Fibonacci sequence?", a: "Each number is the sum of the two before it, starting 1, 1, 2, 3, 5, 8, 13… It appears throughout nature, art and computer science." },
+      { q: "What is the golden ratio connection?", a: "The ratio of consecutive Fibonacci numbers approaches the golden ratio φ = (1+√5)/2 ≈ 1.618 as n grows." },
+    ],
+  },
+
   tr: {
     title: "Fibonacci Hesaplayıcı", short: "n. Fibonacci sayısını, terimlerin toplamını ve altın oranı bulun.",
     description: "Ücretsiz Fibonacci hesaplayıcı. Bir n konumu girerek n. Fibonacci sayısını (F₁ = F₂ = 1), ilk n terimin toplamını ve altın oran φ ≈ 1,618'e yakınsayan ardışık terim oranını öğrenin.",

@@ -21,6 +21,8 @@ const LOCALE_BCP47: Record<Locale, string> = {
   fr: "fr-FR",
   es: "es-ES",
   it: "it-IT",
+  pt: "pt-PT",
+  id: "id-ID",
   ar: "ar-EG",
   ru: "ru-RU",
   zh: "zh-CN",

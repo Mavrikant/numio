@@ -38,6 +38,81 @@ const i18n: ToolI18n = {
       },
     ],
   },
+  pt: {
+    title: "Scatter Plot & Correlation",
+    short: "Upload CSV data, pick X and Y columns, and instantly visualize relationships with Pearson correlation and optional linear regression.",
+    description: "Free scatter plot tool. Upload a CSV file or paste data, choose two numeric columns, and instantly see the relationship. Computes Pearson correlation coefficient (r), R², and optionally overlays a linear regression line with slope and intercept.",
+    keywords: ["scatter plot", "correlation", "pearson", "regression", "linear regression", "data visualization", "csv", "r squared", "statistics"],
+    ui: {
+      selectXColumn: "X axis (independent variable)",
+      selectYColumn: "Y axis (dependent variable)",
+      showRegression: "Show regression line",
+      correlation: "Pearson r",
+      r2: "R²",
+      slope: "Slope",
+      intercept: "Intercept",
+      noNumericColumns: "Need at least 2 numeric columns to build a scatter plot.",
+      noDataYet: "Upload or paste data above to see the scatter plot.",
+      pointCount: "Points",
+      sampleLabel: "Sample: height vs weight (50 points)",
+    },
+    faq: [
+      {
+        q: "What is a scatter plot?",
+        a: "A scatter plot displays pairs of numeric values as dots on an X-Y plane. Each dot represents one observation. You look for patterns — a cloud slanting up-right means a positive relationship; slanting down-right means negative; a circular blob means little or no linear relationship.",
+      },
+      {
+        q: "What is the Pearson correlation coefficient (r)?",
+        a: "Pearson r measures the strength and direction of the linear relationship between two variables, on a scale from -1 to +1. A value near +1 means strong positive correlation, near -1 means strong negative correlation, and near 0 means little or no linear relationship. Note that r measures only linear association — two variables can be strongly related in a curved way yet have r close to 0.",
+      },
+      {
+        q: "What does R² mean?",
+        a: "R² (coefficient of determination) equals r squared and tells you the proportion of variance in Y explained by X under a linear model. For example, R² = 0.81 means 81% of the variation in Y is linearly accounted for by X. The remaining 19% is due to other factors or random noise.",
+      },
+      {
+        q: "How is the regression line calculated?",
+        a: "We use ordinary least squares (OLS): the line ŷ = slope·x + intercept that minimises the sum of squared vertical distances between each point and the line. The slope equals Cov(X,Y)/Var(X) and the intercept is ȳ − slope·x̄.",
+      },
+    ],
+  },
+  id: {
+    title: "Scatter Plot & Correlation",
+    short: "Upload CSV data, pick X and Y columns, and instantly visualize relationships with Pearson correlation and optional linear regression.",
+    description: "Free scatter plot tool. Upload a CSV file or paste data, choose two numeric columns, and instantly see the relationship. Computes Pearson correlation coefficient (r), R², and optionally overlays a linear regression line with slope and intercept.",
+    keywords: ["scatter plot", "correlation", "pearson", "regression", "linear regression", "data visualization", "csv", "r squared", "statistics"],
+    ui: {
+      selectXColumn: "X axis (independent variable)",
+      selectYColumn: "Y axis (dependent variable)",
+      showRegression: "Show regression line",
+      correlation: "Pearson r",
+      r2: "R²",
+      slope: "Slope",
+      intercept: "Intercept",
+      noNumericColumns: "Need at least 2 numeric columns to build a scatter plot.",
+      noDataYet: "Upload or paste data above to see the scatter plot.",
+      pointCount: "Points",
+      sampleLabel: "Sample: height vs weight (50 points)",
+    },
+    faq: [
+      {
+        q: "What is a scatter plot?",
+        a: "A scatter plot displays pairs of numeric values as dots on an X-Y plane. Each dot represents one observation. You look for patterns — a cloud slanting up-right means a positive relationship; slanting down-right means negative; a circular blob means little or no linear relationship.",
+      },
+      {
+        q: "What is the Pearson correlation coefficient (r)?",
+        a: "Pearson r measures the strength and direction of the linear relationship between two variables, on a scale from -1 to +1. A value near +1 means strong positive correlation, near -1 means strong negative correlation, and near 0 means little or no linear relationship. Note that r measures only linear association — two variables can be strongly related in a curved way yet have r close to 0.",
+      },
+      {
+        q: "What does R² mean?",
+        a: "R² (coefficient of determination) equals r squared and tells you the proportion of variance in Y explained by X under a linear model. For example, R² = 0.81 means 81% of the variation in Y is linearly accounted for by X. The remaining 19% is due to other factors or random noise.",
+      },
+      {
+        q: "How is the regression line calculated?",
+        a: "We use ordinary least squares (OLS): the line ŷ = slope·x + intercept that minimises the sum of squared vertical distances between each point and the line. The slope equals Cov(X,Y)/Var(X) and the intercept is ȳ − slope·x̄.",
+      },
+    ],
+  },
+
   tr: {
     title: "Dağılım Grafiği ve Korelasyon",
     short: "CSV verisi yükleyin, X ve Y sütunlarını seçin, Pearson korelasyonu ve isteğe bağlı regresyon çizgisiyle ilişkileri anında görselleştirin.",

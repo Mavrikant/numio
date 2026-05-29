@@ -16,6 +16,27 @@ const i18n: CalculatorI18n = {
       { q: "What can this be used for?", a: "Scaling recipes, converting units, map distances, similar triangles — anywhere two ratios are equal and one term is unknown." },
     ],
   },
+  pt: {
+    title: "Proportion Solver", short: "Solve a/b = c/x for the unknown value x by cross-multiplication.",
+    description: "Free proportion solver. Enter three values of the proportion a/b = c/x and get the missing value x by cross-multiplication (x = b·c/a), plus the ratio a/b and the cross product.",
+    keywords: ["proportion solver", "cross multiplication calculator", "solve for x", "ratio proportion", "find missing value"],
+    ...io("x (solved)", "Ratio a/b", "Cross product b·c"),
+    faq: [
+      { q: "How do I solve a proportion?", a: "For a/b = c/x, cross-multiply to get a·x = b·c, then x = b·c/a. For 2/3 = 8/x, x = 3·8/2 = 12." },
+      { q: "What can this be used for?", a: "Scaling recipes, converting units, map distances, similar triangles — anywhere two ratios are equal and one term is unknown." },
+    ],
+  },
+  id: {
+    title: "Proportion Solver", short: "Solve a/b = c/x for the unknown value x by cross-multiplication.",
+    description: "Free proportion solver. Enter three values of the proportion a/b = c/x and get the missing value x by cross-multiplication (x = b·c/a), plus the ratio a/b and the cross product.",
+    keywords: ["proportion solver", "cross multiplication calculator", "solve for x", "ratio proportion", "find missing value"],
+    ...io("x (solved)", "Ratio a/b", "Cross product b·c"),
+    faq: [
+      { q: "How do I solve a proportion?", a: "For a/b = c/x, cross-multiply to get a·x = b·c, then x = b·c/a. For 2/3 = 8/x, x = 3·8/2 = 12." },
+      { q: "What can this be used for?", a: "Scaling recipes, converting units, map distances, similar triangles — anywhere two ratios are equal and one term is unknown." },
+    ],
+  },
+
   tr: {
     title: "Orantı Çözücü", short: "a/b = c/x orantısında bilinmeyen x'i çapraz çarpımla çözün.",
     description: "Ücretsiz orantı çözücü. a/b = c/x orantısının üç değerini girerek eksik değer x'i çapraz çarpımla (x = b·c/a), ayrıca a/b oranını ve çapraz çarpımı bulun.",

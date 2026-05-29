@@ -1,10 +1,11 @@
 import { describe, it, expect } from "vitest";
 import i18n from "../i18n";
+import { LOCALES } from "@/config/site";
 
 describe("steel-weight — i18n", () => {
-  it("should have all 12 languages", () => {
+  it("has an entry for every locale", () => {
     const languages = Object.keys(i18n);
-    expect(languages.length).toBe(12);
+    expect(languages.length).toBe(LOCALES.length);
   });
 
   it("should have no placeholder text", () => {

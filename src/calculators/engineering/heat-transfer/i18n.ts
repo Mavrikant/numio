@@ -16,6 +16,37 @@ const i18n: CalculatorI18n = {
       heatFluxBtu: { label: "Heat Flux (BTU/h)", help: "Heat flow in BTU per hour" },
     },
   },
+  pt: {
+    title: "Heat Transfer Calculator",
+    short: "Calculate heat flux through a thermal resistance.",
+    description: "Free heat transfer calculator. Enter temperature difference and thermal resistance to calculate heat flux in Watts, kilowatts, and BTU/h.",
+    keywords: ["heat transfer", "thermal resistance", "HVAC", "energy", "building physics"],
+    inputs: {
+      temperatureDifference: { label: "Temperature Difference", help: "ΔT between hot and cold side (°C)" },
+      thermalResistance: { label: "Thermal Resistance", help: "R-value (m²·K/W)" },
+    },
+    outputs: {
+      heatFluxW: { label: "Heat Flux", help: "Heat flow in Watts (Q = ΔT/R)" },
+      heatFluxKW: { label: "Heat Flux (kW)", help: "Heat flow in kilowatts" },
+      heatFluxBtu: { label: "Heat Flux (BTU/h)", help: "Heat flow in BTU per hour" },
+    },
+  },
+  id: {
+    title: "Heat Transfer Calculator",
+    short: "Calculate heat flux through a thermal resistance.",
+    description: "Free heat transfer calculator. Enter temperature difference and thermal resistance to calculate heat flux in Watts, kilowatts, and BTU/h.",
+    keywords: ["heat transfer", "thermal resistance", "HVAC", "energy", "building physics"],
+    inputs: {
+      temperatureDifference: { label: "Temperature Difference", help: "ΔT between hot and cold side (°C)" },
+      thermalResistance: { label: "Thermal Resistance", help: "R-value (m²·K/W)" },
+    },
+    outputs: {
+      heatFluxW: { label: "Heat Flux", help: "Heat flow in Watts (Q = ΔT/R)" },
+      heatFluxKW: { label: "Heat Flux (kW)", help: "Heat flow in kilowatts" },
+      heatFluxBtu: { label: "Heat Flux (BTU/h)", help: "Heat flow in BTU per hour" },
+    },
+  },
+
   tr: {
     title: "Isı Transferi Hesaplayıcı",
     short: "Isıl direnç boyunca ısı akısını hesaplayın.",

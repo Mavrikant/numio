@@ -66,6 +66,137 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  pt: {
+    title: "Number Base Converter",
+    short: "Convert numbers between decimal, binary, octal, and hexadecimal bases.",
+    description:
+      "Free number base converter supporting decimal, binary, octal, and hexadecimal conversions. Handles negative numbers and fractional parts.",
+    keywords: ["base converter", "binary", "hexadecimal", "number system", "octal", "decimal conversion", "base 2 4 8 16"],
+    inputs: {
+      sourceBase: {
+        label: "From base",
+        help: "Select the input number base.",
+      },
+      value: {
+        label: "Number",
+        help: "Enter the number to convert. Supports negative numbers and fractional parts (e.g., -10.5, 255, 1010, FF).",
+      },
+    },
+    outputs: {
+      decimal: {
+        label: "Decimal (Base 10)",
+      },
+      binary: {
+        label: "Binary (Base 2)",
+      },
+      octal: {
+        label: "Octal (Base 8)",
+      },
+      hexadecimal: {
+        label: "Hexadecimal (Base 16)",
+      },
+    },
+    options: {
+      sourceBase: {
+        decimal: "Decimal (Base 10)",
+        binary: "Binary (Base 2)",
+        octal: "Octal (Base 8)",
+        hexadecimal: "Hexadecimal (Base 16)",
+      },
+    },
+    errors: {
+      invalidInput: "Invalid number format for the selected base.",
+      outOfRange: "Number is out of range.",
+    },
+    faq: [
+      {
+        q: "What is a number base?",
+        a: "A number base (or radix) is the number of unique digits used in a positional numeral system. Decimal uses base 10 (0-9), binary uses base 2 (0-1), octal uses base 8 (0-7), and hexadecimal uses base 16 (0-9, A-F).",
+      },
+      {
+        q: "Why is hexadecimal used in computing?",
+        a: "Hexadecimal is widely used in computing because it is a compact representation of binary. Each hexadecimal digit represents exactly 4 binary digits, making it easier for humans to read and write binary data.",
+      },
+      {
+        q: "How does binary conversion work?",
+        a: "To convert decimal to binary, repeatedly divide by 2 and collect remainders. For example, 10 ÷ 2 = 5 remainder 0, 5 ÷ 2 = 2 remainder 1, 2 ÷ 2 = 1 remainder 0, 1 ÷ 2 = 0 remainder 1, giving 1010 in binary.",
+      },
+      {
+        q: "Can I convert negative numbers?",
+        a: "Yes! This converter supports negative numbers in all bases. The negative sign is preserved, so -10 in decimal converts to -1010 in binary.",
+      },
+      {
+        q: "What about fractional numbers?",
+        a: "Fractional numbers can be converted using repeated multiplication. For example, 0.5 decimal = 0.1 binary. Some fractions create repeating patterns (like 0.1 decimal repeating in binary), which are limited to 20 digits.",
+      },
+    ],
+  },
+  id: {
+    title: "Number Base Converter",
+    short: "Convert numbers between decimal, binary, octal, and hexadecimal bases.",
+    description:
+      "Free number base converter supporting decimal, binary, octal, and hexadecimal conversions. Handles negative numbers and fractional parts.",
+    keywords: ["base converter", "binary", "hexadecimal", "number system", "octal", "decimal conversion", "base 2 4 8 16"],
+    inputs: {
+      sourceBase: {
+        label: "From base",
+        help: "Select the input number base.",
+      },
+      value: {
+        label: "Number",
+        help: "Enter the number to convert. Supports negative numbers and fractional parts (e.g., -10.5, 255, 1010, FF).",
+      },
+    },
+    outputs: {
+      decimal: {
+        label: "Decimal (Base 10)",
+      },
+      binary: {
+        label: "Binary (Base 2)",
+      },
+      octal: {
+        label: "Octal (Base 8)",
+      },
+      hexadecimal: {
+        label: "Hexadecimal (Base 16)",
+      },
+    },
+    options: {
+      sourceBase: {
+        decimal: "Decimal (Base 10)",
+        binary: "Binary (Base 2)",
+        octal: "Octal (Base 8)",
+        hexadecimal: "Hexadecimal (Base 16)",
+      },
+    },
+    errors: {
+      invalidInput: "Invalid number format for the selected base.",
+      outOfRange: "Number is out of range.",
+    },
+    faq: [
+      {
+        q: "What is a number base?",
+        a: "A number base (or radix) is the number of unique digits used in a positional numeral system. Decimal uses base 10 (0-9), binary uses base 2 (0-1), octal uses base 8 (0-7), and hexadecimal uses base 16 (0-9, A-F).",
+      },
+      {
+        q: "Why is hexadecimal used in computing?",
+        a: "Hexadecimal is widely used in computing because it is a compact representation of binary. Each hexadecimal digit represents exactly 4 binary digits, making it easier for humans to read and write binary data.",
+      },
+      {
+        q: "How does binary conversion work?",
+        a: "To convert decimal to binary, repeatedly divide by 2 and collect remainders. For example, 10 ÷ 2 = 5 remainder 0, 5 ÷ 2 = 2 remainder 1, 2 ÷ 2 = 1 remainder 0, 1 ÷ 2 = 0 remainder 1, giving 1010 in binary.",
+      },
+      {
+        q: "Can I convert negative numbers?",
+        a: "Yes! This converter supports negative numbers in all bases. The negative sign is preserved, so -10 in decimal converts to -1010 in binary.",
+      },
+      {
+        q: "What about fractional numbers?",
+        a: "Fractional numbers can be converted using repeated multiplication. For example, 0.5 decimal = 0.1 binary. Some fractions create repeating patterns (like 0.1 decimal repeating in binary), which are limited to 20 digits.",
+      },
+    ],
+  },
+
 
   tr: {
     title: "Sayı Tabanı Dönüştürücüsü",

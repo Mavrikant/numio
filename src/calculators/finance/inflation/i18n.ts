@@ -84,6 +84,173 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  pt: {
+    title: "Inflation Calculator",
+    short: "Calculate the future cost of goods or the present value of a future amount using inflation.",
+    description:
+      "Free inflation calculator. Find out how much your money is worth in the future, how purchasing power erodes, and what a future dollar is worth today.",
+    keywords: [
+      "inflation calculator",
+      "purchasing power",
+      "future value inflation",
+      "CPI calculator",
+      "cost of living calculator",
+      "inflation rate calculator",
+      "real value money",
+    ],
+    inputs: {
+      amount: {
+        label: "Amount",
+        help: "The dollar amount you want to adjust for inflation.",
+      },
+      inflationRate: {
+        label: "Annual Inflation Rate (%)",
+        help: "The expected or historical average annual inflation rate. The Fed targets 2%. Long-run US average is about 3%.",
+      },
+      years: {
+        label: "Years",
+        help: "The number of years over which to calculate the effect of inflation.",
+      },
+      mode: {
+        label: "Calculation Mode",
+        help: "Future cost: what will your money buy in the future? Present value: what is a future amount worth today?",
+      },
+    },
+    outputs: {
+      result: {
+        label: "Result",
+        help: "In future cost mode: equivalent future price. In present value mode: today's equivalent of the future amount.",
+      },
+      purchasingPowerLoss: {
+        label: "Purchasing Power Lost",
+        help: "The percentage of purchasing power eroded by inflation over the period.",
+      },
+      cumulativeInflation: {
+        label: "Cumulative Inflation",
+        help: "The total percentage price increase over the entire period.",
+      },
+      realValueToday: {
+        label: "Real Value in Today's Dollars",
+        help: "The inflation-adjusted value in current dollars.",
+      },
+    },
+    options: {
+      mode: {
+        future_cost: "Future Cost",
+        present_value: "Present Value",
+      },
+    },
+    errors: {
+      amountRequired: "Amount must be greater than zero.",
+      rateOutOfRange: "Inflation rate must be between 0% and 50%.",
+    },
+    faq: [
+      {
+        q: "What is inflation?",
+        a: "Inflation is the rate at which the general price level of goods and services rises over time, eroding purchasing power. A dollar today buys less than it did 10 years ago because of inflation.",
+      },
+      {
+        q: "What is the US Fed inflation target?",
+        a: "The Federal Reserve targets an average of 2% annual inflation, as measured by the PCE price index. This rate is considered consistent with maximum employment and stable prices.",
+      },
+      {
+        q: "How does cumulative inflation differ from annual inflation?",
+        a: "Annual inflation is the year-over-year percentage change in prices. Cumulative inflation compounds over multiple years. At 3% annual inflation, cumulative inflation over 10 years is (1.03)^10 − 1 ≈ 34.4%, not 30%.",
+      },
+      {
+        q: "What does purchasing power loss mean?",
+        a: "If inflation is 3% per year for 10 years, $1 today has the buying power of about $0.74 in 10 years. The purchasing power loss is approximately 25.6% — meaning you need $1.34 in 10 years to buy what $1 buys today.",
+      },
+      {
+        q: "What is the difference between future cost and present value mode?",
+        a: "Future cost mode answers: 'If something costs $100 today, how much will it cost in N years?' Present value mode answers: 'If I receive $100 in N years, what is it worth in today's dollars?'",
+      },
+    ],
+  },
+  id: {
+    title: "Inflation Calculator",
+    short: "Calculate the future cost of goods or the present value of a future amount using inflation.",
+    description:
+      "Free inflation calculator. Find out how much your money is worth in the future, how purchasing power erodes, and what a future dollar is worth today.",
+    keywords: [
+      "inflation calculator",
+      "purchasing power",
+      "future value inflation",
+      "CPI calculator",
+      "cost of living calculator",
+      "inflation rate calculator",
+      "real value money",
+    ],
+    inputs: {
+      amount: {
+        label: "Amount",
+        help: "The dollar amount you want to adjust for inflation.",
+      },
+      inflationRate: {
+        label: "Annual Inflation Rate (%)",
+        help: "The expected or historical average annual inflation rate. The Fed targets 2%. Long-run US average is about 3%.",
+      },
+      years: {
+        label: "Years",
+        help: "The number of years over which to calculate the effect of inflation.",
+      },
+      mode: {
+        label: "Calculation Mode",
+        help: "Future cost: what will your money buy in the future? Present value: what is a future amount worth today?",
+      },
+    },
+    outputs: {
+      result: {
+        label: "Result",
+        help: "In future cost mode: equivalent future price. In present value mode: today's equivalent of the future amount.",
+      },
+      purchasingPowerLoss: {
+        label: "Purchasing Power Lost",
+        help: "The percentage of purchasing power eroded by inflation over the period.",
+      },
+      cumulativeInflation: {
+        label: "Cumulative Inflation",
+        help: "The total percentage price increase over the entire period.",
+      },
+      realValueToday: {
+        label: "Real Value in Today's Dollars",
+        help: "The inflation-adjusted value in current dollars.",
+      },
+    },
+    options: {
+      mode: {
+        future_cost: "Future Cost",
+        present_value: "Present Value",
+      },
+    },
+    errors: {
+      amountRequired: "Amount must be greater than zero.",
+      rateOutOfRange: "Inflation rate must be between 0% and 50%.",
+    },
+    faq: [
+      {
+        q: "What is inflation?",
+        a: "Inflation is the rate at which the general price level of goods and services rises over time, eroding purchasing power. A dollar today buys less than it did 10 years ago because of inflation.",
+      },
+      {
+        q: "What is the US Fed inflation target?",
+        a: "The Federal Reserve targets an average of 2% annual inflation, as measured by the PCE price index. This rate is considered consistent with maximum employment and stable prices.",
+      },
+      {
+        q: "How does cumulative inflation differ from annual inflation?",
+        a: "Annual inflation is the year-over-year percentage change in prices. Cumulative inflation compounds over multiple years. At 3% annual inflation, cumulative inflation over 10 years is (1.03)^10 − 1 ≈ 34.4%, not 30%.",
+      },
+      {
+        q: "What does purchasing power loss mean?",
+        a: "If inflation is 3% per year for 10 years, $1 today has the buying power of about $0.74 in 10 years. The purchasing power loss is approximately 25.6% — meaning you need $1.34 in 10 years to buy what $1 buys today.",
+      },
+      {
+        q: "What is the difference between future cost and present value mode?",
+        a: "Future cost mode answers: 'If something costs $100 today, how much will it cost in N years?' Present value mode answers: 'If I receive $100 in N years, what is it worth in today's dollars?'",
+      },
+    ],
+  },
+
 
   tr: {
     title: "Enflasyon Hesaplayıcı",

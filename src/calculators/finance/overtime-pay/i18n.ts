@@ -16,6 +16,27 @@ const i18n: CalculatorI18n = {
       { q: "Is this gross or net pay?", a: "Gross — before taxes and deductions. Use a paycheck calculator for take-home pay." },
     ],
   },
+  pt: {
+    title: "Overtime Pay Calculator", short: "Calculate total pay from regular and overtime hours.",
+    description: "Free overtime pay calculator. Enter your hourly rate, regular hours, overtime hours and overtime multiplier (e.g. 1.5× for time-and-a-half) to get regular pay, overtime pay and total gross pay.",
+    keywords: ["overtime pay calculator", "overtime calculator", "time and a half", "hourly pay calculator", "overtime rate"],
+    ...io("Hourly rate", "Regular hours", "Overtime hours", "Overtime multiplier", "Total pay", "Regular pay", "Overtime pay", "Overtime rate"),
+    faq: [
+      { q: "How is overtime pay calculated?", a: "Overtime hours are paid at your hourly rate times a multiplier — commonly 1.5× ('time and a half'). Total pay = regular hours × rate + overtime hours × (rate × multiplier)." },
+      { q: "Is this gross or net pay?", a: "Gross — before taxes and deductions. Use a paycheck calculator for take-home pay." },
+    ],
+  },
+  id: {
+    title: "Overtime Pay Calculator", short: "Calculate total pay from regular and overtime hours.",
+    description: "Free overtime pay calculator. Enter your hourly rate, regular hours, overtime hours and overtime multiplier (e.g. 1.5× for time-and-a-half) to get regular pay, overtime pay and total gross pay.",
+    keywords: ["overtime pay calculator", "overtime calculator", "time and a half", "hourly pay calculator", "overtime rate"],
+    ...io("Hourly rate", "Regular hours", "Overtime hours", "Overtime multiplier", "Total pay", "Regular pay", "Overtime pay", "Overtime rate"),
+    faq: [
+      { q: "How is overtime pay calculated?", a: "Overtime hours are paid at your hourly rate times a multiplier — commonly 1.5× ('time and a half'). Total pay = regular hours × rate + overtime hours × (rate × multiplier)." },
+      { q: "Is this gross or net pay?", a: "Gross — before taxes and deductions. Use a paycheck calculator for take-home pay." },
+    ],
+  },
+
   tr: {
     title: "Fazla Mesai Ücreti Hesaplayıcı", short: "Normal ve fazla mesai saatlerinden toplam ücreti hesaplayın.",
     description: "Ücretsiz fazla mesai ücreti hesaplayıcı. Saatlik ücretinizi, normal saatleri, fazla mesai saatlerini ve fazla mesai çarpanını (örn. %50 zamlı için 1,5×) girerek normal ücret, fazla mesai ücreti ve toplam brüt ücreti öğrenin.",

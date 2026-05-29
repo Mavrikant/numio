@@ -47,6 +47,99 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  pt: {
+    title: "Loan Amortization Schedule",
+    short: "Generate a full amortization table for any loan with monthly payment, interest, and balance breakdown.",
+    description:
+      "Free loan amortization calculator. Enter the principal, interest rate, and term to see your monthly payment and a complete month-by-month breakdown of principal, interest, and balance.",
+    keywords: [
+      "loan amortization schedule",
+      "amortization table",
+      "loan payment calculator",
+      "monthly payment breakdown",
+      "debt payoff schedule",
+      "loan interest calculator",
+      "principal vs interest",
+    ],
+    inputs: {
+      principal: { label: "Loan Amount", help: "The total amount borrowed." },
+      annualRate: { label: "Annual Interest Rate (%)", help: "The yearly interest rate on the loan." },
+      termMonths: { label: "Loan Term (months)", help: "Total number of months to repay the loan." },
+      startDate: { label: "Start Date (optional)", help: "If provided, dates are shown in the amortization schedule." },
+    },
+    outputs: {
+      monthlyPayment: { label: "Monthly Payment", help: "Fixed payment made each month." },
+      totalPayment: { label: "Total Payment", help: "Sum of all monthly payments." },
+      totalInterest: { label: "Total Interest", help: "Total interest paid over the life of the loan." },
+      amortizationSchedule: { label: "Amortization Schedule", help: "Month-by-month breakdown of payment, principal, interest, and remaining balance." },
+    },
+    errors: {
+      principalRange: "Loan amount must be between $100 and $10,000,000.",
+      rateRange: "Annual rate must be between 0% and 50%.",
+      termRange: "Loan term must be between 1 and 600 months.",
+    },
+    faq: [
+      {
+        q: "What is an amortization schedule?",
+        a: "An amortization schedule is a detailed table of periodic loan payments showing the amount of principal and interest that comprise each payment until the loan is paid off at the end of its term.",
+      },
+      {
+        q: "Why does more of my payment go to interest early on?",
+        a: "Because interest is calculated on the outstanding balance, and the balance is largest at the start of the loan. As you pay down the principal, the interest charge shrinks and more of each payment reduces the balance.",
+      },
+      {
+        q: "How does making extra payments affect amortization?",
+        a: "Extra principal payments reduce your outstanding balance immediately, lowering the interest charged in all future months and effectively shortening the loan term.",
+      },
+    ],
+  },
+  id: {
+    title: "Loan Amortization Schedule",
+    short: "Generate a full amortization table for any loan with monthly payment, interest, and balance breakdown.",
+    description:
+      "Free loan amortization calculator. Enter the principal, interest rate, and term to see your monthly payment and a complete month-by-month breakdown of principal, interest, and balance.",
+    keywords: [
+      "loan amortization schedule",
+      "amortization table",
+      "loan payment calculator",
+      "monthly payment breakdown",
+      "debt payoff schedule",
+      "loan interest calculator",
+      "principal vs interest",
+    ],
+    inputs: {
+      principal: { label: "Loan Amount", help: "The total amount borrowed." },
+      annualRate: { label: "Annual Interest Rate (%)", help: "The yearly interest rate on the loan." },
+      termMonths: { label: "Loan Term (months)", help: "Total number of months to repay the loan." },
+      startDate: { label: "Start Date (optional)", help: "If provided, dates are shown in the amortization schedule." },
+    },
+    outputs: {
+      monthlyPayment: { label: "Monthly Payment", help: "Fixed payment made each month." },
+      totalPayment: { label: "Total Payment", help: "Sum of all monthly payments." },
+      totalInterest: { label: "Total Interest", help: "Total interest paid over the life of the loan." },
+      amortizationSchedule: { label: "Amortization Schedule", help: "Month-by-month breakdown of payment, principal, interest, and remaining balance." },
+    },
+    errors: {
+      principalRange: "Loan amount must be between $100 and $10,000,000.",
+      rateRange: "Annual rate must be between 0% and 50%.",
+      termRange: "Loan term must be between 1 and 600 months.",
+    },
+    faq: [
+      {
+        q: "What is an amortization schedule?",
+        a: "An amortization schedule is a detailed table of periodic loan payments showing the amount of principal and interest that comprise each payment until the loan is paid off at the end of its term.",
+      },
+      {
+        q: "Why does more of my payment go to interest early on?",
+        a: "Because interest is calculated on the outstanding balance, and the balance is largest at the start of the loan. As you pay down the principal, the interest charge shrinks and more of each payment reduces the balance.",
+      },
+      {
+        q: "How does making extra payments affect amortization?",
+        a: "Extra principal payments reduce your outstanding balance immediately, lowering the interest charged in all future months and effectively shortening the loan term.",
+      },
+    ],
+  },
+
 
   tr: {
     title: "Kredi İtfa Planı",

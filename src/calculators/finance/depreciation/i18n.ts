@@ -59,6 +59,123 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  pt: {
+    title: "Depreciation Calculator",
+    short: "Calculate annual depreciation, book value, and a year-by-year schedule using four standard methods.",
+    description:
+      "Free depreciation calculator supporting straight-line, declining-balance, double-declining-balance, and sum-of-years-digits methods. Enter the asset cost, salvage value, useful life, and method to get a complete year-by-year schedule (opening value, depreciation, closing value), total depreciation, and ending book value.",
+    keywords: [
+      "depreciation calculator",
+      "straight line depreciation",
+      "declining balance",
+      "double declining",
+      "sum of years digits",
+      "asset depreciation schedule",
+      "book value calculator",
+    ],
+    inputs: {
+      assetCost: { label: "Asset Cost", help: "Total acquisition cost of the asset, including installation and freight." },
+      salvageValue: { label: "Salvage Value", help: "Estimated value of the asset at the end of its useful life. Must not exceed asset cost." },
+      usefulLife: { label: "Useful Life (years)", help: "Estimated number of years the asset will be in service." },
+      method: { label: "Depreciation Method", help: "Straight-line: equal annual amounts. Declining-balance: fixed rate applied to book value. Double-declining: 2/n rate applied to book value. Sum-of-years-digits: accelerated, weighted toward early years." },
+      decliningRate: { label: "Declining Rate (%)", help: "Only used by the declining-balance method. Ignored for other methods." },
+    },
+    outputs: {
+      totalDepreciation: { label: "Total Depreciation", help: "Sum of depreciation expense across the full useful life." },
+      bookValueEndOfLife: { label: "Book Value at End of Life", help: "Remaining book value after the last year of depreciation. For straight-line and sum-of-years-digits this equals the salvage value; for declining-balance methods it may differ if the salvage floor is not reached." },
+      annualSchedule: { label: "Annual Schedule", help: "Year-by-year table of opening value, depreciation expense, and closing value." },
+    },
+    errors: {
+      salvageExceedsCost: "Salvage value cannot exceed the asset cost.",
+      assetCostRange: "Asset cost must be between 1 and 1,000,000,000.",
+      usefulLifeRange: "Useful life must be between 1 and 100 years.",
+    },
+    options: {
+      method: {
+        "straight-line": "Straight-Line",
+        "declining-balance": "Declining Balance",
+        "sum-of-years-digits": "Sum-of-Years' Digits",
+        "double-declining": "Double Declining Balance",
+      },
+    },
+    faq: [
+      {
+        q: "Which depreciation method should I use?",
+        a: "Straight-line is the simplest and most widely accepted for financial reporting. Declining-balance and double-declining-balance front-load depreciation expense and are common for assets that lose value quickly. Sum-of-years-digits is another accelerated method. For US tax purposes, follow the IRS MACRS tables in Publication 946.",
+      },
+      {
+        q: "What is salvage value?",
+        a: "Salvage value (also called residual value) is the estimated amount the asset will be worth at the end of its useful life. It limits how far the asset can be depreciated: the book value should not fall below salvage value.",
+      },
+      {
+        q: "How does double-declining balance work?",
+        a: "Double-declining balance applies a rate of 2/n (where n is useful life) to the asset's current book value each year. Because depreciation shrinks as book value shrinks, this method front-loads expense in the early years.",
+      },
+      {
+        q: "Does this match my tax return?",
+        a: "Not necessarily. Tax depreciation follows jurisdiction-specific rules (e.g., MACRS in the US, capital allowances in the UK) that use prescribed lives and conventions. This calculator illustrates the textbook formulas; consult a qualified accountant for filings.",
+      },
+    ],
+  },
+  id: {
+    title: "Depreciation Calculator",
+    short: "Calculate annual depreciation, book value, and a year-by-year schedule using four standard methods.",
+    description:
+      "Free depreciation calculator supporting straight-line, declining-balance, double-declining-balance, and sum-of-years-digits methods. Enter the asset cost, salvage value, useful life, and method to get a complete year-by-year schedule (opening value, depreciation, closing value), total depreciation, and ending book value.",
+    keywords: [
+      "depreciation calculator",
+      "straight line depreciation",
+      "declining balance",
+      "double declining",
+      "sum of years digits",
+      "asset depreciation schedule",
+      "book value calculator",
+    ],
+    inputs: {
+      assetCost: { label: "Asset Cost", help: "Total acquisition cost of the asset, including installation and freight." },
+      salvageValue: { label: "Salvage Value", help: "Estimated value of the asset at the end of its useful life. Must not exceed asset cost." },
+      usefulLife: { label: "Useful Life (years)", help: "Estimated number of years the asset will be in service." },
+      method: { label: "Depreciation Method", help: "Straight-line: equal annual amounts. Declining-balance: fixed rate applied to book value. Double-declining: 2/n rate applied to book value. Sum-of-years-digits: accelerated, weighted toward early years." },
+      decliningRate: { label: "Declining Rate (%)", help: "Only used by the declining-balance method. Ignored for other methods." },
+    },
+    outputs: {
+      totalDepreciation: { label: "Total Depreciation", help: "Sum of depreciation expense across the full useful life." },
+      bookValueEndOfLife: { label: "Book Value at End of Life", help: "Remaining book value after the last year of depreciation. For straight-line and sum-of-years-digits this equals the salvage value; for declining-balance methods it may differ if the salvage floor is not reached." },
+      annualSchedule: { label: "Annual Schedule", help: "Year-by-year table of opening value, depreciation expense, and closing value." },
+    },
+    errors: {
+      salvageExceedsCost: "Salvage value cannot exceed the asset cost.",
+      assetCostRange: "Asset cost must be between 1 and 1,000,000,000.",
+      usefulLifeRange: "Useful life must be between 1 and 100 years.",
+    },
+    options: {
+      method: {
+        "straight-line": "Straight-Line",
+        "declining-balance": "Declining Balance",
+        "sum-of-years-digits": "Sum-of-Years' Digits",
+        "double-declining": "Double Declining Balance",
+      },
+    },
+    faq: [
+      {
+        q: "Which depreciation method should I use?",
+        a: "Straight-line is the simplest and most widely accepted for financial reporting. Declining-balance and double-declining-balance front-load depreciation expense and are common for assets that lose value quickly. Sum-of-years-digits is another accelerated method. For US tax purposes, follow the IRS MACRS tables in Publication 946.",
+      },
+      {
+        q: "What is salvage value?",
+        a: "Salvage value (also called residual value) is the estimated amount the asset will be worth at the end of its useful life. It limits how far the asset can be depreciated: the book value should not fall below salvage value.",
+      },
+      {
+        q: "How does double-declining balance work?",
+        a: "Double-declining balance applies a rate of 2/n (where n is useful life) to the asset's current book value each year. Because depreciation shrinks as book value shrinks, this method front-loads expense in the early years.",
+      },
+      {
+        q: "Does this match my tax return?",
+        a: "Not necessarily. Tax depreciation follows jurisdiction-specific rules (e.g., MACRS in the US, capital allowances in the UK) that use prescribed lives and conventions. This calculator illustrates the textbook formulas; consult a qualified accountant for filings.",
+      },
+    ],
+  },
+
 
   tr: {
     title: "Amortisman Hesaplayıcısı",

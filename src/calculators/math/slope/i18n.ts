@@ -31,6 +31,53 @@ const i18n: CalculatorI18n = {
       { q: "How is the line equation found?", a: "Once you have the slope m and y-intercept b, the line is y = mx + b. The intercept is b = y₁ − m·x₁." },
     ],
   },
+  pt: {
+    title: "Slope Calculator",
+    short: "Find the slope, y-intercept, distance, angle and midpoint between two points.",
+    description:
+      "Free slope calculator. Enter two points (x₁,y₁) and (x₂,y₂) to get the slope, the line's y-intercept, the distance between the points, the angle of incline and the midpoint.",
+    keywords: ["slope calculator", "slope of a line", "y-intercept", "distance between two points", "midpoint", "gradient", "line equation"],
+    inputs: pts(),
+    outputs: {
+      slope: { label: "Slope (m)", help: "Rise over run: (y₂−y₁)/(x₂−x₁)." },
+      yIntercept: { label: "Y-intercept (b)", help: "Where the line crosses the y-axis." },
+      distance: { label: "Distance", help: "Straight-line distance between the two points." },
+      angleDeg: { label: "Angle of incline", suffix: "°", help: "Angle the line makes with the x-axis." },
+      deltaX: { label: "Δx", help: "Horizontal change, x₂−x₁." },
+      deltaY: { label: "Δy", help: "Vertical change, y₂−y₁." },
+      midpointX: { label: "Midpoint x" },
+      midpointY: { label: "Midpoint y" },
+    },
+    faq: [
+      { q: "How do I calculate slope?", a: "Slope m = (y₂−y₁)/(x₂−x₁) — the vertical change divided by the horizontal change. For points (1,2) and (4,8): m = (8−2)/(4−1) = 2." },
+      { q: "What does a slope of zero or undefined mean?", a: "A slope of 0 is a horizontal line. An undefined (infinite) slope is a vertical line, where x₂ = x₁ and the formula divides by zero." },
+      { q: "How is the line equation found?", a: "Once you have the slope m and y-intercept b, the line is y = mx + b. The intercept is b = y₁ − m·x₁." },
+    ],
+  },
+  id: {
+    title: "Slope Calculator",
+    short: "Find the slope, y-intercept, distance, angle and midpoint between two points.",
+    description:
+      "Free slope calculator. Enter two points (x₁,y₁) and (x₂,y₂) to get the slope, the line's y-intercept, the distance between the points, the angle of incline and the midpoint.",
+    keywords: ["slope calculator", "slope of a line", "y-intercept", "distance between two points", "midpoint", "gradient", "line equation"],
+    inputs: pts(),
+    outputs: {
+      slope: { label: "Slope (m)", help: "Rise over run: (y₂−y₁)/(x₂−x₁)." },
+      yIntercept: { label: "Y-intercept (b)", help: "Where the line crosses the y-axis." },
+      distance: { label: "Distance", help: "Straight-line distance between the two points." },
+      angleDeg: { label: "Angle of incline", suffix: "°", help: "Angle the line makes with the x-axis." },
+      deltaX: { label: "Δx", help: "Horizontal change, x₂−x₁." },
+      deltaY: { label: "Δy", help: "Vertical change, y₂−y₁." },
+      midpointX: { label: "Midpoint x" },
+      midpointY: { label: "Midpoint y" },
+    },
+    faq: [
+      { q: "How do I calculate slope?", a: "Slope m = (y₂−y₁)/(x₂−x₁) — the vertical change divided by the horizontal change. For points (1,2) and (4,8): m = (8−2)/(4−1) = 2." },
+      { q: "What does a slope of zero or undefined mean?", a: "A slope of 0 is a horizontal line. An undefined (infinite) slope is a vertical line, where x₂ = x₁ and the formula divides by zero." },
+      { q: "How is the line equation found?", a: "Once you have the slope m and y-intercept b, the line is y = mx + b. The intercept is b = y₁ − m·x₁." },
+    ],
+  },
+
   tr: {
     title: "Eğim Hesaplayıcı",
     short: "İki nokta arasındaki eğimi, y-kesişimini, mesafeyi, açıyı ve orta noktayı bulun.",

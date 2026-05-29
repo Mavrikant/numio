@@ -70,6 +70,145 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  pt: {
+    title: "Percentage Calculator",
+    short: "Calculate percentages instantly: X% of Y, X is what % of Y, or percentage change.",
+    description:
+      "Free 3-in-1 percentage calculator. Find what X% of Y is, calculate what percentage X is of Y, or compute percentage change between two values.",
+    keywords: [
+      "percentage calculator",
+      "percent calculator",
+      "percentage change calculator",
+      "what percentage of",
+      "percent of",
+    ],
+    inputs: {
+      mode: {
+        label: "Problem type",
+        help: "Choose what you want to calculate",
+      },
+      x: {
+        label: "First value",
+        help: "The percentage or part (varies by problem type)",
+      },
+      y: {
+        label: "Second value",
+        help: "The base or whole (varies by problem type)",
+      },
+    },
+    outputs: {
+      result: {
+        label: "Result",
+        help: "Calculated result",
+      },
+      explanation: {
+        label: "Explanation",
+        help: "Step-by-step breakdown",
+      },
+    },
+    options: {
+      mode: {
+        "what_is_x_pct_of_y": "X% of Y",
+        "x_is_what_pct_of_y": "X is what % of Y",
+        "pct_change": "Percentage change from X to Y",
+      },
+    },
+    errors: {
+      divideByZero: "Cannot divide by zero",
+    },
+    faq: [
+      {
+        q: "What does 'percentage' mean?",
+        a: "Percentage (%) means 'per hundred'. For example, 25% means 25 out of 100, or 0.25 as a decimal.",
+      },
+      {
+        q: "How do I calculate X% of Y?",
+        a: "Multiply Y by X and divide by 100. Formula: (X / 100) × Y. Example: 25% of 200 = (25 / 100) × 200 = 50.",
+      },
+      {
+        q: "How do I find what percentage X is of Y?",
+        a: "Divide X by Y and multiply by 100. Formula: (X / Y) × 100. Example: 50 is what % of 200 = (50 / 200) × 100 = 25%.",
+      },
+      {
+        q: "What is percentage change?",
+        a: "Percentage change measures how much a value has changed relative to its original value. Formula: ((New - Old) / Old) × 100. A positive result means increase, negative means decrease.",
+      },
+      {
+        q: "Can percentages exceed 100%?",
+        a: "Yes. A percentage greater than 100% means the new value exceeds the original (e.g., growing from 50 to 150 is a 200% increase). Percentages can also be negative for decreases.",
+      },
+    ],
+  },
+  id: {
+    title: "Percentage Calculator",
+    short: "Calculate percentages instantly: X% of Y, X is what % of Y, or percentage change.",
+    description:
+      "Free 3-in-1 percentage calculator. Find what X% of Y is, calculate what percentage X is of Y, or compute percentage change between two values.",
+    keywords: [
+      "percentage calculator",
+      "percent calculator",
+      "percentage change calculator",
+      "what percentage of",
+      "percent of",
+    ],
+    inputs: {
+      mode: {
+        label: "Problem type",
+        help: "Choose what you want to calculate",
+      },
+      x: {
+        label: "First value",
+        help: "The percentage or part (varies by problem type)",
+      },
+      y: {
+        label: "Second value",
+        help: "The base or whole (varies by problem type)",
+      },
+    },
+    outputs: {
+      result: {
+        label: "Result",
+        help: "Calculated result",
+      },
+      explanation: {
+        label: "Explanation",
+        help: "Step-by-step breakdown",
+      },
+    },
+    options: {
+      mode: {
+        "what_is_x_pct_of_y": "X% of Y",
+        "x_is_what_pct_of_y": "X is what % of Y",
+        "pct_change": "Percentage change from X to Y",
+      },
+    },
+    errors: {
+      divideByZero: "Cannot divide by zero",
+    },
+    faq: [
+      {
+        q: "What does 'percentage' mean?",
+        a: "Percentage (%) means 'per hundred'. For example, 25% means 25 out of 100, or 0.25 as a decimal.",
+      },
+      {
+        q: "How do I calculate X% of Y?",
+        a: "Multiply Y by X and divide by 100. Formula: (X / 100) × Y. Example: 25% of 200 = (25 / 100) × 200 = 50.",
+      },
+      {
+        q: "How do I find what percentage X is of Y?",
+        a: "Divide X by Y and multiply by 100. Formula: (X / Y) × 100. Example: 50 is what % of 200 = (50 / 200) × 100 = 25%.",
+      },
+      {
+        q: "What is percentage change?",
+        a: "Percentage change measures how much a value has changed relative to its original value. Formula: ((New - Old) / Old) × 100. A positive result means increase, negative means decrease.",
+      },
+      {
+        q: "Can percentages exceed 100%?",
+        a: "Yes. A percentage greater than 100% means the new value exceeds the original (e.g., growing from 50 to 150 is a 200% increase). Percentages can also be negative for decreases.",
+      },
+    ],
+  },
+
 
   tr: {
     title: "Yüzde Hesaplayıcı",
