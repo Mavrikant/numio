@@ -52,4 +52,14 @@ describe("Data Storage Converter — edge cases", () => {
     });
     expect(result.success).toBe(false);
   });
+
+  it("accepts bit units (byte-to-bit conversion)", () => {
+    const result = inputSchema.safeParse({
+      value: 1,
+      fromUnit: "MB",
+      toUnit: "Mbit",
+      mode: "binary",
+    });
+    expect(result.success).toBe(true);
+  });
 });
