@@ -4,10 +4,25 @@ import { defineCalculator } from "@/types/calculator";
 import { compute } from "./compute";
 import i18n from "./i18n";
 
+const UNITS = [
+  "B",
+  "KB",
+  "MB",
+  "GB",
+  "TB",
+  "PB",
+  "bit",
+  "Kbit",
+  "Mbit",
+  "Gbit",
+  "Tbit",
+  "Pbit",
+] as const;
+
 const inputSchema = z.object({
   value: z.number().nonnegative(),
-  fromUnit: z.enum(["B", "KB", "MB", "GB", "TB", "PB"]),
-  toUnit: z.enum(["B", "KB", "MB", "GB", "TB", "PB"]),
+  fromUnit: z.enum(UNITS),
+  toUnit: z.enum(UNITS),
   mode: z.enum(["binary", "decimal"]),
 });
 
@@ -38,6 +53,12 @@ export default defineCalculator({
           { value: "GB", i18nKey: "gigabyte" },
           { value: "TB", i18nKey: "terabyte" },
           { value: "PB", i18nKey: "petabyte" },
+          { value: "bit", i18nKey: "bit" },
+          { value: "Kbit", i18nKey: "kilobit" },
+          { value: "Mbit", i18nKey: "megabit" },
+          { value: "Gbit", i18nKey: "gigabit" },
+          { value: "Tbit", i18nKey: "terabit" },
+          { value: "Pbit", i18nKey: "petabit" },
         ],
       },
       defaultValue: "GB",
@@ -54,6 +75,12 @@ export default defineCalculator({
           { value: "GB", i18nKey: "gigabyte" },
           { value: "TB", i18nKey: "terabyte" },
           { value: "PB", i18nKey: "petabyte" },
+          { value: "bit", i18nKey: "bit" },
+          { value: "Kbit", i18nKey: "kilobit" },
+          { value: "Mbit", i18nKey: "megabit" },
+          { value: "Gbit", i18nKey: "gigabit" },
+          { value: "Tbit", i18nKey: "terabit" },
+          { value: "Pbit", i18nKey: "petabit" },
         ],
       },
       defaultValue: "MB",
@@ -106,5 +133,5 @@ export default defineCalculator({
       "Binary (1024-based) and decimal (1000-based) conversions differ significantly at larger scales. Most operating systems use binary, while disk manufacturers typically use decimal.",
   },
   related: ["speed", "time-convert"],
-  tags: ["data", "storage", "units", "conversion", "binary", "decimal"],
+  tags: ["data", "storage", "units", "conversion", "binary", "decimal", "bits", "bytes"],
 });

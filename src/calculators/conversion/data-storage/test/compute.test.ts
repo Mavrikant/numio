@@ -76,4 +76,67 @@ describe("Data Storage Converter — compute", () => {
     });
     expect(result.result).toBe(1024);
   });
+
+  it("converts 1 byte to 8 bits", () => {
+    const result = compute({
+      value: 1,
+      fromUnit: "B",
+      toUnit: "bit",
+      mode: "binary",
+    });
+    expect(result.result).toBe(8);
+  });
+
+  it("converts 1 MB to 8 Mbit (binary mode)", () => {
+    // 1 byte = 8 bits, so 1 Megabyte = 8 Megabit regardless of base
+    const result = compute({
+      value: 1,
+      fromUnit: "MB",
+      toUnit: "Mbit",
+      mode: "binary",
+    });
+    expect(result.result).toBe(8);
+  });
+
+  it("converts 1 MB to 8 Mbit (decimal mode)", () => {
+    const result = compute({
+      value: 1,
+      fromUnit: "MB",
+      toUnit: "Mbit",
+      mode: "decimal",
+    });
+    expect(result.result).toBe(8);
+  });
+
+  it("converts 8 Mbit back to 1 MB", () => {
+    const result = compute({
+      value: 8,
+      fromUnit: "Mbit",
+      toUnit: "MB",
+      mode: "binary",
+    });
+    expect(result.result).toBe(1);
+  });
+
+  it("converts 1 Gbit to Mbit (binary mode)", () => {
+    // 1 Gbit (binary) = 1024 Mbit
+    const result = compute({
+      value: 1,
+      fromUnit: "Gbit",
+      toUnit: "Mbit",
+      mode: "binary",
+    });
+    expect(result.result).toBe(1024);
+  });
+
+  it("converts 1 GB to Mbit (decimal mode)", () => {
+    // 1 GB = 8 Gbit (decimal) = 8000 Mbit
+    const result = compute({
+      value: 1,
+      fromUnit: "GB",
+      toUnit: "Mbit",
+      mode: "decimal",
+    });
+    expect(result.result).toBe(8000);
+  });
 });
