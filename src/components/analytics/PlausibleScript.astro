@@ -1,0 +1,20 @@
+---
+/**
+ * PlausibleScript.astro
+ * Always-on Plausible Analytics, placed in <head> via Base.astro so every page
+ * is counted. Plausible is open-source, lightweight and cookieless — it sets no
+ * cookies and collects no personal data — so it loads unconditionally.
+ *
+ * The data-domain is derived from SITE_URL, so it matches the site registered
+ * in the Plausible dashboard and follows any future domain change automatically.
+ */
+import { SITE_URL } from "@/config/site";
+
+const dataDomain = new URL(SITE_URL).host;
+---
+
+<script
+  is:inline
+  defer
+  data-domain={dataDomain}
+  src="https://plausible.io/js/script.js"></script>
