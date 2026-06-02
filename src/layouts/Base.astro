@@ -96,7 +96,7 @@ const desc = description ?? t(locale, "site.description");
       })();
     </script>
 
-    {/* Plausible Analytics — no-op unless PUBLIC_PLAUSIBLE_ENABLED === "true" */}
+    {/* Plausible Analytics — cookieless, loaded on every page */}
     <PlausibleScript />
   </head>
 

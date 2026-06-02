@@ -1,66 +1,20 @@
 ---
 /**
  * PlausibleScript.astro
- * Place inside <head>. Injects the Plausible Analytics script when
- * PUBLIC_PLAUSIBLE_ENABLED === "true" (build-time gate) and a domain resolves.
+ * Always-on Plausible Analytics, placed in <head> via Base.astro so every page
+ * is counted. Plausible is open-source, lightweight and cookieless — it sets no
+ * cookies and collects no personal data — so it loads unconditionally.
  *
- * Plausible is cookieless and collects no personal data, so — unlike AdSense —
- * it loads by default without requiring opt-in consent. It does, however,
- * honour an *explicit* analytics opt-out: if the user rejected analytics in the
- * consent banner (analytics-consent === "rejected"), the script is not loaded.
- * If they later accept, the banner's "analytics-consent-accepted" event loads
- * it on the spot.
- *
- * The <script> is injected via DOM with `defer`, so it never blocks rendering.
- * Configuration (domain, src) is resolved in src/lib/plausible.ts so it can be
- * unit-tested independently of Astro.
+ * The data-domain is derived from SITE_URL, so it matches the site registered
+ * in the Plausible dashboard and follows any future domain change automatically.
  */
-import { resolvePlausibleConfig } from "@/lib/plausible";
+import { SITE_URL } from "@/config/site";
 
-const { enabled, domain, src } = resolvePlausibleConfig(import.meta.env);
+const dataDomain = new URL(SITE_URL).host;
 ---
 
-{enabled && (
-  <script is:inline define:vars={{ domain, src }}>
-    (function () {
-      const ANALYTICS_CONSENT_KEY = "analytics-consent";
-
-      function analyticsRejected() {
-        try {
-          return localStorage.getItem(ANALYTICS_CONSENT_KEY) === "rejected";
-        } catch {
-          return false;
-        }
-      }
-
-      function injectPlausible() {
-        // Guard against double-injection (e.g. consent event after initial load)
-        if (document.querySelector("script[data-plausible-injected]")) return;
-
-        const script = document.createElement("script");
-        script.src = src;
-        script.defer = true;
-        script.setAttribute("data-domain", domain);
-        script.dataset.plausibleInjected = "true";
-        document.head.appendChild(script);
-
-        // Queue stub so window.plausible(...) calls (custom events / pageviews)
-        // made before the script finishes loading are not dropped. This is the
-        // snippet Plausible recommends alongside the script tag.
-        window.plausible =
-          window.plausible ||
-          function () {
-            (window.plausible.q = window.plausible.q || []).push(arguments);
-          };
-      }
-
-      // Load by default unless analytics was explicitly rejected.
-      if (!analyticsRejected()) {
-        injectPlausible();
-      }
-
-      // Load immediately if the user accepts analytics later via the banner.
-      window.addEventListener("analytics-consent-accepted", injectPlausible);
-    })();
-  </script>
-)}
+<script
+  is:inline
+  defer
+  data-domain={dataDomain}
+  src="https://plausible.io/js/script.js"></script>
