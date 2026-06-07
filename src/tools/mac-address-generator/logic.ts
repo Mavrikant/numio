@@ -1,41 +1,62 @@
-/** Random MAC address generation with formatting options. */
-
-export type Separator = ":" | "-" | ".";
+/** Separator style for a rendered MAC address. */
+export type MacFormat = "colon" | "hyphen" | "dot" | "none";
 
 export interface MacOptions {
-  readonly separator: Separator;
+  /** Already-validated bare hex prefix (0–12 uppercase hex digits). */
+  readonly prefixHex: string;
+  readonly format: MacFormat;
   readonly uppercase: boolean;
-  /** When true, set the locally-administered bit and clear the multicast bit on the first octet. */
-  readonly localAdmin: boolean;
+  readonly count: number;
 }
 
-const hex2 = (n: number): string => (n & 0xff).toString(16).padStart(2, "0");
+const HEX_DIGITS = "0123456789ABCDEF";
 
 /**
- * Format a 6-byte MAC address. With `.` separator the address is grouped into
- * three 4-hex-digit blocks (Cisco style); otherwise into six 2-hex-digit octets.
- * Throws if `bytes` is not exactly 6 bytes.
+ * Normalise a user-supplied MAC prefix to bare uppercase hex digits. Accepts
+ * the common separator styles (`:`, `-`, `.`, spaces). Returns the hex string
+ * (0–12 chars) on success, or null if it contains non-hex characters or is
+ * longer than a full 48-bit address.
  */
-export function buildMac(bytes: Uint8Array, opts: MacOptions): string {
-  if (bytes.length !== 6) throw new Error("MAC address must be exactly 6 bytes");
-  const octets = Array.from(bytes);
-
-  if (opts.localAdmin) {
-    octets[0] = (octets[0] | 0b00000010) & 0b11111110; // set bit 1 (local), clear bit 0 (unicast)
-  }
-
-  let out: string;
-  if (opts.separator === ".") {
-    const h = octets.map(hex2).join("");
-    out = `${h.slice(0, 4)}.${h.slice(4, 8)}.${h.slice(8, 12)}`;
-  } else {
-    out = octets.map(hex2).join(opts.separator);
-  }
-  return opts.uppercase ? out.toUpperCase() : out;
+export function parsePrefix(prefix: string): string | null {
+  const hex = prefix.replace(/[\s.:-]/g, "").toUpperCase();
+  if (hex.length > 12) return null;
+  if (hex !== "" && !/^[0-9A-F]+$/.test(hex)) return null;
+  return hex;
 }
 
-/** Generate a random MAC address using a cryptographically secure source. */
-export function generateMac(opts: MacOptions): string {
-  const bytes = crypto.getRandomValues(new Uint8Array(6));
-  return buildMac(bytes, opts);
+/**
+ * Build one 12-digit (48-bit) MAC as bare uppercase hex, keeping the validated
+ * prefix and filling the remaining nibbles from the injected random source.
+ */
+export function generateMacHex(prefixHex: string, rand: () => number): string {
+  let hex = prefixHex;
+  while (hex.length < 12) hex += HEX_DIGITS[Math.floor(rand() * 16)];
+  return hex.slice(0, 12);
+}
+
+/** Format a 12-digit hex MAC in the requested separator style and case. */
+export function formatMac(hex12: string, format: MacFormat, uppercase: boolean): string {
+  const h = uppercase ? hex12.toUpperCase() : hex12.toLowerCase();
+  const pairs = h.match(/.{2}/g)!;
+  switch (format) {
+    case "colon":
+      return pairs.join(":");
+    case "hyphen":
+      return pairs.join("-");
+    case "dot":
+      return `${h.slice(0, 4)}.${h.slice(4, 8)}.${h.slice(8, 12)}`;
+    case "none":
+      return h;
+  }
+}
+
+/**
+ * Generate `count` formatted MAC addresses (clamped to 1–100) sharing the same
+ * options. Random source is injected so callers/tests can seed it.
+ */
+export function generateMacs(opts: MacOptions, rand: () => number): string[] {
+  const n = Math.max(1, Math.min(100, Math.floor(opts.count) || 1));
+  return Array.from({ length: n }, () =>
+    formatMac(generateMacHex(opts.prefixHex, rand), opts.format, opts.uppercase),
+  );
 }
