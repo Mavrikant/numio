@@ -1,11 +1,18 @@
 import { z } from "zod";
 
+export const TEMPERATURE_UNITS = [
+  "celsius",
+  "fahrenheit",
+  "kelvin",
+  "reaumur",
+  "rankine",
+] as const;
+
+export type TemperatureUnit = (typeof TEMPERATURE_UNITS)[number];
+
 export const inputSchema = z.object({
-  celsius: z.number().finite().optional(),
-  fahrenheit: z.number().finite().optional(),
-  kelvin: z.number().finite().optional(),
-  reaumur: z.number().finite().optional(),
-  rankine: z.number().finite().optional(),
+  value: z.number().finite(),
+  fromUnit: z.enum(TEMPERATURE_UNITS),
 });
 
 export type TemperatureInputs = z.infer<typeof inputSchema>;
@@ -18,37 +25,30 @@ export interface TemperatureResult extends Record<string, unknown> {
   readonly rankine: number;
 }
 
-export function compute(input: TemperatureInputs): TemperatureResult {
-  const { celsius, fahrenheit, kelvin, reaumur, rankine } = input;
-
-  // Determine which input was provided and convert everything via Celsius
-  let celsiusValue: number;
-
-  if (celsius !== undefined && celsius !== null) {
-    celsiusValue = celsius;
-  } else if (fahrenheit !== undefined && fahrenheit !== null) {
-    celsiusValue = (fahrenheit - 32) * (5 / 9);
-  } else if (kelvin !== undefined && kelvin !== null) {
-    celsiusValue = kelvin - 273.15;
-  } else if (reaumur !== undefined && reaumur !== null) {
-    celsiusValue = reaumur * (5 / 4);
-  } else if (rankine !== undefined && rankine !== null) {
-    celsiusValue = (rankine - 491.67) * (5 / 9);
-  } else {
-    throw new Error("At least one temperature value must be provided");
+// Convert a value in any supported unit to Celsius, the pivot for all outputs.
+function toCelsius(value: number, unit: TemperatureUnit): number {
+  switch (unit) {
+    case "celsius":
+      return value;
+    case "fahrenheit":
+      return (value - 32) * (5 / 9);
+    case "kelvin":
+      return value - 273.15;
+    case "reaumur":
+      return value * (5 / 4);
+    case "rankine":
+      return (value - 491.67) * (5 / 9);
   }
+}
 
-  // Convert from Celsius to other units
-  const fahrenheitValue = celsiusValue * (9 / 5) + 32;
-  const kelvinValue = celsiusValue + 273.15;
-  const reaumurValue = celsiusValue * (4 / 5);
-  const rankineValue = (celsiusValue + 273.15) * (9 / 5);
+export function compute(input: TemperatureInputs): TemperatureResult {
+  const celsiusValue = toCelsius(input.value, input.fromUnit);
 
   return {
     celsius: celsiusValue,
-    fahrenheit: fahrenheitValue,
-    kelvin: kelvinValue,
-    reaumur: reaumurValue,
-    rankine: rankineValue,
+    fahrenheit: celsiusValue * (9 / 5) + 32,
+    kelvin: celsiusValue + 273.15,
+    reaumur: celsiusValue * (4 / 5),
+    rankine: (celsiusValue + 273.15) * (9 / 5),
   };
 }
