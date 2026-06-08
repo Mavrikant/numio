@@ -24,4 +24,37 @@ describe("time-convert — compute", () => {
     const result = compute({ value: 0, fromUnit: "second", toUnit: "minute" });
     expect(result.result).toBe(0);
   });
+
+  it("converts 1 second to 1000 milliseconds", () => {
+    const result = compute({
+      value: 1,
+      fromUnit: "second",
+      toUnit: "millisecond",
+    });
+    expect(result.result).toBeCloseTo(1000, 2);
+  });
+
+  it("converts 1 second to 1e9 nanoseconds", () => {
+    const result = compute({
+      value: 1,
+      fromUnit: "second",
+      toUnit: "nanosecond",
+    });
+    expect(result.result).toBeCloseTo(1e9, 1);
+  });
+
+  it("converts 1 decade to 10 years", () => {
+    // 365.25-day year, so decade = 10 × year exactly
+    const result = compute({ value: 1, fromUnit: "decade", toUnit: "year" });
+    expect(result.result).toBeCloseTo(10, 2);
+  });
+
+  it("converts 1 millennium to 1000 years", () => {
+    const result = compute({
+      value: 1,
+      fromUnit: "millennium",
+      toUnit: "year",
+    });
+    expect(result.result).toBeCloseTo(1000, 2);
+  });
 });

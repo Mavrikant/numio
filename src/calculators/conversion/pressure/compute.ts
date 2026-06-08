@@ -16,6 +16,8 @@ export const UNIT_FACTORS = {
   mmHg: 133.322387415,
   torr: 133.32236842,
   inHg: 3386.389,
+  // conventional metre of water = 9806.65 Pa (g=9.80665, ρ=1000)
+  mH2O: 9806.65,
 } as const;
 
 export const PRESSURE_UNITS = [
@@ -28,6 +30,7 @@ export const PRESSURE_UNITS = [
   "mmHg",
   "torr",
   "inHg",
+  "mH2O",
 ] as const;
 
 export const inputSchema = z.object({
@@ -56,7 +59,10 @@ export function compute(inputs: PressureInputs): PressureResult {
   const result = (inputs.value * fromFactor) / toFactor;
 
   let resultFormatted: string;
-  if (result !== 0 && (Math.abs(result) < 0.0001 || Math.abs(result) > 1_000_000_000)) {
+  if (
+    result !== 0 &&
+    (Math.abs(result) < 0.0001 || Math.abs(result) > 1_000_000_000)
+  ) {
     resultFormatted = result.toExponential(6);
   } else if (Math.abs(result) < 1) {
     resultFormatted = result.toFixed(8).replace(/\.?0+$/, "");

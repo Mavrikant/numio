@@ -19,6 +19,7 @@ const unitOptions = [
   { value: "mmHg", i18nKey: "mmHg" },
   { value: "torr", i18nKey: "torr" },
   { value: "inHg", i18nKey: "inHg" },
+  { value: "mH2O", i18nKey: "mH2O" },
 ];
 
 export default defineCalculator({

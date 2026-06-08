@@ -1,1 +1,12 @@
-import { describe, it, expect } from "vitest"; import { inputSchema } from "../compute"; describe("time-convert — edge cases", () => { it("validates input schema", () => { const result = inputSchema.safeParse({ value: 1, fromUnit: "second", toUnit: "minute" }); expect(result.success || !result.success).toBe(true); }); });
+import { describe, it, expect } from "vitest";
+import { inputSchema } from "../compute";
+describe("time-convert — edge cases", () => {
+  it("validates input schema", () => {
+    const result = inputSchema.safeParse({
+      value: 1,
+      fromUnit: "second",
+      toUnit: "minute",
+    });
+    expect(result.success || !result.success).toBe(true);
+  });
+});

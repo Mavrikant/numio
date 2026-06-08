@@ -1,4 +1,11 @@
 {
+  "angular-velocity": "conversor-velocidad-angular",
+  "dynamic-viscosity": "conversor-viscosidad-dinamica",
+  "kinematic-viscosity": "conversor-viscosidad-cinematica",
+  "density": "conversor-densidad",
+  "force": "conversor-fuerza",
+  "torque-convert": "conversor-par-torsion",
+  "flow-rate-convert": "conversor-caudal",
   "data-transfer-time": "tiempo-descarga",
   "fuel-cost": "coste-combustible",
   "aspect-ratio": "relacion-aspecto",
