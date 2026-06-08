@@ -1,38 +1,36 @@
-import { describe, it, expect } from "vitest";
+import { describe, it } from "vitest";
 import { runNumericTests } from "@/test-utils";
 import calculator from "../definition";
 
 // Reference: Temperature conversion formulas (celsius.org, wikipedia.org/wiki/Conversion_of_units_of_temperature)
 
 describe("Temperature compute — numeric correctness", () => {
-  it("Celsius to Fahrenheit: 0°C = 32°F (freezing point)", () => {
+  it("Celsius source: 0°C = 32°F = 273.15K = 0°Ré = 491.67°R (freezing point)", () => {
     runNumericTests(calculator, [
       {
-        inputs: { celsius: 0, fahrenheit: 32, kelvin: 273.15 },
-        expected: { celsius: 0, fahrenheit: 32, kelvin: 273.15 },
+        inputs: { value: 0, fromUnit: "celsius" },
+        expected: { celsius: 0, fahrenheit: 32, kelvin: 273.15, reaumur: 0, rankine: 491.67 },
         tolerance: 0.01,
-        description: "0°C = 32°F = 273.15K",
+        description: "freezing point of water across all scales",
       },
     ]);
   });
 
-  it("Celsius to Fahrenheit: 100°C = 212°F (boiling point)", () => {
-    // C = 100, F = 100 * (9/5) + 32 = 212
+  it("Celsius source: 100°C = 212°F = 373.15K = 80°Ré (boiling point)", () => {
     runNumericTests(calculator, [
       {
-        inputs: { celsius: 100, fahrenheit: 212, kelvin: 373.15 },
-        expected: { celsius: 100, fahrenheit: 212, kelvin: 373.15 },
+        inputs: { value: 100, fromUnit: "celsius" },
+        expected: { celsius: 100, fahrenheit: 212, kelvin: 373.15, reaumur: 80 },
         tolerance: 0.01,
-        description: "100°C = 212°F = 373.15K (boiling point)",
+        description: "boiling point of water across all scales",
       },
     ]);
   });
 
-  it("Celsius to Fahrenheit: 32°F = 0°C", () => {
-    // F = 32, C = (32 - 32) * (5/9) = 0
+  it("Fahrenheit source: 32°F = 0°C", () => {
     runNumericTests(calculator, [
       {
-        inputs: { celsius: 0, fahrenheit: 32, kelvin: 273.15 },
+        inputs: { value: 32, fromUnit: "fahrenheit" },
         expected: { celsius: 0, fahrenheit: 32 },
         tolerance: 0.01,
         description: "32°F equals 0°C",
@@ -40,11 +38,11 @@ describe("Temperature compute — numeric correctness", () => {
     ]);
   });
 
-  it("Kelvin to Celsius: 273.15K = 0°C", () => {
+  it("Kelvin source: 273.15K = 0°C", () => {
     runNumericTests(calculator, [
       {
-        inputs: { celsius: 0, fahrenheit: 32, kelvin: 273.15 },
-        expected: { kelvin: 273.15 },
+        inputs: { value: 273.15, fromUnit: "kelvin" },
+        expected: { celsius: 0, kelvin: 273.15 },
         tolerance: 0.01,
         description: "Kelvin and Celsius equivalence",
       },

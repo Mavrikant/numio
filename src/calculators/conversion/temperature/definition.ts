@@ -4,12 +4,17 @@ import i18n from "./i18n";
 import { compute } from "./compute";
 
 const inputSchema = z.object({
-  celsius: z.number().finite().optional(),
-  fahrenheit: z.number().finite().optional(),
-  kelvin: z.number().finite().optional(),
-  reaumur: z.number().finite().optional(),
-  rankine: z.number().finite().optional(),
+  value: z.number().finite(),
+  fromUnit: z.enum(["celsius", "fahrenheit", "kelvin", "reaumur", "rankine"]),
 });
+
+const unitOptions = [
+  { value: "celsius", label: "Celsius (°C)" },
+  { value: "fahrenheit", label: "Fahrenheit (°F)" },
+  { value: "kelvin", label: "Kelvin (K)" },
+  { value: "reaumur", label: "Réaumur (°Ré)" },
+  { value: "rankine", label: "Rankine (°R)" },
+];
 
 export default defineCalculator({
   slug: "temperature",
@@ -18,34 +23,16 @@ export default defineCalculator({
   icon: "thermometer",
   inputs: [
     {
-      id: "celsius",
+      id: "value",
       type: { kind: "number", step: 0.01 },
       defaultValue: 0,
-      required: false,
+      required: true,
     },
     {
-      id: "fahrenheit",
-      type: { kind: "number", step: 0.01 },
-      defaultValue: 32,
-      required: false,
-    },
-    {
-      id: "kelvin",
-      type: { kind: "number", step: 0.01, min: 0 },
-      defaultValue: 273.15,
-      required: false,
-    },
-    {
-      id: "reaumur",
-      type: { kind: "number", step: 0.01 },
-      defaultValue: 0,
-      required: false,
-    },
-    {
-      id: "rankine",
-      type: { kind: "number", step: 0.01, min: 0 },
-      defaultValue: 491.67,
-      required: false,
+      id: "fromUnit",
+      type: { kind: "select", options: unitOptions },
+      defaultValue: "celsius",
+      required: true,
     },
   ],
   outputs: [
