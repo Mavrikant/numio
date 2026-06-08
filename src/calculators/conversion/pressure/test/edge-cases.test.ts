@@ -8,11 +8,15 @@ describe("Pressure — edge cases", () => {
   });
 
   it("rejects negative input via schema (pressure is positive)", () => {
-    expect(() => inputSchema.parse({ value: -1, fromUnit: "bar", toUnit: "psi" })).toThrow();
+    expect(() =>
+      inputSchema.parse({ value: -1, fromUnit: "bar", toUnit: "psi" }),
+    ).toThrow();
   });
 
   it("rejects zero input via schema", () => {
-    expect(() => inputSchema.parse({ value: 0, fromUnit: "bar", toUnit: "psi" })).toThrow();
+    expect(() =>
+      inputSchema.parse({ value: 0, fromUnit: "bar", toUnit: "psi" }),
+    ).toThrow();
   });
 
   it("very small value: 1 Pa → MPa = 1e-6", () => {

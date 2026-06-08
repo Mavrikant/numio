@@ -64,4 +64,28 @@ describe("Pressure convert — numeric correctness", () => {
       },
     ]);
   });
+
+  it("Meter of water to pascal: 1 mH₂O = 9806.65 Pa", () => {
+    // conventional metre of water = 9806.65 Pa (g=9.80665, ρ=1000)
+    runNumericTests(calculator, [
+      {
+        inputs: { value: 1, fromUnit: "mH2O", toUnit: "Pa" },
+        expected: { result: 9806.65 },
+        tolerance: 0.01,
+        description: "1 mH₂O = 9806.65 Pa",
+      },
+    ]);
+  });
+
+  it("Meter of water to bar: 1 mH₂O ≈ 0.0980665 bar", () => {
+    // 9806.65 Pa / 100,000 = 0.0980665 bar
+    runNumericTests(calculator, [
+      {
+        inputs: { value: 1, fromUnit: "mH2O", toUnit: "bar" },
+        expected: { result: 0.0980665 },
+        tolerance: 1e-4,
+        description: "1 mH₂O ≈ 0.0980665 bar",
+      },
+    ]);
+  });
 });

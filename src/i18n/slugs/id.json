@@ -1,4 +1,11 @@
 {
+  "angular-velocity": "kecepatan-sudut",
+  "dynamic-viscosity": "viskositas-dinamis",
+  "kinematic-viscosity": "viskositas-kinematik",
+  "density": "kepadatan",
+  "force": "gaya",
+  "torque-convert": "torsi-konversi",
+  "flow-rate-convert": "laju-aliran-konversi",
   "data-transfer-time": "waktu-transfer-data",
   "fuel-cost": "biaya-bahan-bakar",
   "aspect-ratio": "rasio-aspek",

@@ -152,7 +152,7 @@ P0 count: 30 | P1 count: 50 | P2 count: 32 | Total: 112
 |---|---|---|---|---|---|---|---|
 | P0 | length | Length Converter | Uzunluk Dönüştürücü | Convert between all common length units | value, from unit, to unit | converted value; also show key equivalents in a table | Units: m, cm, mm, km, in, ft, yd, mi, nm, μm |
 | P0 | weight | Weight / Mass Converter | Ağırlık Dönüştürücü | Convert between metric and imperial weight units | value, from unit, to unit | converted value | Units: kg, g, mg, lb, oz, ton (metric), stone; high search |
-| P0 | temperature | Temperature Converter | Sıcaklık Dönüştürücü | Convert between Celsius, Fahrenheit, and Kelvin | value, from scale | all three scales simultaneously | C, F, K; show formula for each conversion |
+| P0 | temperature | Temperature Converter | Sıcaklık Dönüştürücü | Convert between Celsius, Fahrenheit, Kelvin, Réaumur, and Rankine | value, from scale | all five scales simultaneously | C, F, K, Ré, R; show formula for each conversion |
 | P0 | speed | Speed Converter | Hız Dönüştürücü | Convert speed between km/h, mph, m/s, knots | value, from unit, to unit | converted value, key conversions | km/h, mph, m/s, knot, ft/s; travel and physics use |
 | P1 | area | Area Converter | Alan Dönüştürücü | Convert between metric and imperial area units | value, from unit, to unit | converted value | m², ft², yd², ha, acre, km², cm²; real estate cross-use |
 | P1 | volume | Volume Converter | Hacim Dönüştürücü | Convert between metric and imperial volume units | value, from unit, to unit | converted value | L, mL, m³, ft³, gal (US/UK), fl oz, cup, tbsp, tsp |
