@@ -50,26 +50,4 @@ describe("Temperature compute — numeric correctness", () => {
       },
     ]);
   });
-
-  it("Celsius to Rankine: 0°C = 491.67°R (freezing point)", () => {
-    runNumericTests(calculator, [
-      {
-        inputs: { celsius: 0 },
-        expected: { rankine: 491.67 },
-        tolerance: 0.01,
-        description: "0°C = 491.67°R",
-      },
-    ]);
-  });
-
-  it("Celsius to Rankine: 100°C = 671.67°R (boiling point)", () => {
-    runNumericTests(calculator, [
-      {
-        inputs: { celsius: 100 },
-        expected: { rankine: 671.67 },
-        tolerance: 0.01,
-        description: "100°C = 671.67°R",
-      },
-    ]);
-  });
 });

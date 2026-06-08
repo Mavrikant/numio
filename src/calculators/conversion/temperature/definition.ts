@@ -7,6 +7,7 @@ const inputSchema = z.object({
   celsius: z.number().finite().optional(),
   fahrenheit: z.number().finite().optional(),
   kelvin: z.number().finite().optional(),
+  reaumur: z.number().finite().optional(),
   rankine: z.number().finite().optional(),
 });
 
@@ -35,6 +36,12 @@ export default defineCalculator({
       required: false,
     },
     {
+      id: "reaumur",
+      type: { kind: "number", step: 0.01 },
+      defaultValue: 0,
+      required: false,
+    },
+    {
       id: "rankine",
       type: { kind: "number", step: 0.01, min: 0 },
       defaultValue: 491.67,
@@ -45,14 +52,14 @@ export default defineCalculator({
     { id: "celsius", format: "number", precision: 2 },
     { id: "fahrenheit", format: "number", precision: 2 },
     { id: "kelvin", format: "number", precision: 2 },
+    { id: "reaumur", format: "number", precision: 2 },
     { id: "rankine", format: "number", precision: 2 },
   ],
   inputSchema,
   compute,
   i18n,
   meta: {
-    description:
-      "Convert between Celsius, Fahrenheit, and Kelvin temperature scales with instantaneous cross-conversion",
+    description: "Convert between Celsius, Fahrenheit, Kelvin, Réaumur, and Rankine temperature scales with instantaneous cross-conversion",
     references: [
       {
         title: "Temperature Conversion - Wikipedia",
@@ -63,11 +70,6 @@ export default defineCalculator({
         title: "Celsius.org - Temperature Conversion",
         url: "https://www.celsius.org/",
         authority: "Celsius.org",
-      },
-      {
-        title: "Rankine scale — Wikipedia",
-        url: "https://en.wikipedia.org/wiki/Rankine_scale",
-        authority: "Wikipedia",
       },
     ],
   },
