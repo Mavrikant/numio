@@ -25,4 +25,34 @@ describe("Temperature — edge cases", () => {
     expect(result.celsius).toBe(20);
     expect(result.fahrenheit).toBeCloseTo(68, 0);
   });
+
+  it("Réaumur from Celsius: 100°C = 80°Ré (boiling point)", () => {
+    const result = compute({ celsius: 100 });
+    expect(result.reaumur).toBeCloseTo(80, 5);
+  });
+
+  it("Réaumur to other scales: 80°Ré = 100°C = 212°F", () => {
+    const result = compute({ reaumur: 80 });
+    expect(result.celsius).toBeCloseTo(100, 5);
+    expect(result.fahrenheit).toBeCloseTo(212, 5);
+    expect(result.kelvin).toBeCloseTo(373.15, 5);
+  });
+
+  it("Rankine from Celsius: 0°C = 491.67°R (freezing point)", () => {
+    const result = compute({ celsius: 0 });
+    expect(result.rankine).toBeCloseTo(491.67, 2);
+  });
+
+  it("Rankine to other scales: 671.67°R = 100°C = 212°F", () => {
+    const result = compute({ rankine: 671.67 });
+    expect(result.celsius).toBeCloseTo(100, 2);
+    expect(result.fahrenheit).toBeCloseTo(212, 2);
+    expect(result.kelvin).toBeCloseTo(373.15, 2);
+  });
+
+  it("absolute zero in Rankine: 0°R = 0K = -273.15°C", () => {
+    const result = compute({ rankine: 0 });
+    expect(result.kelvin).toBeCloseTo(0, 2);
+    expect(result.celsius).toBeCloseTo(-273.15, 2);
+  });
 });
