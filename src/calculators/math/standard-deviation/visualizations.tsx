@@ -64,6 +64,37 @@ function buildRegion(
   return { x: xs, y: ys };
 }
 
+/**
+ * A single shaded σ-band polygon (curve on top, baseline on bottom).
+ *
+ * Each side of a ±kσ band is rendered as its own `toself` trace. Merging the
+ * left and right wings into one trace (by concatenating their coordinates)
+ * makes Plotly stroke connector/closing lines between the two disjoint shapes
+ * — the spurious diagonals that streaked across the shaded areas. Same-colored
+ * wings share a `legendgroup` so the legend still shows one entry per band and
+ * toggling it hides both sides together.
+ */
+function regionTrace(
+  region: { x: number[]; y: number[] },
+  name: string,
+  fillcolor: string,
+  showlegend: boolean,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+): any {
+  return {
+    type: "scatter" as const,
+    x: region.x,
+    y: region.y,
+    fill: "toself" as const,
+    fillcolor,
+    line: { color: "transparent" },
+    name,
+    legendgroup: name,
+    showlegend,
+    hoverinfo: "name" as const,
+  };
+}
+
 export default function StandardDeviationViz({ inputs, result }: VizProps) {
   const values = useMemo(() => parseValues(inputs.values), [inputs.values]);
 
@@ -95,39 +126,16 @@ export default function StandardDeviationViz({ inputs, result }: VizProps) {
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const plotData: any[] = [
-    // ±1σ region (dark blue)
-    {
-      type: "scatter" as const,
-      x: r1.x,
-      y: r1.y,
-      fill: "toself",
-      fillcolor: "rgba(59, 130, 246, 0.3)",
-      line: { color: "transparent" },
-      name: "±1σ (68.3%)",
-      hoverinfo: "name" as const,
-    },
-    // ±2σ regions (mid blue)
-    {
-      type: "scatter" as const,
-      x: [...r2.x, ...r2b.x],
-      y: [...r2.y, ...r2b.y],
-      fill: "toself",
-      fillcolor: "rgba(59, 130, 246, 0.15)",
-      line: { color: "transparent" },
-      name: "±2σ (95.5%)",
-      hoverinfo: "name" as const,
-    },
-    // ±3σ regions (light blue)
-    {
-      type: "scatter" as const,
-      x: [...r3.x, ...r3b.x],
-      y: [...r3.y, ...r3b.y],
-      fill: "toself",
-      fillcolor: "rgba(59, 130, 246, 0.07)",
-      line: { color: "transparent" },
-      name: "±3σ (99.7%)",
-      hoverinfo: "name" as const,
-    },
+    // Empirical-rule bands. Each wing is its own closed polygon (see
+    // regionTrace) to avoid Plotly drawing diagonals between disjoint shapes.
+    // ±1σ region (dark blue) — single contiguous band around the mean.
+    regionTrace(r1, "±1σ (68.3%)", "rgba(59, 130, 246, 0.3)", true),
+    // ±2σ regions (mid blue) — left + right wings, grouped under one legend entry.
+    regionTrace(r2, "±2σ (95.5%)", "rgba(59, 130, 246, 0.15)", true),
+    regionTrace(r2b, "±2σ (95.5%)", "rgba(59, 130, 246, 0.15)", false),
+    // ±3σ regions (light blue) — left + right wings, grouped under one legend entry.
+    regionTrace(r3, "±3σ (99.7%)", "rgba(59, 130, 246, 0.07)", true),
+    regionTrace(r3b, "±3σ (99.7%)", "rgba(59, 130, 246, 0.07)", false),
     // Bell curve
     {
       type: "scatter" as const,
