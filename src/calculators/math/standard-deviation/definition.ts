@@ -57,6 +57,11 @@ export default defineCalculator({
   compute,
   i18n,
   meta: {
+    // Defer computation to an explicit Calculate button. The `values` input is
+    // a comma-separated list, so recomputing on every keystroke renders the
+    // distribution chart for half-typed, invalid datasets (e.g. a trailing
+    // comma), causing it to flicker and disappear while the user is still typing.
+    manualCompute: true,
     formulaLatex:
       "\\sigma = \\sqrt{\\frac{\\sum_{i=1}^{n}(x_i - \\mu)^2}{n}} \\text{ (population)} \\quad \\text{or} \\quad s = \\sqrt{\\frac{\\sum_{i=1}^{n}(x_i - \\bar{x})^2}{n-1}} \\text{ (sample)}",
     references: [

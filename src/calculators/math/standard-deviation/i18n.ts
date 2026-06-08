@@ -52,6 +52,8 @@ const i18n: CalculatorI18n = {
     errors: {
       invalidInput: "Please enter valid comma-separated numbers.",
       emptyData: "At least one number is required.",
+      calculate: "Calculate",
+      recalcHint: "Inputs changed — press Calculate to update.",
     },
     faq: [
       {
@@ -119,6 +121,8 @@ const i18n: CalculatorI18n = {
     errors: {
       invalidInput: "Please enter valid comma-separated numbers.",
       emptyData: "At least one number is required.",
+      calculate: "Calcular",
+      recalcHint: "Entradas alteradas — pressione Calcular para atualizar.",
     },
     faq: [
       {
@@ -186,6 +190,8 @@ const i18n: CalculatorI18n = {
     errors: {
       invalidInput: "Please enter valid comma-separated numbers.",
       emptyData: "At least one number is required.",
+      calculate: "Hitung",
+      recalcHint: "Input berubah — tekan Hitung untuk memperbarui.",
     },
     faq: [
       {
@@ -263,6 +269,8 @@ const i18n: CalculatorI18n = {
     errors: {
       invalidInput: "Lütfen geçerli virgülle ayrılmış sayılar girin.",
       emptyData: "En az bir sayı gereklidir.",
+      calculate: "Hesapla",
+      recalcHint: "Girdiler değişti — güncellemek için Hesapla'ya basın.",
     },
     faq: [
       {
@@ -339,6 +347,8 @@ const i18n: CalculatorI18n = {
     errors: {
       invalidInput: "Bitte geben Sie gültige durch Kommas getrennte Zahlen ein.",
       emptyData: "Mindestens eine Zahl ist erforderlich.",
+      calculate: "Berechnen",
+      recalcHint: "Eingaben geändert — zum Aktualisieren auf Berechnen klicken.",
     },
     faq: [
       {
@@ -407,6 +417,8 @@ const i18n: CalculatorI18n = {
     errors: {
       invalidInput: "Veuillez entrer des nombres valides séparés par des virgules.",
       emptyData: "Au moins un nombre est requis.",
+      calculate: "Calculer",
+      recalcHint: "Entrées modifiées — appuyez sur Calculer pour mettre à jour.",
     },
     faq: [
       {
@@ -467,6 +479,8 @@ const i18n: CalculatorI18n = {
     errors: {
       invalidInput: "Por favor ingresa números válidos separados por comas.",
       emptyData: "Se requiere al menos un número.",
+      calculate: "Calcular",
+      recalcHint: "Entradas cambiadas — pulsa Calcular para actualizar.",
     },
     faq: [
       {
@@ -527,6 +541,8 @@ const i18n: CalculatorI18n = {
     errors: {
       invalidInput: "Inserisci numeri validi separati da virgole.",
       emptyData: "Almeno un numero è richiesto.",
+      calculate: "Calcola",
+      recalcHint: "Dati modificati — premi Calcola per aggiornare.",
     },
     faq: [
       {
@@ -587,6 +603,8 @@ const i18n: CalculatorI18n = {
     errors: {
       invalidInput: "يرجى إدخال أرقام صحيحة مفصولة بفواصل.",
       emptyData: "يُطلب رقم واحد على الأقل.",
+      calculate: "احسب",
+      recalcHint: "تغيّرت المدخلات — اضغط على «احسب» للتحديث.",
     },
     faq: [
       {
@@ -647,6 +665,8 @@ const i18n: CalculatorI18n = {
     errors: {
       invalidInput: "Пожалуйста, введите правильные числа, разделённые запятыми.",
       emptyData: "Требуется по меньшей мере одно число.",
+      calculate: "Рассчитать",
+      recalcHint: "Данные изменены — нажмите «Рассчитать», чтобы обновить.",
     },
     faq: [
       {
@@ -707,6 +727,8 @@ const i18n: CalculatorI18n = {
     errors: {
       invalidInput: "请输入用逗号分隔的有效数字。",
       emptyData: "至少需要一个数字。",
+      calculate: "计算",
+      recalcHint: "输入已更改 — 点按“计算”以更新。",
     },
     faq: [
       {
@@ -767,6 +789,8 @@ const i18n: CalculatorI18n = {
     errors: {
       invalidInput: "カンマで区切られた有効な数字を入力してください。",
       emptyData: "最低1個の数字が必要です。",
+      calculate: "計算",
+      recalcHint: "入力が変更されました — 「計算」を押して更新してください。",
     },
     faq: [
       {
@@ -827,6 +851,8 @@ const i18n: CalculatorI18n = {
     errors: {
       invalidInput: "쉼표로 구분한 유효한 숫자를 입력하세요.",
       emptyData: "최소 1개의 숫자가 필요합니다.",
+      calculate: "계산",
+      recalcHint: "입력이 변경되었습니다 — 업데이트하려면 계산을 누르세요.",
     },
     faq: [
       {
@@ -887,6 +913,8 @@ const i18n: CalculatorI18n = {
     errors: {
       invalidInput: "कृपया अल्पविरामों से अलग की गई मान्य संख्याएँ दर्ज करें।",
       emptyData: "कम से कम एक संख्या आवश्यक है।",
+      calculate: "गणना करें",
+      recalcHint: "इनपुट बदले — अपडेट करने के लिए गणना करें दबाएँ।",
     },
     faq: [
       {

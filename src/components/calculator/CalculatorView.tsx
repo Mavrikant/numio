@@ -390,39 +390,67 @@ export function CalculatorViewWithViz({
   const [shareLabel, setShareLabel] = useState<string | null>(null);
   const [copyLabel, setCopyLabel] = useState<string | null>(null);
 
+  // ─── Manual compute mode ──────────────────────────────────────────────────
+  // When calc.meta.manualCompute is set, results and the chart update only on
+  // an explicit Calculate press. `inputs` holds what the user is editing;
+  // `committedInputs` is the last snapshot we actually computed and charted.
+  // This prevents recomputing for half-typed, invalid datasets (e.g. a list
+  // with a trailing comma), which would otherwise make the chart flicker.
+  const manualCompute = Boolean(calc.meta.manualCompute);
+  const [committedInputs, setCommittedInputs] = useState<InputValues>(() =>
+    parseInputsFromUrl(defaults),
+  );
+  const effectiveInputs = manualCompute ? committedInputs : inputs;
+
+  const isDirty = useMemo(() => {
+    if (!manualCompute) return false;
+    const keys = new Set([
+      ...Object.keys(inputs),
+      ...Object.keys(committedInputs),
+    ]);
+    for (const k of keys) {
+      if (inputs[k] !== committedInputs[k]) return true;
+    }
+    return false;
+  }, [manualCompute, inputs, committedInputs]);
+
   const urlSyncRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   useEffect(() => {
     if (urlSyncRef.current) clearTimeout(urlSyncRef.current);
     urlSyncRef.current = setTimeout(() => {
-      const qs = serializeInputs(inputs);
+      const qs = serializeInputs(effectiveInputs);
       const newUrl = `${window.location.pathname}${qs ? `?${qs}` : ""}`;
       window.history.replaceState(null, "", newUrl);
       // Notify chart islands that inputs changed (URL doesn't fire popstate
-      // on replaceState, so we dispatch our own event)
+      // on replaceState, so we dispatch our own event). In manual mode this
+      // fires only when committedInputs changes, i.e. on Calculate — so the
+      // chart never redraws mid-typing.
       window.dispatchEvent(
-        new CustomEvent("calc:inputs-changed", { detail: { slug: calc.slug, inputs } }),
+        new CustomEvent("calc:inputs-changed", {
+          detail: { slug: calc.slug, inputs: effectiveInputs },
+        }),
       );
     }, 150);
     return () => {
       if (urlSyncRef.current) clearTimeout(urlSyncRef.current);
     };
-  }, [inputs, calc.slug]);
+  }, [effectiveInputs, calc.slug]);
 
   // Re-dispatch when compute result changes too (lets chart islands sync to
   // computed quartiles / mean instead of recomputing them).
   useEffect(() => {
     window.dispatchEvent(
       new CustomEvent("calc:result-changed", {
-        detail: { slug: calc.slug, result: null, inputs },
+        detail: { slug: calc.slug, result: null, inputs: effectiveInputs },
       }),
     );
-  }, [calc.slug, inputs]);
+  }, [calc.slug, effectiveInputs]);
 
   const computeResult = useMemo<{
     result: Record<string, unknown> | null;
     errors: string[];
   }>(() => {
-    const parsed = calc.inputSchema.safeParse(inputs);
+    const parsed = calc.inputSchema.safeParse(effectiveInputs);
     if (!parsed.success) {
       // Zod 4: issue.path is PropertyKey[] (string | number | symbol).
       // We stringify each segment to format the error message safely.
@@ -440,7 +468,7 @@ export function CalculatorViewWithViz({
         errors: [err instanceof Error ? err.message : "Computation error"],
       };
     }
-  }, [calc, inputs]);
+  }, [calc, effectiveInputs]);
 
   const handleChange = useCallback(
     (id: string, value: number | string | boolean) => {
@@ -449,8 +477,13 @@ export function CalculatorViewWithViz({
     [],
   );
 
+  const handleCalculate = useCallback(() => {
+    setCommittedInputs(inputs);
+  }, [inputs]);
+
   const handleReset = useCallback(() => {
     setInputs(defaults);
+    setCommittedInputs(defaults);
   }, [defaults]);
 
   const handleCopy = useCallback(() => {
@@ -532,6 +565,18 @@ export function CalculatorViewWithViz({
             </div>
 
             <div className="mt-6 flex flex-wrap gap-2">
+              {manualCompute && (
+                <button
+                  type="button"
+                  onClick={handleCalculate}
+                  className={
+                    "rounded-lg border border-blue-600 bg-blue-600 px-4 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-700 min-h-[44px] sm:min-h-0" +
+                    (isDirty ? " ring-2 ring-blue-300 dark:ring-blue-800" : "")
+                  }
+                >
+                  {bundle.errors?.["calculate"] ?? "Calculate"}
+                </button>
+              )}
               <button
                 type="button"
                 onClick={handleReset}
@@ -572,6 +617,13 @@ export function CalculatorViewWithViz({
                 </button>
               )}
             </div>
+
+            {/* Manual-compute hint: results/chart are stale until Calculate */}
+            {manualCompute && isDirty && bundle.errors?.["recalcHint"] && (
+              <p className="mt-3 text-xs text-amber-600 dark:text-amber-400">
+                {bundle.errors["recalcHint"]}
+              </p>
+            )}
           </div>
         </section>
 
