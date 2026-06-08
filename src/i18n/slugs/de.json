@@ -1,4 +1,11 @@
 {
+  "angular-velocity": "winkelgeschwindigkeit-umrechner",
+  "dynamic-viscosity": "dynamische-viskositaet-umrechner",
+  "kinematic-viscosity": "kinematische-viskositaet-umrechner",
+  "density": "dichteumrechner",
+  "force": "kraftumrechner",
+  "torque-convert": "drehmomentumrechner",
+  "flow-rate-convert": "volumenstromumrechner",
   "data-transfer-time": "download-zeit",
   "fuel-cost": "kraftstoffkosten",
   "aspect-ratio": "seitenverhaeltnis",

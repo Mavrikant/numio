@@ -1,4 +1,11 @@
 {
+  "angular-velocity": "acisal-hiz-donusum",
+  "dynamic-viscosity": "dinamik-viskozite-donusum",
+  "kinematic-viscosity": "kinematik-viskozite-donusum",
+  "density": "yogunluk-donusum",
+  "force": "kuvvet-donusum",
+  "torque-convert": "tork-donusum",
+  "flow-rate-convert": "debi-donusum",
   "data-transfer-time": "indirme-suresi",
   "fuel-cost": "yakit-maliyeti",
   "aspect-ratio": "en-boy-orani",

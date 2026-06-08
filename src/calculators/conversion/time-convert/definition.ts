@@ -5,8 +5,36 @@ import i18n from "./i18n";
 
 const inputSchema = z.object({
   value: z.number().positive(),
-  fromUnit: z.enum(["second", "minute", "hour", "day", "week", "month", "year"]),
-  toUnit: z.enum(["second", "minute", "hour", "day", "week", "month", "year"]),
+  fromUnit: z.enum([
+    "nanosecond",
+    "microsecond",
+    "millisecond",
+    "second",
+    "minute",
+    "hour",
+    "day",
+    "week",
+    "month",
+    "year",
+    "decade",
+    "century",
+    "millennium",
+  ]),
+  toUnit: z.enum([
+    "nanosecond",
+    "microsecond",
+    "millisecond",
+    "second",
+    "minute",
+    "hour",
+    "day",
+    "week",
+    "month",
+    "year",
+    "decade",
+    "century",
+    "millennium",
+  ]),
 });
 
 export default defineCalculator({
@@ -30,6 +58,9 @@ export default defineCalculator({
       type: {
         kind: "select",
         options: [
+          { value: "nanosecond", i18nKey: "nanosecond" },
+          { value: "microsecond", i18nKey: "microsecond" },
+          { value: "millisecond", i18nKey: "millisecond" },
           { value: "second", i18nKey: "second" },
           { value: "minute", i18nKey: "minute" },
           { value: "hour", i18nKey: "hour" },
@@ -37,6 +68,9 @@ export default defineCalculator({
           { value: "week", i18nKey: "week" },
           { value: "month", i18nKey: "month" },
           { value: "year", i18nKey: "year" },
+          { value: "decade", i18nKey: "decade" },
+          { value: "century", i18nKey: "century" },
+          { value: "millennium", i18nKey: "millennium" },
         ],
       },
       defaultValue: "hour",
@@ -47,6 +81,9 @@ export default defineCalculator({
       type: {
         kind: "select",
         options: [
+          { value: "nanosecond", i18nKey: "nanosecond" },
+          { value: "microsecond", i18nKey: "microsecond" },
+          { value: "millisecond", i18nKey: "millisecond" },
           { value: "second", i18nKey: "second" },
           { value: "minute", i18nKey: "minute" },
           { value: "hour", i18nKey: "hour" },
@@ -54,6 +91,9 @@ export default defineCalculator({
           { value: "week", i18nKey: "week" },
           { value: "month", i18nKey: "month" },
           { value: "year", i18nKey: "year" },
+          { value: "decade", i18nKey: "decade" },
+          { value: "century", i18nKey: "century" },
+          { value: "millennium", i18nKey: "millennium" },
         ],
       },
       defaultValue: "day",
@@ -72,7 +112,8 @@ export default defineCalculator({
   compute,
   i18n,
   meta: {
-    formulaLatex: "\\text{Result} = \\text{Value} \\times \\frac{\\text{Factor}_{from}}{\\text{Factor}_{to}}",
+    formulaLatex:
+      "\\text{Result} = \\text{Value} \\times \\frac{\\text{Factor}_{from}}{\\text{Factor}_{to}}",
     references: [
       {
         title: "SI Base Unit of Time",

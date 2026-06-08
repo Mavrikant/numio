@@ -3,10 +3,19 @@ import { compute } from "../compute";
 
 describe("Temperature — edge cases", () => {
   it("absolute zero: 0K = -273.15°C = -459.67°F", () => {
-    const result = compute({ celsius: -273.15, fahrenheit: -459.67, kelvin: 0 });
+    const result = compute({
+      celsius: -273.15,
+      fahrenheit: -459.67,
+      kelvin: 0,
+    });
     expect(result.kelvin).toBe(0);
     expect(result.celsius).toBeCloseTo(-273.15, 1);
     expect(result.fahrenheit).toBeCloseTo(-459.67, 0);
+  });
+
+  it("absolute zero in Rankine: 0K = 0°R", () => {
+    const result = compute({ kelvin: 0 });
+    expect(result.rankine).toBeCloseTo(0, 2);
   });
 
   it("negative celsius: -40°C = -40°F (same point)", () => {
@@ -16,7 +25,11 @@ describe("Temperature — edge cases", () => {
   });
 
   it("high temperature: 1000K = 726.85°C", () => {
-    const result = compute({ celsius: 726.85, fahrenheit: 1340.33, kelvin: 1000 });
+    const result = compute({
+      celsius: 726.85,
+      fahrenheit: 1340.33,
+      kelvin: 1000,
+    });
     expect(result.kelvin).toBe(1000);
   });
 

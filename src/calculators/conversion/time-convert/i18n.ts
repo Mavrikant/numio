@@ -3,10 +3,17 @@ import type { CalculatorI18n } from "@/types/i18n";
 const i18n: CalculatorI18n = {
   en: {
     title: "Time Unit Converter",
-    short: "Convert between seconds, minutes, hours, days, weeks, months, and years.",
+    short:
+      "Convert between seconds, minutes, hours, days, weeks, months, and years.",
     description:
       "Free time converter for converting between seconds, minutes, hours, days, weeks, months, and years using precise Gregorian calendar averages.",
-    keywords: ["time converter", "unit conversion", "hours to days", "days to years", "time calculator"],
+    keywords: [
+      "time converter",
+      "unit conversion",
+      "hours to days",
+      "days to years",
+      "time calculator",
+    ],
     inputs: {
       value: { label: "Value", help: "Amount to convert." },
       fromUnit: { label: "From unit", help: "Source time unit." },
@@ -16,20 +23,45 @@ const i18n: CalculatorI18n = {
       result: { label: "Result", help: "Converted time value." },
     },
     options: {
-      second: "Second", minute: "Minute", hour: "Hour", day: "Day", week: "Week", month: "Month", year: "Year",
+      nanosecond: "Nanosecond (ns)",
+      microsecond: "Microsecond (µs)",
+      millisecond: "Millisecond (ms)",
+      second: "Second",
+      minute: "Minute",
+      hour: "Hour",
+      day: "Day",
+      week: "Week",
+      month: "Month",
+      year: "Year",
+      decade: "Decade",
+      century: "Century",
+      millennium: "Millennium",
     },
     errors: { invalidValue: "Value must be positive." },
     faq: [
-      { q: "Why does 1 year = 365.25 days?", a: "The Gregorian calendar averages leap years: every 4 years, with exceptions for centuries not divisible by 400." },
-      { q: "Why does 1 month ≈ 30.4375 days?", a: "Average calendar month: 365.25 days / 12 = 30.4375 days." },
+      {
+        q: "Why does 1 year = 365.25 days?",
+        a: "The Gregorian calendar averages leap years: every 4 years, with exceptions for centuries not divisible by 400.",
+      },
+      {
+        q: "Why does 1 month ≈ 30.4375 days?",
+        a: "Average calendar month: 365.25 days / 12 = 30.4375 days.",
+      },
     ],
   },
   pt: {
     title: "Conversor de Tempo",
-    short: "Converta entre segundos, minutos, horas, dias e outras unidades de tempo.",
+    short:
+      "Converta entre segundos, minutos, horas, dias e outras unidades de tempo.",
     description:
       "Conversor gratuito de tempo. Converta entre segundos, minutos, horas, dias, semanas, meses e anos.",
-    keywords: ["conversor tempo", "segundos minutos", "horas dias", "semanas meses", "unidades tempo"],
+    keywords: [
+      "conversor tempo",
+      "segundos minutos",
+      "horas dias",
+      "semanas meses",
+      "unidades tempo",
+    ],
     inputs: {
       value: { label: "Value", help: "Amount to convert." },
       fromUnit: { label: "From unit", help: "Source time unit." },
@@ -39,12 +71,30 @@ const i18n: CalculatorI18n = {
       result: { label: "Result", help: "Converted time value." },
     },
     options: {
-      second: "Second", minute: "Minute", hour: "Hour", day: "Day", week: "Week", month: "Month", year: "Year",
+      nanosecond: "Nanosecond (ns)",
+      microsecond: "Microsecond (µs)",
+      millisecond: "Millisecond (ms)",
+      second: "Second",
+      minute: "Minute",
+      hour: "Hour",
+      day: "Day",
+      week: "Week",
+      month: "Month",
+      year: "Year",
+      decade: "Decade",
+      century: "Century",
+      millennium: "Millennium",
     },
     errors: { invalidValue: "Value must be positive." },
     faq: [
-      { q: "Why does 1 year = 365.25 days?", a: "The Gregorian calendar averages leap years: every 4 years, with exceptions for centuries not divisible by 400." },
-      { q: "Why does 1 month ≈ 30.4375 days?", a: "Average calendar month: 365.25 days / 12 = 30.4375 days." },
+      {
+        q: "Why does 1 year = 365.25 days?",
+        a: "The Gregorian calendar averages leap years: every 4 years, with exceptions for centuries not divisible by 400.",
+      },
+      {
+        q: "Why does 1 month ≈ 30.4375 days?",
+        a: "Average calendar month: 365.25 days / 12 = 30.4375 days.",
+      },
     ],
   },
   id: {
@@ -52,7 +102,13 @@ const i18n: CalculatorI18n = {
     short: "Konversi antara detik, menit, jam, hari, dan satuan waktu lainnya.",
     description:
       "Konverter waktu gratis. Konversi antara detik, menit, jam, hari, minggu, bulan, dan tahun.",
-    keywords: ["konverter waktu", "detik menit", "jam hari", "minggu bulan", "satuan waktu"],
+    keywords: [
+      "konverter waktu",
+      "detik menit",
+      "jam hari",
+      "minggu bulan",
+      "satuan waktu",
+    ],
     inputs: {
       value: { label: "Value", help: "Amount to convert." },
       fromUnit: { label: "From unit", help: "Source time unit." },
@@ -62,21 +118,46 @@ const i18n: CalculatorI18n = {
       result: { label: "Result", help: "Converted time value." },
     },
     options: {
-      second: "Second", minute: "Minute", hour: "Hour", day: "Day", week: "Week", month: "Month", year: "Year",
+      nanosecond: "Nanosecond (ns)",
+      microsecond: "Microsecond (µs)",
+      millisecond: "Millisecond (ms)",
+      second: "Second",
+      minute: "Minute",
+      hour: "Hour",
+      day: "Day",
+      week: "Week",
+      month: "Month",
+      year: "Year",
+      decade: "Decade",
+      century: "Century",
+      millennium: "Millennium",
     },
     errors: { invalidValue: "Value must be positive." },
     faq: [
-      { q: "Why does 1 year = 365.25 days?", a: "The Gregorian calendar averages leap years: every 4 years, with exceptions for centuries not divisible by 400." },
-      { q: "Why does 1 month ≈ 30.4375 days?", a: "Average calendar month: 365.25 days / 12 = 30.4375 days." },
+      {
+        q: "Why does 1 year = 365.25 days?",
+        a: "The Gregorian calendar averages leap years: every 4 years, with exceptions for centuries not divisible by 400.",
+      },
+      {
+        q: "Why does 1 month ≈ 30.4375 days?",
+        a: "Average calendar month: 365.25 days / 12 = 30.4375 days.",
+      },
     ],
   },
 
-
   tr: {
     title: "Zaman Birimi Dönüştürücü",
-    short: "Saniye, dakika, saat, gün, hafta, ay ve yıl arasında dönüşüm yapın.",
-    description: "Gregoryen takvim ortalamalarını kullanarak zaman birimlerini dönüştürmek için ücretsiz zaman dönüştürücü.",
-    keywords: ["zaman dönüştürücü", "birim dönüşümü", "saatleri günlere", "günleri yıllara", "zaman hesaplayıcı"],
+    short:
+      "Saniye, dakika, saat, gün, hafta, ay ve yıl arasında dönüşüm yapın.",
+    description:
+      "Gregoryen takvim ortalamalarını kullanarak zaman birimlerini dönüştürmek için ücretsiz zaman dönüştürücü.",
+    keywords: [
+      "zaman dönüştürücü",
+      "birim dönüşümü",
+      "saatleri günlere",
+      "günleri yıllara",
+      "zaman hesaplayıcı",
+    ],
     inputs: {
       value: { label: "Değer", help: "Dönüştürülecek miktar." },
       fromUnit: { label: "Kaynak birim", help: "Kaynak zaman birimi." },
@@ -86,19 +167,42 @@ const i18n: CalculatorI18n = {
       result: { label: "Sonuç", help: "Dönüştürülen zaman değeri." },
     },
     options: {
-      second: "Saniye", minute: "Dakika", hour: "Saat", day: "Gün", week: "Hafta", month: "Ay", year: "Yıl",
+      nanosecond: "Nanosaniye (ns)",
+      microsecond: "Mikrosaniye (µs)",
+      millisecond: "Milisaniye (ms)",
+      second: "Saniye",
+      minute: "Dakika",
+      hour: "Saat",
+      day: "Gün",
+      week: "Hafta",
+      month: "Ay",
+      year: "Yıl",
+      decade: "On yıl",
+      century: "Yüzyıl",
+      millennium: "Bin yıl",
     },
     errors: { invalidValue: "Değer pozitif olmalıdır." },
     faq: [
-      { q: "Neden 1 yıl = 365,25 gün?", a: "Gregoryen takvimi artık yılları ortalar: her 4 yılda bir, 100'e bölünemeyenler hariç." },
+      {
+        q: "Neden 1 yıl = 365,25 gün?",
+        a: "Gregoryen takvimi artık yılları ortalar: her 4 yılda bir, 100'e bölünemeyenler hariç.",
+      },
     ],
   },
 
   de: {
     title: "Zeit-Umrechner",
-    short: "Konvertieren Sie zwischen Sekunden, Minuten, Stunden, Tagen, Wochen, Monaten und Jahren.",
-    description: "Kostenloser Zeit-Umrechner mit präzisen gregorianischen Kalenderdurchschnitten.",
-    keywords: ["Zeit-Umrechner", "Einheitskonvertierung", "Stunden in Tage", "Tage in Jahre", "Zeitrechner"],
+    short:
+      "Konvertieren Sie zwischen Sekunden, Minuten, Stunden, Tagen, Wochen, Monaten und Jahren.",
+    description:
+      "Kostenloser Zeit-Umrechner mit präzisen gregorianischen Kalenderdurchschnitten.",
+    keywords: [
+      "Zeit-Umrechner",
+      "Einheitskonvertierung",
+      "Stunden in Tage",
+      "Tage in Jahre",
+      "Zeitrechner",
+    ],
     inputs: {
       value: { label: "Wert", help: "Menge zum Konvertieren." },
       fromUnit: { label: "Von Einheit", help: "Quellzeiteinheit." },
@@ -108,19 +212,42 @@ const i18n: CalculatorI18n = {
       result: { label: "Ergebnis", help: "Konvertierter Zeitwert." },
     },
     options: {
-      second: "Sekunde", minute: "Minute", hour: "Stunde", day: "Tag", week: "Woche", month: "Monat", year: "Jahr",
+      nanosecond: "Nanosekunde (ns)",
+      microsecond: "Mikrosekunde (µs)",
+      millisecond: "Millisekunde (ms)",
+      second: "Sekunde",
+      minute: "Minute",
+      hour: "Stunde",
+      day: "Tag",
+      week: "Woche",
+      month: "Monat",
+      year: "Jahr",
+      decade: "Jahrzehnt",
+      century: "Jahrhundert",
+      millennium: "Jahrtausend",
     },
     errors: { invalidValue: "Wert muss positiv sein." },
     faq: [
-      { q: "Warum ist 1 Jahr = 365,25 Tage?", a: "Der gregorianische Kalender mittelt Schaltjahre: alle 4 Jahre, mit Ausnahmen für Jahrhunderte." },
+      {
+        q: "Warum ist 1 Jahr = 365,25 Tage?",
+        a: "Der gregorianische Kalender mittelt Schaltjahre: alle 4 Jahre, mit Ausnahmen für Jahrhunderte.",
+      },
     ],
   },
 
   fr: {
     title: "Convertisseur de Temps",
-    short: "Convertissez entre secondes, minutes, heures, jours, semaines, mois et années.",
-    description: "Convertisseur de temps gratuit avec moyennes précises du calendrier grégorien.",
-    keywords: ["convertisseur de temps", "conversion d'unités", "heures en jours", "jours en années", "calculatrice de temps"],
+    short:
+      "Convertissez entre secondes, minutes, heures, jours, semaines, mois et années.",
+    description:
+      "Convertisseur de temps gratuit avec moyennes précises du calendrier grégorien.",
+    keywords: [
+      "convertisseur de temps",
+      "conversion d'unités",
+      "heures en jours",
+      "jours en années",
+      "calculatrice de temps",
+    ],
     inputs: {
       value: { label: "Valeur", help: "Quantité à convertir." },
       fromUnit: { label: "Unité source", help: "Unité de temps source." },
@@ -130,63 +257,142 @@ const i18n: CalculatorI18n = {
       result: { label: "Résultat", help: "Valeur de temps convertie." },
     },
     options: {
-      second: "Seconde", minute: "Minute", hour: "Heure", day: "Jour", week: "Semaine", month: "Mois", year: "Année",
+      nanosecond: "Nanoseconde (ns)",
+      microsecond: "Microseconde (µs)",
+      millisecond: "Milliseconde (ms)",
+      second: "Seconde",
+      minute: "Minute",
+      hour: "Heure",
+      day: "Jour",
+      week: "Semaine",
+      month: "Mois",
+      year: "Année",
+      decade: "Décennie",
+      century: "Siècle",
+      millennium: "Millénaire",
     },
     errors: { invalidValue: "La valeur doit être positive." },
     faq: [
-      { q: "Pourquoi 1 an = 365,25 jours?", a: "Le calendrier grégorien moyenne les années bissextiles: tous les 4 ans, sauf exceptions." },
+      {
+        q: "Pourquoi 1 an = 365,25 jours?",
+        a: "Le calendrier grégorien moyenne les années bissextiles: tous les 4 ans, sauf exceptions.",
+      },
     ],
   },
 
   es: {
     title: "Convertidor de Tiempo",
-    short: "Convierta entre segundos, minutos, horas, días, semanas, meses y años.",
-    description: "Convertidor de tiempo gratuito con promedios precisos del calendario gregoriano.",
-    keywords: ["convertidor de tiempo", "conversión de unidades", "horas a días", "días a años", "calculadora de tiempo"],
+    short:
+      "Convierta entre segundos, minutos, horas, días, semanas, meses y años.",
+    description:
+      "Convertidor de tiempo gratuito con promedios precisos del calendario gregoriano.",
+    keywords: [
+      "convertidor de tiempo",
+      "conversión de unidades",
+      "horas a días",
+      "días a años",
+      "calculadora de tiempo",
+    ],
     inputs: {
       value: { label: "Valor", help: "Cantidad a convertir." },
-      fromUnit: { label: "Unidad de origen", help: "Unidad de tiempo de origen." },
-      toUnit: { label: "Unidad de destino", help: "Unidad de tiempo de destino." },
+      fromUnit: {
+        label: "Unidad de origen",
+        help: "Unidad de tiempo de origen.",
+      },
+      toUnit: {
+        label: "Unidad de destino",
+        help: "Unidad de tiempo de destino.",
+      },
     },
     outputs: {
       result: { label: "Resultado", help: "Valor de tiempo convertido." },
     },
     options: {
-      second: "Segundo", minute: "Minuto", hour: "Hora", day: "Día", week: "Semana", month: "Mes", year: "Año",
+      nanosecond: "Nanosegundo (ns)",
+      microsecond: "Microsegundo (µs)",
+      millisecond: "Milisegundo (ms)",
+      second: "Segundo",
+      minute: "Minuto",
+      hour: "Hora",
+      day: "Día",
+      week: "Semana",
+      month: "Mes",
+      year: "Año",
+      decade: "Década",
+      century: "Siglo",
+      millennium: "Milenio",
     },
     errors: { invalidValue: "El valor debe ser positivo." },
     faq: [
-      { q: "¿Por qué 1 año = 365,25 días?", a: "El calendario gregoriano promedia años bisiestos: cada 4 años, con excepciones." },
+      {
+        q: "¿Por qué 1 año = 365,25 días?",
+        a: "El calendario gregoriano promedia años bisiestos: cada 4 años, con excepciones.",
+      },
     ],
   },
 
   it: {
     title: "Convertitore di Tempo",
     short: "Converti tra secondi, minuti, ore, giorni, settimane, mesi e anni.",
-    description: "Convertitore di tempo gratuito con medie precise del calendario gregoriano.",
-    keywords: ["convertitore di tempo", "conversione di unità", "ore in giorni", "giorni in anni", "calcolatore di tempo"],
+    description:
+      "Convertitore di tempo gratuito con medie precise del calendario gregoriano.",
+    keywords: [
+      "convertitore di tempo",
+      "conversione di unità",
+      "ore in giorni",
+      "giorni in anni",
+      "calcolatore di tempo",
+    ],
     inputs: {
       value: { label: "Valore", help: "Quantità da convertire." },
-      fromUnit: { label: "Unità di origine", help: "Unità di tempo di origine." },
-      toUnit: { label: "Unità di destinazione", help: "Unità di tempo di destinazione." },
+      fromUnit: {
+        label: "Unità di origine",
+        help: "Unità di tempo di origine.",
+      },
+      toUnit: {
+        label: "Unità di destinazione",
+        help: "Unità di tempo di destinazione.",
+      },
     },
     outputs: {
       result: { label: "Risultato", help: "Valore di tempo convertito." },
     },
     options: {
-      second: "Secondo", minute: "Minuto", hour: "Ora", day: "Giorno", week: "Settimana", month: "Mese", year: "Anno",
+      nanosecond: "Nanosecondo (ns)",
+      microsecond: "Microsecondo (µs)",
+      millisecond: "Millisecondo (ms)",
+      second: "Secondo",
+      minute: "Minuto",
+      hour: "Ora",
+      day: "Giorno",
+      week: "Settimana",
+      month: "Mese",
+      year: "Anno",
+      decade: "Decennio",
+      century: "Secolo",
+      millennium: "Millennio",
     },
     errors: { invalidValue: "Il valore deve essere positivo." },
     faq: [
-      { q: "Perché 1 anno = 365,25 giorni?", a: "Il calendario gregoriano media gli anni bisestili: ogni 4 anni, con eccezioni." },
+      {
+        q: "Perché 1 anno = 365,25 giorni?",
+        a: "Il calendario gregoriano media gli anni bisestili: ogni 4 anni, con eccezioni.",
+      },
     ],
   },
 
   ar: {
     title: "محول الوقت",
-    short: "تحويل بين الثواني والدقائق والساعات والأيام والأسابيع والأشهر والسنوات.",
+    short:
+      "تحويل بين الثواني والدقائق والساعات والأيام والأسابيع والأشهر والسنوات.",
     description: "محول وقت مجاني بمتوسطات دقيقة للتقويم الجريجوري.",
-    keywords: ["محول الوقت", "تحويل الوحدات", "الساعات إلى الأيام", "الأيام إلى السنوات", "حاسبة الوقت"],
+    keywords: [
+      "محول الوقت",
+      "تحويل الوحدات",
+      "الساعات إلى الأيام",
+      "الأيام إلى السنوات",
+      "حاسبة الوقت",
+    ],
     inputs: {
       value: { label: "القيمة", help: "الكمية المراد تحويلها." },
       fromUnit: { label: "من الوحدة", help: "وحدة الوقت المصدر." },
@@ -196,19 +402,42 @@ const i18n: CalculatorI18n = {
       result: { label: "النتيجة", help: "قيمة الوقت المحولة." },
     },
     options: {
-      second: "ثانية", minute: "دقيقة", hour: "ساعة", day: "يوم", week: "أسبوع", month: "شهر", year: "سنة",
+      nanosecond: "نانوثانية (ns)",
+      microsecond: "ميكروثانية (µs)",
+      millisecond: "ميلي ثانية (ms)",
+      second: "ثانية",
+      minute: "دقيقة",
+      hour: "ساعة",
+      day: "يوم",
+      week: "أسبوع",
+      month: "شهر",
+      year: "سنة",
+      decade: "عقد",
+      century: "قرن",
+      millennium: "ألفية",
     },
     errors: { invalidValue: "يجب أن تكون القيمة موجبة." },
     faq: [
-      { q: "لماذا 1 سنة = 365.25 يوم؟", a: "يعدل التقويم الجريجوري السنوات الكبيسة: كل 4 سنوات، مع استثناءات للقرون." },
+      {
+        q: "لماذا 1 سنة = 365.25 يوم؟",
+        a: "يعدل التقويم الجريجوري السنوات الكبيسة: كل 4 سنوات، مع استثناءات للقرون.",
+      },
     ],
   },
 
   ru: {
     title: "Конвертер времени",
-    short: "Конвертируйте между секундами, минутами, часами, днями, неделями, месяцами и годами.",
-    description: "Бесплатный конвертер времени с точными средними значениями григорианского календаря.",
-    keywords: ["конвертер времени", "преобразование единиц", "часы в дни", "дни в годы", "калькулятор времени"],
+    short:
+      "Конвертируйте между секундами, минутами, часами, днями, неделями, месяцами и годами.",
+    description:
+      "Бесплатный конвертер времени с точными средними значениями григорианского календаря.",
+    keywords: [
+      "конвертер времени",
+      "преобразование единиц",
+      "часы в дни",
+      "дни в годы",
+      "калькулятор времени",
+    ],
     inputs: {
       value: { label: "Значение", help: "Количество для преобразования." },
       fromUnit: { label: "Из единицы", help: "Исходная единица времени." },
@@ -218,11 +447,26 @@ const i18n: CalculatorI18n = {
       result: { label: "Результат", help: "Преобразованное значение времени." },
     },
     options: {
-      second: "Секунда", minute: "Минута", hour: "Час", day: "День", week: "Неделя", month: "Месяц", year: "Год",
+      nanosecond: "Наносекунда (ns)",
+      microsecond: "Микросекунда (µs)",
+      millisecond: "Миллисекунда (ms)",
+      second: "Секунда",
+      minute: "Минута",
+      hour: "Час",
+      day: "День",
+      week: "Неделя",
+      month: "Месяц",
+      year: "Год",
+      decade: "Десятилетие",
+      century: "Век",
+      millennium: "Тысячелетие",
     },
     errors: { invalidValue: "Значение должно быть положительным." },
     faq: [
-      { q: "Почему 1 год = 365,25 дней?", a: "Григорианский календарь усредняет високосные годы: каждые 4 года, с исключениями для веков." },
+      {
+        q: "Почему 1 год = 365,25 дней?",
+        a: "Григорианский календарь усредняет високосные годы: каждые 4 года, с исключениями для веков.",
+      },
     ],
   },
 
@@ -240,11 +484,26 @@ const i18n: CalculatorI18n = {
       result: { label: "结果", help: "转换后的时间值。" },
     },
     options: {
-      second: "秒", minute: "分钟", hour: "小时", day: "天", week: "周", month: "月", year: "年",
+      nanosecond: "纳秒 (ns)",
+      microsecond: "微秒 (µs)",
+      millisecond: "毫秒 (ms)",
+      second: "秒",
+      minute: "分钟",
+      hour: "小时",
+      day: "天",
+      week: "周",
+      month: "月",
+      year: "年",
+      decade: "十年",
+      century: "世纪",
+      millennium: "千年",
     },
     errors: { invalidValue: "值必须为正数。" },
     faq: [
-      { q: "为什么1年 = 365.25天？", a: "格里历平均闰年：每4年一次，世纪有例外。" },
+      {
+        q: "为什么1年 = 365.25天？",
+        a: "格里历平均闰年：每4年一次，世纪有例外。",
+      },
     ],
   },
 
@@ -252,7 +511,13 @@ const i18n: CalculatorI18n = {
     title: "時間変換ツール",
     short: "秒、分、時間、日、週、月、年の間で変換します。",
     description: "グレゴリオ暦の平均値を使用した無料の時間変換ツール。",
-    keywords: ["時間変換", "単位変換", "時間から日へ", "日から年へ", "時間計算機"],
+    keywords: [
+      "時間変換",
+      "単位変換",
+      "時間から日へ",
+      "日から年へ",
+      "時間計算機",
+    ],
     inputs: {
       value: { label: "値", help: "変換する量。" },
       fromUnit: { label: "元の単位", help: "元の時間単位。" },
@@ -262,11 +527,26 @@ const i18n: CalculatorI18n = {
       result: { label: "結果", help: "変換された時間値。" },
     },
     options: {
-      second: "秒", minute: "分", hour: "時間", day: "日", week: "週", month: "月", year: "年",
+      nanosecond: "ナノ秒 (ns)",
+      microsecond: "マイクロ秒 (µs)",
+      millisecond: "ミリ秒 (ms)",
+      second: "秒",
+      minute: "分",
+      hour: "時間",
+      day: "日",
+      week: "週",
+      month: "月",
+      year: "年",
+      decade: "10年",
+      century: "世紀",
+      millennium: "千年紀",
     },
     errors: { invalidValue: "値は正の数である必要があります。" },
     faq: [
-      { q: "なぜ1年 = 365.25日なのか？", a: "グレゴリオ暦は閏年を平均化しています：4年ごと、ただし世紀の例外。" },
+      {
+        q: "なぜ1年 = 365.25日なのか？",
+        a: "グレゴリオ暦は閏年を平均化しています：4年ごと、ただし世紀の例外。",
+      },
     ],
   },
 
@@ -274,7 +554,13 @@ const i18n: CalculatorI18n = {
     title: "시간 변환기",
     short: "초, 분, 시간, 일, 주, 월, 연도 간에 변환하세요.",
     description: "정확한 그레고리력 평균값을 사용한 무료 시간 변환기입니다.",
-    keywords: ["시간 변환기", "단위 변환", "시간에서 일로", "일에서 연도로", "시간 계산기"],
+    keywords: [
+      "시간 변환기",
+      "단위 변환",
+      "시간에서 일로",
+      "일에서 연도로",
+      "시간 계산기",
+    ],
     inputs: {
       value: { label: "값", help: "변환할 수량입니다." },
       fromUnit: { label: "원본 단위", help: "원본 시간 단위입니다." },
@@ -284,11 +570,26 @@ const i18n: CalculatorI18n = {
       result: { label: "결과", help: "변환된 시간 값입니다." },
     },
     options: {
-      second: "초", minute: "분", hour: "시간", day: "일", week: "주", month: "월", year: "연도",
+      nanosecond: "나노초 (ns)",
+      microsecond: "마이크로초 (µs)",
+      millisecond: "밀리초 (ms)",
+      second: "초",
+      minute: "분",
+      hour: "시간",
+      day: "일",
+      week: "주",
+      month: "월",
+      year: "연도",
+      decade: "10년",
+      century: "세기",
+      millennium: "천년",
     },
     errors: { invalidValue: "값은 양수여야 합니다." },
     faq: [
-      { q: "1년이 365.25일인 이유는?", a: "그레고리력은 윤년을 평균화합니다: 4년마다, 세기의 예외를 제외하고." },
+      {
+        q: "1년이 365.25일인 이유는?",
+        a: "그레고리력은 윤년을 평균화합니다: 4년마다, 세기의 예외를 제외하고.",
+      },
     ],
   },
 
@@ -296,7 +597,13 @@ const i18n: CalculatorI18n = {
     title: "समय रूपांतरण उपकरण",
     short: "सेकंड, मिनट, घंटे, दिन, सप्ताह, महीने और साल के बीच रूपांतरण करें।",
     description: "सटीक ग्रेगोरियन कैलेंडर औसत के साथ मुफ्त समय कनवर्टर।",
-    keywords: ["समय कनवर्टर", "इकाई रूपांतरण", "घंटे से दिन", "दिन से साल", "समय कैलकुलेटर"],
+    keywords: [
+      "समय कनवर्टर",
+      "इकाई रूपांतरण",
+      "घंटे से दिन",
+      "दिन से साल",
+      "समय कैलकुलेटर",
+    ],
     inputs: {
       value: { label: "मान", help: "रूपांतरित की जाने वाली मात्रा।" },
       fromUnit: { label: "स्रोत इकाई", help: "स्रोत समय इकाई।" },
@@ -306,11 +613,26 @@ const i18n: CalculatorI18n = {
       result: { label: "परिणाम", help: "रूपांतरित समय मान।" },
     },
     options: {
-      second: "सेकंड", minute: "मिनट", hour: "घंटा", day: "दिन", week: "सप्ताह", month: "महीना", year: "साल",
+      nanosecond: "नैनोसेकंड (ns)",
+      microsecond: "माइक्रोसेकंड (µs)",
+      millisecond: "मिलीसेकंड (ms)",
+      second: "सेकंड",
+      minute: "मिनट",
+      hour: "घंटा",
+      day: "दिन",
+      week: "सप्ताह",
+      month: "महीना",
+      year: "साल",
+      decade: "दशक",
+      century: "शताब्दी",
+      millennium: "सहस्राब्दी",
     },
     errors: { invalidValue: "मान सकारात्मक होना चाहिए।" },
     faq: [
-      { q: "1 साल = 365.25 दिन क्यों?", a: "ग्रेगोरियन कैलेंडर लीप वर्षों को औसत करता है: हर 4 साल में, शताब्दी के अपवाद के साथ।" },
+      {
+        q: "1 साल = 365.25 दिन क्यों?",
+        a: "ग्रेगोरियन कैलेंडर लीप वर्षों को औसत करता है: हर 4 साल में, शताब्दी के अपवाद के साथ।",
+      },
     ],
   },
 };
