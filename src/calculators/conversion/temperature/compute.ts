@@ -4,6 +4,8 @@ export const inputSchema = z.object({
   celsius: z.number().finite().optional(),
   fahrenheit: z.number().finite().optional(),
   kelvin: z.number().finite().optional(),
+  reaumur: z.number().finite().optional(),
+  rankine: z.number().finite().optional(),
 });
 
 export type TemperatureInputs = z.infer<typeof inputSchema>;
@@ -12,12 +14,14 @@ export interface TemperatureResult extends Record<string, unknown> {
   readonly celsius: number;
   readonly fahrenheit: number;
   readonly kelvin: number;
+  readonly reaumur: number;
+  readonly rankine: number;
 }
 
 export function compute(input: TemperatureInputs): TemperatureResult {
-  const { celsius, fahrenheit, kelvin } = input;
+  const { celsius, fahrenheit, kelvin, reaumur, rankine } = input;
 
-  // Determine which input was provided and convert all others
+  // Determine which input was provided and convert everything via Celsius
   let celsiusValue: number;
 
   if (celsius !== undefined && celsius !== null) {
@@ -26,6 +30,10 @@ export function compute(input: TemperatureInputs): TemperatureResult {
     celsiusValue = (fahrenheit - 32) * (5 / 9);
   } else if (kelvin !== undefined && kelvin !== null) {
     celsiusValue = kelvin - 273.15;
+  } else if (reaumur !== undefined && reaumur !== null) {
+    celsiusValue = reaumur * (5 / 4);
+  } else if (rankine !== undefined && rankine !== null) {
+    celsiusValue = (rankine - 491.67) * (5 / 9);
   } else {
     throw new Error("At least one temperature value must be provided");
   }
@@ -33,10 +41,14 @@ export function compute(input: TemperatureInputs): TemperatureResult {
   // Convert from Celsius to other units
   const fahrenheitValue = celsiusValue * (9 / 5) + 32;
   const kelvinValue = celsiusValue + 273.15;
+  const reaumurValue = celsiusValue * (4 / 5);
+  const rankineValue = (celsiusValue + 273.15) * (9 / 5);
 
   return {
     celsius: celsiusValue,
     fahrenheit: fahrenheitValue,
     kelvin: kelvinValue,
+    reaumur: reaumurValue,
+    rankine: rankineValue,
   };
 }
