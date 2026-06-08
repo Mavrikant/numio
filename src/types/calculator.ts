@@ -165,6 +165,13 @@ export interface CalculatorMeta {
   readonly compareEnabled?: boolean;
   /** When true, show the NaturalLanguageInput component above the form. */
   readonly nlEnabled?: boolean;
+  /**
+   * When true, results and charts update only when the user presses the
+   * Calculate button — not live on every keystroke. Useful for inputs such as
+   * comma-separated lists where intermediate, half-typed states are invalid
+   * and make the chart flicker or disappear. Defaults to false (live recompute).
+   */
+  readonly manualCompute?: boolean;
   /** Free-form description placed near the formula (some calcs author one). */
   readonly description?: string;
 }
