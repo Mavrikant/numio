@@ -1,0 +1,44 @@
+# Sales Tax Calculator
+
+Sales tax is a consumption tax added to the price of most goods and many services at the point of sale. This calculator works in both directions: it can **add** tax to a pre-tax price to find the total you'll actually pay, or **remove** tax from a tax-inclusive total to recover the original price and the tax portion.
+
+## What is sales tax?
+
+Sales tax is charged as a percentage of the sale price. In the United States there is no national sales tax — instead, states, counties, and cities each set their own rates, which stack into a single **combined rate** at checkout. A purchase in one city might be taxed at 6%, while a purchase a few miles away is taxed at 9.5%.
+
+The core formula is simple:
+
+- **Total = Amount × (1 + Rate ÷ 100)**
+- **Tax = Amount × (Rate ÷ 100)**
+
+To reverse it — to strip tax out of a receipt total — divide instead of multiply:
+
+- **Pre-tax = Total ÷ (1 + Rate ÷ 100)**
+
+## How to use this calculator
+
+1. Choose a **mode**: *Add tax to amount* if you have a pre-tax price, or *Remove tax from total* if you have a tax-inclusive figure.
+2. Enter the **amount** — your pre-tax price or your tax-inclusive total, depending on the mode.
+3. Enter the **sales tax rate** as a percentage (use your combined state + local rate).
+4. Read off the **total**, the **sales tax**, and the **pre-tax amount**.
+
+## Examples
+
+**Adding tax.** A laptop is priced at $100 and the local combined rate is 8.25%. The tax is 100 × 0.0825 = **$8.25**, and the total is **$108.25**.
+
+**Removing tax.** A receipt shows a $108.25 total at an 8.25% rate. The pre-tax price is 108.25 ÷ 1.0825 = **$100**, so **$8.25** of the total was tax.
+
+**Zero-tax states.** In states with no sales tax, the rate is 0% and the total equals the price — the calculator simply passes the amount through.
+
+## Frequently asked questions
+
+**How do I calculate sales tax?** Multiply the price by the rate as a decimal (8.25% → 0.0825) and add it to the price.
+
+**How do I remove sales tax from a total?** Divide the total by 1 plus the rate as a decimal. Use the *Remove tax* mode to do this automatically.
+
+**Which rate should I use?** Use the combined state, county, and city rate for the location where the sale happens.
+
+## References
+
+- [Sales Tax Definition — Investopedia](https://www.investopedia.com/terms/s/salestax.asp)
+- [State and Local Sales Tax Rates — Tax Foundation](https://taxfoundation.org/data/all/state/2024-sales-taxes/)

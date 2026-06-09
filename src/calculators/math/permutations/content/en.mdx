@@ -1,0 +1,45 @@
+# Permutations Calculator (nPr)
+
+A **permutation** is an ordered arrangement of items chosen from a set. This calculator counts how many distinct ordered arrangements of **r** items you can make from a set of **n** items — either without repetition (each item used at most once) or with repetition (items may repeat).
+
+## What is a permutation?
+
+When **order matters**, you are counting permutations. The arrangements ABC and CBA use the same letters but count as two different permutations. This is the key difference from combinations, where order does not matter.
+
+The standard formula, written **nPr** or *P(n, r)*, is:
+
+- **nPr = n! / (n − r)!**
+
+This is the *falling factorial* n × (n − 1) × … × (n − r + 1): there are n choices for the first position, n − 1 for the second, and so on for r positions.
+
+When items may repeat, every position independently has all n choices, so the count becomes:
+
+- **n^r**
+
+## How to use this calculator
+
+1. Enter the **total number of items, n** — the size of the set you are drawing from.
+2. Enter the **number chosen, r** — how many you arrange in order.
+3. Toggle **Allow repetition** on if an item can be reused (e.g. digits in a PIN), or off if each item is used at most once (e.g. seating distinct people).
+4. Read the **number of permutations**.
+
+## Examples
+
+**Race podium.** From 10 runners, how many ways can gold, silver, and bronze be awarded? Order matters and no one wins twice, so 10P3 = 10 × 9 × 8 = **720**.
+
+**Full shuffle.** Arranging all 5 books on a shelf is 5P5 = 5! = **120** orderings.
+
+**PIN codes.** A 3-digit PIN using digits 0–9 with repetition allowed is 10^3 = **1,000** possibilities.
+
+## Frequently asked questions
+
+**How is nPr different from nCr?** Permutations count ordered arrangements; combinations count unordered selections. Since each combination can be ordered r! ways, nPr = nCr × r!.
+
+**What if r is greater than n?** Without repetition the answer is 0 — you cannot arrange more distinct items than you have. With repetition it is still n^r.
+
+**Why is 0P0 equal to 1?** There is exactly one way to arrange nothing: the empty arrangement.
+
+## References
+
+- [Permutation — Wolfram MathWorld](https://mathworld.wolfram.com/Permutation.html)
+- [Permutations — Khan Academy](https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:prob-comb/x9e81a4f98389efdf:combinatorics-precalc/a/permutations)
