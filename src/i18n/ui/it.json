@@ -139,5 +139,26 @@
     "fill": "Compila calcolatore",
     "matched": "{n}/{total} campi riconosciuti",
     "unmatched": "Non riconosciuti: {fields}"
+  },
+  "home": {
+    "badge": "100% gratis · Privato · Senza registrazione",
+    "ctaCalculators": "Esplora le calcolatrici",
+    "ctaTools": "Scopri gli strumenti",
+    "statLanguages": "lingue",
+    "categoriesHeading": "Calcolatrici per categoria",
+    "categoriesSubheading": "Risultati precisi e istantanei su ogni argomento — scegli una categoria.",
+    "calculators": "calcolatrici",
+    "toolsHeading": "Strumenti per sviluppatori e di uso quotidiano",
+    "toolsDesc": "Convertitori, generatori, formattatori e validatori: {n} strumenti che funzionano interamente sul tuo dispositivo.",
+    "toolsCta": "Vedi tutti gli strumenti",
+    "whyHeading": "Perché Numio",
+    "featurePrivateTitle": "Privato per impostazione",
+    "featurePrivateDesc": "Nessun account, nessun tracciamento. Tutto gira nel tuo browser.",
+    "featureInstantTitle": "Risultati istantanei",
+    "featureInstantDesc": "I risultati si aggiornano mentre digiti, senza attese.",
+    "featureLanguagesTitle": "14 lingue",
+    "featureLanguagesDesc": "Completamente localizzato per un pubblico globale.",
+    "featureOfflineTitle": "Funziona offline",
+    "featureOfflineDesc": "Installa Numio come app e usalo ovunque."
   }
 }

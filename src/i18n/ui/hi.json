@@ -139,5 +139,26 @@
     "fill": "कैलकुलेटर भरें",
     "matched": "{total} में से {n} फ़ील्ड पहचाने गए",
     "unmatched": "पहचाने नहीं गए: {fields}"
+  },
+  "home": {
+    "badge": "100% मुफ़्त · निजी · बिना साइन-अप",
+    "ctaCalculators": "कैलकुलेटर देखें",
+    "ctaTools": "टूल देखें",
+    "statLanguages": "भाषाएँ",
+    "categoriesHeading": "श्रेणी के अनुसार कैलकुलेटर",
+    "categoriesSubheading": "हर विषय पर सटीक और तुरंत परिणाम — शुरू करने के लिए एक श्रेणी चुनें।",
+    "calculators": "कैलकुलेटर",
+    "toolsHeading": "डेवलपर और रोज़मर्रा के टूल",
+    "toolsDesc": "कन्वर्टर, जेनरेटर, फ़ॉर्मैटर और वैलिडेटर — {n} टूल जो पूरी तरह आपके डिवाइस पर चलते हैं।",
+    "toolsCta": "सभी टूल देखें",
+    "whyHeading": "Numio क्यों",
+    "featurePrivateTitle": "डिज़ाइन से निजी",
+    "featurePrivateDesc": "कोई अकाउंट नहीं, कोई ट्रैकिंग नहीं। सब कुछ आपके ब्राउज़र में चलता है।",
+    "featureInstantTitle": "तुरंत परिणाम",
+    "featureInstantDesc": "टाइप करते ही परिणाम अपडेट होते हैं, कोई प्रतीक्षा नहीं।",
+    "featureLanguagesTitle": "14 भाषाएँ",
+    "featureLanguagesDesc": "वैश्विक दर्शकों के लिए पूरी तरह स्थानीयकृत।",
+    "featureOfflineTitle": "ऑफ़लाइन काम करता है",
+    "featureOfflineDesc": "Numio को ऐप के रूप में इंस्टॉल करें और कहीं भी उपयोग करें।"
   }
 }

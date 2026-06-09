@@ -139,5 +139,26 @@
     "fill": "계산기 채우기",
     "matched": "{total}개 중 {n}개 필드 인식",
     "unmatched": "인식 못함: {fields}"
+  },
+  "home": {
+    "badge": "100% 무료 · 개인정보 보호 · 가입 불필요",
+    "ctaCalculators": "계산기 둘러보기",
+    "ctaTools": "도구 살펴보기",
+    "statLanguages": "개 언어",
+    "categoriesHeading": "카테고리별 계산기",
+    "categoriesSubheading": "모든 주제에 대한 정확하고 즉각적인 결과 — 카테고리를 선택해 시작하세요.",
+    "calculators": "개 계산기",
+    "toolsHeading": "개발자 및 일상 도구",
+    "toolsDesc": "변환기, 생성기, 포매터, 검증기 — 모두 기기에서 실행되는 {n}개의 브라우저 도구.",
+    "toolsCta": "모든 도구 보기",
+    "whyHeading": "왜 Numio인가",
+    "featurePrivateTitle": "설계부터 개인정보 보호",
+    "featurePrivateDesc": "계정도 추적도 없습니다. 모든 것이 브라우저에서 실행됩니다.",
+    "featureInstantTitle": "즉각적인 결과",
+    "featureInstantDesc": "입력하는 대로 결과가 갱신됩니다. 기다림이 없습니다.",
+    "featureLanguagesTitle": "14개 언어",
+    "featureLanguagesDesc": "전 세계 사용자를 위해 완전히 현지화되었습니다.",
+    "featureOfflineTitle": "오프라인 작동",
+    "featureOfflineDesc": "Numio를 앱으로 설치해 어디서나 사용하세요."
   }
 }

@@ -139,5 +139,26 @@
     "fill": "計算機に入力",
     "matched": "{n}/{total} フィールドを認識しました",
     "unmatched": "認識できず: {fields}"
+  },
+  "home": {
+    "badge": "100% 無料 · プライバシー保護 · 登録不要",
+    "ctaCalculators": "電卓を見る",
+    "ctaTools": "ツールを見る",
+    "statLanguages": "言語",
+    "categoriesHeading": "カテゴリー別の電卓",
+    "categoriesSubheading": "あらゆるテーマで正確かつ即時の結果を——カテゴリーを選んで始めましょう。",
+    "calculators": "個の電卓",
+    "toolsHeading": "開発者向け・日常のツール",
+    "toolsDesc": "コンバーター、ジェネレーター、フォーマッター、バリデーター——すべて端末上で動作する {n} 個のツール。",
+    "toolsCta": "すべてのツールを見る",
+    "whyHeading": "Numio の特長",
+    "featurePrivateTitle": "プライバシー重視",
+    "featurePrivateDesc": "アカウント不要・追跡なし。すべてブラウザー内で動作します。",
+    "featureInstantTitle": "即時に結果",
+    "featureInstantDesc": "入力に合わせて結果が更新。待ち時間はありません。",
+    "featureLanguagesTitle": "14 言語",
+    "featureLanguagesDesc": "世界中のユーザー向けに完全ローカライズ。",
+    "featureOfflineTitle": "オフライン対応",
+    "featureOfflineDesc": "Numio をアプリとしてインストールしてどこでも利用。"
   }
 }

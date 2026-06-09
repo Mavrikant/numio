@@ -1,9 +1,13 @@
 ---
 import Base from "@/layouts/Base.astro";
 import { LOCALES, isLocale, type Locale } from "@/config/site";
-import { t, buildAbsoluteUrl } from "@/lib/i18n";
-import { getAvailableCategories } from "@/lib/registry";
-import { getCategoryLabel } from "@/lib/i18n";
+import { t, buildAbsoluteUrl, buildPath, getCategoryLabel } from "@/lib/i18n";
+import {
+  getAvailableCategories,
+  getCalculatorsByCategory,
+  getAllCalculators,
+} from "@/lib/registry";
+import { getAllTools } from "@/lib/tools-registry";
 import { buildOrganizationJsonLd, buildWebSiteJsonLd } from "@/lib/seo";
 import JsonLd from "@/components/seo/JsonLd.astro";
 
@@ -18,47 +22,318 @@ if (!lang || !isLocale(lang)) {
 const locale = lang as Locale;
 const categories = getAvailableCategories();
 const canonical = buildAbsoluteUrl(locale);
+
+const totalCalculators = getAllCalculators().length;
+const totalTools = getAllTools().length;
+const toolsHref = buildPath(locale, "tools");
+
+const calculatorsWord = t(locale, "home.calculators");
+
+/**
+ * Per-category presentation: a Lucide-style glyph (inner SVG markup) plus a
+ * distinct accent so the landing grid reads as a set of destinations rather
+ * than a wall of identical cards. Class strings are written literally so the
+ * Tailwind v4 scanner picks them up.
+ */
+const CATEGORY_META: Record<
+  string,
+  { icon: string; iconWrap: string }
+> = {
+  health: {
+    icon: `<path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>`,
+    iconWrap:
+      "bg-rose-50 text-rose-600 dark:bg-rose-500/10 dark:text-rose-400",
+  },
+  finance: {
+    icon: `<polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/>`,
+    iconWrap:
+      "bg-emerald-50 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-400",
+  },
+  engineering: {
+    icon: `<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76Z"/>`,
+    iconWrap:
+      "bg-amber-50 text-amber-600 dark:bg-amber-500/10 dark:text-amber-400",
+  },
+  math: {
+    icon: `<circle cx="12" cy="6" r="1"/><line x1="5" x2="19" y1="12" y2="12"/><circle cx="12" cy="18" r="1"/>`,
+    iconWrap:
+      "bg-indigo-50 text-indigo-600 dark:bg-indigo-500/10 dark:text-indigo-400",
+  },
+  conversion: {
+    icon: `<path d="M8 3 4 7l4 4"/><path d="M4 7h16"/><path d="m16 21 4-4-4-4"/><path d="M20 17H4"/>`,
+    iconWrap:
+      "bg-violet-50 text-violet-600 dark:bg-violet-500/10 dark:text-violet-400",
+  },
+  datetime: {
+    icon: `<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>`,
+    iconWrap: "bg-sky-50 text-sky-600 dark:bg-sky-500/10 dark:text-sky-400",
+  },
+};
+
+const DEFAULT_META = {
+  icon: `<rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="14" x2="8" y2="14"/><line x1="12" y1="14" x2="12" y2="14"/><line x1="16" y1="14" x2="16" y2="14"/>`,
+  iconWrap:
+    "bg-slate-100 text-slate-600 dark:bg-slate-700/40 dark:text-slate-300",
+};
+
+const FEATURES = [
+  {
+    title: t(locale, "home.featurePrivateTitle"),
+    desc: t(locale, "home.featurePrivateDesc"),
+    icon: `<rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>`,
+  },
+  {
+    title: t(locale, "home.featureInstantTitle"),
+    desc: t(locale, "home.featureInstantDesc"),
+    icon: `<polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>`,
+  },
+  {
+    title: t(locale, "home.featureLanguagesTitle"),
+    desc: t(locale, "home.featureLanguagesDesc"),
+    icon: `<circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>`,
+  },
+  {
+    title: t(locale, "home.featureOfflineTitle"),
+    desc: t(locale, "home.featureOfflineDesc"),
+    icon: `<path d="M12 2v8"/><path d="m16 6-4 4-4-4"/><rect x="3" y="14" width="18" height="7" rx="2"/>`,
+  },
+];
 ---
 
 <Base locale={locale} canonical={canonical}>
   <JsonLd data={buildOrganizationJsonLd()} slot="head" />
   <JsonLd data={buildWebSiteJsonLd(locale)} slot="head" />
-  <main class="container-page py-16">
-    <header class="mb-12 text-center">
-      <h1 class="text-4xl font-bold tracking-tight sm:text-5xl text-balance">
+
+  {/* ── Hero ─────────────────────────────────────────────────────────── */}
+  <section class="relative overflow-hidden border-b border-slate-200 dark:border-slate-800">
+    {/* Decorative gradient wash — purely cosmetic */}
+    <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10">
+      <div
+        class="absolute left-1/2 top-0 h-[36rem] w-[60rem] max-w-none -translate-x-1/2 -translate-y-1/3 rounded-full bg-gradient-to-br from-brand-200/60 via-sky-100/40 to-transparent blur-3xl dark:from-brand-800/30 dark:via-sky-900/20"
+      >
+      </div>
+    </div>
+
+    <div class="container-page py-20 text-center sm:py-28">
+      <span
+        class="inline-flex items-center gap-2 rounded-full border border-brand-200 bg-brand-50/80 px-3.5 py-1.5 text-xs font-medium text-brand-700 dark:border-brand-800 dark:bg-brand-950/40 dark:text-brand-300"
+      >
+        <span class="relative flex h-2 w-2">
+          <span
+            class="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-400 opacity-75"
+          ></span>
+          <span class="relative inline-flex h-2 w-2 rounded-full bg-brand-500"></span>
+        </span>
+        {t(locale, "home.badge")}
+      </span>
+
+      <h1
+        class="mt-6 text-4xl font-bold tracking-tight text-balance sm:text-6xl"
+      >
         {t(locale, "site.name")}
       </h1>
-      <p class="mt-4 text-lg text-slate-600 dark:text-slate-400 text-balance">
+      <p
+        class="mx-auto mt-5 max-w-2xl text-lg text-slate-600 text-balance dark:text-slate-300 sm:text-xl"
+      >
         {t(locale, "site.tagline")}
+      </p>
+
+      <div
+        class="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row"
+      >
+        <a href="#categories" class="btn-primary px-5 py-2.5 text-base">
+          {t(locale, "home.ctaCalculators")}
+        </a>
+        <a href={toolsHref} class="btn-secondary px-5 py-2.5 text-base">
+          {t(locale, "home.ctaTools")}
+        </a>
+      </div>
+
+      {/* At-a-glance stats */}
+      <dl
+        class="mx-auto mt-12 flex max-w-lg items-center justify-center gap-8 text-center sm:gap-12"
+      >
+        <div>
+          <dt class="text-2xl font-bold text-slate-900 dark:text-slate-100 sm:text-3xl">
+            {totalCalculators}
+          </dt>
+          <dd class="mt-1 text-xs font-medium uppercase tracking-wide text-slate-500 dark:text-slate-400">
+            {calculatorsWord}
+          </dd>
+        </div>
+        <div class="h-10 w-px bg-slate-200 dark:bg-slate-700"></div>
+        <div>
+          <dt class="text-2xl font-bold text-slate-900 dark:text-slate-100 sm:text-3xl">
+            {totalTools}
+          </dt>
+          <dd class="mt-1 text-xs font-medium uppercase tracking-wide text-slate-500 dark:text-slate-400">
+            {t(locale, "nav.tools")}
+          </dd>
+        </div>
+        <div class="h-10 w-px bg-slate-200 dark:bg-slate-700"></div>
+        <div>
+          <dt class="text-2xl font-bold text-slate-900 dark:text-slate-100 sm:text-3xl">
+            {LOCALES.length}
+          </dt>
+          <dd class="mt-1 text-xs font-medium uppercase tracking-wide text-slate-500 dark:text-slate-400">
+            {t(locale, "home.statLanguages")}
+          </dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  {/* ── Categories ───────────────────────────────────────────────────── */}
+  <section id="categories" class="container-page scroll-mt-20 py-16">
+    <header class="mb-10 max-w-2xl">
+      <h2
+        class="text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-100 sm:text-3xl"
+      >
+        {t(locale, "home.categoriesHeading")}
+      </h2>
+      <p class="mt-3 text-slate-600 dark:text-slate-400">
+        {t(locale, "home.categoriesSubheading")}
       </p>
     </header>
 
     {categories.length === 0 ? (
-      <section class="card mx-auto max-w-2xl text-center">
-        <h2 class="text-xl font-semibold">
-          {t(locale, "labels.loading")}
-        </h2>
-        <p class="mt-2 text-slate-600 dark:text-slate-400">
-          Calculators will appear here as they are added. (Phase 0 scaffold — no calculators yet.)
-        </p>
-      </section>
+      <div class="card mx-auto max-w-2xl text-center">
+        <h3 class="text-xl font-semibold">{t(locale, "labels.loading")}</h3>
+      </div>
     ) : (
-      <section class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {categories.map((cat) => (
-          <a
-            href={`${import.meta.env.BASE_URL}${locale}/${cat}/`}
-            class="card transition-shadow hover:shadow-md"
-          >
-            <h2 class="text-xl font-semibold capitalize">
-              {getCategoryLabel(locale, cat)}
-            </h2>
-          </a>
-        ))}
-      </section>
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {categories.map((cat) => {
+          const meta = CATEGORY_META[cat] ?? DEFAULT_META;
+          const count = getCalculatorsByCategory(cat).length;
+          return (
+            <a
+              href={buildPath(locale, cat)}
+              class="group flex items-center gap-4 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:border-brand-300 hover:shadow-md dark:border-slate-800 dark:bg-slate-900 dark:hover:border-brand-700"
+            >
+              <span
+                class:list={[
+                  "flex h-12 w-12 shrink-0 items-center justify-center rounded-xl",
+                  meta.iconWrap,
+                ]}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  set:html={meta.icon}
+                />
+              </span>
+              <span class="min-w-0">
+                <span class="block font-semibold text-slate-900 group-hover:text-brand-700 dark:text-slate-100 dark:group-hover:text-brand-400">
+                  {getCategoryLabel(locale, cat)}
+                </span>
+                <span class="mt-0.5 block text-sm text-slate-500 dark:text-slate-400">
+                  {count} {calculatorsWord}
+                </span>
+              </span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="ms-auto h-5 w-5 shrink-0 text-slate-300 transition-all group-hover:translate-x-0.5 group-hover:text-brand-500 rtl:rotate-180 dark:text-slate-600"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="m9 18 6-6-6-6" />
+              </svg>
+            </a>
+          );
+        })}
+      </div>
     )}
+  </section>
 
-    <footer class="mt-24 border-t border-slate-200 pt-8 text-center text-sm text-slate-500 dark:border-slate-800 dark:text-slate-400">
-      <p>{t(locale, "footer.copyright")}</p>
-    </footer>
-  </main>
+  {/* ── Tools highlight ──────────────────────────────────────────────── */}
+  <section class="container-page pb-16">
+    <div
+      class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-brand-600 to-brand-800 px-6 py-12 sm:px-12 sm:py-14"
+    >
+      <div
+        aria-hidden="true"
+        class="pointer-events-none absolute -right-16 -top-16 h-64 w-64 rounded-full bg-white/10 blur-2xl"
+      >
+      </div>
+      <div class="relative max-w-2xl">
+        <h2 class="text-2xl font-bold text-white sm:text-3xl">
+          {t(locale, "home.toolsHeading")}
+        </h2>
+        <p class="mt-3 text-base text-brand-50/90 sm:text-lg">
+          {t(locale, "home.toolsDesc").replace("{n}", String(totalTools))}
+        </p>
+        <a
+          href={toolsHref}
+          class="mt-7 inline-flex items-center gap-2 rounded-lg bg-white px-5 py-2.5 text-sm font-semibold text-brand-700 shadow-sm transition-colors hover:bg-brand-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand-700"
+        >
+          {t(locale, "home.toolsCta")}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-4 w-4 rtl:rotate-180"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M5 12h14" />
+            <path d="m12 5 7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {/* ── Why Numio ────────────────────────────────────────────────────── */}
+  <section class="border-t border-slate-200 bg-slate-50 dark:border-slate-800 dark:bg-slate-900/40">
+    <div class="container-page py-16">
+      <h2
+        class="mb-10 text-center text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-100 sm:text-3xl"
+      >
+        {t(locale, "home.whyHeading")}
+      </h2>
+      <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        {FEATURES.map((f) => (
+          <div class="text-center sm:text-start">
+            <span
+              class="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-brand-100 text-brand-700 dark:bg-brand-500/10 dark:text-brand-400"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+                set:html={f.icon}
+              />
+            </span>
+            <h3 class="mt-4 font-semibold text-slate-900 dark:text-slate-100">
+              {f.title}
+            </h3>
+            <p class="mt-1.5 text-sm text-slate-600 dark:text-slate-400">
+              {f.desc}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
 </Base>

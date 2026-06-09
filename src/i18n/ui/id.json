@@ -139,5 +139,26 @@
     "fill": "Isi kalkulator",
     "matched": "Cocok {n} dari {total} bidang",
     "unmatched": "Tidak dapat mencocokkan: {fields}"
+  },
+  "home": {
+    "badge": "100% gratis · Pribadi · Tanpa daftar",
+    "ctaCalculators": "Jelajahi kalkulator",
+    "ctaTools": "Jelajahi alat",
+    "statLanguages": "bahasa",
+    "categoriesHeading": "Kalkulator menurut kategori",
+    "categoriesSubheading": "Hasil akurat dan instan untuk setiap topik — pilih kategori untuk mulai.",
+    "calculators": "kalkulator",
+    "toolsHeading": "Alat untuk pengembang & sehari-hari",
+    "toolsDesc": "Konverter, generator, pemformat, dan validator — {n} alat berbasis browser yang berjalan sepenuhnya di perangkat Anda.",
+    "toolsCta": "Lihat semua alat",
+    "whyHeading": "Mengapa Numio",
+    "featurePrivateTitle": "Privat sejak awal",
+    "featurePrivateDesc": "Tanpa akun, tanpa pelacakan. Semua berjalan di browser Anda.",
+    "featureInstantTitle": "Hasil instan",
+    "featureInstantDesc": "Hasil diperbarui saat Anda mengetik, tanpa menunggu.",
+    "featureLanguagesTitle": "14 bahasa",
+    "featureLanguagesDesc": "Sepenuhnya dilokalkan untuk audiens global.",
+    "featureOfflineTitle": "Berfungsi offline",
+    "featureOfflineDesc": "Pasang Numio sebagai aplikasi dan gunakan di mana saja."
   }
 }
