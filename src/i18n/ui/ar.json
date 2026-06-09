@@ -139,5 +139,26 @@
     "fill": "املأ الحاسبة",
     "matched": "تم التعرف على {n} من {total} حقول",
     "unmatched": "لم يتم التعرف على: {fields}"
+  },
+  "home": {
+    "badge": "مجاني 100% · خاص · بدون تسجيل",
+    "ctaCalculators": "تصفح الحاسبات",
+    "ctaTools": "استكشف الأدوات",
+    "statLanguages": "لغة",
+    "categoriesHeading": "الحاسبات حسب الفئة",
+    "categoriesSubheading": "نتائج دقيقة وفورية في كل المواضيع — اختر فئة للبدء.",
+    "calculators": "حاسبة",
+    "toolsHeading": "أدوات للمطوّرين وللاستخدام اليومي",
+    "toolsDesc": "محوّلات ومولّدات ومنسّقات وأدوات تحقق — {n} أداة تعمل بالكامل على جهازك.",
+    "toolsCta": "تصفح جميع الأدوات",
+    "whyHeading": "لماذا Numio",
+    "featurePrivateTitle": "خاص بالتصميم",
+    "featurePrivateDesc": "بدون حسابات أو تتبّع. كل شيء يعمل في متصفحك.",
+    "featureInstantTitle": "نتائج فورية",
+    "featureInstantDesc": "تتحدّث النتائج أثناء الكتابة، دون انتظار.",
+    "featureLanguagesTitle": "14 لغة",
+    "featureLanguagesDesc": "مترجَم بالكامل لجمهور عالمي.",
+    "featureOfflineTitle": "يعمل دون اتصال",
+    "featureOfflineDesc": "ثبّت Numio كتطبيق واستخدمه في أي مكان."
   }
 }

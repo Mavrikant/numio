@@ -139,5 +139,26 @@
     "fill": "Hesaplayıcıyı doldur",
     "matched": "{n}/{total} alan dolduruldu",
     "unmatched": "Eşleşmeyen: {fields}"
+  },
+  "home": {
+    "badge": "%100 ücretsiz · Gizli · Üyelik yok",
+    "ctaCalculators": "Hesaplayıcılara göz at",
+    "ctaTools": "Araçları keşfet",
+    "statLanguages": "dil",
+    "categoriesHeading": "Kategoriye göre hesaplayıcılar",
+    "categoriesSubheading": "Her konuda doğru ve anlık sonuçlar — başlamak için bir kategori seçin.",
+    "calculators": "hesaplayıcı",
+    "toolsHeading": "Geliştirici ve günlük araçlar",
+    "toolsDesc": "Dönüştürücüler, üreteçler, biçimlendiriciler ve doğrulayıcılar — tamamen cihazınızda çalışan {n} tarayıcı tabanlı araç.",
+    "toolsCta": "Tüm araçlara göz at",
+    "whyHeading": "Neden Numio?",
+    "featurePrivateTitle": "Tasarımdan gizli",
+    "featurePrivateDesc": "Hesap yok, takip yok. Her şey tarayıcınızda çalışır.",
+    "featureInstantTitle": "Anında sonuç",
+    "featureInstantDesc": "Siz yazdıkça sonuçlar güncellenir — bekleme yok.",
+    "featureLanguagesTitle": "14 dil",
+    "featureLanguagesDesc": "Küresel kullanıcılar için tamamen yerelleştirildi.",
+    "featureOfflineTitle": "Çevrimdışı çalışır",
+    "featureOfflineDesc": "Numio'yu uygulama olarak yükleyin, her yerde kullanın."
   }
 }

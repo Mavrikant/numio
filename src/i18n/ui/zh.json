@@ -139,5 +139,26 @@
     "fill": "填充计算器",
     "matched": "已识别 {n}/{total} 个字段",
     "unmatched": "未识别: {fields}"
+  },
+  "home": {
+    "badge": "100% 免费 · 隐私保护 · 无需注册",
+    "ctaCalculators": "浏览计算器",
+    "ctaTools": "探索工具",
+    "statLanguages": "种语言",
+    "categoriesHeading": "按分类浏览计算器",
+    "categoriesSubheading": "覆盖各类主题的精确即时结果——选择一个分类开始。",
+    "calculators": "个计算器",
+    "toolsHeading": "开发者与日常工具",
+    "toolsDesc": "转换器、生成器、格式化和校验工具——{n} 个完全在你设备上运行的浏览器工具。",
+    "toolsCta": "查看所有工具",
+    "whyHeading": "为什么选择 Numio",
+    "featurePrivateTitle": "隐私优先",
+    "featurePrivateDesc": "无需账户，不做追踪。一切都在你的浏览器中运行。",
+    "featureInstantTitle": "即时结果",
+    "featureInstantDesc": "输入即更新结果，无需等待。",
+    "featureLanguagesTitle": "14 种语言",
+    "featureLanguagesDesc": "为全球用户完整本地化。",
+    "featureOfflineTitle": "离线可用",
+    "featureOfflineDesc": "将 Numio 安装为应用，随时随地使用。"
   }
 }
