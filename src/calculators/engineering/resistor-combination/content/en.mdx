@@ -1,0 +1,44 @@
+# Series & Parallel Resistor Calculator
+
+When two resistors are wired together, their combined — or **equivalent** — resistance depends on how they are connected. This calculator gives both results at once: the equivalent resistance of **R₁** and **R₂** in **series** and in **parallel**.
+
+## Series and parallel resistance
+
+**In series**, the same current flows through both resistors one after another, so their resistances simply add:
+
+- **R series = R₁ + R₂**
+
+The series total is always *greater* than either resistor on its own.
+
+**In parallel**, the current splits between the two paths. For two resistors the convenient *product-over-sum* form is:
+
+- **R parallel = (R₁ × R₂) / (R₁ + R₂)**
+
+The parallel total is always *smaller* than the smaller of the two resistors, because adding another path makes it easier for current to flow.
+
+## How to use this calculator
+
+1. Enter **Resistor 1 (R₁)** in ohms.
+2. Enter **Resistor 2 (R₂)** in ohms.
+3. Read the **parallel** and **series** equivalent resistances.
+
+## Examples
+
+**100 Ω and 200 Ω.** In series: 100 + 200 = **300 Ω**. In parallel: (100 × 200) / 300 ≈ **66.67 Ω**.
+
+**Two equal resistors.** 1 kΩ and 1 kΩ in series give **2 kΩ**; in parallel they give **500 Ω** — exactly half, which holds for any two equal resistors.
+
+**Very different values.** 10 Ω in parallel with 1 MΩ is ≈ **10 Ω**: the much larger resistor carries almost no current, so the small one dominates.
+
+## Frequently asked questions
+
+**Why is parallel resistance smaller than either resistor?** Adding a second path gives current another way through, lowering the overall opposition — so the equivalent is always below the smallest branch.
+
+**Can I extend this to three or more resistors?** Yes — combine two at a time. For three in parallel, find the parallel of two, then combine that result with the third using the same product-over-sum rule.
+
+**What units should I use?** Enter both resistors in the same unit (ohms here); the results come out in that unit.
+
+## References
+
+- [Resistors in Series and Parallel — Basic Electronics Tutorials](https://www.electronics-tutorials.ws/resistor/res_5.html)
+- [Simple Parallel Circuits — All About Circuits](https://www.allaboutcircuits.com/textbook/direct-current/chpt-5/simple-parallel-circuits/)
