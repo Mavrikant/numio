@@ -18,7 +18,8 @@ function isObj(v: unknown): v is Record<string, unknown> {
 }
 
 function capitalize(s: string): string {
-  const safe = s.replace(/[^A-Za-z0-9_]/g, "");
+  let safe = s.replace(/[^A-Za-z0-9_]/g, "");
+  if (/^[0-9]/.test(safe)) safe = `_${safe}`;
   if (!safe) return "Field";
   return safe[0]!.toUpperCase() + safe.slice(1);
 }
@@ -76,6 +77,7 @@ class Generator {
 
 /** Convert a JSON string into a TypeScript interface chain rooted at `rootName`. */
 export function jsonToTypescript(input: string, rootName = "Root"): JsonToTsResult {
+  rootName = capitalize(rootName) === "Field" ? "Root" : capitalize(rootName);
   if (!input.trim()) return { output: "", error: null };
   let parsed: unknown;
   try {

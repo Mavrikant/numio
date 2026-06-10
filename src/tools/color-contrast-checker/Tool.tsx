@@ -3,7 +3,13 @@ import type { Locale } from "@/config/site";
 import { formatNumber } from "@/lib/format";
 import { inputClass } from "@/components/tools/textToolKit";
 import definition from "./definition";
+import { parseColor } from "../color-converter/logic";
 import { checkContrast } from "./logic";
+
+function toCss(input: string): string | undefined {
+  const rgb = parseColor(input);
+  return rgb ? `rgb(${rgb.r}, ${rgb.g}, ${rgb.b})` : undefined;
+}
 
 function Badge({ ok, label }: { readonly ok: boolean; readonly label: string }) {
   return (
@@ -43,7 +49,7 @@ export default function ColorContrastCheckerTool({ locale }: { readonly locale: 
         <div className="rounded-md border border-amber-200 bg-amber-50 px-3 py-2 text-sm text-amber-800 dark:border-amber-800/50 dark:bg-amber-950/30 dark:text-amber-300">{ui.invalid}</div>
       ) : (
         <>
-          <div className="rounded-lg border border-slate-200 p-6 text-center dark:border-slate-700" style={{ backgroundColor: bg, color: fg }}>
+          <div className="rounded-lg border border-slate-200 p-6 text-center dark:border-slate-700" style={{ backgroundColor: toCss(bg), color: toCss(fg) }}>
             <p className="text-base">{ui.sample}</p>
             <p className="mt-2 text-2xl font-bold">{ui.sample}</p>
           </div>

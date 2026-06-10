@@ -1,16 +1,23 @@
 const esc = (s: string): string => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]!);
 
+/** Allow http(s), mailto and relative URLs only; anything else (javascript:, data:, …) is dropped. */
+const safeUrl = (url: string): string =>
+  /^(https?:|mailto:)/i.test(url) || !/^[a-z][a-z0-9+.-]*:/i.test(url) ? url : "#";
+
 function inline(text: string): string {
   let out = esc(text);
-  // Inline code: backticks
-  out = out.replace(/`([^`]+)`/g, (_, code) => `<code>${esc(code)}</code>`);
-  // Restore the escaped backticks that the inline-code replacement now owns by re-escaping is unnecessary;
-  // images and links accept the escaped output.
-  out = out.replace(/!\[([^\]]*)\]\(([^)\s]+)\)/g, (_, alt, src) => `<img src="${src}" alt="${alt}">`);
-  out = out.replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, (_, label, href) => `<a href="${href}">${label}</a>`);
+  // Inline code: backticks. Content is already escaped; stash spans in
+  // placeholders so later replacements can't touch code content.
+  const codes: string[] = [];
+  out = out.replace(/`([^`]+)`/g, (_, code) => {
+    codes.push(`<code>${code}</code>`);
+    return `\u0000${codes.length - 1}\u0000`;
+  });
+  out = out.replace(/!\[([^\]]*)\]\(([^)\s]+)\)/g, (_, alt, src) => `<img src="${safeUrl(src)}" alt="${alt}">`);
+  out = out.replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, (_, label, href) => `<a href="${safeUrl(href)}">${label}</a>`);
   out = out.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
   out = out.replace(/(?<![*\w])\*([^*]+)\*(?!\w)/g, "<em>$1</em>");
-  return out;
+  return out.replace(/\u0000(\d+)\u0000/g, (_, i) => codes[Number(i)]!);
 }
 
 /**

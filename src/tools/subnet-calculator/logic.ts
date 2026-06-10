@@ -50,7 +50,8 @@ export function calculateSubnet(input: string): SubnetResult {
   const mask = prefix === 0 ? 0 : ((0xffffffff << (32 - prefix)) >>> 0);
   const network = (ipInt & mask) >>> 0;
   const broadcast = (network | (~mask >>> 0)) >>> 0;
-  const totalHosts = prefix >= 31 ? 1 << (32 - prefix) : (1 << (32 - prefix)) >>> 0;
+  // Float math: 1 << 32 overflows (JS masks shift counts to 5 bits).
+  const totalHosts = 2 ** (32 - prefix);
   const usableHosts = prefix === 32 ? 1 : prefix === 31 ? 2 : Math.max(0, totalHosts - 2);
 
   return {

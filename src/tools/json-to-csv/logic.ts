@@ -1,11 +1,11 @@
-function escapeField(value: unknown): string {
+function escapeField(value: unknown, delimiter: string): string {
   const s =
     value === null || value === undefined
       ? ""
       : typeof value === "object"
         ? JSON.stringify(value)
         : String(value);
-  return /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
+  return s.includes(delimiter) || /["\r\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
 }
 
 /**
@@ -25,9 +25,9 @@ export function jsonToCsv(jsonStr: string, delimiter = ","): string {
     for (const k of Object.keys(row)) if (!keys.includes(k)) keys.push(k);
   }
 
-  const lines = [keys.map(escapeField).join(delimiter)];
+  const lines = [keys.map((k) => escapeField(k, delimiter)).join(delimiter)];
   for (const row of data as Record<string, unknown>[]) {
-    lines.push(keys.map((k) => escapeField(row[k])).join(delimiter));
+    lines.push(keys.map((k) => escapeField(row[k], delimiter)).join(delimiter));
   }
   return lines.join("\n");
 }

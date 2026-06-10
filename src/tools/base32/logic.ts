@@ -24,7 +24,7 @@ for (let i = 0; i < ALPHABET.length; i++) LOOKUP[ALPHABET[i]!] = i;
 
 /** Base32 → UTF-8 string. Throws on malformed input. */
 export function decodeBase32(b32: string): string {
-  const clean = b32.toUpperCase().replace(/=+$/, "").replace(/\s+/g, "");
+  const clean = b32.toUpperCase().replace(/\s+/g, "").replace(/=+$/, "");
   if (!/^[A-Z2-7]*$/.test(clean)) throw new Error("Invalid Base32");
   let bits = 0;
   let value = 0;

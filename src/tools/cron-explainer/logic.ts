@@ -53,14 +53,22 @@ export function explainCron(expression: string): CronResult {
   const [min, hour, dom, mon, dow] = fields as [string, string, string, string, string];
   const parts = [describeMinuteHour(min, hour)];
 
-  if (dom !== "*") parts.push(`on day-of-month ${dom}`);
+  const dowNames =
+    dow === "*"
+      ? ""
+      : dow.split(",").map((d) => (/^\d+$/.test(d) ? DAYS[Number(d) % 7] : d)).filter(Boolean).join(", ");
+  if (dom !== "*" && dow !== "*") {
+    // POSIX cron: a restricted day-of-month and day-of-week match as OR, not AND.
+    parts.push(`on day-of-month ${dom} or on ${dowNames}`);
+  } else if (dom !== "*") {
+    parts.push(`on day-of-month ${dom}`);
+  }
   if (mon !== "*") {
     const names = mon.split(",").map((m) => (/^\d+$/.test(m) ? MONTHS[Number(m) - 1] : m)).filter(Boolean);
     parts.push(`in ${names.join(", ")}`);
   }
-  if (dow !== "*") {
-    const names = dow.split(",").map((d) => (/^\d+$/.test(d) ? DAYS[Number(d) % 7] : d)).filter(Boolean);
-    parts.push(`on ${names.join(", ")}`);
+  if (dow !== "*" && dom === "*") {
+    parts.push(`on ${dowNames}`);
   }
 
   return { description: parts.join(", "), error: null };

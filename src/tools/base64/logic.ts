@@ -23,6 +23,7 @@ for (let i = 0; i < CHARS.length; i++) LOOKUP[CHARS[i]!] = i;
 export function decodeBase64(b64: string): string {
   const clean = b64.replace(/\s+/g, "").replace(/=+$/, "");
   if (!/^[A-Za-z0-9+/]*$/.test(clean)) throw new Error("Invalid Base64");
+  if (clean.length % 4 === 1) throw new Error("Invalid Base64");
   const bytes: number[] = [];
   for (let i = 0; i < clean.length; i += 4) {
     const c0 = LOOKUP[clean[i]!]!;

@@ -26,7 +26,8 @@ export function luhnValid(input: string): boolean {
 export function detectBrand(input: string): string | null {
   const d = input.replace(/\D/g, "");
   if (/^4/.test(d)) return "Visa";
-  if (/^(5[1-5]|2(2[2-9]|[3-6]|7[01]|720))/.test(d)) return "Mastercard";
+  // Mastercard 2-series runs 2221–2720 (2220 is not Mastercard).
+  if (/^(5[1-5]|2(22[1-9]|2[3-9]|[3-6]|7[01]|720))/.test(d)) return "Mastercard";
   if (/^3[47]/.test(d)) return "American Express";
   if (/^(6011|65|64[4-9]|622)/.test(d)) return "Discover";
   if (/^3(0[0-5]|[68])/.test(d)) return "Diners Club";

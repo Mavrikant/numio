@@ -15,8 +15,7 @@ export default function NanoIdGeneratorTool({ locale }: { readonly locale: Local
   const generate = useCallback(() => {
     const out: string[] = [];
     for (let i = 0; i < count; i++) {
-      const bytes = crypto.getRandomValues(new Uint8Array(size));
-      out.push(generateNanoId(size, alphabet, bytes));
+      out.push(generateNanoId(size, alphabet, (n) => crypto.getRandomValues(new Uint8Array(n))));
     }
     setIds(out);
   }, [count, size, alphabet]);

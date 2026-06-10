@@ -89,10 +89,10 @@ export function nearestPantone(hex: string): NearestPantone {
   let bestDist = Infinity;
   for (const pms of PANTONE_PMS) {
     const c = hexToRgb(pms.hex);
-    const dr = (target.r - c.r) * 0.3;
-    const dg = (target.g - c.g) * 0.59;
-    const db = (target.b - c.b) * 0.11;
-    const dist = Math.sqrt(dr * dr + dg * dg + db * db);
+    const dr = target.r - c.r;
+    const dg = target.g - c.g;
+    const db = target.b - c.b;
+    const dist = Math.sqrt(0.3 * dr * dr + 0.59 * dg * dg + 0.11 * db * db);
     if (dist < bestDist) {
       bestDist = dist;
       best = pms;

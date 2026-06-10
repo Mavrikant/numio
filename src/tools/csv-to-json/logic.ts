@@ -4,6 +4,9 @@ export function parseCsv(text: string, delimiter = ","): string[][] {
   let field = "";
   let row: string[] = [];
   let inQuotes = false;
+  // Distinguishes a truly blank line (skipped) from a record like `""`
+  // (a legitimate one-column empty field, kept).
+  let rowHasData = false;
   const src = text.replace(/\r\n/g, "\n").replace(/\r/g, "\n");
 
   for (let i = 0; i < src.length; i++) {
@@ -17,21 +20,29 @@ export function parseCsv(text: string, delimiter = ","): string[][] {
       } else field += c;
     } else if (c === '"') {
       inQuotes = true;
+      rowHasData = true;
     } else if (c === delimiter) {
       row.push(field);
       field = "";
+      rowHasData = true;
     } else if (c === "\n") {
-      row.push(field);
-      rows.push(row);
+      if (rowHasData) {
+        row.push(field);
+        rows.push(row);
+      }
       row = [];
       field = "";
-    } else field += c;
+      rowHasData = false;
+    } else {
+      field += c;
+      rowHasData = true;
+    }
   }
-  if (field !== "" || row.length > 0) {
+  if (rowHasData) {
     row.push(field);
     rows.push(row);
   }
-  return rows.filter((r) => !(r.length === 1 && r[0] === ""));
+  return rows;
 }
 
 /** Convert CSV to pretty-printed JSON (array of objects, or array of arrays). */

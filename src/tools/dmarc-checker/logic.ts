@@ -50,6 +50,9 @@ export function parseDmarc(record: string): DmarcResult {
   if (!p) {
     valid = false;
     warnings.push("Missing required 'p' (policy) tag.");
+  } else if (!["none", "quarantine", "reject"].includes(p.toLowerCase())) {
+    valid = false;
+    warnings.push(`Unknown policy "p=${p}" — must be none, quarantine or reject; receivers will not enforce this record.`);
   } else if (p.toLowerCase() === "none") {
     warnings.push("Policy is p=none — the domain monitors but does not enforce DMARC.");
   }

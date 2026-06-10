@@ -44,11 +44,12 @@ export function convertCase(text: string, mode: CaseMode): string {
         .toLowerCase()
         .replace(/(^\s*\w|[.!?]\s*\w)/g, (c) => c.toUpperCase());
     case "camel": {
-      const t = tokenize(text.toLowerCase());
+      const t = tokenize(text).map((w) => w.toLowerCase());
       return t.map((w, i) => (i === 0 ? w : w.charAt(0).toUpperCase() + w.slice(1))).join("");
     }
     case "pascal":
-      return tokenize(text.toLowerCase())
+      return tokenize(text)
+        .map((w) => w.toLowerCase())
         .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
         .join("");
     case "snake":

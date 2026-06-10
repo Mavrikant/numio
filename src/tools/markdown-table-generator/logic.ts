@@ -7,7 +7,9 @@ export type Align = "left" | "center" | "right";
 export function buildMarkdownTable(rows: string[][], align: Align[] = []): string {
   if (rows.length === 0) return "";
   const cols = Math.max(...rows.map((r) => r.length));
-  const grid = rows.map((r) => Array.from({ length: cols }, (_, i) => (r[i] ?? "").trim()));
+  const grid = rows.map((r) =>
+    Array.from({ length: cols }, (_, i) => (r[i] ?? "").trim().replace(/\|/g, "\\|")),
+  );
 
   const widths = Array.from({ length: cols }, (_, i) => Math.max(3, ...grid.map((r) => r[i]!.length)));
 

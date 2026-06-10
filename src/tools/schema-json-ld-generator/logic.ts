@@ -39,7 +39,10 @@ export interface BreadcrumbItem {
 }
 
 function wrap(graph: Record<string, unknown>): string {
-  return `<script type="application/ld+json">\n${JSON.stringify(graph, null, 2)}\n</script>`;
+  // Escape "<" so content like "</script>" can't terminate the script element
+  // when the snippet is pasted into an HTML page (still valid JSON-LD).
+  const json = JSON.stringify(graph, null, 2).replace(/</g, "\\u003c");
+  return `<script type="application/ld+json">\n${json}\n</script>`;
 }
 
 function nonEmpty<T extends Record<string, unknown>>(obj: T): Partial<T> {

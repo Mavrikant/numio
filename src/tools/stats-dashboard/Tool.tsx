@@ -80,26 +80,41 @@ export default function StatsDashboardTool({ locale }: ToolProps) {
   const tooMany = numericCols.length > 50;
   const visibleCols = tooMany && !showAll ? numericCols.slice(0, INITIAL_COL_LIMIT) : numericCols;
 
-  // Pre-compute all numeric value arrays for correlation matrix
-  const colValues = useMemo(
+  // Row-aligned numeric arrays (nulls preserved) for the correlation matrix
+  const colAligned = useMemo(
     () =>
       numericCols.map((c) => {
         const col = dataset?.byName(c.name);
-        return col ? numericValues(col) : [];
+        return col ? col.numeric : [];
       }),
     [numericCols, dataset],
   );
 
-  // Pearson correlation matrix (only for ≥2 numeric columns)
+  // Pearson correlation matrix (only for ≥2 numeric columns). Each pair uses
+  // pairwise-complete rows so missing cells don't shift values out of line.
   const correlations = useMemo(() => {
     if (numericCols.length < 2) return null;
     const n = numericCols.length;
+    const pairwise = (i: number, j: number): number => {
+      const a = colAligned[i]!;
+      const b = colAligned[j]!;
+      const xs: number[] = [];
+      const ys: number[] = [];
+      const len = Math.min(a.length, b.length);
+      for (let k = 0; k < len; k++) {
+        const x = a[k];
+        const y = b[k];
+        if (x !== null && x !== undefined && y !== null && y !== undefined) {
+          xs.push(x);
+          ys.push(y);
+        }
+      }
+      return pearson(xs, ys);
+    };
     return Array.from({ length: n }, (_, i) =>
-      Array.from({ length: n }, (_, j) =>
-        i === j ? 1 : pearson(colValues[i]!, colValues[j]!),
-      ),
+      Array.from({ length: n }, (_, j) => (i === j ? 1 : pairwise(i, j))),
     );
-  }, [numericCols, colValues]);
+  }, [numericCols, colAligned]);
 
   return (
     <div className="space-y-6">

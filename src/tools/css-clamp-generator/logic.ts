@@ -11,5 +11,9 @@ export function buildClamp(minPx: number, maxPx: number, minVw: number, maxVw: n
   const slope = maxVw === minVw ? 0 : (maxPx - minPx) / (maxVw - minVw);
   const interceptRem = round((minPx - slope * minVw) / 16);
   const slopeVw = round(slope * 100);
-  return `clamp(${minRem}rem, ${interceptRem}rem + ${slopeVw}vw, ${maxRem}rem)`;
+  // clamp(MIN, VAL, MAX) requires MIN <= MAX; when sizes shrink as the
+  // viewport grows, the bounds must be swapped or the value freezes at MIN.
+  const lo = Math.min(minRem, maxRem);
+  const hi = Math.max(minRem, maxRem);
+  return `clamp(${lo}rem, ${interceptRem}rem + ${slopeVw}vw, ${hi}rem)`;
 }

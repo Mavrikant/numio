@@ -55,13 +55,15 @@ const SAMPLE_CSV = (() => {
 
 // ─── Moving average helper ────────────────────────────────────────────────────
 /**
- * Compute a centered simple moving average.
- * Half-window = floor(w/2). Points without a full window on either side are
- * returned as NaN so the caller can easily filter/skip them.
+ * Compute a centered simple moving average. Even windows are widened to the
+ * next odd number so the window stays symmetric around each point. Points
+ * without a full window on either side are returned as null so the caller can
+ * easily filter/skip them.
  */
 function movingAverage(values: number[], window: number): (number | null)[] {
   if (window < 2) return values.map((v) => v);
   const half = Math.floor(window / 2);
+  // averages indices i-half … i+half, i.e. an odd window of 2*half+1 points
   return values.map((_, i) => {
     const lo = i - half;
     const hi = i + half;
@@ -148,20 +150,21 @@ export default function TimeSeriesToolComponent({ locale }: ToolProps) {
     const timeColumn = dataset.byName(effectiveTimeCol);
     if (!timeColumn) return { traces: [], xIsDate: false };
 
-    // Determine if x-axis should be dates
-    let xValues: (string | number)[];
+    // Row-aligned x values (null where the time cell is missing) so each y
+    // keeps the date from its own row even when other rows have gaps.
+    let xValues: (string | number | null)[];
     let isDate = false;
     if (!timeColumn.isNumeric) {
       // Try to parse as dates
       const first = timeColumn.raw.find((v) => v.trim() !== "");
       if (first && !Number.isNaN(Date.parse(first))) {
-        xValues = timeColumn.raw.map((v) => v.trim());
+        xValues = timeColumn.raw.map((v) => (v.trim() === "" ? null : v.trim()));
         isDate = true;
       } else {
         xValues = timeColumn.raw.map((_, i) => i);
       }
     } else {
-      xValues = numericValues(timeColumn);
+      xValues = [...timeColumn.numeric];
     }
 
     const built: object[] = [];
@@ -169,26 +172,41 @@ export default function TimeSeriesToolComponent({ locale }: ToolProps) {
     effectiveValueCols.forEach((colName, idx) => {
       const col = dataset.byName(colName);
       if (!col) return;
-      const yVals = col.isNumeric ? numericValues(col) : col.raw.map(Number);
+      const yAligned = col.isNumeric
+        ? col.numeric
+        : col.raw.map((v) => {
+            const n = Number(v);
+            return Number.isFinite(n) ? n : null;
+          });
+      // Pair x/y by row index, skipping rows where either side is missing.
+      const xs: (string | number)[] = [];
+      const ys: number[] = [];
+      yAligned.forEach((y, i) => {
+        const x = xValues[i];
+        if (y !== null && y !== undefined && x !== null && x !== undefined) {
+          xs.push(x);
+          ys.push(y);
+        }
+      });
       const color = SERIES_COLORS[idx % SERIES_COLORS.length];
 
       built.push({
         type: "scatter",
         mode: "lines",
         name: colName,
-        x: xValues.slice(0, yVals.length),
-        y: yVals,
+        x: xs,
+        y: ys,
         line: { color, width: 2 },
         hovertemplate: `%{x}<br>${colName}: %{y:.4g}<extra></extra>`,
       });
 
       if (showMA && windowSize >= 2) {
-        const ma = movingAverage(yVals, windowSize);
+        const ma = movingAverage(ys, windowSize);
         const maX: (string | number)[] = [];
         const maY: number[] = [];
         ma.forEach((v, i) => {
           if (v !== null) {
-            maX.push(xValues[i] ?? i);
+            maX.push(xs[i]!);
             maY.push(v);
           }
         });
@@ -305,9 +323,12 @@ export default function TimeSeriesToolComponent({ locale }: ToolProps) {
               <div className="flex flex-wrap gap-3">
                 {numericCols
                   .filter((c) => c.name !== effectiveTimeCol)
-                  .map((c, idx) => {
-                    const checked = effectiveValueCols.includes(c.name);
-                    const color = SERIES_COLORS[idx % SERIES_COLORS.length];
+                  .map((c) => {
+                    const selIdx = effectiveValueCols.indexOf(c.name);
+                    const checked = selIdx !== -1;
+                    // Swatch must match the trace color, which is indexed by
+                    // position among the *selected* columns.
+                    const color = checked ? SERIES_COLORS[selIdx % SERIES_COLORS.length] : undefined;
                     return (
                       <label
                         key={c.name}
@@ -349,12 +370,15 @@ export default function TimeSeriesToolComponent({ locale }: ToolProps) {
                 <span className="text-slate-600 dark:text-slate-400">{ui.windowSize}:</span>
                 <input
                   type="number"
-                  min={2}
-                  max={Math.max(2, (dataset?.rowCount ?? 30) - 1)}
+                  min={3}
+                  step={2}
+                  max={Math.max(3, (dataset?.rowCount ?? 30) - 1)}
                   value={windowSize}
                   onChange={(e) => {
                     const v = parseInt(e.target.value, 10);
-                    if (!Number.isNaN(v) && v >= 2) setWindowSize(v);
+                    // Keep the window odd so it matches the centered average
+                    // (and the MA{n} trace label).
+                    if (!Number.isNaN(v) && v >= 2) setWindowSize(v % 2 === 0 ? v + 1 : v);
                   }}
                   className="w-20 rounded-md border border-slate-300 bg-white px-2 py-1 text-sm dark:border-slate-600 dark:bg-slate-800"
                 />

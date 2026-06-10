@@ -45,14 +45,14 @@ export function ipv6ExtractIpv4(ipv6: string): string {
   const addr = ipv6.trim().toLowerCase();
 
   // IPv4-mapped with dotted tail, e.g. ::ffff:192.168.1.1
-  const dotted = /::ffff:(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})$/.exec(addr);
+  const dotted = /^(?:::|0:0:0:0:0:)ffff:(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})$/.exec(addr);
   if (dotted) {
     parseIpv4(dotted[1]);
     return dotted[1];
   }
 
   // IPv4-mapped with hex tail, e.g. ::ffff:c0a8:0101
-  const mapped = /::ffff:([0-9a-f]{1,4}):([0-9a-f]{1,4})$/.exec(addr);
+  const mapped = /^(?:::|0:0:0:0:0:)ffff:([0-9a-f]{1,4}):([0-9a-f]{1,4})$/.exec(addr);
   if (mapped) {
     const [a, b] = groupToOctets(mapped[1]);
     const [c, d] = groupToOctets(mapped[2]);
