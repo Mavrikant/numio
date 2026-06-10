@@ -65,14 +65,19 @@ function inlineContent(tokens: Token[], start: number, openTag: string): { html:
   // text / inline tags / comments. Returns the joined HTML and the index after the close.
   const target = tagOf(openTag);
   let html = openTag;
+  // Same-name inline tags can nest (<span>a<span>b</span></span>); count
+  // them so we pair with the matching close tag, not the first one.
+  let nesting = 0;
   for (let j = start; j < tokens.length; j++) {
     const t = tokens[j]!;
     if (t.kind === "close" && tagOf(t.text) === target) {
-      return { html: html + t.text, end: j + 1 };
+      if (nesting === 0) return { html: html + t.text, end: j + 1 };
+      nesting--;
     }
     if (t.kind === "raw" || t.kind === "doctype") return null;
     if (t.kind === "open" && !INLINE_TAGS.has(tagOf(t.text)) && !isVoid(t)) return null;
     if (t.kind === "close" && !INLINE_TAGS.has(tagOf(t.text))) return null;
+    if (t.kind === "open" && tagOf(t.text) === target && !isVoid(t)) nesting++;
     html += t.kind === "text" ? t.text.replace(/\s+/g, " ") : t.text;
   }
   return null;

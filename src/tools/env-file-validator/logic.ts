@@ -42,9 +42,13 @@ export function analyzeEnv(input: string): EnvAnalysis {
     }
 
     let value = rawValue;
-    if ((value.startsWith('"') && value.endsWith('"')) || (value.startsWith("'") && value.endsWith("'"))) {
+    if (
+      value.length >= 2 &&
+      ((value.startsWith('"') && value.endsWith('"')) || (value.startsWith("'") && value.endsWith("'")))
+    ) {
       value = value.slice(1, -1);
-    } else if ((value.startsWith('"') || value.startsWith("'")) && !(value.endsWith('"') || value.endsWith("'"))) {
+    } else if (value.startsWith('"') || value.startsWith("'")) {
+      // Covers a lonely quote (`A="`) and mismatched quotes (`A="abc'`).
       issues.push({ line: num, message: "Unterminated quoted value.", severity: "error" });
     } else if (/\s#/.test(rawValue) && !rawValue.startsWith('"') && !rawValue.startsWith("'")) {
       issues.push({ line: num, message: "Unquoted value contains `#`. Wrap the value in quotes if it should be literal.", severity: "warning" });

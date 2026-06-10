@@ -1,16 +1,23 @@
 /**
- * Country IBAN lengths (ISO 13616) and BBAN templates of `n` (digit) / `c`
- * (alphanumeric). Subset of the registry — enough to generate realistic
- * test IBANs for the most common destinations.
+ * BBAN structure per country from the ISO 13616 registry, written as
+ * count+type runs: `n` digits, `a` uppercase letters, `c` alphanumeric.
+ * Subset of the registry — enough to generate realistic test IBANs for the
+ * most common destinations.
  */
-const LENGTHS: Record<string, number> = {
-  AT: 20, BE: 16, BG: 22, CH: 21, CY: 28, CZ: 24, DE: 22, DK: 18, EE: 20, ES: 24,
-  FI: 18, FR: 27, GB: 22, GR: 27, HR: 21, HU: 28, IE: 22, IS: 26, IT: 27, LT: 20,
-  LU: 20, LV: 21, MT: 31, NL: 18, NO: 15, PL: 28, PT: 25, RO: 24, SE: 24, SI: 19,
-  SK: 24, TR: 26,
+const BBAN: Record<string, string> = {
+  AT: "16n", BE: "12n", BG: "4a4n2n8c", CH: "5n12c", CY: "3n5n16c", CZ: "20n",
+  DE: "18n", DK: "14n", EE: "16n", ES: "20n", FI: "14n", FR: "10n11c2n",
+  GB: "4a14n", GR: "7n16c", HR: "17n", HU: "24n", IE: "4a14n", IS: "22n",
+  IT: "1a10n12c", LT: "16n", LU: "3n13c", LV: "4a13c", MT: "4a5n18c",
+  NL: "4a10n", NO: "11n", PL: "24n", PT: "21n", RO: "4a16c", SE: "20n",
+  SI: "15n", SK: "20n", TR: "5n1c16c",
 };
 
-export const COUNTRIES = Object.keys(LENGTHS);
+export const COUNTRIES = Object.keys(BBAN);
+
+const DIGITS = "0123456789";
+const LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const ALNUM = DIGITS + LETTERS;
 
 function mod97(input: string): number {
   let remainder = 0;
@@ -18,28 +25,31 @@ function mod97(input: string): number {
   return remainder;
 }
 
+function expandTemplate(tpl: string): string {
+  return tpl.replace(/(\d+)([nac])/g, (_, count: string, type: string) => type.repeat(Number(count)));
+}
+
 /**
  * Generate a valid (mod-97-conformant) test IBAN for the given country. The
- * BBAN body is filled with crypto-random digits and the check digits are
- * computed accordingly. Random source is injected so callers can seed it.
+ * BBAN follows the country's ISO 13616 structure (letters where the registry
+ * requires them, e.g. the GB/NL/IE bank code) filled from the injected random
+ * source so callers can seed it.
  */
 export function generateIban(country: string, rand: () => number): string {
-  const length = LENGTHS[country];
-  if (!length) throw new Error(`Unsupported country code "${country}".`);
-  const bbanLength = length - 4;
+  const tpl = BBAN[country];
+  if (!tpl) throw new Error(`Unsupported country code "${country}".`);
 
   let bban = "";
-  for (let i = 0; i < bbanLength; i++) bban += Math.floor(rand() * 10).toString();
+  for (const t of expandTemplate(tpl)) {
+    const pool = t === "n" ? DIGITS : t === "a" ? LETTERS : ALNUM;
+    bban += pool[Math.floor(rand() * pool.length)];
+  }
 
-  // Compute check digits: rearrange BBAN + country + "00", convert letters to digits, then 98 - (n mod 97).
-  const numeric =
-    bban +
-    String(country.charCodeAt(0) - 55) +
-    String(country.charCodeAt(1) - 55) +
-    "00";
+  // Compute check digits: rearrange BBAN + country + "00", convert letters
+  // to digits (A=10 … Z=35), then 98 - (n mod 97).
+  const numeric = (bban + country + "00").replace(/[A-Z]/g, (c) => String(c.charCodeAt(0) - 55));
   const check = 98 - mod97(numeric);
-  const checkStr = String(check).padStart(2, "0");
-  return country + checkStr + bban;
+  return country + String(check).padStart(2, "0") + bban;
 }
 
 /** Format an IBAN with a space every four characters. */

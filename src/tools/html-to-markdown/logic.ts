@@ -20,7 +20,9 @@ export function htmlToMarkdown(input: string): string {
 
   // Block-level structure.
   s = s.replace(/<h([1-6])[^>]*>([\s\S]*?)<\/h\1>/gi, (_, n, inner) => `\n${"#".repeat(Number(n))} ${inner.trim()}\n\n`);
-  s = s.replace(/<pre[^>]*><code[^>]*>([\s\S]*?)<\/code><\/pre>/gi, (_, code) => `\n\`\`\`\n${decode(code)}\n\`\`\`\n\n`);
+  // Entities in code are left encoded here; the single decode() pass at the
+  // end handles them (decoding twice would turn &amp;amp; into &).
+  s = s.replace(/<pre[^>]*><code[^>]*>([\s\S]*?)<\/code><\/pre>/gi, (_, code) => `\n\`\`\`\n${code}\n\`\`\`\n\n`);
   s = s.replace(/<blockquote[^>]*>([\s\S]*?)<\/blockquote>/gi, (_, inner) => "\n" + String(inner).trim().split(/\n+/).map((l: string) => `> ${l.trim()}`).join("\n") + "\n\n");
 
   // Lists: replace <li> first, then strip wrappers.
@@ -42,7 +44,7 @@ export function htmlToMarkdown(input: string): string {
   s = s.replace(/<a[^>]*href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/gi, (_, href, text) => `[${String(text).trim()}](${href})`);
   s = s.replace(/<(strong|b)[^>]*>([\s\S]*?)<\/\1>/gi, "**$2**");
   s = s.replace(/<(em|i)[^>]*>([\s\S]*?)<\/\1>/gi, "*$2*");
-  s = s.replace(/<code[^>]*>([\s\S]*?)<\/code>/gi, (_, code) => `\`${decode(code)}\``);
+  s = s.replace(/<code[^>]*>([\s\S]*?)<\/code>/gi, (_, code) => `\`${code}\``);
 
   // Strip any remaining tags and decode the bulk of common entities.
   s = s.replace(/<[^>]+>/g, "");
