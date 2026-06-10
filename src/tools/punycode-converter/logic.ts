@@ -35,9 +35,11 @@ function digitToBasic(digit: number): number {
 
 /** basic code point -> digit value (0..35), or BASE if not a valid digit. */
 function basicToDigit(codePoint: number): number {
-  if (codePoint - 48 < 10) return codePoint - 22; // '0'..'9'
-  if (codePoint - 65 < 26) return codePoint - 65; // 'A'..'Z'
-  if (codePoint - 97 < 26) return codePoint - 97; // 'a'..'z'
+  // Lower bounds matter: in the RFC 3492 C reference these subtractions are
+  // unsigned and wrap, but in JS they go negative and would accept e.g. "!".
+  if (codePoint >= 48 && codePoint < 58) return codePoint - 22; // '0'..'9'
+  if (codePoint >= 65 && codePoint < 91) return codePoint - 65; // 'A'..'Z'
+  if (codePoint >= 97 && codePoint < 123) return codePoint - 97; // 'a'..'z'
   return BASE;
 }
 

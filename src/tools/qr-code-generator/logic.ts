@@ -19,15 +19,19 @@ export function buildWifiString(ssid: string, password: string, encryption: Wifi
   return `WIFI:${parts.join(";")};;`;
 }
 
+/** Escape a vCard 3.0 text value per RFC 2426: backslash, semicolon, comma, newline. */
+const vesc = (s: string): string =>
+  s.replace(/\\/g, "\\\\").replace(/;/g, "\\;").replace(/,/g, "\\,").replace(/\r?\n/g, "\\n");
+
 /** Build a minimal vCard 3.0 string suitable for encoding as a QR code. */
 export function buildVCardString(fields: VCardFields): string {
   if (!fields.name && !fields.phone && !fields.email) return "";
   const lines = ["BEGIN:VCARD", "VERSION:3.0"];
-  if (fields.name) lines.push(`FN:${fields.name}`);
-  if (fields.phone) lines.push(`TEL:${fields.phone}`);
-  if (fields.email) lines.push(`EMAIL:${fields.email}`);
-  if (fields.org) lines.push(`ORG:${fields.org}`);
-  if (fields.url) lines.push(`URL:${fields.url}`);
+  if (fields.name) lines.push(`FN:${vesc(fields.name)}`);
+  if (fields.phone) lines.push(`TEL:${vesc(fields.phone)}`);
+  if (fields.email) lines.push(`EMAIL:${vesc(fields.email)}`);
+  if (fields.org) lines.push(`ORG:${vesc(fields.org)}`);
+  if (fields.url) lines.push(`URL:${vesc(fields.url)}`);
   lines.push("END:VCARD");
   return lines.join("\n");
 }

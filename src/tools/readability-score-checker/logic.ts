@@ -44,7 +44,9 @@ export function readabilityScores(text: string): ReadabilityScores {
   const flesch = 206.835 - 1.015 * wordsPerSentence - 84.6 * syllablesPerWord;
   const fk = 0.39 * wordsPerSentence + 11.8 * syllablesPerWord - 15.59;
   const fog = 0.4 * (wordsPerSentence + (complexWords / wordCount) * 100);
-  const ari = 4.71 * (characters / wordCount) + 0.5 * wordsPerSentence - 21.43;
+  // ARI is defined over letters and numbers only, not punctuation.
+  const ariCharacters = (text.match(/[A-Za-z0-9]/g) ?? []).length;
+  const ari = 4.71 * (ariCharacters / wordCount) + 0.5 * wordsPerSentence - 21.43;
   // SMOG needs at least 30 sentences for reliability; we still compute it for the available text.
   const smog = sentences > 0 ? 1.043 * Math.sqrt(complexWords * (30 / sentences)) + 3.1291 : 0;
 

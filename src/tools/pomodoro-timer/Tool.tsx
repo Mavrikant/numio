@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { Locale } from "@/config/site";
 import { inputClass } from "@/components/tools/textToolKit";
 import definition from "./definition";
@@ -17,11 +17,23 @@ export default function PomodoroTimerTool({ locale }: { readonly locale: Locale 
   const [remaining, setRemaining] = useState(phaseSeconds("focus", DEFAULT_SETTINGS));
   const [running, setRunning] = useState(false);
   const [completedFocus, setCompletedFocus] = useState(0);
+  const endTimeRef = useRef(0);
 
+  // Track wall-clock time, not interval ticks: browsers throttle setInterval
+  // in background tabs, which would freeze the countdown.
   useEffect(() => {
     if (!running) return;
-    const id = setInterval(() => setRemaining((r) => r - 1), 1000);
-    return () => clearInterval(id);
+    endTimeRef.current = Date.now() + remaining * 1000;
+    const tick = () =>
+      setRemaining(Math.max(0, Math.round((endTimeRef.current - Date.now()) / 1000)));
+    const id = setInterval(tick, 250);
+    document.addEventListener("visibilitychange", tick);
+    return () => {
+      clearInterval(id);
+      document.removeEventListener("visibilitychange", tick);
+    };
+    // `remaining` is intentionally captured only when `running` flips on.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [running]);
 
   useEffect(() => {

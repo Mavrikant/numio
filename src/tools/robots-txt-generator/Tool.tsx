@@ -4,7 +4,17 @@ import { CopyButton, TextArea, inputClass } from "@/components/tools/textToolKit
 import definition from "./definition";
 import { buildRobotsTxt, type RobotsGroup } from "./logic";
 
-const DEFAULT_GROUP: RobotsGroup = { userAgent: "*", allow: [], disallow: ["/admin/"], crawlDelay: "" };
+// Path fields are kept as raw text while editing (a normalized string[] state
+// would strip the newline on every keystroke, making Enter unusable) and only
+// parsed into lines when building the output.
+interface GroupDraft {
+  userAgent: string;
+  allowText: string;
+  disallowText: string;
+  crawlDelay: string;
+}
+
+const DEFAULT_GROUP: GroupDraft = { userAgent: "*", allowText: "", disallowText: "/admin/", crawlDelay: "" };
 
 function asLines(text: string): string[] {
   return text.split(/\r?\n/).map((l) => l.trim()).filter(Boolean);
@@ -12,13 +22,19 @@ function asLines(text: string): string[] {
 
 export default function RobotsTxtGeneratorTool({ locale }: { readonly locale: Locale }) {
   const ui = (definition.i18n[locale] ?? definition.i18n.en).ui;
-  const [groups, setGroups] = useState<RobotsGroup[]>([DEFAULT_GROUP]);
+  const [groups, setGroups] = useState<GroupDraft[]>([DEFAULT_GROUP]);
   const [sitemapsText, setSitemapsText] = useState("https://numio.app/sitemap.xml");
 
   const sitemaps = asLines(sitemapsText);
-  const output = buildRobotsTxt({ groups, sitemaps });
+  const robotsGroups: RobotsGroup[] = groups.map((g) => ({
+    userAgent: g.userAgent,
+    allow: asLines(g.allowText),
+    disallow: asLines(g.disallowText),
+    crawlDelay: g.crawlDelay,
+  }));
+  const output = buildRobotsTxt({ groups: robotsGroups, sitemaps });
 
-  const updateGroup = (idx: number, patch: Partial<RobotsGroup>) => {
+  const updateGroup = (idx: number, patch: Partial<GroupDraft>) => {
     setGroups(groups.map((g, i) => i === idx ? { ...g, ...patch } : g));
   };
 
@@ -40,11 +56,11 @@ export default function RobotsTxtGeneratorTool({ locale }: { readonly locale: Lo
           <div className="grid gap-3 sm:grid-cols-2">
             <label className="block space-y-1">
               <span className="text-sm font-medium text-slate-700 dark:text-slate-300">{ui.allow}</span>
-              <TextArea value={g.allow.join("\n")} onChange={(v) => updateGroup(i, { allow: asLines(v) })} rows={3} />
+              <TextArea value={g.allowText} onChange={(v) => updateGroup(i, { allowText: v })} rows={3} />
             </label>
             <label className="block space-y-1">
               <span className="text-sm font-medium text-slate-700 dark:text-slate-300">{ui.disallow}</span>
-              <TextArea value={g.disallow.join("\n")} onChange={(v) => updateGroup(i, { disallow: asLines(v) })} rows={3} />
+              <TextArea value={g.disallowText} onChange={(v) => updateGroup(i, { disallowText: v })} rows={3} />
             </label>
           </div>
           <label className="block space-y-1">
@@ -54,7 +70,7 @@ export default function RobotsTxtGeneratorTool({ locale }: { readonly locale: Lo
         </div>
       ))}
 
-      <button type="button" onClick={() => setGroups([...groups, { userAgent: "*", allow: [], disallow: [], crawlDelay: "" }])} className="rounded-md border border-slate-300 px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-slate-100 dark:border-slate-600 dark:text-slate-200 dark:hover:bg-slate-800">
+      <button type="button" onClick={() => setGroups([...groups, { userAgent: "*", allowText: "", disallowText: "", crawlDelay: "" }])} className="rounded-md border border-slate-300 px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-slate-100 dark:border-slate-600 dark:text-slate-200 dark:hover:bg-slate-800">
         {ui.addGroup}
       </button>
 
