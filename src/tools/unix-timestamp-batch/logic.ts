@@ -7,23 +7,18 @@ export interface TimestampRow {
   readonly error?: string;
 }
 
-function isoToTimestamp(s: string): number | null {
-  const t = Date.parse(s);
-  return Number.isNaN(t) ? null : Math.floor(t / 1000);
-}
-
 function inputToDate(value: string): Date | null {
   const trimmed = value.trim();
   if (!trimmed) return null;
-  if (/^\d{10}$/.test(trimmed)) return new Date(Number(trimmed) * 1000);
-  if (/^\d{13}$/.test(trimmed)) return new Date(Number(trimmed));
   if (/^\d+$/.test(trimmed)) {
-    // Treat any other plain integer as seconds since epoch.
-    return new Date(Number(trimmed) * 1000);
+    // ≤10 digits covers seconds through year 2286; anything longer can only
+    // plausibly be milliseconds (11-digit seconds is already year 5138).
+    const n = Number(trimmed);
+    return trimmed.length <= 10 ? new Date(n * 1000) : new Date(n);
   }
-  const ts = isoToTimestamp(trimmed);
-  if (ts !== null) return new Date(ts * 1000);
-  return null;
+  // ISO and other date strings: keep millisecond precision.
+  const t = Date.parse(trimmed);
+  return Number.isNaN(t) ? null : new Date(t);
 }
 
 const UNITS: [number, string][] = [
@@ -33,6 +28,7 @@ const UNITS: [number, string][] = [
   [7, "day"],
   [4.34524, "week"],
   [12, "month"],
+  [Number.POSITIVE_INFINITY, "year"],
 ];
 
 function relative(ms: number): string {

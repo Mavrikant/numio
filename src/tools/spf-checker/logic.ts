@@ -69,11 +69,16 @@ export function parseSpf(record: string): SpfResult {
       type = body.toLowerCase();
     }
 
+    // Dual-CIDR mechanisms without a value, e.g. "a/24" or "mx//64", still
+    // cost a DNS lookup for the underlying mechanism.
+    const slashIdx = type.indexOf("/");
+    const lookupType = slashIdx === -1 ? type : type.slice(0, slashIdx);
+
     if (type === "all") {
       all = qualifier + "all";
     }
 
-    if (DNS_LOOKUP_TERMS.has(type)) {
+    if (DNS_LOOKUP_TERMS.has(lookupType)) {
       dnsLookupCount += 1;
     }
 

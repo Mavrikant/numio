@@ -36,7 +36,7 @@ export function buildRewrite({ pretty, target }: RewriteInput): RewriteOutput {
   const nginxRegex = toRegex(trimmed.startsWith("/") ? trimmed : `/${trimmed}`);
 
   const apache = `RewriteEngine On\nRewriteRule ^${apacheRegex}/?$ ${cleanTarget} [L,QSA]`;
-  const nginx = `location ~ ^${nginxRegex}/?$ {\n    rewrite ^${nginxRegex}/?$ /${cleanTarget} last;\n}`;
+  const nginx = `location ~ ^${nginxRegex}/?$ {\n    rewrite ^${nginxRegex}/?$ /${cleanTarget.replace(/^\//, "")} last;\n}`;
 
   return { apache, nginx };
 }

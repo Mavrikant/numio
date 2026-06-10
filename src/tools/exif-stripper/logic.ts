@@ -22,7 +22,11 @@ export function stripJpegMetadata(bytes: Uint8Array): Uint8Array {
       break;
     }
     const len = (bytes[i + 2]! << 8) | bytes[i + 3]!;
-    const isMetadata = (marker >= 0xe0 && marker <= 0xef) || marker === 0xfe; // APPn or COM
+    // Strip APP1 (EXIF/XMP), APP2 (ICC), APP13 (IPTC) and COM. Keep APP0
+    // (JFIF) and APP14 (Adobe colour transform — removing it breaks CMYK
+    // JPEG decoding) plus the other APPn segments decoders may rely on.
+    const isMetadata =
+      marker === 0xe1 || marker === 0xe2 || marker === 0xed || marker === 0xfe;
     if (!isMetadata) {
       for (let k = 0; k < len + 2; k++) out.push(bytes[i + k]!);
     }

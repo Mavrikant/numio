@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { Locale } from "@/config/site";
 import { inputClass } from "@/components/tools/textToolKit";
 import definition from "./definition";
@@ -14,35 +14,37 @@ export default function ImageCompressorTool({ locale }: { readonly locale: Local
   const [originalSize, setOriginalSize] = useState(0);
   const [compressedSize, setCompressedSize] = useState(0);
   const [dataUrl, setDataUrl] = useState("");
+  const [source, setSource] = useState<HTMLImageElement | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  const compress = (file: File) => {
+  // Re-encode whenever the source image or the settings change, so the
+  // preview/size/download always reflect the selected format and quality.
+  useEffect(() => {
+    if (!source) return;
+    const canvas = document.createElement("canvas");
+    canvas.width = source.naturalWidth;
+    canvas.height = source.naturalHeight;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+    ctx.drawImage(source, 0, 0);
+    const url = canvas.toDataURL(format, quality / 100);
+    setDataUrl(url);
+    // Estimate compressed size from the data URL length (base64 overhead is ~33%).
+    const base64Len = url.split(",")[1]?.length ?? 0;
+    setCompressedSize(Math.floor(base64Len * 0.75));
+  }, [source, format, quality]);
+
+  const load = (file: File | undefined) => {
+    if (!file || !file.type.startsWith("image/")) return;
     setName(file.name);
     setOriginalSize(file.size);
     const reader = new FileReader();
     reader.onload = () => {
       const img = new Image();
-      img.onload = () => {
-        const canvas = document.createElement("canvas");
-        canvas.width = img.naturalWidth;
-        canvas.height = img.naturalHeight;
-        const ctx = canvas.getContext("2d");
-        if (!ctx) return;
-        ctx.drawImage(img, 0, 0);
-        const url = canvas.toDataURL(format, quality / 100);
-        setDataUrl(url);
-        // Estimate compressed size from the data URL length (base64 overhead is ~33%).
-        const base64Len = url.split(",")[1]?.length ?? 0;
-        setCompressedSize(Math.floor(base64Len * 0.75));
-      };
+      img.onload = () => setSource(img);
       img.src = typeof reader.result === "string" ? reader.result : "";
     };
     reader.readAsDataURL(file);
-  };
-
-  const load = (file: File | undefined) => {
-    if (!file || !file.type.startsWith("image/")) return;
-    compress(file);
   };
 
   const reduction = originalSize > 0 ? Math.max(0, Math.round((1 - compressedSize / originalSize) * 100)) : 0;

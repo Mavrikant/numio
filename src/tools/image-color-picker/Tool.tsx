@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { Locale } from "@/config/site";
 import { useCopy, inputClass } from "@/components/tools/textToolKit";
 import definition from "./definition";
@@ -9,8 +9,15 @@ export default function ImageColorPickerTool({ locale }: { readonly locale: Loca
   const [src, setSrc] = useState("");
   const [count, setCount] = useState(8);
   const [palette, setPalette] = useState<string[]>([]);
+  const [imageData, setImageData] = useState<Uint8ClampedArray | null>(null);
   const { copied, copy } = useCopy();
   const inputRef = useRef<HTMLInputElement>(null);
+
+  // Recompute the palette when the image or the colour count changes.
+  useEffect(() => {
+    if (!imageData) return;
+    setPalette(extractDominantColors(imageData, Math.min(20, Math.max(2, count))));
+  }, [imageData, count]);
 
   const load = (file: File | undefined) => {
     if (!file || !file.type.startsWith("image/")) return;
@@ -30,8 +37,7 @@ export default function ImageColorPickerTool({ locale }: { readonly locale: Loca
         const ctx = canvas.getContext("2d");
         if (!ctx) return;
         ctx.drawImage(img, 0, 0, w, h);
-        const data = ctx.getImageData(0, 0, w, h).data;
-        setPalette(extractDominantColors(data, count));
+        setImageData(ctx.getImageData(0, 0, w, h).data);
       };
       img.src = dataUrl;
     };

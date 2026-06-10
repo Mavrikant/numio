@@ -25,6 +25,11 @@ export default function FaviconGeneratorTool({ locale }: { readonly locale: Loca
     }
     const img = new Image();
     img.onload = () => {
+      // Center-crop non-square sources to the largest square so icons are
+      // not stretched.
+      const side = Math.min(img.naturalWidth, img.naturalHeight);
+      const sx = Math.floor((img.naturalWidth - side) / 2);
+      const sy = Math.floor((img.naturalHeight - side) / 2);
       const next: { size: number; url: string }[] = [];
       for (const size of FAVICON_SIZES) {
         const canvas = document.createElement("canvas");
@@ -33,7 +38,7 @@ export default function FaviconGeneratorTool({ locale }: { readonly locale: Loca
         const ctx = canvas.getContext("2d");
         if (!ctx) continue;
         ctx.imageSmoothingQuality = "high";
-        ctx.drawImage(img, 0, 0, size, size);
+        ctx.drawImage(img, sx, sy, side, side, 0, 0, size, size);
         next.push({ size, url: canvas.toDataURL("image/png") });
       }
       setPreviews(next);

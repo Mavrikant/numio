@@ -14,6 +14,21 @@ function sanitizeTag(name: string): string {
   return /^[A-Za-z_]/.test(cleaned) ? cleaned : `_${cleaned}`;
 }
 
+/** Idiomatic repeated-element form: one `<tag>` per item. Nested arrays get a
+ *  wrapping element so they can't silently flatten into the parent's items. */
+function arrayItemsToXml(arr: unknown[], tag: string, depth: number): string {
+  const pad = INDENT.repeat(depth);
+  return arr
+    .map((item) =>
+      Array.isArray(item)
+        ? item.length === 0
+          ? `${pad}<${tag}/>`
+          : `${pad}<${tag}>\n${arrayItemsToXml(item, "item", depth + 1)}\n${pad}</${tag}>`
+        : valueToXml(item, tag, depth),
+    )
+    .join("\n");
+}
+
 function valueToXml(value: unknown, tag: string, depth: number): string {
   const pad = INDENT.repeat(depth);
 
@@ -21,7 +36,7 @@ function valueToXml(value: unknown, tag: string, depth: number): string {
 
   if (Array.isArray(value)) {
     if (value.length === 0) return `${pad}<${tag}/>`;
-    return value.map((item) => valueToXml(item, tag, depth)).join("\n");
+    return arrayItemsToXml(value, tag, depth);
   }
 
   if (typeof value === "object") {
@@ -46,6 +61,11 @@ export function jsonToXml(input: string): JsonToXmlResult {
     return { output: "", error: e instanceof Error ? e.message : "Invalid JSON." };
   }
 
-  const body = valueToXml(parsed, "root", 0);
+  // A root array must still produce a single root element.
+  const body = Array.isArray(parsed)
+    ? parsed.length === 0
+      ? "<root/>"
+      : `<root>\n${arrayItemsToXml(parsed, "item", 1)}\n</root>`
+    : valueToXml(parsed, "root", 0);
   return { output: `<?xml version="1.0" encoding="UTF-8"?>\n${body}`, error: null };
 }

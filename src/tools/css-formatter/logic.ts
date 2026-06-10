@@ -55,6 +55,8 @@ export function formatCss(input: string, indent = "  "): string {
   let depth = 0;
   let out = "";
   let atLineStart = true;
+  let parens = 0;
+  let sawDeclColon = false;
   const newline = () => {
     out += "\n" + indent.repeat(Math.max(0, depth));
     atLineStart = true;
@@ -63,17 +65,37 @@ export function formatCss(input: string, indent = "  "): string {
     if (out && !atLineStart && !out.endsWith(" ")) out += " ";
   };
 
-  for (const piece of pieces) {
+  // First `{`, `}` or `;` after the given position (skipping raw pieces) —
+  // tells a selector (`{` follows, colons belong to pseudo-classes) apart
+  // from a declaration (`;`/`}` follows, the first colon separates the value).
+  const nextDelim = (pi: number, ci: number): string => {
+    for (let p = pi; p < pieces.length; p++) {
+      const piece = pieces[p]!;
+      if (piece.raw) continue;
+      const text = piece.text;
+      for (let c = p === pi ? ci : 0; c < text.length; c++) {
+        const ch = text[c]!;
+        if (ch === "{" || ch === "}" || ch === ";") return ch;
+      }
+    }
+    return "";
+  };
+
+  for (let pi = 0; pi < pieces.length; pi++) {
+    const piece = pieces[pi]!;
     if (piece.raw) {
       out += piece.text;
       atLineStart = false;
       continue;
     }
-    for (const c of piece.text) {
+    const text = piece.text;
+    for (let ci = 0; ci < text.length; ci++) {
+      const c = text[ci]!;
       if (c === "{") {
         writeSpace();
         out += "{";
         depth++;
+        sawDeclColon = false;
         newline();
       } else if (c === "}") {
         depth = Math.max(0, depth - 1);
@@ -81,12 +103,21 @@ export function formatCss(input: string, indent = "  "): string {
         out = out.replace(/[ \t]+$/g, "");
         if (!out.endsWith("\n")) out += "\n";
         out += indent.repeat(depth) + "}";
+        sawDeclColon = false;
         newline();
       } else if (c === ";") {
         out += ";";
+        sawDeclColon = false;
         newline();
-      } else if (c === ":" && depth > 0) {
+      } else if (
+        c === ":" &&
+        depth > 0 &&
+        parens === 0 &&
+        !sawDeclColon &&
+        nextDelim(pi, ci + 1) !== "{"
+      ) {
         out += ": ";
+        sawDeclColon = true;
         atLineStart = false;
       } else if (c === "," && depth === 0) {
         out += ",";
@@ -97,6 +128,8 @@ export function formatCss(input: string, indent = "  "): string {
       } else if (c === " ") {
         if (!atLineStart && !out.endsWith(" ")) out += " ";
       } else {
+        if (c === "(") parens++;
+        else if (c === ")") parens = Math.max(0, parens - 1);
         out += c;
         atLineStart = false;
       }

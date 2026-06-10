@@ -31,7 +31,7 @@ export function parseColor(input: string): RGB | null {
 
   const hsl = /^hsla?\(\s*(\d+(?:\.\d+)?)[\s,]+(\d+(?:\.\d+)?)%?[\s,]+(\d+(?:\.\d+)?)%?/.exec(s);
   if (hsl) {
-    return hslToRgb(clamp(+hsl[1]!, 360), clamp(+hsl[2]!, 100), clamp(+hsl[3]!, 100));
+    return hslToRgb(((+hsl[1]! % 360) + 360) % 360, clamp(+hsl[2]!, 100), clamp(+hsl[3]!, 100));
   }
 
   return null;

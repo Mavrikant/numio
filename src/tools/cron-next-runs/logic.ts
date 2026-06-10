@@ -23,10 +23,10 @@ function parseField(field: string, spec: FieldSpec): Set<number> | null {
       start = spec.min;
       end = spec.max;
     } else if (range!.includes("-")) {
-      const [a, b] = range!.split("-").map(Number);
-      if (!Number.isFinite(a) || !Number.isFinite(b)) return null;
-      start = a!;
-      end = b!;
+      const halves = range!.split("-");
+      if (halves.length !== 2 || !halves.every((h) => /^\d+$/.test(h))) return null;
+      start = Number(halves[0]);
+      end = Number(halves[1]);
     } else if (/^\d+$/.test(range!)) {
       start = Number(range);
       end = stepStr ? spec.max : start;

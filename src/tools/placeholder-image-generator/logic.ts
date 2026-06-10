@@ -15,6 +15,12 @@ export function buildPlaceholderSvg(
 
 /** Wrap an SVG string as a base64 data URL for use in `<img src>` or CSS `url()`. */
 export function svgToDataUrl(svg: string): string {
-  if (typeof btoa === "function") return `data:image/svg+xml;base64,${btoa(svg)}`;
+  if (typeof btoa === "function") {
+    // btoa only accepts Latin-1; encode to UTF-8 bytes first so labels with
+    // non-Latin-1 characters (e.g. emoji, CJK) don't throw.
+    let bin = "";
+    for (const b of new TextEncoder().encode(svg)) bin += String.fromCharCode(b);
+    return `data:image/svg+xml;base64,${btoa(bin)}`;
+  }
   return `data:image/svg+xml;base64,${Buffer.from(svg, "utf-8").toString("base64")}`;
 }

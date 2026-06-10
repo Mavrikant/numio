@@ -16,7 +16,12 @@ const VALID: Record<Base, RegExp> = {
 
 /** Convert a non-negative integer string from `fromBase` to all four bases. Throws if invalid. */
 export function convertBase(value: string, fromBase: Base): BaseResult {
-  const v = value.trim().replace(/^0x/i, "").replace(/^0b/i, "");
+  let v = value.trim();
+  // Only strip a radix prefix when it matches the selected base; "0b1a" in
+  // base 16 is a real hex number, not a binary prefix.
+  if (fromBase === 16) v = v.replace(/^0x/i, "");
+  else if (fromBase === 2) v = v.replace(/^0b/i, "");
+  else if (fromBase === 8) v = v.replace(/^0o/i, "");
   if (v === "" || !VALID[fromBase].test(v)) throw new Error("Invalid number for base");
   const n = parseInt(v, fromBase);
   if (!Number.isSafeInteger(n)) throw new Error("Number too large");

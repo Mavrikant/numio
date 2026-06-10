@@ -32,9 +32,13 @@ export function generateLorem(
 ): string {
   const n = Math.max(1, Math.min(100, Math.floor(count)));
   if (unit === "words") {
+    if (startWithLorem) {
+      const lead = ["Lorem", "ipsum"].slice(0, n);
+      const rest = n > 2 ? " " + makeWords(rng, n - 2) : "";
+      return lead.join(" ") + rest;
+    }
     const words = makeWords(rng, n);
-    const out = startWithLorem ? "Lorem ipsum " + words : words;
-    return out.charAt(0).toUpperCase() + out.slice(1);
+    return words.charAt(0).toUpperCase() + words.slice(1);
   }
   if (unit === "sentences") {
     const arr = Array.from({ length: n }, () => makeSentence(rng));

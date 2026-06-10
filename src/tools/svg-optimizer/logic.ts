@@ -16,7 +16,11 @@ export function optimizeSvg(input: string): SvgOptimizeResult {
   out = out.replace(/<\?xml[^>]*\?>/g, "");
   out = out.replace(/<!--[\s\S]*?-->/g, "");
   out = out.replace(/<!DOCTYPE[^>]*>/gi, "");
-  out = out.replace(/<\/?(metadata|title|desc|sodipodi:[^>]+|inkscape:[^>]+)[^>]*>/g, "");
+  // Remove container elements with their content, not just the tags.
+  out = out.replace(/<(metadata|title|desc)\b[^>]*\/>/g, "");
+  out = out.replace(/<(metadata|title|desc)\b[^>]*>[\s\S]*?<\/\1\s*>/g, "");
+  out = out.replace(/<(sodipodi:[\w-]+|inkscape:[\w-]+)\b[^>]*\/>/g, "");
+  out = out.replace(/<(sodipodi:[\w-]+|inkscape:[\w-]+)\b[^>]*>[\s\S]*?<\/\1\s*>/g, "");
   out = out.replace(/\s+(xmlns:sodipodi|sodipodi:[\w-]+|xmlns:inkscape|inkscape:[\w-]+|xml:space|version|standalone|enable-background)="[^"]*"/g, "");
   // Drop a handful of attributes whose only value is the SVG default.
   out = out.replace(/\s+(fill-opacity|stroke-opacity|stop-opacity)="1"/g, "");

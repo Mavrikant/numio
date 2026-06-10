@@ -14,9 +14,11 @@ export function formatXml(input: string): XmlResult {
   const src = input.trim();
   if (!src) return { output: "", error: null };
 
-  // Collapse whitespace that sits purely between tags, then split on tag boundaries.
+  // Collapse whitespace that sits purely between tags, then split on tag
+  // boundaries using a sentinel that can't occur in text (newlines can).
+  const SEP = String.fromCharCode(0);
   const normalized = src.replace(/>\s+</g, "><");
-  const tokens = normalized.replace(/></g, ">\n<").split("\n");
+  const tokens = normalized.replace(/></g, `>${SEP}<`).split(SEP);
 
   let depth = 0;
   const lines: string[] = [];
@@ -25,7 +27,7 @@ export function formatXml(input: string): XmlResult {
     if (!token) continue;
     const isClosing = /^<\//.test(token);
     const isSelfContained = /^<[^>]+\/>$/.test(token) || /^<\?/.test(token) || /^<!--/.test(token) || /^<!/.test(token);
-    const opensAndCloses = /^<([\w:-]+)(\s[^>]*)?>.*<\/\1>$/.test(token);
+    const opensAndCloses = /^<([\w:-]+)(\s[^>]*)?>[\s\S]*<\/\1>$/.test(token);
 
     if (isClosing) depth = Math.max(0, depth - 1);
     lines.push(INDENT.repeat(depth) + token);

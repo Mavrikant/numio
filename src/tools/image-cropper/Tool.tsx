@@ -39,9 +39,17 @@ export default function ImageCropperTool({ locale }: { readonly locale: Locale }
     const preset = ASPECT_PRESETS.find((p) => p.id === aspect);
     if (!preset || preset.ratio === null) return;
     const target = preset.ratio;
-    const maxFromW = rect.width;
-    const maxFromH = Math.round(maxFromW / target);
-    setRect((r) => clampCrop({ ...r, height: maxFromH }, imgW, imgH));
+    setRect((r) => {
+      // Keep the requested ratio even when the height doesn't fit: shrink
+      // the width instead of letting the clamp truncate only the height.
+      let width = r.width;
+      let height = Math.round(width / target);
+      if (height > imgH) {
+        height = imgH;
+        width = Math.round(height * target);
+      }
+      return clampCrop({ ...r, width, height }, imgW, imgH);
+    });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [aspect]);
 

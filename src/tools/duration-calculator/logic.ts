@@ -36,9 +36,11 @@ export function calcDuration(startIso: string, endIso: string): DurationResult {
   if (seconds || parts.length === 0) parts.push(`${seconds}s`);
   const humanized = (sign < 0 ? "-" : "") + parts.join(" ");
 
+  // Breakdown components are unsigned magnitudes; the sign is conveyed by
+  // totalMs and the humanized string.
   return {
     totalMs,
-    days: sign * days,
+    days,
     hours,
     minutes,
     seconds,

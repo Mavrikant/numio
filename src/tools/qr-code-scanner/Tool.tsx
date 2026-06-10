@@ -39,11 +39,13 @@ export default function QrCodeScannerTool({ locale }: { readonly locale: Locale 
 
   const decodeFromImage = async (file: File | undefined) => {
     setError("");
+    setResult("");
     if (!file || !file.type.startsWith("image/")) return;
     const decode = await getDecoder();
     const reader = new FileReader();
     reader.onload = () => {
       const img = new Image();
+      img.onerror = () => setError(ui.noQr);
       img.onload = () => {
         const canvas = document.createElement("canvas");
         canvas.width = img.naturalWidth;

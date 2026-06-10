@@ -1,3 +1,5 @@
+import { compressIpv6, expandIpv6 } from "../ipv6-expand-compress/logic";
+
 export interface IpInfo {
   readonly version: "IPv4" | "IPv6" | null;
   readonly canonical: string;
@@ -84,12 +86,15 @@ function classifyIpv4(octets: number[]): IpInfo {
 }
 
 function classifyIpv6(input: string): IpInfo {
-  const s = input.trim().toLowerCase();
+  const groups = expandIpv6(input);
+  if (!groups) return { ...EMPTY, error: "Not a valid IPv6 address." };
+  const s = compressIpv6(groups);
+  const g0 = groups[0]!;
   const isLoopback = s === "::1";
-  const isLinkLocal = s.startsWith("fe80:") || s.startsWith("fe80::") || /^fe[89ab][0-9a-f]:/.test(s);
-  const isMulticast = s.startsWith("ff");
-  const isUniqueLocal = /^f[cd]/.test(s);
-  const isDocumentation = s.startsWith("2001:db8");
+  const isLinkLocal = /^fe[89ab]/.test(g0);
+  const isMulticast = g0.startsWith("ff");
+  const isUniqueLocal = /^f[cd]/.test(g0);
+  const isDocumentation = g0 === "2001" && groups[1] === "0db8";
 
   const notes: string[] = [];
   if (isLoopback) notes.push("Loopback (::1).");
@@ -117,7 +122,6 @@ export function classifyIp(input: string): IpInfo {
   const trimmed = input.trim();
   if (!trimmed) return EMPTY;
   if (trimmed.includes(":")) {
-    if (!/^[0-9a-fA-F:]+$/.test(trimmed)) return { ...EMPTY, error: "Not a valid IPv6 address." };
     return classifyIpv6(trimmed);
   }
   const octets = parseIpv4(trimmed);

@@ -19,7 +19,11 @@ function decodeEntities(s: string): string {
 }
 
 function parseXml(input: string): XmlNode | string {
-  const src = input.replace(/<\?xml[^>]*\?>/g, "").replace(/<!--[\s\S]*?-->/g, "").trim();
+  const src = input
+    .replace(/<\?xml[^>]*\?>/g, "")
+    .replace(/<!--[\s\S]*?-->/g, "")
+    .replace(/<!DOCTYPE[^>]*>/gi, "")
+    .trim();
   if (!src) return "";
   let i = 0;
   const stack: XmlNode[] = [];
@@ -27,8 +31,18 @@ function parseXml(input: string): XmlNode | string {
 
   const parseTag = (): { name: string; attrs: Record<string, string>; selfClosing: boolean; closing: boolean } => {
     let tag = "";
-    while (i < src.length && src[i] !== ">") {
-      tag += src[i];
+    // Quote-aware scan: ">" is legal inside quoted attribute values.
+    let quote: '"' | "'" | null = null;
+    while (i < src.length) {
+      const c = src[i]!;
+      if (quote) {
+        if (c === quote) quote = null;
+      } else if (c === '"' || c === "'") {
+        quote = c;
+      } else if (c === ">") {
+        break;
+      }
+      tag += c;
       i++;
     }
     i++; // skip '>'
@@ -42,13 +56,18 @@ function parseXml(input: string): XmlNode | string {
       const key = parts[p];
       const eq = parts[p + 1];
       const val = parts[p + 2];
-      if (key && eq === "=" && val) attrs[key] = val.replace(/^["']|["']$/g, "");
+      if (key && eq === "=" && val) attrs[key] = decodeEntities(val.replace(/^["']|["']$/g, ""));
     }
     return { name, attrs, selfClosing, closing };
   };
 
   while (i < src.length) {
-    if (src[i] === "<") {
+    if (src.startsWith("<![CDATA[", i)) {
+      const end = src.indexOf("]]>", i + 9);
+      const text = end === -1 ? src.slice(i + 9) : src.slice(i + 9, end);
+      if (text && stack.length > 0) stack[stack.length - 1]!.children.push(text);
+      i = end === -1 ? src.length : end + 3;
+    } else if (src[i] === "<") {
       const start = i;
       i++;
       const tag = parseTag();

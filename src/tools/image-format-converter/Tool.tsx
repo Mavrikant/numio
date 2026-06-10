@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { Locale } from "@/config/site";
 import { inputClass } from "@/components/tools/textToolKit";
 import definition from "./definition";
@@ -10,7 +10,21 @@ export default function ImageFormatConverterTool({ locale }: { readonly locale: 
   const [quality, setQuality] = useState(90);
   const [out, setOut] = useState("");
   const [name, setName] = useState("");
+  const [source, setSource] = useState<HTMLImageElement | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+
+  // Re-encode whenever the source image or the settings change, so the
+  // preview and download always match the selected target format/quality.
+  useEffect(() => {
+    if (!source) return;
+    const canvas = document.createElement("canvas");
+    canvas.width = source.naturalWidth;
+    canvas.height = source.naturalHeight;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+    ctx.drawImage(source, 0, 0);
+    setOut(canvas.toDataURL(target, target === "image/png" ? undefined : quality / 100));
+  }, [source, target, quality]);
 
   const load = (file: File | undefined) => {
     if (!file || !file.type.startsWith("image/")) return;
@@ -18,16 +32,7 @@ export default function ImageFormatConverterTool({ locale }: { readonly locale: 
     const reader = new FileReader();
     reader.onload = () => {
       const img = new Image();
-      img.onload = () => {
-        const canvas = document.createElement("canvas");
-        canvas.width = img.naturalWidth;
-        canvas.height = img.naturalHeight;
-        const ctx = canvas.getContext("2d");
-        if (!ctx) return;
-        ctx.drawImage(img, 0, 0);
-        const url = canvas.toDataURL(target, target === "image/png" ? undefined : quality / 100);
-        setOut(url);
-      };
+      img.onload = () => setSource(img);
       img.src = typeof reader.result === "string" ? reader.result : "";
     };
     reader.readAsDataURL(file);
