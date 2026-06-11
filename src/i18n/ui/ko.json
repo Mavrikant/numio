@@ -160,5 +160,9 @@
     "featureLanguagesDesc": "전 세계 사용자를 위해 완전히 현지화되었습니다.",
     "featureOfflineTitle": "오프라인 작동",
     "featureOfflineDesc": "Numio를 앱으로 설치해 어디서나 사용하세요."
+  },
+  "search": {
+    "placeholder": "계산기 및 도구 검색…",
+    "noResults": "결과를 찾을 수 없습니다."
   }
 }

@@ -160,5 +160,9 @@
     "featureLanguagesDesc": "Полностью локализовано для мировой аудитории.",
     "featureOfflineTitle": "Работает офлайн",
     "featureOfflineDesc": "Установите Numio как приложение и пользуйтесь везде."
+  },
+  "search": {
+    "placeholder": "Поиск калькуляторов и инструментов…",
+    "noResults": "Ничего не найдено."
   }
 }

@@ -160,5 +160,9 @@
     "featureLanguagesDesc": "Küresel kullanıcılar için tamamen yerelleştirildi.",
     "featureOfflineTitle": "Çevrimdışı çalışır",
     "featureOfflineDesc": "Numio'yu uygulama olarak yükleyin, her yerde kullanın."
+  },
+  "search": {
+    "placeholder": "Hesaplayıcı ve araçlarda ara…",
+    "noResults": "Sonuç bulunamadı."
   }
 }
