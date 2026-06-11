@@ -160,5 +160,9 @@
     "featureLanguagesDesc": "Sepenuhnya dilokalkan untuk audiens global.",
     "featureOfflineTitle": "Berfungsi offline",
     "featureOfflineDesc": "Pasang Numio sebagai aplikasi dan gunakan di mana saja."
+  },
+  "search": {
+    "placeholder": "Cari kalkulator dan alat…",
+    "noResults": "Tidak ada hasil yang ditemukan."
   }
 }

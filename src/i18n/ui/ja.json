@@ -160,5 +160,9 @@
     "featureLanguagesDesc": "世界中のユーザー向けに完全ローカライズ。",
     "featureOfflineTitle": "オフライン対応",
     "featureOfflineDesc": "Numio をアプリとしてインストールしてどこでも利用。"
+  },
+  "search": {
+    "placeholder": "計算機やツールを検索…",
+    "noResults": "結果が見つかりませんでした。"
   }
 }

@@ -160,5 +160,9 @@
     "featureLanguagesDesc": "Completamente localizzato per un pubblico globale.",
     "featureOfflineTitle": "Funziona offline",
     "featureOfflineDesc": "Installa Numio come app e usalo ovunque."
+  },
+  "search": {
+    "placeholder": "Cerca calcolatrici e strumenti…",
+    "noResults": "Nessun risultato trovato."
   }
 }

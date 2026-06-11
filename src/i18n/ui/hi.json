@@ -160,5 +160,9 @@
     "featureLanguagesDesc": "वैश्विक दर्शकों के लिए पूरी तरह स्थानीयकृत।",
     "featureOfflineTitle": "ऑफ़लाइन काम करता है",
     "featureOfflineDesc": "Numio को ऐप के रूप में इंस्टॉल करें और कहीं भी उपयोग करें।"
+  },
+  "search": {
+    "placeholder": "कैलकुलेटर और टूल खोजें…",
+    "noResults": "कोई परिणाम नहीं मिला।"
   }
 }

@@ -160,5 +160,9 @@
     "featureLanguagesDesc": "为全球用户完整本地化。",
     "featureOfflineTitle": "离线可用",
     "featureOfflineDesc": "将 Numio 安装为应用，随时随地使用。"
+  },
+  "search": {
+    "placeholder": "搜索计算器和工具…",
+    "noResults": "未找到结果。"
   }
 }

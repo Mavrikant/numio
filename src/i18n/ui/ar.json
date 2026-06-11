@@ -160,5 +160,9 @@
     "featureLanguagesDesc": "مترجَم بالكامل لجمهور عالمي.",
     "featureOfflineTitle": "يعمل دون اتصال",
     "featureOfflineDesc": "ثبّت Numio كتطبيق واستخدمه في أي مكان."
+  },
+  "search": {
+    "placeholder": "ابحث في الحاسبات والأدوات…",
+    "noResults": "لم يتم العثور على نتائج."
   }
 }

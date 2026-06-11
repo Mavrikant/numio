@@ -12,6 +12,7 @@ export interface Props {
 const { locale, activeCategory } = Astro.props;
 const homeHref = buildPath(locale);
 const siteName = t(locale, "site.name");
+const searchIndexUrl = `${buildPath(locale)}search-index.json`;
 ---
 
 <header
@@ -74,12 +75,14 @@ const siteName = t(locale, "site.name");
 
       {/* Right controls */}
       <div class="flex items-center gap-1">
-        {/* Search icon (placeholder) */}
+        {/* Search */}
         <button
+          id="search-btn"
           type="button"
           aria-label={t(locale, "nav.search")}
-          class="hidden sm:inline-flex h-10 w-10 sm:h-9 sm:w-9 items-center justify-center rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-100 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500"
-          disabled
+          aria-haspopup="dialog"
+          aria-controls="search-dialog"
+          class="inline-flex h-10 w-10 sm:h-9 sm:w-9 items-center justify-center rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-100 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -179,6 +182,60 @@ const siteName = t(locale, "site.name");
   </div>
 </header>
 
+{/* Search dialog */}
+<div
+  id="search-dialog"
+  class="fixed inset-0 z-50 hidden print:hidden"
+  role="dialog"
+  aria-modal="true"
+  aria-label={t(locale, "nav.search")}
+  data-index-url={searchIndexUrl}
+  data-no-results={t(locale, "search.noResults")}
+>
+  <div id="search-backdrop" class="absolute inset-0 bg-slate-900/50"></div>
+  <div class="relative mx-auto mt-16 w-full max-w-xl px-4 sm:mt-24">
+    <div
+      class="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-2xl dark:border-slate-700 dark:bg-slate-900"
+    >
+      <div class="flex items-center gap-3 px-4">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-5 w-5 shrink-0 text-slate-400"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <circle cx="11" cy="11" r="8" />
+          <path d="m21 21-4.35-4.35" />
+        </svg>
+        <input
+          id="search-input"
+          type="search"
+          placeholder={t(locale, "search.placeholder")}
+          autocomplete="off"
+          autocapitalize="off"
+          spellcheck="false"
+          role="combobox"
+          aria-expanded="false"
+          aria-controls="search-results"
+          aria-autocomplete="list"
+          class="h-12 w-full bg-transparent text-base text-slate-900 placeholder:text-slate-400 focus:outline-none dark:text-slate-100 dark:placeholder:text-slate-500"
+        />
+      </div>
+      <ul
+        id="search-results"
+        role="listbox"
+        class="max-h-80 overflow-y-auto overscroll-contain border-t border-slate-200 p-2 empty:hidden dark:border-slate-700"
+      >
+      </ul>
+    </div>
+  </div>
+</div>
+
 <script>
   // Header: sticky shadow on scroll + mobile menu toggle
   const header = document.getElementById("site-header");
@@ -231,13 +288,185 @@ const siteName = t(locale, "site.name");
     isOpen ? closeMenu() : openMenu();
   });
 
-  // Close mobile menu on Escape
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") closeMenu();
-  });
-
   // Close mobile menu on resize to desktop
   window.addEventListener("resize", () => {
     if (window.innerWidth >= 768) closeMenu();
+  });
+
+  // Site search
+  const searchBtn = document.getElementById("search-btn");
+  const searchDialog = document.getElementById("search-dialog");
+  const searchBackdrop = document.getElementById("search-backdrop");
+  const searchInput = document.getElementById("search-input") as HTMLInputElement | null;
+  const searchResults = document.getElementById("search-results");
+
+  interface SearchEntry {
+    title: string;
+    short: string;
+    category: string;
+    keywords: string;
+    href: string;
+  }
+
+  let searchEntries: SearchEntry[] = [];
+  let searchIndexPromise: Promise<SearchEntry[]> | null = null;
+  let activeResult = -1;
+
+  function loadSearchIndex(): Promise<SearchEntry[]> {
+    if (!searchIndexPromise) {
+      const url = searchDialog?.dataset.indexUrl ?? "";
+      searchIndexPromise = fetch(url)
+        .then((res) => {
+          if (!res.ok) throw new Error(`Search index fetch failed: ${res.status}`);
+          return res.json();
+        })
+        .then((data: SearchEntry[]) => {
+          searchEntries = data;
+          return data;
+        })
+        .catch((err) => {
+          searchIndexPromise = null;
+          console.error(err);
+          return [];
+        });
+    }
+    return searchIndexPromise;
+  }
+
+  function openSearch() {
+    if (!searchDialog) return;
+    closeMenu();
+    searchDialog.classList.remove("hidden");
+    searchInput?.focus();
+    searchInput?.select();
+    void loadSearchIndex().then(() => renderResults(searchInput?.value ?? ""));
+  }
+
+  function closeSearch() {
+    searchDialog?.classList.add("hidden");
+    searchInput?.setAttribute("aria-expanded", "false");
+  }
+
+  function scoreEntry(entry: SearchEntry, tokens: string[]): number {
+    const title = entry.title.toLowerCase();
+    const haystack =
+      `${title} ${entry.short} ${entry.keywords} ${entry.category}`.toLowerCase();
+    let score = 0;
+    for (const token of tokens) {
+      if (!haystack.includes(token)) return -1;
+      if (title.startsWith(token)) score += 3;
+      else if (title.includes(token)) score += 2;
+      else score += 1;
+    }
+    return score;
+  }
+
+  function setActiveResult(index: number) {
+    if (!searchResults) return;
+    const options = searchResults.querySelectorAll<HTMLElement>("[role='option']");
+    activeResult = index;
+    options.forEach((option, i) => {
+      const isActive = i === index;
+      option.setAttribute("aria-selected", String(isActive));
+      option.classList.toggle("bg-slate-100", isActive);
+      option.classList.toggle("dark:bg-slate-800", isActive);
+      if (isActive) option.scrollIntoView({ block: "nearest" });
+    });
+  }
+
+  function renderResults(query: string) {
+    if (!searchResults) return;
+    searchResults.textContent = "";
+    activeResult = -1;
+
+    const tokens = query.trim().toLowerCase().split(/\s+/).filter(Boolean);
+    if (tokens.length === 0) {
+      searchInput?.setAttribute("aria-expanded", "false");
+      return;
+    }
+
+    const matches = searchEntries
+      .map((entry) => ({ entry, score: scoreEntry(entry, tokens) }))
+      .filter((m) => m.score >= 0)
+      .sort((a, b) => b.score - a.score)
+      .slice(0, 10);
+
+    searchInput?.setAttribute("aria-expanded", "true");
+
+    if (matches.length === 0) {
+      const li = document.createElement("li");
+      li.className = "px-3 py-4 text-center text-sm text-slate-500 dark:text-slate-400";
+      li.textContent = searchDialog?.dataset.noResults ?? "No results found.";
+      searchResults.appendChild(li);
+      return;
+    }
+
+    for (const { entry } of matches) {
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+      a.href = entry.href;
+      a.setAttribute("role", "option");
+      a.setAttribute("aria-selected", "false");
+      a.className =
+        "flex items-baseline justify-between gap-3 rounded-lg px-3 py-2 hover:bg-slate-100 dark:hover:bg-slate-800";
+
+      const title = document.createElement("span");
+      title.className = "truncate text-sm font-medium text-slate-900 dark:text-slate-100";
+      title.textContent = entry.title;
+
+      const category = document.createElement("span");
+      category.className = "shrink-0 text-xs text-slate-500 dark:text-slate-400";
+      category.textContent = entry.category;
+
+      a.append(title, category);
+      li.appendChild(a);
+      searchResults.appendChild(li);
+    }
+  }
+
+  searchBtn?.addEventListener("click", openSearch);
+  searchBackdrop?.addEventListener("click", closeSearch);
+
+  searchInput?.addEventListener("input", () => {
+    void loadSearchIndex().then(() => renderResults(searchInput.value));
+  });
+
+  searchInput?.addEventListener("keydown", (e) => {
+    const options = searchResults?.querySelectorAll<HTMLAnchorElement>("a[role='option']");
+    if (!options || options.length === 0) return;
+    if (e.key === "ArrowDown") {
+      e.preventDefault();
+      setActiveResult((activeResult + 1) % options.length);
+    } else if (e.key === "ArrowUp") {
+      e.preventDefault();
+      setActiveResult((activeResult - 1 + options.length) % options.length);
+    } else if (e.key === "Enter") {
+      e.preventDefault();
+      const target = options[activeResult >= 0 ? activeResult : 0];
+      if (target) target.click();
+    }
+  });
+
+  // Close on Escape; open on Ctrl/Cmd+K or "/" outside form fields
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      closeMenu();
+      closeSearch();
+      return;
+    }
+    if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") {
+      e.preventDefault();
+      searchDialog?.classList.contains("hidden") ? openSearch() : closeSearch();
+      return;
+    }
+    if (e.key === "/" && !e.ctrlKey && !e.metaKey && !e.altKey) {
+      const target = e.target as HTMLElement | null;
+      const tag = target?.tagName;
+      if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT" || target?.isContentEditable) {
+        return;
+      }
+      e.preventDefault();
+      openSearch();
+    }
   });
 </script>
