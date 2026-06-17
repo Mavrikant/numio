@@ -3,6 +3,9 @@ import { COMMON_UI } from "../_shared/ui";
 
 const data = {
   en: { title: "World Clock", short: "See the current time in major cities at a glance.", description: "Free world clock. Watch the live local time in San Francisco, New York, London, Istanbul, Tokyo and more — useful for distributed teams. Runs in your browser.", keywords: ["world clock", "city clocks", "global time", "current time worldwide", "time zone dashboard"] },
+  nl: { title: "Wereldklok", short: "See the current time in major cities at a glance.", description: "Gratis world clock. Watch the live local time in San Francisco, New York, London, Istanbul, Tokyo and more — useful for distributed teams. Runs in uw browser.", keywords: ["world clock", "city clocks", "global time", "current time worldwide", "time zone dashboard"] },
+
+  pl: { title: "Zegar Światowy", short: "See the current time in major cities at a glance.", description: "Darmowy world clock. Watch the live local time in San Francisco, New York, London, Istanbul, Tokyo and more — useful for distributed teams. Runs w Twojej przeglądarce.", keywords: ["world clock", "city clocks", "global time", "current time worldwide", "time zone dashboard"] },
   pt: { title: "Relógio Mundial", short: "See the current time em major cities at a glance.", description: "Gratuito - world clock. Watch the live local time em San Francisco, New York, London, Istanbul, Tokyo e more â useful para distributed teams. Runs no seu navegador.", keywords: ["world clock", "city clocks", "global time", "current time worldwide", "time zone dashboard"] },
   id: { title: "Jam Dunia", short: "See the current time in major cities at a glance.", description: "Gratis - world clock. Watch the live local time in San Francisco, New York, London, Istanbul, Tokyo dan more â useful for distributed teams. Runs di browser Anda.", keywords: ["world clock", "city clocks", "global time", "current time worldwide", "time zone dashboard"] },
 

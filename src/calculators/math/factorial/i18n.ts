@@ -57,6 +57,119 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "Faculteit Calculator — n! for Any Integer",
+    short: "Compute the factorial of any integer from 0 to 170, including large nummers using arbitrary precision.",
+    description:
+      "Gratis factorial calculator. Enter n between 0 and 170 and direct get n! — the product of all positive integers up to n. Handles huge nummers with BigInt precision above 21!. Perfect for combinatorics, probability, and math coursework.",
+    keywords: [
+      "factorial calculator",
+      "n factorial",
+      "n! calculator",
+      "factorial math",
+      "big factorial",
+      "combinatorics calculator",
+      "0 factorial",
+    ],
+    inputs: {
+      n: {
+        label: "n (integer)",
+        help: "Non-negative integer between 0 and 170. Waardes above 21 use BigInt for exact results.",
+      },
+    },
+    outputs: {
+      value: {
+        label: "n! (Faculteit)",
+        help: "The exact product 1 × 2 × 3 × … × n. Displayed as a BigInt string for n &gt; 21.",
+      },
+      isBigInt: {
+        label: "Big Integer?",
+        help: "True when the result exceeds JavaScript's safe integer range and BigInt arithmetic is used.",
+      },
+    },
+    errors: {
+      outOfRange: "n must be a non-negative integer between 0 and 170.",
+    },
+    faq: [
+      {
+        q: "What is a factorial?",
+        a: "The factorial of a non-negative integer n, written n!, is the product of all positive integers from 1 to n. For example, 5! = 5 × 4 × 3 × 2 × 1 = 120. By convention, 0! = 1.",
+      },
+      {
+        q: "Why is 0! equal to 1?",
+        a: "0! = 1 is a mathematical convention that makes combinatorial formulas consistent. For example, C(n,0) = n! / (0! × n!) = 1, which correctly states there is exactly one way to choose zero items. The empty product is defined as 1.",
+      },
+      {
+        q: "Why is the maximum n limited to 170?",
+        a: "170! ≈ 7.26 × 10^306 is the largest factorial that fits in a IEEE 754 double-precision float. 171! would be Infinity in standard floating-point. This calculator uses exact BigInt arithmetic for values above 21!, so results up to 170! are exact integers.",
+      },
+      {
+        q: "Where are factorials used?",
+        a: "Faculteits appear in combinations C(n,r) = n!/(r!(n-r)!), permutations P(n,r) = n!/(n-r)!, Taylor series expansions (e.g., e^x = Σ x^n/n!), the gamma function, Stirling's approximation, and probability distributions like the Poisson and binomial.",
+      },
+      {
+        q: "What is Stirling's approximation for large factorials?",
+        a: "For large n, ln(n!) ≈ n·ln(n) − n + ½·ln(2πn). This approximation becomes very accurate for n above 10 and is used in statistical mechanics and informatteerion theory where exact computation is impractical.",
+      },
+    ],
+  },
+
+  pl: {
+    title: "Silnia Kalkulator — n! for Any Integer",
+    short: "Compute the factorial of any integer from 0 to 170, including large liczbas using arbitrary precision.",
+    description:
+      "Darmowy factorial kalkulator. Enter n between 0 and 170 and natychmiast get n! — the product of all positive integers up to n. Handles huge liczbas with BigInt precision above 21!. Perfect for combinatorics, probability, and math coursework.",
+    keywords: [
+      "factorial kalkulator",
+      "n factorial",
+      "n! kalkulator",
+      "factorial math",
+      "big factorial",
+      "combinatorics kalkulator",
+      "0 factorial",
+    ],
+    inputs: {
+      n: {
+        label: "n (integer)",
+        help: "Non-negative integer between 0 and 170. Wartośćs above 21 use BigInt for exact results.",
+      },
+    },
+    outputs: {
+      value: {
+        label: "n! (Silnia)",
+        help: "The exact product 1 × 2 × 3 × … × n. Displayed as a BigInt string for n &gt; 21.",
+      },
+      isBigInt: {
+        label: "Big Integer?",
+        help: "True when the result exceeds JavaScript's safe integer range and BigInt arithmetic is used.",
+      },
+    },
+    errors: {
+      outOfRange: "n must be a non-negative integer between 0 and 170.",
+    },
+    faq: [
+      {
+        q: "What is a factorial?",
+        a: "The factorial of a non-negative integer n, written n!, is the product of all positive integers from 1 to n. For example, 5! = 5 × 4 × 3 × 2 × 1 = 120. By convention, 0! = 1.",
+      },
+      {
+        q: "Why is 0! equal to 1?",
+        a: "0! = 1 is a mathematical convention that makes combinatorial formulas consistent. For example, C(n,0) = n! / (0! × n!) = 1, which correctly states there is exactly one way to choose zero items. The empty product is defined as 1.",
+      },
+      {
+        q: "Why is the maximum n limited to 170?",
+        a: "170! ≈ 7.26 × 10^306 is the largest factorial that fits in a IEEE 754 double-precision float. 171! would be Infinity in standard floating-point. This kalkulator uses exact BigInt arithmetic for values above 21!, so results up to 170! are exact integers.",
+      },
+      {
+        q: "Where are factorials used?",
+        a: "Silnias appear in combinations C(n,r) = n!/(r!(n-r)!), permutations P(n,r) = n!/(n-r)!, Taylor series expansions (e.g., e^x = Σ x^n/n!), the gamma function, Stirling's approximation, and probability distributions like the Poisson and binomial.",
+      },
+      {
+        q: "What is Stirling's approximation for large factorials?",
+        a: "For large n, ln(n!) ≈ n·ln(n) − n + ½·ln(2πn). This approximation becomes very accurate for n above 10 and is used in statistical mechanics and informatujion theory where exact computation is impractical.",
+      },
+    ],
+  },
   pt: {
     title: "Calculadora de Fatorial — n! para qualquer inteiro",
     short: "Calcule o fatorial de qualquer inteiro de 0 a 170, incluindo números grandes.",

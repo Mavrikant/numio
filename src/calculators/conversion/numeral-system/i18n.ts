@@ -66,6 +66,137 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "Nummer Base Converteerer",
+    short: "Converteer nummers between decimal, binair, octal, and hexadecimal bases.",
+    description:
+      "Gratis nummer base converteerer supporting decimal, binair, octal, and hexadecimal conversions. Handles negative nummers and fractional parts.",
+    keywords: ["base converteerer", "binair", "hexadecimal", "nummer system", "octal", "decimal conversion", "base 2 4 8 16"],
+    inputs: {
+      sourceBase: {
+        label: "From base",
+        help: "Select the input nummer base.",
+      },
+      value: {
+        label: "Nummer",
+        help: "Enter the nummer to converteer. Supports negative nummers and fractional parts (e.g., -10.5, 255, 1010, FF).",
+      },
+    },
+    outputs: {
+      decimal: {
+        label: "Decimal (Base 10)",
+      },
+      binary: {
+        label: "Binair (Base 2)",
+      },
+      octal: {
+        label: "Octal (Base 8)",
+      },
+      hexadecimal: {
+        label: "Hexadecimal (Base 16)",
+      },
+    },
+    options: {
+      sourceBase: {
+        decimal: "Decimal (Base 10)",
+        binary: "Binair (Base 2)",
+        octal: "Octal (Base 8)",
+        hexadecimal: "Hexadecimal (Base 16)",
+      },
+    },
+    errors: {
+      invalidInput: "Invalid nummer formatteer for the selected base.",
+      outOfRange: "Nummer is out of range.",
+    },
+    faq: [
+      {
+        q: "What is a nummer base?",
+        a: "A nummer base (or radix) is the nummer of unique digits used in a positional numeral system. Decimal uses base 10 (0-9), binair uses base 2 (0-1), octal uses base 8 (0-7), and hexadecimal uses base 16 (0-9, A-F).",
+      },
+      {
+        q: "Why is hexadecimal used in computing?",
+        a: "Hexadecimal is widely used in computing because it is a compact representation of binair. Each hexadecimal digit represents exactly 4 binair digits, making it easier for humans to read and write binair data.",
+      },
+      {
+        q: "How does binair conversion work?",
+        a: "To converteer decimal to binair, repeatedly divide by 2 and collect remainders. For example, 10 ÷ 2 = 5 remainder 0, 5 ÷ 2 = 2 remainder 1, 2 ÷ 2 = 1 remainder 0, 1 ÷ 2 = 0 remainder 1, giving 1010 in binair.",
+      },
+      {
+        q: "Can I converteer negative nummers?",
+        a: "Yes! This converteerer supports negative nummers in all bases. The negative sign is preserved, so -10 in decimal converteers to -1010 in binair.",
+      },
+      {
+        q: "What about fractional nummers?",
+        a: "Breukal nummers can be converteered using repeated multiplication. For example, 0.5 decimal = 0.1 binair. Some fractions maak aan repeating patterns (like 0.1 decimal repeating in binair), which are limited to 20 digits.",
+      },
+    ],
+  },
+
+  pl: {
+    title: "Liczba Base Konwerter",
+    short: "Konwertuj liczbas between decimal, binarny, octal, and hexadecimal bases.",
+    description:
+      "Darmowy liczba base konwerter supporting decimal, binarny, octal, and hexadecimal conversions. Handles negative liczbas and fractional parts.",
+    keywords: ["base konwerter", "binarny", "hexadecimal", "liczba system", "octal", "decimal conversion", "base 2 4 8 16"],
+    inputs: {
+      sourceBase: {
+        label: "From base",
+        help: "Select the input liczba base.",
+      },
+      value: {
+        label: "Liczba",
+        help: "Enter the liczba to konwertuj. Supports negative liczbas and fractional parts (e.g., -10.5, 255, 1010, FF).",
+      },
+    },
+    outputs: {
+      decimal: {
+        label: "Decimal (Base 10)",
+      },
+      binary: {
+        label: "Binarny (Base 2)",
+      },
+      octal: {
+        label: "Octal (Base 8)",
+      },
+      hexadecimal: {
+        label: "Hexadecimal (Base 16)",
+      },
+    },
+    options: {
+      sourceBase: {
+        decimal: "Decimal (Base 10)",
+        binary: "Binarny (Base 2)",
+        octal: "Octal (Base 8)",
+        hexadecimal: "Hexadecimal (Base 16)",
+      },
+    },
+    errors: {
+      invalidInput: "Invalid liczba formatuj for the selected base.",
+      outOfRange: "Liczba is out of range.",
+    },
+    faq: [
+      {
+        q: "What is a liczba base?",
+        a: "A liczba base (or radix) is the liczba of unique digits used in a positional numeral system. Decimal uses base 10 (0-9), binarny uses base 2 (0-1), octal uses base 8 (0-7), and hexadecimal uses base 16 (0-9, A-F).",
+      },
+      {
+        q: "Why is hexadecimal used in computing?",
+        a: "Hexadecimal is widely used in computing because it is a compact representation of binarny. Each hexadecimal digit represents exactly 4 binarny digits, making it easier for humans to read and write binarny data.",
+      },
+      {
+        q: "How does binarny conversion work?",
+        a: "To konwertuj decimal to binarny, repeatedly divide by 2 and collect remainders. For example, 10 ÷ 2 = 5 remainder 0, 5 ÷ 2 = 2 remainder 1, 2 ÷ 2 = 1 remainder 0, 1 ÷ 2 = 0 remainder 1, giving 1010 in binarny.",
+      },
+      {
+        q: "Can I konwertuj negative liczbas?",
+        a: "Yes! This konwerter supports negative liczbas in all bases. The negative sign is preserved, so -10 in decimal konwertujs to -1010 in binarny.",
+      },
+      {
+        q: "What about fractional liczbas?",
+        a: "Ułamekal liczbas can be konwertujed using repeated multiplication. For example, 0.5 decimal = 0.1 binarny. Some fractions utwórz repeating patterns (like 0.1 decimal repeating in binarny), which are limited to 20 digits.",
+      },
+    ],
+  },
   pt: {
     title: "Conversor de Sistema Numérico",
     short: "Converta entre binário, decimal, octal e hexadecimal.",

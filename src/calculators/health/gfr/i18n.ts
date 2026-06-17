@@ -91,6 +91,187 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "eGFR Calculator",
+    short: "Bereken your estimated glomerular filtration rate using the CKD-EPI 2021 equation.",
+    description:
+      "Gratis eGFR calculator using CKD-EPI 2021 equation. Enter creatinine level, age, sex, and race to assess kidney function and CKD stage.",
+    keywords: [
+      "eGFR calculator",
+      "glomerular filtration rate",
+      "kidney function",
+      "CKD stage",
+      "creatinine",
+      "chronic kidney disease",
+      "GFR",
+    ],
+    inputs: {
+      creatinineUmolL: {
+        label: "Serum Creatinine",
+        help: "Your serum creatinine level in µmol/L (micromoles per liter).",
+      },
+      ageYears: {
+        label: "Leeftijd",
+        help: "Your age in jaren (18–120).",
+      },
+      sex: {
+        label: "Sex",
+        help: "Your biological sex (used in the CKD-EPI equation).",
+      },
+      race: {
+        label: "Race/Ethnicity",
+        help: "For the CKD-EPI 2021 adjustment. Select 'Black' for Black individuals or 'Other' for all others.",
+      },
+    },
+    outputs: {
+      eGfr: {
+        label: "eGFR",
+        help: "Estimated Glomerular Filtration Rate in mL/min/1.73m².",
+      },
+      stage: {
+        label: "CKD Stage",
+        help: "Chronic Kidney Disease stage based on eGFR.",
+      },
+      stageLabel: {
+        label: "Stage Description",
+        help: "Detailed description of your kidney function category.",
+      },
+      riskLevel: {
+        label: "Risk Level",
+        help: "Overall risk classification based on kidney function.",
+      },
+    },
+    options: {
+      sex: {
+        male: "Male",
+        female: "Female",
+      },
+      race: {
+        black: "Black",
+        other: "Other",
+      },
+    },
+    errors: {
+      creatinineRequired: "Serum creatinine is required.",
+      ageRequired: "Leeftijd is required.",
+      ageRange: "Leeftijd must be between 18 and 120 jaren.",
+      sexRequired: "Sex must be specified.",
+      raceRequired: "Race/ethnicity must be specified.",
+    },
+    faq: [
+      {
+        q: "What is eGFR?",
+        a: "eGFR (estimated Glomerular Filtration Rate) estimates how well your kidneys are filtering waste from your blood. It is measured in mL/min/1.73m² and is one of the main indicators of kidney health.",
+      },
+      {
+        q: "What are the CKD stages?",
+        a: "There are 5 stages of chronic kidney disease (CKD) based on eGFR: Stage 1 (eGFR ≥90, normal or high), Stage 2 (60–89, mildly decreased), Stage 3a (45–59, mild–moderate decrease), Stage 3b (30–44, moderate–severe decrease), Stage 4 (15–29, severely decreased), and Stage 5 (<15, kidney failure).",
+      },
+      {
+        q: "Is eGFR accurate?",
+        a: "eGFR is an estimate based on serum creatinine and demographic factors. It may be inaccurate in elderly individuals, those with extreme body compositions, or certain medical conditions. Cystatin C or measured GFR may be needed for confirmation.",
+      },
+      {
+        q: "What do I do if my eGFR is low?",
+        a: "If your eGFR is low, consult your healthcare provider. They may recommend lifestyle changes, medication, or further testing. Regular monitoring is important for managing kidney health.",
+      },
+      {
+        q: "Why is race included in the CKD-EPI equation?",
+        a: "The CKD-EPI 2021 equation includes an optional race adjustment for Black individuals based on epidemiological data. However, recent guidance suggests this factor should be applied thoughtfully and with clinical contekst.",
+      },
+    ],
+  },
+
+  pl: {
+    title: "eGFR Kalkulator",
+    short: "Oblicz your estimated glomerular filtration rate using the CKD-EPI 2021 equation.",
+    description:
+      "Darmowy eGFR kalkulator using CKD-EPI 2021 equation. Enter creatinine level, age, sex, and race to assess kidney function and CKD stage.",
+    keywords: [
+      "eGFR kalkulator",
+      "glomerular filtration rate",
+      "kidney function",
+      "CKD stage",
+      "creatinine",
+      "chronic kidney disease",
+      "GFR",
+    ],
+    inputs: {
+      creatinineUmolL: {
+        label: "Serum Creatinine",
+        help: "Your serum creatinine level in µmol/L (micromoles per liter).",
+      },
+      ageYears: {
+        label: "Wiek",
+        help: "Your age in lat (18–120).",
+      },
+      sex: {
+        label: "Sex",
+        help: "Your biological sex (used in the CKD-EPI equation).",
+      },
+      race: {
+        label: "Race/Ethnicity",
+        help: "For the CKD-EPI 2021 adjustment. Select 'Black' for Black individuals or 'Other' for all others.",
+      },
+    },
+    outputs: {
+      eGfr: {
+        label: "eGFR",
+        help: "Estimated Glomerular Filtration Rate in mL/min/1.73m².",
+      },
+      stage: {
+        label: "CKD Stage",
+        help: "Chronic Kidney Disease stage based on eGFR.",
+      },
+      stageLabel: {
+        label: "Stage Description",
+        help: "Detailed description of your kidney function category.",
+      },
+      riskLevel: {
+        label: "Risk Level",
+        help: "Overall risk classification based on kidney function.",
+      },
+    },
+    options: {
+      sex: {
+        male: "Male",
+        female: "Female",
+      },
+      race: {
+        black: "Black",
+        other: "Other",
+      },
+    },
+    errors: {
+      creatinineRequired: "Serum creatinine is required.",
+      ageRequired: "Wiek is required.",
+      ageRange: "Wiek must be between 18 and 120 lat.",
+      sexRequired: "Sex must be specified.",
+      raceRequired: "Race/ethnicity must be specified.",
+    },
+    faq: [
+      {
+        q: "What is eGFR?",
+        a: "eGFR (estimated Glomerular Filtration Rate) estimates how well your kidneys are filtering waste from your blood. It is measured in mL/min/1.73m² and is one of the main indicators of kidney health.",
+      },
+      {
+        q: "What are the CKD stages?",
+        a: "There are 5 stages of chronic kidney disease (CKD) based on eGFR: Stage 1 (eGFR ≥90, normal or high), Stage 2 (60–89, mildly decreased), Stage 3a (45–59, mild–moderate decrease), Stage 3b (30–44, moderate–severe decrease), Stage 4 (15–29, severely decreased), and Stage 5 (<15, kidney failure).",
+      },
+      {
+        q: "Is eGFR accurate?",
+        a: "eGFR is an estimate based on serum creatinine and demographic factors. It may be inaccurate in elderly individuals, those with extreme body compositions, or certain medical conditions. Cystatin C or measured GFR may be needed for confirmation.",
+      },
+      {
+        q: "What do I do if my eGFR is low?",
+        a: "If your eGFR is low, consult your healthcare provider. They may recommend lifestyle changes, medication, or further testing. Regular monitoring is important for managing kidney health.",
+      },
+      {
+        q: "Why is race included in the CKD-EPI equation?",
+        a: "The CKD-EPI 2021 equation includes an optional race adjustment for Black individuals based on epidemiological data. However, recent guidance suggests this factor should be applied thoughtfully and with clinical contekst.",
+      },
+    ],
+  },
   pt: {
     title: "Calculadora de Taxa de Filtração Glomerular (TFG)",
     short: "Estime a sua taxa de filtração glomerular — função renal.",

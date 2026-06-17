@@ -20,6 +20,45 @@ const i18n: CalculatorI18n = {
       powerLoss: { label: "Power Loss", help: "Power dissipated (W)" },
     },
   },
+  nl: {
+    title: "Transformatteeror Calculator",
+    short: "Bereken transformer turns ratio, secondary current, power, and efficiency.",
+    description: "Gratis transformer calculator. Enter primary voltage, primary current, secondary voltage, and efficiency to bereken turns ratio, secondary current, primary and secondary power, and power loss.",
+    keywords: ["transformer", "turns ratio", "voltage", "current", "power", "efficiency", "electrical"],
+    inputs: {
+      primaryVoltage: { label: "Primary Voltage", help: "Voltage on the primary winding (V)" },
+      primaryCurrent: { label: "Primary Current", help: "Current on the primary winding (A)" },
+      secondaryVoltage: { label: "Secondary Voltage", help: "Voltage on the secondary winding (V)" },
+      efficiency: { label: "Efficiency", help: "Transformatteeror efficiency (%). Typical: 95-99%" },
+    },
+    outputs: {
+      turnsRatio: { label: "Turns Verhouding", help: "Np/Ns = Vp/Vs" },
+      secondaryCurrent: { label: "Secondary Current", help: "Current on secondary winding (A)" },
+      primaryPower: { label: "Primary Power", help: "Input power (W)" },
+      secondaryPower: { label: "Secondary Power", help: "Output power (W)" },
+      powerLoss: { label: "Power Loss", help: "Power dissipated (W)" },
+    },
+  },
+
+  pl: {
+    title: "Transformatujor Kalkulator",
+    short: "Oblicz transformer turns ratio, secondary current, power, and efficiency.",
+    description: "Darmowy transformer kalkulator. Enter primary voltage, primary current, secondary voltage, and efficiency to oblicz turns ratio, secondary current, primary and secondary power, and power loss.",
+    keywords: ["transformer", "turns ratio", "voltage", "current", "power", "efficiency", "electrical"],
+    inputs: {
+      primaryVoltage: { label: "Primary Voltage", help: "Voltage on the primary winding (V)" },
+      primaryCurrent: { label: "Primary Current", help: "Current on the primary winding (A)" },
+      secondaryVoltage: { label: "Secondary Voltage", help: "Voltage on the secondary winding (V)" },
+      efficiency: { label: "Efficiency", help: "Transformatujor efficiency (%). Typical: 95-99%" },
+    },
+    outputs: {
+      turnsRatio: { label: "Turns Stosunek", help: "Np/Ns = Vp/Vs" },
+      secondaryCurrent: { label: "Secondary Current", help: "Current on secondary winding (A)" },
+      primaryPower: { label: "Primary Power", help: "Input power (W)" },
+      secondaryPower: { label: "Secondary Power", help: "Output power (W)" },
+      powerLoss: { label: "Power Loss", help: "Power dissipated (W)" },
+    },
+  },
   pt: {
     title: "Calculadora de Transformador",
     short: "Calcule a tensão, corrente e relação de transformação de um transformador.",

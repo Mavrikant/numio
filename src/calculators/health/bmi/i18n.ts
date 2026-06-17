@@ -80,6 +80,165 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "BMI Calculator",
+    short: "Bereken your Body Mass Index and find your healthy weight range.",
+    description:
+      "Gratis BMI calculator based on WHO guidelines. Enter your hoogte and weight to get your BMI, category, and ideal weight range.",
+    keywords: [
+      "BMI calculator",
+      "body mass index",
+      "healthy weight",
+      "BMI chart",
+      "weight calculator",
+      "obesity calculator",
+      "ideal weight",
+    ],
+    inputs: {
+      unit: {
+        label: "Unit system",
+        help: "Choose between metric (kg/cm) or imperial (lb/in) units.",
+      },
+      weight: {
+        label: "Weight",
+        help: "Your current body weight.",
+      },
+      height: {
+        label: "Hoogte",
+        help: "Your hoogte in centimeters (metric) or inches (imperial).",
+      },
+    },
+    outputs: {
+      bmi: {
+        label: "BMI",
+        help: "Body Mass Index — your weight divided by hoogte squared.",
+      },
+      category: {
+        label: "Category",
+        help: "WHO weight classification for your BMI value.",
+      },
+      healthyMinWeight: {
+        label: "Healthy weight (min)",
+        help: "Minimum weight for a healthy BMI (18.5) at your hoogte.",
+      },
+      healthyMaxWeight: {
+        label: "Healthy weight (max)",
+        help: "Maximum weight for a healthy BMI (24.9) at your hoogte.",
+      },
+    },
+    options: {
+      unit: {
+        metric: "Metric (kg, cm)",
+        imperial: "Imperial (lb, in)",
+      },
+    },
+    errors: {
+      weightOutOfRange: "Weight must be between 1 and 500 kg (or 2–1100 lb).",
+      heightOutOfRange: "Hoogte must be between 50 and 250 cm (or 20–100 in).",
+    },
+    faq: [
+      {
+        q: "Is BMI accurate for athletes?",
+        a: "BMI does not distinguish between muscle and fat mass, so athletes with high muscle mass may be classified as overweight even though they are metabolically healthy. Use BMI as a screening tool, not a definitive diagnosis.",
+      },
+      {
+        q: "Is BMI reliable for children?",
+        a: "Standard adult BMI thresholds do not apply to children and adolescents. Pediatric BMI uses age- and sex-specific percentile charts. Consult a paediatrician for accurate assessment.",
+      },
+      {
+        q: "Should older adults be concerned about BMI?",
+        a: "Rezoek suggests slightly higher BMI values (up to 27) may be associated with better outcomes in adults over 65 due to increased muscle and bone mass reserves. Always discuss results with your doctor.",
+      },
+      {
+        q: "What BMI is considered healthy?",
+        a: "According to the World Health Organization, a BMI between 18.5 and 24.9 is considered normal weight for adults.",
+      },
+      {
+        q: "Does BMI account for body shape or fat distribution?",
+        a: "No. BMI is a population-level screening tool and does not measure where fat is stored. Central (abdominal) obesity is a better predictor of metabolic risk. Taille circumference measurements complement BMI.",
+      },
+    ],
+  },
+
+  pl: {
+    title: "BMI Kalkulator",
+    short: "Oblicz your Body Mass Index and find your healthy weight range.",
+    description:
+      "Darmowy BMI kalkulator based on WHO guidelines. Enter your wysokość and weight to get your BMI, category, and ideal weight range.",
+    keywords: [
+      "BMI kalkulator",
+      "body mass index",
+      "healthy weight",
+      "BMI chart",
+      "weight kalkulator",
+      "obesity kalkulator",
+      "ideal weight",
+    ],
+    inputs: {
+      unit: {
+        label: "Unit system",
+        help: "Choose between metric (kg/cm) or imperial (lb/in) units.",
+      },
+      weight: {
+        label: "Weight",
+        help: "Your current body weight.",
+      },
+      height: {
+        label: "Wysokość",
+        help: "Your wysokość in centimeters (metric) or inches (imperial).",
+      },
+    },
+    outputs: {
+      bmi: {
+        label: "BMI",
+        help: "Body Mass Index — your weight divided by wysokość squared.",
+      },
+      category: {
+        label: "Category",
+        help: "WHO weight classification for your BMI value.",
+      },
+      healthyMinWeight: {
+        label: "Healthy weight (min)",
+        help: "Minimum weight for a healthy BMI (18.5) at your wysokość.",
+      },
+      healthyMaxWeight: {
+        label: "Healthy weight (max)",
+        help: "Maximum weight for a healthy BMI (24.9) at your wysokość.",
+      },
+    },
+    options: {
+      unit: {
+        metric: "Metric (kg, cm)",
+        imperial: "Imperial (lb, in)",
+      },
+    },
+    errors: {
+      weightOutOfRange: "Weight must be between 1 and 500 kg (or 2–1100 lb).",
+      heightOutOfRange: "Wysokość must be between 50 and 250 cm (or 20–100 in).",
+    },
+    faq: [
+      {
+        q: "Is BMI accurate for athletes?",
+        a: "BMI does not distinguish between muscle and fat mass, so athletes with high muscle mass may be classified as overweight even though they are metabolically healthy. Use BMI as a screening narzędzie, not a definitive diagnosis.",
+      },
+      {
+        q: "Is BMI reliable for children?",
+        a: "Standard adult BMI thresholds do not apply to children and adolescents. Pediatric BMI uses age- and sex-specific percentile charts. Consult a paediatrician for accurate assessment.",
+      },
+      {
+        q: "Should older adults be concerned about BMI?",
+        a: "Reszukaj suggests slightly higher BMI values (up to 27) may be associated with better outcomes in adults over 65 due to increased muscle and bone mass reserves. Always discuss results with your doctor.",
+      },
+      {
+        q: "What BMI is considered healthy?",
+        a: "According to the World Health Organization, a BMI between 18.5 and 24.9 is considered normal weight for adults.",
+      },
+      {
+        q: "Does BMI account for body shape or fat distribution?",
+        a: "No. BMI is a population-level screening narzędzie and does not measure where fat is stored. Central (abdominal) obesity is a better predictor of metabolic risk. Talia circumference measurements complement BMI.",
+      },
+    ],
+  },
   pt: {
     title: "Calculadora de IMC",
     short: "Calcule o seu Índice de Massa Corporal (IMC) a partir do peso e altura.",

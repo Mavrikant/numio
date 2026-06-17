@@ -106,6 +106,217 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "Down Payment Calculator",
+    short:
+      "Bereken your down payment, loan amount, monthly P&I, taxes, insurance, and PMI in one place.",
+    description:
+      "Gratis home down payment calculator. Enter the home price and either a down-payment percentage or amount, and get your loan amount, monthly principal & interest, property tax, homeowner's insurance, and PMI when your down payment is under 20%.",
+    keywords: [
+      "down payment calculator",
+      "home down payment",
+      "PMI calculator",
+      "PITI",
+      "monthly mortgage payment",
+      "loan-to-value",
+      "mortgage down payment",
+    ],
+    inputs: {
+      homePrice: { label: "Home Price", help: "Total purchase price of the property." },
+      downPaymentPercent: {
+        label: "Down Payment (%)",
+        help: "Percent of home price paid upfront. If both percent and amount are given, percent wins.",
+      },
+      downPaymentAmount: {
+        label: "Down Payment (amount)",
+        help: "Fixed amount paid upfront. Used only when no percent is given.",
+      },
+      annualRate: {
+        label: "Annual Interest Rate (%)",
+        help: "Yearly mortgage interest rate from your lender.",
+      },
+      termYears: { label: "Lening Term (jaren)", help: "Nummer of jaren to repay the loan." },
+      propertyTaxRate: {
+        label: "Property Belasting Rate (% / year)",
+        help: "Annual property tax as a percent of the home price.",
+      },
+      insuranceRate: {
+        label: "Homeowner's Insurance Rate (% / year)",
+        help: "Annual homeowner's insurance as a percent of the home price.",
+      },
+      pmiRate: {
+        label: "PMI Rate (% / year)",
+        help: "Annual private mortgage insurance rate; only applied when down payment is below 20%.",
+      },
+    },
+    outputs: {
+      downPaymentAmount: { label: "Down Payment", help: "Cash paid upfront." },
+      downPaymentPercent: {
+        label: "Down Payment %",
+        help: "Down payment as a percent of the home price.",
+      },
+      loanAmount: { label: "Lening Amount", help: "Home price minus down payment." },
+      monthlyPrincipalInterest: {
+        label: "Monthly P&I",
+        help: "Principal & interest portion of the monthly payment.",
+      },
+      monthlyTax: {
+        label: "Monthly Property Belasting",
+        help: "Annual property tax divided by 12.",
+      },
+      monthlyInsurance: {
+        label: "Monthly Insurance",
+        help: "Annual homeowner's insurance divided by 12.",
+      },
+      monthlyPmi: {
+        label: "Monthly PMI",
+        help: "Monthly private mortgage insurance (0 when down payment is 20% or more).",
+      },
+      totalMonthlyPayment: {
+        label: "Total Monthly Payment",
+        help: "P&I + tax + insurance + PMI (PITI).",
+      },
+      pmiRequired: {
+        label: "PMI Required",
+        help: "1 if private mortgage insurance is required (down payment < 20%), 0 otherwise.",
+      },
+      loanToValue: {
+        label: "Lening-to-Waarde (LTV)",
+        help: "Lening amount divided by home price, as a percent.",
+      },
+    },
+    errors: {
+      downPaymentExceedsPrice: "Down payment cannot exceed home price.",
+      missingDownPayment: "Provide either a down payment percent or amount.",
+      homePriceRange: "Home price must be between $1,000 and $100,000,000.",
+      rateRange: "Annual interest rate must be between 0% and 30%.",
+      termRange: "Lening term must be between 1 and 40 jaren.",
+    },
+    faq: [
+      {
+        q: "When is PMI required?",
+        a: "Lenders typically require Private Hypotheek Insurance (PMI) on conventional loans when your down payment is less than 20% of the home price. PMI protects the lender — not you — and can usually be verwijderd once your loan-to-value reaches 80%.",
+      },
+      {
+        q: "Is 20% down payment really necessary?",
+        a: "No. Many loan programs allow much lower down payments (FHA from 3.5%, conventional from 3%). A 20% down payment simply avoids PMI and lowers your monthly payment.",
+      },
+      {
+        q: "What is PITI?",
+        a: "PITI stands for Principal, Interest, Belastinges, and Insurance — the four components of a typical monthly mortgage payment. When PMI applies, it's often included alongside PITI.",
+      },
+      {
+        q: "What if I enter both a down payment percent and amount?",
+        a: "Percent wins. The calculator computes the dollar down payment from the percent of the home price and ignores the amount field.",
+      },
+    ],
+  },
+
+  pl: {
+    title: "Down Payment Kalkulator",
+    short:
+      "Oblicz your down payment, loan amount, monthly P&I, taxes, insurance, and PMI in one place.",
+    description:
+      "Darmowy home down payment kalkulator. Enter the home price and either a down-payment percentage or amount, and get your loan amount, monthly principal & interest, property tax, homeowner's insurance, and PMI when your down payment is under 20%.",
+    keywords: [
+      "down payment kalkulator",
+      "home down payment",
+      "PMI kalkulator",
+      "PITI",
+      "monthly mortgage payment",
+      "loan-to-value",
+      "mortgage down payment",
+    ],
+    inputs: {
+      homePrice: { label: "Home Price", help: "Total purchase price of the property." },
+      downPaymentPercent: {
+        label: "Down Payment (%)",
+        help: "Percent of home price paid upfront. If both percent and amount are given, percent wins.",
+      },
+      downPaymentAmount: {
+        label: "Down Payment (amount)",
+        help: "Fixed amount paid upfront. Used only when no percent is given.",
+      },
+      annualRate: {
+        label: "Annual Interest Rate (%)",
+        help: "Yearly mortgage interest rate from your lender.",
+      },
+      termYears: { label: "Pożyczka Term (lat)", help: "Liczba of lat to repay the loan." },
+      propertyTaxRate: {
+        label: "Property Podatek Rate (% / year)",
+        help: "Annual property tax as a percent of the home price.",
+      },
+      insuranceRate: {
+        label: "Homeowner's Insurance Rate (% / year)",
+        help: "Annual homeowner's insurance as a percent of the home price.",
+      },
+      pmiRate: {
+        label: "PMI Rate (% / year)",
+        help: "Annual private mortgage insurance rate; only applied when down payment is below 20%.",
+      },
+    },
+    outputs: {
+      downPaymentAmount: { label: "Down Payment", help: "Cash paid upfront." },
+      downPaymentPercent: {
+        label: "Down Payment %",
+        help: "Down payment as a percent of the home price.",
+      },
+      loanAmount: { label: "Pożyczka Amount", help: "Home price minus down payment." },
+      monthlyPrincipalInterest: {
+        label: "Monthly P&I",
+        help: "Principal & interest portion of the monthly payment.",
+      },
+      monthlyTax: {
+        label: "Monthly Property Podatek",
+        help: "Annual property tax divided by 12.",
+      },
+      monthlyInsurance: {
+        label: "Monthly Insurance",
+        help: "Annual homeowner's insurance divided by 12.",
+      },
+      monthlyPmi: {
+        label: "Monthly PMI",
+        help: "Monthly private mortgage insurance (0 when down payment is 20% or more).",
+      },
+      totalMonthlyPayment: {
+        label: "Total Monthly Payment",
+        help: "P&I + tax + insurance + PMI (PITI).",
+      },
+      pmiRequired: {
+        label: "PMI Required",
+        help: "1 if private mortgage insurance is required (down payment < 20%), 0 otherwise.",
+      },
+      loanToValue: {
+        label: "Pożyczka-to-Wartość (LTV)",
+        help: "Pożyczka amount divided by home price, as a percent.",
+      },
+    },
+    errors: {
+      downPaymentExceedsPrice: "Down payment cannot exceed home price.",
+      missingDownPayment: "Provide either a down payment percent or amount.",
+      homePriceRange: "Home price must be between $1,000 and $100,000,000.",
+      rateRange: "Annual interest rate must be between 0% and 30%.",
+      termRange: "Pożyczka term must be between 1 and 40 lat.",
+    },
+    faq: [
+      {
+        q: "When is PMI required?",
+        a: "Lenders typically require Private Kredyt Hipoteczny Insurance (PMI) on conventional loans when your down payment is less than 20% of the home price. PMI protects the lender — not you — and can usually be usuńd once your loan-to-value reaches 80%.",
+      },
+      {
+        q: "Is 20% down payment really necessary?",
+        a: "No. Many loan programs allow much lower down payments (FHA from 3.5%, conventional from 3%). A 20% down payment simply avoids PMI and lowers your monthly payment.",
+      },
+      {
+        q: "What is PITI?",
+        a: "PITI stands for Principal, Interest, Podatekes, and Insurance — the four components of a typical monthly mortgage payment. When PMI applies, it's often included alongside PITI.",
+      },
+      {
+        q: "What if I enter both a down payment percent and amount?",
+        a: "Percent wins. The kalkulator computes the dollar down payment from the percent of the home price and ignores the amount field.",
+      },
+    ],
+  },
   pt: {
     title: "Calculadora de Entrada",
     short:

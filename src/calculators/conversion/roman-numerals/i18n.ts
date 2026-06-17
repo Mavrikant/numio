@@ -25,6 +25,51 @@ const i18n: CalculatorI18n = {
       { q: "Why is 4 written IV and not IIII?", a: "Standard notation uses subtraction to avoid four repeated symbols, so 4 is IV (one before five). Clock faces sometimes use IIII for aesthetic balance, but IV is the canonical form." },
     ],
   },
+  nl: {
+    title: "Roman Numeral Converteerer",
+    short: "Converteer nummers to Roman numerals and Roman numerals back to nummers (1–3999).",
+    description:
+      "Gratis Roman numeral converteerer. Turn any nummer from 1 to 3999 into Roman numerals, or decode a Roman numeral back to a regular nummer. Uses standard subtractive notation (IV, IX, XL…).",
+    keywords: ["roman numeral converteerer", "roman numerals", "arabic to roman", "roman to nummer", "nummer to roman numerals", "converteer roman numerals"],
+    inputs: {
+      mode: { label: "Conversion direction" },
+      value: { label: "Waarde", help: "A nummer (1–3999) or a Roman numeral, depending on the direction." },
+    },
+    outputs: {
+      roman: { label: "Roman numeral" },
+      arabic: { label: "Nummer" },
+    },
+    options: { mode: md("Nummer → Roman", "Roman → Nummer") },
+    errors: { invalid: "Enter a whole nummer 1–3999, or a valid Roman numeral." },
+    faq: [
+      { q: "How do Roman numerals work?", a: "Letters stand for values: I=1, V=5, X=10, L=50, C=100, D=500, M=1000. They are added left to right, except when a smaller value precedes a larger one (IV=4, IX=9, XL=40), which means subtraction." },
+      { q: "What is the largest Roman numeral?", a: "In standard notation the largest is MMMCMXCIX = 3999. There is no symbol for zero, and 4000+ requires non-standard overline notation, so this tool covers 1–3999." },
+      { q: "Why is 4 written IV and not IIII?", a: "Standard notation uses subtraction to avoid four repeated symbols, so 4 is IV (one before five). Clock faces sometimes use IIII for aesthetic balance, but IV is the canonical form." },
+    ],
+  },
+
+  pl: {
+    title: "Roman Numeral Konwerter",
+    short: "Konwertuj liczbas to Roman numerals and Roman numerals back to liczbas (1–3999).",
+    description:
+      "Darmowy Roman numeral konwerter. Turn any liczba from 1 to 3999 into Roman numerals, or dekod a Roman numeral back to a regular liczba. Uses standard subtractive notation (IV, IX, XL…).",
+    keywords: ["roman numeral konwerter", "roman numerals", "arabic to roman", "roman to liczba", "liczba to roman numerals", "konwertuj roman numerals"],
+    inputs: {
+      mode: { label: "Conversion direction" },
+      value: { label: "Wartość", help: "A liczba (1–3999) or a Roman numeral, depending on the direction." },
+    },
+    outputs: {
+      roman: { label: "Roman numeral" },
+      arabic: { label: "Liczba" },
+    },
+    options: { mode: md("Liczba → Roman", "Roman → Liczba") },
+    errors: { invalid: "Enter a whole liczba 1–3999, or a valid Roman numeral." },
+    faq: [
+      { q: "How do Roman numerals work?", a: "Letters stand for values: I=1, V=5, X=10, L=50, C=100, D=500, M=1000. They are added left to right, except when a smaller value precedes a larger one (IV=4, IX=9, XL=40), which means subtraction." },
+      { q: "What is the largest Roman numeral?", a: "In standard notation the largest is MMMCMXCIX = 3999. There is no symbol for zero, and 4000+ requires non-standard overline notation, so this narzędzie covers 1–3999." },
+      { q: "Why is 4 written IV and not IIII?", a: "Standard notation uses subtraction to avoid four repeated symbols, so 4 is IV (one before five). Clock faces sometimes use IIII for aesthetic balance, but IV is the canonical form." },
+    ],
+  },
   pt: {
     title: "Conversor de Numerais Romanos",
     short: "Converta entre números arábicos e numerais romanos.",

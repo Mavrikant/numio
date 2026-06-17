@@ -21,6 +21,8 @@ export const LOCALES = [
   "ja",
   "ko",
   "hi",
+  "nl",
+  "pl",
 ] as const;
 
 export const DEFAULT_LOCALE = "en" as const;
@@ -48,6 +50,8 @@ export const LOCALE_NATIVE_NAMES: Record<Locale, string> = {
   ja: "日本語",
   ko: "한국어",
   hi: "हिन्दी",
+  nl: "Nederlands",
+  pl: "Polski",
 };
 
 export const LOCALE_ENGLISH_NAMES: Record<Locale, string> = {
@@ -65,6 +69,8 @@ export const LOCALE_ENGLISH_NAMES: Record<Locale, string> = {
   ja: "Japanese",
   ko: "Korean",
   hi: "Hindi",
+  nl: "Dutch",
+  pl: "Polish",
 };
 
 export const LOCALE_HTML_LANG: Record<Locale, string> = {
@@ -82,6 +88,8 @@ export const LOCALE_HTML_LANG: Record<Locale, string> = {
   ja: "ja",
   ko: "ko",
   hi: "hi",
+  nl: "nl",
+  pl: "pl",
 };
 
 export type CurrencyCode =
@@ -94,7 +102,8 @@ export type CurrencyCode =
   | "CNY"
   | "KRW"
   | "INR"
-  | "IDR";
+  | "IDR"
+  | "PLN";
 
 export const LOCALE_CURRENCY: Record<Locale, CurrencyCode> = {
   en: "USD",
@@ -111,6 +120,8 @@ export const LOCALE_CURRENCY: Record<Locale, CurrencyCode> = {
   ja: "JPY",
   ko: "KRW",
   hi: "INR",
+  nl: "EUR",
+  pl: "PLN",
 };
 
 export function isLocale(value: string): value is Locale {

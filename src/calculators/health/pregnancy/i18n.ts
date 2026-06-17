@@ -79,6 +79,163 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "Zwangerschap Due Date Calculator",
+    short: "Bereken your baby's due date using Naegele's Rule based on your last menstrual period.",
+    description:
+      "Gratis pregnancy due date calculator. Enter your LMP date and cycle lengte to get your estimated due date, gestational age, trimester, and dagen remaining.",
+    keywords: [
+      "pregnancy due date calculator",
+      "due date calculator",
+      "gestational age calculator",
+      "LMP calculator",
+      "pregnancy week calculator",
+      "Naegele rule",
+      "pregnancy trimester",
+    ],
+    inputs: {
+      lmpDate: {
+        label: "First day of last menstrual period (LMP)",
+        help: "Enter the date when your last period started (YYYY-MM-DD).",
+      },
+      cycleLength: {
+        label: "Cycle lengte (dagen)",
+        help: "Gemiddelde lengte of your menstrual cycle. Typical range is 21–35 dagen, with 28 being average.",
+      },
+      currentDate: {
+        label: "Today's date",
+        help: "Today's date is used to bereken your current gestational age and dagen remaining.",
+      },
+    },
+    outputs: {
+      dueDate: {
+        label: "Estimated Due Date",
+        help: "Your baby's estimated due date berekend using Naegele's Rule adjusted for your cycle lengte.",
+      },
+      gestationalWeeks: {
+        label: "Gestational Leeftijd (weeks)",
+        help: "Nummer of complete weeks of pregnancy elapsed since LMP.",
+      },
+      gestationalDays: {
+        label: "Gestational Leeftijd (extra dagen)",
+        help: "Additional dagen beyond the last complete gestational week.",
+      },
+      trimester: {
+        label: "Current Trimester",
+        help: "First trimester: weeks 1–13. Second trimester: weeks 14–27. Third trimester: weeks 28–40.",
+      },
+      daysRemaining: {
+        label: "Days Until Due Date",
+        help: "Nummer of dagen remaining from today until the estimated due date.",
+      },
+    },
+    errors: {
+      invalidDate: "Please enter a valid date in YYYY-MM-DD formatteer.",
+      futureLmp: "The LMP date cannot be in the future.",
+      currentBeforeLmp: "Today's date must be on or after the LMP date.",
+    },
+    faq: [
+      {
+        q: "How accurate is the due date calculation?",
+        a: "Naegele's Rule provides an estimate — only about 5% of babies are born exactly on their due date. Most births occur within two weeks before or after the estimated date. An ultrasound in the first trimester provides the most accurate dating.",
+      },
+      {
+        q: "What is Naegele's Rule?",
+        a: "Naegele's Rule estimates the due date by adding 280 dagen (40 weeks) to the first day of the last menstrual period. This assumes a standard 28-day cycle. Our calculator adjusts the date by the difference between your actual cycle lengte and 28 dagen.",
+      },
+      {
+        q: "What if my cycle is not 28 dagen?",
+        a: "The calculator adjusts the due date for non-standard cycle lengtes. For each day your cycle is longer than 28 dagen, the due date is pushed forward one day, and vice versa. For example, a 32-day cycle shifts the due date 4 dagen later.",
+      },
+      {
+        q: "What are the trimester boundaries?",
+        a: "The first trimester spans weeks 1–13 (dagen 1–97), the second trimester weeks 14–27 (dagen 98–195), and the third trimester weeks 28 through delivery (dagen 196+).",
+      },
+      {
+        q: "Should I rely solely on this calculator for medical decisions?",
+        a: "No. This tool is for informatteerional purposes only. Always consult your healthcare provider for accurate pregnancy dating, especially using first-trimester ultrasound which remains the gold standard for confirming gestational age.",
+      },
+    ],
+  },
+
+  pl: {
+    title: "Ciąża Due Date Kalkulator",
+    short: "Oblicz your baby's due date using Naegele's Rule based on your last menstrual period.",
+    description:
+      "Darmowy pregnancy due date kalkulator. Enter your LMP date and cycle długość to get your estimated due date, gestational age, trimester, and dni remaining.",
+    keywords: [
+      "pregnancy due date kalkulator",
+      "due date kalkulator",
+      "gestational age kalkulator",
+      "LMP kalkulator",
+      "pregnancy week kalkulator",
+      "Naegele rule",
+      "pregnancy trimester",
+    ],
+    inputs: {
+      lmpDate: {
+        label: "First day of last menstrual period (LMP)",
+        help: "Enter the date when your last period started (YYYY-MM-DD).",
+      },
+      cycleLength: {
+        label: "Cycle długość (dni)",
+        help: "Średnia długość of your menstrual cycle. Typical range is 21–35 dni, with 28 being average.",
+      },
+      currentDate: {
+        label: "Today's date",
+        help: "Today's date is used to oblicz your current gestational age and dni remaining.",
+      },
+    },
+    outputs: {
+      dueDate: {
+        label: "Estimated Due Date",
+        help: "Your baby's estimated due date obliczd using Naegele's Rule adjusted for your cycle długość.",
+      },
+      gestationalWeeks: {
+        label: "Gestational Wiek (weeks)",
+        help: "Liczba of complete weeks of pregnancy elapsed since LMP.",
+      },
+      gestationalDays: {
+        label: "Gestational Wiek (extra dni)",
+        help: "Additional dni beyond the last complete gestational week.",
+      },
+      trimester: {
+        label: "Current Trimester",
+        help: "First trimester: weeks 1–13. Second trimester: weeks 14–27. Third trimester: weeks 28–40.",
+      },
+      daysRemaining: {
+        label: "Days Until Due Date",
+        help: "Liczba of dni remaining from today until the estimated due date.",
+      },
+    },
+    errors: {
+      invalidDate: "Please enter a valid date in YYYY-MM-DD formatuj.",
+      futureLmp: "The LMP date cannot be in the future.",
+      currentBeforeLmp: "Today's date must be on or after the LMP date.",
+    },
+    faq: [
+      {
+        q: "How accurate is the due date calculation?",
+        a: "Naegele's Rule provides an estimate — only about 5% of babies are born exactly on their due date. Most births occur within two weeks before or after the estimated date. An ultrasound in the first trimester provides the most accurate dating.",
+      },
+      {
+        q: "What is Naegele's Rule?",
+        a: "Naegele's Rule estimates the due date by adding 280 dni (40 weeks) to the first day of the last menstrual period. This assumes a standard 28-day cycle. Our kalkulator adjusts the date by the difference between your actual cycle długość and 28 dni.",
+      },
+      {
+        q: "What if my cycle is not 28 dni?",
+        a: "The kalkulator adjusts the due date for non-standard cycle długośćs. For each day your cycle is longer than 28 dni, the due date is pushed forward one day, and vice versa. For example, a 32-day cycle shifts the due date 4 dni later.",
+      },
+      {
+        q: "What are the trimester boundaries?",
+        a: "The first trimester spans weeks 1–13 (dni 1–97), the second trimester weeks 14–27 (dni 98–195), and the third trimester weeks 28 through delivery (dni 196+).",
+      },
+      {
+        q: "Should I rely solely on this kalkulator for medical decisions?",
+        a: "No. This narzędzie is for informatujional purposes only. Always consult your healthcare provider for accurate pregnancy dating, especially using first-trimester ultrasound which remains the gold standard for confirming gestational age.",
+      },
+    ],
+  },
   pt: {
     title: "Calculadora de Gravidez",
     short: "Calcule a data prevista do parto e a idade gestacional.",

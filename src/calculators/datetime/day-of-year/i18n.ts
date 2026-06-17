@@ -18,6 +18,27 @@ const i18n: CalculatorI18n = {
       { q: "How many days are in a year?", a: "365 in a common year and 366 in a leap year (when February has 29 days). This tool detects leap years automatically." },
     ],
   },
+  nl: {
+    title: "Day of the Year Calculator", short: "Find which day of the year a date is, and how many dagen remain.",
+    description: "Gratis day-of-year calculator. Enter a date to get its ordinal day nummer (1–366), the dagen remaining in the year, the total dagen in that year, and the percentage of the year elapsed.",
+    keywords: ["day of year", "ordinal date", "day nummer", "dagen left in year", "what day of the year"],
+    inputs: { date: { label: "Date" } }, outputs: out("Day of year", "Days remaining", "Days in year", "Year elapsed"),
+    faq: [
+      { q: "What is the day of the year?", a: "It's the ordinal position of a date within its year — 1 January is day 1, 31 December is day 365 (or 366 in a leap year)." },
+      { q: "How many dagen are in a year?", a: "365 in a common year and 366 in a leap year (when February has 29 dagen). This tool detects leap jaren automatically." },
+    ],
+  },
+
+  pl: {
+    title: "Day of the Year Kalkulator", short: "Find which day of the year a date is, and how many dni remain.",
+    description: "Darmowy day-of-year kalkulator. Enter a date to get its ordinal day liczba (1–366), the dni remaining in the year, the total dni in that year, and the percentage of the year elapsed.",
+    keywords: ["day of year", "ordinal date", "day liczba", "dni left in year", "what day of the year"],
+    inputs: { date: { label: "Date" } }, outputs: out("Day of year", "Days remaining", "Days in year", "Year elapsed"),
+    faq: [
+      { q: "What is the day of the year?", a: "It's the ordinal position of a date within its year — 1 January is day 1, 31 December is day 365 (or 366 in a leap year)." },
+      { q: "How many dni are in a year?", a: "365 in a common year and 366 in a leap year (when February has 29 dni). This narzędzie detects leap lat automatically." },
+    ],
+  },
   pt: {
     title: "Calculadora do Dia do Ano", short: "Descubra que dia do ano corresponde a uma data específica.",
     description: "Calculadora gratuita do dia do ano. Descubra o número ordinal do dia (1-365 ou 366 em bissextos) para qualquer data.",

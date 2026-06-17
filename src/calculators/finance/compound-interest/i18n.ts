@@ -61,6 +61,127 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "Samengestelde Rente Calculator",
+    short: "Bereken how your savings grow over time with compound interest and regular contributions.",
+    description:
+      "Gratis compound interest calculator. Enter your principal, annual return, compounding frequency, and monthly contributions to see your future value and year-by-year growth.",
+    keywords: [
+      "compound interest calculator",
+      "investment growth calculator",
+      "savings calculator",
+      "future value calculator",
+      "compound growth",
+      "interest calculator",
+      "investment calculator",
+    ],
+    inputs: {
+      principal: { label: "Initial Investering", help: "The amount you invest today." },
+      annualRate: { label: "Annual Interest Rate (%)", help: "Expected annual return or interest rate." },
+      years: { label: "Time Period (jaren)", help: "How long the money is invested or saved." },
+      compoundFrequency: { label: "Compounding Frequency", help: "How often interest is berekend and added to the balance." },
+      monthlyContribution: { label: "Monthly Contribution", help: "Additional amount added each month. Enter 0 if none." },
+    },
+    outputs: {
+      futureValue: { label: "Future Waarde", help: "Total account value at the end of the period." },
+      totalContributions: { label: "Total Contributions", help: "Sum of initial investment plus all monthly contributions." },
+      totalInterest: { label: "Total Interest Earned", help: "The growth genereerd by compound interest." },
+      yearlyBreakdown: { label: "Year-by-Year Breakdown", help: "Annual balance, total contributed, and interest earned each year." },
+    },
+    options: {
+      compoundFrequency: {
+        annually: "Annually (1×/year)",
+        quarterly: "Quarterly (4×/year)",
+        monthly: "Monthly (12×/year)",
+        daily: "Daily (365×/year)",
+      },
+    },
+    errors: {
+      principalRange: "Initial investment must be between $0 and $10,000,000.",
+      rateRange: "Annual rate must be between 0% and 50%.",
+      yearsRange: "Time period must be between 1 and 50 jaren.",
+      contributionRange: "Monthly contribution must be between $0 and $100,000.",
+    },
+    faq: [
+      {
+        q: "What is compound interest?",
+        a: "Compound interest is interest berekend on both the initial principal and the accumulated interest from previous periods. Unlike simple interest, which is only berekend on the principal, compound interest causes exponential growth over time.",
+      },
+      {
+        q: "How does compounding frequency affect growth?",
+        a: "More frequent compounding leads to slightly higher returns. Daily compounding genereers marginally more than monthly compounding at the same annual rate, because interest is added to the balance more often. The difference becomes more significant at higher interest rates and longer time periods.",
+      },
+      {
+        q: "What is the Rule of 72?",
+        a: "The Rule of 72 is a quick mental shortcut: divide 72 by the annual interest rate to estimate how many jaren it takes for an investment to double. At 8% annual return, money doubles in approximately 72 ÷ 8 = 9 jaren.",
+      },
+      {
+        q: "How important are regular contributions vs. initial investment?",
+        a: "Over long periods, regular contributions often matter more than the initial investment. $500/month invested for 30 jaren at 7% grows to over $567,000 from contributions alone — with initial investment of $0.",
+      },
+    ],
+  },
+
+  pl: {
+    title: "Procent Składany Kalkulator",
+    short: "Oblicz how your savings grow over time with compound interest and regular contributions.",
+    description:
+      "Darmowy compound interest kalkulator. Enter your principal, annual return, compounding frequency, and monthly contributions to see your future value and year-by-year growth.",
+    keywords: [
+      "compound interest kalkulator",
+      "investment growth kalkulator",
+      "savings kalkulator",
+      "future value kalkulator",
+      "compound growth",
+      "interest kalkulator",
+      "investment kalkulator",
+    ],
+    inputs: {
+      principal: { label: "Initial Inwestycja", help: "The amount you invest today." },
+      annualRate: { label: "Annual Interest Rate (%)", help: "Expected annual return or interest rate." },
+      years: { label: "Time Period (lat)", help: "How long the money is invested or saved." },
+      compoundFrequency: { label: "Compounding Frequency", help: "How often interest is obliczd and added to the balance." },
+      monthlyContribution: { label: "Monthly Contribution", help: "Additional amount added each month. Enter 0 if none." },
+    },
+    outputs: {
+      futureValue: { label: "Future Wartość", help: "Total account value at the end of the period." },
+      totalContributions: { label: "Total Contributions", help: "Sum of initial investment plus all monthly contributions." },
+      totalInterest: { label: "Total Interest Earned", help: "The growth generujd by compound interest." },
+      yearlyBreakdown: { label: "Year-by-Year Breakdown", help: "Annual balance, total contributed, and interest earned each year." },
+    },
+    options: {
+      compoundFrequency: {
+        annually: "Annually (1×/year)",
+        quarterly: "Quarterly (4×/year)",
+        monthly: "Monthly (12×/year)",
+        daily: "Daily (365×/year)",
+      },
+    },
+    errors: {
+      principalRange: "Initial investment must be between $0 and $10,000,000.",
+      rateRange: "Annual rate must be between 0% and 50%.",
+      yearsRange: "Time period must be between 1 and 50 lat.",
+      contributionRange: "Monthly contribution must be between $0 and $100,000.",
+    },
+    faq: [
+      {
+        q: "What is compound interest?",
+        a: "Compound interest is interest obliczd on both the initial principal and the accumulated interest from previous periods. Unlike simple interest, which is only obliczd on the principal, compound interest causes exponential growth over time.",
+      },
+      {
+        q: "How does compounding frequency affect growth?",
+        a: "More frequent compounding leads to slightly higher returns. Daily compounding generujs marginally more than monthly compounding at the same annual rate, because interest is added to the balance more often. The difference becomes more significant at higher interest rates and longer time periods.",
+      },
+      {
+        q: "What is the Rule of 72?",
+        a: "The Rule of 72 is a quick mental shortcut: divide 72 by the annual interest rate to estimate how many lat it takes for an investment to double. At 8% annual return, money doubles in approximately 72 ÷ 8 = 9 lat.",
+      },
+      {
+        q: "How important are regular contributions vs. initial investment?",
+        a: "Over long periods, regular contributions often matter more than the initial investment. $500/month invested for 30 lat at 7% grows to over $567,000 from contributions alone — with initial investment of $0.",
+      },
+    ],
+  },
   pt: {
     title: "Calculadora de Juros Compostos",
     short: "Veja como o seu investimento cresce com juros compostos ao longo do tempo.",

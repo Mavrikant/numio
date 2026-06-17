@@ -90,6 +90,185 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "Pensioen Spaargeld Calculator",
+    short: "Bereken your retirement nest egg, monthly income, and jaren of income based on savings and returns.",
+    description:
+      "Gratis retirement savings calculator. Enter your age, savings, monthly contributions, and expected return to project your retirement portfolio and estimated monthly income.",
+    keywords: [
+      "retirement calculator",
+      "retirement savings calculator",
+      "retirement planning",
+      "401k calculator",
+      "nest egg calculator",
+      "compound interest retirement",
+      "monthly retirement income",
+    ],
+    inputs: {
+      currentAge: {
+        label: "Current age",
+        help: "Your current age in jaren (18–80).",
+      },
+      retirementAge: {
+        label: "Pensioen age",
+        help: "The age at which you plan to retire (45–90).",
+      },
+      currentSavings: {
+        label: "Current savings",
+        help: "Total retirement savings you have accumulated so far.",
+      },
+      monthlyContribution: {
+        label: "Monthly contribution",
+        help: "Amount you plan to contribute to retirement savings each month.",
+      },
+      annualReturn: {
+        label: "Annual return (%)",
+        help: "Expected average annual investment return. Historical US stock market average is approximately 7% inflation-adjusted.",
+      },
+      withdrawalRate: {
+        label: "Withdrawal rate (%)",
+        help: "Annual percentage of your retirement portfolio you plan to withdraw. The '4% rule' is a common benchmark.",
+      },
+    },
+    outputs: {
+      totalAtRetirement: {
+        label: "Total at Pensioen",
+        help: "Projected total value of your retirement portfolio at your target retirement age.",
+      },
+      monthlyIncome: {
+        label: "Monthly Pensioen Income",
+        help: "Estimated monthly income based on your withdrawal rate applied to the total portfolio.",
+      },
+      yearsOfIncome: {
+        label: "Years of Income",
+        help: "How long your retirement portfolio will last at the specified withdrawal rate. Waardes of 999 indicate the portfolio theoretically never depletes.",
+      },
+      totalContributions: {
+        label: "Total Contributions",
+        help: "Sum of your initial savings plus all monthly contributions over the savings period.",
+      },
+      totalInterest: {
+        label: "Total Investering Growth",
+        help: "The difference between your total at retirement and your total contributions — money earned through investment growth.",
+      },
+    },
+    errors: {
+      retirementBeforeCurrent: "Pensioen age must be greater than current age.",
+      invalidAge: "Leeftijd must be between 18 and 80.",
+    },
+    faq: [
+      {
+        q: "What is the 4% rule?",
+        a: "The 4% rule (Bengen, 1994) states that retirees can withdraw 4% of their portfolio in the first year of retirement, then adjust for inflation each year, and their money is likely to last 30 jaren. It is a rule of thumb, not a guarantee — actual outcomes depend on market performance.",
+      },
+      {
+        q: "What annual return should I assume?",
+        a: "The US stock market has historically returned approximately 10% nominally and 7% after inflation. A commonly used conservative estimate is 6–7% for a diversified portfolio. More conservative portfolios (with bonds) may use 4–5%.",
+      },
+      {
+        q: "How does compound interest affect my retirement savings?",
+        a: "Compound interest means that your returns earn returns. The longer your money is invested, the more dramatic the compounding effect. This is why starting early makes such a large difference — even a few jaren of extra contributions early in life can double or triple the final portfolio value.",
+      },
+      {
+        q: "Should I include Social Security or pension in this calculator?",
+        a: "This calculator focuses on personal savings and investment growth only. Add your estimated Social Security or pension benefit to the monthly income output to get your total projected retirement income.",
+      },
+      {
+        q: "Is this calculator suitable for all countries?",
+        a: "The calculator uses a generic compound interest model and is applicable internationally. However, specific tax rules, retirement account limits (401k, IRA, pension schemes, etc.) vary by country. Consult a local financial advisor for country-specific guidance.",
+      },
+    ],
+  },
+
+  pl: {
+    title: "Emerytura Oszczędności Kalkulator",
+    short: "Oblicz your retirement nest egg, monthly income, and lat of income based on savings and returns.",
+    description:
+      "Darmowy retirement savings kalkulator. Enter your age, savings, monthly contributions, and expected return to project your retirement portfolio and estimated monthly income.",
+    keywords: [
+      "retirement kalkulator",
+      "retirement savings kalkulator",
+      "retirement planning",
+      "401k kalkulator",
+      "nest egg kalkulator",
+      "compound interest retirement",
+      "monthly retirement income",
+    ],
+    inputs: {
+      currentAge: {
+        label: "Current age",
+        help: "Your current age in lat (18–80).",
+      },
+      retirementAge: {
+        label: "Emerytura age",
+        help: "The age at which you plan to retire (45–90).",
+      },
+      currentSavings: {
+        label: "Current savings",
+        help: "Total retirement savings you have accumulated so far.",
+      },
+      monthlyContribution: {
+        label: "Monthly contribution",
+        help: "Amount you plan to contribute to retirement savings each month.",
+      },
+      annualReturn: {
+        label: "Annual return (%)",
+        help: "Expected average annual investment return. Historical US stock market average is approximately 7% inflation-adjusted.",
+      },
+      withdrawalRate: {
+        label: "Withdrawal rate (%)",
+        help: "Annual percentage of your retirement portfolio you plan to withdraw. The '4% rule' is a common benchmark.",
+      },
+    },
+    outputs: {
+      totalAtRetirement: {
+        label: "Total at Emerytura",
+        help: "Projected total value of your retirement portfolio at your target retirement age.",
+      },
+      monthlyIncome: {
+        label: "Monthly Emerytura Income",
+        help: "Estimated monthly income based on your withdrawal rate applied to the total portfolio.",
+      },
+      yearsOfIncome: {
+        label: "Years of Income",
+        help: "How long your retirement portfolio will last at the specified withdrawal rate. Wartośćs of 999 indicate the portfolio theoretically never depletes.",
+      },
+      totalContributions: {
+        label: "Total Contributions",
+        help: "Sum of your initial savings plus all monthly contributions over the savings period.",
+      },
+      totalInterest: {
+        label: "Total Inwestycja Growth",
+        help: "The difference between your total at retirement and your total contributions — money earned through investment growth.",
+      },
+    },
+    errors: {
+      retirementBeforeCurrent: "Emerytura age must be greater than current age.",
+      invalidAge: "Wiek must be between 18 and 80.",
+    },
+    faq: [
+      {
+        q: "What is the 4% rule?",
+        a: "The 4% rule (Bengen, 1994) states that retirees can withdraw 4% of their portfolio in the first year of retirement, then adjust for inflation each year, and their money is likely to last 30 lat. It is a rule of thumb, not a guarantee — actual outcomes depend on market performance.",
+      },
+      {
+        q: "What annual return should I assume?",
+        a: "The US stock market has historically returned approximately 10% nominally and 7% after inflation. A commonly used conservative estimate is 6–7% for a diversified portfolio. More conservative portfolios (with bonds) may use 4–5%.",
+      },
+      {
+        q: "How does compound interest affect my retirement savings?",
+        a: "Compound interest means that your returns earn returns. The longer your money is invested, the more dramatic the compounding effect. This is why starting early makes such a large difference — even a few lat of extra contributions early in life can double or triple the final portfolio value.",
+      },
+      {
+        q: "Should I include Social Security or pension in this kalkulator?",
+        a: "This kalkulator focuses on personal savings and investment growth only. Add your estimated Social Security or pension benefit to the monthly income output to get your total projected retirement income.",
+      },
+      {
+        q: "Is this kalkulator suitable for all countries?",
+        a: "The kalkulator uses a generic compound interest model and is applicable internationally. However, specific tax rules, retirement account limits (401k, IRA, pension schemes, etc.) vary by country. Consult a local financial advisor for country-specific guidance.",
+      },
+    ],
+  },
   pt: {
     title: "Calculadora de Reforma",
     short: "Planeie a sua reforma e veja se está no caminho certo para os seus objetivos.",

@@ -17,6 +17,27 @@ const i18n: CalculatorI18n = {
       { q: "Should I split protein across meals?", a: "Spreading intake across ~3–4 meals (about 20–40 g each) supports muscle protein synthesis better than one large serving. The 'per meal' output assumes four meals." },
     ],
   },
+  nl: {
+    title: "Eiwit Intake Calculator", short: "Estimate your daily protein target from body weight and activity.",
+    description: "Gratis protein intake calculator. Enter your weight and activity level to get a recommended daily protein target in grams, the healthy range, and a per-meal figure based on grams of protein per kilogram of body weight.",
+    keywords: ["protein intake calculator", "daily protein", "how much protein", "protein per day", "grams of protein"],
+    ...io("Body weight", "Activity level", "Daily protein", "Range (low)", "Range (high)", "Per meal (×4)", "Sedentary (0.8–1.0 g/kg)", "Active (1.2–1.6 g/kg)", "Athlete (1.6–2.2 g/kg)"),
+    faq: [
+      { q: "How much protein do I need per day?", a: "It depends on activity: roughly 0.8–1.0 g/kg for sedentary adults, 1.2–1.6 g/kg if active, and 1.6–2.2 g/kg for athletes or those building muscle. This tool shows the range for your weight." },
+      { q: "Should I split protein across meals?", a: "Spreading intake across ~3–4 meals (about 20–40 g each) supports muscle protein synthesis better than one large serving. The 'per meal' output assumes four meals." },
+    ],
+  },
+
+  pl: {
+    title: "Białko Intake Kalkulator", short: "Estimate your daily protein target from body weight and activity.",
+    description: "Darmowy protein intake kalkulator. Enter your weight and activity level to get a recommended daily protein target in grams, the healthy range, and a per-meal figure based on grams of protein per kilogram of body weight.",
+    keywords: ["protein intake kalkulator", "daily protein", "how much protein", "protein per day", "grams of protein"],
+    ...io("Body weight", "Activity level", "Daily protein", "Range (low)", "Range (high)", "Per meal (×4)", "Sedentary (0.8–1.0 g/kg)", "Active (1.2–1.6 g/kg)", "Athlete (1.6–2.2 g/kg)"),
+    faq: [
+      { q: "How much protein do I need per day?", a: "It depends on activity: roughly 0.8–1.0 g/kg for sedentary adults, 1.2–1.6 g/kg if active, and 1.6–2.2 g/kg for athletes or those building muscle. This narzędzie shows the range for your weight." },
+      { q: "Should I split protein across meals?", a: "Spreading intake across ~3–4 meals (about 20–40 g each) supports muscle protein synthesis better than one large serving. The 'per meal' output assumes four meals." },
+    ],
+  },
   pt: {
     title: "Calculadora de Ingestão de Proteína", short: "Calcule a sua ingestão diária recomendada de proteína.",
     description: "Calculadora gratuita de proteína. Calcule a quantidade diária recomendada com base no seu peso, atividade e objetivo.",

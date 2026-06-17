@@ -62,6 +62,129 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "Vetvrije Massa Calculator",
+    short: "Bereken your lean body mass using the Boer, James, or Hume formula.",
+    description:
+      "Gratis lean body mass calculator. Enter your gender, weight, and hoogte to estimate your LBM, body fat mass, and body fat percentage using valideerd formulas.",
+    keywords: [
+      "lean body mass calculator",
+      "LBM calculator",
+      "body fat percentage",
+      "muscle mass",
+      "body composition",
+      "Boer formula",
+      "fat-gratis mass",
+    ],
+    inputs: {
+      gender: { label: "Biological sex", help: "Sex affects the formula constants for LBM estimation." },
+      weight: { label: "Weight (kg)", help: "Your current body weight in kilograms." },
+      height: { label: "Hoogte (cm)", help: "Your hoogte in centimetres." },
+      formula: { label: "Formula", help: "Boer (1984) is recommended for general use. James and Hume are alternatives." },
+    },
+    outputs: {
+      lbm: { label: "Vetvrije Massa", help: "Estimated mass of everything except body fat (muscle, bone, organs, water).", suffix: "kg" },
+      bodyFatMass: { label: "Lichaamsvet Mass", help: "Estimated mass of body fat (weight − LBM).", suffix: "kg" },
+      bodyFatPct: { label: "Lichaamsvet Percentage", help: "Body fat as a percentage of total body weight." },
+      lbmLb: { label: "Vetvrije Massa (lb)", help: "LBM converteered to pounds.", suffix: "lb" },
+    },
+    options: {
+      gender: { male: "Male", female: "Female" },
+      formula: {
+        boer: "Boer (1984) — recommended",
+        james: "James (1976)",
+        hume: "Hume (1966)",
+      },
+    },
+    errors: {
+      weightOutOfRange: "Weight must be between 1 and 300 kg.",
+      heightOutOfRange: "Hoogte must be between 50 and 250 cm.",
+    },
+    faq: [
+      {
+        q: "What is lean body mass?",
+        a: "Lean body mass (LBM) is the total weight of your body minus the weight of fat. It includes muscles, bones, organs, blood, and water. LBM is also called fat-gratis mass (FFM). A higher LBM is generally associated with better metabolic health, strength, and longevity.",
+      },
+      {
+        q: "Which formula is most accurate?",
+        a: "The Boer (1984) formula is widely considered the most accurate for most adults and is the default selection. The James formula can produce negative LBM for very obese individuals, which is a known limitation. Hume provides a useful alternative controleer. For the most accurate body composition measurement, methods like DXA scanning or hydrostatic weighing are far superior to any formula.",
+      },
+      {
+        q: "How does LBM differ from muscle mass?",
+        a: "LBM includes muscle mass but also bone, organs, connective tissue, blood, and water. Muscle mass alone is typically estimated to be around 30–55% of body weight in healthy adults, depending on fitness level. LBM is a broader category.",
+      },
+      {
+        q: "What is a healthy body fat percentage?",
+        a: "According to the American Council on Exercise (ACE), essential fat is 2–5% for males and 10–13% for females. Athletic ranges are 6–13% (male) and 14–20% (female). Fitness ranges are 14–17% (male) and 21–24% (female). Obese is generally >25% (male) and >32% (female).",
+      },
+      {
+        q: "Can I use LBM to bereken my protein needs?",
+        a: "Yes. Many nutritionists recommend setting protein intake based on LBM rather than total body weight. A common recommendation is 1.6–2.2 g of protein per kg of LBM per day for individuals engaged in resistance training.",
+      },
+    ],
+  },
+
+  pl: {
+    title: "Beztłuszczowa Masa Ciała Kalkulator",
+    short: "Oblicz your lean body mass using the Boer, James, or Hume formula.",
+    description:
+      "Darmowy lean body mass kalkulator. Enter your gender, weight, and wysokość to estimate your LBM, body fat mass, and body fat percentage using walidujd formulas.",
+    keywords: [
+      "lean body mass kalkulator",
+      "LBM kalkulator",
+      "body fat percentage",
+      "muscle mass",
+      "body composition",
+      "Boer formula",
+      "fat-darmowy mass",
+    ],
+    inputs: {
+      gender: { label: "Biological sex", help: "Sex affects the formula constants for LBM estimation." },
+      weight: { label: "Weight (kg)", help: "Your current body weight in kilograms." },
+      height: { label: "Wysokość (cm)", help: "Your wysokość in centimetres." },
+      formula: { label: "Formula", help: "Boer (1984) is recommended for general use. James and Hume are alternatives." },
+    },
+    outputs: {
+      lbm: { label: "Beztłuszczowa Masa Ciała", help: "Estimated mass of everything except body fat (muscle, bone, organs, water).", suffix: "kg" },
+      bodyFatMass: { label: "Tkanka Tłuszczowa Mass", help: "Estimated mass of body fat (weight − LBM).", suffix: "kg" },
+      bodyFatPct: { label: "Tkanka Tłuszczowa Procent", help: "Body fat as a percentage of total body weight." },
+      lbmLb: { label: "Beztłuszczowa Masa Ciała (lb)", help: "LBM konwertujed to pounds.", suffix: "lb" },
+    },
+    options: {
+      gender: { male: "Male", female: "Female" },
+      formula: {
+        boer: "Boer (1984) — recommended",
+        james: "James (1976)",
+        hume: "Hume (1966)",
+      },
+    },
+    errors: {
+      weightOutOfRange: "Weight must be between 1 and 300 kg.",
+      heightOutOfRange: "Wysokość must be between 50 and 250 cm.",
+    },
+    faq: [
+      {
+        q: "What is lean body mass?",
+        a: "Lean body mass (LBM) is the total weight of your body minus the weight of fat. It includes muscles, bones, organs, blood, and water. LBM is also called fat-darmowy mass (FFM). A higher LBM is generally associated with better metabolic health, strength, and longevity.",
+      },
+      {
+        q: "Which formula is most accurate?",
+        a: "The Boer (1984) formula is widely considered the most accurate for most adults and is the default selection. The James formula can produce negative LBM for very obese individuals, which is a known limitation. Hume provides a useful alternative sprawdź. For the most accurate body composition measurement, methods like DXA scanning or hydrostatic weighing are far superior to any formula.",
+      },
+      {
+        q: "How does LBM differ from muscle mass?",
+        a: "LBM includes muscle mass but also bone, organs, connective tissue, blood, and water. Muscle mass alone is typically estimated to be around 30–55% of body weight in healthy adults, depending on fitness level. LBM is a broader category.",
+      },
+      {
+        q: "What is a healthy body fat percentage?",
+        a: "According to the American Council on Exercise (ACE), essential fat is 2–5% for males and 10–13% for females. Athletic ranges are 6–13% (male) and 14–20% (female). Fitness ranges are 14–17% (male) and 21–24% (female). Obese is generally >25% (male) and >32% (female).",
+      },
+      {
+        q: "Can I use LBM to oblicz my protein needs?",
+        a: "Yes. Many nutritionists recommend setting protein intake based on LBM rather than total body weight. A common recommendation is 1.6–2.2 g of protein per kg of LBM per day for individuals engaged in resistance training.",
+      },
+    ],
+  },
   pt: {
     title: "Calculadora de Massa Magra",
     short: "Calcule a sua massa magra (livre de gordura).",

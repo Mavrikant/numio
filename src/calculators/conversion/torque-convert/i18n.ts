@@ -33,6 +33,71 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "Koppel Converteerer",
+    short: "Converteer between newton-meters, lbf-ft, kgf-m and more direct",
+    description:
+      "Converteer between metric and imperial torque (moment of force) units with high precision",
+    keywords: ["torque", "moment", "newton meter", "lbf-ft", "conversion"],
+    inputs: {
+      value: { label: "Waarde", help: "The lengte value to converteer" },
+      fromUnit: { label: "From Unit", help: "Select source unit" },
+      toUnit: { label: "To Unit", help: "Select target unit" },
+    },
+    outputs: {
+      result: { label: "Resultaat", help: "Converteered value" },
+    },
+    faq: [
+      {
+        question: "How do I converteer newton-meters to pound-force-feet?",
+        answer:
+          "Divide the newton-meter value by 1.3558. For example, 10 N·m ÷ 1.3558 ≈ 7.376 lbf·ft.",
+      },
+      {
+        question: "What is the difference between torque and energy?",
+        answer:
+          "Although both can be expressed in newton-meters, torque is a rotational (vector) quantity while energy is a scalar. They are kept as separate physical concepts.",
+      },
+      {
+        question: "How many newton-meters are in 1 kgf·m?",
+        answer:
+          "1 kilogram-force-meter equals 9.80665 newton-meters, using standard gravity.",
+      },
+    ],
+  },
+
+  pl: {
+    title: "Moment Obrotowy Konwerter",
+    short: "Konwertuj between newton-meters, lbf-ft, kgf-m and more natychmiast",
+    description:
+      "Konwertuj between metric and imperial torque (moment of force) units with high precision",
+    keywords: ["torque", "moment", "newton meter", "lbf-ft", "conversion"],
+    inputs: {
+      value: { label: "Wartość", help: "The długość value to konwertuj" },
+      fromUnit: { label: "From Unit", help: "Select source unit" },
+      toUnit: { label: "To Unit", help: "Select target unit" },
+    },
+    outputs: {
+      result: { label: "Wynik", help: "Konwertujed value" },
+    },
+    faq: [
+      {
+        question: "How do I konwertuj newton-meters to pound-force-feet?",
+        answer:
+          "Divide the newton-meter value by 1.3558. For example, 10 N·m ÷ 1.3558 ≈ 7.376 lbf·ft.",
+      },
+      {
+        question: "What is the difference between torque and energy?",
+        answer:
+          "Although both can be expressed in newton-meters, torque is a rotational (vector) quantity while energy is a scalar. They are kept as separate physical concepts.",
+      },
+      {
+        question: "How many newton-meters are in 1 kgf·m?",
+        answer:
+          "1 kilogram-force-meter equals 9.80665 newton-meters, using standard gravity.",
+      },
+    ],
+  },
   tr: {
     title: "Tork Dönüştürücü",
     short:

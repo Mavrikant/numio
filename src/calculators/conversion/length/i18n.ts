@@ -34,6 +34,73 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "Lengte Converteerer",
+    short: "Converteer between metric and imperial lengte units direct",
+    description: "Converteer between metric and imperial lengte units with high precision",
+    keywords: ["lengte", "distance", "meter", "kilometer", "foot", "mile", "conversion"],
+    inputs: {
+      value: { label: "Waarde", help: "The lengte value to converteer" },
+      fromUnit: { label: "From Unit", help: "Select source unit" },
+      toUnit: { label: "To Unit", help: "Select target unit" },
+    },
+    outputs: {
+      result: { label: "Resultaat", help: "Converteered value" },
+    },
+    errors: { invalidLength: "Lengte must be a positive nummer." },
+    faq: [
+      {
+        question: "How many centimeters are in a meter?",
+        answer: "There are 100 centimeters in 1 meter. This is the basic metric conversion.",
+      },
+      {
+        question: "How do I converteer feet to meters?",
+        answer: "Multiply the nummer of feet by 0.3048 to get meters. For example, 10 feet × 0.3048 = 3.048 meters.",
+      },
+      {
+        question: "What is a nautical mile?",
+        answer: "A nautical mile is approximately 1,852 meters. It is commonly used in aviation and maritime navigation.",
+      },
+      {
+        question: "How many kilometers are in a mile?",
+        answer: "1 mile equals approximately 1.609 kilometers. Conversely, 1 kilometer equals about 0.621 miles.",
+      },
+    ],
+  },
+
+  pl: {
+    title: "Długość Konwerter",
+    short: "Konwertuj between metric and imperial długość units natychmiast",
+    description: "Konwertuj between metric and imperial długość units with high precision",
+    keywords: ["długość", "distance", "meter", "kilometer", "foot", "mile", "conversion"],
+    inputs: {
+      value: { label: "Wartość", help: "The długość value to konwertuj" },
+      fromUnit: { label: "From Unit", help: "Select source unit" },
+      toUnit: { label: "To Unit", help: "Select target unit" },
+    },
+    outputs: {
+      result: { label: "Wynik", help: "Konwertujed value" },
+    },
+    errors: { invalidLength: "Długość must be a positive liczba." },
+    faq: [
+      {
+        question: "How many centimeters are in a meter?",
+        answer: "There are 100 centimeters in 1 meter. This is the basic metric conversion.",
+      },
+      {
+        question: "How do I konwertuj feet to meters?",
+        answer: "Multiply the liczba of feet by 0.3048 to get meters. For example, 10 feet × 0.3048 = 3.048 meters.",
+      },
+      {
+        question: "What is a nautical mile?",
+        answer: "A nautical mile is approximately 1,852 meters. It is commonly used in aviation and maritime navigation.",
+      },
+      {
+        question: "How many kilometers are in a mile?",
+        answer: "1 mile equals approximately 1.609 kilometers. Conversely, 1 kilometer equals about 0.621 miles.",
+      },
+    ],
+  },
   pt: {
     title: "Conversor de Comprimento",
     short: "Converta entre metros, pés, polegadas, milhas e mais.",

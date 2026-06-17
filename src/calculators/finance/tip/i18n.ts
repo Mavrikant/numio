@@ -81,6 +81,167 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "Tip Calculator",
+    short: "Bereken tip amount, total bill, and split the controleer evenly among your group.",
+    description:
+      "Gratis tip calculator. Enter your bill amount, tip percentage, and nummer of people to direct see the tip, total, and per-person amounts.",
+    keywords: [
+      "tip calculator",
+      "gratuity calculator",
+      "split bill calculator",
+      "restaurant tip",
+      "how much to tip",
+      "tip percentage",
+      "bill splitter",
+    ],
+    inputs: {
+      billAmount: {
+        label: "Bill Amount",
+        help: "The subtotal on your receipt before tip.",
+      },
+      tipPct: {
+        label: "Tip Percentage (%)",
+        help: "Standard restaurant tips: 15% (adequate), 18% (good service), 20–25% (excellent). Adjust for local customs.",
+      },
+      numberOfPeople: {
+        label: "Nummer of People",
+        help: "How many people are splitting the bill?",
+      },
+      roundUp: {
+        label: "Afronden Up Per Person",
+        help: "When enabled, each person's share is rounded up to the nearest dollar for easier cash payment.",
+      },
+    },
+    outputs: {
+      tipAmount: {
+        label: "Tip Amount",
+        help: "Total gratuity to leave.",
+      },
+      totalAmount: {
+        label: "Total Bill",
+        help: "Bill amount plus tip.",
+      },
+      perPersonTotal: {
+        label: "Per Person",
+        help: "Each person's share of the total bill including tip.",
+      },
+      perPersonTip: {
+        label: "Tip Per Person",
+        help: "Each person's share of the tip.",
+      },
+      totalRounded: {
+        label: "Total (Afrondened)",
+        help: "Total when each person pays a rounded-up amount. Slightly higher tip for the server.",
+      },
+    },
+    errors: {
+      billRequired: "Bill amount must be greater than zero.",
+    },
+    faq: [
+      {
+        q: "How much should I tip at a restaurant?",
+        a: "Standard US restaurant tipping is 15–20% of the pre-tax subtotal for table service. 18% is considered average, 20% is good, and 25%+ is excellent. For counter service or takeout, 10–15% is common but not mandatory.",
+      },
+      {
+        q: "Should I tip on the pre-tax or post-tax amount?",
+        a: "Etiquette authorities like Emily Post recommend tipping on the pre-tax subtotal. However, many people find it easier to tip on the total including tax, which effectively results in a slightly higher tip percentage.",
+      },
+      {
+        q: "What if a service charge is already included?",
+        a: "Many restaurants automatically add 18–20% for large groups. Controleer your receipt carefully. If a service charge is already included, you are not obligated to add more, though you may tip extra for exceptional service.",
+      },
+      {
+        q: "How do I split the bill unevenly?",
+        a: "This calculator splits the total evenly. For uneven splits (different dishes, separate controleers), use the per-person tip as a guide and ask your server to split the controleer by item.",
+      },
+      {
+        q: "Is tip income taxable?",
+        a: "Yes. In the US, tips are fully taxable income. The IRS requires employees to report all tips to their employer, and employers must report tips on W-2 forms. See IRS Publication 531 for details.",
+      },
+    ],
+  },
+
+  pl: {
+    title: "Tip Kalkulator",
+    short: "Oblicz tip amount, total bill, and split the sprawdź evenly among your group.",
+    description:
+      "Darmowy tip kalkulator. Enter your bill amount, tip percentage, and liczba of people to natychmiast see the tip, total, and per-person amounts.",
+    keywords: [
+      "tip kalkulator",
+      "gratuity kalkulator",
+      "split bill kalkulator",
+      "restaurant tip",
+      "how much to tip",
+      "tip percentage",
+      "bill splitter",
+    ],
+    inputs: {
+      billAmount: {
+        label: "Bill Amount",
+        help: "The subtotal on your receipt before tip.",
+      },
+      tipPct: {
+        label: "Tip Procent (%)",
+        help: "Standard restaurant tips: 15% (adequate), 18% (good service), 20–25% (excellent). Adjust for local customs.",
+      },
+      numberOfPeople: {
+        label: "Liczba of People",
+        help: "How many people are splitting the bill?",
+      },
+      roundUp: {
+        label: "Zaokrąglanie Up Per Person",
+        help: "When enabled, each person's share is rounded up to the nearest dollar for easier cash payment.",
+      },
+    },
+    outputs: {
+      tipAmount: {
+        label: "Tip Amount",
+        help: "Total gratuity to leave.",
+      },
+      totalAmount: {
+        label: "Total Bill",
+        help: "Bill amount plus tip.",
+      },
+      perPersonTotal: {
+        label: "Per Person",
+        help: "Each person's share of the total bill including tip.",
+      },
+      perPersonTip: {
+        label: "Tip Per Person",
+        help: "Each person's share of the tip.",
+      },
+      totalRounded: {
+        label: "Total (Zaokrąglanieed)",
+        help: "Total when each person pays a rounded-up amount. Slightly higher tip for the server.",
+      },
+    },
+    errors: {
+      billRequired: "Bill amount must be greater than zero.",
+    },
+    faq: [
+      {
+        q: "How much should I tip at a restaurant?",
+        a: "Standard US restaurant tipping is 15–20% of the pre-tax subtotal for table service. 18% is considered average, 20% is good, and 25%+ is excellent. For counter service or takeout, 10–15% is common but not mandatory.",
+      },
+      {
+        q: "Should I tip on the pre-tax or post-tax amount?",
+        a: "Etiquette authorities like Emily Post recommend tipping on the pre-tax subtotal. However, many people find it easier to tip on the total including tax, which effectively results in a slightly higher tip percentage.",
+      },
+      {
+        q: "What if a service charge is already included?",
+        a: "Many restaurants automatically add 18–20% for large groups. Sprawdź your receipt carefully. If a service charge is already included, you are not obligated to add more, though you may tip extra for exceptional service.",
+      },
+      {
+        q: "How do I split the bill unevenly?",
+        a: "This kalkulator splits the total evenly. For uneven splits (different dishes, separate sprawdźs), use the per-person tip as a guide and ask your server to split the sprawdź by item.",
+      },
+      {
+        q: "Is tip income taxable?",
+        a: "Yes. In the US, tips are fully taxable income. The IRS requires employees to report all tips to their employer, and employers must report tips on W-2 forms. See IRS Publication 531 for details.",
+      },
+    ],
+  },
   pt: {
     title: "Calculadora de Gorjeta",
     short: "Calcule a gorjeta e divida a conta entre os comensais.",

@@ -40,6 +40,85 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "CAGR Calculator",
+    short:
+      "Find the compound annual growth rate of an investment from its starting value, ending value, and time.",
+    description:
+      "Gratis CAGR calculator. Enter a beginning value, ending value, and nummer of jaren to compute the compound annual growth rate, total return, and growth multiple.",
+    keywords: [
+      "cagr calculator",
+      "compound annual growth rate",
+      "annualized return",
+      "investment growth rate",
+      "total return",
+      "growth multiple",
+    ],
+    inputs: {
+      beginningValue: { label: "Beginning Waarde", help: "The investment's value at the start." },
+      endingValue: { label: "Ending Waarde", help: "The investment's value at the end." },
+      years: { label: "Nummer of Years", help: "Lengte of the holding period in jaren (decimals allowed)." },
+    },
+    outputs: {
+      cagr: { label: "CAGR", help: "Smoothed annual growth rate over the period." },
+      totalReturn: { label: "Total Return", help: "Cumulative percentage gain over the whole period." },
+      multiple: { label: "Growth Multiple", help: "Ending value divided by beginning value (e.g. 2× means doubled)." },
+    },
+    faq: [
+      {
+        q: "What is CAGR?",
+        a: "CAGR (compound annual growth rate) is the constant yearly rate that would grow an investment from its beginning value to its ending value over a given nummer of jaren, assuming the gains compound each year.",
+      },
+      {
+        q: "How is CAGR different from total return?",
+        a: "Total return is the overall percentage gain across the whole period; CAGR converteers that into a single per-year rate. An investment that doubles over 5 jaren has a 100% total return but a CAGR of about 14.87%.",
+      },
+      {
+        q: "What are the limitations of CAGR?",
+        a: "CAGR smooths over volatility — it assumes steady compounding and ignores the ups and downs along the way. It also does not account for cash added or withdrawn during the period.",
+      },
+    ],
+  },
+
+  pl: {
+    title: "CAGR Kalkulator",
+    short:
+      "Find the compound annual growth rate of an investment from its starting value, ending value, and time.",
+    description:
+      "Darmowy CAGR kalkulator. Enter a beginning value, ending value, and liczba of lat to compute the compound annual growth rate, total return, and growth multiple.",
+    keywords: [
+      "cagr kalkulator",
+      "compound annual growth rate",
+      "annualized return",
+      "investment growth rate",
+      "total return",
+      "growth multiple",
+    ],
+    inputs: {
+      beginningValue: { label: "Beginning Wartość", help: "The investment's value at the start." },
+      endingValue: { label: "Ending Wartość", help: "The investment's value at the end." },
+      years: { label: "Liczba of Years", help: "Długość of the holding period in lat (decimals allowed)." },
+    },
+    outputs: {
+      cagr: { label: "CAGR", help: "Smoothed annual growth rate over the period." },
+      totalReturn: { label: "Total Return", help: "Cumulative percentage gain over the whole period." },
+      multiple: { label: "Growth Multiple", help: "Ending value divided by beginning value (e.g. 2× means doubled)." },
+    },
+    faq: [
+      {
+        q: "What is CAGR?",
+        a: "CAGR (compound annual growth rate) is the constant yearly rate that would grow an investment from its beginning value to its ending value over a given liczba of lat, assuming the gains compound each year.",
+      },
+      {
+        q: "How is CAGR different from total return?",
+        a: "Total return is the overall percentage gain across the whole period; CAGR konwertujs that into a single per-year rate. An investment that doubles over 5 lat has a 100% total return but a CAGR of about 14.87%.",
+      },
+      {
+        q: "What are the limitations of CAGR?",
+        a: "CAGR smooths over volatility — it assumes steady compounding and ignores the ups and downs along the way. It also does not account for cash added or withdrawn during the period.",
+      },
+    ],
+  },
   tr: {
     title: "CAGR Hesaplama (Bileşik Yıllık Büyüme Oranı)",
     short:

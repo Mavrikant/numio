@@ -16,6 +16,27 @@ const i18n: CalculatorI18n = {
       { q: "Why do leap years exist?", a: "Earth takes about 365.2422 days to orbit the Sun. Adding a leap day (29 February) every four years keeps the calendar aligned with the seasons; the 100/400 rule fine-tunes the small remaining drift." },
     ],
   },
+  nl: {
+    title: "Schrikkeljaar Calculator", short: "Controleer whether a year is a leap year and find the nearest leap jaren.",
+    description: "Gratis leap year calculator. Enter a year to see whether it's a leap year (366 dagen, February has 29), plus the next and previous leap jaren. Uses the Gregorian rule: divisible by 4, except eeuwen unless divisible by 400.",
+    keywords: ["leap year", "is it a leap year", "leap year controleur", "dagen in february", "leap year list"],
+    ...io("Year", "Days in year", "Days in February", "Next leap year", "Previous leap year"),
+    faq: [
+      { q: "How do I know if a year is a leap year?", a: "A year is a leap year if it is divisible by 4 — except for century jaren (like 1900), which must also be divisible by 400. So 2000 and 2024 are leap jaren, but 1900 and 2100 are not." },
+      { q: "Why do leap jaren exist?", a: "Earth takes about 365.2422 dagen to orbit the Sun. Adding a leap day (29 February) every four jaren keeps the calendar aligned with the seasons; the 100/400 rule fine-tunes the small remaining drift." },
+    ],
+  },
+
+  pl: {
+    title: "Rok Przestępny Kalkulator", short: "Sprawdź whether a year is a leap year and find the nearest leap lat.",
+    description: "Darmowy leap year kalkulator. Enter a year to see whether it's a leap year (366 dni, February has 29), plus the next and previous leap lat. Uses the Gregorian rule: divisible by 4, except wieków unless divisible by 400.",
+    keywords: ["leap year", "is it a leap year", "leap year sprawdzarka", "dni in february", "leap year list"],
+    ...io("Year", "Days in year", "Days in February", "Next leap year", "Previous leap year"),
+    faq: [
+      { q: "How do I know if a year is a leap year?", a: "A year is a leap year if it is divisible by 4 — except for century lat (like 1900), which must also be divisible by 400. So 2000 and 2024 are leap lat, but 1900 and 2100 are not." },
+      { q: "Why do leap lat exist?", a: "Earth takes about 365.2422 dni to orbit the Sun. Adding a leap day (29 February) every four lat keeps the calendar aligned with the seasons; the 100/400 rule fine-tunes the small remaining drift." },
+    ],
+  },
   pt: {
     title: "Calculadora de Ano Bissexto", short: "Verifique se um ano é bissexto.",
     description: "Calculadora gratuita de ano bissexto. Verifique rapidamente se qualquer ano é bissexto e veja a lista dos próximos anos bissextos.",

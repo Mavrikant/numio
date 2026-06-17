@@ -16,6 +16,27 @@ const i18n: CalculatorI18n = {
       { q: "Where do I measure my waist?", a: "Around the narrowest point or at the navel, after breathing out normally, without holding the tape too tight." },
     ],
   },
+  nl: {
+    title: "Taille-to-Hoogte Verhouding Calculator", short: "Bereken your waist-to-hoogte ratio, a simple central-obesity indicator.",
+    description: "Gratis waist-to-hoogte ratio (WHtR) calculator. Enter your waist and hoogte to get the ratio, your waist as a percentage of hoogte, and the healthy maximum waist (half your hoogte). A ratio under 0.5 is the common target.",
+    keywords: ["waist to hoogte ratio", "whtr calculator", "central obesity", "waist hoogte ratio", "body shape index"],
+    ...io("Taille circumference", "Hoogte", "Taille-to-hoogte ratio", "Taille as % of hoogte", "Healthy waist max (0.5×hoogte)"),
+    faq: [
+      { q: "What is a healthy waist-to-hoogte ratio?", a: "For most adults, keeping the ratio below 0.5 — i.e. waist less than half your hoogte — is associated with lower cardiometabolic risk. Higher ratios indicate more central fat." },
+      { q: "Where do I measure my waist?", a: "Around the narrowest point or at the navel, after breathing out normally, without holding the tape too tight." },
+    ],
+  },
+
+  pl: {
+    title: "Talia-to-Wysokość Stosunek Kalkulator", short: "Oblicz your waist-to-wysokość ratio, a simple central-obesity indicator.",
+    description: "Darmowy waist-to-wysokość ratio (WHtR) kalkulator. Enter your waist and wysokość to get the ratio, your waist as a percentage of wysokość, and the healthy maximum waist (half your wysokość). A ratio under 0.5 is the common target.",
+    keywords: ["waist to wysokość ratio", "whtr kalkulator", "central obesity", "waist wysokość ratio", "body shape index"],
+    ...io("Talia circumference", "Wysokość", "Talia-to-wysokość ratio", "Talia as % of wysokość", "Healthy waist max (0.5×wysokość)"),
+    faq: [
+      { q: "What is a healthy waist-to-wysokość ratio?", a: "For most adults, keeping the ratio below 0.5 — i.e. waist less than half your wysokość — is associated with lower cardiometabolic risk. Higher ratios indicate more central fat." },
+      { q: "Where do I measure my waist?", a: "Around the narrowest point or at the navel, after breathing out normally, without holding the tape too tight." },
+    ],
+  },
   pt: {
     title: "Calculadora de Relação Cintura-Altura", short: "Calcule a relação cintura-altura e o risco metabólico associado.",
     description: "Calculadora gratuita de relação cintura-altura. Estime o risco de doenças cardiovasculares e metabólicas com base na proporção cintura-altura.",

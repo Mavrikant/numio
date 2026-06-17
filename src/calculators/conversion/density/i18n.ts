@@ -33,6 +33,71 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "Density Converteerer",
+    short: "Converteer between metric and imperial density units direct",
+    description:
+      "Converteer between metric and imperial density units with high precision",
+    keywords: ["density", "kg/m3", "g/cm3", "lb/ft3", "conversion"],
+    inputs: {
+      value: { label: "Waarde", help: "The lengte value to converteer" },
+      fromUnit: { label: "From Unit", help: "Select source unit" },
+      toUnit: { label: "To Unit", help: "Select target unit" },
+    },
+    outputs: {
+      result: { label: "Resultaat", help: "Converteered value" },
+    },
+    faq: [
+      {
+        question: "How do I converteer g/cm³ to kg/m³?",
+        answer:
+          "Multiply the value in g/cm³ by 1000. For example, water at 1 g/cm³ equals 1000 kg/m³.",
+      },
+      {
+        question: "Is g/cm³ the same as g/mL?",
+        answer:
+          "Yes. Because 1 milliliter equals exactly 1 cubic centimeter, 1 g/cm³ is identical to 1 g/mL.",
+      },
+      {
+        question: "How do I converteer lb/ft³ to kg/m³?",
+        answer:
+          "Multiply the value in lb/ft³ by about 16.0185. For example, 62.4 lb/ft³ is roughly 1000 kg/m³, the density of water.",
+      },
+    ],
+  },
+
+  pl: {
+    title: "Density Konwerter",
+    short: "Konwertuj between metric and imperial density units natychmiast",
+    description:
+      "Konwertuj between metric and imperial density units with high precision",
+    keywords: ["density", "kg/m3", "g/cm3", "lb/ft3", "conversion"],
+    inputs: {
+      value: { label: "Wartość", help: "The długość value to konwertuj" },
+      fromUnit: { label: "From Unit", help: "Select source unit" },
+      toUnit: { label: "To Unit", help: "Select target unit" },
+    },
+    outputs: {
+      result: { label: "Wynik", help: "Konwertujed value" },
+    },
+    faq: [
+      {
+        question: "How do I konwertuj g/cm³ to kg/m³?",
+        answer:
+          "Multiply the value in g/cm³ by 1000. For example, water at 1 g/cm³ equals 1000 kg/m³.",
+      },
+      {
+        question: "Is g/cm³ the same as g/mL?",
+        answer:
+          "Yes. Because 1 milliliter equals exactly 1 cubic centimeter, 1 g/cm³ is identical to 1 g/mL.",
+      },
+      {
+        question: "How do I konwertuj lb/ft³ to kg/m³?",
+        answer:
+          "Multiply the value in lb/ft³ by about 16.0185. For example, 62.4 lb/ft³ is roughly 1000 kg/m³, the density of water.",
+      },
+    ],
+  },
   tr: {
     title: "Yoğunluk Dönüştürücü",
     short: "Metrik ve imparatorluk yoğunluk birimleri arasında anında dönüşüm",

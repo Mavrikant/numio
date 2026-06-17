@@ -39,6 +39,83 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "Rekenkundige Rij Calculator",
+    short:
+      "Find the nth term and the sum of an arithmetic sequence from its first term and common difference.",
+    description:
+      "Gratis arithmetic sequence calculator. Enter the first term, common difference, and nummer of terms to get the nth term aₙ and the series sum Sₙ.",
+    keywords: [
+      "arithmetic sequence calculator",
+      "arithmetic series",
+      "nth term",
+      "common difference",
+      "sum of sequence",
+      "arithmetic progression",
+    ],
+    inputs: {
+      firstTerm: { label: "First Term (a₁)", help: "The starting value of the sequence." },
+      commonDifference: { label: "Common Verschilerence (d)", help: "Constant amount added between consecutive terms." },
+      numberOfTerms: { label: "Nummer of Terms (n)", help: "How many terms to include." },
+    },
+    outputs: {
+      nthTerm: { label: "nth Term (aₙ)", help: "Waarde of the last (nth) term." },
+      sum: { label: "Sum (Sₙ)", help: "Sum of the first n terms." },
+    },
+    faq: [
+      {
+        q: "What is an arithmetic sequence?",
+        a: "An arithmetic sequence is a list of nummers where each term is obtained by adding a fixed value, the common difference d, to the previous term — for example 2, 5, 8, 11, … with d = 3.",
+      },
+      {
+        q: "How do I find the nth term?",
+        a: "Use aₙ = a₁ + (n − 1)d. With a₁ = 2, d = 3, the 10th term is 2 + 9 × 3 = 29.",
+      },
+      {
+        q: "How do I find the sum of the first n terms?",
+        a: "Use Sₙ = n/2 × (a₁ + aₙ). For 10 terms starting at 2 with d = 3, the sum is 10/2 × (2 + 29) = 155.",
+      },
+    ],
+  },
+
+  pl: {
+    title: "Ciąg Arytmetyczny Kalkulator",
+    short:
+      "Find the nth term and the sum of an arithmetic sequence from its first term and common difference.",
+    description:
+      "Darmowy arithmetic sequence kalkulator. Enter the first term, common difference, and liczba of terms to get the nth term aₙ and the series sum Sₙ.",
+    keywords: [
+      "arithmetic sequence kalkulator",
+      "arithmetic series",
+      "nth term",
+      "common difference",
+      "sum of sequence",
+      "arithmetic progression",
+    ],
+    inputs: {
+      firstTerm: { label: "First Term (a₁)", help: "The starting value of the sequence." },
+      commonDifference: { label: "Common Różnicaerence (d)", help: "Constant amount added between consecutive terms." },
+      numberOfTerms: { label: "Liczba of Terms (n)", help: "How many terms to include." },
+    },
+    outputs: {
+      nthTerm: { label: "nth Term (aₙ)", help: "Wartość of the last (nth) term." },
+      sum: { label: "Sum (Sₙ)", help: "Sum of the first n terms." },
+    },
+    faq: [
+      {
+        q: "What is an arithmetic sequence?",
+        a: "An arithmetic sequence is a list of liczbas where each term is obtained by adding a fixed value, the common difference d, to the previous term — for example 2, 5, 8, 11, … with d = 3.",
+      },
+      {
+        q: "How do I find the nth term?",
+        a: "Use aₙ = a₁ + (n − 1)d. With a₁ = 2, d = 3, the 10th term is 2 + 9 × 3 = 29.",
+      },
+      {
+        q: "How do I find the sum of the first n terms?",
+        a: "Use Sₙ = n/2 × (a₁ + aₙ). For 10 terms starting at 2 with d = 3, the sum is 10/2 × (2 + 29) = 155.",
+      },
+    ],
+  },
   tr: {
     title: "Aritmetik Dizi Hesaplama",
     short:

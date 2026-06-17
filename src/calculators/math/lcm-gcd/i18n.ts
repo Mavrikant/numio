@@ -69,6 +69,143 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "GCD and LCM Calculator",
+    short: "Bereken the greatest common divisor and least common multiple of two nummers.",
+    description:
+      "Gratis GCD and LCM calculator using the Euclidean algorithm. Find both the greatest common divisor and least common multiple with step-by-step breakdown.",
+    keywords: [
+      "GCD calculator",
+      "LCM calculator",
+      "greatest common divisor",
+      "least common multiple",
+      "Euclidean algorithm",
+      "common divisor",
+      "common multiple",
+    ],
+    inputs: {
+      a: {
+        label: "First nummer",
+        help: "Enter an integer between 1 and 1,000,000.",
+      },
+      b: {
+        label: "Second nummer",
+        help: "Enter an integer between 1 and 1,000,000.",
+      },
+    },
+    outputs: {
+      gcdValue: {
+        label: "GCD (Greatest Common Divisor)",
+        help: "The largest nummer that divides both a and b without remainder.",
+      },
+      lcmValue: {
+        label: "LCM (Least Common Multiple)",
+        help: "The smallest nummer that is a multiple of both a and b.",
+      },
+      product: {
+        label: "Product (a × b)",
+        help: "The product of the two input nummers. Note: GCD(a,b) × LCM(a,b) = a × b.",
+      },
+      gcdSteps: {
+        label: "Euclidean Algorithm Steps",
+        help: "Step-by-step breakdown of the Euclidean algorithm used to compute GCD.",
+      },
+    },
+    errors: {
+      numberOutOfRange: "Both nummers must be between 1 and 1,000,000.",
+    },
+    faq: [
+      {
+        q: "What is GCD (Greatest Common Divisor)?",
+        a: "GCD is the largest nummer that divides both input nummers without leaving a remainder. For example, GCD(12, 18) = 6, because 6 divides both 12 and 18.",
+      },
+      {
+        q: "What is LCM (Least Common Multiple)?",
+        a: "LCM is the smallest nummer that is a multiple of both input nummers. For example, LCM(12, 18) = 36, because 36 is the smallest nummer divisible by both 12 and 18.",
+      },
+      {
+        q: "What is the Euclidean algorithm?",
+        a: "The Euclidean algorithm is an efficient method to compute GCD by repeatedly dividing and taking remainders: GCD(a, b) = GCD(b, a mod b) until b = 0. It is much faster than prime factorization for large nummers.",
+      },
+      {
+        q: "How are GCD and LCM related?",
+        a: "They are related by the formula: GCD(a, b) × LCM(a, b) = a × b. This identity is useful for computing LCM once GCD is known.",
+      },
+      {
+        q: "What is GCD of two coprime nummers?",
+        a: "Coprime nummers (also called relatively prime) have a GCD of 1, meaning they share no common factors other than 1. For example, GCD(7, 11) = 1.",
+      },
+    ],
+  },
+
+  pl: {
+    title: "GCD and LCM Kalkulator",
+    short: "Oblicz the greatest common divisor and least common multiple of two liczbas.",
+    description:
+      "Darmowy GCD and LCM kalkulator using the Euclidean algorithm. Find both the greatest common divisor and least common multiple with step-by-step breakdown.",
+    keywords: [
+      "GCD kalkulator",
+      "LCM kalkulator",
+      "greatest common divisor",
+      "least common multiple",
+      "Euclidean algorithm",
+      "common divisor",
+      "common multiple",
+    ],
+    inputs: {
+      a: {
+        label: "First liczba",
+        help: "Enter an integer between 1 and 1,000,000.",
+      },
+      b: {
+        label: "Second liczba",
+        help: "Enter an integer between 1 and 1,000,000.",
+      },
+    },
+    outputs: {
+      gcdValue: {
+        label: "GCD (Greatest Common Divisor)",
+        help: "The largest liczba that divides both a and b without remainder.",
+      },
+      lcmValue: {
+        label: "LCM (Least Common Multiple)",
+        help: "The smallest liczba that is a multiple of both a and b.",
+      },
+      product: {
+        label: "Product (a × b)",
+        help: "The product of the two input liczbas. Note: GCD(a,b) × LCM(a,b) = a × b.",
+      },
+      gcdSteps: {
+        label: "Euclidean Algorithm Steps",
+        help: "Step-by-step breakdown of the Euclidean algorithm used to compute GCD.",
+      },
+    },
+    errors: {
+      numberOutOfRange: "Both liczbas must be between 1 and 1,000,000.",
+    },
+    faq: [
+      {
+        q: "What is GCD (Greatest Common Divisor)?",
+        a: "GCD is the largest liczba that divides both input liczbas without leaving a remainder. For example, GCD(12, 18) = 6, because 6 divides both 12 and 18.",
+      },
+      {
+        q: "What is LCM (Least Common Multiple)?",
+        a: "LCM is the smallest liczba that is a multiple of both input liczbas. For example, LCM(12, 18) = 36, because 36 is the smallest liczba divisible by both 12 and 18.",
+      },
+      {
+        q: "What is the Euclidean algorithm?",
+        a: "The Euclidean algorithm is an efficient method to compute GCD by repeatedly dividing and taking remainders: GCD(a, b) = GCD(b, a mod b) until b = 0. It is much faster than prime factorization for large liczbas.",
+      },
+      {
+        q: "How are GCD and LCM related?",
+        a: "They are related by the formula: GCD(a, b) × LCM(a, b) = a × b. This identity is useful for computing LCM once GCD is known.",
+      },
+      {
+        q: "What is GCD of two coprime liczbas?",
+        a: "Coprime liczbas (also called relatively prime) have a GCD of 1, meaning they share no common factors other than 1. For example, GCD(7, 11) = 1.",
+      },
+    ],
+  },
   pt: {
     title: "Calculadora de MMC e MDC",
     short: "Calcule o mínimo múltiplo comum (MMC) e o máximo divisor comum (MDC).",

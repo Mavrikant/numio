@@ -16,6 +16,27 @@ const i18n: CalculatorI18n = {
       { q: "Can I count backwards?", a: "Yes — enter a negative number of business days to find a date that many working days before the start date." },
     ],
   },
+  nl: {
+    title: "Werkdagen Optellen Calculator", short: "Add or subtract working dagen (Mon–Fri) from a date.",
+    description: "Gratis business dagen calculator. Add or subtract a nummer of working dagen (Monday–Friday) from a start date to find a deadline or delivery date. Shows the resulting date and how many calendar and weekend dagen were spanned.",
+    keywords: ["add business dagen", "working dagen calculator", "business dagen from date", "deadline calculator", "weekday calculator"],
+    ...io("Start date", "Business dagen (±)", "Resultaat date", "Calendar dagen spanned", "Weekend dagen spanned"),
+    faq: [
+      { q: "What counts as a business day?", a: "Monday through Friday. Weekends (Saturday and Sunday) are skipped. Public holidagen are not excluded since they differ by country." },
+      { q: "Can I count backwards?", a: "Yes — enter a negative nummer of business dagen to find a date that many working dagen before the start date." },
+    ],
+  },
+
+  pl: {
+    title: "Dodaj Dni Robocze Kalkulator", short: "Add or subtract working dni (Mon–Fri) from a date.",
+    description: "Darmowy business dni kalkulator. Add or subtract a liczba of working dni (Monday–Friday) from a start date to find a deadline or delivery date. Shows the resulting date and how many calendar and weekend dni were spanned.",
+    keywords: ["add business dni", "working dni kalkulator", "business dni from date", "deadline kalkulator", "weekday kalkulator"],
+    ...io("Start date", "Business dni (±)", "Wynik date", "Calendar dni spanned", "Weekend dni spanned"),
+    faq: [
+      { q: "What counts as a business day?", a: "Monday through Friday. Weekends (Saturday and Sunday) are skipped. Public holidni are not excluded since they differ by country." },
+      { q: "Can I count backwards?", a: "Yes — enter a negative liczba of business dni to find a date that many working dni before the start date." },
+    ],
+  },
   pt: {
     title: "Adicionar Dias Úteis a uma Data", short: "Adicione ou subtraia dias úteis a uma data, excluindo fins de semana.",
     description: "Calculadora gratuita de dias úteis. Adicione ou subtraia dias úteis a uma data, excluindo fins de semana e feriados configuráveis.",

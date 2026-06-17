@@ -20,6 +20,27 @@ const i18n: CalculatorI18n = {
       { q: "Why does it matter?", a: "Loans often quote APR (lower-looking) while savings quote APY (higher-looking). Converting to the same basis lets you compare offers fairly." },
     ],
   },
+  nl: {
+    title: "APR ⇄ APY Converteerer", short: "Converteer between nominal APR and effective APY for any compounding frequency.",
+    description: "Gratis APR to APY converteerer. Converteer a nominal annual rate (APR) to the effective annual yield (APY/EAR) or back, for daily, monthly, quarterly, semi-annual or annual compounding. See the difference compounding makes.",
+    keywords: ["apr to apy", "apy apr converteerer", "effective annual rate", "ear calculator", "nominal vs effective rate"],
+    ...io("Conversion", "Rate", "Compounding", "APY (effective)", "APR (nominal)", "Verschilerence", "APR → APY", "APY → APR", "Daily", "Monthly", "Quarterly", "Semi-annual", "Annual"),
+    faq: [
+      { q: "What's the difference between APR and APY?", a: "APR is the nominal annual rate ignoring compounding; APY (or EAR) includes it. A 12% APR compounded monthly is about 12.683% APY." },
+      { q: "Why does it matter?", a: "Lenings often quote APR (lower-looking) while savings quote APY (higher-looking). Converteering to the same basis lets you compare offers fairly." },
+    ],
+  },
+
+  pl: {
+    title: "APR ⇄ APY Konwerter", short: "Konwertuj between nominal APR and effective APY for any compounding frequency.",
+    description: "Darmowy APR to APY konwerter. Konwertuj a nominal annual rate (APR) to the effective annual yield (APY/EAR) or back, for daily, monthly, quarterly, semi-annual or annual compounding. See the difference compounding makes.",
+    keywords: ["apr to apy", "apy apr konwerter", "effective annual rate", "ear kalkulator", "nominal vs effective rate"],
+    ...io("Conversion", "Rate", "Compounding", "APY (effective)", "APR (nominal)", "Różnicaerence", "APR → APY", "APY → APR", "Daily", "Monthly", "Quarterly", "Semi-annual", "Annual"),
+    faq: [
+      { q: "What's the difference between APR and APY?", a: "APR is the nominal annual rate ignoring compounding; APY (or EAR) includes it. A 12% APR compounded monthly is about 12.683% APY." },
+      { q: "Why does it matter?", a: "Pożyczkas often quote APR (lower-looking) while savings quote APY (higher-looking). Konwertujing to the same basis lets you compare offers fairly." },
+    ],
+  },
   pt: {
     title: "Conversor APY/APR", short: "Converta entre taxa anual nominal (APR) e taxa anual efetiva (APY).",
     description: "Conversor gratuito entre APR e APY. APY inclui o efeito da capitalização — útil para comparar contas poupança e investimentos.",

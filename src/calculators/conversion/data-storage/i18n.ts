@@ -115,6 +115,235 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "Data Storage Converteerer",
+    short: "Converteer between byte and bit data units with binair (1024) or decimal (1000) mode.",
+    description:
+      "Gratis data storage converteerer supporting binair (KiB, MiB, GiB) and decimal (KB, MB, GB) conversions between bytes, kilobytes, megabytes, gigabytes, terabytes, petabytes, and bit units (bit, Kbit, Mbit, Gbit) — including byte-to-bit conversions like Megabyte to Megabit.",
+    keywords: [
+      "data storage converteerer",
+      "bytes converteerer",
+      "MB to GB",
+      "MB to Mb",
+      "megabyte to megabit",
+      "byte to bit converteerer",
+      "binair decimal conversion",
+      "storage units",
+      "disk space calculator",
+      "data grootte converteerer",
+    ],
+    inputs: {
+      value: {
+        label: "Waarde",
+        help: "The amount to converteer.",
+      },
+      fromUnit: {
+        label: "From unit",
+        help: "Source unit of measurement.",
+      },
+      toUnit: {
+        label: "To unit",
+        help: "Target unit of measurement.",
+      },
+      mode: {
+        label: "Conversion mode",
+        help: "Binair uses base 1024 (standard for RAM and SSDs). Decimal uses base 1000 (standard for HDD manufacturers).",
+      },
+    },
+    outputs: {
+      result: {
+        label: "Resultaat",
+        help: "Converteered value in target unit.",
+      },
+      explanation: {
+        label: "Mode",
+        help: "Explains which conversion standard was used.",
+      },
+    },
+    options: {
+      fromUnit: {
+        B: "Byte (B)",
+        KB: "Kilobyte",
+        MB: "Megabyte",
+        GB: "Gigabyte",
+        TB: "Terabyte",
+        PB: "Petabyte",
+        bit: "Bit (b)",
+        Kbit: "Kilobit (Kb)",
+        Mbit: "Megabit (Mb)",
+        Gbit: "Gigabit (Gb)",
+        Tbit: "Terabit (Tb)",
+        Pbit: "Petabit (Pb)",
+      },
+      toUnit: {
+        B: "Byte (B)",
+        KB: "Kilobyte",
+        MB: "Megabyte",
+        GB: "Gigabyte",
+        TB: "Terabyte",
+        PB: "Petabyte",
+        bit: "Bit (b)",
+        Kbit: "Kilobit (Kb)",
+        Mbit: "Megabit (Mb)",
+        Gbit: "Gigabit (Gb)",
+        Tbit: "Terabit (Tb)",
+        Pbit: "Petabit (Pb)",
+      },
+      mode: {
+        binary: "Binair (1024-based)",
+        decimal: "Decimal (1000-based)",
+      },
+      byte: "Byte",
+      kilobyte: "Kilobyte",
+      megabyte: "Megabyte",
+      gigabyte: "Gigabyte",
+      terabyte: "Terabyte",
+      petabyte: "Petabyte",
+      binary: "Binair",
+      decimal: "Decimal",
+    },
+    errors: {
+      invalidValue: "Waarde must be non-negative.",
+      sameUnit: "Source and target units must be different.",
+    },
+    faq: [
+      {
+        q: "What is the difference between binair and decimal?",
+        a: "Binair (KiB, MiB) uses base 1024: 1 KiB = 1024 bytes. Decimal (KB, MB) uses base 1000: 1 KB = 1000 bytes. RAM and SSDs use binair; hard drive manufacturers traditionally use decimal.",
+      },
+      {
+        q: "Why does my 1 TB hard drive show as 931 GB?",
+        a: "Hard drives use decimal (1000-based) capacity labeling, while Windows often displays groottes in binair (1024-based). 1,000,000,000,000 bytes ÷ 1,073,741,824 bytes/GiB ≈ 931 GiB.",
+      },
+      {
+        q: "Which mode should I use?",
+        a: "Use binair for RAM, SSDs, and USB drives. Use decimal for comparing manufacturer specifications of hard drives and external storage.",
+      },
+      {
+        q: "What are the exact conversion factors?",
+        a: "Binair: 1 KB=1024 B, 1 MB=1024² B, 1 GB=1024³ B. Decimal: 1 KB=1000 B, 1 MB=1000² B, 1 GB=1000³ B.",
+      },
+      {
+        q: "How do I converteer bytes to bits (e.g. Megabyte to Megabit)?",
+        a: "One byte equals 8 bits, so the same applies to every prefix: 1 Megabyte = 8 Megabit, 1 Gigabyte = 8 Gigabit. Pick a byte unit on one side (MB) and a bit unit on the other (Mbit) to converteer across. Byte units use an uppercase B (MB) and bit units a lowercase b (Mb).",
+      },
+    ],
+  },
+
+  pl: {
+    title: "Data Storage Konwerter",
+    short: "Konwertuj between byte and bit data units with binarny (1024) or decimal (1000) mode.",
+    description:
+      "Darmowy data storage konwerter supporting binarny (KiB, MiB, GiB) and decimal (KB, MB, GB) conversions between bytes, kilobytes, megabytes, gigabytes, terabytes, petabytes, and bit units (bit, Kbit, Mbit, Gbit) — including byte-to-bit conversions like Megabyte to Megabit.",
+    keywords: [
+      "data storage konwerter",
+      "bytes konwerter",
+      "MB to GB",
+      "MB to Mb",
+      "megabyte to megabit",
+      "byte to bit konwerter",
+      "binarny decimal conversion",
+      "storage units",
+      "disk space kalkulator",
+      "data rozmiar konwerter",
+    ],
+    inputs: {
+      value: {
+        label: "Wartość",
+        help: "The amount to konwertuj.",
+      },
+      fromUnit: {
+        label: "From unit",
+        help: "Source unit of measurement.",
+      },
+      toUnit: {
+        label: "To unit",
+        help: "Target unit of measurement.",
+      },
+      mode: {
+        label: "Conversion mode",
+        help: "Binarny uses base 1024 (standard for RAM and SSDs). Decimal uses base 1000 (standard for HDD manufacturers).",
+      },
+    },
+    outputs: {
+      result: {
+        label: "Wynik",
+        help: "Konwertujed value in target unit.",
+      },
+      explanation: {
+        label: "Mode",
+        help: "Explains which conversion standard was used.",
+      },
+    },
+    options: {
+      fromUnit: {
+        B: "Byte (B)",
+        KB: "Kilobyte",
+        MB: "Megabyte",
+        GB: "Gigabyte",
+        TB: "Terabyte",
+        PB: "Petabyte",
+        bit: "Bit (b)",
+        Kbit: "Kilobit (Kb)",
+        Mbit: "Megabit (Mb)",
+        Gbit: "Gigabit (Gb)",
+        Tbit: "Terabit (Tb)",
+        Pbit: "Petabit (Pb)",
+      },
+      toUnit: {
+        B: "Byte (B)",
+        KB: "Kilobyte",
+        MB: "Megabyte",
+        GB: "Gigabyte",
+        TB: "Terabyte",
+        PB: "Petabyte",
+        bit: "Bit (b)",
+        Kbit: "Kilobit (Kb)",
+        Mbit: "Megabit (Mb)",
+        Gbit: "Gigabit (Gb)",
+        Tbit: "Terabit (Tb)",
+        Pbit: "Petabit (Pb)",
+      },
+      mode: {
+        binary: "Binarny (1024-based)",
+        decimal: "Decimal (1000-based)",
+      },
+      byte: "Byte",
+      kilobyte: "Kilobyte",
+      megabyte: "Megabyte",
+      gigabyte: "Gigabyte",
+      terabyte: "Terabyte",
+      petabyte: "Petabyte",
+      binary: "Binarny",
+      decimal: "Decimal",
+    },
+    errors: {
+      invalidValue: "Wartość must be non-negative.",
+      sameUnit: "Source and target units must be different.",
+    },
+    faq: [
+      {
+        q: "What is the difference between binarny and decimal?",
+        a: "Binarny (KiB, MiB) uses base 1024: 1 KiB = 1024 bytes. Decimal (KB, MB) uses base 1000: 1 KB = 1000 bytes. RAM and SSDs use binarny; hard drive manufacturers traditionally use decimal.",
+      },
+      {
+        q: "Why does my 1 TB hard drive show as 931 GB?",
+        a: "Hard drives use decimal (1000-based) capacity labeling, while Windows often displays rozmiars in binarny (1024-based). 1,000,000,000,000 bytes ÷ 1,073,741,824 bytes/GiB ≈ 931 GiB.",
+      },
+      {
+        q: "Which mode should I use?",
+        a: "Use binarny for RAM, SSDs, and USB drives. Use decimal for comparing manufacturer specifications of hard drives and external storage.",
+      },
+      {
+        q: "What are the exact conversion factors?",
+        a: "Binarny: 1 KB=1024 B, 1 MB=1024² B, 1 GB=1024³ B. Decimal: 1 KB=1000 B, 1 MB=1000² B, 1 GB=1000³ B.",
+      },
+      {
+        q: "How do I konwertuj bytes to bitów (e.g. Megabyte to Megabit)?",
+        a: "One byte equals 8 bitów, so the same applies to every prefix: 1 Megabyte = 8 Megabit, 1 Gigabyte = 8 Gigabit. Pick a byte unit on one side (MB) and a bit unit on the other (Mbit) to konwertuj across. Byte units use an uppercase B (MB) and bit units a lowercase b (Mb).",
+      },
+    ],
+  },
   pt: {
     title: "Conversor de Armazenamento de Dados",
     short: "Converta entre bytes, KB, MB, GB, TB e outras unidades digitais.",

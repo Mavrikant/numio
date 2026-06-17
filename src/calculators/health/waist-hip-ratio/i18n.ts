@@ -57,6 +57,119 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "Taille-to-Hip Verhouding Calculator",
+    short: "Bereken your waist-to-hip ratio and assess your metabolic health risk.",
+    description:
+      "Gratis waist-to-hip ratio calculator based on WHO guidelines. Enter your waist and hip measurements to get your WHR and cardiovascular risk category.",
+    keywords: [
+      "waist-to-hip ratio calculator",
+      "WHR calculator",
+      "central obesity",
+      "abdominal fat",
+      "cardiovascular risk",
+      "waist circumference",
+      "body fat distribution",
+    ],
+    inputs: {
+      gender: { label: "Biological sex", help: "Sex determines the WHO risk category thresholds." },
+      unit: { label: "Unit system", help: "Choose metric (cm) or imperial (inches)." },
+      waist: { label: "Taille circumference", help: "Measure at the narrowest point of the torso, usually just above the navel." },
+      hip: { label: "Hip circumference", help: "Measure at the widest point of the hips and buttocks." },
+    },
+    outputs: {
+      whr: { label: "Taille-to-hip ratio (WHR)", help: "Taille circumference divided by hip circumference." },
+      riskCategory: { label: "Health risk category", help: "WHO classification based on your WHR and sex." },
+      waistCm: { label: "Taille (cm)", help: "Your waist measurement converteered to centimetres for threshold comparison." },
+      centralObesityRisk: { label: "Central obesity risk", help: "Whether your waist circumference exceeds the WHO threshold for increased health risk." },
+    },
+    options: {
+      gender: { male: "Male", female: "Female" },
+      unit: { metric: "Metric (cm)", imperial: "Imperial (inches)" },
+    },
+    errors: {
+      invalidMeasurement: "Taille and hip measurements must be positive nummers.",
+    },
+    faq: [
+      {
+        q: "What is the waist-to-hip ratio?",
+        a: "The waist-to-hip ratio (WHR) is a simple measure of body fat distribution. It divides your waist circumference by your hip circumference. A higher WHR indicates more fat stored around the abdomen, which is associated with higher cardiovascular and metabolic risk.",
+      },
+      {
+        q: "What are the WHO risk category thresholds?",
+        a: "According to the World Health Organization: For men, WHR <0.90 is low risk, 0.90–0.99 is moderate risk, and ≥1.00 is high risk. For women, WHR <0.80 is low risk, 0.80–0.85 is moderate risk, and ≥0.86 is high risk.",
+      },
+      {
+        q: "How do I measure my waist correctly?",
+        a: "Stand relaxed (not sucking in your stomach). Measure the narrowest point of your waist, usually about 2 cm above your navel. Keep the tape measure parallel to the floor and snug but not tight. Take the measurement at the end of a normal breath out.",
+      },
+      {
+        q: "How do I measure my hips correctly?",
+        a: "Stand with feet together. Measure the widest part of your hips and buttocks, keeping the tape measure horizontal and parallel to the floor. This is typically at the level of the greater trochanters (the bony protrusions on the sides of your hips).",
+      },
+      {
+        q: "Is WHR better than BMI for assessing health risk?",
+        a: "WHR and BMI measure different things. BMI measures total body weight relative to hoogte, while WHR measures fat distribution. Rezoek suggests WHR is a better predictor of cardiovascular risk than BMI because abdominal fat (visceral fat) is metabolically more dangerous than subcutaneous fat. Using both measures together gives a more complete picture.",
+      },
+    ],
+  },
+
+  pl: {
+    title: "Talia-to-Hip Stosunek Kalkulator",
+    short: "Oblicz your waist-to-hip ratio and assess your metabolic health risk.",
+    description:
+      "Darmowy waist-to-hip ratio kalkulator based on WHO guidelines. Enter your waist and hip measurements to get your WHR and cardiovascular risk category.",
+    keywords: [
+      "waist-to-hip ratio kalkulator",
+      "WHR kalkulator",
+      "central obesity",
+      "abdominal fat",
+      "cardiovascular risk",
+      "waist circumference",
+      "body fat distribution",
+    ],
+    inputs: {
+      gender: { label: "Biological sex", help: "Sex determines the WHO risk category thresholds." },
+      unit: { label: "Unit system", help: "Choose metric (cm) or imperial (inches)." },
+      waist: { label: "Talia circumference", help: "Measure at the narrowest point of the torso, usually just above the navel." },
+      hip: { label: "Hip circumference", help: "Measure at the widest point of the hips and buttocks." },
+    },
+    outputs: {
+      whr: { label: "Talia-to-hip ratio (WHR)", help: "Talia circumference divided by hip circumference." },
+      riskCategory: { label: "Health risk category", help: "WHO classification based on your WHR and sex." },
+      waistCm: { label: "Talia (cm)", help: "Your waist measurement konwertujed to centimetres for threshold comparison." },
+      centralObesityRisk: { label: "Central obesity risk", help: "Whether your waist circumference exceeds the WHO threshold for increased health risk." },
+    },
+    options: {
+      gender: { male: "Male", female: "Female" },
+      unit: { metric: "Metric (cm)", imperial: "Imperial (inches)" },
+    },
+    errors: {
+      invalidMeasurement: "Talia and hip measurements must be positive liczbas.",
+    },
+    faq: [
+      {
+        q: "What is the waist-to-hip ratio?",
+        a: "The waist-to-hip ratio (WHR) is a simple measure of body fat distribution. It divides your waist circumference by your hip circumference. A higher WHR indicates more fat stored around the abdomen, which is associated with higher cardiovascular and metabolic risk.",
+      },
+      {
+        q: "What are the WHO risk category thresholds?",
+        a: "According to the World Health Organization: For men, WHR <0.90 is low risk, 0.90–0.99 is moderate risk, and ≥1.00 is high risk. For women, WHR <0.80 is low risk, 0.80–0.85 is moderate risk, and ≥0.86 is high risk.",
+      },
+      {
+        q: "How do I measure my waist correctly?",
+        a: "Stand relaxed (not sucking in your stomach). Measure the narrowest point of your waist, usually about 2 cm above your navel. Keep the tape measure parallel to the floor and snug but not tight. Take the measurement at the end of a normal breath out.",
+      },
+      {
+        q: "How do I measure my hips correctly?",
+        a: "Stand with feet together. Measure the widest part of your hips and buttocks, keeping the tape measure horizontal and parallel to the floor. This is typically at the level of the greater trochanters (the bony protrusions on the sides of your hips).",
+      },
+      {
+        q: "Is WHR better than BMI for assessing health risk?",
+        a: "WHR and BMI measure different things. BMI measures total body weight relative to wysokość, while WHR measures fat distribution. Reszukaj suggests WHR is a better predictor of cardiovascular risk than BMI because abdominal fat (visceral fat) is metabolically more dangerous than subcutaneous fat. Using both measures together gives a more complete picture.",
+      },
+    ],
+  },
   pt: {
     title: "Calculadora de Relação Cintura-Quadril",
     short: "Calcule a relação cintura-quadril e o risco cardiovascular associado.",

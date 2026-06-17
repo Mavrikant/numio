@@ -40,6 +40,85 @@ const i18n: CalculatorI18n = {
       baseCannotBeOne: "Base cannot be 1.",
     },
   },
+  nl: {
+    title: "Logaritme Calculator",
+    short: "Bereken logarithms with any base. Find log, ln, log₁₀, and log₂ in one step.",
+    description: "Gratis logarithm calculator using change of base formula. Bereken log with any base, natural log, common logarithm, and binair logarithm.",
+    keywords: ["logarithm calculator", "log calculator", "natural log", "common logarithm", "ln", "log base"],
+    inputs: {
+      value: {
+        label: "Waarde (x)",
+        help: "The nummer to find the logarithm of. Must be positive.",
+      },
+      base: {
+        label: "Base",
+        help: "The logarithm base. Must be positive and not equal to 1.",
+      },
+    },
+    outputs: {
+      result: {
+        label: "Log (result)",
+        help: "The logarithm with specified base.",
+      },
+      natural_log: {
+        label: "Natural Log (ln)",
+        help: "The natural logarithm (base e).",
+      },
+      log10: {
+        label: "Common Log (log₁₀)",
+        help: "The common logarithm (base 10).",
+      },
+      log2: {
+        label: "Binair Log (log₂)",
+        help: "The binair logarithm (base 2).",
+      },
+    },
+    errors: {
+      valueNotPositive: "Waarde must be positive.",
+      baseNotPositive: "Base must be positive.",
+      baseCannotBeOne: "Base cannot be 1.",
+    },
+  },
+
+  pl: {
+    title: "Logarytm Kalkulator",
+    short: "Oblicz logarithms with any base. Find log, ln, log₁₀, and log₂ in one step.",
+    description: "Darmowy logarithm kalkulator using change of base formula. Oblicz log with any base, natural log, common logarithm, and binarny logarithm.",
+    keywords: ["logarithm kalkulator", "log kalkulator", "natural log", "common logarithm", "ln", "log base"],
+    inputs: {
+      value: {
+        label: "Wartość (x)",
+        help: "The liczba to find the logarithm of. Must be positive.",
+      },
+      base: {
+        label: "Base",
+        help: "The logarithm base. Must be positive and not equal to 1.",
+      },
+    },
+    outputs: {
+      result: {
+        label: "Log (result)",
+        help: "The logarithm with specified base.",
+      },
+      natural_log: {
+        label: "Natural Log (ln)",
+        help: "The natural logarithm (base e).",
+      },
+      log10: {
+        label: "Common Log (log₁₀)",
+        help: "The common logarithm (base 10).",
+      },
+      log2: {
+        label: "Binarny Log (log₂)",
+        help: "The binarny logarithm (base 2).",
+      },
+    },
+    errors: {
+      valueNotPositive: "Wartość must be positive.",
+      baseNotPositive: "Base must be positive.",
+      baseCannotBeOne: "Base cannot be 1.",
+    },
+  },
   pt: {
     title: "Calculadora de Logaritmo",
     short: "Calcule logaritmos em qualquer base — natural, decimal ou binária.",

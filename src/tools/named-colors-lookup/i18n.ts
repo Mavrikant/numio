@@ -3,6 +3,9 @@ import { COMMON_UI } from "../_shared/ui";
 
 const data = {
   en: { title: "CSS Named Colors", short: "Browse and search the 148 CSS named colors.", description: "Free CSS named colors reference. Search all 148 CSS/HTML color keywords by name or hex and copy the hex value with one click.", keywords: ["css named colors", "html color names", "color names list", "css color keywords", "color name to hex"], search: "Search colors" },
+  nl: { title: "CSS Named Kleurs", short: "Browse and zoek the 148 CSS named kleurs.", description: "Gratis CSS named kleurs reference. Zoek all 148 CSS/HTML kleur keywords by name or hex and copy the hex value with one click.", keywords: ["css named kleurs", "html kleur names", "kleur names list", "css kleur keywords", "kleur name to hex"], search: "Zoek kleurs" },
+
+  pl: { title: "CSS Named Kolors", short: "Browse and szukaj the 148 CSS named kolors.", description: "Darmowy CSS named kolors reference. Szukaj all 148 CSS/HTML kolor keywords by name or hex and copy the hex value with one click.", keywords: ["css named kolors", "html kolor names", "kolor names list", "css kolor keywords", "kolor name to hex"], search: "Szukaj kolors" },
   pt: { title: "CSS Named Colors", short: "Browse e search the 148 CSS named colors.", description: "Gratuito - CSS named colors reference. Search all 148 CSS/HTML color keywords by name ou hex e copy the hex value com one click.", keywords: ["css named colors", "html color names", "color names list", "css color keywords", "color name to hex"], search: "Search colors" },
   id: { title: "CSS Named Colors", short: "Browse dan search the 148 CSS named colors.", description: "Gratis - CSS named colors reference. Search all 148 CSS/HTML color keywords by name atau hex dan copy the hex value with one click.", keywords: ["css named colors", "html color names", "color names list", "css color keywords", "color name to hex"], search: "Search colors" },
 

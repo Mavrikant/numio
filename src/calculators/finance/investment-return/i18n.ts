@@ -46,6 +46,97 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "Investering Return Calculator (ROI & CAGR)",
+    short: "Bereken ROI and CAGR for any investment over any time period.",
+    description:
+      "Gratis investment return calculator. Compute ROI (Return on Investering) and CAGR (Compound Annual Growth Rate) from initial and final values, or project a final value from an expected annual return.",
+    keywords: [
+      "ROI calculator",
+      "CAGR calculator",
+      "investment return calculator",
+      "compound annual growth rate",
+      "return on investment",
+      "investment growth calculator",
+      "annualized return",
+    ],
+    inputs: {
+      initialInvestment: { label: "Initial Investering", help: "The amount you invested at the start." },
+      finalValue: { label: "Final Waarde", help: "The current or ending value of the investment. Leave blank if providing an annual return rate." },
+      annualReturn: { label: "Annual Return (%)", help: "Expected annual return rate. Used to project a final value. Leave blank if providing the final value." },
+      years: { label: "Investering Period (Years)", help: "The nummer of jaren the investment was held or will be held." },
+    },
+    outputs: {
+      roi: { label: "ROI (%)", help: "Total Return on Investering as a percentage of the initial amount." },
+      cagr: { label: "CAGR (%)", help: "Compound Annual Growth Rate — the steady annual rate that would produce the same final value." },
+      totalGain: { label: "Total Gain", help: "Final value minus initial investment in dollar terms." },
+      finalValue: { label: "Final Waarde", help: "Projected or actual ending value of the investment." },
+    },
+    errors: {
+      missingInput: "Provide either a final value or an annual return rate.",
+      negativeInitial: "Initial investment must be greater than zero.",
+    },
+    faq: [
+      {
+        q: "What is the difference between ROI and CAGR?",
+        a: "ROI measures total return over the entire period. CAGR measures the average annual growth rate, accounting for compounding. CAGR is more useful for comparing investments held over different time periods.",
+      },
+      {
+        q: "Can I use a negative annual return?",
+        a: "Yes. Enter a negative value to model investments that declined in value, such as a stock that fell during a market downturn.",
+      },
+      {
+        q: "Does CAGR account for dividends or cash flows?",
+        a: "No. This calculator assumes a single lump-sum investment with no intermediate withdrawals or contributions. For investments with ongoing cash flows, use an IRR (Internal Rate of Return) calculator.",
+      },
+    ],
+  },
+
+  pl: {
+    title: "Inwestycja Return Kalkulator (ROI & CAGR)",
+    short: "Oblicz ROI and CAGR for any investment over any time period.",
+    description:
+      "Darmowy investment return kalkulator. Compute ROI (Return on Inwestycja) and CAGR (Compound Annual Growth Rate) from initial and final values, or project a final value from an expected annual return.",
+    keywords: [
+      "ROI kalkulator",
+      "CAGR kalkulator",
+      "investment return kalkulator",
+      "compound annual growth rate",
+      "return on investment",
+      "investment growth kalkulator",
+      "annualized return",
+    ],
+    inputs: {
+      initialInvestment: { label: "Initial Inwestycja", help: "The amount you invested at the start." },
+      finalValue: { label: "Final Wartość", help: "The current or ending value of the investment. Leave blank if providing an annual return rate." },
+      annualReturn: { label: "Annual Return (%)", help: "Expected annual return rate. Used to project a final value. Leave blank if providing the final value." },
+      years: { label: "Inwestycja Period (Years)", help: "The liczba of lat the investment was held or will be held." },
+    },
+    outputs: {
+      roi: { label: "ROI (%)", help: "Total Return on Inwestycja as a percentage of the initial amount." },
+      cagr: { label: "CAGR (%)", help: "Compound Annual Growth Rate — the steady annual rate that would produce the same final value." },
+      totalGain: { label: "Total Gain", help: "Final value minus initial investment in dollar terms." },
+      finalValue: { label: "Final Wartość", help: "Projected or actual ending value of the investment." },
+    },
+    errors: {
+      missingInput: "Provide either a final value or an annual return rate.",
+      negativeInitial: "Initial investment must be greater than zero.",
+    },
+    faq: [
+      {
+        q: "What is the difference between ROI and CAGR?",
+        a: "ROI measures total return over the entire period. CAGR measures the average annual growth rate, accounting for compounding. CAGR is more useful for comparing investments held over different time periods.",
+      },
+      {
+        q: "Can I use a negative annual return?",
+        a: "Yes. Enter a negative value to model investments that declined in value, such as a stock that fell during a market downturn.",
+      },
+      {
+        q: "Does CAGR account for dividends or cash flows?",
+        a: "No. This kalkulator assumes a single lump-sum investment with no intermediate withdrawals or contributions. For investments with ongoing cash flows, use an IRR (Internal Rate of Return) kalkulator.",
+      },
+    ],
+  },
   pt: {
     title: "Calculadora de Retorno de Investimento",
     short: "Calcule o retorno de um investimento ao longo do tempo.",

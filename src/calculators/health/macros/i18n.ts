@@ -104,6 +104,213 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "Macro Calculator",
+    short: "Bereken your daily protein, fat, and carb targets from your TDEE and fitness goal.",
+    description:
+      "Gratis macro calculator. Enter your total daily energy expenditure and fitness goal to get your optimal protein, fat, and carbohydrate targets in grams and calories.",
+    keywords: [
+      "macro calculator",
+      "macronutrient calculator",
+      "protein fat carbs calculator",
+      "TDEE macros",
+      "cutting macros",
+      "bulking macros",
+      "diet macros",
+    ],
+    inputs: {
+      tdee: {
+        label: "Total Daily Energy Expenditure (TDEE)",
+        help: "Your total daily calorie burn including activity. Use a BMR calculator to find this.",
+      },
+      goal: {
+        label: "Fitness Goal",
+        help: "Your primary nutrition goal — this sets the default macro percentages.",
+      },
+      proteinPct: {
+        label: "Eiwit %",
+        help: "Percentage of total calories from protein. Each gram of protein = 4 kcal.",
+      },
+      fatPct: {
+        label: "Fat %",
+        help: "Percentage of total calories from fat. Each gram of fat = 9 kcal. Carbs automatically fill the remainder.",
+      },
+    },
+    outputs: {
+      proteinG: {
+        label: "Eiwit",
+        help: "Daily protein target in grams.",
+        suffix: "g",
+      },
+      fatG: {
+        label: "Fat",
+        help: "Daily fat target in grams.",
+        suffix: "g",
+      },
+      carbsG: {
+        label: "Carbohydrates",
+        help: "Daily carbohydrate target in grams.",
+        suffix: "g",
+      },
+      proteinKcal: {
+        label: "Eiwit (kcal)",
+        help: "Calorieën from protein.",
+        suffix: "kcal",
+      },
+      fatKcal: {
+        label: "Fat (kcal)",
+        help: "Calorieën from fat.",
+        suffix: "kcal",
+      },
+      carbsKcal: {
+        label: "Carbs (kcal)",
+        help: "Calorieën from carbohydrates.",
+        suffix: "kcal",
+      },
+      totalKcal: {
+        label: "Total Calorieën",
+        help: "Total daily calorie target (equals your TDEE).",
+        suffix: "kcal",
+      },
+    },
+    options: {
+      goal: {
+        cutting: "Cutting (fat loss)",
+        maintenance: "Maintenance",
+        bulking: "Bulking (muscle gain)",
+      },
+    },
+    errors: {
+      tdeeOutOfRange: "TDEE must be between 800 and 10,000 kcal.",
+      macroSumExceeds90: "Eiwit % + Fat % must not exceed 90% (carbs must be at least 10%).",
+    },
+    faq: [
+      {
+        q: "What are macros?",
+        a: "Macro's (macronutrients) are the three main energy-providing nutrients: protein, fat, and carbohydrates. Eiwit and carbs each provide 4 kcal per gram; fat provides 9 kcal per gram.",
+      },
+      {
+        q: "What is TDEE?",
+        a: "Total Daily Energy Expenditure (TDEE) is the total nummer of calories your body burns in a day, including your basal metabolic rate (BMR) plus calories burned through activity. Use a BMR/TDEE calculator to estimate yours.",
+      },
+      {
+        q: "What macro split should I use for cutting?",
+        a: "For fat loss (cutting), a higher protein intake (35–40% of calories) helps preserve muscle mass while in a caloric deficit. Fat is typically kept at 25–30% and carbs make up the rest.",
+      },
+      {
+        q: "Can I change the default percentages?",
+        a: "Yes. The defaults shown are evidence-based starting points for each goal. You can adjust protein and fat percentages manually; carbs are automatically berekend as the remainder.",
+      },
+      {
+        q: "How accurate are these macro targets?",
+        a: "These are evidence-based estimates. Individual responses to macro ratios vary based on genetics, training type, age, and metabolic health. A registered dietitian can provide personalised guidance.",
+      },
+    ],
+  },
+
+  pl: {
+    title: "Macro Kalkulator",
+    short: "Oblicz your daily protein, fat, and carb targets from your TDEE and fitness goal.",
+    description:
+      "Darmowy macro kalkulator. Enter your total daily energy expenditure and fitness goal to get your optimal protein, fat, and carbohydrate targets in grams and calories.",
+    keywords: [
+      "macro kalkulator",
+      "macronutrient kalkulator",
+      "protein fat carbs kalkulator",
+      "TDEE macros",
+      "cutting macros",
+      "bulking macros",
+      "diet macros",
+    ],
+    inputs: {
+      tdee: {
+        label: "Total Daily Energy Expenditure (TDEE)",
+        help: "Your total daily calorie burn including activity. Use a BMR kalkulator to find this.",
+      },
+      goal: {
+        label: "Fitness Goal",
+        help: "Your primary nutrition goal — this sets the default macro percentages.",
+      },
+      proteinPct: {
+        label: "Białko %",
+        help: "Procent of total calories from protein. Each gram of protein = 4 kcal.",
+      },
+      fatPct: {
+        label: "Fat %",
+        help: "Procent of total calories from fat. Each gram of fat = 9 kcal. Carbs automatically fill the remainder.",
+      },
+    },
+    outputs: {
+      proteinG: {
+        label: "Białko",
+        help: "Daily protein target in grams.",
+        suffix: "g",
+      },
+      fatG: {
+        label: "Fat",
+        help: "Daily fat target in grams.",
+        suffix: "g",
+      },
+      carbsG: {
+        label: "Carbohydrates",
+        help: "Daily carbohydrate target in grams.",
+        suffix: "g",
+      },
+      proteinKcal: {
+        label: "Białko (kcal)",
+        help: "Kalorie from protein.",
+        suffix: "kcal",
+      },
+      fatKcal: {
+        label: "Fat (kcal)",
+        help: "Kalorie from fat.",
+        suffix: "kcal",
+      },
+      carbsKcal: {
+        label: "Carbs (kcal)",
+        help: "Kalorie from carbohydrates.",
+        suffix: "kcal",
+      },
+      totalKcal: {
+        label: "Total Kalorie",
+        help: "Total daily calorie target (equals your TDEE).",
+        suffix: "kcal",
+      },
+    },
+    options: {
+      goal: {
+        cutting: "Cutting (fat loss)",
+        maintenance: "Maintenance",
+        bulking: "Bulking (muscle gain)",
+      },
+    },
+    errors: {
+      tdeeOutOfRange: "TDEE must be between 800 and 10,000 kcal.",
+      macroSumExceeds90: "Białko % + Fat % must not exceed 90% (carbs must be at least 10%).",
+    },
+    faq: [
+      {
+        q: "What are macros?",
+        a: "Makroskładniki (macronutrients) are the three main energy-providing nutrients: protein, fat, and carbohydrates. Białko and carbs each provide 4 kcal per gram; fat provides 9 kcal per gram.",
+      },
+      {
+        q: "What is TDEE?",
+        a: "Total Daily Energy Expenditure (TDEE) is the total liczba of calories your body burns in a day, including your basal metabolic rate (BMR) plus calories burned through activity. Use a BMR/TDEE kalkulator to estimate yours.",
+      },
+      {
+        q: "What macro split should I use for cutting?",
+        a: "For fat loss (cutting), a higher protein intake (35–40% of calories) helps preserve muscle mass while in a caloric deficit. Fat is typically kept at 25–30% and carbs make up the rest.",
+      },
+      {
+        q: "Can I change the default percentages?",
+        a: "Yes. The defaults shown are evidence-based starting points for each goal. You can adjust protein and fat percentages manually; carbs are automatically obliczd as the remainder.",
+      },
+      {
+        q: "How accurate are these macro targets?",
+        a: "These are evidence-based estimates. Individual responses to macro ratios vary based on genetics, training type, age, and metabolic health. A registered dietitian can provide personalised guidance.",
+      },
+    ],
+  },
   pt: {
     title: "Calculadora de Macronutrientes",
     short: "Calcule a distribuição ideal de proteína, hidratos e gordura para a sua dieta.",

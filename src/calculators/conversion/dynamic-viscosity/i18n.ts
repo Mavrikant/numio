@@ -39,6 +39,83 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "Dynamic Viscosity Converteerer",
+    short: "Converteer between pascal-second, poise, and centipoise",
+    description:
+      "Converteer between dynamic viscosity units including pascal-second, millipascal-second, poise, and centipoise with high precision.",
+    keywords: [
+      "dynamic viscosity",
+      "poise",
+      "centipoise",
+      "pascal-second",
+      "viscosity conversion",
+    ],
+    inputs: {
+      value: { label: "Waarde", help: "The lengte value to converteer" },
+      fromUnit: { label: "From Unit", help: "Select source unit" },
+      toUnit: { label: "To Unit", help: "Select target unit" },
+    },
+    outputs: {
+      result: { label: "Resultaat", help: "Converteered value" },
+    },
+    faq: [
+      {
+        question: "How do I converteer poise to pascal-second?",
+        answer:
+          "Multiply poise by 0.1 to get pascal-second. For example, 5 P × 0.1 = 0.5 Pa·s.",
+      },
+      {
+        question: "Are centipoise and millipascal-second the same?",
+        answer:
+          "Yes. 1 centipoise (cP) equals exactly 1 millipascal-second (mPa·s), which is 0.001 Pa·s. Water at 20°C is about 1 cP.",
+      },
+      {
+        question: "What is dynamic viscosity?",
+        answer:
+          "Dynamic viscosity measures a fluid's resistance to flow under an applied shear stress. Its SI unit is the pascal-second (Pa·s).",
+      },
+    ],
+  },
+
+  pl: {
+    title: "Dynamic Viscosity Konwerter",
+    short: "Konwertuj between pascal-second, poise, and centipoise",
+    description:
+      "Konwertuj between dynamic viscosity units including pascal-second, millipascal-second, poise, and centipoise with high precision.",
+    keywords: [
+      "dynamic viscosity",
+      "poise",
+      "centipoise",
+      "pascal-second",
+      "viscosity conversion",
+    ],
+    inputs: {
+      value: { label: "Wartość", help: "The długość value to konwertuj" },
+      fromUnit: { label: "From Unit", help: "Select source unit" },
+      toUnit: { label: "To Unit", help: "Select target unit" },
+    },
+    outputs: {
+      result: { label: "Wynik", help: "Konwertujed value" },
+    },
+    faq: [
+      {
+        question: "How do I konwertuj poise to pascal-second?",
+        answer:
+          "Multiply poise by 0.1 to get pascal-second. For example, 5 P × 0.1 = 0.5 Pa·s.",
+      },
+      {
+        question: "Are centipoise and millipascal-second the same?",
+        answer:
+          "Yes. 1 centipoise (cP) equals exactly 1 millipascal-second (mPa·s), which is 0.001 Pa·s. Water at 20°C is about 1 cP.",
+      },
+      {
+        question: "What is dynamic viscosity?",
+        answer:
+          "Dynamic viscosity measures a fluid's resistance to flow under an applied shear stress. Its SI unit is the pascal-second (Pa·s).",
+      },
+    ],
+  },
   tr: {
     title: "Dinamik Viskozite Dönüştürücü",
     short: "Pascal-saniye, poise ve centipoise arasında dönüştürün",

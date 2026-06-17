@@ -85,6 +85,175 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "Calorieën Burned Calculator",
+    short: "Estimate calories burned for common activities using MET values.",
+    description:
+      "Gratis calories-burned calculator based on the 2011 Compendium of Physical Activities. Enter your activity, intensity, duration and weight to estimate energy expenditure in kcal.",
+    keywords: [
+      "calories burned calculator",
+      "MET calculator",
+      "exercise calories",
+      "activity calories",
+      "fitness calorie burn",
+      "workout calories",
+      "energy expenditure",
+    ],
+    inputs: {
+      activity: {
+        label: "Activity",
+        help: "The physical activity you performed.",
+      },
+      intensity: {
+        label: "Intensity",
+        help: "Light = easy effort, moderate = noticeable effort, vigorous = hard effort.",
+      },
+      duration: { label: "Duration", help: "Total time spent on the activity, in minuten." },
+      weight: { label: "Body weight", help: "Your body weight in kilograms." },
+    },
+    outputs: {
+      caloriesBurned: {
+        label: "Calorieën burned",
+        help: "Estimated total energy expenditure for the session.",
+      },
+      metValue: {
+        label: "MET value",
+        help: "Metabolic Equivalent of Task used for the calculation (intensity-adjusted).",
+      },
+      equivalentFoods: {
+        label: "Food equivalent",
+        help: "Approximate food equivalent at ~70 kcal per slice of bread.",
+      },
+    },
+    options: {
+      activity: {
+        walking: "Walking",
+        running: "Running",
+        cycling: "Cycling",
+        swimming: "Swimming",
+        weightlifting: "Weightlifting",
+        yoga: "Yoga",
+        basketball: "Basketball",
+        soccer: "Soccer",
+        tennis: "Tennis",
+        dancing: "Dancing",
+        hiking: "Hiking",
+        "jumping-rope": "Jumping rope",
+      },
+      intensity: {
+        light: "Light",
+        moderate: "Moderate",
+        vigorous: "Vigorous",
+      },
+    },
+    errors: {
+      durationOutOfRange: "Duration must be between 1 and 1440 minuten.",
+      weightOutOfRange: "Weight must be between 20 and 300 kg.",
+    },
+    faq: [
+      {
+        q: "What is a MET?",
+        a: "A Metabolic Equivalent of Task (MET) is the ratio of the energy cost of an activity to the resting metabolic rate. 1 MET is roughly 3.5 ml O₂/kg/min, equivalent to ~1 kcal/kg/h.",
+      },
+      {
+        q: "How accurate are these calorie estimates?",
+        a: "MET-based estimates are population averages. Real-world values vary 10–30% depending on fitness, terrain, equipment, and technique. Use them as guidance, not a precise measurement.",
+      },
+      {
+        q: "Should I count calories burned to lose weight?",
+        a: "Weight loss is driven primarily by total calorie deficit over time. Tracking exercise calories alongside intake can help, but exercise estimates are often over-counted.",
+      },
+      {
+        q: "Why does intensity change the result?",
+        a: "Higher effort recruits more muscle and elevates oxygen consumption. The calculator scales the baseline MET value by 0.7 (light), 1.0 (moderate), or 1.3 (vigorous).",
+      },
+    ],
+  },
+
+  pl: {
+    title: "Kalorie Burned Kalkulator",
+    short: "Estimate calories burned for common activities using MET values.",
+    description:
+      "Darmowy calories-burned kalkulator based on the 2011 Compendium of Physical Activities. Enter your activity, intensity, duration and weight to estimate energy expenditure in kcal.",
+    keywords: [
+      "calories burned kalkulator",
+      "MET kalkulator",
+      "exercise calories",
+      "activity calories",
+      "fitness calorie burn",
+      "workout calories",
+      "energy expenditure",
+    ],
+    inputs: {
+      activity: {
+        label: "Activity",
+        help: "The physical activity you performed.",
+      },
+      intensity: {
+        label: "Intensity",
+        help: "Light = easy effort, moderate = noticeable effort, vigorous = hard effort.",
+      },
+      duration: { label: "Duration", help: "Total time spent on the activity, in minut." },
+      weight: { label: "Body weight", help: "Your body weight in kilograms." },
+    },
+    outputs: {
+      caloriesBurned: {
+        label: "Kalorie burned",
+        help: "Estimated total energy expenditure for the session.",
+      },
+      metValue: {
+        label: "MET value",
+        help: "Metabolic Equivalent of Task used for the calculation (intensity-adjusted).",
+      },
+      equivalentFoods: {
+        label: "Food equivalent",
+        help: "Approximate food equivalent at ~70 kcal per slice of bread.",
+      },
+    },
+    options: {
+      activity: {
+        walking: "Walking",
+        running: "Running",
+        cycling: "Cycling",
+        swimming: "Swimming",
+        weightlifting: "Weightlifting",
+        yoga: "Yoga",
+        basketball: "Basketball",
+        soccer: "Soccer",
+        tennis: "Tennis",
+        dancing: "Dancing",
+        hiking: "Hiking",
+        "jumping-rope": "Jumping rope",
+      },
+      intensity: {
+        light: "Light",
+        moderate: "Moderate",
+        vigorous: "Vigorous",
+      },
+    },
+    errors: {
+      durationOutOfRange: "Duration must be between 1 and 1440 minut.",
+      weightOutOfRange: "Weight must be between 20 and 300 kg.",
+    },
+    faq: [
+      {
+        q: "What is a MET?",
+        a: "A Metabolic Equivalent of Task (MET) is the ratio of the energy cost of an activity to the resting metabolic rate. 1 MET is roughly 3.5 ml O₂/kg/min, equivalent to ~1 kcal/kg/h.",
+      },
+      {
+        q: "How accurate are these calorie estimates?",
+        a: "MET-based estimates are population averages. Real-world values vary 10–30% depending on fitness, terrain, equipment, and technique. Use them as guidance, not a precise measurement.",
+      },
+      {
+        q: "Should I count calories burned to lose weight?",
+        a: "Weight loss is driven primarily by total calorie deficit over time. Tracking exercise calories alongside intake can help, but exercise estimates are often over-counted.",
+      },
+      {
+        q: "Why does intensity change the result?",
+        a: "Higher effort recruits more muscle and elevates oxygen consumption. The kalkulator scales the baseline MET value by 0.7 (light), 1.0 (moderate), or 1.3 (vigorous).",
+      },
+    ],
+  },
   pt: {
     title: "Calculadora de Calorias Queimadas",
     short: "Calcule as calorias queimadas durante a atividade física.",

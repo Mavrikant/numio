@@ -70,6 +70,145 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "Ovulatie & Fertile Window Calculator",
+    short: "Find your most fertile dagen and predicted ovulation date based on your menstrual cycle.",
+    description:
+      "Gratis ovulation calculator. Enter your last menstrual period date and average cycle lengte to estimate your fertile window, ovulation date, LH surge, and next period.",
+    keywords: [
+      "ovulation calculator",
+      "fertile window",
+      "fertility calculator",
+      "when do I ovulate",
+      "ovulation date",
+      "cycle tracker",
+      "pregnancy planning",
+    ],
+    inputs: {
+      lmpDate: {
+        label: "Last menstrual period (LMP)",
+        help: "The first day of your most recent period.",
+      },
+      cycleLength: {
+        label: "Gemiddelde cycle lengte (dagen)",
+        help: "The nummer of dagen from the first day of one period to the first day of the next. Gemiddelde is 28 dagen (range: 21–45).",
+      },
+    },
+    outputs: {
+      ovulationDate: {
+        label: "Estimated ovulation date",
+        help: "The day your ovary is most likely to release an egg.",
+      },
+      fertileStart: {
+        label: "Fertile window start",
+        help: "Sperm can survive up to 5 dagen, so your fertile window begins 5 dagen before ovulation.",
+      },
+      fertileEnd: {
+        label: "Fertile window end",
+        help: "The day after ovulation — the egg survives about 24 uren.",
+      },
+      nextPeriod: {
+        label: "Next period (predicted)",
+        help: "Your predicted next menstrual period start date.",
+      },
+      lhSurgeDate: {
+        label: "LH surge (predicted)",
+        help: "The day before ovulation when the luteinising hormone surge is typically detected on ovulation tests.",
+      },
+    },
+    errors: {
+      invalidDate: "Please enter a valid date in YYYY-MM-DD formatteer.",
+      cycleLengthOutOfRange: "Cycle lengte must be between 21 and 45 dagen.",
+    },
+    faq: [
+      {
+        q: "How is the fertile window berekend?",
+        a: "Ovulatie typically occurs 14 dagen before your next period. Sperm can survive in the reproductive tract for up to 5 dagen, so the fertile window spans from 5 dagen before ovulation to 1 day after (6 dagen total).",
+      },
+      {
+        q: "What is an LH surge?",
+        a: "The luteinising hormone (LH) surge is a sudden increase in LH that triggers ovulation within 24–36 uren. Home ovulation predictor kits (OPKs) detect this surge in urine.",
+      },
+      {
+        q: "Can I use this calculator to avoid pregnancy?",
+        a: "No. This calculator is for educational and planning purposes only. It is not a contraceptive method. Ovulatie timing varies and cannot be predicted with certainty. Consult a healthcare provider for reliable contraception.",
+      },
+      {
+        q: "What if my cycle is irregular?",
+        a: "This calculator assumes a regular cycle. If your cycle lengte varies significantly from month to month, the estimates will be less accurate. Basal body temperature tracking and ovulation test strips can help identify ovulation more precisely.",
+      },
+    ],
+  },
+
+  pl: {
+    title: "Owulacja & Fertile Window Kalkulator",
+    short: "Find your most fertile dni and predicted ovulation date based on your menstrual cycle.",
+    description:
+      "Darmowy ovulation kalkulator. Enter your last menstrual period date and average cycle długość to estimate your fertile window, ovulation date, LH surge, and next period.",
+    keywords: [
+      "ovulation kalkulator",
+      "fertile window",
+      "fertility kalkulator",
+      "when do I ovulate",
+      "ovulation date",
+      "cycle tracker",
+      "pregnancy planning",
+    ],
+    inputs: {
+      lmpDate: {
+        label: "Last menstrual period (LMP)",
+        help: "The first day of your most recent period.",
+      },
+      cycleLength: {
+        label: "Średnia cycle długość (dni)",
+        help: "The liczba of dni from the first day of one period to the first day of the next. Średnia is 28 dni (range: 21–45).",
+      },
+    },
+    outputs: {
+      ovulationDate: {
+        label: "Estimated ovulation date",
+        help: "The day your ovary is most likely to release an egg.",
+      },
+      fertileStart: {
+        label: "Fertile window start",
+        help: "Sperm can survive up to 5 dni, so your fertile window begins 5 dni before ovulation.",
+      },
+      fertileEnd: {
+        label: "Fertile window end",
+        help: "The day after ovulation — the egg survives about 24 godzin.",
+      },
+      nextPeriod: {
+        label: "Next period (predicted)",
+        help: "Your predicted next menstrual period start date.",
+      },
+      lhSurgeDate: {
+        label: "LH surge (predicted)",
+        help: "The day before ovulation when the luteinising hormone surge is typically detected on ovulation tests.",
+      },
+    },
+    errors: {
+      invalidDate: "Please enter a valid date in YYYY-MM-DD formatuj.",
+      cycleLengthOutOfRange: "Cycle długość must be between 21 and 45 dni.",
+    },
+    faq: [
+      {
+        q: "How is the fertile window obliczd?",
+        a: "Owulacja typically occurs 14 dni before your next period. Sperm can survive in the reproductive tract for up to 5 dni, so the fertile window spans from 5 dni before ovulation to 1 day after (6 dni total).",
+      },
+      {
+        q: "What is an LH surge?",
+        a: "The luteinising hormone (LH) surge is a sudden increase in LH that triggers ovulation within 24–36 godzin. Home ovulation predictor kits (OPKs) detect this surge in urine.",
+      },
+      {
+        q: "Can I use this kalkulator to avoid pregnancy?",
+        a: "No. This kalkulator is for educational and planning purposes only. It is not a contraceptive method. Owulacja timing varies and cannot be predicted with certainty. Consult a healthcare provider for reliable contraception.",
+      },
+      {
+        q: "What if my cycle is irregular?",
+        a: "This kalkulator assumes a regular cycle. If your cycle długość varies significantly from month to month, the estimates will be less accurate. Basal body temperature tracking and ovulation test strips can help identify ovulation more precisely.",
+      },
+    ],
+  },
   pt: {
     title: "Calculadora de Ovulação",
     short: "Calcule o seu período fértil e dias de ovulação.",

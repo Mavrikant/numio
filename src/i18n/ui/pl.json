@@ -1,0 +1,169 @@
+{
+  "site": {
+    "name": "Numio",
+    "tagline": "Darmowe kalkulatory na co dzień — finanse, zdrowie, inżynieria, matematyka.",
+    "description": "Korzystaj z darmowych, dokładnych kalkulatorów w 16 językach. Bez logowania, bez śledzenia, natychmiastowe wyniki."
+  },
+  "nav": {
+    "home": "Strona główna",
+    "categories": "Kategorie",
+    "search": "Szukaj",
+    "about": "O nas",
+    "contact": "Kontakt",
+    "privacy": "Polityka prywatności",
+    "openMenu": "Otwórz menu",
+    "closeMenu": "Zamknij menu",
+    "skipToContent": "Przejdź do treści",
+    "mainNavigation": "Nawigacja główna",
+    "tools": "Narzędzia",
+    "sitemap": "Mapa strony",
+    "allCategories": "Wszystkie kategorie"
+  },
+  "sitemap": {
+    "title": "Mapa strony",
+    "description": "Przeglądaj każdy kalkulator, konwerter i narzędzie na Numio w jednym miejscu."
+  },
+  "actions": {
+    "calculate": "Oblicz",
+    "reset": "Resetuj",
+    "copy": "Kopiuj",
+    "share": "Udostępnij",
+    "print": "Drukuj",
+    "save": "Zapisz"
+  },
+  "labels": {
+    "result": "Wynik",
+    "results": "Wyniki",
+    "inputs": "Dane wejściowe",
+    "settings": "Ustawienia",
+    "formula": "Wzór",
+    "references": "Referencje",
+    "related": "Powiązane kalkulatory",
+    "loading": "Ładowanie…",
+    "noResults": "Brak wyników"
+  },
+  "errors": {
+    "required": "To pole jest wymagane",
+    "invalid": "Nieprawidłowa wartość",
+    "outOfRange": "Wartość poza zakresem",
+    "tooSmall": "Wartość jest za mała",
+    "tooLarge": "Wartość jest za duża"
+  },
+  "footer": {
+    "copyright": "© Numio",
+    "disclaimer": "Wyniki służą wyłącznie celom informacyjnym. Sprawdź przed użyciem do ważnych decyzji.",
+    "sourceCode": "Kod źródłowy",
+    "links": "Linki",
+    "lastUpdated": "Ostatnia aktualizacja",
+    "allCalculators": "Wszystkie kalkulatory",
+    "comingSoon": "Wkrótce"
+  },
+  "theme": {
+    "toggle": "Zmień motyw",
+    "light": "Jasny",
+    "dark": "Ciemny",
+    "auto": "Auto",
+    "switchToLight": "Przełącz na tryb jasny",
+    "switchToDark": "Przełącz na tryb ciemny",
+    "switchToAuto": "Przełącz na motyw systemowy"
+  },
+  "lang": {
+    "switchLanguage": "Zmień język",
+    "currentLanguage": "Obecny język",
+    "selectLanguage": "Wybierz język"
+  },
+  "breadcrumb": {
+    "home": "Strona główna",
+    "navigation": "Ścieżka nawigacyjna"
+  },
+  "categories": {
+    "health": "Zdrowie",
+    "finance": "Finanse",
+    "engineering": "Inżynieria",
+    "math": "Matematyka",
+    "conversion": "Konwersja",
+    "all": "Wszystkie kategorie"
+  },
+  "consent": {
+    "title": "Szanujemy Twoją prywatność",
+    "description": "Używamy plików cookie i podobnych technologii, aby ulepszyć Twoje doświadczenia, analizować ruch i wyświetlać odpowiednie reklamy. Możesz wybrać, które kategorie zaakceptować.",
+    "accept": "Akceptuj wszystkie",
+    "reject": "Odrzuć wszystkie",
+    "customize": "Dostosuj",
+    "privacyPolicy": "Polityka prywatności",
+    "customizeTitle": "Preferencje plików cookie",
+    "savePreferences": "Zapisz preferencje",
+    "back": "Wstecz",
+    "essential": "Niezbędne",
+    "essentialDesc": "Wymagane do działania strony. Zawsze aktywne.",
+    "analytics": "Analityka",
+    "analyticsDesc": "Pomaga nam zrozumieć, jak odwiedzający korzystają ze strony (anonimowo).",
+    "ads": "Reklamy",
+    "adsDesc": "Pozwala nam wyświetlać odpowiednie reklamy i utrzymać darmowy dostęp do kalkulatorów."
+  },
+  "tools": {
+    "description": "Prześlij dane CSV i twórz interaktywne wizualizacje — histogramy, wykresy rozrzutu, serie czasowe i statystyki opisowe.",
+    "browseCatalog": "Przeglądaj wszystkie narzędzia",
+    "uploadData": "Prześlij swoje dane"
+  },
+  "authority": {
+    "formula": "Wzór",
+    "sources": "Źródła i referencje",
+    "accuracyNote": "Uwaga o dokładności",
+    "disclaimer": "Zastrzeżenie",
+    "lastReviewed": "Ostatnio sprawdzane",
+    "editorialTeam": "przez zespół redakcyjny Numio"
+  },
+  "seo": {
+    "metaSuffix": "Darmowe, natychmiastowe, bez rejestracji."
+  },
+  "compare": {
+    "toggle": "Porównaj scenariusze",
+    "scenarioA": "Scenariusz A",
+    "scenarioB": "Scenariusz B",
+    "difference": "Różnica",
+    "exitCompare": "Zakończ porównanie",
+    "deltaLabel": "Δ"
+  },
+  "pdf": {
+    "print": "Drukuj",
+    "download": "Pobierz PDF",
+    "generated": "Wygenerowane przez Numio",
+    "title": "Wyniki kalkulatora"
+  },
+  "pwa": {
+    "install": "Zainstaluj aplikację"
+  },
+  "nl": {
+    "toggle": "✨ Wypróbuj w prostym języku",
+    "placeholder": "Przykład: Mam 30 lat, 70 kg, 175 cm wzrostu",
+    "fill": "Wypełnij kalkulator",
+    "matched": "Dopasowano {n} z {total} pól",
+    "unmatched": "Nie można dopasować: {fields}"
+  },
+  "home": {
+    "badge": "100% darmowe · Prywatne · Bez rejestracji",
+    "ctaCalculators": "Przeglądaj kalkulatory",
+    "ctaTools": "Eksploruj narzędzia",
+    "statLanguages": "języków",
+    "categoriesHeading": "Kalkulatory według kategorii",
+    "categoriesSubheading": "Dokładne, natychmiastowe wyniki w każdej dziedzinie — wybierz kategorię, aby rozpocząć.",
+    "calculators": "kalkulatory",
+    "toolsHeading": "Narzędzia dla programistów i codziennego użytku",
+    "toolsDesc": "Konwertery, generatory, formatery i walidatory — {n} narzędzi przeglądarkowych działających w pełni na Twoim urządzeniu.",
+    "toolsCta": "Przeglądaj wszystkie narzędzia",
+    "whyHeading": "Dlaczego Numio",
+    "featurePrivateTitle": "Zaprojektowany z myślą o prywatności",
+    "featurePrivateDesc": "Bez kont, bez śledzenia. Wszystko działa w Twojej przeglądarce.",
+    "featureInstantTitle": "Natychmiastowe wyniki",
+    "featureInstantDesc": "Odpowiedzi aktualizują się podczas pisania — bez czekania, bez przeładowywania.",
+    "featureLanguagesTitle": "16 języków",
+    "featureLanguagesDesc": "W pełni zlokalizowany dla globalnej publiczności.",
+    "featureOfflineTitle": "Działa offline",
+    "featureOfflineDesc": "Zainstaluj Numio jako aplikację i używaj wszędzie."
+  },
+  "search": {
+    "placeholder": "Szukaj kalkulatorów i narzędzi…",
+    "noResults": "Nie znaleziono wyników."
+  }
+}

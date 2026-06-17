@@ -33,6 +33,71 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "Angular Velocity Converteerer",
+    short: "Converteer between rad/s, rpm, hertz, and degrees per second",
+    description:
+      "Converteer between angular velocity units including radian per second, revolutions per minute, hertz, and degrees per second with high precision.",
+    keywords: ["angular velocity", "rpm", "rad/s", "hertz", "rotational speed"],
+    inputs: {
+      value: { label: "Waarde", help: "The lengte value to converteer" },
+      fromUnit: { label: "From Unit", help: "Select source unit" },
+      toUnit: { label: "To Unit", help: "Select target unit" },
+    },
+    outputs: {
+      result: { label: "Resultaat", help: "Converteered value" },
+    },
+    faq: [
+      {
+        question: "How do I converteer rpm to rad/s?",
+        answer:
+          "Multiply revolutions per minute by 2π/60 ≈ 0.10472. For example, 60 rpm × 0.10472 ≈ 6.2832 rad/s.",
+      },
+      {
+        question: "How are hertz and rad/s related?",
+        answer:
+          "One revolution per second (1 Hz) equals 2π rad/s ≈ 6.2832 rad/s, since one full turn is 2π radians.",
+      },
+      {
+        question: "What is the difference between angular velocity and rpm?",
+        answer:
+          "Angular velocity is the rate of rotation, while rpm (revolutions per minute) is one common unit for it. Both measure how fast something rotates.",
+      },
+    ],
+  },
+
+  pl: {
+    title: "Angular Velocity Konwerter",
+    short: "Konwertuj between rad/s, rpm, hertz, and degrees per second",
+    description:
+      "Konwertuj between angular velocity units including radian per second, revolutions per minute, hertz, and degrees per second with high precision.",
+    keywords: ["angular velocity", "rpm", "rad/s", "hertz", "rotational speed"],
+    inputs: {
+      value: { label: "Wartość", help: "The długość value to konwertuj" },
+      fromUnit: { label: "From Unit", help: "Select source unit" },
+      toUnit: { label: "To Unit", help: "Select target unit" },
+    },
+    outputs: {
+      result: { label: "Wynik", help: "Konwertujed value" },
+    },
+    faq: [
+      {
+        question: "How do I konwertuj rpm to rad/s?",
+        answer:
+          "Multiply revolutions per minute by 2π/60 ≈ 0.10472. For example, 60 rpm × 0.10472 ≈ 6.2832 rad/s.",
+      },
+      {
+        question: "How are hertz and rad/s related?",
+        answer:
+          "One revolution per second (1 Hz) equals 2π rad/s ≈ 6.2832 rad/s, since one full turn is 2π radians.",
+      },
+      {
+        question: "What is the difference between angular velocity and rpm?",
+        answer:
+          "Angular velocity is the rate of rotation, while rpm (revolutions per minute) is one common unit for it. Both measure how fast something rotates.",
+      },
+    ],
+  },
   tr: {
     title: "Açısal Hız Dönüştürücü",
     short: "rad/s, rpm, hertz ve derece/saniye arasında dönüştürün",

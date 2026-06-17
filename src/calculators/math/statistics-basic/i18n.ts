@@ -66,6 +66,137 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "Descriptive Statistics Calculator",
+    short: "Get complete statistical summary: min, max, mean, median, mode, quartiles, variance, and standard deviation.",
+    description:
+      "Gratis descriptive statistics calculator. Analyze your data with 12 key metrics including mean, median, quartiles, IQR, variance, and standard deviation for comprehensive data exploration.",
+    keywords: [
+      "descriptive statistics",
+      "data analysis calculator",
+      "statistical summary",
+      "five-nummer summary",
+      "quartiles calculator",
+      "IQR calculator",
+      "variance calculator",
+      "standard deviation calculator",
+      "median calculator",
+      "mode calculator",
+    ],
+    inputs: {
+      values: {
+        label: "Data values",
+        help: "Enter nummers separated by commas (e.g., 2, 5, 7, 9, 3). Minimum one value required.",
+      },
+    },
+    outputs: {
+      count: { label: "Count (n)", help: "Nummer of data points." },
+      min: { label: "Minimum", help: "Smallest value in the dataset." },
+      max: { label: "Maximum", help: "Largest value in the dataset." },
+      range: { label: "Range", help: "Verschilerence between max and min." },
+      mean: { label: "Mean (Gemiddelde)", help: "Sum of all values divided by count." },
+      median: { label: "Median", help: "Middle value when sorted; splits data in half." },
+      mode: { label: "Mode", help: "Most frequently occurring value (or 'No unique mode')." },
+      q1: { label: "Q1 (25th percentile)", help: "Quartile 1; 25% of data below this value." },
+      q3: { label: "Q3 (75th percentile)", help: "Quartile 3; 75% of data below this value." },
+      iqr: { label: "IQR (Interquartile Range)", help: "Q3 - Q1; contains middle 50% of data." },
+      variance: { label: "Variance", help: "Gemiddelde squared deviation from the mean." },
+      stdDev: { label: "Standaardafwijking", help: "Square root of variance; measures data spread." },
+    },
+    options: {},
+    errors: {
+      invalidInput: "Please enter valid comma-separated nummers.",
+      emptyData: "At least one nummer is required.",
+    },
+    faq: [
+      {
+        q: "What is the difference between mean and median?",
+        a: "Mean is the average (sum/count), while median is the middle value. Median is more resistant to outliers. For symmetric data they're similar; for skewed data they differ significantly.",
+      },
+      {
+        q: "What does IQR tell me?",
+        a: "The Interquartile Range (IQR) spans the middle 50% of your data. It's robust to outliers and used to identify them: values below Q1-1.5×IQR or above Q3+1.5×IQR are typically considered outliers.",
+      },
+      {
+        q: "How do I identify outliers?",
+        a: "Lower bound: Q1 - 1.5 × IQR. Upper bound: Q3 + 1.5 × IQR. Any data point outside these bounds is a potential outlier.",
+      },
+      {
+        q: "What is the five-nummer summary?",
+        a: "A concise data description using: minimum, Q1, median, Q3, and maximum. These five nummers provide a quick understanding of data distribution, center, and spread.",
+      },
+      {
+        q: "Why is standard deviation important?",
+        a: "Standard deviation quantifies data variability. In a normal distribution, ~68% of data falls within 1 std dev of the mean, ~95% within 2, and ~99.7% within 3.",
+      },
+    ],
+  },
+
+  pl: {
+    title: "Descriptive Statistics Kalkulator",
+    short: "Get complete statistical summary: min, max, mean, median, mode, quartiles, variance, and standard deviation.",
+    description:
+      "Darmowy descriptive statistics kalkulator. Analyze your data with 12 key metrics including mean, median, quartiles, IQR, variance, and standard deviation for comprehensive data exploration.",
+    keywords: [
+      "descriptive statistics",
+      "data analysis kalkulator",
+      "statistical summary",
+      "five-liczba summary",
+      "quartiles kalkulator",
+      "IQR kalkulator",
+      "variance kalkulator",
+      "standard deviation kalkulator",
+      "median kalkulator",
+      "mode kalkulator",
+    ],
+    inputs: {
+      values: {
+        label: "Data values",
+        help: "Enter liczbas separated by commas (e.g., 2, 5, 7, 9, 3). Minimum one value required.",
+      },
+    },
+    outputs: {
+      count: { label: "Count (n)", help: "Liczba of data points." },
+      min: { label: "Minimum", help: "Smallest value in the dataset." },
+      max: { label: "Maximum", help: "Largest value in the dataset." },
+      range: { label: "Range", help: "Różnicaerence between max and min." },
+      mean: { label: "Mean (Średnia)", help: "Sum of all values divided by count." },
+      median: { label: "Median", help: "Middle value when sorted; splits data in half." },
+      mode: { label: "Mode", help: "Most frequently occurring value (or 'No unique mode')." },
+      q1: { label: "Q1 (25th percentile)", help: "Quartile 1; 25% of data below this value." },
+      q3: { label: "Q3 (75th percentile)", help: "Quartile 3; 75% of data below this value." },
+      iqr: { label: "IQR (Interquartile Range)", help: "Q3 - Q1; contains middle 50% of data." },
+      variance: { label: "Variance", help: "Średnia squared deviation from the mean." },
+      stdDev: { label: "Odchylenie Standardowe", help: "Square root of variance; measures data spread." },
+    },
+    options: {},
+    errors: {
+      invalidInput: "Please enter valid comma-separated liczbas.",
+      emptyData: "At least one liczba is required.",
+    },
+    faq: [
+      {
+        q: "What is the difference between mean and median?",
+        a: "Mean is the average (sum/count), while median is the middle value. Median is more resistant to outliers. For symmetric data they're similar; for skewed data they differ significantly.",
+      },
+      {
+        q: "What does IQR tell me?",
+        a: "The Interquartile Range (IQR) spans the middle 50% of your data. It's robust to outliers and used to identify them: values below Q1-1.5×IQR or above Q3+1.5×IQR are typically considered outliers.",
+      },
+      {
+        q: "How do I identify outliers?",
+        a: "Lower bound: Q1 - 1.5 × IQR. Upper bound: Q3 + 1.5 × IQR. Any data point outside these bounds is a potential outlier.",
+      },
+      {
+        q: "What is the five-liczba summary?",
+        a: "A concise data description using: minimum, Q1, median, Q3, and maximum. These five liczbas provide a quick understanding of data distribution, center, and spread.",
+      },
+      {
+        q: "Why is standard deviation important?",
+        a: "Standard deviation quantifies data variability. In a normal distribution, ~68% of data falls within 1 std dev of the mean, ~95% within 2, and ~99.7% within 3.",
+      },
+    ],
+  },
   pt: {
     title: "Calculadora de Estatística Básica",
     short: "Calcule média, mediana, moda, desvio padrão e mais a partir de uma lista de números.",

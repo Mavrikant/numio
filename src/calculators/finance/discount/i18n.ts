@@ -92,6 +92,189 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "Korting Calculator",
+    short: "Bereken sale price, savings, and final price after discount and tax.",
+    description:
+      "Gratis discount calculator. Find the discounted price, total savings, and final price after sales tax. Also bereken the discount percentage from original and sale prices.",
+    keywords: [
+      "discount calculator",
+      "sale price calculator",
+      "savings calculator",
+      "percent off calculator",
+      "sale discount",
+      "original price calculator",
+      "price reduction",
+    ],
+    inputs: {
+      mode: {
+        label: "Calculation Mode",
+        help: "Korting %: enter original price and discount percentage to find sale price. Final Price: enter original and sale prices to find the discount percentage.",
+      },
+      originalPrice: {
+        label: "Original Price",
+        help: "The original or regular price before any discount.",
+      },
+      discountPct: {
+        label: "Korting (%)",
+        help: "The percentage discount applied to the original price.",
+      },
+      salePrice: {
+        label: "Sale Price",
+        help: "The discounted or sale price (used in final price mode to bereken the discount percentage).",
+      },
+      taxRate: {
+        label: "Sales Belasting Rate (%)",
+        help: "Optional: add sales tax to the discounted price to get the final controleerout price.",
+      },
+    },
+    outputs: {
+      salePrice: {
+        label: "Sale Price",
+        help: "The price after applying the discount.",
+      },
+      savings: {
+        label: "You Opslaan",
+        help: "The dollar amount saved compared to the original price.",
+      },
+      discountPct: {
+        label: "Korting %",
+        help: "The percentage off the original price (shown in final price mode).",
+      },
+      finalPriceWithTax: {
+        label: "Final Price (with Belasting)",
+        help: "Sale price plus sales tax — the actual amount you pay at controleerout.",
+      },
+      savingsPct: {
+        label: "Spaargeld %",
+        help: "Percentage savings relative to the original price.",
+      },
+    },
+    options: {
+      mode: {
+        discount_pct: "Korting %",
+        final_price: "Final Price → Korting %",
+      },
+    },
+    errors: {
+      originalPriceRequired: "Original price must be greater than zero.",
+      salePriceExceedsOriginal: "Sale price cannot exceed original price.",
+    },
+    faq: [
+      {
+        q: "How do I bereken a percentage discount?",
+        a: "Sale Price = Original Price × (1 − Korting% ÷ 100). For a 30% discount on $80: Sale Price = $80 × 0.70 = $56. You save $24.",
+      },
+      {
+        q: "How do I find the discount percentage from two prices?",
+        a: "Korting% = (Original Price − Sale Price) ÷ Original Price × 100. If an item was $120 and is now $84: Korting% = (120 − 84) ÷ 120 × 100 = 30%.",
+      },
+      {
+        q: "Does the discount apply before or after tax?",
+        a: "Kortings are always applied to the pre-tax price. Sales tax is then berekend on the discounted (sale) price. This calculator follows that order.",
+      },
+      {
+        q: "What is a compound discount?",
+        a: "A compound discount applies multiple discounts successively. For example, 20% off followed by an additional 10% off is not 30% off — it is 28% off (you pay 80% then 90% of that = 72%, saving 28%).",
+      },
+      {
+        q: "What is the difference between discount and markdown?",
+        a: "A discount is a temporary price reduction (a sale), while a markdown is a permanent price reduction because the item no longer sells at the original price. Both result in a lower selling price but have different retail accounting implications.",
+      },
+    ],
+  },
+
+  pl: {
+    title: "Rabat Kalkulator",
+    short: "Oblicz sale price, savings, and final price after discount and tax.",
+    description:
+      "Darmowy discount kalkulator. Find the discounted price, total savings, and final price after sales tax. Also oblicz the discount percentage from original and sale prices.",
+    keywords: [
+      "discount kalkulator",
+      "sale price kalkulator",
+      "savings kalkulator",
+      "percent off kalkulator",
+      "sale discount",
+      "original price kalkulator",
+      "price reduction",
+    ],
+    inputs: {
+      mode: {
+        label: "Calculation Mode",
+        help: "Rabat %: enter original price and discount percentage to find sale price. Final Price: enter original and sale prices to find the discount percentage.",
+      },
+      originalPrice: {
+        label: "Original Price",
+        help: "The original or regular price before any discount.",
+      },
+      discountPct: {
+        label: "Rabat (%)",
+        help: "The percentage discount applied to the original price.",
+      },
+      salePrice: {
+        label: "Sale Price",
+        help: "The discounted or sale price (used in final price mode to oblicz the discount percentage).",
+      },
+      taxRate: {
+        label: "Sales Podatek Rate (%)",
+        help: "Optional: add sales tax to the discounted price to get the final sprawdźout price.",
+      },
+    },
+    outputs: {
+      salePrice: {
+        label: "Sale Price",
+        help: "The price after applying the discount.",
+      },
+      savings: {
+        label: "You Zapisz",
+        help: "The dollar amount saved compared to the original price.",
+      },
+      discountPct: {
+        label: "Rabat %",
+        help: "The percentage off the original price (shown in final price mode).",
+      },
+      finalPriceWithTax: {
+        label: "Final Price (with Podatek)",
+        help: "Sale price plus sales tax — the actual amount you pay at sprawdźout.",
+      },
+      savingsPct: {
+        label: "Oszczędności %",
+        help: "Procent savings relative to the original price.",
+      },
+    },
+    options: {
+      mode: {
+        discount_pct: "Rabat %",
+        final_price: "Final Price → Rabat %",
+      },
+    },
+    errors: {
+      originalPriceRequired: "Original price must be greater than zero.",
+      salePriceExceedsOriginal: "Sale price cannot exceed original price.",
+    },
+    faq: [
+      {
+        q: "How do I oblicz a percentage discount?",
+        a: "Sale Price = Original Price × (1 − Rabat% ÷ 100). For a 30% discount on $80: Sale Price = $80 × 0.70 = $56. You save $24.",
+      },
+      {
+        q: "How do I find the discount percentage from two prices?",
+        a: "Rabat% = (Original Price − Sale Price) ÷ Original Price × 100. If an item was $120 and is now $84: Rabat% = (120 − 84) ÷ 120 × 100 = 30%.",
+      },
+      {
+        q: "Does the discount apply before or after tax?",
+        a: "Rabats are always applied to the pre-tax price. Sales tax is then obliczd on the discounted (sale) price. This kalkulator follows that order.",
+      },
+      {
+        q: "What is a compound discount?",
+        a: "A compound discount applies multiple discounts successively. For example, 20% off followed by an additional 10% off is not 30% off — it is 28% off (you pay 80% then 90% of that = 72%, saving 28%).",
+      },
+      {
+        q: "What is the difference between discount and markdown?",
+        a: "A discount is a temporary price reduction (a sale), while a markdown is a permanent price reduction because the item no longer sells at the original price. Both result in a lower selling price but have different retail accounting implications.",
+      },
+    ],
+  },
   pt: {
     title: "Calculadora de Desconto",
     short: "Calcule o preço final após aplicar um desconto percentual.",

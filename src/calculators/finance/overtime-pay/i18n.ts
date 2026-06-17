@@ -16,6 +16,27 @@ const i18n: CalculatorI18n = {
       { q: "Is this gross or net pay?", a: "Gross — before taxes and deductions. Use a paycheck calculator for take-home pay." },
     ],
   },
+  nl: {
+    title: "Overuren Pay Calculator", short: "Bereken total pay from regular and overtime uren.",
+    description: "Gratis overtime pay calculator. Enter your hourly rate, regular uren, overtime uren and overtime multiplier (e.g. 1.5× for time-and-a-half) to get regular pay, overtime pay and total gross pay.",
+    keywords: ["overtime pay calculator", "overtime calculator", "time and a half", "hourly pay calculator", "overtime rate"],
+    ...io("Hourly rate", "Regular uren", "Overuren uren", "Overuren multiplier", "Total pay", "Regular pay", "Overuren pay", "Overuren rate"),
+    faq: [
+      { q: "How is overtime pay berekend?", a: "Overuren uren are paid at your hourly rate times a multiplier — commonly 1.5× ('time and a half'). Total pay = regular uren × rate + overtime uren × (rate × multiplier)." },
+      { q: "Is this gross or net pay?", a: "Gross — before taxes and deductions. Use a paycontroleer calculator for take-home pay." },
+    ],
+  },
+
+  pl: {
+    title: "Nadgodziny Pay Kalkulator", short: "Oblicz total pay from regular and overtime godzin.",
+    description: "Darmowy overtime pay kalkulator. Enter your hourly rate, regular godzin, overtime godzin and overtime multiplier (e.g. 1.5× for time-and-a-half) to get regular pay, overtime pay and total gross pay.",
+    keywords: ["overtime pay kalkulator", "overtime kalkulator", "time and a half", "hourly pay kalkulator", "overtime rate"],
+    ...io("Hourly rate", "Regular godzin", "Nadgodziny godzin", "Nadgodziny multiplier", "Total pay", "Regular pay", "Nadgodziny pay", "Nadgodziny rate"),
+    faq: [
+      { q: "How is overtime pay obliczd?", a: "Nadgodziny godzin are paid at your hourly rate times a multiplier — commonly 1.5× ('time and a half'). Total pay = regular godzin × rate + overtime godzin × (rate × multiplier)." },
+      { q: "Is this gross or net pay?", a: "Gross — before taxes and deductions. Use a paysprawdź kalkulator for take-home pay." },
+    ],
+  },
   pt: {
     title: "Calculadora de Horas Extras", short: "Calcule o valor a receber pelas horas extraordinárias trabalhadas.",
     description: "Calculadora gratuita de horas extras. Calcule o valor a receber pelas horas extraordinárias com base na taxa horária e multiplicador legal.",

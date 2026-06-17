@@ -82,6 +82,57 @@ const i18n: ToolI18n = {
       },
     ],
   },
+  nl: {
+    title: "Chart Bouwer — CSV to Graph",
+    short: "Upload a CSV and build interactive line, bar, scatter, area, pie, histogram or box charts, then download them as PNG or SVG afbeeldings.",
+    description: "Gratis online chart maker. Upload your own CSV file or paste data, choose any chart type — line, bar, scatter, area, pie, histogram, box plot — pick the columns to plot, and download the result as a high-resolution PNG or SVG afbeelding. Everything runs in uw browser; your data is never uploaded.",
+    keywords: ["chart maker", "graph maker", "csv to chart", "online chart", "data visualization", "line chart", "bar chart", "pie chart", "scatter plot", "download chart afbeelding", "plotly"],
+    ui: enUi,
+    faq: [
+      {
+        q: "Does my data get uploaded to a server?",
+        a: "No. The CSV is read and rendered entirely in uw browser using JavaScript. Nothing is sent over the network, so it's safe to use with private or sensitive data.",
+      },
+      {
+        q: "What chart types are supported?",
+        a: "Line, bar (grouped or stacked), scatter, area, pie, histogram, and box plot. Pick an X column for the categories or horizontal axis and one or more numeric Y columns for the values.",
+      },
+      {
+        q: "How do I download the chart as an afbeelding?",
+        a: "Use the Download buttons above the chart to save a PNG raster afbeelding or an SVG vector file. SVG stays sharp at any grootte and is ideal for print or further editing.",
+      },
+      {
+        q: "What file formatteers can I upload?",
+        a: "Any comma, semicolon, tab, or pipe-separated tekst file (.csv, .tsv, .txt). The delimiter and header row are auto-detected, and both US (1,234.56) and EU (1.234,56) nummer formatteers are handled.",
+      },
+    ],
+  },
+
+  pl: {
+    title: "Chart Konstruktor — CSV to Graph",
+    short: "Upload a CSV and build interactive line, bar, scatter, area, pie, histogram or box charts, then download them as PNG or SVG obrazs.",
+    description: "Darmowy online chart maker. Upload your own CSV file or paste data, choose any chart type — line, bar, scatter, area, pie, histogram, box plot — pick the columns to plot, and download the result as a high-resolution PNG or SVG obraz. Everything runs w Twojej przeglądarce; your data is never uploaded.",
+    keywords: ["chart maker", "graph maker", "csv to chart", "online chart", "data visualization", "line chart", "bar chart", "pie chart", "scatter plot", "download chart obraz", "plotly"],
+    ui: enUi,
+    faq: [
+      {
+        q: "Does my data get uploaded to a server?",
+        a: "No. The CSV is read and rendered entirely w Twojej przeglądarce using JavaScript. Nothing is sent over the network, so it's safe to use with private or sensitive data.",
+      },
+      {
+        q: "What chart types are supported?",
+        a: "Line, bar (grouped or stacked), scatter, area, pie, histogram, and box plot. Pick an X column for the categories or horizontal axis and one or more numeric Y columns for the values.",
+      },
+      {
+        q: "How do I download the chart as an obraz?",
+        a: "Use the Download buttons above the chart to save a PNG raster obraz or an SVG vector file. SVG stays sharp at any rozmiar and is ideal for print or further editing.",
+      },
+      {
+        q: "What file formatujs can I upload?",
+        a: "Any comma, semicolon, tab, or pipe-separated tekst file (.csv, .tsv, .txt). The delimiter and header row are auto-detected, and both US (1,234.56) and EU (1.234,56) liczba formatujs are handled.",
+      },
+    ],
+  },
   pt: {
     title: "Chart Builder â CSV to Graph",
     short: "Upload a CSV e build interactive line, bar, scatter, area, pie, histogram ou box charts, then descarregar them as PNG ou SVG images.",

@@ -64,6 +64,133 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "Draaddikte Calculator",
+    short: "Bereken wire resistance, voltage drop, and ampacity for AWG/mm² groottes.",
+    description:
+      "Gratis wire gauge calculator. Enter AWG or mm², wire lengte, current, and material to bereken resistance, voltage drop, power loss, and ampacity rating.",
+    keywords: [
+      "wire gauge",
+      "AWG calculator",
+      "cable grootte",
+      "voltage drop",
+      "wire resistance",
+      "ampacity",
+      "copper wire",
+    ],
+    inputs: {
+      sizeUnit: { label: "Grootte unit", help: "AWG (American Draaddikte) or mm²" },
+      wireSize: { label: "Wire grootte", help: "AWG nummer or cross-section in mm²" },
+      wireLength: { label: "Wire lengte", help: "Lengte of wire in metres (single conductor)" },
+      current: { label: "Current", help: "Current flowing through wire in amperes" },
+      material: { label: "Conductor material", help: "Copper or aluminum" },
+      frequency: { label: "Frequency", help: "DC or AC (50/60 Hz)" },
+    },
+    outputs: {
+      crossSectionArea: { label: "Cross-section area", help: "Conductor area in mm²" },
+      awgEquivalent: { label: "AWG equivalent", help: "Equivalent AWG grootte" },
+      resistance: { label: "Resistance", help: "Total resistance in ohms" },
+      voltageDrop: { label: "Voltage drop", help: "Voltage loss across wire" },
+      powerLoss: { label: "Power loss", help: "Power dissipated as heat in watts" },
+      ampacityRating: { label: "Ampacity rating", help: "Maximum safe continuous current" },
+    },
+    options: {
+      sizeUnit: { awg: "AWG (American)", mm2: "mm² (Metric)" },
+      material: { copper: "Copper", aluminum: "Aluminum" },
+      frequency: { dc: "DC (Direct)", ac50: "AC 50 Hz", ac60: "AC 60 Hz" },
+    },
+    errors: {
+      invalidSize: "Wire grootte must be positive.",
+      invalidLength: "Wire lengte must be positive.",
+      invalidCurrent: "Current must be positive.",
+    },
+    faq: [
+      {
+        q: "What is AWG?",
+        a: "American Draaddikte (AWG) is a standardized system for wire diameters. Lower AWG nummers indicate thicker wires and lower resistance.",
+      },
+      {
+        q: "Why does voltage drop matter?",
+        a: "Excessive voltage drop reduces power delivery and efficiency. Electrical codes limit voltage drop to 3–5% for branch circuits.",
+      },
+      {
+        q: "How do I choose the right wire gauge?",
+        a: "Choose wire gauge based on ampacity (max safe current) and acceptable voltage drop. Consult local electrical codes and use professional guidance.",
+      },
+      {
+        q: "Is aluminum wire suitable?",
+        a: "Aluminum has higher resistance than copper but is lighter and cheaper. It requires larger gauges for the same current capacity.",
+      },
+      {
+        q: "What is skin effect?",
+        a: "At high AC frequencies, current concentrates near the wire surface, increasing effective resistance by 5–15%. This calculator adds 5% for AC.",
+      },
+    ],
+  },
+
+  pl: {
+    title: "Grubość Przewodu Kalkulator",
+    short: "Oblicz wire resistance, voltage drop, and ampacity for AWG/mm² rozmiars.",
+    description:
+      "Darmowy wire gauge kalkulator. Enter AWG or mm², wire długość, current, and material to oblicz resistance, voltage drop, power loss, and ampacity rating.",
+    keywords: [
+      "wire gauge",
+      "AWG kalkulator",
+      "cable rozmiar",
+      "voltage drop",
+      "wire resistance",
+      "ampacity",
+      "copper wire",
+    ],
+    inputs: {
+      sizeUnit: { label: "Rozmiar unit", help: "AWG (American Grubość Przewodu) or mm²" },
+      wireSize: { label: "Wire rozmiar", help: "AWG liczba or cross-section in mm²" },
+      wireLength: { label: "Wire długość", help: "Długość of wire in metres (single conductor)" },
+      current: { label: "Current", help: "Current flowing through wire in amperes" },
+      material: { label: "Conductor material", help: "Copper or aluminum" },
+      frequency: { label: "Frequency", help: "DC or AC (50/60 Hz)" },
+    },
+    outputs: {
+      crossSectionArea: { label: "Cross-section area", help: "Conductor area in mm²" },
+      awgEquivalent: { label: "AWG equivalent", help: "Equivalent AWG rozmiar" },
+      resistance: { label: "Resistance", help: "Total resistance in ohms" },
+      voltageDrop: { label: "Voltage drop", help: "Voltage loss across wire" },
+      powerLoss: { label: "Power loss", help: "Power dissipated as heat in watts" },
+      ampacityRating: { label: "Ampacity rating", help: "Maximum safe continuous current" },
+    },
+    options: {
+      sizeUnit: { awg: "AWG (American)", mm2: "mm² (Metric)" },
+      material: { copper: "Copper", aluminum: "Aluminum" },
+      frequency: { dc: "DC (Direct)", ac50: "AC 50 Hz", ac60: "AC 60 Hz" },
+    },
+    errors: {
+      invalidSize: "Wire rozmiar must be positive.",
+      invalidLength: "Wire długość must be positive.",
+      invalidCurrent: "Current must be positive.",
+    },
+    faq: [
+      {
+        q: "What is AWG?",
+        a: "American Grubość Przewodu (AWG) is a standardized system for wire diameters. Lower AWG liczbas indicate thicker wires and lower resistance.",
+      },
+      {
+        q: "Why does voltage drop matter?",
+        a: "Excessive voltage drop reduces power delivery and efficiency. Electrical kods limit voltage drop to 3–5% for branch circuits.",
+      },
+      {
+        q: "How do I choose the right wire gauge?",
+        a: "Choose wire gauge based on ampacity (max safe current) and acceptable voltage drop. Consult local electrical kods and use professional guidance.",
+      },
+      {
+        q: "Is aluminum wire suitable?",
+        a: "Aluminum has higher resistance than copper but is lighter and cheaper. It requires larger gauges for the same current capacity.",
+      },
+      {
+        q: "What is skin effect?",
+        a: "At high AC frequencies, current concentrates near the wire surface, increasing effective resistance by 5–15%. This kalkulator adds 5% for AC.",
+      },
+    ],
+  },
   pt: {
     title: "Calculadora de Calibre de Fio (AWG)",
     short: "Determine o calibre AWG necessário com base na corrente e comprimento.",

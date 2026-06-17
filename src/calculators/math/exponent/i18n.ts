@@ -34,6 +34,73 @@ const i18n: CalculatorI18n = {
       invalidInput: "Invalid input values.",
     },
   },
+  nl: {
+    title: "Exponent Calculator",
+    short: "Bereken powers and exponents. Find base^exponent, expanded notation, and scientific notation.",
+    description: "Gratis exponent calculator. Bereken powers with any base and exponent. Get expanded notation and scientific notation. Handles negative exponents and special cases.",
+    keywords: ["exponent calculator", "power calculator", "base exponent", "scientific notation", "exponential"],
+    inputs: {
+      base: {
+        label: "Base",
+        help: "The nummer being raised to a power.",
+      },
+      exponent: {
+        label: "Exponent",
+        help: "The power to which the base is raised. Can be positive, negative, or zero.",
+      },
+    },
+    outputs: {
+      result: {
+        label: "Resultaat",
+        help: "The value of base raised to the exponent.",
+      },
+      expanded: {
+        label: "Expanded",
+        help: "Shows the calculation in expanded form (for small exponents).",
+      },
+      scientific: {
+        label: "Wetenschappelijke Notatie",
+        help: "The result expressed in scientific notation.",
+      },
+    },
+    errors: {
+      invalidInput: "Invalid input values.",
+    },
+  },
+
+  pl: {
+    title: "Wykładnik Kalkulator",
+    short: "Oblicz powers and exponents. Find base^exponent, expanded notation, and scientific notation.",
+    description: "Darmowy exponent kalkulator. Oblicz powers with any base and exponent. Get expanded notation and scientific notation. Handles negative exponents and special cases.",
+    keywords: ["exponent kalkulator", "power kalkulator", "base exponent", "scientific notation", "exponential"],
+    inputs: {
+      base: {
+        label: "Base",
+        help: "The liczba being raised to a power.",
+      },
+      exponent: {
+        label: "Wykładnik",
+        help: "The power to which the base is raised. Can be positive, negative, or zero.",
+      },
+    },
+    outputs: {
+      result: {
+        label: "Wynik",
+        help: "The value of base raised to the exponent.",
+      },
+      expanded: {
+        label: "Expanded",
+        help: "Shows the calculation in expanded form (for small exponents).",
+      },
+      scientific: {
+        label: "Notacja Naukowa",
+        help: "The result expressed in scientific notation.",
+      },
+    },
+    errors: {
+      invalidInput: "Invalid input values.",
+    },
+  },
   pt: {
     title: "Calculadora de Potência (Expoente)",
     short: "Calcule a potência de qualquer número com expoente inteiro ou decimal.",

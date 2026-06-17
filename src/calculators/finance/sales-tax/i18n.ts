@@ -56,6 +56,117 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "Sales Belasting Calculator",
+    short:
+      "Add or verwijder sales tax from any amount and see the tax and final total direct.",
+    description:
+      "Gratis sales tax calculator. Enter an amount and tax rate to add tax to a pre-tax price, or verwijder tax from a tax-inclusive total to recover the original price.",
+    keywords: [
+      "sales tax calculator",
+      "sales tax",
+      "reverse sales tax",
+      "tax rate calculator",
+      "total with tax",
+      "pre-tax price",
+    ],
+    inputs: {
+      mode: {
+        label: "Mode",
+        help: "Add tax to a pre-tax amount, or verwijder tax from a tax-inclusive total.",
+      },
+      amount: {
+        label: "Amount",
+        help: "The pre-tax price when adding tax, or the tax-inclusive total when removing tax.",
+      },
+      taxRate: {
+        label: "Sales Belasting Rate (%)",
+        help: "The combined state, county, and city sales tax rate that applies to the purchase.",
+      },
+    },
+    outputs: {
+      totalAmount: { label: "Total", help: "Final price including sales tax." },
+      taxAmount: { label: "Sales Belasting", help: "Belasting portion of the total." },
+      preTaxAmount: {
+        label: "Pre-Belasting Amount",
+        help: "Original price before sales tax.",
+      },
+    },
+    options: {
+      add: "Add tax to amount",
+      remove: "Verwijder tax from total",
+    },
+    faq: [
+      {
+        q: "How do I bereken sales tax?",
+        a: "Multiply the pre-tax price by the tax rate expressed as a decimal. For an 8.25% rate, multiply by 0.0825, then add the result to the price to get the total. A $100 item costs $108.25 with 8.25% sales tax.",
+      },
+      {
+        q: "How do I verwijder sales tax from a total?",
+        a: "Divide the tax-inclusive total by 1 plus the rate as a decimal. A $108.25 total at 8.25% has a pre-tax price of 108.25 ÷ 1.0825 = $100, so the tax was $8.25. Choose the 'Verwijder tax' mode to do this automatically.",
+      },
+      {
+        q: "What sales tax rate should I use?",
+        a: "Use the combined rate for your location — most US states stack a state rate with county and city rates. Rates commonly range from 0% (e.g. Oregon) to over 10% in some cities.",
+      },
+    ],
+  },
+
+  pl: {
+    title: "Sales Podatek Kalkulator",
+    short:
+      "Add or usuń sales tax from any amount and see the tax and final total natychmiast.",
+    description:
+      "Darmowy sales tax kalkulator. Enter an amount and tax rate to add tax to a pre-tax price, or usuń tax from a tax-inclusive total to recover the original price.",
+    keywords: [
+      "sales tax kalkulator",
+      "sales tax",
+      "reverse sales tax",
+      "tax rate kalkulator",
+      "total with tax",
+      "pre-tax price",
+    ],
+    inputs: {
+      mode: {
+        label: "Mode",
+        help: "Add tax to a pre-tax amount, or usuń tax from a tax-inclusive total.",
+      },
+      amount: {
+        label: "Amount",
+        help: "The pre-tax price when adding tax, or the tax-inclusive total when removing tax.",
+      },
+      taxRate: {
+        label: "Sales Podatek Rate (%)",
+        help: "The combined state, county, and city sales tax rate that applies to the purchase.",
+      },
+    },
+    outputs: {
+      totalAmount: { label: "Total", help: "Final price including sales tax." },
+      taxAmount: { label: "Sales Podatek", help: "Podatek portion of the total." },
+      preTaxAmount: {
+        label: "Pre-Podatek Amount",
+        help: "Original price before sales tax.",
+      },
+    },
+    options: {
+      add: "Add tax to amount",
+      remove: "Usuń tax from total",
+    },
+    faq: [
+      {
+        q: "How do I oblicz sales tax?",
+        a: "Multiply the pre-tax price by the tax rate expressed as a decimal. For an 8.25% rate, multiply by 0.0825, then add the result to the price to get the total. A $100 item costs $108.25 with 8.25% sales tax.",
+      },
+      {
+        q: "How do I usuń sales tax from a total?",
+        a: "Divide the tax-inclusive total by 1 plus the rate as a decimal. A $108.25 total at 8.25% has a pre-tax price of 108.25 ÷ 1.0825 = $100, so the tax was $8.25. Choose the 'Usuń tax' mode to do this automatically.",
+      },
+      {
+        q: "What sales tax rate should I use?",
+        a: "Use the combined rate for your location — most US states stack a state rate with county and city rates. Rates commonly range from 0% (e.g. Oregon) to over 10% in some cities.",
+      },
+    ],
+  },
   tr: {
     title: "Satış Vergisi Hesaplama",
     short:

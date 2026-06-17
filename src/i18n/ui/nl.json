@@ -1,0 +1,169 @@
+{
+  "site": {
+    "name": "Numio",
+    "tagline": "Gratis calculators voor het dagelijks leven — financiën, gezondheid, techniek, wiskunde.",
+    "description": "Gebruik gratis, nauwkeurige calculators in 16 talen. Geen registratie, geen tracking, directe resultaten."
+  },
+  "nav": {
+    "home": "Startpagina",
+    "categories": "Categorieën",
+    "search": "Zoeken",
+    "about": "Over ons",
+    "contact": "Contact",
+    "privacy": "Privacybeleid",
+    "openMenu": "Menu openen",
+    "closeMenu": "Menu sluiten",
+    "skipToContent": "Naar inhoud springen",
+    "mainNavigation": "Hoofdnavigatie",
+    "tools": "Tools",
+    "sitemap": "Sitemap",
+    "allCategories": "Alle categorieën"
+  },
+  "sitemap": {
+    "title": "Sitemap",
+    "description": "Bekijk elke calculator, converter en tool op Numio op één plek."
+  },
+  "actions": {
+    "calculate": "Berekenen",
+    "reset": "Resetten",
+    "copy": "Kopiëren",
+    "share": "Delen",
+    "print": "Afdrukken",
+    "save": "Opslaan"
+  },
+  "labels": {
+    "result": "Resultaat",
+    "results": "Resultaten",
+    "inputs": "Invoer",
+    "settings": "Instellingen",
+    "formula": "Formule",
+    "references": "Referenties",
+    "related": "Gerelateerde calculators",
+    "loading": "Laden…",
+    "noResults": "Geen resultaten"
+  },
+  "errors": {
+    "required": "Dit veld is verplicht",
+    "invalid": "Ongeldige waarde",
+    "outOfRange": "Waarde is buiten bereik",
+    "tooSmall": "Waarde is te klein",
+    "tooLarge": "Waarde is te groot"
+  },
+  "footer": {
+    "copyright": "© Numio",
+    "disclaimer": "Resultaten zijn uitsluitend voor informatieve doeleinden. Controleer voordat u gebruikt voor belangrijke beslissingen.",
+    "sourceCode": "Broncode",
+    "links": "Links",
+    "lastUpdated": "Laatst bijgewerkt",
+    "allCalculators": "Alle calculators",
+    "comingSoon": "Binnenkort beschikbaar"
+  },
+  "theme": {
+    "toggle": "Thema wisselen",
+    "light": "Licht",
+    "dark": "Donker",
+    "auto": "Auto",
+    "switchToLight": "Overschakelen naar lichte modus",
+    "switchToDark": "Overschakelen naar donkere modus",
+    "switchToAuto": "Overschakelen naar systeemthema"
+  },
+  "lang": {
+    "switchLanguage": "Taal wijzigen",
+    "currentLanguage": "Huidige taal",
+    "selectLanguage": "Taal selecteren"
+  },
+  "breadcrumb": {
+    "home": "Startpagina",
+    "navigation": "Broodkruimelpad"
+  },
+  "categories": {
+    "health": "Gezondheid",
+    "finance": "Financiën",
+    "engineering": "Techniek",
+    "math": "Wiskunde",
+    "conversion": "Conversie",
+    "all": "Alle categorieën"
+  },
+  "consent": {
+    "title": "Wij hechten waarde aan uw privacy",
+    "description": "Wij gebruiken cookies en vergelijkbare technologieën om uw ervaring te verbeteren, verkeer te analyseren en relevante advertenties te tonen. U kunt kiezen welke categorieën u accepteert.",
+    "accept": "Alles accepteren",
+    "reject": "Alles weigeren",
+    "customize": "Aanpassen",
+    "privacyPolicy": "Privacybeleid",
+    "customizeTitle": "Cookievoorkeuren",
+    "savePreferences": "Voorkeuren opslaan",
+    "back": "Terug",
+    "essential": "Essentieel",
+    "essentialDesc": "Vereist voor de werking van de site. Altijd actief.",
+    "analytics": "Analytics",
+    "analyticsDesc": "Helpt ons te begrijpen hoe bezoekers de site gebruiken (anoniem).",
+    "ads": "Advertenties",
+    "adsDesc": "Stelt ons in staat relevante advertenties te tonen en gratis toegang tot calculators te ondersteunen."
+  },
+  "tools": {
+    "description": "Upload CSV-gegevens en maak interactieve visualisaties — histogrammen, spreidingsdiagrammen, tijdreeksen en beschrijvende statistieken.",
+    "browseCatalog": "Alle tools bekijken",
+    "uploadData": "Upload uw gegevens"
+  },
+  "authority": {
+    "formula": "Formule",
+    "sources": "Bronnen & referenties",
+    "accuracyNote": "Nauwkeurigheidsnotitie",
+    "disclaimer": "Disclaimer",
+    "lastReviewed": "Laatst beoordeeld",
+    "editorialTeam": "door het redactieteam van Numio"
+  },
+  "seo": {
+    "metaSuffix": "Gratis, direct, geen registratie."
+  },
+  "compare": {
+    "toggle": "Scenario's vergelijken",
+    "scenarioA": "Scenario A",
+    "scenarioB": "Scenario B",
+    "difference": "Verschil",
+    "exitCompare": "Vergelijking afsluiten",
+    "deltaLabel": "Δ"
+  },
+  "pdf": {
+    "print": "Afdrukken",
+    "download": "PDF downloaden",
+    "generated": "Gegenereerd door Numio",
+    "title": "Calculatorresultaten"
+  },
+  "pwa": {
+    "install": "App installeren"
+  },
+  "nl": {
+    "toggle": "✨ Probeer in gewoon Nederlands",
+    "placeholder": "Voorbeeld: Ik ben 30 jaar oud, 70 kg, 175 cm lang",
+    "fill": "Calculator vullen",
+    "matched": "{n} van de {total} velden gevonden",
+    "unmatched": "Kon niet vinden: {fields}"
+  },
+  "home": {
+    "badge": "100% gratis · Privé · Geen registratie",
+    "ctaCalculators": "Calculators bekijken",
+    "ctaTools": "Tools verkennen",
+    "statLanguages": "talen",
+    "categoriesHeading": "Calculators per categorie",
+    "categoriesSubheading": "Nauwkeurige, directe resultaten voor elk onderwerp — kies een categorie om te beginnen.",
+    "calculators": "calculators",
+    "toolsHeading": "Ontwikkelaars- & dagelijkse tools",
+    "toolsDesc": "Converters, generatoren, formatters en validators — {n} browser-gebaseerde tools die volledig op uw apparaat draaien.",
+    "toolsCta": "Alle tools bekijken",
+    "whyHeading": "Waarom Numio",
+    "featurePrivateTitle": "Privacy-by-design",
+    "featurePrivateDesc": "Geen accounts, geen tracking. Alles draait in uw browser.",
+    "featureInstantTitle": "Directe resultaten",
+    "featureInstantDesc": "Antwoorden worden bijgewerkt terwijl u typt — geen wachttijden, geen herladen.",
+    "featureLanguagesTitle": "16 talen",
+    "featureLanguagesDesc": "Volledig gelokaliseerd voor een wereldwijd publiek.",
+    "featureOfflineTitle": "Werkt offline",
+    "featureOfflineDesc": "Installeer Numio als app en gebruik het overal."
+  },
+  "search": {
+    "placeholder": "Zoek calculators en tools…",
+    "noResults": "Geen resultaten gevonden."
+  }
+}

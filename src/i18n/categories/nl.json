@@ -1,0 +1,14 @@
+{
+  "health": "Gezondheid",
+  "finance": "Financiën",
+  "engineering": "Techniek",
+  "math": "Wiskunde",
+  "conversion": "Conversie",
+  "datetime": "Datum en tijd",
+  "data-analysis": "Gegevensanalyse",
+  "visualization": "Visualisatie",
+  "statistics": "Statistiek",
+  "security": "Beveiliging",
+  "text": "Tekst",
+  "developer": "Ontwikkelaar"
+}

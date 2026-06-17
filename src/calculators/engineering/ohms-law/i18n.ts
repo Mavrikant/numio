@@ -84,6 +84,173 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "Wet van Ohm Calculator",
+    short: "Solve for voltage, current, resistance, or power — enter any two known values.",
+    description:
+      "Gratis Wet van Ohm calculator. Enter any two of voltage (V), current (I), resistance (R), or power (P) and direct bereken the other two using V=IR and P=VI.",
+    keywords: [
+      "Ohm's law calculator",
+      "voltage calculator",
+      "current calculator",
+      "resistance calculator",
+      "power calculator",
+      "V=IR",
+      "electronics calculator",
+    ],
+    inputs: {
+      knownQty1: {
+        label: "First known quantity",
+        help: "Select the first electrical quantity you know.",
+      },
+      value1: {
+        label: "Waarde 1",
+        help: "Enter the numeric value for the first known quantity.",
+      },
+      knownQty2: {
+        label: "Second known quantity",
+        help: "Select the second electrical quantity you know (must differ from the first).",
+      },
+      value2: {
+        label: "Waarde 2",
+        help: "Enter the numeric value for the second known quantity.",
+      },
+    },
+    outputs: {
+      voltage: {
+        label: "Voltage (V)",
+        help: "Electrical potential difference in volts.",
+      },
+      current: {
+        label: "Current (I)",
+        help: "Flow of electric charge in amperes.",
+      },
+      resistance: {
+        label: "Resistance (R)",
+        help: "Opposition to current flow in ohms.",
+      },
+      power: {
+        label: "Power (P)",
+        help: "Rate of energy transfer in watts.",
+      },
+    },
+    options: {
+      knownQty1: {
+        voltage: "Voltage (V)",
+        current: "Current (A)",
+        resistance: "Resistance (Ω)",
+        power: "Power (W)",
+      },
+      knownQty2: {
+        voltage: "Voltage (V)",
+        current: "Current (A)",
+        resistance: "Resistance (Ω)",
+        power: "Power (W)",
+      },
+    },
+    errors: {
+      sameQuantity: "The two known quantities must be different.",
+      nonPositive: "All values must be greater than zero.",
+    },
+    faq: [
+      {
+        q: "What is Wet van Ohm?",
+        a: "Wet van Ohm states that the voltage across a conductor is directly proportional to the current flowing through it, given constant temperature. It is expressed as V = I × R, where V is voltage (volts), I is current (amperes), and R is resistance (ohms).",
+      },
+      {
+        q: "How do I bereken power using Wet van Ohm?",
+        a: "Power can be berekend in three ways: P = V × I, P = I² × R, or P = V² / R. This calculator solves for all four quantities when any two are provided.",
+      },
+      {
+        q: "Can I use this for AC circuits?",
+        a: "Wet van Ohm applies directly to DC resistive circuits. For AC circuits with capacitors or inductors, you must use impedance (Z) instead of resistance (R), and results become frequency-dependent.",
+      },
+    ],
+  },
+
+  pl: {
+    title: "Prawo Ohma Kalkulator",
+    short: "Solve for voltage, current, resistance, or power — enter any two known values.",
+    description:
+      "Darmowy Prawo Ohma kalkulator. Enter any two of voltage (V), current (I), resistance (R), or power (P) and natychmiast oblicz the other two using V=IR and P=VI.",
+    keywords: [
+      "Ohm's law kalkulator",
+      "voltage kalkulator",
+      "current kalkulator",
+      "resistance kalkulator",
+      "power kalkulator",
+      "V=IR",
+      "electronics kalkulator",
+    ],
+    inputs: {
+      knownQty1: {
+        label: "First known quantity",
+        help: "Select the first electrical quantity you know.",
+      },
+      value1: {
+        label: "Wartość 1",
+        help: "Enter the numeric value for the first known quantity.",
+      },
+      knownQty2: {
+        label: "Second known quantity",
+        help: "Select the second electrical quantity you know (must differ from the first).",
+      },
+      value2: {
+        label: "Wartość 2",
+        help: "Enter the numeric value for the second known quantity.",
+      },
+    },
+    outputs: {
+      voltage: {
+        label: "Voltage (V)",
+        help: "Electrical potential difference in volts.",
+      },
+      current: {
+        label: "Current (I)",
+        help: "Flow of electric charge in amperes.",
+      },
+      resistance: {
+        label: "Resistance (R)",
+        help: "Opposition to current flow in ohms.",
+      },
+      power: {
+        label: "Power (P)",
+        help: "Rate of energy transfer in watts.",
+      },
+    },
+    options: {
+      knownQty1: {
+        voltage: "Voltage (V)",
+        current: "Current (A)",
+        resistance: "Resistance (Ω)",
+        power: "Power (W)",
+      },
+      knownQty2: {
+        voltage: "Voltage (V)",
+        current: "Current (A)",
+        resistance: "Resistance (Ω)",
+        power: "Power (W)",
+      },
+    },
+    errors: {
+      sameQuantity: "The two known quantities must be different.",
+      nonPositive: "All values must be greater than zero.",
+    },
+    faq: [
+      {
+        q: "What is Prawo Ohma?",
+        a: "Prawo Ohma states that the voltage across a conductor is directly proportional to the current flowing through it, given constant temperature. It is expressed as V = I × R, where V is voltage (volts), I is current (amperes), and R is resistance (ohms).",
+      },
+      {
+        q: "How do I oblicz power using Prawo Ohma?",
+        a: "Power can be obliczd in three ways: P = V × I, P = I² × R, or P = V² / R. This kalkulator solves for all four quantities when any two are provided.",
+      },
+      {
+        q: "Can I use this for AC circuits?",
+        a: "Prawo Ohma applies directly to DC resistive circuits. For AC circuits with capacitors or inductors, you must use impedance (Z) instead of resistance (R), and results become frequency-dependent.",
+      },
+    ],
+  },
   pt: {
     title: "Calculadora da Lei de Ohm",
     short: "Calcule tensão, corrente, resistência e potência usando a lei de Ohm.",

@@ -3,6 +3,9 @@ import { COMMON_UI } from "../_shared/ui";
 
 const data = {
   en: { title: "CSS Formatter", short: "Beautify and indent CSS with one click.", description: "Free CSS beautifier. Paste minified or messy CSS to get a clean, indented version with one rule per line — runs entirely in your browser.", keywords: ["css formatter", "css beautifier", "format css", "pretty print css", "css indent"], input: "CSS", output: "Formatted CSS" },
+  nl: { title: "CSS Formatteerter", short: "Beautify and indent CSS with one click.", description: "Gratis CSS beautifier. Paste minified or messy CSS to get a clean, indented version with one rule per line — runs entirely in uw browser.", keywords: ["css formatteerter", "css beautifier", "formatteer css", "pretty print css", "css indent"], input: "CSS", output: "Formatteerted CSS" },
+
+  pl: { title: "CSS Formatujter", short: "Beautify and indent CSS with one click.", description: "Darmowy CSS beautifier. Paste minified or messy CSS to get a clean, indented version with one rule per line — runs entirely w Twojej przeglądarce.", keywords: ["css formatujter", "css beautifier", "formatuj css", "pretty print css", "css indent"], input: "CSS", output: "Formatujted CSS" },
   pt: { title: "Formatador de CSS", short: "Beautify e indent CSS com one click.", description: "Gratuito - CSS beautifier. Paste minified ou messy CSS para get a clean, indented version com one rule per line â runs entirely no seu navegador.", keywords: ["css formatter", "css beautifier", "format css", "pretty print css", "css indent"], input: "CSS", output: "Formatted CSS" },
   id: { title: "Formatter CSS", short: "Beautify dan indent CSS with one click.", description: "Gratis - CSS beautifier. Paste minified atau messy CSS to get a clean, indented version with one rule per line â runs entirely di browser Anda.", keywords: ["css formatter", "css beautifier", "format css", "pretty print css", "css indent"], input: "CSS", output: "Formatted CSS" },
 

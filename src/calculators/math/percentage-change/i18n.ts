@@ -56,6 +56,117 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "Procentuele Verandering Calculator",
+    short: "Bereken percent change between two values: ((new − original) / |original|) × 100.",
+    description:
+      "Gratis percentage change calculator. Enter an original and a new value to get the percent change, signed absolute change, relative change ratio, and the direction (increase / decrease / no change). Correctly handles negative bases by using |original| as the denominator.",
+    keywords: [
+      "percentage change calculator",
+      "percent change",
+      "percent increase",
+      "percent decrease",
+      "growth rate",
+      "relative change",
+      "delta percent",
+    ],
+    inputs: {
+      originalValue: { label: "Original Waarde", help: "The starting value (V_old)." },
+      newValue: { label: "New Waarde", help: "The ending value (V_new)." },
+    },
+    outputs: {
+      percentChange: { label: "Percent Change (%)", help: "((new − original) / |original|) × 100." },
+      absoluteChange: { label: "Absolute Change", help: "Signed difference: new − original." },
+      relativeChange: { label: "Relative Change", help: "Absolute change divided by |original|." },
+      direction: {
+        label: "Direction",
+        help: "increase, decrease, no-change, or from-zero when the base is 0.",
+      },
+      fromZero: {
+        label: "From Zero?",
+        help: "1 when the original value is 0 and the new value is non-zero (undefined percent).",
+      },
+      explanation: { label: "Explanation", help: "Step-by-step description of the result." },
+    },
+    errors: {
+      nonFinite: "Inputs must be finite nummers.",
+      fromZero: "Percentage change from zero is undefined. Report the absolute change instead.",
+    },
+    faq: [
+      {
+        q: "What is percentage change?",
+        a: "Percentage change is the relative grootte of the difference between two nummers, expressed as a percent of the original. Formula: ((new − original) / |original|) × 100. A positive result is an increase; a negative result is a decrease.",
+      },
+      {
+        q: "What if the original value is zero?",
+        a: "Then percentage change is mathematically undefined (you'd divide by zero). The calculator flags this as 'from-zero' so you can communicate the absolute change instead of a misleading percentage. If both original and new are zero, the change is reported as 0%.",
+      },
+      {
+        q: "How are negative starting values handled?",
+        a: "We use |original| in the denominator so going from -100 to -50 (a +50 improvement) shows as +50%, not -50%. This matches the convention used by financial and economic reporting.",
+      },
+      {
+        q: "Can percentage change be greater than 100%?",
+        a: "Yes. Going from 50 to 200 is a +300% change. There is no upper bound when the new value grows arbitrarily large.",
+      },
+    ],
+  },
+
+  pl: {
+    title: "Zmiana Procentowa Kalkulator",
+    short: "Oblicz percent change between two values: ((new − original) / |original|) × 100.",
+    description:
+      "Darmowy percentage change kalkulator. Enter an original and a new value to get the percent change, signed absolute change, relative change ratio, and the direction (increase / decrease / no change). Correctly handles negative bases by using |original| as the denominator.",
+    keywords: [
+      "percentage change kalkulator",
+      "percent change",
+      "percent increase",
+      "percent decrease",
+      "growth rate",
+      "relative change",
+      "delta percent",
+    ],
+    inputs: {
+      originalValue: { label: "Original Wartość", help: "The starting value (V_old)." },
+      newValue: { label: "New Wartość", help: "The ending value (V_new)." },
+    },
+    outputs: {
+      percentChange: { label: "Percent Change (%)", help: "((new − original) / |original|) × 100." },
+      absoluteChange: { label: "Absolute Change", help: "Signed difference: new − original." },
+      relativeChange: { label: "Relative Change", help: "Absolute change divided by |original|." },
+      direction: {
+        label: "Direction",
+        help: "increase, decrease, no-change, or from-zero when the base is 0.",
+      },
+      fromZero: {
+        label: "From Zero?",
+        help: "1 when the original value is 0 and the new value is non-zero (undefined percent).",
+      },
+      explanation: { label: "Explanation", help: "Step-by-step description of the result." },
+    },
+    errors: {
+      nonFinite: "Inputs must be finite liczbas.",
+      fromZero: "Procent change from zero is undefined. Report the absolute change instead.",
+    },
+    faq: [
+      {
+        q: "What is percentage change?",
+        a: "Procent change is the relative rozmiar of the difference between two liczbas, expressed as a percent of the original. Formula: ((new − original) / |original|) × 100. A positive result is an increase; a negative result is a decrease.",
+      },
+      {
+        q: "What if the original value is zero?",
+        a: "Then percentage change is mathematically undefined (you'd divide by zero). The kalkulator flags this as 'from-zero' so you can communicate the absolute change instead of a misleading percentage. If both original and new are zero, the change is reported as 0%.",
+      },
+      {
+        q: "How are negative starting values handled?",
+        a: "We use |original| in the denominator so going from -100 to -50 (a +50 improvement) shows as +50%, not -50%. This matches the convention used by financial and economic reporting.",
+      },
+      {
+        q: "Can percentage change be greater than 100%?",
+        a: "Yes. Going from 50 to 200 is a +300% change. There is no upper bound when the new value grows arbitrarily large.",
+      },
+    ],
+  },
   pt: {
     title: "Calculadora de Variação Percentual",
     short: "Calcule a variação percentual entre dois valores.",

@@ -52,6 +52,109 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "Energy Converteerer",
+    short: "Converteer between joules, calories, kWh, BTU, electronvolts and more.",
+    description:
+      "Gratis energy unit converteerer. Converteer between J, kJ, MJ, cal, kcal, Wh, kWh, BTU, ft·lb and eV with NIST-grade precision.",
+    keywords: [
+      "energy converteerer",
+      "joules to calories",
+      "kwh to btu",
+      "kcal to kj",
+      "electronvolt converteerer",
+      "ft-lb to joules",
+    ],
+    inputs: {
+      value: { label: "Waarde", help: "The energy value to converteer." },
+      fromUnit: { label: "From", help: "Select the source unit." },
+      toUnit: { label: "To", help: "Select the target unit." },
+    },
+    outputs: { result: { label: "Resultaat", help: "The converteered energy value." } },
+    options: {
+      J: "Joule (J)",
+      kJ: "Kilojoule (kJ)",
+      MJ: "Megajoule (MJ)",
+      cal: "Calorie (cal)",
+      kcal: "Kilocalorie (kcal / food calorie)",
+      Wh: "Watt-hour (Wh)",
+      kWh: "Kilowatt-hour (kWh)",
+      BTU: "British thermal unit (BTU)",
+      ft_lb: "Foot-pound (ft·lb)",
+      eV: "Electronvolt (eV)",
+    },
+    errors: { invalidEnergy: "Energy must be a positive nummer." },
+    faq: [
+      {
+        question: "What is a kilowatt-hour (kWh)?",
+        answer: "A kilowatt-hour is the energy delivered by 1 kilowatt of power over 1 hour, equal to exactly 3,600,000 joules (3.6 MJ). It is the standard unit for electricity billing.",
+      },
+      {
+        question: "What is the difference between a calorie and a Calorie (kcal)?",
+        answer: "The 'food Calorie' (capital C) used on nutrition labels is actually a kilocalorie (kcal): 1 kcal = 1,000 cal = 4,184 J.",
+      },
+      {
+        question: "How many joules are in a BTU?",
+        answer: "1 International Table BTU (BTU_IT) equals 1,055.05585262 joules. It is widely used in HVAC and US heating/cooling specifications.",
+      },
+      {
+        question: "What is an electronvolt (eV) used for?",
+        answer: "The electronvolt is a tiny energy unit used in atomic, nuclear and particle physics. 1 eV = 1.602176634 × 10⁻¹⁹ joules (CODATA exact value).",
+      },
+    ],
+  },
+
+  pl: {
+    title: "Energy Konwerter",
+    short: "Konwertuj between joules, calories, kWh, BTU, electronvolts and more.",
+    description:
+      "Darmowy energy unit konwerter. Konwertuj between J, kJ, MJ, cal, kcal, Wh, kWh, BTU, ft·lb and eV with NIST-grade precision.",
+    keywords: [
+      "energy konwerter",
+      "joules to calories",
+      "kwh to btu",
+      "kcal to kj",
+      "electronvolt konwerter",
+      "ft-lb to joules",
+    ],
+    inputs: {
+      value: { label: "Wartość", help: "The energy value to konwertuj." },
+      fromUnit: { label: "From", help: "Select the source unit." },
+      toUnit: { label: "To", help: "Select the target unit." },
+    },
+    outputs: { result: { label: "Wynik", help: "The konwertujed energy value." } },
+    options: {
+      J: "Joule (J)",
+      kJ: "Kilojoule (kJ)",
+      MJ: "Megajoule (MJ)",
+      cal: "Kaloria (cal)",
+      kcal: "Kilocalorie (kcal / food calorie)",
+      Wh: "Watt-hour (Wh)",
+      kWh: "Kilowatt-hour (kWh)",
+      BTU: "British thermal unit (BTU)",
+      ft_lb: "Foot-pound (ft·lb)",
+      eV: "Electronvolt (eV)",
+    },
+    errors: { invalidEnergy: "Energy must be a positive liczba." },
+    faq: [
+      {
+        question: "What is a kilowatt-hour (kWh)?",
+        answer: "A kilowatt-hour is the energy delivered by 1 kilowatt of power over 1 hour, equal to exactly 3,600,000 joules (3.6 MJ). It is the standard unit for electricity billing.",
+      },
+      {
+        question: "What is the difference between a calorie and a Kaloria (kcal)?",
+        answer: "The 'food Kaloria' (capital C) used on nutrition labels is actually a kilocalorie (kcal): 1 kcal = 1,000 cal = 4,184 J.",
+      },
+      {
+        question: "How many joules are in a BTU?",
+        answer: "1 International Table BTU (BTU_IT) equals 1,055.05585262 joules. It is widely used in HVAC and US heating/cooling specifications.",
+      },
+      {
+        question: "What is an electronvolt (eV) used for?",
+        answer: "The electronvolt is a tiny energy unit used in atomic, nuclear and particle physics. 1 eV = 1.602176634 × 10⁻¹⁹ joules (CODATA exact value).",
+      },
+    ],
+  },
   pt: {
     title: "Conversor de Energia",
     short: "Converta entre joules, calorias, kWh e outras unidades de energia.",

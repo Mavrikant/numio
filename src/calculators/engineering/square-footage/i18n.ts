@@ -95,6 +95,195 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "Area / Vierkante meters Calculator",
+    short: "Bereken area and perimeter for rectangles, circles, and triangles in m² and ft².",
+    description:
+      "Gratis area calculator for rectangles, circles, and triangles. Get instant results in square meters and square feet with perimeter calculations.",
+    keywords: [
+      "area calculator",
+      "square footage",
+      "square meter calculator",
+      "rectangle area",
+      "circle area",
+      "triangle area",
+      "perimeter calculator",
+    ],
+    inputs: {
+      shape: {
+        label: "Shape",
+        help: "Select a geometric shape to bereken.",
+      },
+      length: {
+        label: "Lengte",
+        help: "Lengte of the rectangle in meters.",
+      },
+      width: {
+        label: "Breedte",
+        help: "Breedte of the rectangle in meters.",
+      },
+      radius: {
+        label: "Radius",
+        help: "Radius of the circle in meters.",
+      },
+      diameter: {
+        label: "Diameter",
+        help: "Diameter of the circle in meters.",
+      },
+      base: {
+        label: "Base",
+        help: "Base lengte of the triangle in meters.",
+      },
+      height: {
+        label: "Hoogte",
+        help: "Perpendicular hoogte of the triangle in meters.",
+      },
+    },
+    outputs: {
+      areaM2: {
+        label: "Area (m²)",
+        help: "Total area in square meters.",
+      },
+      areaFt2: {
+        label: "Area (ft²)",
+        help: "Total area in square feet.",
+      },
+      perimeterM: {
+        label: "Perimeter (m)",
+        help: "Total perimeter or circumference in meters.",
+      },
+      perimeterFt: {
+        label: "Perimeter (ft)",
+        help: "Total perimeter or circumference in feet.",
+      },
+    },
+    options: {
+      shape: {
+        rectangle: "Rectangle",
+        circle: "Cirkel",
+        triangle: "Driehoek",
+      },
+    },
+    errors: {
+      invalidInput: "Please provide valid dimensions for the selected shape.",
+      rectangleRequired: "Rectangle requires lengte and breedte.",
+      circleRequired: "Cirkel requires radius or diameter.",
+      triangleRequired: "Driehoek requires base and hoogte.",
+    },
+    faq: [
+      {
+        q: "What is the difference between area and perimeter?",
+        a: "Area measures the space inside a shape (in m² or ft²), while perimeter measures the distance around the outside boundary.",
+      },
+      {
+        q: "How do I converteer square feet to square meters?",
+        a: "Divide square feet by 10.764. For example, 100 ft² ÷ 10.764 ≈ 9.29 m².",
+      },
+      {
+        q: "What if my triangle is not a right triangle?",
+        a: "The calculator assumes a right triangle for perimeter. For accurate results with oblique triangles, measure all three side lengtes.",
+      },
+      {
+        q: "Can I use this for land area calculation?",
+        a: "Yes, if the land parcel is rectangular or circular. For irregular shapes, divide the area into simple shapes and add them together.",
+      },
+    ],
+  },
+
+  pl: {
+    title: "Area / Powierzchnia Kalkulator",
+    short: "Oblicz area and perimeter for rectangles, circles, and triangles in m² and ft².",
+    description:
+      "Darmowy area kalkulator for rectangles, circles, and triangles. Get instant results in square meters and square feet with perimeter calculations.",
+    keywords: [
+      "area kalkulator",
+      "square footage",
+      "square meter kalkulator",
+      "rectangle area",
+      "circle area",
+      "triangle area",
+      "perimeter kalkulator",
+    ],
+    inputs: {
+      shape: {
+        label: "Shape",
+        help: "Select a geometric shape to oblicz.",
+      },
+      length: {
+        label: "Długość",
+        help: "Długość of the rectangle in meters.",
+      },
+      width: {
+        label: "Szerokość",
+        help: "Szerokość of the rectangle in meters.",
+      },
+      radius: {
+        label: "Radius",
+        help: "Radius of the circle in meters.",
+      },
+      diameter: {
+        label: "Diameter",
+        help: "Diameter of the circle in meters.",
+      },
+      base: {
+        label: "Base",
+        help: "Base długość of the triangle in meters.",
+      },
+      height: {
+        label: "Wysokość",
+        help: "Perpendicular wysokość of the triangle in meters.",
+      },
+    },
+    outputs: {
+      areaM2: {
+        label: "Area (m²)",
+        help: "Total area in square meters.",
+      },
+      areaFt2: {
+        label: "Area (ft²)",
+        help: "Total area in square feet.",
+      },
+      perimeterM: {
+        label: "Perimeter (m)",
+        help: "Total perimeter or circumference in meters.",
+      },
+      perimeterFt: {
+        label: "Perimeter (ft)",
+        help: "Total perimeter or circumference in feet.",
+      },
+    },
+    options: {
+      shape: {
+        rectangle: "Rectangle",
+        circle: "Koło",
+        triangle: "Trójkąt",
+      },
+    },
+    errors: {
+      invalidInput: "Please provide valid dimensions for the selected shape.",
+      rectangleRequired: "Rectangle requires długość and szerokość.",
+      circleRequired: "Koło requires radius or diameter.",
+      triangleRequired: "Trójkąt requires base and wysokość.",
+    },
+    faq: [
+      {
+        q: "What is the difference between area and perimeter?",
+        a: "Area measures the space inside a shape (in m² or ft²), while perimeter measures the distance around the outside boundary.",
+      },
+      {
+        q: "How do I konwertuj square feet to square meters?",
+        a: "Divide square feet by 10.764. For example, 100 ft² ÷ 10.764 ≈ 9.29 m².",
+      },
+      {
+        q: "What if my triangle is not a right triangle?",
+        a: "The kalkulator assumes a right triangle for perimeter. For accurate results with oblique triangles, measure all three side długośćs.",
+      },
+      {
+        q: "Can I use this for land area calculation?",
+        a: "Yes, if the land parcel is rectangular or circular. For irregular shapes, divide the area into simple shapes and add them together.",
+      },
+    ],
+  },
   pt: {
     title: "Calculadora de Área (m² / ft²)",
     short: "Calcule a área de uma sala ou superfície em m² ou ft².",

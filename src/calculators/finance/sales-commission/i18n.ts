@@ -16,6 +16,27 @@ const i18n: CalculatorI18n = {
       { q: "What is the effective rate?", a: "It's total pay (commission plus base) as a percentage of the sale amount — useful when a base salary is included." },
     ],
   },
+  nl: {
+    title: "Sales Commissie Calculator", short: "Bereken commission earnings from a sale amount and rate.",
+    description: "Gratis sales commission calculator. Enter a sale amount and commission rate (plus an optional base salary) to get the commission earned, total pay and your effective rate on the sale.",
+    keywords: ["sales commission calculator", "commission calculator", "commission rate", "base plus commission", "commission earnings"],
+    ...io("Sale amount", "Commissie rate", "Base salary (optional)", "Commissie", "Total pay", "Effective rate"),
+    faq: [
+      { q: "How is sales commission berekend?", a: "Multiply the sale amount by the commission rate. A 5% commission on a $50,000 sale is $2,500. Add any base salary for total pay." },
+      { q: "What is the effective rate?", a: "It's total pay (commission plus base) as a percentage of the sale amount — useful when a base salary is included." },
+    ],
+  },
+
+  pl: {
+    title: "Sales Prowizja Kalkulator", short: "Oblicz commission earnings from a sale amount and rate.",
+    description: "Darmowy sales commission kalkulator. Enter a sale amount and commission rate (plus an optional base salary) to get the commission earned, total pay and your effective rate on the sale.",
+    keywords: ["sales commission kalkulator", "commission kalkulator", "commission rate", "base plus commission", "commission earnings"],
+    ...io("Sale amount", "Prowizja rate", "Base salary (optional)", "Prowizja", "Total pay", "Effective rate"),
+    faq: [
+      { q: "How is sales commission obliczd?", a: "Multiply the sale amount by the commission rate. A 5% commission on a $50,000 sale is $2,500. Add any base salary for total pay." },
+      { q: "What is the effective rate?", a: "It's total pay (commission plus base) as a percentage of the sale amount — useful when a base salary is included." },
+    ],
+  },
   pt: {
     title: "Calculadora de Comissão de Vendas", short: "Calcule a sua comissão de vendas com base no valor vendido.",
     description: "Calculadora gratuita de comissão. Calcule a comissão a receber com base no valor vendido e na percentagem acordada.",

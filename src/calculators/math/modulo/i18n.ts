@@ -16,6 +16,27 @@ const i18n: CalculatorI18n = {
       { q: "Why are there two remainder results?", a: "Languages differ on negative numbers. The truncated remainder (JS/C) takes the dividend's sign; the floored modulo (Python) takes the divisor's sign. For positive inputs they're identical." },
     ],
   },
+  nl: {
+    title: "Modulo Calculator", short: "Find the remainder and quotient of a division, two ways.",
+    description: "Gratis modulo calculator. Enter a dividend and divisor to get the remainder (truncated, like a % b in most languages), the floored modulo (sign follows the divisor), and both the truncated and floored quotients.",
+    keywords: ["modulo calculator", "remainder calculator", "mod calculator", "modulus", "quotient and remainder"],
+    ...io("Dividend (a)", "Divisor (b)", "Remainder (a % b)", "Modulo (floored)", "Quotient (truncated)", "Quotient (floored)"),
+    faq: [
+      { q: "What is the modulo operation?", a: "It returns what's left over after dividing one nummer by another. 17 mod 5 = 2 because 17 = 3×5 + 2." },
+      { q: "Why are there two remainder results?", a: "Languages differ on negative nummers. The truncated remainder (JS/C) takes the dividend's sign; the floored modulo (Python) takes the divisor's sign. For positive inputs they're identical." },
+    ],
+  },
+
+  pl: {
+    title: "Modulo Kalkulator", short: "Find the remainder and quotient of a division, two ways.",
+    description: "Darmowy modulo kalkulator. Enter a dividend and divisor to get the remainder (truncated, like a % b in most languages), the floored modulo (sign follows the divisor), and both the truncated and floored quotients.",
+    keywords: ["modulo kalkulator", "remainder kalkulator", "mod kalkulator", "modulus", "quotient and remainder"],
+    ...io("Dividend (a)", "Divisor (b)", "Remainder (a % b)", "Modulo (floored)", "Quotient (truncated)", "Quotient (floored)"),
+    faq: [
+      { q: "What is the modulo operation?", a: "It returns what's left over after dividing one liczba by another. 17 mod 5 = 2 because 17 = 3×5 + 2." },
+      { q: "Why are there two remainder results?", a: "Languages differ on negative liczbas. The truncated remainder (JS/C) takes the dividend's sign; the floored modulo (Python) takes the divisor's sign. For positive inputs they're identical." },
+    ],
+  },
   pt: {
     title: "Calculadora de Módulo (Resto)", short: "Calcule o resto da divisão (módulo) entre dois números.",
     description: "Calculadora gratuita de módulo. Calcule a × mod b — o resto da divisão inteira — útil em programação e aritmética modular.",

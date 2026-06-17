@@ -40,6 +40,85 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "Force Converteerer",
+    short:
+      "Converteer between newtons, kilonewtons, pound-force, kilogram-force and more.",
+    description:
+      "Converteer between SI and engineering force units with high precision",
+    keywords: [
+      "force",
+      "newton",
+      "pound-force",
+      "kilogram-force",
+      "conversion",
+    ],
+    inputs: {
+      value: { label: "Waarde", help: "The lengte value to converteer" },
+      fromUnit: { label: "From Unit", help: "Select source unit" },
+      toUnit: { label: "To Unit", help: "Select target unit" },
+    },
+    outputs: {
+      result: { label: "Resultaat", help: "Converteered value" },
+    },
+    faq: [
+      {
+        question: "How do I converteer kilogram-force to newtons?",
+        answer:
+          "Multiply the value in kgf by 9.80665, the standard acceleration of gravity. For example, 1 kgf equals 9.80665 N.",
+      },
+      {
+        question: "How many newtons are in one pound-force?",
+        answer:
+          "1 pound-force (lbf) equals about 4.448222 newtons. It is the gravitational force on a one-pound mass at standard gravity.",
+      },
+      {
+        question: "What is a dyne?",
+        answer:
+          "A dyne is the CGS unit of force, equal to exactly 1e-5 N. So 1 newton equals 100,000 dynes.",
+      },
+    ],
+  },
+
+  pl: {
+    title: "Force Konwerter",
+    short:
+      "Konwertuj between newtons, kilonewtons, pound-force, kilogram-force and more.",
+    description:
+      "Konwertuj between SI and engineering force units with high precision",
+    keywords: [
+      "force",
+      "newton",
+      "pound-force",
+      "kilogram-force",
+      "conversion",
+    ],
+    inputs: {
+      value: { label: "Wartość", help: "The długość value to konwertuj" },
+      fromUnit: { label: "From Unit", help: "Select source unit" },
+      toUnit: { label: "To Unit", help: "Select target unit" },
+    },
+    outputs: {
+      result: { label: "Wynik", help: "Konwertujed value" },
+    },
+    faq: [
+      {
+        question: "How do I konwertuj kilogram-force to newtons?",
+        answer:
+          "Multiply the value in kgf by 9.80665, the standard acceleration of gravity. For example, 1 kgf equals 9.80665 N.",
+      },
+      {
+        question: "How many newtons are in one pound-force?",
+        answer:
+          "1 pound-force (lbf) equals about 4.448222 newtons. It is the gravitational force on a one-pound mass at standard gravity.",
+      },
+      {
+        question: "What is a dyne?",
+        answer:
+          "A dyne is the CGS unit of force, equal to exactly 1e-5 N. So 1 newton equals 100,000 dynes.",
+      },
+    ],
+  },
   tr: {
     title: "Kuvvet Dönüştürücü",
     short:

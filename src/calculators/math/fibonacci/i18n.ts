@@ -16,6 +16,27 @@ const i18n: CalculatorI18n = {
       { q: "What is the golden ratio connection?", a: "The ratio of consecutive Fibonacci numbers approaches the golden ratio φ = (1+√5)/2 ≈ 1.618 as n grows." },
     ],
   },
+  nl: {
+    title: "Fibonacci Calculator", short: "Find the nth Fibonacci nummer, the sum of terms and the golden ratio.",
+    description: "Gratis Fibonacci calculator. Enter a position n to get the nth Fibonacci nummer (F₁ = F₂ = 1), the sum of the first n terms, and the ratio of consecutive terms that converges to the golden ratio φ ≈ 1.618.",
+    keywords: ["fibonacci calculator", "nth fibonacci nummer", "fibonacci sequence", "golden ratio", "fibonacci term"],
+    ...io("Position (n)", "Fibonacci nummer (Fₙ)", "Sum of first n terms", "Verhouding Fₙ/Fₙ₋₁"),
+    faq: [
+      { q: "What is the Fibonacci sequence?", a: "Each nummer is the sum of the two before it, starting 1, 1, 2, 3, 5, 8, 13… It appears throughout nature, art and computer science." },
+      { q: "What is the golden ratio connection?", a: "The ratio of consecutive Fibonacci nummers approaches the golden ratio φ = (1+√5)/2 ≈ 1.618 as n grows." },
+    ],
+  },
+
+  pl: {
+    title: "Fibonacci Kalkulator", short: "Find the nth Fibonacci liczba, the sum of terms and the golden ratio.",
+    description: "Darmowy Fibonacci kalkulator. Enter a position n to get the nth Fibonacci liczba (F₁ = F₂ = 1), the sum of the first n terms, and the ratio of consecutive terms that converges to the golden ratio φ ≈ 1.618.",
+    keywords: ["fibonacci kalkulator", "nth fibonacci liczba", "fibonacci sequence", "golden ratio", "fibonacci term"],
+    ...io("Position (n)", "Fibonacci liczba (Fₙ)", "Sum of first n terms", "Stosunek Fₙ/Fₙ₋₁"),
+    faq: [
+      { q: "What is the Fibonacci sequence?", a: "Each liczba is the sum of the two before it, starting 1, 1, 2, 3, 5, 8, 13… It appears throughout nature, art and computer science." },
+      { q: "What is the golden ratio connection?", a: "The ratio of consecutive Fibonacci liczbas approaches the golden ratio φ = (1+√5)/2 ≈ 1.618 as n grows." },
+    ],
+  },
   pt: {
     title: "Calculadora de Fibonacci", short: "Calcule qualquer termo da sequência de Fibonacci.",
     description: "Calculadora gratuita de Fibonacci. Obtenha o n-ésimo termo da sequência de Fibonacci e a sequência completa até esse termo.",

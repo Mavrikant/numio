@@ -32,6 +32,55 @@ const i18n: CalculatorI18n = {
       { q: "How do I get the radius from the area?", a: "Rearrange A = πr² to r = √(A/π). This calculator does it automatically when you choose 'Area' as the known value." },
     ],
   },
+  nl: {
+    title: "Cirkel Calculator",
+    short: "From radius, diameter, circumference or area, find all the other circle properties.",
+    description:
+      "Gratis circle calculator. Enter any one of radius, diameter, circumference or area and direct get the other three, using d = 2r, C = 2πr and A = πr². Perfect for geometry homework and design work.",
+    keywords: ["circle calculator", "area of a circle", "circumference calculator", "radius", "diameter", "pi", "geometry"],
+    inputs: {
+      known: { label: "Known value", help: "Which circle property you are entering." },
+      value: { label: "Waarde", help: "The numeric value of the property selected above." },
+    },
+    outputs: {
+      radius: { label: "Radius", help: "Distance from the centre to the edge." },
+      diameter: { label: "Diameter", help: "Distance across the circle through the centre (2r)." },
+      circumference: { label: "Circumference", help: "Distance around the circle (2πr)." },
+      area: { label: "Area", help: "Area enclosed by the circle (πr²)." },
+    },
+    options: { known: opt("Radius", "Diameter", "Circumference", "Area") },
+    errors: { nonPositive: "The value must be greater than zero." },
+    faq: [
+      { q: "How do I find the area of a circle?", a: "Use A = πr², where r is the radius. If you only know the diameter, halve it first (r = d/2). For example, a circle of radius 5 has area π·25 ≈ 78.54." },
+      { q: "What is the circumference formula?", a: "C = 2πr = πd. A circle with radius 5 has a circumference of 2π·5 ≈ 31.42." },
+      { q: "How do I get the radius from the area?", a: "Rearrange A = πr² to r = √(A/π). This calculator does it automatically when you choose 'Area' as the known value." },
+    ],
+  },
+
+  pl: {
+    title: "Koło Kalkulator",
+    short: "From radius, diameter, circumference or area, find all the other circle properties.",
+    description:
+      "Darmowy circle kalkulator. Enter any one of radius, diameter, circumference or area and natychmiast get the other three, using d = 2r, C = 2πr and A = πr². Perfect for geometry homework and design work.",
+    keywords: ["circle kalkulator", "area of a circle", "circumference kalkulator", "radius", "diameter", "pi", "geometry"],
+    inputs: {
+      known: { label: "Known value", help: "Which circle property you are entering." },
+      value: { label: "Wartość", help: "The numeric value of the property selected above." },
+    },
+    outputs: {
+      radius: { label: "Radius", help: "Distance from the centre to the edge." },
+      diameter: { label: "Diameter", help: "Distance across the circle through the centre (2r)." },
+      circumference: { label: "Circumference", help: "Distance around the circle (2πr)." },
+      area: { label: "Area", help: "Area enclosed by the circle (πr²)." },
+    },
+    options: { known: opt("Radius", "Diameter", "Circumference", "Area") },
+    errors: { nonPositive: "The value must be greater than zero." },
+    faq: [
+      { q: "How do I find the area of a circle?", a: "Use A = πr², where r is the radius. If you only know the diameter, halve it first (r = d/2). For example, a circle of radius 5 has area π·25 ≈ 78.54." },
+      { q: "What is the circumference formula?", a: "C = 2πr = πd. A circle with radius 5 has a circumference of 2π·5 ≈ 31.42." },
+      { q: "How do I get the radius from the area?", a: "Rearrange A = πr² to r = √(A/π). This kalkulator does it automatically when you choose 'Area' as the known value." },
+    ],
+  },
   pt: {
     title: "Calculadora de Círculo",
     short: "Calcule área, perímetro, diâmetro ou raio de um círculo.",

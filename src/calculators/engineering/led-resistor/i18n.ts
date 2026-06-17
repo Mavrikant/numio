@@ -81,6 +81,167 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "LED Weerstand Calculator",
+    short: "Bereken the correct current-limiting resistor for your LED circuit.",
+    description:
+      "Gratis LED resistor calculator. Enter supply voltage, LED forward voltage, and desired current to find the exact and standard E12 resistor value, power dissipation, and kleur code.",
+    keywords: [
+      "LED resistor calculator",
+      "current limiting resistor",
+      "LED circuit",
+      "E12 resistor series",
+      "resistor kleur code",
+      "LED forward voltage",
+      "electronics calculator",
+    ],
+    inputs: {
+      supplyVoltage: {
+        label: "Supply Voltage (V)",
+        help: "The DC voltage of your power supply (e.g., 5V for USB, 12V for car circuits).",
+      },
+      forwardVoltage: {
+        label: "LED Forward Voltage (V)",
+        help: "The voltage drop across a single LED when conducting (typical: red=2.0V, blue/white=3.2V).",
+      },
+      forwardCurrentMa: {
+        label: "Desired Current (mA)",
+        help: "Target LED operating current in milliamps. Most standard LEDs run at 20mA.",
+      },
+      ledCount: {
+        label: "Nummer of LEDs in Series",
+        help: "How many LEDs are connected in series on the same resistor.",
+      },
+    },
+    outputs: {
+      exactResistanceOhm: {
+        label: "Exact Resistance (Ω)",
+        help: "Berekend resistor value using Wet van Ohm: R = (Vsupply - Vforward×n) / I.",
+      },
+      standardResistanceOhm: {
+        label: "Standard E12 Resistance (Ω)",
+        help: "Nearest standard E12 series value rounded up — provides a safe lower current for the LED.",
+      },
+      powerDissipatedW: {
+        label: "Power Dissipated (W)",
+        help: "Heat genereerd by the resistor: P = (Vsupply - Vforward×n) × I. Use a resistor rated at 2× this value.",
+      },
+      actualCurrentMa: {
+        label: "Actual Current with Standard Weerstand (mA)",
+        help: "Real LED current when using the standard E12 resistor value.",
+      },
+      resistorColorCode: {
+        label: "Weerstandskleur Code",
+        help: "4-band kleur code for the standard E12 resistor (tolerance band = gold ±5%).",
+      },
+    },
+    errors: {
+      supplyTooLow: "Supply voltage must be greater than the total LED forward voltage.",
+    },
+    faq: [
+      {
+        q: "Why do LEDs need a current-limiting resistor?",
+        a: "LEDs have very low internal resistance. Without a series resistor, even a small voltage increase causes a large current surge that can permanently destroy the LED. The resistor limits current to a safe operating level.",
+      },
+      {
+        q: "What is the E12 resistor series?",
+        a: "E12 is a standard set of 12 preferred resistor values per decade defined by the EIA. These values (10, 12, 15, 18, 22, 27, 33, 39, 47, 56, 68, 82) are spaced roughly equally on a logarithmic scale, and commercially available resistors follow this sequence.",
+      },
+      {
+        q: "Why round up to the nearest standard value?",
+        a: "Afrondening up gives a higher resistance than berekend, which means slightly less current flows through the LED. This is the safe direction — the LED remains within its rated current and its brightness is only marginally reduced.",
+      },
+      {
+        q: "What power rating should I choose for the resistor?",
+        a: "Always choose a resistor with a power rating at least twice the berekend power dissipation. For example, if the calculator shows 0.08W, use a 0.25W (1/4W) resistor for adequate safety margin.",
+      },
+      {
+        q: "Can I connect multiple LEDs to one resistor?",
+        a: "Yes — in series. The calculator supports up to 10 LEDs in series. The total forward voltage is the sum of all individual LED forward voltages. Connecting LEDs in parallel with a single resistor is not recommended because slight differences in forward voltage can cause unequal current sharing.",
+      },
+    ],
+  },
+
+  pl: {
+    title: "LED Rezystor Kalkulator",
+    short: "Oblicz the correct current-limiting resistor for your LED circuit.",
+    description:
+      "Darmowy LED resistor kalkulator. Enter supply voltage, LED forward voltage, and desired current to find the exact and standard E12 resistor value, power dissipation, and kolor kod.",
+    keywords: [
+      "LED resistor kalkulator",
+      "current limiting resistor",
+      "LED circuit",
+      "E12 resistor series",
+      "resistor kolor kod",
+      "LED forward voltage",
+      "electronics kalkulator",
+    ],
+    inputs: {
+      supplyVoltage: {
+        label: "Supply Voltage (V)",
+        help: "The DC voltage of your power supply (e.g., 5V for USB, 12V for car circuits).",
+      },
+      forwardVoltage: {
+        label: "LED Forward Voltage (V)",
+        help: "The voltage drop across a single LED when conducting (typical: red=2.0V, blue/white=3.2V).",
+      },
+      forwardCurrentMa: {
+        label: "Desired Current (mA)",
+        help: "Target LED operating current in milliamps. Most standard LEDs run at 20mA.",
+      },
+      ledCount: {
+        label: "Liczba of LEDs in Series",
+        help: "How many LEDs are connected in series on the same resistor.",
+      },
+    },
+    outputs: {
+      exactResistanceOhm: {
+        label: "Exact Resistance (Ω)",
+        help: "Obliczd resistor value using Prawo Ohma: R = (Vsupply - Vforward×n) / I.",
+      },
+      standardResistanceOhm: {
+        label: "Standard E12 Resistance (Ω)",
+        help: "Nearest standard E12 series value rounded up — provides a safe lower current for the LED.",
+      },
+      powerDissipatedW: {
+        label: "Power Dissipated (W)",
+        help: "Heat generujd by the resistor: P = (Vsupply - Vforward×n) × I. Use a resistor rated at 2× this value.",
+      },
+      actualCurrentMa: {
+        label: "Actual Current with Standard Rezystor (mA)",
+        help: "Real LED current when using the standard E12 resistor value.",
+      },
+      resistorColorCode: {
+        label: "Oznaczenie Rezystora Kod",
+        help: "4-band kolor kod for the standard E12 resistor (tolerance band = gold ±5%).",
+      },
+    },
+    errors: {
+      supplyTooLow: "Supply voltage must be greater than the total LED forward voltage.",
+    },
+    faq: [
+      {
+        q: "Why do LEDs need a current-limiting resistor?",
+        a: "LEDs have very low internal resistance. Without a series resistor, even a small voltage increase causes a large current surge that can permanently destroy the LED. The resistor limits current to a safe operating level.",
+      },
+      {
+        q: "What is the E12 resistor series?",
+        a: "E12 is a standard set of 12 preferred resistor values per decade defined by the EIA. These values (10, 12, 15, 18, 22, 27, 33, 39, 47, 56, 68, 82) are spaced roughly equally on a logarithmic scale, and commercially available resistors follow this sequence.",
+      },
+      {
+        q: "Why round up to the nearest standard value?",
+        a: "Zaokrąglanieing up gives a higher resistance than obliczd, which means slightly less current flows through the LED. This is the safe direction — the LED remains within its rated current and its brightness is only marginally reduced.",
+      },
+      {
+        q: "What power rating should I choose for the resistor?",
+        a: "Always choose a resistor with a power rating at least twice the obliczd power dissipation. For example, if the kalkulator shows 0.08W, use a 0.25W (1/4W) resistor for adequate safety margin.",
+      },
+      {
+        q: "Can I connect multiple LEDs to one resistor?",
+        a: "Yes — in series. The kalkulator supports up to 10 LEDs in series. The total forward voltage is the sum of all individual LED forward voltages. Connecting LEDs in parallel with a single resistor is not recommended because slight differences in forward voltage can cause unequal current sharing.",
+      },
+    ],
+  },
   pt: {
     title: "Calculadora de Resistor para LED",
     short: "Calcule o resistor necessário para alimentar um LED.",

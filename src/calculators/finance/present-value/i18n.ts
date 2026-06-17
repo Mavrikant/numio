@@ -16,6 +16,27 @@ const i18n: CalculatorI18n = {
       { q: "What discount rate should I use?", a: "Use your required rate of return or cost of capital — e.g. an expected investment return, or an interest rate. Higher rates produce lower present values." },
     ],
   },
+  nl: {
+    title: "Present Waarde Calculator", short: "Find what a future sum of money is worth today.",
+    description: "Gratis present value (PV) calculator. Enter a future amount, a discount rate and the nummer of periods to find what it's worth today, using PV = FV/(1+r)ⁿ, plus the total discount and discount factor.",
+    keywords: ["present value calculator", "pv calculator", "discounted value", "time value of money", "discount rate"],
+    ...io("Future value", "Korting rate", "Periods (jaren)", "Present value", "Total discount", "Korting factor"),
+    faq: [
+      { q: "What is present value?", a: "It's how much a future amount is worth today, given a discount rate that reflects the time value of money. $10,000 in 10 jaren at 5% is worth about $6,139 today." },
+      { q: "What discount rate should I use?", a: "Use your required rate of return or cost of capital — e.g. an expected investment return, or an interest rate. Higher rates produce lower present values." },
+    ],
+  },
+
+  pl: {
+    title: "Present Wartość Kalkulator", short: "Find what a future sum of money is worth today.",
+    description: "Darmowy present value (PV) kalkulator. Enter a future amount, a discount rate and the liczba of periods to find what it's worth today, using PV = FV/(1+r)ⁿ, plus the total discount and discount factor.",
+    keywords: ["present value kalkulator", "pv kalkulator", "discounted value", "time value of money", "discount rate"],
+    ...io("Future value", "Rabat rate", "Periods (lat)", "Present value", "Total discount", "Rabat factor"),
+    faq: [
+      { q: "What is present value?", a: "It's how much a future amount is worth today, given a discount rate that reflects the time value of money. $10,000 in 10 lat at 5% is worth about $6,139 today." },
+      { q: "What discount rate should I use?", a: "Use your required rate of return or cost of capital — e.g. an expected investment return, or an interest rate. Higher rates produce lower present values." },
+    ],
+  },
   pt: {
     title: "Calculadora de Valor Presente", short: "Calcule o valor presente de fluxos de caixa futuros.",
     description: "Calculadora gratuita de valor presente (VP). Calcule quanto vale hoje uma quantia a receber no futuro, descontada pela taxa de desconto.",

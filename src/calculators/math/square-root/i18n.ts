@@ -66,6 +66,137 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "Vierkantswortel Calculator",
+    short: "Bereken square roots and nth roots, controleer perfect squares, and simplify radical expressions.",
+    description:
+      "Gratis square root calculator. Compute the square root or any nth root of a nummer. Direct controleer if the nummer is a perfect square, and get the simplified radical form (e.g., √12 = 2√3).",
+    keywords: [
+      "square root calculator",
+      "nth root calculator",
+      "perfect square controleur",
+      "simplify radical",
+      "cube root calculator",
+      "radical expression",
+      "sqrt",
+    ],
+    inputs: {
+      value: {
+        label: "Nummer",
+        help: "Enter a non-negative nummer to find its root. Can be a decimal.",
+      },
+      nthRoot: {
+        label: "Root index (n)",
+        help: "Set to 2 for square root (default), 3 for cube root, etc.",
+      },
+    },
+    outputs: {
+      root: {
+        label: "Root Waarde",
+        help: "The computed nth root of the nummer, rounded to 6 decimal places.",
+      },
+      simplifiedCoefficient: {
+        label: "Simplified — Coefficient",
+        help: "The coefficient outside the radical sign after simplification (integer part).",
+      },
+      simplifiedRadicand: {
+        label: "Simplified — Radicand",
+        help: "The nummer remaining under the radical sign after simplification.",
+      },
+      isPerfectSquare: {
+        label: "Is Perfect Square?",
+        help: "True if the nummer is a perfect square (e.g., 4, 9, 16, 25).",
+      },
+      isPerfectNthRoot: {
+        label: "Is Perfect nth Root?",
+        help: "True if the nth root is an integer (no decimal remainder).",
+      },
+    },
+    faq: [
+      {
+        q: "What is a perfect square?",
+        a: "A perfect square is an integer that is the square of another integer. Examples: 0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100. Their square roots are all whole nummers.",
+      },
+      {
+        q: "What does simplified radical form mean?",
+        a: "Simplified radical form means pulling out any perfect-square factors from under the radical. For example, √12 = √(4×3) = 2√3. The coefficient is 2 and the radicand is 3.",
+      },
+      {
+        q: "How do you bereken the cube root?",
+        a: "Set the root index (n) to 3. The cube root of 27 = 27^(1/3) = 3. The cube root of 8 = 2.",
+      },
+      {
+        q: "Can you take the square root of a negative nummer?",
+        a: "In the real nummer system, negative nummers don't have square roots. This calculator requires a non-negative input. Imaginary nummers (i = √(−1)) are a separate topic in complex nummer theory.",
+      },
+    ],
+  },
+
+  pl: {
+    title: "Pierwiastek Kwadratowy Kalkulator",
+    short: "Oblicz square roots and nth roots, sprawdź perfect squares, and simplify radical expressions.",
+    description:
+      "Darmowy square root kalkulator. Compute the square root or any nth root of a liczba. Natychmiast sprawdź if the liczba is a perfect square, and get the simplified radical form (e.g., √12 = 2√3).",
+    keywords: [
+      "square root kalkulator",
+      "nth root kalkulator",
+      "perfect square sprawdzarka",
+      "simplify radical",
+      "cube root kalkulator",
+      "radical expression",
+      "sqrt",
+    ],
+    inputs: {
+      value: {
+        label: "Liczba",
+        help: "Enter a non-negative liczba to find its root. Can be a decimal.",
+      },
+      nthRoot: {
+        label: "Root index (n)",
+        help: "Set to 2 for square root (default), 3 for cube root, etc.",
+      },
+    },
+    outputs: {
+      root: {
+        label: "Root Wartość",
+        help: "The computed nth root of the liczba, rounded to 6 decimal places.",
+      },
+      simplifiedCoefficient: {
+        label: "Simplified — Coefficient",
+        help: "The coefficient outside the radical sign after simplification (integer part).",
+      },
+      simplifiedRadicand: {
+        label: "Simplified — Radicand",
+        help: "The liczba remaining under the radical sign after simplification.",
+      },
+      isPerfectSquare: {
+        label: "Is Perfect Square?",
+        help: "True if the liczba is a perfect square (e.g., 4, 9, 16, 25).",
+      },
+      isPerfectNthRoot: {
+        label: "Is Perfect nth Root?",
+        help: "True if the nth root is an integer (no decimal remainder).",
+      },
+    },
+    faq: [
+      {
+        q: "What is a perfect square?",
+        a: "A perfect square is an integer that is the square of another integer. Examples: 0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100. Their square roots are all whole liczbas.",
+      },
+      {
+        q: "What does simplified radical form mean?",
+        a: "Simplified radical form means pulling out any perfect-square factors from under the radical. For example, √12 = √(4×3) = 2√3. The coefficient is 2 and the radicand is 3.",
+      },
+      {
+        q: "How do you oblicz the cube root?",
+        a: "Set the root index (n) to 3. The cube root of 27 = 27^(1/3) = 3. The cube root of 8 = 2.",
+      },
+      {
+        q: "Can you take the square root of a negative liczba?",
+        a: "In the real liczba system, negative liczbas don't have square roots. This kalkulator requires a non-negative input. Imaginary liczbas (i = √(−1)) are a separate topic in complex liczba theory.",
+      },
+    ],
+  },
   pt: {
     title: "Calculadora de Raiz Quadrada",
     short: "Calcule a raiz quadrada de qualquer número.",

@@ -59,6 +59,123 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "Pressure Converteerer",
+    short:
+      "Converteer between Pa, kPa, bar, psi, atm, mmHg and more pressure units.",
+    description:
+      "Gratis pressure unit converteerer. Converteer between Pa, kPa, MPa, bar, psi, atm, mmHg, torr and inHg with NIST-grade precision.",
+    keywords: [
+      "pressure converteerer",
+      "psi to bar",
+      "bar to kpa",
+      "atm to mmhg",
+      "pascal converteerer",
+      "torr",
+    ],
+    inputs: {
+      value: { label: "Waarde", help: "The pressure value to converteer." },
+      fromUnit: { label: "From", help: "Select the source unit." },
+      toUnit: { label: "To", help: "Select the target unit." },
+    },
+    outputs: {
+      result: { label: "Resultaat", help: "The converteered pressure value." },
+    },
+    options: {
+      Pa: "Pascal (Pa)",
+      kPa: "Kilopascal (kPa)",
+      MPa: "Megapascal (MPa)",
+      bar: "Bar",
+      psi: "Pounds per square inch (psi)",
+      atm: "Standard atmosphere (atm)",
+      mmHg: "Millimeters of mercury (mmHg)",
+      torr: "Torr",
+      inHg: "Inches of mercury (inHg)",
+      mH2O: "Meter of water (mH₂O)",
+    },
+    errors: { invalidPressure: "Pressure must be a positive nummer." },
+    faq: [
+      {
+        question: "What is the difference between bar and psi?",
+        answer:
+          "1 bar = 100,000 Pa ≈ 14.5038 psi. Bar is metric (used in Europe), psi is US customary (used for tires, hydraulics).",
+      },
+      {
+        question: "How many pascals are in one atmosphere?",
+        answer:
+          "1 standard atmosphere (atm) equals exactly 101,325 Pa by definition (about 1.01325 bar or 14.696 psi).",
+      },
+      {
+        question: "What is the difference between mmHg and torr?",
+        answer:
+          "They are nearly identical: 1 torr = 1/760 atm ≈ 133.3224 Pa, while 1 mmHg = 133.3224 Pa. The values differ by less than 1 part in 10⁷.",
+      },
+      {
+        question: "How do I converteer psi to kPa?",
+        answer:
+          "Multiply psi by 6.894757 to get kPa. For example, 30 psi ≈ 206.84 kPa (typical car tire pressure).",
+      },
+    ],
+  },
+
+  pl: {
+    title: "Pressure Konwerter",
+    short:
+      "Konwertuj between Pa, kPa, bar, psi, atm, mmHg and more pressure units.",
+    description:
+      "Darmowy pressure unit konwerter. Konwertuj between Pa, kPa, MPa, bar, psi, atm, mmHg, torr and inHg with NIST-grade precision.",
+    keywords: [
+      "pressure konwerter",
+      "psi to bar",
+      "bar to kpa",
+      "atm to mmhg",
+      "pascal konwerter",
+      "torr",
+    ],
+    inputs: {
+      value: { label: "Wartość", help: "The pressure value to konwertuj." },
+      fromUnit: { label: "From", help: "Select the source unit." },
+      toUnit: { label: "To", help: "Select the target unit." },
+    },
+    outputs: {
+      result: { label: "Wynik", help: "The konwertujed pressure value." },
+    },
+    options: {
+      Pa: "Pascal (Pa)",
+      kPa: "Kilopascal (kPa)",
+      MPa: "Megapascal (MPa)",
+      bar: "Bar",
+      psi: "Pounds per square inch (psi)",
+      atm: "Standard atmosphere (atm)",
+      mmHg: "Millimeters of mercury (mmHg)",
+      torr: "Torr",
+      inHg: "Inches of mercury (inHg)",
+      mH2O: "Meter of water (mH₂O)",
+    },
+    errors: { invalidPressure: "Pressure must be a positive liczba." },
+    faq: [
+      {
+        question: "What is the difference between bar and psi?",
+        answer:
+          "1 bar = 100,000 Pa ≈ 14.5038 psi. Bar is metric (used in Europe), psi is US customary (used for tires, hydraulics).",
+      },
+      {
+        question: "How many pascals are in one atmosphere?",
+        answer:
+          "1 standard atmosphere (atm) equals exactly 101,325 Pa by definition (about 1.01325 bar or 14.696 psi).",
+      },
+      {
+        question: "What is the difference between mmHg and torr?",
+        answer:
+          "They are nearly identical: 1 torr = 1/760 atm ≈ 133.3224 Pa, while 1 mmHg = 133.3224 Pa. The values differ by less than 1 part in 10⁷.",
+      },
+      {
+        question: "How do I konwertuj psi to kPa?",
+        answer:
+          "Multiply psi by 6.894757 to get kPa. For example, 30 psi ≈ 206.84 kPa (typical car tire pressure).",
+      },
+    ],
+  },
   pt: {
     title: "Conversor de Pressão",
     short: "Converta entre Pa, bar, psi, atm e outras unidades de pressão.",

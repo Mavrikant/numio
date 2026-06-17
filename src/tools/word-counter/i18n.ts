@@ -13,6 +13,29 @@ const i18n: ToolI18n = {
       { q: "Is my text uploaded anywhere?", a: "No. All counting runs locally in your browser — your text never leaves your device." },
     ],
   },
+  nl: {
+    title: "Word & Character Counter",
+    short: "Count words, tekens, sentences, paragraphs and reading time as you type.",
+    description: "Gratis online word and character counter. Paste or type tekst to direct see the nummer of words, tekens (with and without spaces), sentences, paragraphs, lines and estimated reading time. Everything runs in uw browser.",
+    keywords: ["word counter", "character counter", "letter counter", "word count", "reading time", "tekst statistics"],
+    ui: { ...COMMON_UI.en, placeholder: "Type or paste your tekst here…", characters: "Characters", charactersNoSpaces: "Characters (no spaces)", words: "Words", sentences: "Sentences", paragraphs: "Paragraphs", lines: "Lines", readingTime: "Reading time", min: "min" },
+    faq: [
+      { q: "How is reading time estimated?", a: "We divide the word count by 200 words per minute, an average adult silent-reading speed. Faster or slower readers will differ." },
+      { q: "Is my tekst uploaded anywhere?", a: "No. All counting runs lokaal in uw browser — your tekst verlaten nooits your device." },
+    ],
+  },
+
+  pl: {
+    title: "Word & Character Counter",
+    short: "Count words, znaków, sentences, paragraphs and reading time as you type.",
+    description: "Darmowy online word and character counter. Paste or type tekst to natychmiast see the liczba of words, znaków (with and without spaces), sentences, paragraphs, lines and estimated reading time. Everything runs w Twojej przeglądarce.",
+    keywords: ["word counter", "character counter", "letter counter", "word count", "reading time", "tekst statistics"],
+    ui: { ...COMMON_UI.en, placeholder: "Typ or paste your tekst here…", characters: "Characters", charactersNoSpaces: "Characters (no spaces)", words: "Words", sentences: "Sentences", paragraphs: "Paragraphs", lines: "Lines", readingTime: "Reading time", min: "min" },
+    faq: [
+      { q: "How is reading time estimated?", a: "We divide the word count by 200 words per minute, an average adult silent-reading speed. Faster or slower readers will differ." },
+      { q: "Is my tekst uploaded anywhere?", a: "No. All counting runs lokalnie w Twojej przeglądarce — your tekst nigdy nie opuszczająs your device." },
+    ],
+  },
   pt: {
     title: "Contador de Word & Character",
     short: "Count words, characters, sentences, paragraphs e reading time as you type.",

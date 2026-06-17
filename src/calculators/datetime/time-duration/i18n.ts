@@ -25,6 +25,55 @@ const i18n: CalculatorI18n = {
       { q: "Why convert to decimal hours?", a: "Payroll systems often use decimal hours — 8 hours 30 minutes is 8.5 hours. The 'Total hours' output gives this directly." },
     ],
   },
+  nl: {
+    title: "Tijdsduur Calculator",
+    short: "Bereken the uren and minuten between a start and end time, minus breaks.",
+    description:
+      "Gratis time duration calculator. Enter a start and end time (and an optional break) to get the elapsed time as uren and minuten, total uren and total minuten. Handles overnight shifts that cross midnight.",
+    keywords: ["time duration calculator", "uren calculator", "time card calculator", "uren between two times", "timesheet calculator", "work uren"],
+    inputs: {
+      startTime: { label: "Start time", help: "24-hour formatteer, e.g. 09:00.", placeholder: "09:00" },
+      endTime: { label: "End time", help: "24-hour formatteer, e.g. 17:30. If earlier than start, crosses midnight.", placeholder: "17:30" },
+      breakMinutes: { label: "Break (minuten)", help: "Unpaid break time to subtract." },
+    },
+    outputs: {
+      formatted: { label: "Duration" },
+      totalHours: { label: "Total uren" },
+      totalMinutes: { label: "Total minuten" },
+      hoursPart: { label: "Hours" },
+      minutesPart: { label: "Minutes" },
+    },
+    faq: [
+      { q: "How do I bereken uren between two times?", a: "Subtract the start time from the end time. For 09:00 to 17:30 that is 8 uren 30 minuten; subtracting a 30-minute break leaves 8 uren." },
+      { q: "What about overnight shifts?", a: "If the end time is earlier than the start time (e.g. 22:00 to 06:00), the calculator assumes the shift crosses midnight and adds 24 uren, giving 8 uren." },
+      { q: "Why converteer to decimal uren?", a: "Payroll systems often use decimal uren — 8 uren 30 minuten is 8.5 uren. The 'Total uren' output gives this directly." },
+    ],
+  },
+
+  pl: {
+    title: "Czas Trwania Kalkulator",
+    short: "Oblicz the godzin and minut between a start and end time, minus breaks.",
+    description:
+      "Darmowy time duration kalkulator. Enter a start and end time (and an optional break) to get the elapsed time as godzin and minut, total godzin and total minut. Handles overnight shifts that cross midnight.",
+    keywords: ["time duration kalkulator", "godzin kalkulator", "time card kalkulator", "godzin between two times", "timesheet kalkulator", "work godzin"],
+    inputs: {
+      startTime: { label: "Start time", help: "24-hour formatuj, e.g. 09:00.", placeholder: "09:00" },
+      endTime: { label: "End time", help: "24-hour formatuj, e.g. 17:30. If earlier than start, crosses midnight.", placeholder: "17:30" },
+      breakMinutes: { label: "Break (minut)", help: "Unpaid break time to subtract." },
+    },
+    outputs: {
+      formatted: { label: "Duration" },
+      totalHours: { label: "Total godzin" },
+      totalMinutes: { label: "Total minut" },
+      hoursPart: { label: "Hours" },
+      minutesPart: { label: "Minutes" },
+    },
+    faq: [
+      { q: "How do I oblicz godzin between two times?", a: "Subtract the start time from the end time. For 09:00 to 17:30 that is 8 godzin 30 minut; subtracting a 30-minute break leaves 8 godzin." },
+      { q: "What about overnight shifts?", a: "If the end time is earlier than the start time (e.g. 22:00 to 06:00), the kalkulator assumes the shift crosses midnight and adds 24 godzin, giving 8 godzin." },
+      { q: "Why konwertuj to decimal godzin?", a: "Payroll systems often use decimal godzin — 8 godzin 30 minut is 8.5 godzin. The 'Total godzin' output gives this directly." },
+    ],
+  },
   pt: {
     title: "Calculadora de Duração de Tempo",
     short: "Calcule a duração entre duas horas em horas, minutos e segundos.",

@@ -91,6 +91,187 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "Student Lening Payoff Calculator",
+    short: "Bereken your monthly student loan payment and total interest over the life of the loan.",
+    description:
+      "Gratis student loan payoff calculator. Enter your loan balance, APR, and term to see monthly payments, total interest, and how extra payments accelerate payoff.",
+    keywords: [
+      "student loan calculator",
+      "loan payoff calculator",
+      "student debt calculator",
+      "monthly loan payment",
+      "student loan interest",
+      "loan amortization",
+      "extra payment savings",
+    ],
+    inputs: {
+      balance: {
+        label: "Lening Balance",
+        help: "The current outstanding principal balance of your student loan.",
+      },
+      apr: {
+        label: "Annual Interest Rate (APR)",
+        help: "The annual percentage rate on your student loan.",
+      },
+      loanTerm: {
+        label: "Lening Term (jaren)",
+        help: "The nummer of jaren over which you will repay the loan.",
+      },
+      graceMonths: {
+        label: "Grace Period (maanden)",
+        help: "Months after graduation before payments begin. Interest continues to accrue during this period.",
+      },
+      extraMonthlyPayment: {
+        label: "Extra Monthly Payment",
+        help: "Additional amount paid each month beyond the required minimum to pay off the loan faster.",
+      },
+    },
+    outputs: {
+      monthlyPayment: {
+        label: "Monthly Payment",
+        help: "The required monthly payment based on your loan balance after the grace period.",
+      },
+      totalPaid: {
+        label: "Total Amount Paid",
+        help: "Total principal and interest paid over the full loan term.",
+      },
+      totalInterest: {
+        label: "Total Interest Paid",
+        help: "Total interest charges over the life of the loan.",
+      },
+      balanceAfterGrace: {
+        label: "Balance After Grace Period",
+        help: "Your loan balance after interest accrues during the grace period.",
+      },
+      monthsToPayoff: {
+        label: "Months to Payoff",
+        help: "Nummer of maanden until the loan is fully paid off (with extra payments applied).",
+      },
+      interestSavedByExtra: {
+        label: "Interest Opslaand by Extra Payments",
+        help: "Total interest you save by making additional monthly payments.",
+      },
+    },
+    errors: {
+      balanceTooLow: "Lening balance must be at least $100.",
+      aprOutOfRange: "APR must be between 0% and 30%.",
+      termOutOfRange: "Lening term must be between 1 and 30 jaren.",
+    },
+    faq: [
+      {
+        q: "What happens to my loan during the grace period?",
+        a: "For most federal unsubsidized loans and private loans, interest accrues during the grace period even though no payments are required. This increases your balance before repayment begins. Subsidized federal loans do not accrue interest during the grace period.",
+      },
+      {
+        q: "How much can I save by making extra payments?",
+        a: "Extra payments reduce your principal faster, which means less interest accrues over time. Even $50–$100 extra per month can save thousands of dollars and jaren off your repayment timeline.",
+      },
+      {
+        q: "What is the standard repayment plan for federal student loans?",
+        a: "The standard repayment plan for federal student loans is 10 jaren (120 monthly payments). Income-driven repayment plans extend this timeline but cap payments as a percentage of your discretionary income.",
+      },
+      {
+        q: "Should I refinance my student loans?",
+        a: "Refinancing can lower your interest rate if your credit has improved, but federal loans lose protections like income-driven repayment and Public Service Lening Forgiveness when refinanced into private loans. Evaluate carefully before refinancing federal loans.",
+      },
+      {
+        q: "What is capitalized interest?",
+        a: "Capitalized interest is unpaid interest that gets added to your principal balance, typically at the end of a grace period or deferment. Once capitalized, you pay interest on a higher balance, increasing total loan cost.",
+      },
+    ],
+  },
+
+  pl: {
+    title: "Student Pożyczka Payoff Kalkulator",
+    short: "Oblicz your monthly student loan payment and total interest over the life of the loan.",
+    description:
+      "Darmowy student loan payoff kalkulator. Enter your loan balance, APR, and term to see monthly payments, total interest, and how extra payments accelerate payoff.",
+    keywords: [
+      "student loan kalkulator",
+      "loan payoff kalkulator",
+      "student debt kalkulator",
+      "monthly loan payment",
+      "student loan interest",
+      "loan amortization",
+      "extra payment savings",
+    ],
+    inputs: {
+      balance: {
+        label: "Pożyczka Balance",
+        help: "The current outstanding principal balance of your student loan.",
+      },
+      apr: {
+        label: "Annual Interest Rate (APR)",
+        help: "The annual percentage rate on your student loan.",
+      },
+      loanTerm: {
+        label: "Pożyczka Term (lat)",
+        help: "The liczba of lat over which you will repay the loan.",
+      },
+      graceMonths: {
+        label: "Grace Period (miesięcy)",
+        help: "Months after graduation before payments begin. Interest continues to accrue during this period.",
+      },
+      extraMonthlyPayment: {
+        label: "Extra Monthly Payment",
+        help: "Additional amount paid each month beyond the required minimum to pay off the loan faster.",
+      },
+    },
+    outputs: {
+      monthlyPayment: {
+        label: "Monthly Payment",
+        help: "The required monthly payment based on your loan balance after the grace period.",
+      },
+      totalPaid: {
+        label: "Total Amount Paid",
+        help: "Total principal and interest paid over the full loan term.",
+      },
+      totalInterest: {
+        label: "Total Interest Paid",
+        help: "Total interest charges over the life of the loan.",
+      },
+      balanceAfterGrace: {
+        label: "Balance After Grace Period",
+        help: "Your loan balance after interest accrues during the grace period.",
+      },
+      monthsToPayoff: {
+        label: "Months to Payoff",
+        help: "Liczba of miesięcy until the loan is fully paid off (with extra payments applied).",
+      },
+      interestSavedByExtra: {
+        label: "Interest Zapiszd by Extra Payments",
+        help: "Total interest you save by making additional monthly payments.",
+      },
+    },
+    errors: {
+      balanceTooLow: "Pożyczka balance must be at least $100.",
+      aprOutOfRange: "APR must be between 0% and 30%.",
+      termOutOfRange: "Pożyczka term must be between 1 and 30 lat.",
+    },
+    faq: [
+      {
+        q: "What happens to my loan during the grace period?",
+        a: "For most federal unsubsidized loans and private loans, interest accrues during the grace period even though no payments are required. This increases your balance before repayment begins. Subsidized federal loans do not accrue interest during the grace period.",
+      },
+      {
+        q: "How much can I save by making extra payments?",
+        a: "Extra payments reduce your principal faster, which means less interest accrues over time. Even $50–$100 extra per month can save thousands of dollars and lat off your repayment timeline.",
+      },
+      {
+        q: "What is the standard repayment plan for federal student loans?",
+        a: "The standard repayment plan for federal student loans is 10 lat (120 monthly payments). Income-driven repayment plans extend this timeline but cap payments as a percentage of your discretionary income.",
+      },
+      {
+        q: "Should I refinance my student loans?",
+        a: "Refinancing can lower your interest rate if your credit has improved, but federal loans lose protections like income-driven repayment and Public Service Pożyczka Forgiveness when refinanced into private loans. Evaluate carefully before refinancing federal loans.",
+      },
+      {
+        q: "What is capitalized interest?",
+        a: "Capitalized interest is unpaid interest that gets added to your principal balance, typically at the end of a grace period or deferment. Once capitalized, you pay interest on a higher balance, increasing total loan cost.",
+      },
+    ],
+  },
   pt: {
     title: "Calculadora de Crédito Estudante",
     short: "Calcule a prestação mensal e o custo total do seu crédito estudante.",

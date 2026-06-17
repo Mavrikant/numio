@@ -21,4 +21,6 @@ export const COMMON_UI: Record<Locale, Record<string, string>> = {
   ja: { input: "入力", output: "出力", copy: "コピー", copied: "コピーしました！", clear: "クリア", swap: "入れ替え", result: "結果" },
   ko: { input: "입력", output: "출력", copy: "복사", copied: "복사됨!", clear: "지우기", swap: "교체", result: "결과" },
   hi: { input: "इनपुट", output: "आउटपुट", copy: "कॉपी", copied: "कॉपी हो गया!", clear: "साफ़ करें", swap: "अदला-बदली", result: "परिणाम" },
+  nl: { input: "Invoer", output: "Uitvoer", copy: "Kopiëren", copied: "Gekopieerd!", clear: "Wissen", swap: "Omwisselen", result: "Resultaat" },
+  pl: { input: "Wejście", output: "Wyjście", copy: "Kopiuj", copied: "Skopiowano!", clear: "Wyczyść", swap: "Zamień", result: "Wynik" },
 };

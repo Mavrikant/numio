@@ -34,6 +34,73 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "Weight/Mass Converteerer",
+    short: "Converteer between metric, imperial, and specialty weight units",
+    description: "Converteer between metric, imperial, and specialty weight units with precision",
+    keywords: ["weight", "mass", "conversion", "kilogram", "pound", "ounce", "ton"],
+    inputs: {
+      value: { label: "Waarde", help: "The weight value to converteer" },
+      fromUnit: { label: "From Unit", help: "Select source unit" },
+      toUnit: { label: "To Unit", help: "Select target unit" },
+    },
+    outputs: {
+      result: { label: "Resultaat", help: "Converteered value" },
+    },
+    errors: { invalidWeight: "Weight must be a positive nummer." },
+    faq: [
+      {
+        question: "What is the difference between weight and mass?",
+        answer: "Mass is the amount of matter in an object, measured in kilograms. Weight is the force of gravity on that mass. For practical conversions, we use the terms interchangeably.",
+      },
+      {
+        question: "How many grams are in a kilogram?",
+        answer: "There are 1000 grams in 1 kilogram. This is the metric standard.",
+      },
+      {
+        question: "What is a stone used for?",
+        answer: "Stone is primarily used in the United Kingdom and Ireland for measuring body weight. 1 stone equals 14 pounds or approximately 6.35 kilograms.",
+      },
+      {
+        question: "How do I converteer pounds to kilograms?",
+        answer: "Divide the weight in pounds by 2.20462. For example, 150 lbs ÷ 2.20462 = 68 kg.",
+      },
+    ],
+  },
+
+  pl: {
+    title: "Weight/Mass Konwerter",
+    short: "Konwertuj between metric, imperial, and specialty weight units",
+    description: "Konwertuj between metric, imperial, and specialty weight units with precision",
+    keywords: ["weight", "mass", "conversion", "kilogram", "pound", "ounce", "ton"],
+    inputs: {
+      value: { label: "Wartość", help: "The weight value to konwertuj" },
+      fromUnit: { label: "From Unit", help: "Select source unit" },
+      toUnit: { label: "To Unit", help: "Select target unit" },
+    },
+    outputs: {
+      result: { label: "Wynik", help: "Konwertujed value" },
+    },
+    errors: { invalidWeight: "Weight must be a positive liczba." },
+    faq: [
+      {
+        question: "What is the difference between weight and mass?",
+        answer: "Mass is the amount of matter in an object, measured in kilograms. Weight is the force of gravity on that mass. For practical conversions, we use the terms interchangeably.",
+      },
+      {
+        question: "How many grams are in a kilogram?",
+        answer: "There are 1000 grams in 1 kilogram. This is the metric standard.",
+      },
+      {
+        question: "What is a stone used for?",
+        answer: "Stone is primarily used in the United Kingdom and Ireland for measuring body weight. 1 stone equals 14 pounds or approximately 6.35 kilograms.",
+      },
+      {
+        question: "How do I konwertuj pounds to kilograms?",
+        answer: "Divide the weight in pounds by 2.20462. For example, 150 lbs ÷ 2.20462 = 68 kg.",
+      },
+    ],
+  },
   pt: {
     title: "Conversor de Peso",
     short: "Converta entre quilogramas, libras, onças e outras unidades de peso.",

@@ -58,6 +58,121 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "Priemgetal Factorization Calculator",
+    short:
+      "Decompose any nummer into its prime factors and view the exponent notation.",
+    description:
+      "Gratis prime factorization tool. Enter a nummer and direct see its prime factors with exponents. Learn the fundamental theorem of arithmetic.",
+    keywords: [
+      "prime factorization",
+      "prime factors",
+      "nummer theory",
+      "fundamental theorem",
+      "factorization calculator",
+      "prime decomposition",
+      "exponent notation",
+    ],
+    inputs: {
+      number: {
+        label: "Nummer",
+        help: "Enter an integer between 2 and 1,000,000 to factorize.",
+      },
+    },
+    outputs: {
+      notation: {
+        label: "Priemgetal Factorization",
+        help: "The nummer expressed as a product of prime powers (e.g., 2³ × 3² × 5).",
+      },
+      factors: {
+        label: "Priemgetal Factors",
+        help: "List of prime factors with their exponents.",
+      },
+    },
+    errors: {
+      numberOutOfRange: "Nummer must be between 2 and 1,000,000.",
+    },
+    faq: [
+      {
+        q: "What is prime factorization?",
+        a: "Priemgetal factorization is the process of expressing a nummer as a product of its prime factors. Every integer greater than 1 has a unique prime factorization (Fundamental Theorem of Arithmetic).",
+      },
+      {
+        q: "What is a prime nummer?",
+        a: "A prime nummer is a natural nummer greater than 1 that has no positive divisors other than 1 and itself. Examples: 2, 3, 5, 7, 11, 13.",
+      },
+      {
+        q: "What does the exponent mean?",
+        a: "The exponent indicates how many times a prime factor appears in the factorization. For example, in 2³, the exponent 3 means 2 × 2 × 2.",
+      },
+      {
+        q: "Why is prime factorization important?",
+        a: "Priemgetal factorization is fundamental in nummer theory, cryptography, and mathematics. It helps simplify fractions, find GCD/LCM, and understand the structure of nummers.",
+      },
+      {
+        q: "Can 1 be factorized?",
+        a: "No. Priemgetal factorization is only defined for integers greater than 1, since 1 has no prime factors.",
+      },
+    ],
+  },
+
+  pl: {
+    title: "Liczba Pierwsza Factorization Kalkulator",
+    short:
+      "Decompose any liczba into its prime factors and view the exponent notation.",
+    description:
+      "Darmowy prime factorization narzędzie. Enter a liczba and natychmiast see its prime factors with exponents. Learn the fundamental theorem of arithmetic.",
+    keywords: [
+      "prime factorization",
+      "prime factors",
+      "liczba theory",
+      "fundamental theorem",
+      "factorization kalkulator",
+      "prime decomposition",
+      "exponent notation",
+    ],
+    inputs: {
+      number: {
+        label: "Liczba",
+        help: "Enter an integer between 2 and 1,000,000 to factorize.",
+      },
+    },
+    outputs: {
+      notation: {
+        label: "Liczba Pierwsza Factorization",
+        help: "The liczba expressed as a product of prime powers (e.g., 2³ × 3² × 5).",
+      },
+      factors: {
+        label: "Liczba Pierwsza Factors",
+        help: "List of prime factors with their exponents.",
+      },
+    },
+    errors: {
+      numberOutOfRange: "Liczba must be between 2 and 1,000,000.",
+    },
+    faq: [
+      {
+        q: "What is prime factorization?",
+        a: "Liczba Pierwsza factorization is the process of expressing a liczba as a product of its prime factors. Every integer greater than 1 has a unique prime factorization (Fundamental Theorem of Arithmetic).",
+      },
+      {
+        q: "What is a prime liczba?",
+        a: "A prime liczba is a natural liczba greater than 1 that has no positive divisors other than 1 and itself. Examples: 2, 3, 5, 7, 11, 13.",
+      },
+      {
+        q: "What does the exponent mean?",
+        a: "The exponent indicates how many times a prime factor appears in the factorization. For example, in 2³, the exponent 3 means 2 × 2 × 2.",
+      },
+      {
+        q: "Why is prime factorization important?",
+        a: "Liczba Pierwsza factorization is fundamental in liczba theory, cryptography, and mathematics. It helps simplify fractions, find GCD/LCM, and understand the structure of liczbas.",
+      },
+      {
+        q: "Can 1 be factorized?",
+        a: "No. Liczba Pierwsza factorization is only defined for integers greater than 1, since 1 has no prime factors.",
+      },
+    ],
+  },
   pt: {
     title: "Calculadora de Fatoração em Primos",
     short:

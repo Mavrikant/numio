@@ -53,6 +53,111 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "Pension Drawdown Calculator",
+    short: "Project your pension pot, safe income, and drawdown longevity.",
+    description:
+      "Estimate your retirement pot, the 4%-rule safe income, how long the pot will last at a target spending level, and its inflation-adjusted real value.",
+    keywords: [
+      "pension calculator",
+      "retirement drawdown",
+      "4 percent rule",
+      "safe withdrawal rate",
+      "FIRE calculator",
+      "retirement income",
+      "pension pot",
+    ],
+    inputs: {
+      currentPot: { label: "Current pension pot", help: "Total value of your existing pension and retirement savings today." },
+      currentAge: { label: "Current age", help: "Your age in jaren right now." },
+      retirementAge: { label: "Pensioen age", help: "The age at which you plan to stop working and start drawing down." },
+      annualContribution: { label: "Annual contribution", help: "How much you add to your pot each year, including any employer match." },
+      expectedReturn: { label: "Expected annual return", help: "Long-run nominal investment return before inflation, in percent." },
+      targetIncome: { label: "Target retirement income", help: "Annual income you plan to draw from the pot in retirement." },
+      lifeExpectancy: { label: "Life expectancy", help: "Leeftijd you want the pot to support you until (default 85)." },
+    },
+    outputs: {
+      potAtRetirement: { label: "Pot at retirement", help: "Projected nominal pot value at retirement age." },
+      safeAnnualIncome: { label: "Safe annual income (4% rule)", help: "Income the pot can support indefinitely under the 4% safe-withdrawal heuristic." },
+      yearsUntilExhaustion: { label: "Years until exhaustion", help: "How long the pot lasts at your target spending, capped at life expectancy." },
+      realValueAtRetirement: { label: "Real value (today's money)", help: "Pot value adjusted for 2.5% long-run inflation." },
+    },
+    errors: {
+      retirementBeforeCurrent: "Pensioen age must be after your current age.",
+      lifeBeforeRetirement: "Life expectancy must be after retirement age.",
+    },
+    faq: [
+      {
+        q: "What is the 4% rule?",
+        a: "A heuristic from the Trinity Study (1998) suggesting that withdrawing 4% of the initial pot in year one, then adjusting for inflation each year, historically had a high probability of lasting 30 jaren.",
+      },
+      {
+        q: "How is real value berekend?",
+        a: "Real value divides the projected nominal pot by (1 + inflation)^jaren-to-retirement, with inflation assumed at 2.5% per year.",
+      },
+      {
+        q: "Why doesn't my pot last forever even with growth?",
+        a: "When target income exceeds the growth your pot earns each year (r × pot), withdrawals eat into capital. The closed-form formula determines exactly when the balance hits zero.",
+      },
+      {
+        q: "What return should I assume?",
+        a: "Long-run historical equity returns are roughly 6–8% nominal, balanced portfolios 4–6%. Conservative planning often uses 4–5%.",
+      },
+    ],
+  },
+
+  pl: {
+    title: "Pension Drawdown Kalkulator",
+    short: "Project your pension pot, safe income, and drawdown longevity.",
+    description:
+      "Estimate your retirement pot, the 4%-rule safe income, how long the pot will last at a target spending level, and its inflation-adjusted real value.",
+    keywords: [
+      "pension kalkulator",
+      "retirement drawdown",
+      "4 percent rule",
+      "safe withdrawal rate",
+      "FIRE kalkulator",
+      "retirement income",
+      "pension pot",
+    ],
+    inputs: {
+      currentPot: { label: "Current pension pot", help: "Total value of your existing pension and retirement savings today." },
+      currentAge: { label: "Current age", help: "Your age in lat right now." },
+      retirementAge: { label: "Emerytura age", help: "The age at which you plan to stop working and start drawing down." },
+      annualContribution: { label: "Annual contribution", help: "How much you add to your pot each year, including any employer match." },
+      expectedReturn: { label: "Expected annual return", help: "Long-run nominal investment return before inflation, in percent." },
+      targetIncome: { label: "Target retirement income", help: "Annual income you plan to draw from the pot in retirement." },
+      lifeExpectancy: { label: "Life expectancy", help: "Wiek you want the pot to support you until (default 85)." },
+    },
+    outputs: {
+      potAtRetirement: { label: "Pot at retirement", help: "Projected nominal pot value at retirement age." },
+      safeAnnualIncome: { label: "Safe annual income (4% rule)", help: "Income the pot can support indefinitely under the 4% safe-withdrawal heuristic." },
+      yearsUntilExhaustion: { label: "Years until exhaustion", help: "How long the pot lasts at your target spending, capped at life expectancy." },
+      realValueAtRetirement: { label: "Real value (today's money)", help: "Pot value adjusted for 2.5% long-run inflation." },
+    },
+    errors: {
+      retirementBeforeCurrent: "Emerytura age must be after your current age.",
+      lifeBeforeRetirement: "Life expectancy must be after retirement age.",
+    },
+    faq: [
+      {
+        q: "What is the 4% rule?",
+        a: "A heuristic from the Trinity Study (1998) suggesting that withdrawing 4% of the initial pot in year one, then adjusting for inflation each year, historically had a high probability of lasting 30 lat.",
+      },
+      {
+        q: "How is real value obliczd?",
+        a: "Real value divides the projected nominal pot by (1 + inflation)^lat-to-retirement, with inflation assumed at 2.5% per year.",
+      },
+      {
+        q: "Why doesn't my pot last forever even with growth?",
+        a: "When target income exceeds the growth your pot earns each year (r × pot), withdrawals eat into capital. The closed-form formula determines exactly when the balance hits zero.",
+      },
+      {
+        q: "What return should I assume?",
+        a: "Long-run historical equity returns are roughly 6–8% nominal, balanced portfolios 4–6%. Conservative planning often uses 4–5%.",
+      },
+    ],
+  },
   pt: {
     title: "Calculadora de Pensão",
     short: "Estime a pensão de reforma com base nas suas contribuições.",

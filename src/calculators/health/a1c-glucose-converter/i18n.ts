@@ -17,6 +17,27 @@ const i18n: CalculatorI18n = {
       { q: "Is estimated average glucose the same as my meter reading?", a: "No. eAG is a long-term average derived from A1C; individual meter readings vary throughout the day and may differ from this estimate." },
     ],
   },
+  nl: {
+    title: "A1C ⇄ Gemiddelde Glucose Converteerer", short: "Converteer HbA1c to estimated average glucose (mg/dL and mmol/L) and back.",
+    description: "Gratis A1C to glucose converteerer. Converteer an HbA1c percentage to estimated average glucose (eAG) in mg/dL and mmol/L, or converteer a glucose reading back to an estimated A1C, using the ADAG formula.",
+    keywords: ["a1c to glucose", "eag calculator", "hba1c converteerer", "average glucose calculator", "a1c chart"],
+    ...io("Conversion", "Waarde", "A1C", "Glucose (mg/dL)", "Glucose (mmol/L)", "A1C → Glucose", "Glucose → A1C"),
+    faq: [
+      { q: "How is A1C converteered to average glucose?", a: "Using the ADAG formula eAG(mg/dL) = 28.7 × A1C − 46.7. For example, an A1C of 6.5% ≈ 140 mg/dL (7.8 mmol/L)." },
+      { q: "Is estimated average glucose the same as my meter reading?", a: "No. eAG is a long-term average derived from A1C; individual meter readings vary throughout the day and may differ from this estimate." },
+    ],
+  },
+
+  pl: {
+    title: "A1C ⇄ Średnia Glucose Konwerter", short: "Konwertuj HbA1c to estimated average glucose (mg/dL and mmol/L) and back.",
+    description: "Darmowy A1C to glucose konwerter. Konwertuj an HbA1c percentage to estimated average glucose (eAG) in mg/dL and mmol/L, or konwertuj a glucose reading back to an estimated A1C, using the ADAG formula.",
+    keywords: ["a1c to glucose", "eag kalkulator", "hba1c konwerter", "average glucose kalkulator", "a1c chart"],
+    ...io("Conversion", "Wartość", "A1C", "Glucose (mg/dL)", "Glucose (mmol/L)", "A1C → Glucose", "Glucose → A1C"),
+    faq: [
+      { q: "How is A1C konwertujed to average glucose?", a: "Using the ADAG formula eAG(mg/dL) = 28.7 × A1C − 46.7. For example, an A1C of 6.5% ≈ 140 mg/dL (7.8 mmol/L)." },
+      { q: "Is estimated average glucose the same as my meter reading?", a: "No. eAG is a long-term average derived from A1C; individual meter readings vary throughout the day and may differ from this estimate." },
+    ],
+  },
   pt: {
     title: "Conversor A1c / Glicose", short: "Converta entre hemoglobina glicada (A1c) e glicose média estimada.",
     description: "Conversor gratuito A1c. Converta entre o valor de hemoglobina A1c (%) e a glicose plasmática média estimada (mg/dL ou mmol/L).",

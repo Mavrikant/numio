@@ -40,6 +40,85 @@ const i18n: CalculatorI18n = {
       },
     },
   },
+  nl: {
+    title: "Salaris & Take-Home Pay Calculator",
+    short: "Take-Home Pay",
+    description:
+      "Estimate your US take-home pay after federal income tax, Social Security, Medicare, and state income tax.",
+    keywords: ["salary", "take-home pay", "net pay", "federal income tax", "FICA", "paycontroleer calculator"],
+    inputs: {
+      annualSalary: { label: "Annual Salaris", help: "Your gross annual salary before any taxes or deductions." },
+      filingStatus: {
+        label: "Filing Status",
+        help: "Your federal tax filing status. 'Head of Household' applies if you are unmarried and pay more than half the cost of supporting a qualifying person.",
+      },
+      stateIncomeTaxRate: {
+        label: "State Income Belasting Rate",
+        help: "Your state's flat income tax rate as a percentage. Use 0 if you live in a state with no income tax.",
+      },
+      preTaxDeductions: {
+        label: "Pre-Belasting Deductions",
+        help: "Annual contributions to tax-advantaged accounts such as 401(k), health insurance premiums, or HSA that reduce your taxable income.",
+      },
+    },
+    outputs: {
+      netAnnual: { label: "Annual Take-Home Pay", help: "Your salary after all taxes and deductions." },
+      netMonthly: { label: "Monthly Take-Home Pay", help: "Your annual net pay divided by 12." },
+      federalIncomeTax: { label: "Federal Income Belasting", help: "Belasting based on 2024 US federal progressive brackets." },
+      socialSecurityTax: { label: "Social Security Belasting", help: "6.2% on wages up to $168,600 (2024 wage base)." },
+      medicareTax: { label: "Medicare Belasting", help: "1.45% on all wages, plus 0.9% on wages above $200,000." },
+      stateIncomeTax: { label: "State Income Belasting", help: "Berekend at the flat rate you provided." },
+      totalTax: { label: "Total Belasting", help: "Sum of all taxes withheld." },
+      effectiveTaxRate: { label: "Effective Belasting Rate", help: "Total tax as a percentage of gross salary." },
+    },
+    options: {
+      filingStatus: {
+        single: "Single",
+        married: "Married Filing Jointly",
+        head: "Head of Household",
+      },
+    },
+  },
+
+  pl: {
+    title: "Wynagrodzenie & Take-Home Pay Kalkulator",
+    short: "Take-Home Pay",
+    description:
+      "Estimate your US take-home pay after federal income tax, Social Security, Medicare, and state income tax.",
+    keywords: ["salary", "take-home pay", "net pay", "federal income tax", "FICA", "paysprawdź kalkulator"],
+    inputs: {
+      annualSalary: { label: "Annual Wynagrodzenie", help: "Your gross annual salary before any taxes or deductions." },
+      filingStatus: {
+        label: "Filing Status",
+        help: "Your federal tax filing status. 'Head of Household' applies if you are unmarried and pay more than half the cost of supporting a qualifying person.",
+      },
+      stateIncomeTaxRate: {
+        label: "State Income Podatek Rate",
+        help: "Your state's flat income tax rate as a percentage. Use 0 if you live in a state with no income tax.",
+      },
+      preTaxDeductions: {
+        label: "Pre-Podatek Deductions",
+        help: "Annual contributions to tax-advantaged accounts such as 401(k), health insurance premiums, or HSA that reduce your taxable income.",
+      },
+    },
+    outputs: {
+      netAnnual: { label: "Annual Take-Home Pay", help: "Your salary after all taxes and deductions." },
+      netMonthly: { label: "Monthly Take-Home Pay", help: "Your annual net pay divided by 12." },
+      federalIncomeTax: { label: "Federal Income Podatek", help: "Podatek based on 2024 US federal progressive brackets." },
+      socialSecurityTax: { label: "Social Security Podatek", help: "6.2% on wages up to $168,600 (2024 wage base)." },
+      medicareTax: { label: "Medicare Podatek", help: "1.45% on all wages, plus 0.9% on wages above $200,000." },
+      stateIncomeTax: { label: "State Income Podatek", help: "Obliczd at the flat rate you provided." },
+      totalTax: { label: "Total Podatek", help: "Sum of all taxes withheld." },
+      effectiveTaxRate: { label: "Effective Podatek Rate", help: "Total tax as a percentage of gross salary." },
+    },
+    options: {
+      filingStatus: {
+        single: "Single",
+        married: "Married Filing Jointly",
+        head: "Head of Household",
+      },
+    },
+  },
   pt: {
     title: "Calculadora de Salário Líquido",
     short: "Converta salário bruto em líquido com descontos de IRS, segurança social e taxas.",

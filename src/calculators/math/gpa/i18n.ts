@@ -23,6 +23,51 @@ const i18n: CalculatorI18n = {
       { q: "How do I convert letter grades to points?", a: "Use your school's scale. A common US 4.0 scale is A=4.0, A−=3.7, B+=3.3, B=3.0, and so on. Convert each letter to its point value before entering it." },
     ],
   },
+  nl: {
+    title: "GPA Calculator",
+    short: "Bereken your credit-weighted grade point average from grade points and credit uren.",
+    description:
+      "Gratis GPA calculator. Enter your grade points and matching credit uren as comma-separated lists to get your weighted GPA, total credits and total quality points. Leave credits blank to weight every course equally.",
+    keywords: ["gpa calculator", "grade point average", "weighted gpa", "college gpa calculator", "semester gpa", "cumulative gpa"],
+    inputs: {
+      gradePoints: { label: "Grade points", help: "Comma-separated, e.g. 4, 3.7, 3.3 (use your school's scale)." },
+      creditHours: { label: "Credit uren", help: "Comma-separated, matching each grade. Leave blank for equal weighting." },
+    },
+    outputs: {
+      gpa: { label: "GPA", help: "Credit-weighted grade point average." },
+      totalCredits: { label: "Total credits" },
+      totalQualityPoints: { label: "Total quality points", help: "Σ(grade point × credits)." },
+      courseCount: { label: "Courses counted" },
+    },
+    faq: [
+      { q: "How is GPA berekend?", a: "Multiply each course's grade points by its credit uren, sum those, and divide by the total credits. For example, grades 4, 3, 4 with credits 3, 4, 3 give (12+12+12)/10 = 3.6." },
+      { q: "What if I don't enter credits?", a: "If you leave the credit field blank, every course is weighted equally — the result is the simple average of your grade points." },
+      { q: "How do I converteer letter grades to points?", a: "Use your school's scale. A common US 4.0 scale is A=4.0, A−=3.7, B+=3.3, B=3.0, and so on. Converteer each letter to its point value before entering it." },
+    ],
+  },
+
+  pl: {
+    title: "GPA Kalkulator",
+    short: "Oblicz your credit-weighted grade point average from grade points and credit godzin.",
+    description:
+      "Darmowy GPA kalkulator. Enter your grade points and matching credit godzin as comma-separated lists to get your weighted GPA, total credits and total quality points. Leave credits blank to weight every course equally.",
+    keywords: ["gpa kalkulator", "grade point average", "weighted gpa", "college gpa kalkulator", "semester gpa", "cumulative gpa"],
+    inputs: {
+      gradePoints: { label: "Grade points", help: "Comma-separated, e.g. 4, 3.7, 3.3 (use your school's scale)." },
+      creditHours: { label: "Credit godzin", help: "Comma-separated, matching each grade. Leave blank for equal weighting." },
+    },
+    outputs: {
+      gpa: { label: "GPA", help: "Credit-weighted grade point average." },
+      totalCredits: { label: "Total credits" },
+      totalQualityPoints: { label: "Total quality points", help: "Σ(grade point × credits)." },
+      courseCount: { label: "Courses counted" },
+    },
+    faq: [
+      { q: "How is GPA obliczd?", a: "Multiply each course's grade points by its credit godzin, sum those, and divide by the total credits. For example, grades 4, 3, 4 with credits 3, 4, 3 give (12+12+12)/10 = 3.6." },
+      { q: "What if I don't enter credits?", a: "If you leave the credit field blank, every course is weighted equally — the result is the simple average of your grade points." },
+      { q: "How do I konwertuj letter grades to points?", a: "Use your school's scale. A common US 4.0 scale is A=4.0, A−=3.7, B+=3.3, B=3.0, and so on. Konwertuj each letter to its point value before entering it." },
+    ],
+  },
   pt: {
     title: "Calculadora de Média Académica (GPA)",
     short: "Calcule a sua média académica em escala 4.0, 5.0 ou 20.",

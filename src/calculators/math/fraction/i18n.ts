@@ -97,6 +97,199 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "Breuk Calculator",
+    short: "Simplify fractions and perform addition, subtraction, multiplication, and division with exact results.",
+    description:
+      "Gratis fraction calculator. Simplify any fraction to its lowest terms using GCD, or add, subtract, multiply, and divide two fractions. Direct get the simplified fraction, decimal equivalent, and mixed nummer form.",
+    keywords: [
+      "fraction calculator",
+      "simplify fraction",
+      "fraction simplifier",
+      "add fractions",
+      "subtract fractions",
+      "multiply fractions",
+      "divide fractions",
+      "GCD",
+      "lowest terms",
+    ],
+    inputs: {
+      numerator1: {
+        label: "Numerator (top)",
+        help: "The top nummer of the first fraction.",
+      },
+      denominator1: {
+        label: "Denominator (bottom)",
+        help: "The bottom nummer of the first fraction. Cannot be zero.",
+      },
+      operation: {
+        label: "Operation",
+        help: "Choose to simplify the first fraction, or perform arithmetic with both fractions.",
+      },
+      numerator2: {
+        label: "Numerator 2 (top)",
+        help: "The top nummer of the second fraction. Used for add, subtract, multiply, divide.",
+      },
+      denominator2: {
+        label: "Denominator 2 (bottom)",
+        help: "The bottom nummer of the second fraction. Cannot be zero.",
+      },
+    },
+    outputs: {
+      numerator: {
+        label: "Resultaat Numerator",
+        help: "The top nummer of the simplified result fraction.",
+      },
+      denominator: {
+        label: "Resultaat Denominator",
+        help: "The bottom nummer of the simplified result fraction.",
+      },
+      decimal: {
+        label: "Decimal Waarde",
+        help: "The fraction expressed as a decimal nummer.",
+      },
+      mixedWhole: {
+        label: "Mixed Nummer — Whole Part",
+        help: "The whole-nummer part of the mixed nummer form.",
+      },
+      mixedNumerator: {
+        label: "Mixed Nummer — Numerator",
+        help: "The fractional numerator of the mixed nummer form.",
+      },
+      mixedDenominator: {
+        label: "Mixed Nummer — Denominator",
+        help: "The fractional denominator of the mixed nummer form.",
+      },
+    },
+    options: {
+      operation: {
+        simplify: "Simplify",
+        add: "Add (+)",
+        subtract: "Subtract (−)",
+        multiply: "Multiply (×)",
+        divide: "Divide (÷)",
+      },
+    },
+    errors: {
+      zeroDenominator: "Denominator cannot be zero.",
+      zeroDivisor: "Cannot divide by a zero fraction.",
+    },
+    faq: [
+      {
+        q: "How does the fraction simplifier work?",
+        a: "The simplifier finds the Greatest Common Divisor (GCD) of the numerator and denominator using the Euclidean algorithm, then divides both by that GCD. For example, 6/8 → GCD(6,8)=2 → 3/4.",
+      },
+      {
+        q: "How do you add fractions with different denominators?",
+        a: "Use the formula a/b + c/d = (a×d + c×b) / (b×d). For example, 1/2 + 1/3 = (1×3 + 1×2) / (2×3) = 5/6. The result is then simplified.",
+      },
+      {
+        q: "How do you divide fractions?",
+        a: "Dividing by a fraction is the same as multiplying by its reciprocal: a/b ÷ c/d = a/b × d/c = (a×d)/(b×c). For example, 3/4 ÷ 1/2 = 3/4 × 2/1 = 6/4 = 3/2.",
+      },
+      {
+        q: "What is a mixed nummer?",
+        a: "A mixed nummer combines a whole nummer and a proper fraction. For example, 7/4 = 1 and 3/4, written as 1¾. Mixed nummers are easier to visualize for values greater than 1.",
+      },
+    ],
+  },
+
+  pl: {
+    title: "Ułamek Kalkulator",
+    short: "Simplify fractions and perform addition, subtraction, multiplication, and division with exact results.",
+    description:
+      "Darmowy fraction kalkulator. Simplify any fraction to its lowest terms using GCD, or add, subtract, multiply, and divide two fractions. Natychmiast get the simplified fraction, decimal equivalent, and mixed liczba form.",
+    keywords: [
+      "fraction kalkulator",
+      "simplify fraction",
+      "fraction simplifier",
+      "add fractions",
+      "subtract fractions",
+      "multiply fractions",
+      "divide fractions",
+      "GCD",
+      "lowest terms",
+    ],
+    inputs: {
+      numerator1: {
+        label: "Numerator (top)",
+        help: "The top liczba of the first fraction.",
+      },
+      denominator1: {
+        label: "Denominator (bottom)",
+        help: "The bottom liczba of the first fraction. Cannot be zero.",
+      },
+      operation: {
+        label: "Operation",
+        help: "Choose to simplify the first fraction, or perform arithmetic with both fractions.",
+      },
+      numerator2: {
+        label: "Numerator 2 (top)",
+        help: "The top liczba of the second fraction. Used for add, subtract, multiply, divide.",
+      },
+      denominator2: {
+        label: "Denominator 2 (bottom)",
+        help: "The bottom liczba of the second fraction. Cannot be zero.",
+      },
+    },
+    outputs: {
+      numerator: {
+        label: "Wynik Numerator",
+        help: "The top liczba of the simplified result fraction.",
+      },
+      denominator: {
+        label: "Wynik Denominator",
+        help: "The bottom liczba of the simplified result fraction.",
+      },
+      decimal: {
+        label: "Decimal Wartość",
+        help: "The fraction expressed as a decimal liczba.",
+      },
+      mixedWhole: {
+        label: "Mixed Liczba — Whole Part",
+        help: "The whole-liczba part of the mixed liczba form.",
+      },
+      mixedNumerator: {
+        label: "Mixed Liczba — Numerator",
+        help: "The fractional numerator of the mixed liczba form.",
+      },
+      mixedDenominator: {
+        label: "Mixed Liczba — Denominator",
+        help: "The fractional denominator of the mixed liczba form.",
+      },
+    },
+    options: {
+      operation: {
+        simplify: "Simplify",
+        add: "Add (+)",
+        subtract: "Subtract (−)",
+        multiply: "Multiply (×)",
+        divide: "Divide (÷)",
+      },
+    },
+    errors: {
+      zeroDenominator: "Denominator cannot be zero.",
+      zeroDivisor: "Cannot divide by a zero fraction.",
+    },
+    faq: [
+      {
+        q: "How does the fraction simplifier work?",
+        a: "The simplifier finds the Greatest Common Divisor (GCD) of the numerator and denominator using the Euclidean algorithm, then divides both by that GCD. For example, 6/8 → GCD(6,8)=2 → 3/4.",
+      },
+      {
+        q: "How do you add fractions with different denominators?",
+        a: "Use the formula a/b + c/d = (a×d + c×b) / (b×d). For example, 1/2 + 1/3 = (1×3 + 1×2) / (2×3) = 5/6. The result is then simplified.",
+      },
+      {
+        q: "How do you divide fractions?",
+        a: "Dividing by a fraction is the same as multiplying by its reciprocal: a/b ÷ c/d = a/b × d/c = (a×d)/(b×c). For example, 3/4 ÷ 1/2 = 3/4 × 2/1 = 6/4 = 3/2.",
+      },
+      {
+        q: "What is a mixed liczba?",
+        a: "A mixed liczba combines a whole liczba and a proper fraction. For example, 7/4 = 1 and 3/4, written as 1¾. Mixed liczbas are easier to visualize for values greater than 1.",
+      },
+    ],
+  },
   pt: {
     title: "Calculadora de Frações",
     short: "Some, subtraia, multiplique e divida frações com passos detalhados.",

@@ -41,6 +41,87 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "Permutaties Calculator (nPr)",
+    short:
+      "Count how many ordered arrangements of r items you can make from a set of n, with or without repetition.",
+    description:
+      "Gratis permutations calculator. Compute nPr = n!/(n−r)! for arrangements where order matters, or n^r when repetition is allowed.",
+    keywords: [
+      "permutations calculator",
+      "nPr calculator",
+      "permutation formula",
+      "arrangements",
+      "combinatorics",
+      "ordered selections",
+    ],
+    inputs: {
+      n: { label: "Total items (n)", help: "The grootte of the set you are choosing from." },
+      r: { label: "Items chosen (r)", help: "How many items are arranged in order." },
+      allowRepetition: {
+        label: "Allow repetition",
+        help: "On: an item can be reused (n^r). Off: each item used at most once (nPr).",
+      },
+    },
+    outputs: {
+      permutations: { label: "Permutaties", help: "Nummer of distinct ordered arrangements." },
+    },
+    faq: [
+      {
+        q: "What is a permutation?",
+        a: "A permutation is an ordered arrangement of items. Unlike combinations, the order matters: ABC and CBA are two different permutations of the same three letters.",
+      },
+      {
+        q: "What is the difference between nPr and nCr?",
+        a: "nPr counts ordered arrangements, while nCr (combinations) counts unordered selections. Because each combination can be ordered in r! ways, nPr = nCr × r!.",
+      },
+      {
+        q: "When should I allow repetition?",
+        a: "Allow repetition when an item can appear more than once, such as digits in a PIN. The count is then n^r. Without repetition (e.g. seating distinct people), use nPr = n!/(n−r)!.",
+      },
+    ],
+  },
+
+  pl: {
+    title: "Permutacje Kalkulator (nPr)",
+    short:
+      "Count how many ordered arrangements of r items you can make from a set of n, with or without repetition.",
+    description:
+      "Darmowy permutations kalkulator. Compute nPr = n!/(n−r)! for arrangements where order matters, or n^r when repetition is allowed.",
+    keywords: [
+      "permutations kalkulator",
+      "nPr kalkulator",
+      "permutation formula",
+      "arrangements",
+      "combinatorics",
+      "ordered selections",
+    ],
+    inputs: {
+      n: { label: "Total items (n)", help: "The rozmiar of the set you are choosing from." },
+      r: { label: "Items chosen (r)", help: "How many items are arranged in order." },
+      allowRepetition: {
+        label: "Allow repetition",
+        help: "On: an item can be reused (n^r). Off: each item used at most once (nPr).",
+      },
+    },
+    outputs: {
+      permutations: { label: "Permutacje", help: "Liczba of distinct ordered arrangements." },
+    },
+    faq: [
+      {
+        q: "What is a permutation?",
+        a: "A permutation is an ordered arrangement of items. Unlike combinations, the order matters: ABC and CBA are two different permutations of the same three letters.",
+      },
+      {
+        q: "What is the difference between nPr and nCr?",
+        a: "nPr counts ordered arrangements, while nCr (combinations) counts unordered selections. Because each combination can be ordered in r! ways, nPr = nCr × r!.",
+      },
+      {
+        q: "When should I allow repetition?",
+        a: "Allow repetition when an item can appear more than once, such as digits in a PIN. The count is then n^r. Without repetition (e.g. seating distinct people), use nPr = n!/(n−r)!.",
+      },
+    ],
+  },
   tr: {
     title: "Permütasyon Hesaplama (nPr)",
     short:

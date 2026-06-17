@@ -78,6 +78,161 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "Z-Score Calculator",
+    short: "Bereken z-scores, percentiles, and p-values to standardize and interpret data relative to a normal distribution.",
+    description:
+      "Gratis z-score calculator. Find the standardized score, percentile rank, one-tailed and two-tailed p-values for hypothesis testing and statistical analysis.",
+    keywords: [
+      "z-score calculator",
+      "percentile calculator",
+      "p-value calculator",
+      "standard normal distribution",
+      "hypothesis testing",
+      "statistical significance",
+      "normal distribution",
+    ],
+    inputs: {
+      value: {
+        label: "Observed value (x)",
+        help: "The data point you want to standardize.",
+      },
+      mean: {
+        label: "Mean (μ)",
+        help: "The average of your dataset or population.",
+      },
+      standardDeviation: {
+        label: "Standard deviation (σ)",
+        help: "Measure of spread in the data. Must be positive.",
+      },
+    },
+    outputs: {
+      zScore: {
+        label: "Z-Score",
+        help: "Standardized score showing how many standard deviations the value is from the mean.",
+      },
+      percentile: {
+        label: "Percentile",
+        help: "Percentage of values below your observed value in a normal distribution.",
+      },
+      oneTailPValue: {
+        label: "P-Waarde (one-tailed)",
+        help: "Probability of observing a value as extreme or more extreme in one direction.",
+      },
+      twoTailPValue: {
+        label: "P-Waarde (two-tailed)",
+        help: "Probability of observing a value as extreme or more extreme in either direction.",
+      },
+      interpretation: {
+        label: "Interpretation",
+        help: "How many standard deviations the value is from the mean (1σ, 2σ, 3σ, or extreme).",
+      },
+    },
+    options: {},
+    errors: {
+      invalidStdDev: "Standard deviation must be positive.",
+    },
+    faq: [
+      {
+        q: "What does a z-score of 0 mean?",
+        a: "A z-score of 0 means the value equals the mean. Negative z-scores indicate values below the mean, positive z-scores indicate values above the mean.",
+      },
+      {
+        q: "What does a percentile tell me?",
+        a: "A percentile tells you what percentage of values in a normal distribution fall below your observed value. For example, a 84th percentile means 84% of values are below yours.",
+      },
+      {
+        q: "How do I use z-scores for hypothesis testing?",
+        a: "Compare the p-value to your significance level (typically 0.05). If p-value < 0.05, the result is statistically significant. Use one-tailed for directional tests, two-tailed for non-directional.",
+      },
+      {
+        q: "What is the 68-95-99.7 rule?",
+        a: "In a normal distribution: ~68% of values fall within 1 standard deviation, ~95% within 2 standard deviations, and ~99.7% within 3 standard deviations of the mean.",
+      },
+      {
+        q: "What is the difference between one-tailed and two-tailed p-values?",
+        a: "One-tailed p-values test if a value is extreme in one specific direction. Two-tailed p-values test if a value is extreme in either direction and are generally more conservative.",
+      },
+    ],
+  },
+
+  pl: {
+    title: "Wynik Z Kalkulator",
+    short: "Oblicz z-scores, percentiles, and p-values to standardize and interpret data relative to a normal distribution.",
+    description:
+      "Darmowy z-score kalkulator. Find the standardized score, percentile rank, one-tailed and two-tailed p-values for hypothesis testing and statistical analysis.",
+    keywords: [
+      "z-score kalkulator",
+      "percentile kalkulator",
+      "p-value kalkulator",
+      "standard normal distribution",
+      "hypothesis testing",
+      "statistical significance",
+      "normal distribution",
+    ],
+    inputs: {
+      value: {
+        label: "Observed value (x)",
+        help: "The data point you want to standardize.",
+      },
+      mean: {
+        label: "Mean (μ)",
+        help: "The average of your dataset or population.",
+      },
+      standardDeviation: {
+        label: "Standard deviation (σ)",
+        help: "Measure of spread in the data. Must be positive.",
+      },
+    },
+    outputs: {
+      zScore: {
+        label: "Wynik Z",
+        help: "Standardized score showing how many standard deviations the value is from the mean.",
+      },
+      percentile: {
+        label: "Percentile",
+        help: "Procent of values below your observed value in a normal distribution.",
+      },
+      oneTailPValue: {
+        label: "P-Wartość (one-tailed)",
+        help: "Probability of observing a value as extreme or more extreme in one direction.",
+      },
+      twoTailPValue: {
+        label: "P-Wartość (two-tailed)",
+        help: "Probability of observing a value as extreme or more extreme in either direction.",
+      },
+      interpretation: {
+        label: "Interpretation",
+        help: "How many standard deviations the value is from the mean (1σ, 2σ, 3σ, or extreme).",
+      },
+    },
+    options: {},
+    errors: {
+      invalidStdDev: "Standard deviation must be positive.",
+    },
+    faq: [
+      {
+        q: "What does a z-score of 0 mean?",
+        a: "A z-score of 0 means the value equals the mean. Negative z-scores indicate values below the mean, positive z-scores indicate values above the mean.",
+      },
+      {
+        q: "What does a percentile tell me?",
+        a: "A percentile tells you what percentage of values in a normal distribution fall below your observed value. For example, a 84th percentile means 84% of values are below yours.",
+      },
+      {
+        q: "How do I use z-scores for hypothesis testing?",
+        a: "Compare the p-value to your significance level (typically 0.05). If p-value < 0.05, the result is statistically significant. Use one-tailed for directional tests, two-tailed for non-directional.",
+      },
+      {
+        q: "What is the 68-95-99.7 rule?",
+        a: "In a normal distribution: ~68% of values fall within 1 standard deviation, ~95% within 2 standard deviations, and ~99.7% within 3 standard deviations of the mean.",
+      },
+      {
+        q: "What is the difference between one-tailed and two-tailed p-values?",
+        a: "One-tailed p-values test if a value is extreme in one specific direction. Two-tailed p-values test if a value is extreme in either direction and are generally more conservative.",
+      },
+    ],
+  },
   pt: {
     title: "Calculadora de Z-Score",
     short: "Calcule o z-score (pontuação padronizada) de um valor numa distribuição normal.",

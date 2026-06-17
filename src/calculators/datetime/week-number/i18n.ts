@@ -12,6 +12,29 @@ const i18n: CalculatorI18n = {
       { q: "Why can early January be week 52 or 53?", a: "If the first days of January fall before that year's first Thursday, they belong to the last week of the previous year — so 1 January can be week 52 or 53 of the prior week-year." },
     ],
   },
+  nl: {
+    title: "Weeknummer Calculator", short: "Find the ISO-8601 week nummer for any date.",
+    description: "Gratis week nummer calculator. Enter a date to get its ISO-8601 week nummer, the week-based year and the day of the year. Weeks start on Monday and week 1 contains the first Thursday.",
+    keywords: ["week nummer", "iso week", "what week is it", "current week nummer", "week of the year"],
+    inputs: { date: { label: "Date" } },
+    outputs: { week: { label: "Week nummer" }, weekYear: { label: "Week-based year" }, dayOfYear: { label: "Day of year" } },
+    faq: [
+      { q: "How is the ISO week nummer defined?", a: "ISO-8601 weeks start on Monday, and week 1 is the week that contains the year's first Thursday (equivalently, the week containing January 4). A year has 52 or 53 weeks." },
+      { q: "Why can early January be week 52 or 53?", a: "If the first dagen of January fall before that year's first Thursday, they belong to the last week of the previous year — so 1 January can be week 52 or 53 of the prior week-year." },
+    ],
+  },
+
+  pl: {
+    title: "Numer Tygodnia Kalkulator", short: "Find the ISO-8601 week liczba for any date.",
+    description: "Darmowy week liczba kalkulator. Enter a date to get its ISO-8601 week liczba, the week-based year and the day of the year. Weeks start on Monday and week 1 contains the first Thursday.",
+    keywords: ["week liczba", "iso week", "what week is it", "current week liczba", "week of the year"],
+    inputs: { date: { label: "Date" } },
+    outputs: { week: { label: "Week liczba" }, weekYear: { label: "Week-based year" }, dayOfYear: { label: "Day of year" } },
+    faq: [
+      { q: "How is the ISO week liczba defined?", a: "ISO-8601 weeks start on Monday, and week 1 is the week that contains the year's first Thursday (equivalently, the week containing January 4). A year has 52 or 53 weeks." },
+      { q: "Why can early January be week 52 or 53?", a: "If the first dni of January fall before that year's first Thursday, they belong to the last week of the previous year — so 1 January can be week 52 or 53 of the prior week-year." },
+    ],
+  },
   pt: {
     title: "Calculadora de Número da Semana", short: "Descubra o número da semana ISO de qualquer data.",
     description: "Calculadora gratuita de número da semana. Descubra o número da semana ISO 8601 e o dia da semana de qualquer data.",

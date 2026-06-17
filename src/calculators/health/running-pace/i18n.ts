@@ -30,6 +30,61 @@ const i18n: CalculatorI18n = {
       { q: "How do I convert pace per km to pace per mile?", a: "Multiply your pace per km by 1.609. A 5:00 /km pace is about 8:03 /mile." },
     ],
   },
+  nl: {
+    title: "Hardlooptempo Calculator",
+    short: "Find your pace per km and per mile, plus average speed, from a distance and time.",
+    description:
+      "Gratis running pace calculator. Enter a distance and your finish time to get pace per kilometre, pace per mile and average speed in km/h and mph. Great for planning 5K, 10K, half-marathon and marathon training.",
+    keywords: ["pace calculator", "running pace", "min per km", "min per mile", "average speed", "marathon pace", "5k pace", "10k pace"],
+    inputs: {
+      distanceValue: { label: "Distance", help: "How far you ran or plan to run." },
+      distanceUnit: { label: "Distance unit" },
+      hours: { label: "Hours", help: "Elapsed time — uren part." },
+      minutes: { label: "Minutes", help: "Elapsed time — minuten part." },
+      seconds: { label: "Seconds", help: "Elapsed time — seconden part." },
+    },
+    outputs: {
+      pacePerKm: { label: "Pace per km", help: "Minutes and seconden to cover one kilometre." },
+      pacePerMile: { label: "Pace per mile", help: "Minutes and seconden to cover one mile." },
+      speedKmh: { label: "Gemiddelde speed", suffix: "km/h" },
+      speedMph: { label: "Gemiddelde speed", suffix: "mph" },
+    },
+    options: { distanceUnit: units("Kilometres (km)", "Miles (mi)", "Metres (m)") },
+    errors: { nonPositive: "Distance and time must be greater than zero." },
+    faq: [
+      { q: "How do I bereken running pace?", a: "Divide your total time by the distance. For example, 50 minuten for 10 km is 50/10 = 5:00 minuten per kilometre. This calculator also converteers to pace per mile and average speed." },
+      { q: "What is a good 5K pace?", a: "It varies widely. Many recreational runners finish a 5K around 6:00–7:00 /km (30–35 min); competitive club runners run closer to 3:30–4:00 /km. Use your own current pace as the baseline and improve gradually." },
+      { q: "How do I converteer pace per km to pace per mile?", a: "Multiply your pace per km by 1.609. A 5:00 /km pace is about 8:03 /mile." },
+    ],
+  },
+
+  pl: {
+    title: "Tempo Biegu Kalkulator",
+    short: "Find your pace per km and per mile, plus average speed, from a distance and time.",
+    description:
+      "Darmowy running pace kalkulator. Enter a distance and your finish time to get pace per kilometre, pace per mile and average speed in km/h and mph. Great for planning 5K, 10K, half-marathon and marathon training.",
+    keywords: ["pace kalkulator", "running pace", "min per km", "min per mile", "average speed", "marathon pace", "5k pace", "10k pace"],
+    inputs: {
+      distanceValue: { label: "Distance", help: "How far you ran or plan to run." },
+      distanceUnit: { label: "Distance unit" },
+      hours: { label: "Hours", help: "Elapsed time — godzin part." },
+      minutes: { label: "Minutes", help: "Elapsed time — minut part." },
+      seconds: { label: "Seconds", help: "Elapsed time — sekund part." },
+    },
+    outputs: {
+      pacePerKm: { label: "Pace per km", help: "Minutes and sekund to cover one kilometre." },
+      pacePerMile: { label: "Pace per mile", help: "Minutes and sekund to cover one mile." },
+      speedKmh: { label: "Średnia speed", suffix: "km/h" },
+      speedMph: { label: "Średnia speed", suffix: "mph" },
+    },
+    options: { distanceUnit: units("Kilometres (km)", "Miles (mi)", "Metres (m)") },
+    errors: { nonPositive: "Distance and time must be greater than zero." },
+    faq: [
+      { q: "How do I oblicz running pace?", a: "Divide your total time by the distance. For example, 50 minut for 10 km is 50/10 = 5:00 minut per kilometre. This kalkulator also konwertujs to pace per mile and average speed." },
+      { q: "What is a good 5K pace?", a: "It varies widely. Many recreational runners finish a 5K around 6:00–7:00 /km (30–35 min); competitive club runners run closer to 3:30–4:00 /km. Use your own current pace as the baseline and improve gradually." },
+      { q: "How do I konwertuj pace per km to pace per mile?", a: "Multiply your pace per km by 1.609. A 5:00 /km pace is about 8:03 /mile." },
+    ],
+  },
   pt: {
     title: "Calculadora de Ritmo de Corrida",
     short: "Calcule o seu ritmo de corrida, tempo total e velocidade.",

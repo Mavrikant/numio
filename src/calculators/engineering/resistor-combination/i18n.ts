@@ -38,6 +38,81 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "Series & Parallel Weerstand Calculator",
+    short:
+      "Find the equivalent resistance of two resistors connected in series and in parallel.",
+    description:
+      "Gratis resistor combination calculator. Enter two resistor values to get the equivalent resistance in series (R₁ + R₂) and in parallel (R₁·R₂ / (R₁ + R₂)).",
+    keywords: [
+      "resistor calculator",
+      "series resistance",
+      "parallel resistance",
+      "equivalent resistance",
+      "two resistors in parallel",
+      "ohms",
+    ],
+    inputs: {
+      r1: { label: "Weerstand 1 (R₁)", help: "Resistance of the first resistor in ohms." },
+      r2: { label: "Weerstand 2 (R₂)", help: "Resistance of the second resistor in ohms." },
+    },
+    outputs: {
+      parallel: { label: "Parallel Resistance", help: "Equivalent resistance when wired in parallel." },
+      series: { label: "Series Resistance", help: "Equivalent resistance when wired in series." },
+    },
+    faq: [
+      {
+        q: "How do resistors add in series?",
+        a: "In series the current passes through each resistor in turn, so the resistances simply add: R = R₁ + R₂. The total is always larger than the largest single resistor.",
+      },
+      {
+        q: "How do resistors combine in parallel?",
+        a: "For two resistors in parallel use the product-over-sum rule R = (R₁·R₂)/(R₁ + R₂). The result is always smaller than the smallest individual resistor.",
+      },
+      {
+        q: "What is the equivalent resistance of 100 Ω and 200 Ω?",
+        a: "In series it is 100 + 200 = 300 Ω. In parallel it is (100 × 200)/(100 + 200) = 20000/300 ≈ 66.67 Ω.",
+      },
+    ],
+  },
+
+  pl: {
+    title: "Series & Parallel Rezystor Kalkulator",
+    short:
+      "Find the equivalent resistance of two resistors connected in series and in parallel.",
+    description:
+      "Darmowy resistor combination kalkulator. Enter two resistor values to get the equivalent resistance in series (R₁ + R₂) and in parallel (R₁·R₂ / (R₁ + R₂)).",
+    keywords: [
+      "resistor kalkulator",
+      "series resistance",
+      "parallel resistance",
+      "equivalent resistance",
+      "two resistors in parallel",
+      "ohms",
+    ],
+    inputs: {
+      r1: { label: "Rezystor 1 (R₁)", help: "Resistance of the first resistor in ohms." },
+      r2: { label: "Rezystor 2 (R₂)", help: "Resistance of the second resistor in ohms." },
+    },
+    outputs: {
+      parallel: { label: "Parallel Resistance", help: "Equivalent resistance when wired in parallel." },
+      series: { label: "Series Resistance", help: "Equivalent resistance when wired in series." },
+    },
+    faq: [
+      {
+        q: "How do resistors add in series?",
+        a: "In series the current passes through each resistor in turn, so the resistances simply add: R = R₁ + R₂. The total is always larger than the largest single resistor.",
+      },
+      {
+        q: "How do resistors combine in parallel?",
+        a: "For two resistors in parallel use the product-over-sum rule R = (R₁·R₂)/(R₁ + R₂). The result is always smaller than the smallest individual resistor.",
+      },
+      {
+        q: "What is the equivalent resistance of 100 Ω and 200 Ω?",
+        a: "In series it is 100 + 200 = 300 Ω. In parallel it is (100 × 200)/(100 + 200) = 20000/300 ≈ 66.67 Ω.",
+      },
+    ],
+  },
   tr: {
     title: "Seri ve Paralel Direnç Hesaplama",
     short:

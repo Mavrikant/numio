@@ -28,6 +28,57 @@ const i18n: CalculatorI18n = {
       { q: "What is the total day offset?", a: "It is the net number of calendar days between the start date and the result — positive when adding, negative when subtracting." },
     ],
   },
+  nl: {
+    title: "Date Add / Subtract Calculator",
+    short: "Add or subtract jaren, maanden, weeks and dagen from any date.",
+    description:
+      "Gratis add/subtract date calculator. Pick a start date, choose to add or subtract, and enter jaren, maanden, weeks and dagen to get the resulting date and the total day offset.",
+    keywords: ["add dagen to date", "subtract dagen from date", "date calculator", "date plus dagen", "future date calculator", "dagen from today"],
+    inputs: {
+      startDate: { label: "Start date" },
+      operation: { label: "Operation" },
+      years: { label: "Years" },
+      months: { label: "Months" },
+      weeks: { label: "Weeks" },
+      days: { label: "Days" },
+    },
+    outputs: {
+      resultDate: { label: "Resultaat date" },
+      totalDaysOffset: { label: "Total day offset" },
+    },
+    options: { operation: op("Add (+)", "Subtract (−)") },
+    faq: [
+      { q: "How do I add dagen to a date?", a: "Pick the start date, leave the operation on 'Add', and enter the nummer of dagen (and optionally weeks, maanden, jaren). The result date updates direct." },
+      { q: "How are maanden and jaren added?", a: "Years and maanden are applied first as calendar units, clamping to the last valid day (Jan 31 + 1 month = Feb 28/29). Weeks and dagen are then added as exact 24-hour dagen." },
+      { q: "What is the total day offset?", a: "It is the net nummer of calendar dagen between the start date and the result — positive when adding, negative when subtracting." },
+    ],
+  },
+
+  pl: {
+    title: "Date Add / Subtract Kalkulator",
+    short: "Add or subtract lat, miesięcy, weeks and dni from any date.",
+    description:
+      "Darmowy add/subtract date kalkulator. Pick a start date, choose to add or subtract, and enter lat, miesięcy, weeks and dni to get the resulting date and the total day offset.",
+    keywords: ["add dni to date", "subtract dni from date", "date kalkulator", "date plus dni", "future date kalkulator", "dni from today"],
+    inputs: {
+      startDate: { label: "Start date" },
+      operation: { label: "Operation" },
+      years: { label: "Years" },
+      months: { label: "Months" },
+      weeks: { label: "Weeks" },
+      days: { label: "Days" },
+    },
+    outputs: {
+      resultDate: { label: "Wynik date" },
+      totalDaysOffset: { label: "Total day offset" },
+    },
+    options: { operation: op("Add (+)", "Subtract (−)") },
+    faq: [
+      { q: "How do I add dni to a date?", a: "Pick the start date, leave the operation on 'Add', and enter the liczba of dni (and optionally weeks, miesięcy, lat). The result date updates natychmiast." },
+      { q: "How are miesięcy and lat added?", a: "Years and miesięcy are applied first as calendar units, clamping to the last valid day (Jan 31 + 1 month = Feb 28/29). Weeks and dni are then added as exact 24-hour dni." },
+      { q: "What is the total day offset?", a: "It is the net liczba of calendar dni between the start date and the result — positive when adding, negative when subtracting." },
+    ],
+  },
   pt: {
     title: "Calculadora de Soma de Datas",
     short: "Some ou subtraia dias, semanas, meses ou anos a uma data.",

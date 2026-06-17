@@ -29,6 +29,8 @@ const LOCALE_BCP47: Record<Locale, string> = {
   ja: "ja-JP",
   ko: "ko-KR",
   hi: "hi-IN",
+  nl: "nl-NL",
+  pl: "pl-PL",
 };
 
 export function bcp47(locale: Locale): string {

@@ -58,6 +58,14 @@ const desc = description ?? t(locale, "site.description");
     <meta name="theme-color" content="#0ea5e9" />
     <link rel="manifest" href={`${import.meta.env.BASE_URL}manifest.webmanifest`} />
 
+    {/* Performance: DNS prefetch & preconnect for third-party origins */}
+    <link rel="dns-prefetch" href="https://plausible.io" />
+    <link rel="preconnect" href="https://plausible.io" crossorigin />
+
+    {/* SEO / indexation signal */}
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+    <meta name="google" content="notranslate" />
+
     {/* Open Graph */}
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={desc} />

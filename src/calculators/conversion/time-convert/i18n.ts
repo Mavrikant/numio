@@ -49,6 +49,103 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "Time Unit Converteerer",
+    short:
+      "Converteer between seconden, minuten, uren, dagen, weeks, maanden, and jaren.",
+    description:
+      "Gratis time converteerer for converteering between seconden, minuten, uren, dagen, weeks, maanden, and jaren using precise Gregorian calendar averages.",
+    keywords: [
+      "time converteerer",
+      "unit conversion",
+      "uren to dagen",
+      "dagen to jaren",
+      "time calculator",
+    ],
+    inputs: {
+      value: { label: "Waarde", help: "Amount to converteer." },
+      fromUnit: { label: "From unit", help: "Source time unit." },
+      toUnit: { label: "To unit", help: "Target time unit." },
+    },
+    outputs: {
+      result: { label: "Resultaat", help: "Converteered time value." },
+    },
+    options: {
+      nanosecond: "Nanosecond (ns)",
+      microsecond: "Microsecond (µs)",
+      millisecond: "Millisecond (ms)",
+      second: "Second",
+      minute: "Minute",
+      hour: "Hour",
+      day: "Day",
+      week: "Week",
+      month: "Month",
+      year: "Year",
+      decade: "Decade",
+      century: "Century",
+      millennium: "Millennium",
+    },
+    errors: { invalidValue: "Waarde must be positive." },
+    faq: [
+      {
+        q: "Why does 1 year = 365.25 dagen?",
+        a: "The Gregorian calendar averages leap jaren: every 4 jaren, with exceptions for eeuwen not divisible by 400.",
+      },
+      {
+        q: "Why does 1 month ≈ 30.4375 dagen?",
+        a: "Gemiddelde calendar month: 365.25 dagen / 12 = 30.4375 dagen.",
+      },
+    ],
+  },
+
+  pl: {
+    title: "Time Unit Konwerter",
+    short:
+      "Konwertuj between sekund, minut, godzin, dni, weeks, miesięcy, and lat.",
+    description:
+      "Darmowy time konwerter for konwertujing between sekund, minut, godzin, dni, weeks, miesięcy, and lat using precise Gregorian calendar averages.",
+    keywords: [
+      "time konwerter",
+      "unit conversion",
+      "godzin to dni",
+      "dni to lat",
+      "time kalkulator",
+    ],
+    inputs: {
+      value: { label: "Wartość", help: "Amount to konwertuj." },
+      fromUnit: { label: "From unit", help: "Source time unit." },
+      toUnit: { label: "To unit", help: "Target time unit." },
+    },
+    outputs: {
+      result: { label: "Wynik", help: "Konwertujed time value." },
+    },
+    options: {
+      nanosecond: "Nanosecond (ns)",
+      microsecond: "Microsecond (µs)",
+      millisecond: "Millisecond (ms)",
+      second: "Second",
+      minute: "Minute",
+      hour: "Hour",
+      day: "Day",
+      week: "Week",
+      month: "Month",
+      year: "Year",
+      decade: "Decade",
+      century: "Century",
+      millennium: "Millennium",
+    },
+    errors: { invalidValue: "Wartość must be positive." },
+    faq: [
+      {
+        q: "Why does 1 year = 365.25 dni?",
+        a: "The Gregorian calendar averages leap lat: every 4 lat, with exceptions for wieków not divisible by 400.",
+      },
+      {
+        q: "Why does 1 month ≈ 30.4375 dni?",
+        a: "Średnia calendar month: 365.25 dni / 12 = 30.4375 dni.",
+      },
+    ],
+  },
   pt: {
     title: "Conversor de Tempo",
     short:

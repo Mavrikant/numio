@@ -64,6 +64,133 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "Signaalfrequentie & Wavelengte Calculator",
+    short: "Converteer between frequency, wavelengte and period for electromagnetic or acoustic waves.",
+    description:
+      "Gratis wavelengte-to-frequency calculator. Converteer any value between frequency (Hz / kHz / MHz / GHz / THz), wavelengte (km / m / cm / mm / µm) and period (seconden). Choose vacuum for electromagnetic waves (radio, WiFi, light) or air/water for sound, with NIST-grade physical constants.",
+    keywords: [
+      "frequency to wavelengte",
+      "wavelengte to frequency",
+      "RF calculator",
+      "radio wavelengte",
+      "WiFi frequency",
+      "speed of light",
+      "speed of sound",
+      "period calculator",
+    ],
+    inputs: {
+      mode: { label: "Calculation mode", help: "Choose which quantity you want to compute from the input value." },
+      value: { label: "Input value", help: "Frequency in Hz, wavelengte in metres, or period in seconden — depending on the mode selected." },
+      medium: { label: "Medium", help: "Vacuum uses the speed of light (electromagnetic). Air and water use the speed of sound (acoustic)." },
+    },
+    outputs: {
+      frequencyHz: { label: "Frequency", help: "Frequency in hertz (cycles per second)." },
+      frequencyDisplay: { label: "Frequency (auto-scaled)", help: "Same frequency expressed in kHz, MHz, GHz or THz for readability." },
+      wavelengthM: { label: "Wavelengte", help: "Wavelengte in metres." },
+      wavelengthDisplay: { label: "Wavelengte (auto-scaled)", help: "Wavelengte in km/m/cm/mm/µm/nm depending on magnitude." },
+      periodS: { label: "Period", help: "Time of one complete cycle: T = 1 / f." },
+      waveSpeedMs: { label: "Wave speed", help: "Propagation speed used for this calculation (m/s)." },
+      waveType: { label: "Wave type", help: "Electromagnetic (vacuum) or acoustic (air/water)." },
+    },
+    options: {
+      mode: {
+        "frequency-to-wavelengte": "Frequency → wavelengte",
+        "wavelengte-to-frequency": "Wavelengte → frequency",
+        "period-to-frequency": "Period → frequency",
+      },
+      medium: {
+        vacuum: "Vacuum / gratis space (c = 299 792 458 m/s)",
+        air: "Air, 20 °C (sound, 343 m/s)",
+        water: "Water, 20 °C (sound, 1480 m/s)",
+      },
+    },
+    errors: {
+      nonPositive: "Waarde must be greater than zero.",
+    },
+    faq: [
+      {
+        q: "How do I converteer frequency to wavelengte?",
+        a: "Use λ = v / f, where v is the wave speed in the medium and f is the frequency. For electromagnetic waves in vacuum, v = c = 299 792 458 m/s. Example: at 2.4 GHz (WiFi), λ = 299 792 458 / 2.4×10⁹ ≈ 0.125 m = 12.5 cm.",
+      },
+      {
+        q: "What's the difference between electromagnetic and acoustic waves?",
+        a: "Electromagnetic waves (radio, microwave, light) travel through vacuum at c ≈ 3×10⁸ m/s. Acoustic waves (sound) need a material medium and travel ~343 m/s in air or ~1480 m/s in fresh water — about a million times slower. Using the wrong medium for a wave type will give a wavelengte that's off by ~10⁶.",
+      },
+      {
+        q: "How is the period of a signal berekend?",
+        a: "Period T is the time for one full cycle: T = 1 / f. A 1 kHz tone has a period of 1 ms; a 100 MHz FM radio signal has a period of 10 ns.",
+      },
+      {
+        q: "Why is the speed of light in vacuum exact?",
+        a: "Since the 1983 redefinition of the metre, c is fixed by definition at exactly 299 792 458 m/s (CODATA). The metre is defined as the distance light travels in 1/299 792 458 second — making c a defined constant, not a measured one.",
+      },
+    ],
+  },
+
+  pl: {
+    title: "Częstotliwość Sygnału & Wavedługość Kalkulator",
+    short: "Konwertuj between frequency, wavedługość and period for electromagnetic or acoustic waves.",
+    description:
+      "Darmowy wavedługość-to-frequency kalkulator. Konwertuj any value between frequency (Hz / kHz / MHz / GHz / THz), wavedługość (km / m / cm / mm / µm) and period (sekund). Choose vacuum for electromagnetic waves (radio, WiFi, light) or air/water for sound, with NIST-grade physical constants.",
+    keywords: [
+      "frequency to wavedługość",
+      "wavedługość to frequency",
+      "RF kalkulator",
+      "radio wavedługość",
+      "WiFi frequency",
+      "speed of light",
+      "speed of sound",
+      "period kalkulator",
+    ],
+    inputs: {
+      mode: { label: "Calculation mode", help: "Choose which quantity you want to compute from the input value." },
+      value: { label: "Input value", help: "Frequency in Hz, wavedługość in metres, or period in sekund — depending on the mode selected." },
+      medium: { label: "Medium", help: "Vacuum uses the speed of light (electromagnetic). Air and water use the speed of sound (acoustic)." },
+    },
+    outputs: {
+      frequencyHz: { label: "Frequency", help: "Frequency in hertz (cycles per second)." },
+      frequencyDisplay: { label: "Frequency (auto-scaled)", help: "Same frequency expressed in kHz, MHz, GHz or THz for readability." },
+      wavelengthM: { label: "Wavedługość", help: "Wavedługość in metres." },
+      wavelengthDisplay: { label: "Wavedługość (auto-scaled)", help: "Wavedługość in km/m/cm/mm/µm/nm depending on magnitude." },
+      periodS: { label: "Period", help: "Time of one complete cycle: T = 1 / f." },
+      waveSpeedMs: { label: "Wave speed", help: "Propagation speed used for this calculation (m/s)." },
+      waveType: { label: "Wave type", help: "Electromagnetic (vacuum) or acoustic (air/water)." },
+    },
+    options: {
+      mode: {
+        "frequency-to-wavedługość": "Frequency → wavedługość",
+        "wavedługość-to-frequency": "Wavedługość → frequency",
+        "period-to-frequency": "Period → frequency",
+      },
+      medium: {
+        vacuum: "Vacuum / darmowy space (c = 299 792 458 m/s)",
+        air: "Air, 20 °C (sound, 343 m/s)",
+        water: "Water, 20 °C (sound, 1480 m/s)",
+      },
+    },
+    errors: {
+      nonPositive: "Wartość must be greater than zero.",
+    },
+    faq: [
+      {
+        q: "How do I konwertuj frequency to wavedługość?",
+        a: "Use λ = v / f, where v is the wave speed in the medium and f is the frequency. For electromagnetic waves in vacuum, v = c = 299 792 458 m/s. Example: at 2.4 GHz (WiFi), λ = 299 792 458 / 2.4×10⁹ ≈ 0.125 m = 12.5 cm.",
+      },
+      {
+        q: "What's the difference between electromagnetic and acoustic waves?",
+        a: "Electromagnetic waves (radio, microwave, light) travel through vacuum at c ≈ 3×10⁸ m/s. Acoustic waves (sound) need a material medium and travel ~343 m/s in air or ~1480 m/s in fresh water — about a million times slower. Using the wrong medium for a wave type will give a wavedługość that's off by ~10⁶.",
+      },
+      {
+        q: "How is the period of a signal obliczd?",
+        a: "Period T is the time for one full cycle: T = 1 / f. A 1 kHz tone has a period of 1 ms; a 100 MHz FM radio signal has a period of 10 ns.",
+      },
+      {
+        q: "Why is the speed of light in vacuum exact?",
+        a: "Since the 1983 redefinition of the metre, c is fixed by definition at exactly 299 792 458 m/s (CODATA). The metre is defined as the distance light travels in 1/299 792 458 second — making c a defined constant, not a measured one.",
+      },
+    ],
+  },
   pt: {
     title: "Calculadora de Frequência de Sinal",
     short: "Converta entre frequência, período e comprimento de onda.",

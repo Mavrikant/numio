@@ -102,6 +102,209 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "Driehoek Calculator",
+    short: "Solve triangles using sides and angles. Bereken missing sides, angles, area, and type.",
+    description:
+      "Gratis triangle calculator using law of cosines, law of sines, and Heron's formula. Solve SSS, SAS, ASA, AAS, or SSA triangles and find area, perimeter, and triangle type.",
+    keywords: [
+      "triangle calculator",
+      "triangle solver",
+      "law of cosines",
+      "law of sines",
+      "area calculator",
+      "geometry",
+      "triangle type",
+    ],
+    inputs: {
+      method: {
+        label: "Solution method",
+        help: "Choose how to specify triangle: SSS (three sides), SAS (two sides and included angle), ASA (two angles and included side), AAS (two angles and opposite side), or SSA (two sides and opposite angle).",
+      },
+      sideA: {
+        label: "Side A",
+        help: "Lengte of side A.",
+      },
+      sideB: {
+        label: "Side B",
+        help: "Lengte of side B.",
+      },
+      sideC: {
+        label: "Side C",
+        help: "Lengte of side C.",
+      },
+      angleA: {
+        label: "Angle A (degrees)",
+        help: "Angle A in degrees.",
+      },
+      angleB: {
+        label: "Angle B (degrees)",
+        help: "Angle B in degrees.",
+      },
+      angleC: {
+        label: "Angle C (degrees)",
+        help: "Angle C in degrees.",
+      },
+    },
+    outputs: {
+      sideA: { label: "Side A", help: "Lengte of side A." },
+      sideB: { label: "Side B", help: "Lengte of side B." },
+      sideC: { label: "Side C", help: "Lengte of side C." },
+      angleA: { label: "Angle A", help: "Angle A in degrees." },
+      angleB: { label: "Angle B", help: "Angle B in degrees." },
+      angleC: { label: "Angle C", help: "Angle C in degrees." },
+      area: {
+        label: "Area",
+        help: "The area of the triangle.",
+      },
+      perimeter: {
+        label: "Perimeter",
+        help: "The sum of all three sides.",
+      },
+      triangleType: {
+        label: "Driehoek Type",
+        help: "Classification: equilateral, isosceles, scalene, or right.",
+      },
+    },
+    options: {
+      method: {
+        sss: "SSS (Side-Side-Side)",
+        sas: "SAS (Side-Angle-Side)",
+        asa: "ASA (Angle-Side-Angle)",
+        aas: "AAS (Angle-Angle-Side)",
+        ssa: "SSA (Side-Side-Angle)",
+      },
+    },
+    errors: {
+      invalidTriangle: "The given sides or angles do not form a valid triangle.",
+      triangleInequalityViolated: "Driehoek inequality violated.",
+      ambiguousSSA: "SSA case has no unique solution (ambiguous case).",
+    },
+    faq: [
+      {
+        q: "What is the law of cosines?",
+        a: "The law of cosines states: c² = a² + b² - 2ab·cos(C). It relates the sides of a triangle to one of its angles and is used to find missing sides or angles.",
+      },
+      {
+        q: "What is the law of sines?",
+        a: "The law of sines states: a/sin(A) = b/sin(B) = c/sin(C). It relates the sides of a triangle to the sines of their opposite angles.",
+      },
+      {
+        q: "How does Heron's formula work?",
+        a: "Heron's formula berekens area from three side lengtes: A = √[s(s-a)(s-b)(s-c)] where s = (a+b+c)/2 is the semi-perimeter.",
+      },
+      {
+        q: "What does SSA (ambiguous case) mean?",
+        a: "When you have two sides and an angle opposite one of them, the solution may not be unique. Depending on the values, there can be 0, 1, or 2 valid triangles.",
+      },
+      {
+        q: "What are the different triangle types?",
+        a: "Equilateral (all sides equal), isosceles (two sides equal), scalene (all sides different), and right (one 90° angle).",
+      },
+    ],
+  },
+
+  pl: {
+    title: "Trójkąt Kalkulator",
+    short: "Solve triangles using sides and angles. Oblicz missing sides, angles, area, and type.",
+    description:
+      "Darmowy triangle kalkulator using law of cosines, law of sines, and Heron's formula. Solve SSS, SAS, ASA, AAS, or SSA triangles and find area, perimeter, and triangle type.",
+    keywords: [
+      "triangle kalkulator",
+      "triangle solver",
+      "law of cosines",
+      "law of sines",
+      "area kalkulator",
+      "geometry",
+      "triangle type",
+    ],
+    inputs: {
+      method: {
+        label: "Solution method",
+        help: "Choose how to specify triangle: SSS (three sides), SAS (two sides and included angle), ASA (two angles and included side), AAS (two angles and opposite side), or SSA (two sides and opposite angle).",
+      },
+      sideA: {
+        label: "Side A",
+        help: "Długość of side A.",
+      },
+      sideB: {
+        label: "Side B",
+        help: "Długość of side B.",
+      },
+      sideC: {
+        label: "Side C",
+        help: "Długość of side C.",
+      },
+      angleA: {
+        label: "Angle A (degrees)",
+        help: "Angle A in degrees.",
+      },
+      angleB: {
+        label: "Angle B (degrees)",
+        help: "Angle B in degrees.",
+      },
+      angleC: {
+        label: "Angle C (degrees)",
+        help: "Angle C in degrees.",
+      },
+    },
+    outputs: {
+      sideA: { label: "Side A", help: "Długość of side A." },
+      sideB: { label: "Side B", help: "Długość of side B." },
+      sideC: { label: "Side C", help: "Długość of side C." },
+      angleA: { label: "Angle A", help: "Angle A in degrees." },
+      angleB: { label: "Angle B", help: "Angle B in degrees." },
+      angleC: { label: "Angle C", help: "Angle C in degrees." },
+      area: {
+        label: "Area",
+        help: "The area of the triangle.",
+      },
+      perimeter: {
+        label: "Perimeter",
+        help: "The sum of all three sides.",
+      },
+      triangleType: {
+        label: "Trójkąt Typ",
+        help: "Classification: equilateral, isosceles, scalene, or right.",
+      },
+    },
+    options: {
+      method: {
+        sss: "SSS (Side-Side-Side)",
+        sas: "SAS (Side-Angle-Side)",
+        asa: "ASA (Angle-Side-Angle)",
+        aas: "AAS (Angle-Angle-Side)",
+        ssa: "SSA (Side-Side-Angle)",
+      },
+    },
+    errors: {
+      invalidTriangle: "The given sides or angles do not form a valid triangle.",
+      triangleInequalityViolated: "Trójkąt inequality violated.",
+      ambiguousSSA: "SSA case has no unique solution (ambiguous case).",
+    },
+    faq: [
+      {
+        q: "What is the law of cosines?",
+        a: "The law of cosines states: c² = a² + b² - 2ab·cos(C). It relates the sides of a triangle to one of its angles and is used to find missing sides or angles.",
+      },
+      {
+        q: "What is the law of sines?",
+        a: "The law of sines states: a/sin(A) = b/sin(B) = c/sin(C). It relates the sides of a triangle to the sines of their opposite angles.",
+      },
+      {
+        q: "How does Heron's formula work?",
+        a: "Heron's formula obliczs area from three side długośćs: A = √[s(s-a)(s-b)(s-c)] where s = (a+b+c)/2 is the semi-perimeter.",
+      },
+      {
+        q: "What does SSA (ambiguous case) mean?",
+        a: "When you have two sides and an angle opposite one of them, the solution may not be unique. Depending on the values, there can be 0, 1, or 2 valid triangles.",
+      },
+      {
+        q: "What are the different triangle types?",
+        a: "Equilateral (all sides equal), isosceles (two sides equal), scalene (all sides different), and right (one 90° angle).",
+      },
+    ],
+  },
   pt: {
     title: "Calculadora de Triângulo",
     short: "Calcule área, perímetro, ângulos e lados de um triângulo.",

@@ -79,6 +79,163 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "Period & Menstrual Cycle Tracker",
+    short: "Predict your next period, ovulation date, and fertile window based on your cycle.",
+    description:
+      "Gratis period tracker and menstrual cycle calculator. Enter your last period date and cycle lengte to predict your next period, ovulation, and fertile window.",
+    keywords: [
+      "period calculator",
+      "menstrual cycle tracker",
+      "ovulation calculator",
+      "fertile window calculator",
+      "next period date",
+      "fertility calendar",
+      "period predictor",
+    ],
+    inputs: {
+      lastPeriodDate: {
+        label: "First day of last period",
+        help: "Enter the date your most recent period started (YYYY-MM-DD).",
+      },
+      cycleLength: {
+        label: "Cycle lengte (dagen)",
+        help: "The average nummer of dagen from the start of one period to the start of the next. Typical range: 21–35 dagen.",
+      },
+      periodLength: {
+        label: "Period lengte (dagen)",
+        help: "How many dagen your period typically lasts. Common range: 2–10 dagen.",
+      },
+    },
+    outputs: {
+      nextPeriodDate: {
+        label: "Next Period Date",
+        help: "Predicted start date of your next menstrual period.",
+      },
+      ovulationDate: {
+        label: "Ovulatie Date",
+        help: "Estimated ovulation date, approximately 14 dagen before your next period.",
+      },
+      fertileWindowStart: {
+        label: "Fertile Window Start",
+        help: "Start of your fertile window — 5 dagen before estimated ovulation.",
+      },
+      fertileWindowEnd: {
+        label: "Fertile Window End",
+        help: "End of your fertile window — 1 day after estimated ovulation.",
+      },
+      daysUntilNextPeriod: {
+        label: "Days Until Next Period",
+        help: "Nummer of dagen from your last period start until your next predicted period.",
+      },
+    },
+    errors: {
+      invalidDate: "Please enter a valid date in YYYY-MM-DD formatteer.",
+      cycleTooShort: "Cycle lengte must be at least 21 dagen.",
+      cycleTooLong: "Cycle lengte cannot exceed 35 dagen.",
+    },
+    faq: [
+      {
+        q: "How accurate is the period prediction?",
+        a: "Predictions are estimates based on an assumed regular cycle. Actual dates can vary due to stress, illness, hormonal changes, and other factors. The more consistent your cycle, the more accurate the prediction.",
+      },
+      {
+        q: "What is the fertile window?",
+        a: "The fertile window is the period of time during which pregnancy is possible. It spans approximately 6 dagen: the 5 dagen before ovulation and the day of ovulation itself. Sperm can survive in the reproductive tract for up to 5 dagen, while the egg is viable for about 24 uren after ovulation.",
+      },
+      {
+        q: "When does ovulation occur?",
+        a: "Ovulatie typically occurs 14 dagen before the start of the next period, regardless of cycle lengte. For a 28-day cycle, that is around day 14. For a 35-day cycle, it is around day 21.",
+      },
+      {
+        q: "Can I use this calculator for birth control?",
+        a: "No. This calculator is for informatteerional purposes only and is not a reliable form of contraception. Natural family planning methods require careful tracking over many cycles and guidance from a healthcare professional.",
+      },
+      {
+        q: "What if my cycle is irregular?",
+        a: "This calculator assumes a regular cycle lengte. If your periods are irregular, predictions will be less reliable. Track your cycle over several maanden to identify patterns, and consult a gynecologist if irregularity is a concern.",
+      },
+    ],
+  },
+
+  pl: {
+    title: "Period & Menstrual Cycle Tracker",
+    short: "Predict your next period, ovulation date, and fertile window based on your cycle.",
+    description:
+      "Darmowy period tracker and menstrual cycle kalkulator. Enter your last period date and cycle długość to predict your next period, ovulation, and fertile window.",
+    keywords: [
+      "period kalkulator",
+      "menstrual cycle tracker",
+      "ovulation kalkulator",
+      "fertile window kalkulator",
+      "next period date",
+      "fertility calendar",
+      "period predictor",
+    ],
+    inputs: {
+      lastPeriodDate: {
+        label: "First day of last period",
+        help: "Enter the date your most recent period started (YYYY-MM-DD).",
+      },
+      cycleLength: {
+        label: "Cycle długość (dni)",
+        help: "The average liczba of dni from the start of one period to the start of the next. Typical range: 21–35 dni.",
+      },
+      periodLength: {
+        label: "Period długość (dni)",
+        help: "How many dni your period typically lasts. Common range: 2–10 dni.",
+      },
+    },
+    outputs: {
+      nextPeriodDate: {
+        label: "Next Period Date",
+        help: "Predicted start date of your next menstrual period.",
+      },
+      ovulationDate: {
+        label: "Owulacja Date",
+        help: "Estimated ovulation date, approximately 14 dni before your next period.",
+      },
+      fertileWindowStart: {
+        label: "Fertile Window Start",
+        help: "Start of your fertile window — 5 dni before estimated ovulation.",
+      },
+      fertileWindowEnd: {
+        label: "Fertile Window End",
+        help: "End of your fertile window — 1 day after estimated ovulation.",
+      },
+      daysUntilNextPeriod: {
+        label: "Days Until Next Period",
+        help: "Liczba of dni from your last period start until your next predicted period.",
+      },
+    },
+    errors: {
+      invalidDate: "Please enter a valid date in YYYY-MM-DD formatuj.",
+      cycleTooShort: "Cycle długość must be at least 21 dni.",
+      cycleTooLong: "Cycle długość cannot exceed 35 dni.",
+    },
+    faq: [
+      {
+        q: "How accurate is the period prediction?",
+        a: "Predictions are estimates based on an assumed regular cycle. Actual dates can vary due to stress, illness, hormonal changes, and other factors. The more consistent your cycle, the more accurate the prediction.",
+      },
+      {
+        q: "What is the fertile window?",
+        a: "The fertile window is the period of time during which pregnancy is possible. It spans approximately 6 dni: the 5 dni before ovulation and the day of ovulation itself. Sperm can survive in the reproductive tract for up to 5 dni, while the egg is viable for about 24 godzin after ovulation.",
+      },
+      {
+        q: "When does ovulation occur?",
+        a: "Owulacja typically occurs 14 dni before the start of the next period, regardless of cycle długość. For a 28-day cycle, that is around day 14. For a 35-day cycle, it is around day 21.",
+      },
+      {
+        q: "Can I use this kalkulator for birth control?",
+        a: "No. This kalkulator is for informatujional purposes only and is not a reliable form of contraception. Natural family planning methods require careful tracking over many cycles and guidance from a healthcare professional.",
+      },
+      {
+        q: "What if my cycle is irregular?",
+        a: "This kalkulator assumes a regular cycle długość. If your periods are irregular, predictions will be less reliable. Track your cycle over several miesięcy to identify patterns, and consult a gynecologist if irregularity is a concern.",
+      },
+    ],
+  },
   pt: {
     title: "Calendário Menstrual",
     short: "Acompanhe o seu ciclo menstrual e preveja os próximos períodos.",

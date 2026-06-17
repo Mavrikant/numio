@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://karaman.dev/calculators/sitemap-index.xml
+Sitemap: https://karaman.dev/numio/sitemap-index.xml
 
 # AI / LLM discovery manifest (https://llmstxt.org)
-# https://karaman.dev/calculators/llms.txt
+# https://karaman.dev/numio/llms.txt

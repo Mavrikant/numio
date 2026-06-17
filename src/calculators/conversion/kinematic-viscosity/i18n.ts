@@ -39,6 +39,83 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "Kinematic Viscosity Converteerer",
+    short: "Converteer between m²/s, stokes, and centistokes",
+    description:
+      "Converteer between kinematic viscosity units including square meter per second, square millimeter per second, stokes, and centistokes with high precision.",
+    keywords: [
+      "kinematic viscosity",
+      "stokes",
+      "centistokes",
+      "m²/s",
+      "viscosity conversion",
+    ],
+    inputs: {
+      value: { label: "Waarde", help: "The lengte value to converteer" },
+      fromUnit: { label: "From Unit", help: "Select source unit" },
+      toUnit: { label: "To Unit", help: "Select target unit" },
+    },
+    outputs: {
+      result: { label: "Resultaat", help: "Converteered value" },
+    },
+    faq: [
+      {
+        question: "How do I converteer stokes to m²/s?",
+        answer:
+          "Multiply stokes by 0.0001 to get square meters per second. For example, 1 St × 0.0001 = 0.0001 m²/s.",
+      },
+      {
+        question: "Are centistokes and mm²/s the same?",
+        answer:
+          "Yes. 1 centistokes (cSt) equals exactly 1 square millimeter per second (mm²/s), which is 1e-6 m²/s. Water at 20°C is about 1 cSt.",
+      },
+      {
+        question: "What is kinematic viscosity?",
+        answer:
+          "Kinematic viscosity is the ratio of dynamic viscosity to density, measuring how a fluid flows under gravity. Its SI unit is the square meter per second (m²/s).",
+      },
+    ],
+  },
+
+  pl: {
+    title: "Kinematic Viscosity Konwerter",
+    short: "Konwertuj between m²/s, stokes, and centistokes",
+    description:
+      "Konwertuj between kinematic viscosity units including square meter per second, square millimeter per second, stokes, and centistokes with high precision.",
+    keywords: [
+      "kinematic viscosity",
+      "stokes",
+      "centistokes",
+      "m²/s",
+      "viscosity conversion",
+    ],
+    inputs: {
+      value: { label: "Wartość", help: "The długość value to konwertuj" },
+      fromUnit: { label: "From Unit", help: "Select source unit" },
+      toUnit: { label: "To Unit", help: "Select target unit" },
+    },
+    outputs: {
+      result: { label: "Wynik", help: "Konwertujed value" },
+    },
+    faq: [
+      {
+        question: "How do I konwertuj stokes to m²/s?",
+        answer:
+          "Multiply stokes by 0.0001 to get square meters per second. For example, 1 St × 0.0001 = 0.0001 m²/s.",
+      },
+      {
+        question: "Are centistokes and mm²/s the same?",
+        answer:
+          "Yes. 1 centistokes (cSt) equals exactly 1 square millimeter per second (mm²/s), which is 1e-6 m²/s. Water at 20°C is about 1 cSt.",
+      },
+      {
+        question: "What is kinematic viscosity?",
+        answer:
+          "Kinematic viscosity is the ratio of dynamic viscosity to density, measuring how a fluid flows under gravity. Its SI unit is the square meter per second (m²/s).",
+      },
+    ],
+  },
   tr: {
     title: "Kinematik Viskozite Dönüştürücü",
     short: "m²/s, stokes ve centistokes arasında dönüştürün",

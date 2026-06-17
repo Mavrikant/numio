@@ -51,6 +51,107 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "Temperature Converteerer",
+    short: "Converteer between Celsius, Fahrenheit, Kelvin, Réaumur, and Rankine scales direct",
+    description: "Converteer between Celsius, Fahrenheit, Kelvin, Réaumur, and Rankine temperature scales with instant calculations",
+    keywords: ["temperature", "celsius", "fahrenheit", "kelvin", "reaumur", "rankine", "conversion", "thermal"],
+    inputs: {
+      value: { label: "Temperature", help: "Enter the temperature value to converteer" },
+      fromUnit: { label: "From unit", help: "The unit of the value you entered" },
+    },
+    options: {
+      celsius: "Celsius (°C)",
+      fahrenheit: "Fahrenheit (°F)",
+      kelvin: "Kelvin (K)",
+      reaumur: "Réaumur (°Ré)",
+      rankine: "Rankine (°R)",
+    },
+    outputs: {
+      celsius: { label: "Celsius", help: "Resultaat in Celsius" },
+      fahrenheit: { label: "Fahrenheit", help: "Resultaat in Fahrenheit" },
+      kelvin: { label: "Kelvin", help: "Resultaat in Kelvin" },
+      reaumur: { label: "Réaumur", help: "Resultaat in Réaumur" },
+      rankine: { label: "Rankine", help: "Resultaat in Rankine" },
+    },
+    errors: { invalidTemperature: "Temperature must be a valid nummer" },
+    faq: [
+      {
+        question: "What is the difference between Celsius and Fahrenheit?",
+        answer:
+          "Celsius and Fahrenheit are two temperature scales with different reference points. Water gratiszes at 0°C (32°F) and boils at 100°C (212°F). Celsius is the metric standard, while Fahrenheit is commonly used in the US.",
+      },
+      {
+        question: "What is Kelvin and why is it important?",
+        answer:
+          "Kelvin is the SI unit of temperature used in science and engineering. It starts at absolute zero (−273.15°C) and is used in physics and thermodynamics because it has no negative values.",
+      },
+      {
+        question: "What are the Réaumur and Rankine scales?",
+        answer:
+          "Réaumur (°Ré) sets water's gratiszing point at 0° and boiling point at 80°, and was widely used in Europe in the 18th–19th eeuwen. Rankine (°R) is an absolute scale like Kelvin but uses Fahrenheit-grootted degrees, starting at absolute zero (0°R = −459.67°F); it is used in some US engineering fields.",
+      },
+      {
+        question: "Is there a temperature where Celsius and Fahrenheit are equal?",
+        answer: "Yes! −40°C equals −40°F. This is the only point where both scales read the same value.",
+      },
+      {
+        question: "What is absolute zero?",
+        answer: "Absolute zero is 0 Kelvin (−273.15°C, −459.67°F, or 0°R), the lowest possible temperature where all molecular motion stops.",
+      },
+    ],
+  },
+
+  pl: {
+    title: "Temperature Konwerter",
+    short: "Konwertuj between Celsius, Fahrenheit, Kelvin, Réaumur, and Rankine scales natychmiast",
+    description: "Konwertuj between Celsius, Fahrenheit, Kelvin, Réaumur, and Rankine temperature scales with instant calculations",
+    keywords: ["temperature", "celsius", "fahrenheit", "kelvin", "reaumur", "rankine", "conversion", "thermal"],
+    inputs: {
+      value: { label: "Temperature", help: "Enter the temperature value to konwertuj" },
+      fromUnit: { label: "From unit", help: "The unit of the value you entered" },
+    },
+    options: {
+      celsius: "Celsius (°C)",
+      fahrenheit: "Fahrenheit (°F)",
+      kelvin: "Kelvin (K)",
+      reaumur: "Réaumur (°Ré)",
+      rankine: "Rankine (°R)",
+    },
+    outputs: {
+      celsius: { label: "Celsius", help: "Wynik in Celsius" },
+      fahrenheit: { label: "Fahrenheit", help: "Wynik in Fahrenheit" },
+      kelvin: { label: "Kelvin", help: "Wynik in Kelvin" },
+      reaumur: { label: "Réaumur", help: "Wynik in Réaumur" },
+      rankine: { label: "Rankine", help: "Wynik in Rankine" },
+    },
+    errors: { invalidTemperature: "Temperature must be a valid liczba" },
+    faq: [
+      {
+        question: "What is the difference between Celsius and Fahrenheit?",
+        answer:
+          "Celsius and Fahrenheit are two temperature scales with different reference points. Water darmowyzes at 0°C (32°F) and boils at 100°C (212°F). Celsius is the metric standard, while Fahrenheit is commonly used in the US.",
+      },
+      {
+        question: "What is Kelvin and why is it important?",
+        answer:
+          "Kelvin is the SI unit of temperature used in science and engineering. It starts at absolute zero (−273.15°C) and is used in physics and thermodynamics because it has no negative values.",
+      },
+      {
+        question: "What are the Réaumur and Rankine scales?",
+        answer:
+          "Réaumur (°Ré) sets water's darmowyzing point at 0° and boiling point at 80°, and was widely used in Europe in the 18th–19th wieków. Rankine (°R) is an absolute scale like Kelvin but uses Fahrenheit-rozmiard degrees, starting at absolute zero (0°R = −459.67°F); it is used in some US engineering fields.",
+      },
+      {
+        question: "Is there a temperature where Celsius and Fahrenheit are equal?",
+        answer: "Yes! −40°C equals −40°F. This is the only point where both scales read the same value.",
+      },
+      {
+        question: "What is absolute zero?",
+        answer: "Absolute zero is 0 Kelvin (−273.15°C, −459.67°F, or 0°R), the lowest possible temperature where all molecular motion stops.",
+      },
+    ],
+  },
   pt: {
     title: "Conversor de Temperatura",
     short: "Converta entre Celsius, Fahrenheit, Kelvin, Réaumur e Rankine.",

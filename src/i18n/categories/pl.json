@@ -1,0 +1,14 @@
+{
+  "health": "Zdrowie",
+  "finance": "Finanse",
+  "engineering": "Inżynieria",
+  "math": "Matematyka",
+  "conversion": "Konwersja",
+  "datetime": "Data i czas",
+  "data-analysis": "Analiza danych",
+  "visualization": "Wizualizacja",
+  "statistics": "Statystyka",
+  "security": "Bezpieczeństwo",
+  "text": "Tekst",
+  "developer": "Programista"
+}

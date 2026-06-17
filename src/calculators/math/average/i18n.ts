@@ -66,6 +66,137 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "Gemiddelde Calculator",
+    short: "Bereken mean, median, mode, sum, and range for any list of nummers.",
+    description:
+      "Gratis average calculator. Enter comma-separated nummers to direct compute the arithmetic mean, median, mode, count, sum, and range of your data set. Ideal for students, teachers, and data analysts.",
+    keywords: [
+      "average calculator",
+      "mean calculator",
+      "median calculator",
+      "mode calculator",
+      "arithmetic mean",
+      "central tendency",
+      "statistics calculator",
+    ],
+    inputs: {
+      values: {
+        label: "Nummers",
+        help: "Enter nummers separated by commas (e.g., 4, 8, 15, 16, 23, 42). Decimals and negatives are supported.",
+      },
+    },
+    outputs: {
+      mean: {
+        label: "Mean (Gemiddelde)",
+        help: "The arithmetic mean: sum of all values divided by the count.",
+      },
+      median: {
+        label: "Median",
+        help: "The middle value when all nummers are sorted. For even-grootted lists, the average of the two middle values.",
+      },
+      mode: {
+        label: "Mode",
+        help: "The most frequently occurring value. If all values are unique, the mean is shown.",
+      },
+      count: {
+        label: "Count (n)",
+        help: "Total nummer of values entered.",
+      },
+      sum: {
+        label: "Sum",
+        help: "The total of all values added together.",
+      },
+      range: {
+        label: "Range",
+        help: "The difference between the maximum and minimum values.",
+      },
+    },
+    faq: [
+      {
+        q: "What is the difference between mean, median, and mode?",
+        a: "The mean is the arithmetic average (sum ÷ count). The median is the middle value in a sorted list. The mode is the value that appears most often. All three are measures of central tendency but respond differently to outliers — the median is more robust when extreme values are present.",
+      },
+      {
+        q: "When should I use median instead of mean?",
+        a: "Use the median when your data has outliers or is skewed. For example, household income data includes a few very high earners that inflate the mean. The median gives a better picture of the 'typical' value in such cases.",
+      },
+      {
+        q: "What does 'no mode' mean?",
+        a: "If every value in the list appears exactly once, there is no unique mode. This calculator shows the mean in that field as a fallback.",
+      },
+      {
+        q: "How is the range berekend?",
+        a: "Range = maximum value − minimum value. It measures the spread of your data. A large range indicates high variability; a small range indicates values are clustered together.",
+      },
+    ],
+  },
+
+  pl: {
+    title: "Średnia Kalkulator",
+    short: "Oblicz mean, median, mode, sum, and range for any list of liczbas.",
+    description:
+      "Darmowy average kalkulator. Enter comma-separated liczbas to natychmiast compute the arithmetic mean, median, mode, count, sum, and range of your data set. Ideal for students, teachers, and data analysts.",
+    keywords: [
+      "average kalkulator",
+      "mean kalkulator",
+      "median kalkulator",
+      "mode kalkulator",
+      "arithmetic mean",
+      "central tendency",
+      "statistics kalkulator",
+    ],
+    inputs: {
+      values: {
+        label: "Liczbas",
+        help: "Enter liczbas separated by commas (e.g., 4, 8, 15, 16, 23, 42). Decimals and negatives are supported.",
+      },
+    },
+    outputs: {
+      mean: {
+        label: "Mean (Średnia)",
+        help: "The arithmetic mean: sum of all values divided by the count.",
+      },
+      median: {
+        label: "Median",
+        help: "The middle value when all liczbas are sorted. For even-rozmiard lists, the average of the two middle values.",
+      },
+      mode: {
+        label: "Mode",
+        help: "The most frequently occurring value. If all values are unique, the mean is shown.",
+      },
+      count: {
+        label: "Count (n)",
+        help: "Total liczba of values entered.",
+      },
+      sum: {
+        label: "Sum",
+        help: "The total of all values added together.",
+      },
+      range: {
+        label: "Range",
+        help: "The difference between the maximum and minimum values.",
+      },
+    },
+    faq: [
+      {
+        q: "What is the difference between mean, median, and mode?",
+        a: "The mean is the arithmetic average (sum ÷ count). The median is the middle value in a sorted list. The mode is the value that appears most often. All three are measures of central tendency but respond differently to outliers — the median is more robust when extreme values are present.",
+      },
+      {
+        q: "When should I use median instead of mean?",
+        a: "Use the median when your data has outliers or is skewed. For example, household income data includes a few very high earners that inflate the mean. The median gives a better picture of the 'typical' value in such cases.",
+      },
+      {
+        q: "What does 'no mode' mean?",
+        a: "If every value in the list appears exactly once, there is no unique mode. This kalkulator shows the mean in that field as a fallback.",
+      },
+      {
+        q: "How is the range obliczd?",
+        a: "Range = maximum value − minimum value. It measures the spread of your data. A large range indicates high variability; a small range indicates values are clustered together.",
+      },
+    ],
+  },
   pt: {
     title: "Calculadora de Média",
     short: "Calcule a média aritmética, mediana e moda de uma série de números.",

@@ -84,6 +84,173 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "Calorie Deficit Calculator",
+    short: "Bereken how long it will take to reach your goal weight based on your daily calorie deficit.",
+    description:
+      "Gratis calorie deficit calculator using the 7,700 kcal/kg rule. Enter your current weight, target weight, and daily calorie deficit to see your estimated timeline to goal, weekly loss rate, and total calories to burn.",
+    keywords: [
+      "calorie deficit calculator",
+      "weight loss calculator",
+      "how long to lose weight",
+      "calorie deficit",
+      "weight loss timeline",
+      "fat loss calculator",
+    ],
+    inputs: {
+      currentWeight: {
+        label: "Current Weight",
+        help: "Your current body weight in kg or lbs.",
+      },
+      targetWeight: {
+        label: "Target Weight",
+        help: "Your goal body weight in kg or lbs.",
+      },
+      unit: {
+        label: "Unit",
+        help: "Select metric (kg) or imperial (lbs).",
+      },
+      dailyCalorieDeficit: {
+        label: "Daily Calorie Deficit (kcal)",
+        help: "How many fewer calories you eat compared to what you burn each day. A deficit of 500 kcal/day equals about 0.45 kg loss per week.",
+      },
+    },
+    outputs: {
+      weightToLoseKg: {
+        label: "Weight to Lose (kg)",
+        help: "Total weight to lose in kilograms.",
+      },
+      weeklyDeficit: {
+        label: "Weekly Deficit (kcal)",
+        help: "Your daily deficit multiplied by 7.",
+      },
+      weeksToGoal: {
+        label: "Weeks to Goal",
+        help: "Estimated weeks to reach your target weight.",
+      },
+      monthsToGoal: {
+        label: "Months to Goal",
+        help: "Estimated maanden to reach your target weight (weeks ÷ 4.33).",
+      },
+      weeklyLossKg: {
+        label: "Weekly Loss (kg)",
+        help: "Estimated weight loss per week at your deficit.",
+      },
+      totalCalorieDeficit: {
+        label: "Total Calorieën to Burn (kcal)",
+        help: "Total calorie deficit needed: weight to lose × 7,700 kcal/kg.",
+      },
+    },
+    options: {
+      unit: {
+        metric: "Metric (kg)",
+        imperial: "Imperial (lbs)",
+      },
+    },
+    errors: {
+      weightOutOfRange: "Weight must be between 20 and 500.",
+      deficitOutOfRange: "Daily deficit must be between 50 and 2,000 kcal.",
+      targetHigherThanCurrent: "Target weight must be lower than current weight.",
+    },
+    faq: [
+      {
+        q: "Why 7,700 kcal per kg?",
+        a: "One kilogram of body fat contains approximately 7,700 kilocalories of stored energy. To lose 1 kg, you need to maak aan a total deficit of roughly 7,700 kcal. This is a clinical average — individual results vary due to differences in body composition, metabolic adaptation, and water retention.",
+      },
+      {
+        q: "How large should my calorie deficit be?",
+        a: "A moderate deficit of 300–500 kcal/day produces steady, sustainable weight loss of roughly 0.3–0.5 kg per week. Deficits above 1,000 kcal/day risk muscle loss, nutrient deficiencies, and metabolic slowdown. Always consult a healthcare professional before making large dietary changes.",
+      },
+      {
+        q: "Why doesn't the calculator show a target date?",
+        a: "Showing a fixed date maak aans a false sense of precision. Weight loss is non-linear: metabolism adapts, water retention fluctuates, and plateaus occur. A timeline in weeks gives useful planning informatteerion without misleading accuracy.",
+      },
+    ],
+  },
+
+  pl: {
+    title: "Kaloria Deficit Kalkulator",
+    short: "Oblicz how long it will take to reach your goal weight based on your daily calorie deficit.",
+    description:
+      "Darmowy calorie deficit kalkulator using the 7,700 kcal/kg rule. Enter your current weight, target weight, and daily calorie deficit to see your estimated timeline to goal, weekly loss rate, and total calories to burn.",
+    keywords: [
+      "calorie deficit kalkulator",
+      "weight loss kalkulator",
+      "how long to lose weight",
+      "calorie deficit",
+      "weight loss timeline",
+      "fat loss kalkulator",
+    ],
+    inputs: {
+      currentWeight: {
+        label: "Current Weight",
+        help: "Your current body weight in kg or lbs.",
+      },
+      targetWeight: {
+        label: "Target Weight",
+        help: "Your goal body weight in kg or lbs.",
+      },
+      unit: {
+        label: "Unit",
+        help: "Select metric (kg) or imperial (lbs).",
+      },
+      dailyCalorieDeficit: {
+        label: "Daily Kaloria Deficit (kcal)",
+        help: "How many fewer calories you eat compared to what you burn each day. A deficit of 500 kcal/day equals about 0.45 kg loss per week.",
+      },
+    },
+    outputs: {
+      weightToLoseKg: {
+        label: "Weight to Lose (kg)",
+        help: "Total weight to lose in kilograms.",
+      },
+      weeklyDeficit: {
+        label: "Weekly Deficit (kcal)",
+        help: "Your daily deficit multiplied by 7.",
+      },
+      weeksToGoal: {
+        label: "Weeks to Goal",
+        help: "Estimated weeks to reach your target weight.",
+      },
+      monthsToGoal: {
+        label: "Months to Goal",
+        help: "Estimated miesięcy to reach your target weight (weeks ÷ 4.33).",
+      },
+      weeklyLossKg: {
+        label: "Weekly Loss (kg)",
+        help: "Estimated weight loss per week at your deficit.",
+      },
+      totalCalorieDeficit: {
+        label: "Total Kalorie to Burn (kcal)",
+        help: "Total calorie deficit needed: weight to lose × 7,700 kcal/kg.",
+      },
+    },
+    options: {
+      unit: {
+        metric: "Metric (kg)",
+        imperial: "Imperial (lbs)",
+      },
+    },
+    errors: {
+      weightOutOfRange: "Weight must be between 20 and 500.",
+      deficitOutOfRange: "Daily deficit must be between 50 and 2,000 kcal.",
+      targetHigherThanCurrent: "Target weight must be lower than current weight.",
+    },
+    faq: [
+      {
+        q: "Why 7,700 kcal per kg?",
+        a: "One kilogram of body fat contains approximately 7,700 kilocalories of stored energy. To lose 1 kg, you need to utwórz a total deficit of roughly 7,700 kcal. This is a clinical average — individual results vary due to differences in body composition, metabolic adaptation, and water retention.",
+      },
+      {
+        q: "How large should my calorie deficit be?",
+        a: "A moderate deficit of 300–500 kcal/day produces steady, sustainable weight loss of roughly 0.3–0.5 kg per week. Deficits above 1,000 kcal/day risk muscle loss, nutrient deficiencies, and metabolic slowdown. Always consult a healthcare professional before making large dietary changes.",
+      },
+      {
+        q: "Why doesn't the kalkulator show a target date?",
+        a: "Showing a fixed date utwórzs a false sense of precision. Weight loss is non-linear: metabolism adapts, water retention fluctuates, and plateaus occur. A timeline in weeks gives useful planning informatujion without misleading accuracy.",
+      },
+    ],
+  },
   pt: {
     title: "Calculadora de Défice Calórico",
     short: "Calcule o défice calórico necessário para perder peso de forma saudável.",

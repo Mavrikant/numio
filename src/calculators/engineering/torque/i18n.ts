@@ -59,6 +59,123 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "Koppel Calculator",
+    short: "Solve for torque from force and distance, or vice versa using τ = F × r.",
+    description:
+      "Gratis torque calculator for rotational mechanics. Bereken torque (N·m) from force (N) and distance (m), or solve for force/distance given torque. Includes angular momentum, rotational inertia concepts.",
+    keywords: ["torque calculator", "moment", "rotational force", "angular momentum", "mechanics"],
+    inputs: {
+      momentOrForce: {
+        label: "Bereken",
+        help: "Choose whether to find torque from force/distance, or force from torque/distance.",
+      },
+      force: {
+        label: "Force (N) or Koppel (N·m)",
+        help: "Applied force in Newtons, or torque if solving for force.",
+      },
+      distance: {
+        label: "Distance (m)",
+        help: "Perpendicular distance from the axis of rotation (radius arm).",
+      },
+    },
+    outputs: {
+      torqueNm: {
+        label: "Koppel (N·m)",
+        help: "Rotational force: τ = F × r.",
+      },
+      forceN: {
+        label: "Force (N)",
+        help: "Applied force perpendicular to the radius.",
+      },
+      distanceM: {
+        label: "Distance (m)",
+        help: "Perpendicular distance from rotation axis.",
+      },
+    },
+    options: {
+      momentOrForce: {
+        force: "Bereken Koppel from Force & Distance",
+        moment: "Bereken Force from Koppel & Distance",
+      },
+    },
+    errors: {
+      invalidInputs: "All inputs must be positive.",
+    },
+    faq: [
+      {
+        q: "What is torque?",
+        a: "Koppel (or moment) is a rotational force that causes angular acceleration. It equals force multiplied by the perpendicular distance (radius arm) from the axis: τ = F × r.",
+      },
+      {
+        q: "Why does distance matter in torque?",
+        a: "The further the force is applied from the axis, the greater the torque produced. A small force at a large distance can produce the same torque as a large force at a small distance.",
+      },
+      {
+        q: "What if force is not perpendicular?",
+        a: "If force is applied at an angle θ to the radius, multiply by sin(θ): τ = F × r × sin(θ).",
+      },
+    ],
+  },
+
+  pl: {
+    title: "Moment Obrotowy Kalkulator",
+    short: "Solve for torque from force and distance, or vice versa using τ = F × r.",
+    description:
+      "Darmowy torque kalkulator for rotational mechanics. Oblicz torque (N·m) from force (N) and distance (m), or solve for force/distance given torque. Includes angular momentum, rotational inertia concepts.",
+    keywords: ["torque kalkulator", "moment", "rotational force", "angular momentum", "mechanics"],
+    inputs: {
+      momentOrForce: {
+        label: "Oblicz",
+        help: "Choose whether to find torque from force/distance, or force from torque/distance.",
+      },
+      force: {
+        label: "Force (N) or Moment Obrotowy (N·m)",
+        help: "Applied force in Newtons, or torque if solving for force.",
+      },
+      distance: {
+        label: "Distance (m)",
+        help: "Perpendicular distance from the axis of rotation (radius arm).",
+      },
+    },
+    outputs: {
+      torqueNm: {
+        label: "Moment Obrotowy (N·m)",
+        help: "Rotational force: τ = F × r.",
+      },
+      forceN: {
+        label: "Force (N)",
+        help: "Applied force perpendicular to the radius.",
+      },
+      distanceM: {
+        label: "Distance (m)",
+        help: "Perpendicular distance from rotation axis.",
+      },
+    },
+    options: {
+      momentOrForce: {
+        force: "Oblicz Moment Obrotowy from Force & Distance",
+        moment: "Oblicz Force from Moment Obrotowy & Distance",
+      },
+    },
+    errors: {
+      invalidInputs: "All inputs must be positive.",
+    },
+    faq: [
+      {
+        q: "What is torque?",
+        a: "Moment Obrotowy (or moment) is a rotational force that causes angular acceleration. It equals force multiplied by the perpendicular distance (radius arm) from the axis: τ = F × r.",
+      },
+      {
+        q: "Why does distance matter in torque?",
+        a: "The further the force is applied from the axis, the greater the torque produced. A small force at a large distance can produce the same torque as a large force at a small distance.",
+      },
+      {
+        q: "What if force is not perpendicular?",
+        a: "If force is applied at an angle θ to the radius, multiply by sin(θ): τ = F × r × sin(θ).",
+      },
+    ],
+  },
   pt: {
     title: "Calculadora de Torque (Binário)",
     short: "Calcule o torque a partir da força e do comprimento do braço.",

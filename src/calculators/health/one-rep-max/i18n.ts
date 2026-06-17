@@ -17,6 +17,29 @@ const i18n: CalculatorI18n = {
       { q: "What are the 90% and 80% loads for?", a: "They're common training intensities — useful for planning strength (≈90%) and hypertrophy (≈80%) work off your estimated max." },
     ],
   },
+  nl: {
+    title: "One-Rep Max Calculator", short: "Estimate your 1RM from a weight and reps, with training-load percentages.",
+    description: "Gratis one-rep max (1RM) calculator. Enter the weight you lifted and for how many reps to estimate your one-rep maximum using the Epley and Brzycki formulas, plus suggested loads at 90% and 80% for training.",
+    keywords: ["one rep max calculator", "1rm calculator", "max lift estimate", "epley formula", "brzycki formula", "strength calculator"],
+    ...io("Weight lifted", "Repetitions", "Estimated 1RM (avg)", "Epley 1RM", "Brzycki 1RM", "90% load", "80% load"),
+    faq: [
+      { q: "How is one-rep max estimated?", a: "From a sub-maximal set: Epley gives 1RM = weight × (1 + reps/30); Brzycki gives weight × 36/(37 − reps). We show both and their average." },
+      { q: "How accurate is it?", a: "Most accurate for sets of 1–5 reps. Above ~10 reps, fatigue and form make estimates diverge and overstate your true max." },
+      { q: "What are the 90% and 80% loads for?", a: "They're common training intensities — useful for planning strength (≈90%) and hypertrophy (≈80%) work off your estimated max." },
+    ],
+  },
+
+  pl: {
+    title: "One-Rep Max Kalkulator", short: "Estimate your 1RM from a weight and reps, with training-load percentages.",
+    description: "Darmowy one-rep max (1RM) kalkulator. Enter the weight you lifted and for how many reps to estimate your one-rep maximum using the Epley and Brzycki formulas, plus suggested loads at 90% and 80% for training.",
+    keywords: ["one rep max kalkulator", "1rm kalkulator", "max lift estimate", "epley formula", "brzycki formula", "strength kalkulator"],
+    ...io("Weight lifted", "Repetitions", "Estimated 1RM (avg)", "Epley 1RM", "Brzycki 1RM", "90% load", "80% load"),
+    faq: [
+      { q: "How is one-rep max estimated?", a: "From a sub-maximal set: Epley gives 1RM = weight × (1 + reps/30); Brzycki gives weight × 36/(37 − reps). We show both and their average." },
+      { q: "How accurate is it?", a: "Most accurate for sets of 1–5 reps. Above ~10 reps, fatigue and form make estimates diverge and overstate your true max." },
+      { q: "What are the 90% and 80% loads for?", a: "They're common training intensities — useful for planning strength (≈90%) and hypertrophy (≈80%) work off your estimated max." },
+    ],
+  },
   pt: {
     title: "Calculadora de 1RM (Uma Repetição Máxima)", short: "Estime a sua repetição máxima (1RM) em exercícios de força.",
     description: "Calculadora gratuita de 1RM. Estime a sua uma repetição máxima a partir do peso levantado e número de repetições.",

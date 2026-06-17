@@ -63,6 +63,131 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "Zwangerschap Weight Gain Calculator",
+    short: "Track your pregnancy weight gain against IOM 2009 guidelines by trimester.",
+    description:
+      "Gratis pregnancy weight gain calculator based on IOM 2009 guidelines. Enter your pre-pregnancy weight, hoogte, and current gestational week to see your recommended total gain and whether you are on track.",
+    keywords: [
+      "pregnancy weight gain calculator",
+      "gestational weight gain",
+      "IOM pregnancy guidelines",
+      "prenatal weight",
+      "healthy pregnancy weight",
+      "pregnancy BMI",
+      "weight gain by trimester",
+    ],
+    inputs: {
+      unit: { label: "Unit system", help: "Choose metric (kg/cm) or imperial (lb/in)." },
+      prePregnancyWeight: { label: "Pre-pregnancy weight", help: "Your weight before pregnancy (before week 1)." },
+      height: { label: "Hoogte", help: "Your hoogte (for calculating pre-pregnancy BMI)." },
+      gestationalWeek: { label: "Gestational week", help: "Current week of pregnancy (1–42)." },
+      currentWeight: { label: "Current weight", help: "Your weight today." },
+    },
+    outputs: {
+      preBmi: { label: "Pre-pregnancy BMI", help: "Your BMI before pregnancy, used to determine the IOM weight gain category." },
+      bmiCategory: { label: "BMI category", help: "Pre-pregnancy BMI category (underweight, normal, overweight, obese)." },
+      recommendedTotalGainMin: { label: "Recommended gain (min)", help: "Minimum total weight gain recommended by IOM 2009 for your BMI category.", suffix: "kg" },
+      recommendedTotalGainMax: { label: "Recommended gain (max)", help: "Maximum total weight gain recommended by IOM 2009 for your BMI category.", suffix: "kg" },
+      currentGain: { label: "Current weight gain", help: "How much weight you have gained since pre-pregnancy.", suffix: "kg" },
+      expectedGainAtWeek: { label: "Expected gain at this week", help: "The midpoint of the IOM-recommended gain at your current gestational week.", suffix: "kg" },
+      onTrack: { label: "Status", help: "Whether your current weight gain is within, below, or above the expected range for your gestational week." },
+      weeklyRateKg: { label: "Recommended weekly rate", help: "IOM-recommended weekly weight gain in 2nd and 3rd trimester.", suffix: "kg/week" },
+    },
+    options: {
+      unit: { metric: "Metric (kg, cm)", imperial: "Imperial (lb, in)" },
+    },
+    errors: {
+      weightOutOfRange: "Weight must be a positive value within the valid range.",
+      heightOutOfRange: "Hoogte must be between 100 and 220 cm.",
+      weekOutOfRange: "Gestational week must be between 1 and 42.",
+    },
+    faq: [
+      {
+        q: "What are the IOM 2009 pregnancy weight gain guidelines?",
+        a: "The Institute of Medicine (IOM) published updated guidelines in 2009 recommending total weight gain ranges based on pre-pregnancy BMI: Underweight (<18.5): 12.5–18 kg; Normal weight (18.5–24.9): 11.5–16 kg; Overweight (25–29.9): 7–11.5 kg; Obese (≥30): 5–9 kg. Weekly rates in the 2nd and 3rd trimester are approximately 0.5, 0.42, 0.28, and 0.22 kg respectively.",
+      },
+      {
+        q: "Does the rate of weight gain change across trimesters?",
+        a: "Yes. In the first trimester, weight gain is minimal — typically 0.5 to 2 kg total. The 2nd and 3rd trimesters involve more consistent weekly gains. The IOM weekly rate guidelines apply mainly to the 2nd and 3rd trimesters. This calculator uses a simplified linear model for the first trimester and the IOM weekly rates thereafter.",
+      },
+      {
+        q: "What if I'm carrying twins?",
+        a: "This calculator is designed for singleton pregnancies. The IOM has separate guidelines for twins (typically 17–25 kg for normal weight with twins). For multiple pregnancies, consult your obstetrician for personalised guidance.",
+      },
+      {
+        q: "Should I be worried if I'm below or above the recommended gain?",
+        a: "Both insufficient and excessive weight gain during pregnancy are associated with risks for mother and baby. However, occasional fluctuations are normal. If you are consistently outside the recommended range for several weeks, discuss this with your healthcare provider who can consider your individual circumstances.",
+      },
+      {
+        q: "Is all pregnancy weight gain from the baby?",
+        a: "No. Weight gained during pregnancy is distributed across many components: the baby (typically 3–4 kg at term), placenta (~0.7 kg), amniotic fluid (~0.8 kg), uterine enlargement (~0.9 kg), increased blood volume (~1.8 kg), breast tissue (~0.4 kg), and maternal fat stores (~2–5 kg). The rest is water retention in maternal tissues.",
+      },
+    ],
+  },
+
+  pl: {
+    title: "Ciąża Weight Gain Kalkulator",
+    short: "Track your pregnancy weight gain against IOM 2009 guidelines by trimester.",
+    description:
+      "Darmowy pregnancy weight gain kalkulator based on IOM 2009 guidelines. Enter your pre-pregnancy weight, wysokość, and current gestational week to see your recommended total gain and whether you are on track.",
+    keywords: [
+      "pregnancy weight gain kalkulator",
+      "gestational weight gain",
+      "IOM pregnancy guidelines",
+      "prenatal weight",
+      "healthy pregnancy weight",
+      "pregnancy BMI",
+      "weight gain by trimester",
+    ],
+    inputs: {
+      unit: { label: "Unit system", help: "Choose metric (kg/cm) or imperial (lb/in)." },
+      prePregnancyWeight: { label: "Pre-pregnancy weight", help: "Your weight before pregnancy (before week 1)." },
+      height: { label: "Wysokość", help: "Your wysokość (for calculating pre-pregnancy BMI)." },
+      gestationalWeek: { label: "Gestational week", help: "Current week of pregnancy (1–42)." },
+      currentWeight: { label: "Current weight", help: "Your weight today." },
+    },
+    outputs: {
+      preBmi: { label: "Pre-pregnancy BMI", help: "Your BMI before pregnancy, used to determine the IOM weight gain category." },
+      bmiCategory: { label: "BMI category", help: "Pre-pregnancy BMI category (underweight, normal, overweight, obese)." },
+      recommendedTotalGainMin: { label: "Recommended gain (min)", help: "Minimum total weight gain recommended by IOM 2009 for your BMI category.", suffix: "kg" },
+      recommendedTotalGainMax: { label: "Recommended gain (max)", help: "Maximum total weight gain recommended by IOM 2009 for your BMI category.", suffix: "kg" },
+      currentGain: { label: "Current weight gain", help: "How much weight you have gained since pre-pregnancy.", suffix: "kg" },
+      expectedGainAtWeek: { label: "Expected gain at this week", help: "The midpoint of the IOM-recommended gain at your current gestational week.", suffix: "kg" },
+      onTrack: { label: "Status", help: "Whether your current weight gain is within, below, or above the expected range for your gestational week." },
+      weeklyRateKg: { label: "Recommended weekly rate", help: "IOM-recommended weekly weight gain in 2nd and 3rd trimester.", suffix: "kg/week" },
+    },
+    options: {
+      unit: { metric: "Metric (kg, cm)", imperial: "Imperial (lb, in)" },
+    },
+    errors: {
+      weightOutOfRange: "Weight must be a positive value within the valid range.",
+      heightOutOfRange: "Wysokość must be between 100 and 220 cm.",
+      weekOutOfRange: "Gestational week must be between 1 and 42.",
+    },
+    faq: [
+      {
+        q: "What are the IOM 2009 pregnancy weight gain guidelines?",
+        a: "The Institute of Medicine (IOM) published updated guidelines in 2009 recommending total weight gain ranges based on pre-pregnancy BMI: Underweight (<18.5): 12.5–18 kg; Normal weight (18.5–24.9): 11.5–16 kg; Overweight (25–29.9): 7–11.5 kg; Obese (≥30): 5–9 kg. Weekly rates in the 2nd and 3rd trimester are approximately 0.5, 0.42, 0.28, and 0.22 kg respectively.",
+      },
+      {
+        q: "Does the rate of weight gain change across trimesters?",
+        a: "Yes. In the first trimester, weight gain is minimal — typically 0.5 to 2 kg total. The 2nd and 3rd trimesters involve more consistent weekly gains. The IOM weekly rate guidelines apply mainly to the 2nd and 3rd trimesters. This kalkulator uses a simplified linear model for the first trimester and the IOM weekly rates thereafter.",
+      },
+      {
+        q: "What if I'm carrying twins?",
+        a: "This kalkulator is designed for singleton pregnancies. The IOM has separate guidelines for twins (typically 17–25 kg for normal weight with twins). For multiple pregnancies, consult your obstetrician for personalised guidance.",
+      },
+      {
+        q: "Should I be worried if I'm below or above the recommended gain?",
+        a: "Both insufficient and excessive weight gain during pregnancy are associated with risks for mother and baby. However, occasional fluctuations are normal. If you are consistently outside the recommended range for several weeks, discuss this with your healthcare provider who can consider your individual circumstances.",
+      },
+      {
+        q: "Is all pregnancy weight gain from the baby?",
+        a: "No. Weight gained during pregnancy is distributed across many components: the baby (typically 3–4 kg at term), placenta (~0.7 kg), amniotic fluid (~0.8 kg), uterine enlargement (~0.9 kg), increased blood volume (~1.8 kg), breast tissue (~0.4 kg), and maternal fat stores (~2–5 kg). The rest is water retention in maternal tissues.",
+      },
+    ],
+  },
   pt: {
     title: "Calculadora de Ganho de Peso na Gravidez",
     short: "Veja o ganho de peso recomendado durante a gravidez.",

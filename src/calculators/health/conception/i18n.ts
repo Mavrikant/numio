@@ -80,6 +80,165 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "Conception Date Calculator",
+    short: "Estimate your conception date from your last menstrual period or due date.",
+    description:
+      "Gratis conception date calculator. Enter your last menstrual period or due date to estimate when conception occurred and your fertile window.",
+    keywords: [
+      "conception date calculator",
+      "when did I conceive",
+      "fertile window calculator",
+      "ovulation calculator",
+      "due date calculator",
+      "last menstrual period",
+      "pregnancy conception",
+    ],
+    inputs: {
+      mode: {
+        label: "Calculation mode",
+        help: "Bereken from last menstrual period (LMP) or from the known due date.",
+      },
+      dateInput: {
+        label: "Date",
+        help: "Enter the date of your last menstrual period (LMP) or your estimated due date.",
+      },
+      cycleLength: {
+        label: "Menstrual cycle lengte (dagen)",
+        help: "Gemiddelde lengte of your menstrual cycle. Typical range is 21–35 dagen; 28 dagen is average.",
+      },
+    },
+    outputs: {
+      conceptionDate: {
+        label: "Estimated conception date",
+        help: "The approximate date when fertilisation most likely occurred.",
+      },
+      fertileWindowStart: {
+        label: "Fertile window start",
+        help: "Beginning of the likely fertile period (5 dagen before estimated conception).",
+      },
+      fertileWindowEnd: {
+        label: "Fertile window end",
+        help: "End of the likely fertile period (5 dagen after estimated conception).",
+      },
+      estimatedDueDate: {
+        label: "Estimated due date",
+        help: "Expected delivery date, approximately 266 dagen (38 weeks) after conception.",
+      },
+    },
+    options: {
+      mode: {
+        from_lmp: "From last menstrual period (LMP)",
+        from_duedate: "From due date",
+      },
+    },
+    errors: {
+      invalidDate: "Please enter a valid date in YYYY-MM-DD formatteer.",
+      cycleLengthOutOfRange: "Cycle lengte must be between 21 and 35 dagen.",
+    },
+    faq: [
+      {
+        q: "How is the conception date berekend from the LMP?",
+        a: "Ovulatie — and thus conception — typically occurs 14 dagen before the end of a 28-day menstrual cycle, or equivalently about 14 dagen after the start of the LMP for a standard cycle. For cycles longer or shorter than 28 dagen, the ovulation day shifts accordingly. This calculator adds (cycle lengte − 14) dagen to your LMP date to estimate conception.",
+      },
+      {
+        q: "What is the fertile window?",
+        a: "The fertile window spans roughly 6 dagen: the 5 dagen before ovulation and the day of ovulation itself. Sperm can survive up to 5 dagen in the female reproductive tract, so intercourse before ovulation can still result in pregnancy. This calculator shows ±5 dagen around the estimated conception date as an approximation of this window.",
+      },
+      {
+        q: "How accurate is this calculator?",
+        a: "These are estimates based on average cycle timing. Actual ovulation day varies from person to person and from cycle to cycle. For precise tracking, methods like basal body temperature (BBT) charting, ovulation predictor kits (OPKs), or ultrasound dating are more reliable.",
+      },
+      {
+        q: "Why is the due date 266 dagen after conception?",
+        a: "Human gestation is approximately 38 weeks (266 dagen) from the date of conception, or 40 weeks (280 dagen) from the last menstrual period. The standard Naegele's rule adds 280 dagen to the LMP, which is equivalent to adding 266 dagen to the conception date when ovulation occurs at day 14 of a 28-day cycle.",
+      },
+      {
+        q: "Can I use this to determine paternity timing?",
+        a: "This calculator provides an estimated conception window, not a precise moment. Conception can occur several dagen after intercourse because sperm can survive in the reproductive tract. For medical or legal questions about paternity, consult a healthcare professional.",
+      },
+    ],
+  },
+
+  pl: {
+    title: "Conception Date Kalkulator",
+    short: "Estimate your conception date from your last menstrual period or due date.",
+    description:
+      "Darmowy conception date kalkulator. Enter your last menstrual period or due date to estimate when conception occurred and your fertile window.",
+    keywords: [
+      "conception date kalkulator",
+      "when did I conceive",
+      "fertile window kalkulator",
+      "ovulation kalkulator",
+      "due date kalkulator",
+      "last menstrual period",
+      "pregnancy conception",
+    ],
+    inputs: {
+      mode: {
+        label: "Calculation mode",
+        help: "Oblicz from last menstrual period (LMP) or from the known due date.",
+      },
+      dateInput: {
+        label: "Date",
+        help: "Enter the date of your last menstrual period (LMP) or your estimated due date.",
+      },
+      cycleLength: {
+        label: "Menstrual cycle długość (dni)",
+        help: "Średnia długość of your menstrual cycle. Typical range is 21–35 dni; 28 dni is average.",
+      },
+    },
+    outputs: {
+      conceptionDate: {
+        label: "Estimated conception date",
+        help: "The approximate date when fertilisation most likely occurred.",
+      },
+      fertileWindowStart: {
+        label: "Fertile window start",
+        help: "Beginning of the likely fertile period (5 dni before estimated conception).",
+      },
+      fertileWindowEnd: {
+        label: "Fertile window end",
+        help: "End of the likely fertile period (5 dni after estimated conception).",
+      },
+      estimatedDueDate: {
+        label: "Estimated due date",
+        help: "Expected delivery date, approximately 266 dni (38 weeks) after conception.",
+      },
+    },
+    options: {
+      mode: {
+        from_lmp: "From last menstrual period (LMP)",
+        from_duedate: "From due date",
+      },
+    },
+    errors: {
+      invalidDate: "Please enter a valid date in YYYY-MM-DD formatuj.",
+      cycleLengthOutOfRange: "Cycle długość must be between 21 and 35 dni.",
+    },
+    faq: [
+      {
+        q: "How is the conception date obliczd from the LMP?",
+        a: "Owulacja — and thus conception — typically occurs 14 dni before the end of a 28-day menstrual cycle, or equivalently about 14 dni after the start of the LMP for a standard cycle. For cycles longer or shorter than 28 dni, the ovulation day shifts accordingly. This kalkulator adds (cycle długość − 14) dni to your LMP date to estimate conception.",
+      },
+      {
+        q: "What is the fertile window?",
+        a: "The fertile window spans roughly 6 dni: the 5 dni before ovulation and the day of ovulation itself. Sperm can survive up to 5 dni in the female reproductive tract, so intercourse before ovulation can still result in pregnancy. This kalkulator shows ±5 dni around the estimated conception date as an approximation of this window.",
+      },
+      {
+        q: "How accurate is this kalkulator?",
+        a: "These are estimates based on average cycle timing. Actual ovulation day varies from person to person and from cycle to cycle. For precise tracking, methods like basal body temperature (BBT) charting, ovulation predictor kits (OPKs), or ultrasound dating are more reliable.",
+      },
+      {
+        q: "Why is the due date 266 dni after conception?",
+        a: "Human gestation is approximately 38 weeks (266 dni) from the date of conception, or 40 weeks (280 dni) from the last menstrual period. The standard Naegele's rule adds 280 dni to the LMP, which is equivalent to adding 266 dni to the conception date when ovulation occurs at day 14 of a 28-day cycle.",
+      },
+      {
+        q: "Can I use this to determine paternity timing?",
+        a: "This kalkulator provides an estimated conception window, not a precise moment. Conception can occur several dni after intercourse because sperm can survive in the reproductive tract. For medical or legal questions about paternity, consult a healthcare professional.",
+      },
+    ],
+  },
   pt: {
     title: "Calculadora de Data de Concepção",
     short: "Estime a data de concepção com base na última menstruação ou DPP.",

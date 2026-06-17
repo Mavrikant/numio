@@ -81,6 +81,167 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "Blood Alcohol Content (BAG) Calculator",
+    short: "Estimate your BAG using the Widmark formula based on drinks, weight, sex, and time.",
+    description:
+      "Educational BAG calculator using the Widmark formula. Estimate blood alcohol content from nummer of drinks, body weight, biological sex, and uren elapsed. For educational use only — never drive after drinking.",
+    keywords: [
+      "BAG calculator",
+      "blood alcohol content",
+      "Widmark formula",
+      "alcohol calculator",
+      "drunk driving",
+      "drink driving",
+      "alcohol level",
+    ],
+    inputs: {
+      drinks: {
+        label: "Nummer of Drinks",
+        help: "One standard drink equals 14 g of pure alcohol (e.g., 355 ml beer at 5%, 148 ml wine at 12%, or 44 ml spirits at 40%).",
+      },
+      weightKg: {
+        label: "Weight (kg)",
+        help: "Your current body weight in kilograms.",
+      },
+      sex: {
+        label: "Biological Sex",
+        help: "Biological sex affects alcohol distribution in the body (r value in the Widmark formula).",
+      },
+      hoursElapsed: {
+        label: "Hours Since First Drink",
+        help: "Time elapsed since you had your first drink. The body metabolises about 0.015% BAG per hour.",
+      },
+    },
+    outputs: {
+      bac: {
+        label: "Blood Alcohol Content (%)",
+        help: "Estimated BAG as a percentage. Above 0.08% is illegal to drive in most countries.",
+      },
+      hoursUntilSober: {
+        label: "Hours Until Sober",
+        help: "Estimated uren until BAG returns to 0.00%.",
+      },
+      isLegal: {
+        label: "Legal to Drive",
+        help: "Whether BAG is below the 0.08% legal limit. Always controleer local laws.",
+      },
+      isDangerous: {
+        label: "Dangerous Level",
+        help: "BAG of 0.15% or above is considered very dangerous.",
+      },
+      category: {
+        label: "Impairment Category",
+        help: "Approximate level of impairment based on BAG range.",
+      },
+    },
+    options: {
+      sex: {
+        male: "Male",
+        female: "Female",
+      },
+    },
+    errors: {
+      drinksOutOfRange: "Nummer of drinks must be between 0 and 30.",
+      weightOutOfRange: "Weight must be between 30 and 300 kg.",
+      hoursOutOfRange: "Hours elapsed must be between 0 and 24.",
+    },
+    faq: [
+      {
+        q: "How accurate is this BAG calculator?",
+        a: "The Widmark formula provides an estimate. Actual BAG varies with food intake, hydration, medications, individual metabolism, and tolerance. Use this for educational purposes only, never to determine fitness to drive.",
+      },
+      {
+        q: "What counts as one standard drink?",
+        a: "One standard drink contains 14 grams of pure alcohol: 355 ml of regular beer (5%), 148 ml of wine (12%), or 44 ml of distilled spirits (40%). Can groottes and strengths vary widely.",
+      },
+      {
+        q: "How fast does the body process alcohol?",
+        a: "On average, the liver metabolises about 0.015% BAG per hour. Coffee, cold showers, or food do not speed this up — only time reduces BAG.",
+      },
+    ],
+  },
+
+  pl: {
+    title: "Blood Alcohol Content (BAC) Kalkulator",
+    short: "Estimate your BAC using the Widmark formula based on drinks, weight, sex, and time.",
+    description:
+      "Educational BAC kalkulator using the Widmark formula. Estimate blood alcohol content from liczba of drinks, body weight, biological sex, and godzin elapsed. For educational use only — never drive after drinking.",
+    keywords: [
+      "BAC kalkulator",
+      "blood alcohol content",
+      "Widmark formula",
+      "alcohol kalkulator",
+      "drunk driving",
+      "drink driving",
+      "alcohol level",
+    ],
+    inputs: {
+      drinks: {
+        label: "Liczba of Drinks",
+        help: "One standard drink equals 14 g of pure alcohol (e.g., 355 ml beer at 5%, 148 ml wine at 12%, or 44 ml spirits at 40%).",
+      },
+      weightKg: {
+        label: "Weight (kg)",
+        help: "Your current body weight in kilograms.",
+      },
+      sex: {
+        label: "Biological Sex",
+        help: "Biological sex affects alcohol distribution in the body (r value in the Widmark formula).",
+      },
+      hoursElapsed: {
+        label: "Hours Since First Drink",
+        help: "Time elapsed since you had your first drink. The body metabolises about 0.015% BAC per hour.",
+      },
+    },
+    outputs: {
+      bac: {
+        label: "Blood Alcohol Content (%)",
+        help: "Estimated BAC as a percentage. Above 0.08% is illegal to drive in most countries.",
+      },
+      hoursUntilSober: {
+        label: "Hours Until Sober",
+        help: "Estimated godzin until BAC returns to 0.00%.",
+      },
+      isLegal: {
+        label: "Legal to Drive",
+        help: "Whether BAC is below the 0.08% legal limit. Always sprawdź local laws.",
+      },
+      isDangerous: {
+        label: "Dangerous Level",
+        help: "BAC of 0.15% or above is considered very dangerous.",
+      },
+      category: {
+        label: "Impairment Category",
+        help: "Approximate level of impairment based on BAC range.",
+      },
+    },
+    options: {
+      sex: {
+        male: "Male",
+        female: "Female",
+      },
+    },
+    errors: {
+      drinksOutOfRange: "Liczba of drinks must be between 0 and 30.",
+      weightOutOfRange: "Weight must be between 30 and 300 kg.",
+      hoursOutOfRange: "Hours elapsed must be between 0 and 24.",
+    },
+    faq: [
+      {
+        q: "How accurate is this BAC kalkulator?",
+        a: "The Widmark formula provides an estimate. Actual BAC varies with food intake, hydration, medications, individual metabolism, and tolerance. Use this for educational purposes only, never to determine fitness to drive.",
+      },
+      {
+        q: "What counts as one standard drink?",
+        a: "One standard drink contains 14 grams of pure alcohol: 355 ml of regular beer (5%), 148 ml of wine (12%), or 44 ml of distilled spirits (40%). Can rozmiars and strengths vary widely.",
+      },
+      {
+        q: "How fast does the body process alcohol?",
+        a: "On average, the liver metabolises about 0.015% BAC per hour. Coffee, cold showers, or food do not speed this up — only time reduces BAC.",
+      },
+    ],
+  },
   pt: {
     title: "Calculadora de Taxa de Alcoolemia",
     short: "Estime a sua taxa de álcool no sangue (TAS).",

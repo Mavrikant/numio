@@ -26,6 +26,57 @@ const i18n: CalculatorI18n = {
       water: { label: "Water" },
     },
   },
+  nl: {
+    title: "Cooking Converteerer",
+    short: "Converteer between cooking units (cups, tablespoons, ml, grams) for any ingredient.",
+    description: "Gratis cooking unit converteerer. Switch between cups, tablespoons, teaspoons, milliliters, liters, and grams. Density-aware for common ingredients like flour, sugar, butter.",
+    keywords: ["cooking", "recipe", "measurement", "conversion", "baking", "kitchen"],
+    inputs: {
+      value: { label: "Waarde", help: "Amount to converteer" },
+      fromUnit: { label: "From", help: "Source unit" },
+      toUnit: { label: "To", help: "Target unit" },
+      ingredient: { label: "Ingredient", help: "Density depends on ingredient" },
+    },
+    outputs: {
+      toValue: { label: "Resultaat", help: "Converteered amount" },
+      weightGrams: { label: "Weight (g)", help: "Equivalent weight in grams" },
+    },
+    options: {
+      cup: { label: "Cup" },
+      tbsp: { label: "Tablespoon" },
+      tsp: { label: "Teaspoon" },
+      ml: { label: "Milliliter" },
+      l: { label: "Liter" },
+      g: { label: "Gram" },
+      water: { label: "Water" },
+    },
+  },
+
+  pl: {
+    title: "Cooking Konwerter",
+    short: "Konwertuj between cooking units (cups, tablespoons, ml, grams) for any ingredient.",
+    description: "Darmowy cooking unit konwerter. Switch between cups, tablespoons, teaspoons, milliliters, liters, and grams. Density-aware for common ingredients like flour, sugar, butter.",
+    keywords: ["cooking", "recipe", "measurement", "conversion", "baking", "kitchen"],
+    inputs: {
+      value: { label: "Wartość", help: "Amount to konwertuj" },
+      fromUnit: { label: "From", help: "Source unit" },
+      toUnit: { label: "To", help: "Target unit" },
+      ingredient: { label: "Ingredient", help: "Density depends on ingredient" },
+    },
+    outputs: {
+      toValue: { label: "Wynik", help: "Konwertujed amount" },
+      weightGrams: { label: "Weight (g)", help: "Equivalent weight in grams" },
+    },
+    options: {
+      cup: { label: "Cup" },
+      tbsp: { label: "Tablespoon" },
+      tsp: { label: "Teaspoon" },
+      ml: { label: "Milliliter" },
+      l: { label: "Liter" },
+      g: { label: "Gram" },
+      water: { label: "Water" },
+    },
+  },
   pt: {
     title: "Conversor de Medidas de Cozinha",
     short: "Converta entre chávenas, colheres, gramas, mililitros e onças.",

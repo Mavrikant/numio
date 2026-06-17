@@ -52,6 +52,109 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "Beton Volume Calculator",
+    short: "Bereken concrete volume and cement bags for slabs, columns, cylinders, and footings.",
+    description:
+      "Gratis concrete volume calculator for construction projects. Enter dimensions for slabs, columns, cylinders, or footings and get the concrete volume in m³ and yd³, plus the nummer of cement bags needed.",
+    keywords: [
+      "concrete volume calculator",
+      "cement bags calculator",
+      "concrete slab calculator",
+      "concrete footing calculator",
+      "concrete column calculator",
+      "construction calculator",
+      "concrete estimator",
+    ],
+    inputs: {
+      shape: { label: "Shape", help: "Select the concrete element type." },
+      unit: { label: "Unit system", help: "Metric (metres) or imperial (feet)." },
+      length: { label: "Lengte", help: "Lengte of the element (m or ft)." },
+      width: { label: "Breedte", help: "Breedte of the element (m or ft)." },
+      thickness: { label: "Thickness / Depth", help: "Thickness for slabs or depth for footings (m or ft)." },
+      diameter: { label: "Diameter", help: "Diameter of the cylindrical element (m or ft)." },
+      height: { label: "Hoogte", help: "Hoogte of the column or cylinder (m or ft)." },
+    },
+    outputs: {
+      volumeM3: { label: "Volume (m³)", help: "Beton volume in cubic metres." },
+      volumeYd3: { label: "Volume (yd³)", help: "Beton volume in cubic yards." },
+      bags40kg: { label: "40 kg Bags", help: "Estimated nummer of 40 kg cement bags (1:2:3 mix)." },
+      bags60lb: { label: "60 lb Bags", help: "Estimated nummer of 60 lb cement bags (US standard mix)." },
+    },
+    options: {
+      shape: { slab: "Slab", column: "Rectangular Column", cylinder: "Cylinder / Afronden Column", footing: "Footing (Rectangular)" },
+      unit: { metric: "Metric (m)", imperial: "Imperial (ft)" },
+    },
+    errors: {
+      missingDimensions: "Please provide all required dimensions for the selected shape.",
+    },
+    faq: [
+      {
+        q: "How many bags of cement do I need per m³?",
+        a: "For a standard 1:2:3 mix (cement:sand:aggregate), approximately 8 bags of 40 kg cement are needed per cubic metre of concrete. Always add 5–10% for waste.",
+      },
+      {
+        q: "Should I add extra concrete for waste?",
+        a: "Yes. Add at least 5% for small pours and up to 10% for large or complex pours to account for spillage, uneven sub-base, and form irregularities.",
+      },
+      {
+        q: "What is a 1:2:3 concrete mix?",
+        a: "A 1:2:3 mix contains 1 part cement, 2 parts sand, and 3 parts coarse aggregate by volume or weight. It produces a general-purpose concrete suitable for footings, slabs, and columns.",
+      },
+    ],
+  },
+
+  pl: {
+    title: "Beton Volume Kalkulator",
+    short: "Oblicz concrete volume and cement bags for slabs, columns, cylinders, and footings.",
+    description:
+      "Darmowy concrete volume kalkulator for construction projects. Enter dimensions for slabs, columns, cylinders, or footings and get the concrete volume in m³ and yd³, plus the liczba of cement bags needed.",
+    keywords: [
+      "concrete volume kalkulator",
+      "cement bags kalkulator",
+      "concrete slab kalkulator",
+      "concrete footing kalkulator",
+      "concrete column kalkulator",
+      "construction kalkulator",
+      "concrete estimator",
+    ],
+    inputs: {
+      shape: { label: "Shape", help: "Select the concrete element type." },
+      unit: { label: "Unit system", help: "Metric (metres) or imperial (feet)." },
+      length: { label: "Długość", help: "Długość of the element (m or ft)." },
+      width: { label: "Szerokość", help: "Szerokość of the element (m or ft)." },
+      thickness: { label: "Thickness / Depth", help: "Thickness for slabs or depth for footings (m or ft)." },
+      diameter: { label: "Diameter", help: "Diameter of the cylindrical element (m or ft)." },
+      height: { label: "Wysokość", help: "Wysokość of the column or cylinder (m or ft)." },
+    },
+    outputs: {
+      volumeM3: { label: "Volume (m³)", help: "Beton volume in cubic metres." },
+      volumeYd3: { label: "Volume (yd³)", help: "Beton volume in cubic yards." },
+      bags40kg: { label: "40 kg Bags", help: "Estimated liczba of 40 kg cement bags (1:2:3 mix)." },
+      bags60lb: { label: "60 lb Bags", help: "Estimated liczba of 60 lb cement bags (US standard mix)." },
+    },
+    options: {
+      shape: { slab: "Slab", column: "Rectangular Column", cylinder: "Cylinder / Zaokrąglanie Column", footing: "Footing (Rectangular)" },
+      unit: { metric: "Metric (m)", imperial: "Imperial (ft)" },
+    },
+    errors: {
+      missingDimensions: "Please provide all required dimensions for the selected shape.",
+    },
+    faq: [
+      {
+        q: "How many bags of cement do I need per m³?",
+        a: "For a standard 1:2:3 mix (cement:sand:aggregate), approximately 8 bags of 40 kg cement are needed per cubic metre of concrete. Always add 5–10% for waste.",
+      },
+      {
+        q: "Should I add extra concrete for waste?",
+        a: "Yes. Add at least 5% for small pours and up to 10% for large or complex pours to account for spillage, uneven sub-base, and form irregularities.",
+      },
+      {
+        q: "What is a 1:2:3 concrete mix?",
+        a: "A 1:2:3 mix contains 1 part cement, 2 parts sand, and 3 parts coarse aggregate by volume or weight. It produces a general-purpose concrete suitable for footings, slabs, and columns.",
+      },
+    ],
+  },
   pt: {
     title: "Calculadora de Betão",
     short: "Calcule a quantidade de betão necessária para a sua obra.",

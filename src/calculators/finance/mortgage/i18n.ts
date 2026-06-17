@@ -53,6 +53,111 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "Hypotheek Calculator",
+    short: "Bereken your monthly mortgage payment, total interest, and full amortization schedule.",
+    description:
+      "Gratis mortgage calculator using the standard annuity formula. Enter your loan amount, interest rate, and term to get your monthly payment, total cost, and a complete amortization table.",
+    keywords: [
+      "mortgage calculator",
+      "monthly mortgage payment",
+      "home loan calculator",
+      "amortization schedule",
+      "mortgage interest",
+      "housing loan",
+      "PITI calculator",
+    ],
+    inputs: {
+      loanAmount: { label: "Home Price", help: "Total purchase price of the property." },
+      downPayment: { label: "Down Payment", help: "Amount paid upfront; reduces the loan principal." },
+      annualRate: { label: "Annual Interest Rate (%)", help: "The yearly interest rate offered by your lender." },
+      termYears: { label: "Lening Term (jaren)", help: "Nummer of jaren over which you will repay the loan." },
+    },
+    outputs: {
+      monthlyPayment: { label: "Monthly Payment", help: "Fixed amount paid each month (principal + interest)." },
+      totalPayment: { label: "Total Payment", help: "Sum of all monthly payments over the full term." },
+      totalInterest: { label: "Total Interest", help: "Total interest paid over the life of the loan." },
+      principalAmount: { label: "Lening Principal", help: "Home price minus down payment — the amount actually borrowed." },
+      amortizationSchedule: { label: "Amortisatie Schedule", help: "Month-by-month breakdown of payment, principal, interest, and remaining balance." },
+    },
+    errors: {
+      downPaymentExceedsLoan: "Down payment cannot exceed the home price.",
+      loanAmountRange: "Home price must be between $1,000 and $10,000,000.",
+      rateRange: "Annual rate must be between 0% and 30%.",
+      termRange: "Lening term must be between 1 and 30 jaren.",
+    },
+    faq: [
+      {
+        q: "What is included in a monthly mortgage payment?",
+        a: "This calculator computes principal and interest only. Your actual monthly payment will also include property taxes, homeowner's insurance, and possibly private mortgage insurance (PMI) if your down payment is less than 20%.",
+      },
+      {
+        q: "How does the down payment affect my mortgage?",
+        a: "A larger down payment reduces your loan principal, which lowers your monthly payment and total interest paid. A 20% down payment also eliminates the requirement for PMI in most cases.",
+      },
+      {
+        q: "What is the difference between a 15-year and 30-year mortgage?",
+        a: "A 15-year mortgage has higher monthly payments but significantly less total interest. A 30-year mortgage has lower monthly payments but you pay more interest over the life of the loan.",
+      },
+      {
+        q: "What is an amortization schedule?",
+        a: "An amortization schedule is a table showing how each monthly payment is split between principal and interest over the life of the loan. In early payments, most goes to interest; over time, more goes to principal.",
+      },
+    ],
+  },
+
+  pl: {
+    title: "Kredyt Hipoteczny Kalkulator",
+    short: "Oblicz your monthly mortgage payment, total interest, and full amortization schedule.",
+    description:
+      "Darmowy mortgage kalkulator using the standard annuity formula. Enter your loan amount, interest rate, and term to get your monthly payment, total cost, and a complete amortization table.",
+    keywords: [
+      "mortgage kalkulator",
+      "monthly mortgage payment",
+      "home loan kalkulator",
+      "amortization schedule",
+      "mortgage interest",
+      "housing loan",
+      "PITI kalkulator",
+    ],
+    inputs: {
+      loanAmount: { label: "Home Price", help: "Total purchase price of the property." },
+      downPayment: { label: "Down Payment", help: "Amount paid upfront; reduces the loan principal." },
+      annualRate: { label: "Annual Interest Rate (%)", help: "The yearly interest rate offered by your lender." },
+      termYears: { label: "Pożyczka Term (lat)", help: "Liczba of lat over which you will repay the loan." },
+    },
+    outputs: {
+      monthlyPayment: { label: "Monthly Payment", help: "Fixed amount paid each month (principal + interest)." },
+      totalPayment: { label: "Total Payment", help: "Sum of all monthly payments over the full term." },
+      totalInterest: { label: "Total Interest", help: "Total interest paid over the life of the loan." },
+      principalAmount: { label: "Pożyczka Principal", help: "Home price minus down payment — the amount actually borrowed." },
+      amortizationSchedule: { label: "Amortyzacja Schedule", help: "Month-by-month breakdown of payment, principal, interest, and remaining balance." },
+    },
+    errors: {
+      downPaymentExceedsLoan: "Down payment cannot exceed the home price.",
+      loanAmountRange: "Home price must be between $1,000 and $10,000,000.",
+      rateRange: "Annual rate must be between 0% and 30%.",
+      termRange: "Pożyczka term must be between 1 and 30 lat.",
+    },
+    faq: [
+      {
+        q: "What is included in a monthly mortgage payment?",
+        a: "This kalkulator computes principal and interest only. Your actual monthly payment will also include property taxes, homeowner's insurance, and possibly private mortgage insurance (PMI) if your down payment is less than 20%.",
+      },
+      {
+        q: "How does the down payment affect my mortgage?",
+        a: "A larger down payment reduces your loan principal, which lowers your monthly payment and total interest paid. A 20% down payment also eliminates the requirement for PMI in most cases.",
+      },
+      {
+        q: "What is the difference between a 15-year and 30-year mortgage?",
+        a: "A 15-year mortgage has higher monthly payments but significantly less total interest. A 30-year mortgage has lower monthly payments but you pay more interest over the life of the loan.",
+      },
+      {
+        q: "What is an amortization schedule?",
+        a: "An amortization schedule is a table showing how each monthly payment is split between principal and interest over the life of the loan. In early payments, most goes to interest; over time, more goes to principal.",
+      },
+    ],
+  },
   pt: {
     title: "Calculadora de Crédito Habitação",
     short: "Calcule a prestação mensal, juros totais e amortização do seu crédito habitação.",

@@ -75,6 +75,155 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "BTW / Sales Belasting Calculator",
+    short: "Bereken BTW-exclusive or BTW-inclusive prices, tax amount, and base price for any tax rate.",
+    description:
+      "Gratis BTW calculator. Add tax to a base price or extract tax from a gross price. Supports any BTW, GST, or sales tax rate. Direct shows base price, tax amount, and total.",
+    keywords: [
+      "BTW calculator",
+      "sales tax calculator",
+      "GST calculator",
+      "tax inclusive calculator",
+      "tax exclusive calculator",
+      "value added tax",
+      "price with tax",
+    ],
+    inputs: {
+      mode: {
+        label: "Calculation Mode",
+        help: "Add BTW to price: enter the pre-tax base price and get the total. Extract BTW from price: enter the gross (tax-included) price and get the base and tax amount.",
+      },
+      amount: {
+        label: "Amount",
+        help: "Enter the base price (exclusive mode) or the gross price including tax (inclusive mode).",
+      },
+      vatRate: {
+        label: "BTW / Belasting Rate (%)",
+        help: "Common rates: UK/France/AU 20%, Germany 19%, India 18%, US varies by state, Saudi Arabia 15%, UAE 5%.",
+      },
+    },
+    outputs: {
+      totalPrice: {
+        label: "Total Price (incl. BTW)",
+        help: "The final price the customer pays, including tax.",
+      },
+      basePrice: {
+        label: "Base Price (excl. BTW)",
+        help: "The pre-tax price before adding BTW.",
+      },
+      vatAmount: {
+        label: "BTW Amount",
+        help: "The tax amount — the difference between the total and base price.",
+      },
+      effectiveRate: {
+        label: "Effective Rate",
+        help: "BTW as a percentage of the base price. In standard scenarios this equals the stated BTW rate.",
+      },
+    },
+    options: {
+      mode: {
+        exclusive: "Add BTW to price",
+        inclusive: "Extract BTW from price",
+      },
+    },
+    errors: {
+      amountRequired: "Amount must be greater than zero.",
+    },
+    faq: [
+      {
+        q: "What is BTW?",
+        a: "Waarde-Added Belasting (BTW) is a consumption tax levied on the value added at each stage of production and distribution. The final consumer pays the full accumulated BTW. It is used in over 160 countries, including all EU member states.",
+      },
+      {
+        q: "What is the difference between BTW-exclusive and BTW-inclusive pricing?",
+        a: "BTW-exclusive (or ex-BTW) means the price shown does not include tax — you add tax on top. BTW-inclusive (or inc-BTW, also called gross price) means tax is already embedded in the displayed price. Businesses typically quote prices ex-BTW; consumer retail prices are usually inc-BTW.",
+      },
+      {
+        q: "How do I extract BTW from a gross price?",
+        a: "Use the inclusive mode formula: Base Price = Gross Price ÷ (1 + BTW Rate ÷ 100). For example, £120 inc. 20% BTW: Base = £120 ÷ 1.20 = £100. BTW = £120 − £100 = £20.",
+      },
+      {
+        q: "What is the difference between BTW and sales tax?",
+        a: "Sales tax (common in the USA) is collected only at the final point of sale. BTW is collected at every stage of the supply chain, but businesses claim back the BTW they paid on inputs. The end cost to the consumer is similar, but the collection mechanism differs.",
+      },
+    ],
+  },
+
+  pl: {
+    title: "VAT / Sales Podatek Kalkulator",
+    short: "Oblicz VAT-exclusive or VAT-inclusive prices, tax amount, and base price for any tax rate.",
+    description:
+      "Darmowy VAT kalkulator. Add tax to a base price or extract tax from a gross price. Supports any VAT, GST, or sales tax rate. Natychmiast shows base price, tax amount, and total.",
+    keywords: [
+      "VAT kalkulator",
+      "sales tax kalkulator",
+      "GST kalkulator",
+      "tax inclusive kalkulator",
+      "tax exclusive kalkulator",
+      "value added tax",
+      "price with tax",
+    ],
+    inputs: {
+      mode: {
+        label: "Calculation Mode",
+        help: "Add VAT to price: enter the pre-tax base price and get the total. Extract VAT from price: enter the gross (tax-included) price and get the base and tax amount.",
+      },
+      amount: {
+        label: "Amount",
+        help: "Enter the base price (exclusive mode) or the gross price including tax (inclusive mode).",
+      },
+      vatRate: {
+        label: "VAT / Podatek Rate (%)",
+        help: "Common rates: UK/France/AU 20%, Germany 19%, India 18%, US varies by state, Saudi Arabia 15%, UAE 5%.",
+      },
+    },
+    outputs: {
+      totalPrice: {
+        label: "Total Price (incl. VAT)",
+        help: "The final price the customer pays, including tax.",
+      },
+      basePrice: {
+        label: "Base Price (excl. VAT)",
+        help: "The pre-tax price before adding VAT.",
+      },
+      vatAmount: {
+        label: "VAT Amount",
+        help: "The tax amount — the difference between the total and base price.",
+      },
+      effectiveRate: {
+        label: "Effective Rate",
+        help: "VAT as a percentage of the base price. In standard scenarios this equals the stated VAT rate.",
+      },
+    },
+    options: {
+      mode: {
+        exclusive: "Add VAT to price",
+        inclusive: "Extract VAT from price",
+      },
+    },
+    errors: {
+      amountRequired: "Amount must be greater than zero.",
+    },
+    faq: [
+      {
+        q: "What is VAT?",
+        a: "Wartość-Added Podatek (VAT) is a consumption tax levied on the value added at each stage of production and distribution. The final consumer pays the full accumulated VAT. It is used in over 160 countries, including all EU member states.",
+      },
+      {
+        q: "What is the difference between VAT-exclusive and VAT-inclusive pricing?",
+        a: "VAT-exclusive (or ex-VAT) means the price shown does not include tax — you add tax on top. VAT-inclusive (or inc-VAT, also called gross price) means tax is already embedded in the displayed price. Businesses typically quote prices ex-VAT; consumer retail prices are usually inc-VAT.",
+      },
+      {
+        q: "How do I extract VAT from a gross price?",
+        a: "Use the inclusive mode formula: Base Price = Gross Price ÷ (1 + VAT Rate ÷ 100). For example, £120 inc. 20% VAT: Base = £120 ÷ 1.20 = £100. VAT = £120 − £100 = £20.",
+      },
+      {
+        q: "What is the difference between VAT and sales tax?",
+        a: "Sales tax (common in the USA) is collected only at the final point of sale. VAT is collected at every stage of the supply chain, but businesses claim back the VAT they paid on inputs. The end cost to the consumer is similar, but the collection mechanism differs.",
+      },
+    ],
+  },
   pt: {
     title: "Calculadora de IVA",
     short: "Some, retire ou calcule o IVA sobre um preço.",

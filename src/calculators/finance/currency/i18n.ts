@@ -49,6 +49,103 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "Valuta Converteerer",
+    short: "Converteer between 25 major world currencies using static reference rates.",
+    description:
+      "Quick currency converteerer using a static mid-market reference rate snapshot from January 2025. Covers 25 popular currencies. Reference only — not live data.",
+    keywords: [
+      "currency converteerer",
+      "exchange rate",
+      "FX calculator",
+      "foreign exchange",
+      "money converteerer",
+      "USD EUR GBP",
+      "reference rate",
+    ],
+    inputs: {
+      amount: { label: "Amount", help: "Amount to converteer in the source currency." },
+      fromCurrency: { label: "From currency", help: "ISO 4217 currency code you are converteering from." },
+      toCurrency: { label: "To currency", help: "ISO 4217 currency code you are converteering to." },
+    },
+    outputs: {
+      convertedAmount: { label: "Converteered amount", help: "Equivalent value in the target currency at the reference rate." },
+      rate: { label: "Rate used", help: "Units of target currency per 1 unit of source currency." },
+      reverseRate: { label: "Reverse rate", help: "Units of source currency per 1 unit of target currency." },
+      lastUpdated: { label: "Reference date", help: "Snapshot date of the static reference rate table." },
+    },
+    errors: {
+      amountOutOfRange: "Amount must be between 0 and 1,000,000,000,000.",
+      unknownCurrency: "Valuta code not supported.",
+    },
+    faq: [
+      {
+        q: "Are these rates live?",
+        a: "No. The rates are a static snapshot from January 2025 and will drift over time. Use a bank or licensed FX provider for real transactions.",
+      },
+      {
+        q: "Why does the rate not match my bank?",
+        a: "Banks and FX providers charge a spread (typically 1–4%) on top of the mid-market rate. This calculator shows only the mid-market reference value.",
+      },
+      {
+        q: "Which currencies are supported?",
+        a: "25 of the world's most-traded currencies including USD, EUR, GBP, JPY, CNY, TRY, CAD, AUD, CHF, INR, BRL, MXN, KRW, SGD, HKD, ZAR, RUB, SEK, NOK, DKK, PLN, NZD, AED, SAR, and ILS.",
+      },
+      {
+        q: "How is the conversion berekend?",
+        a: "All rates are stored relative to USD. To converteer from currency A to B, the amount is first expressed in USD (amount ÷ rate_A) and then multiplied by rate_B.",
+      },
+    ],
+  },
+
+  pl: {
+    title: "Waluta Konwerter",
+    short: "Konwertuj between 25 major world currencies using static reference rates.",
+    description:
+      "Quick currency konwerter using a static mid-market reference rate snapshot from January 2025. Covers 25 popular currencies. Reference only — not live data.",
+    keywords: [
+      "currency konwerter",
+      "exchange rate",
+      "FX kalkulator",
+      "foreign exchange",
+      "money konwerter",
+      "USD EUR GBP",
+      "reference rate",
+    ],
+    inputs: {
+      amount: { label: "Amount", help: "Amount to konwertuj in the source currency." },
+      fromCurrency: { label: "From currency", help: "ISO 4217 currency kod you are konwertujing from." },
+      toCurrency: { label: "To currency", help: "ISO 4217 currency kod you are konwertujing to." },
+    },
+    outputs: {
+      convertedAmount: { label: "Konwertujed amount", help: "Equivalent value in the target currency at the reference rate." },
+      rate: { label: "Rate used", help: "Units of target currency per 1 unit of source currency." },
+      reverseRate: { label: "Reverse rate", help: "Units of source currency per 1 unit of target currency." },
+      lastUpdated: { label: "Reference date", help: "Snapshot date of the static reference rate table." },
+    },
+    errors: {
+      amountOutOfRange: "Amount must be between 0 and 1,000,000,000,000.",
+      unknownCurrency: "Waluta kod not supported.",
+    },
+    faq: [
+      {
+        q: "Are these rates live?",
+        a: "No. The rates are a static snapshot from January 2025 and will drift over time. Use a bank or licensed FX provider for real transactions.",
+      },
+      {
+        q: "Why does the rate not match my bank?",
+        a: "Banks and FX providers charge a spread (typically 1–4%) on top of the mid-market rate. This kalkulator shows only the mid-market reference value.",
+      },
+      {
+        q: "Which currencies are supported?",
+        a: "25 of the world's most-traded currencies including USD, EUR, GBP, JPY, CNY, TRY, CAD, AUD, CHF, INR, BRL, MXN, KRW, SGD, HKD, ZAR, RUB, SEK, NOK, DKK, PLN, NZD, AED, SAR, and ILS.",
+      },
+      {
+        q: "How is the conversion obliczd?",
+        a: "All rates are stored relative to USD. To konwertuj from currency A to B, the amount is first expressed in USD (amount ÷ rate_A) and then multiplied by rate_B.",
+      },
+    ],
+  },
   pt: {
     title: "Conversor de Moeda",
     short: "Converta valores entre as principais moedas do mundo.",

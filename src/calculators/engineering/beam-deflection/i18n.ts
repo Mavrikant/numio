@@ -52,6 +52,109 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "Balkdoorbuiging Calculator",
+    short: "Bereken beam deflection, bending moment, and reactions for simply supported and cantilever beams.",
+    description:
+      "Gratis structural beam deflection calculator. Enter beam type, load configuration, span, Young's modulus, and second moment of area to get maximum deflection (mm), bending moment (N·m), shear force (N), and support reactions.",
+    keywords: [
+      "beam deflection calculator",
+      "simply supported beam calculator",
+      "cantilever beam calculator",
+      "bending moment calculator",
+      "structural beam calculator",
+      "Euler-Bernoulli beam",
+      "beam shear force",
+    ],
+    inputs: {
+      beamType: { label: "Beam type", help: "Simply supported (both ends pinned/rolled) or cantilever (one end fixed)." },
+      loadType: { label: "Load type", help: "Point load at center, point load at gratis end (cantilever only), or uniform distributed load (UDL)." },
+      load: { label: "Load (kN or kN/m)", help: "For point loads, enter total load in kN. For UDL, enter load intensity in kN/m." },
+      span: { label: "Span (m)", help: "Total lengte of the beam in metres." },
+      E: { label: "Young's modulus (GPa)", help: "Modulus of elasticity. Steel ≈ 200 GPa, concrete ≈ 30 GPa, timber ≈ 10 GPa." },
+      I: { label: "Second moment of area (cm⁴)", help: "Moment of inertia of the beam cross-section. Found in section property tables." },
+    },
+    outputs: {
+      maxDeflection: { label: "Max deflection (mm)", help: "Maximum transverse displacement of the beam." },
+      maxBendingMoment: { label: "Max bending moment (N·m)", help: "Maximum bending moment along the beam." },
+      maxShear: { label: "Max shear force (N)", help: "Maximum shear force along the beam." },
+      reactionA: { label: "Reaction A (N)", help: "Support reaction at left end (fixed end for cantilever)." },
+      reactionB: { label: "Reaction B (N)", help: "Support reaction at right end (0 for cantilever)." },
+    },
+    options: {
+      beamType: { simplySupported: "Simply Supported", cantilever: "Cantilever" },
+      loadType: { pointCenter: "Point Load at Centre", pointEnd: "Point Load at Gratis End (cantilever)", udl: "Uniform Distributed Load (UDL)" },
+    },
+    errors: {
+      invalidCombination: "Point load at gratis end is only valid for cantilever beams.",
+    },
+    faq: [
+      {
+        q: "What assumptions does this calculator make?",
+        a: "This calculator uses Euler-Bernoulli beam theory, which assumes: linear elastic material, small deflections (deflection << span), homogeneous prismatic beam, and no shear deformatteerion. These assumptions are valid for most practical steel and timber beam designs.",
+      },
+      {
+        q: "What is the second moment of area (I)?",
+        a: "The second moment of area (also called moment of inertia) measures the beam cross-section's resistance to bending. It is found in structural section tables. For a rectangular section: I = (b × h³) / 12, where b is breedte and h is depth in the direction of bending.",
+      },
+      {
+        q: "What Young's modulus should I use?",
+        a: "Common values: structural steel = 200 GPa, reinforced concrete = 25–30 GPa, timber = 8–12 GPa, aluminum = 70 GPa. Use the value for the beam's primary material.",
+      },
+    ],
+  },
+
+  pl: {
+    title: "Ugięcie Belki Kalkulator",
+    short: "Oblicz beam deflection, bending moment, and reactions for simply supported and cantilever beams.",
+    description:
+      "Darmowy structural beam deflection kalkulator. Enter beam type, load configuration, span, Young's modulus, and second moment of area to get maximum deflection (mm), bending moment (N·m), shear force (N), and support reactions.",
+    keywords: [
+      "beam deflection kalkulator",
+      "simply supported beam kalkulator",
+      "cantilever beam kalkulator",
+      "bending moment kalkulator",
+      "structural beam kalkulator",
+      "Euler-Bernoulli beam",
+      "beam shear force",
+    ],
+    inputs: {
+      beamType: { label: "Beam type", help: "Simply supported (both ends pinned/rolled) or cantilever (one end fixed)." },
+      loadType: { label: "Load type", help: "Point load at center, point load at darmowy end (cantilever only), or uniform distributed load (UDL)." },
+      load: { label: "Load (kN or kN/m)", help: "For point loads, enter total load in kN. For UDL, enter load intensity in kN/m." },
+      span: { label: "Span (m)", help: "Total długość of the beam in metres." },
+      E: { label: "Young's modulus (GPa)", help: "Modulus of elasticity. Steel ≈ 200 GPa, concrete ≈ 30 GPa, timber ≈ 10 GPa." },
+      I: { label: "Second moment of area (cm⁴)", help: "Moment of inertia of the beam cross-section. Found in section property tables." },
+    },
+    outputs: {
+      maxDeflection: { label: "Max deflection (mm)", help: "Maximum transverse displacement of the beam." },
+      maxBendingMoment: { label: "Max bending moment (N·m)", help: "Maximum bending moment along the beam." },
+      maxShear: { label: "Max shear force (N)", help: "Maximum shear force along the beam." },
+      reactionA: { label: "Reaction A (N)", help: "Support reaction at left end (fixed end for cantilever)." },
+      reactionB: { label: "Reaction B (N)", help: "Support reaction at right end (0 for cantilever)." },
+    },
+    options: {
+      beamType: { simplySupported: "Simply Supported", cantilever: "Cantilever" },
+      loadType: { pointCenter: "Point Load at Centre", pointEnd: "Point Load at Darmowy End (cantilever)", udl: "Uniform Distributed Load (UDL)" },
+    },
+    errors: {
+      invalidCombination: "Point load at darmowy end is only valid for cantilever beams.",
+    },
+    faq: [
+      {
+        q: "What assumptions does this kalkulator make?",
+        a: "This kalkulator uses Euler-Bernoulli beam theory, which assumes: linear elastic material, small deflections (deflection << span), homogeneous prismatic beam, and no shear deformatujion. These assumptions are valid for most practical steel and timber beam designs.",
+      },
+      {
+        q: "What is the second moment of area (I)?",
+        a: "The second moment of area (also called moment of inertia) measures the beam cross-section's resistance to bending. It is found in structural section tables. For a rectangular section: I = (b × h³) / 12, where b is szerokość and h is depth in the direction of bending.",
+      },
+      {
+        q: "What Young's modulus should I use?",
+        a: "Common values: structural steel = 200 GPa, reinforced concrete = 25–30 GPa, timber = 8–12 GPa, aluminum = 70 GPa. Use the value for the beam's primary material.",
+      },
+    ],
+  },
   pt: {
     title: "Calculadora de Deflexão de Viga",
     short: "Calcule a deflexão máxima de uma viga sob diferentes cargas.",

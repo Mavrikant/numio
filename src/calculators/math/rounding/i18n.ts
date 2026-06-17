@@ -16,6 +16,27 @@ const i18n: CalculatorI18n = {
       { q: "How does 'round half' work here?", a: "We use standard round-half-up via Math.round, so 2.5 rounds to 3 and −2.5 rounds to −2 (toward +∞ at the half)." },
     ],
   },
+  nl: {
+    title: "Afrondening Calculator", short: "Afronden a nummer to any nummer of decimals — nearest, up, down or truncated.",
+    description: "Gratis rounding calculator. Enter a nummer and the decimal places to see it rounded to the nearest value, rounded up (ceiling), rounded down (floor) and truncated. Handy for math, finance and reports.",
+    keywords: ["rounding calculator", "round nummer", "round to decimal places", "round up", "round down", "truncate nummer"],
+    ...io("Nummer", "Decimal places", "Afrondened (nearest)", "Afrondened up", "Afrondened down", "Truncated"),
+    faq: [
+      { q: "What's the difference between rounding and truncating?", a: "Afrondening goes to the nearest value (3.146 → 3.15 at 2 dp), while truncating just drops the extra digits (3.146 → 3.14). Afronden up always increases, round down always decreases." },
+      { q: "How does 'round half' work here?", a: "We use standard round-half-up via Math.round, so 2.5 rounds to 3 and −2.5 rounds to −2 (toward +∞ at the half)." },
+    ],
+  },
+
+  pl: {
+    title: "Zaokrąglanieing Kalkulator", short: "Zaokrąglanie a liczba to any liczba of decimals — nearest, up, down or truncated.",
+    description: "Darmowy rounding kalkulator. Enter a liczba and the decimal places to see it rounded to the nearest value, rounded up (ceiling), rounded down (floor) and truncated. Handy for math, finance and reports.",
+    keywords: ["rounding kalkulator", "round liczba", "round to decimal places", "round up", "round down", "truncate liczba"],
+    ...io("Liczba", "Decimal places", "Zaokrąglanieed (nearest)", "Zaokrąglanieed up", "Zaokrąglanieed down", "Truncated"),
+    faq: [
+      { q: "What's the difference between rounding and truncating?", a: "Zaokrąglanieing goes to the nearest value (3.146 → 3.15 at 2 dp), while truncating just drops the extra digits (3.146 → 3.14). Zaokrąglanie up always increases, round down always decreases." },
+      { q: "How does 'round half' work here?", a: "We use standard round-half-up via Math.round, so 2.5 rounds to 3 and −2.5 rounds to −2 (toward +∞ at the half)." },
+    ],
+  },
   pt: {
     title: "Calculadora de Arredondamento", short: "Arredonde números com vários métodos — para cima, para baixo, normal.",
     description: "Calculadora gratuita de arredondamento. Arredonde para o inteiro, para cima (ceiling), para baixo (floor) ou para um número específico de casas decimais.",

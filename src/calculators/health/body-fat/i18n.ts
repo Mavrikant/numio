@@ -57,6 +57,119 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "Lichaamsvet Calculator",
+    short: "Estimate your body fat percentage using the US Navy circumference method.",
+    description:
+      "Gratis body fat percentage calculator using the US Navy tape measure method (Hodgdon & Beckett, 1984). Enter neck, waist, and hip circumferences for an accurate estimate without equipment.",
+    keywords: [
+      "body fat calculator",
+      "body fat percentage",
+      "US Navy method",
+      "circumference method",
+      "lean mass calculator",
+      "fat mass",
+      "ACE body fat",
+    ],
+    inputs: {
+      gender: { label: "Biological sex", help: "Female formula includes hip circumference." },
+      height: { label: "Hoogte", help: "Your hoogte in centimetres." },
+      weight: { label: "Weight", help: "Your body weight in kilograms, used to bereken fat and lean mass." },
+      waist: { label: "Taille circumference", help: "Measure at the navel level for males, or at the narrowest point for females. Keep tape horizontal." },
+      neck: { label: "Neck circumference", help: "Measure just below the larynx (Adam's apple), sloping slightly downward." },
+      hip: { label: "Hip circumference (females)", help: "Measure at the widest point of the hips and buttocks. Required for females only." },
+    },
+    outputs: {
+      bodyFatPct: { label: "Body fat percentage", help: "Estimated percentage of total body weight that is fat." },
+      fatMass: { label: "Fat mass", help: "Estimated weight of body fat in kilograms.", suffix: "kg" },
+      leanMass: { label: "Lean mass", help: "Body weight minus fat mass — includes muscle, bone, water, and organs.", suffix: "kg" },
+      category: { label: "Category", help: "ACE (American Council on Exercise) body fat classification." },
+    },
+    options: {
+      gender: { male: "Male", female: "Female" },
+    },
+    errors: {
+      hipRequired: "Hip measurement is required for females.",
+      waistMustExceedNeck: "Taille circumference must be greater than neck circumference.",
+      heightOutOfRange: "Hoogte must be between 50 and 250 cm.",
+      weightOutOfRange: "Weight must be between 1 and 300 kg.",
+    },
+    faq: [
+      {
+        q: "How accurate is the US Navy method?",
+        a: "The US Navy circumference method typically has an accuracy of ±3–4 percentage points compared to DEXA (dual-energy X-ray absorptiometry). It is more accurate than BMI for estimating body composition but less precise than hydrostatic weighing or DEXA.",
+      },
+      {
+        q: "What is a healthy body fat percentage?",
+        a: "The American Council on Exercise (ACE) defines healthy ranges as 18–24% for men and 25–31% for women. Athletes typically have lower percentages (6–13% for men, 14–20% for women). Essential fat (minimum needed for life) is about 2–5% for men and 10–13% for women.",
+      },
+      {
+        q: "Where should I measure my waist?",
+        a: "For males, measure at the navel. For females, measure at the narrowest point of the torso. Keep the tape horizontal and measure at the end of a normal exhalation without sucking in your stomach.",
+      },
+      {
+        q: "Can I use this calculator to track progress?",
+        a: "Yes, but ensure you measure consistently: same time of day, same measuring tape, same body position, and the same person taking measurements. Circumference methods are excellent for tracking trends over time.",
+      },
+    ],
+  },
+
+  pl: {
+    title: "Tkanka Tłuszczowa Kalkulator",
+    short: "Estimate your body fat percentage using the US Navy circumference method.",
+    description:
+      "Darmowy body fat percentage kalkulator using the US Navy tape measure method (Hodgdon & Beckett, 1984). Enter neck, waist, and hip circumferences for an accurate estimate without equipment.",
+    keywords: [
+      "body fat kalkulator",
+      "body fat percentage",
+      "US Navy method",
+      "circumference method",
+      "lean mass kalkulator",
+      "fat mass",
+      "ACE body fat",
+    ],
+    inputs: {
+      gender: { label: "Biological sex", help: "Female formula includes hip circumference." },
+      height: { label: "Wysokość", help: "Your wysokość in centimetres." },
+      weight: { label: "Weight", help: "Your body weight in kilograms, used to oblicz fat and lean mass." },
+      waist: { label: "Talia circumference", help: "Measure at the navel level for males, or at the narrowest point for females. Keep tape horizontal." },
+      neck: { label: "Neck circumference", help: "Measure just below the larynx (Adam's apple), sloping slightly downward." },
+      hip: { label: "Hip circumference (females)", help: "Measure at the widest point of the hips and buttocks. Required for females only." },
+    },
+    outputs: {
+      bodyFatPct: { label: "Body fat percentage", help: "Estimated percentage of total body weight that is fat." },
+      fatMass: { label: "Fat mass", help: "Estimated weight of body fat in kilograms.", suffix: "kg" },
+      leanMass: { label: "Lean mass", help: "Body weight minus fat mass — includes muscle, bone, water, and organs.", suffix: "kg" },
+      category: { label: "Category", help: "ACE (American Council on Exercise) body fat classification." },
+    },
+    options: {
+      gender: { male: "Male", female: "Female" },
+    },
+    errors: {
+      hipRequired: "Hip measurement is required for females.",
+      waistMustExceedNeck: "Talia circumference must be greater than neck circumference.",
+      heightOutOfRange: "Wysokość must be between 50 and 250 cm.",
+      weightOutOfRange: "Weight must be between 1 and 300 kg.",
+    },
+    faq: [
+      {
+        q: "How accurate is the US Navy method?",
+        a: "The US Navy circumference method typically has an accuracy of ±3–4 percentage points compared to DEXA (dual-energy X-ray absorptiometry). It is more accurate than BMI for estimating body composition but less precise than hydrostatic weighing or DEXA.",
+      },
+      {
+        q: "What is a healthy body fat percentage?",
+        a: "The American Council on Exercise (ACE) defines healthy ranges as 18–24% for men and 25–31% for women. Athletes typically have lower percentages (6–13% for men, 14–20% for women). Essential fat (minimum needed for life) is about 2–5% for men and 10–13% for women.",
+      },
+      {
+        q: "Where should I measure my waist?",
+        a: "For males, measure at the navel. For females, measure at the narrowest point of the torso. Keep the tape horizontal and measure at the end of a normal exhalation without sucking in your stomach.",
+      },
+      {
+        q: "Can I use this kalkulator to track progress?",
+        a: "Yes, but ensure you measure consistently: same time of day, same measuring tape, same body position, and the same person taking measurements. Circumference methods are excellent for tracking trends over time.",
+      },
+    ],
+  },
   pt: {
     title: "Calculadora de Gordura Corporal",
     short: "Estime a sua percentagem de gordura corporal pelo método da Marinha dos EUA.",

@@ -33,6 +33,71 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "Debiet Converteerer",
+    short: "Converteer between m³/h, L/min, CFM, GPM and more direct",
+    description:
+      "Converteer between metric and imperial volumetric flow-rate units with high precision",
+    keywords: ["flow rate", "cfm", "gpm", "m3/s", "conversion"],
+    inputs: {
+      value: { label: "Waarde", help: "The lengte value to converteer" },
+      fromUnit: { label: "From Unit", help: "Select source unit" },
+      toUnit: { label: "To Unit", help: "Select target unit" },
+    },
+    outputs: {
+      result: { label: "Resultaat", help: "Converteered value" },
+    },
+    faq: [
+      {
+        question: "How many cubic meters per hour are in 1 m³/s?",
+        answer:
+          "1 cubic meter per second equals 3,600 cubic meters per hour, since there are 3,600 seconden in an hour.",
+      },
+      {
+        question: "What is CFM?",
+        answer:
+          "CFM stands for cubic feet per minute, a common imperial unit for air and gas flow. 1 CFM ≈ 0.000472 m³/s.",
+      },
+      {
+        question: "How do I converteer GPM to liters per minute?",
+        answer:
+          "Multiply US gallons per minute by 3.78541 to get liters per minute. For example, 10 GPM ≈ 37.85 L/min.",
+      },
+    ],
+  },
+
+  pl: {
+    title: "Natężenie Przepływu Konwerter",
+    short: "Konwertuj between m³/h, L/min, CFM, GPM and more natychmiast",
+    description:
+      "Konwertuj between metric and imperial volumetric flow-rate units with high precision",
+    keywords: ["flow rate", "cfm", "gpm", "m3/s", "conversion"],
+    inputs: {
+      value: { label: "Wartość", help: "The długość value to konwertuj" },
+      fromUnit: { label: "From Unit", help: "Select source unit" },
+      toUnit: { label: "To Unit", help: "Select target unit" },
+    },
+    outputs: {
+      result: { label: "Wynik", help: "Konwertujed value" },
+    },
+    faq: [
+      {
+        question: "How many cubic meters per hour are in 1 m³/s?",
+        answer:
+          "1 cubic meter per second equals 3,600 cubic meters per hour, since there are 3,600 sekund in an hour.",
+      },
+      {
+        question: "What is CFM?",
+        answer:
+          "CFM stands for cubic feet per minute, a common imperial unit for air and gas flow. 1 CFM ≈ 0.000472 m³/s.",
+      },
+      {
+        question: "How do I konwertuj GPM to liters per minute?",
+        answer:
+          "Multiply US gallons per minute by 3.78541 to get liters per minute. For example, 10 GPM ≈ 37.85 L/min.",
+      },
+    ],
+  },
   tr: {
     title: "Debi Dönüştürücü",
     short: "m³/h, L/dk, CFM, GPM ve daha fazlası arasında anında dönüşüm",

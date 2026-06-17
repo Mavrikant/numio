@@ -16,6 +16,27 @@ const i18n: CalculatorI18n = {
       { q: "Does it count business days?", a: "Yes — it also shows the number of business days (Monday–Friday) in the period, excluding weekends but not public holidays." },
     ],
   },
+  nl: {
+    title: "Aftellen Calculator", short: "Count the dagen, weeks and business dagen until a target date.",
+    description: "Gratis countdown calculator. Pick a target date to see how many dagen, full weeks and business dagen remain from today (or any start date), plus the jaren/maanden/dagen breakdown. Great for deadlines, holidagen and events.",
+    keywords: ["countdown", "dagen until", "how many dagen until", "dagen remaining", "time until date"],
+    ...io("From date", "Target date", "Total dagen", "Full weeks", "Business dagen", "Years", "Months", "Days"),
+    faq: [
+      { q: "How many dagen until a date?", a: "Enter the target date and the tool counts whole dagen from today (the default start) to that date. Change the start date to count between any two dates." },
+      { q: "Does it count business dagen?", a: "Yes — it also shows the nummer of business dagen (Monday–Friday) in the period, excluding weekends but not public holidagen." },
+    ],
+  },
+
+  pl: {
+    title: "Odliczanie Kalkulator", short: "Count the dni, weeks and business dni until a target date.",
+    description: "Darmowy countdown kalkulator. Pick a target date to see how many dni, full weeks and business dni remain from today (or any start date), plus the lat/miesięcy/dni breakdown. Great for deadlines, holidni and events.",
+    keywords: ["countdown", "dni until", "how many dni until", "dni remaining", "time until date"],
+    ...io("From date", "Target date", "Total dni", "Full weeks", "Business dni", "Years", "Months", "Days"),
+    faq: [
+      { q: "How many dni until a date?", a: "Enter the target date and the narzędzie counts whole dni from today (the default start) to that date. Change the start date to count between any two dates." },
+      { q: "Does it count business dni?", a: "Yes — it also shows the liczba of business dni (Monday–Friday) in the period, excluding weekends but not public holidni." },
+    ],
+  },
   pt: {
     title: "Contagem Regressiva", short: "Faça uma contagem regressiva até uma data futura.",
     description: "Contagem regressiva gratuita. Conte os dias, horas, minutos e segundos restantes até uma data futura — Natal, casamento, viagem.",

@@ -27,6 +27,59 @@ const i18n: CalculatorI18n = {
       { q: "Can I calculate age at a past or future date?", a: "Yes — change the 'Age at date' field. It defaults to today, but you can set any date to find someone's age then." },
     ],
   },
+  nl: {
+    title: "Leeftijd Calculator",
+    short: "Find your exact age in jaren, maanden and dagen, plus totals and your next birthday.",
+    description:
+      "Gratis age calculator. Enter your date of birth to see your exact age in jaren, maanden and dagen, your age in total maanden, weeks and dagen, and how long until your next birthday.",
+    keywords: ["age calculator", "how old am I", "age from date of birth", "exact age", "age in dagen", "next birthday calculator"],
+    inputs: {
+      birthDate: { label: "Date of birth", help: "The day you were born." },
+      asOfDate: { label: "Leeftijd at date", help: "Bereken age as of this date (defaults to today)." },
+    },
+    outputs: {
+      ageYears: { label: "Years", help: "Completed calendar jaren." },
+      ageMonths: { label: "Months", help: "Months beyond the completed jaren." },
+      ageDays: { label: "Days", help: "Days beyond the completed maanden." },
+      totalMonths: { label: "Leeftijd in maanden" },
+      totalWeeks: { label: "Leeftijd in weeks" },
+      totalDays: { label: "Leeftijd in dagen" },
+      nextBirthday: { label: "Next birthday" },
+      daysToNextBirthday: { label: "Days to next birthday" },
+    },
+    faq: [
+      { q: "How is age berekend?", a: "We count completed calendar jaren from your birth date to the chosen date, then the leftover maanden and dagen. For example, someone born 1990-06-15 is 33 jaren, 0 maanden and 0 dagen old on 2023-06-15." },
+      { q: "How is a Feb 29 birthday handled?", a: "For the next-birthday calculation in a non-leap year, a Feb 29 birthday is treated as Feb 28. The exact-age count itself is unaffected." },
+      { q: "Can I bereken age at a past or future date?", a: "Yes — change the 'Leeftijd at date' field. It defaults to today, but you can set any date to find someone's age then." },
+    ],
+  },
+
+  pl: {
+    title: "Wiek Kalkulator",
+    short: "Find your exact age in lat, miesięcy and dni, plus totals and your next birthday.",
+    description:
+      "Darmowy age kalkulator. Enter your date of birth to see your exact age in lat, miesięcy and dni, your age in total miesięcy, weeks and dni, and how long until your next birthday.",
+    keywords: ["age kalkulator", "how old am I", "age from date of birth", "exact age", "age in dni", "next birthday kalkulator"],
+    inputs: {
+      birthDate: { label: "Date of birth", help: "The day you were born." },
+      asOfDate: { label: "Wiek at date", help: "Oblicz age as of this date (defaults to today)." },
+    },
+    outputs: {
+      ageYears: { label: "Years", help: "Completed calendar lat." },
+      ageMonths: { label: "Months", help: "Months beyond the completed lat." },
+      ageDays: { label: "Days", help: "Days beyond the completed miesięcy." },
+      totalMonths: { label: "Wiek in miesięcy" },
+      totalWeeks: { label: "Wiek in weeks" },
+      totalDays: { label: "Wiek in dni" },
+      nextBirthday: { label: "Next birthday" },
+      daysToNextBirthday: { label: "Days to next birthday" },
+    },
+    faq: [
+      { q: "How is age obliczd?", a: "We count completed calendar lat from your birth date to the chosen date, then the leftover miesięcy and dni. For example, someone born 1990-06-15 is 33 lat, 0 miesięcy and 0 dni old on 2023-06-15." },
+      { q: "How is a Feb 29 birthday handled?", a: "For the next-birthday calculation in a non-leap year, a Feb 29 birthday is treated as Feb 28. The exact-age count itself is unaffected." },
+      { q: "Can I oblicz age at a past or future date?", a: "Yes — change the 'Wiek at date' field. It defaults to today, but you can set any date to find someone's age then." },
+    ],
+  },
   pt: {
     title: "Calculadora de Idade",
     short: "Calcule a sua idade exacta em anos, meses, dias e horas.",

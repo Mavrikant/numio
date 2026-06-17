@@ -80,6 +80,165 @@ const i18n: CalculatorI18n = {
       },
     ],
   },
+  nl: {
+    title: "Cholesterol Calculator",
+    short: "Evaluate cardiovascular risk from your lipid panel (TC, HDL, LDL, TG).",
+    description:
+      "Gratis cholesterol calculator using the Friedewald equation and NCEP ATP III thresholds. Enter total cholesterol, HDL, triglycerides (and optionally LDL) to get ratios, non-HDL cholesterol and an LDL risk category.",
+    keywords: [
+      "cholesterol calculator",
+      "LDL calculator",
+      "HDL ratio",
+      "Friedewald equation",
+      "lipid panel",
+      "non-HDL cholesterol",
+      "cardiovascular risk",
+    ],
+    inputs: {
+      totalCholesterol: {
+        label: "Total cholesterol",
+        help: "TC from your lipid panel in mg/dL (50–500).",
+      },
+      hdl: {
+        label: "HDL cholesterol",
+        help: "High-density lipoprotein in mg/dL (10–200).",
+      },
+      triglycerides: {
+        label: "Triglycerides",
+        help: "Fasting triglycerides in mg/dL (30–1000).",
+      },
+      ldl: {
+        label: "LDL cholesterol (optional)",
+        help: "Direct LDL measurement in mg/dL, or 0 to estimate via the Friedewald equation.",
+      },
+    },
+    outputs: {
+      ldlComputed: {
+        label: "LDL cholesterol",
+        help: "Either your direct LDL or the Friedewald estimate (TC − HDL − TG/5).",
+      },
+      totalHdlRatio: {
+        label: "Total / HDL ratio",
+        help: "Target <5.0 — lower is better.",
+      },
+      ldlHdlRatio: {
+        label: "LDL / HDL ratio",
+        help: "Target <3.5 — lower is better.",
+      },
+      nonHdlCholesterol: {
+        label: "Non-HDL cholesterol",
+        help: "TC − HDL. Includes all atherogenic particles. Target <130 mg/dL.",
+      },
+      category: {
+        label: "LDL category",
+        help: "NCEP ATP III LDL classification: optimal <100, near-optimal <130, borderline <160, high <190, very high ≥190.",
+      },
+    },
+    errors: {
+      tcOutOfRange: "Total cholesterol must be between 50 and 500 mg/dL.",
+      hdlOutOfRange: "HDL must be between 10 and 200 mg/dL.",
+      tgOutOfRange: "Triglycerides must be between 30 and 1000 mg/dL.",
+      ldlOutOfRange: "LDL must be 0 (auto-compute) or between 30 and 400 mg/dL.",
+    },
+    faq: [
+      {
+        q: "What is the Friedewald equation?",
+        a: "Friedewald (1972) estimates LDL as TC − HDL − TG/5. It is reliable when triglycerides are below 400 mg/dL; above that, direct LDL measurement is recommended.",
+      },
+      {
+        q: "Why is non-HDL cholesterol important?",
+        a: "Non-HDL cholesterol (TC − HDL) captures every atherogenic lipoprotein (LDL, VLDL, IDL, Lp(a)). The 2018 AHA/ACC guideline highlights it as a key secondary target.",
+      },
+      {
+        q: "What is a good total cholesterol level?",
+        a: "Generally, total cholesterol below 200 mg/dL is considered desirable, but treatment decisions are driven primarily by LDL, non-HDL, and overall cardiovascular risk.",
+      },
+      {
+        q: "Should I use direct LDL or Friedewald?",
+        a: "Direct LDL is preferred when triglycerides exceed 400 mg/dL or in non-fasting samples. Otherwise Friedewald is accurate enough for routine assessment.",
+      },
+    ],
+  },
+
+  pl: {
+    title: "Cholesterol Kalkulator",
+    short: "Evaluate cardiovascular risk from your lipid panel (TC, HDL, LDL, TG).",
+    description:
+      "Darmowy cholesterol kalkulator using the Friedewald equation and NCEP ATP III thresholds. Enter total cholesterol, HDL, triglycerides (and optionally LDL) to get ratios, non-HDL cholesterol and an LDL risk category.",
+    keywords: [
+      "cholesterol kalkulator",
+      "LDL kalkulator",
+      "HDL ratio",
+      "Friedewald equation",
+      "lipid panel",
+      "non-HDL cholesterol",
+      "cardiovascular risk",
+    ],
+    inputs: {
+      totalCholesterol: {
+        label: "Total cholesterol",
+        help: "TC from your lipid panel in mg/dL (50–500).",
+      },
+      hdl: {
+        label: "HDL cholesterol",
+        help: "High-density lipoprotein in mg/dL (10–200).",
+      },
+      triglycerides: {
+        label: "Triglycerides",
+        help: "Fasting triglycerides in mg/dL (30–1000).",
+      },
+      ldl: {
+        label: "LDL cholesterol (optional)",
+        help: "Direct LDL measurement in mg/dL, or 0 to estimate via the Friedewald equation.",
+      },
+    },
+    outputs: {
+      ldlComputed: {
+        label: "LDL cholesterol",
+        help: "Either your direct LDL or the Friedewald estimate (TC − HDL − TG/5).",
+      },
+      totalHdlRatio: {
+        label: "Total / HDL ratio",
+        help: "Target <5.0 — lower is better.",
+      },
+      ldlHdlRatio: {
+        label: "LDL / HDL ratio",
+        help: "Target <3.5 — lower is better.",
+      },
+      nonHdlCholesterol: {
+        label: "Non-HDL cholesterol",
+        help: "TC − HDL. Includes all atherogenic particles. Target <130 mg/dL.",
+      },
+      category: {
+        label: "LDL category",
+        help: "NCEP ATP III LDL classification: optimal <100, near-optimal <130, borderline <160, high <190, very high ≥190.",
+      },
+    },
+    errors: {
+      tcOutOfRange: "Total cholesterol must be between 50 and 500 mg/dL.",
+      hdlOutOfRange: "HDL must be between 10 and 200 mg/dL.",
+      tgOutOfRange: "Triglycerides must be between 30 and 1000 mg/dL.",
+      ldlOutOfRange: "LDL must be 0 (auto-compute) or between 30 and 400 mg/dL.",
+    },
+    faq: [
+      {
+        q: "What is the Friedewald equation?",
+        a: "Friedewald (1972) estimates LDL as TC − HDL − TG/5. It is reliable when triglycerides are below 400 mg/dL; above that, direct LDL measurement is recommended.",
+      },
+      {
+        q: "Why is non-HDL cholesterol important?",
+        a: "Non-HDL cholesterol (TC − HDL) captures every atherogenic lipoprotein (LDL, VLDL, IDL, Lp(a)). The 2018 AHA/ACC guideline highlights it as a key secondary target.",
+      },
+      {
+        q: "What is a good total cholesterol level?",
+        a: "Generally, total cholesterol below 200 mg/dL is considered desirable, but treatment decisions are driven primarily by LDL, non-HDL, and overall cardiovascular risk.",
+      },
+      {
+        q: "Should I use direct LDL or Friedewald?",
+        a: "Direct LDL is preferred when triglycerides exceed 400 mg/dL or in non-fasting samples. Otherwise Friedewald is accurate enough for routine assessment.",
+      },
+    ],
+  },
   pt: {
     title: "Calculadora de Colesterol",
     short: "Avalie os seus valores de colesterol total, LDL, HDL e triglicéridos.",

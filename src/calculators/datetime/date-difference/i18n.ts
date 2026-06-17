@@ -26,6 +26,57 @@ const i18n: CalculatorI18n = {
       { q: "Does the order of dates matter?", a: "No. The calculator returns the absolute span, so swapping the start and end dates gives the same number of days." },
     ],
   },
+  nl: {
+    title: "Datumsverschil Calculator",
+    short: "Count the dagen, weeks, maanden and business dagen between two dates.",
+    description:
+      "Gratis date difference calculator. Enter a start and end date to get the total nummer of dagen, weeks and remaining dagen, the jaren/maanden/dagen breakdown, and the nummer of business dagen (Mon–Fri) between them.",
+    keywords: ["date difference calculator", "dagen between dates", "how many dagen", "weeks between dates", "business dagen calculator", "duration between dates"],
+    inputs: {
+      startDate: { label: "Start date" },
+      endDate: { label: "End date" },
+    },
+    outputs: {
+      totalDays: { label: "Total dagen" },
+      weeks: { label: "Full weeks" },
+      remainderDays: { label: "Remaining dagen" },
+      years: { label: "Years" },
+      months: { label: "Months" },
+      days: { label: "Days" },
+      businessDays: { label: "Business dagen (Mon–Fri)" },
+    },
+    faq: [
+      { q: "How many dagen are between two dates?", a: "Subtract the start date from the end date. This tool counts whole dagen in UTC, so a result of 30 means exactly 30 × 24 uren, unaffected by daylight-saving changes." },
+      { q: "What counts as a business day?", a: "Business dagen are Monday through Friday. The count excludes weekends but not public holidagen, which differ by country — subtract those manually if needed." },
+      { q: "Does the order of dates matter?", a: "No. The calculator returns the absolute span, so swapping the start and end dates gives the same nummer of dagen." },
+    ],
+  },
+
+  pl: {
+    title: "Różnica Dat Kalkulator",
+    short: "Count the dni, weeks, miesięcy and business dni between two dates.",
+    description:
+      "Darmowy date difference kalkulator. Enter a start and end date to get the total liczba of dni, weeks and remaining dni, the lat/miesięcy/dni breakdown, and the liczba of business dni (Mon–Fri) between them.",
+    keywords: ["date difference kalkulator", "dni between dates", "how many dni", "weeks between dates", "business dni kalkulator", "duration between dates"],
+    inputs: {
+      startDate: { label: "Start date" },
+      endDate: { label: "End date" },
+    },
+    outputs: {
+      totalDays: { label: "Total dni" },
+      weeks: { label: "Full weeks" },
+      remainderDays: { label: "Remaining dni" },
+      years: { label: "Years" },
+      months: { label: "Months" },
+      days: { label: "Days" },
+      businessDays: { label: "Business dni (Mon–Fri)" },
+    },
+    faq: [
+      { q: "How many dni are between two dates?", a: "Subtract the start date from the end date. This narzędzie counts whole dni in UTC, so a result of 30 means exactly 30 × 24 godzin, unaffected by daylight-saving changes." },
+      { q: "What counts as a business day?", a: "Business dni are Monday through Friday. The count excludes weekends but not public holidni, which differ by country — subtract those manually if needed." },
+      { q: "Does the order of dates matter?", a: "No. The kalkulator returns the absolute span, so swapping the start and end dates gives the same liczba of dni." },
+    ],
+  },
   pt: {
     title: "Calculadora de Diferença entre Datas",
     short: "Calcule o intervalo entre duas datas em dias, semanas, meses ou anos.",
