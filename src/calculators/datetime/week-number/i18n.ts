@@ -10,6 +10,9 @@ const i18n: CalculatorI18n = {
     faq: [
       { q: "How is the ISO week number defined?", a: "ISO-8601 weeks start on Monday, and week 1 is the week that contains the year's first Thursday (equivalently, the week containing January 4). A year has 52 or 53 weeks." },
       { q: "Why can early January be week 52 or 53?", a: "If the first days of January fall before that year's first Thursday, they belong to the last week of the previous year — so 1 January can be week 52 or 53 of the prior week-year." },
+      { q: "What is the current ISO week number right now?", a: "You can use this calculator by selecting today's date to instantly find the current ISO-8601 week number, the week-based year, and the day of the year." },
+      { q: "How many weeks are there in a year?", a: "Most years have 52 weeks, but approximately every 5–6 years there is a 53-week year. This happens when January 1 falls on a Thursday or when a leap year starts on a Wednesday." },
+      { q: "Do all countries use the ISO week numbering system?", a: "No. While many European and Asian countries follow ISO-8601 week numbering (Monday start, week 1 contains the first Thursday), the US, Canada, and Australia often use Sunday-start weeks or different week-1 definitions." },
     ],
   },
   nl: {

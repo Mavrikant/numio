@@ -14,6 +14,9 @@ const i18n: CalculatorI18n = {
     faq: [
       { q: "How do you calculate percent error?", a: "Percent error = |measured − actual| / |actual| × 100. If you measured 9.80 and the true value is 9.81, the percent error is about 0.10%." },
       { q: "What's the difference between absolute and relative error?", a: "Absolute error is the raw difference |measured − actual|. Relative error divides that by the true value; multiply by 100 for percent error." },
+      { q: "Can percent error be negative?", a: "No — the formula uses absolute values, so percent error is always 0 or positive. However, if you want to know whether your measurement was above or below the true value, look at the sign of the absolute error (before taking absolute value)." },
+      { q: "What is considered an acceptable percent error?", a: "It depends on the field. Physics labs often accept 1–5%, analytical chemistry may demand <1%, while social sciences may tolerate 10% or more. The calculator simply computes the value; it's up to you to judge acceptability." },
+      { q: "How does percent error differ from percent difference?", a: "Percent error compares a measured value to a known true value (|measured − true| / |true| × 100). Percent difference compares two equally valid measurements (|a−b| / ((a+b)/2) × 100). Use percent error when you have a reference standard." },
     ],
   },
   nl: {

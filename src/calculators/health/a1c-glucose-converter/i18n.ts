@@ -15,6 +15,9 @@ const i18n: CalculatorI18n = {
     faq: [
       { q: "How is A1C converted to average glucose?", a: "Using the ADAG formula eAG(mg/dL) = 28.7 × A1C − 46.7. For example, an A1C of 6.5% ≈ 140 mg/dL (7.8 mmol/L)." },
       { q: "Is estimated average glucose the same as my meter reading?", a: "No. eAG is a long-term average derived from A1C; individual meter readings vary throughout the day and may differ from this estimate." },
+      { q: "What is a normal A1C range?", a: "For most non-diabetic adults, a normal A1C is below 5.7%. Prediabetes ranges from 5.7% to 6.4%, and diabetes is typically diagnosed at 6.5% or higher. Your target may vary based on your doctor's advice." },
+      { q: "How often should I check my A1C?", a: "The American Diabetes Association recommends testing A1C at least twice a year for well-controlled diabetes and quarterly for those with changing therapy or not meeting goals." },
+      { q: "Can I use A1C and glucose converter for both mg/dL and mmol/L?", a: "Yes. The converter displays results simultaneously in both mg/dL (commonly used in the US) and mmol/L (used in the UK, Canada, Australia, and most other countries), so you can share results with any healthcare provider." },
     ],
   },
   nl: {

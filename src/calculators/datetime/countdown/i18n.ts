@@ -14,6 +14,9 @@ const i18n: CalculatorI18n = {
     faq: [
       { q: "How many days until a date?", a: "Enter the target date and the tool counts whole days from today (the default start) to that date. Change the start date to count between any two dates." },
       { q: "Does it count business days?", a: "Yes — it also shows the number of business days (Monday–Friday) in the period, excluding weekends but not public holidays." },
+      { q: "Can I count down to multiple events at once?", a: "This calculator handles one countdown at a time, but you can quickly re-run it for different target dates to plan multiple deadlines, holidays, or personal events side by side." },
+      { q: "How accurate is the years/months/days breakdown?", a: "The breakdown uses calendar month lengths for accuracy. For example, the time from January 15 to March 10 is shown as 1 month and 26 days, not a generic 30-day month." },
+      { q: "What counts as a full week in this countdown?", a: "A full week equals 7 consecutive calendar days regardless of the start day. The output shows complete 7-day units, and any remaining days are shown separately in the days count." },
     ],
   },
   nl: {

@@ -14,6 +14,9 @@ const i18n: CalculatorI18n = {
     faq: [
       { q: "What is the Fibonacci sequence?", a: "Each number is the sum of the two before it, starting 1, 1, 2, 3, 5, 8, 13… It appears throughout nature, art and computer science." },
       { q: "What is the golden ratio connection?", a: "The ratio of consecutive Fibonacci numbers approaches the golden ratio φ = (1+√5)/2 ≈ 1.618 as n grows." },
+      { q: "Does the Fibonacci sequence start with 0 or 1?", a: "It depends on convention. Our calculator uses F₁ = 1, F₂ = 1, so the sequence is 1, 1, 2, 3, 5… Some definitions start with F₀ = 0, F₁ = 1, giving 0, 1, 1, 2, 3, 5…" },
+      { q: "What is the largest Fibonacci number this calculator can handle?", a: "JavaScript can accurately represent integers up to 2⁵³ ≈ 9 quadrillion. Fibonacci(78) ≈ 89 trillion is safe; beyond that, results may lose precision due to floating-point limitations." },
+      { q: "How is the Fibonacci sequence used in trading?", a: "Traders use Fibonacci retracement levels (23.6%, 38.2%, 50%, 61.8%, 78.6%) derived from the golden ratio to identify potential support and resistance levels in stock, forex, and crypto markets." },
     ],
   },
   nl: {

@@ -33,6 +33,28 @@ const i18n: CalculatorI18n = {
         custom: "Custom ratio",
       },
     },
+    faq: [
+      {
+        q: "What is the standard mix ratio for M20 concrete?",
+        a: "M20 concrete uses a 1:1.5:3 mix ratio by volume — 1 part cement, 1.5 parts sand, and 3 parts coarse aggregate. This general-purpose grade achieves a compressive strength of 20 MPa after 28 days of curing and is commonly used for slabs, beams, and columns.",
+      },
+      {
+        q: "How much cement do I need for 1 cubic meter of M20 concrete?",
+        a: "For 1 m³ of M20 concrete (1:1.5:3 mix), you need approximately 403 kg of cement (about 8 bags of 50 kg), 672 kg of sand, and 1,344 kg of coarse aggregate, with roughly 200 liters of water at a 0.50 water-cement ratio. Our calculator provides exact quantities based on your specific mix grade and volume.",
+      },
+      {
+        q: "What is the purpose of the dry volume factor (1.54) in concrete calculations?",
+        a: "The dry volume of concrete materials is about 54% greater than the final wet volume because dry materials contain voids and air pockets. When mixed with water, these voids are filled and the concrete consolidates. The standard multiplier of 1.54 converts wet volume to dry volume for accurate material estimation.",
+      },
+      {
+        q: "How does the water-cement ratio affect concrete strength?",
+        a: "The water-cement ratio is the most critical factor in concrete strength. A lower ratio (0.40-0.50) produces higher strength but is less workable, while a higher ratio (0.55-0.65) makes concrete easier to work with but reduces strength significantly. For M20 concrete, the recommended water-cement ratio is 0.50-0.55.",
+      },
+      {
+        q: "How many 50 kg bags of cement are needed for a 10 m³ slab?",
+        a: "For a 10 m³ slab using M20 grade (1:1.5:3), you will need approximately 80 bags of 50 kg cement (about 4,030 kg total). The exact number depends on your mix grade — higher grades like M25 require more cement while leaner mixes like M10 require less. Our calculator computes this automatically.",
+      },
+    ],
   },
   nl: {
     title: "Beton Mix Calculator",

@@ -39,6 +39,28 @@ const i18n: CalculatorI18n = {
         head: "Head of Household",
       },
     },
+    faq: [
+      {
+        q: "How much will I take home from a $75,000 salary?",
+        a: "For a $75,000 annual salary as a single filer in 2024, your estimated take-home pay would be approximately $56,000-58,000 per year after federal income tax (roughly $8,440), Social Security (6.2% up to $168,600), Medicare (1.45%), and any state income tax. This works out to about $4,700-4,800 per month.",
+      },
+      {
+        q: "What is the difference between gross pay and net pay?",
+        a: "Gross pay is your total salary before any deductions — the amount stated in your employment contract. Net pay (take-home pay) is what you actually receive after subtracting federal income tax, Social Security tax (6.2%), Medicare tax (1.45%), and any state income tax or pre-tax deductions like 401(k) contributions.",
+      },
+      {
+        q: "How does my filing status affect my take-home pay?",
+        a: "Your filing status — Single, Married Filing Jointly, or Head of Household — determines which federal tax brackets apply to your income. Married Filing Jointly has wider tax brackets, potentially lowering your overall tax rate compared to Single filers at the same income level, resulting in higher take-home pay.",
+      },
+      {
+        q: "How do 401(k) contributions reduce my taxes?",
+        a: "Pre-tax 401(k) contributions reduce your taxable income dollar-for-dollar. For example, if you earn $80,000 and contribute $5,000 to a 401(k), you are only taxed on $75,000. This can save you $1,100-1,800 in federal income tax depending on your marginal tax bracket.",
+      },
+      {
+        q: "What are the Social Security and Medicare tax rates for 2024?",
+        a: "For 2024, the Social Security tax rate is 6.2% on wages up to $168,600 (the wage base limit). The Medicare tax rate is 1.45% on all wages, with an additional 0.9% surcharge on wages exceeding $200,000. Together, these FICA taxes total 7.65% on the first $168,600 of wages.",
+      },
+    ],
   },
   nl: {
     title: "Salaris & Take-Home Pay Calculator",

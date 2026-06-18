@@ -14,6 +14,9 @@ const i18n: CalculatorI18n = {
     faq: [
       { q: "How does the Rule of 72 work?", a: "Divide 72 by the annual percentage return to estimate the years to double. At 8%, money doubles in about 72/8 = 9 years." },
       { q: "When should I use 70 or 69.3 instead?", a: "72 is easiest for mental math and is most accurate around 6–10%. The 70 and 69.3 variants are closer for lower rates and continuous compounding." },
+      { q: "How accurate is the Rule of 72 compared to exact math?", a: "The exact doubling formula is t = ln(2) / ln(1 + r). At 8%, exact doubling time ≈ 9.01 years vs. 9 years via Rule of 72. The rule is most accurate for rates between 5–10% and becomes less precise at very high or low rates." },
+      { q: "Can I use the Rule of 72 for inflation too?", a: "Yes — use it to estimate how long it takes for money's purchasing power to halve at a given inflation rate. At 3% inflation, your money loses half its value in roughly 72/3 = 24 years." },
+      { q: "Does the Rule of 72 work for monthly or daily compounding?", a: "The rule is designed for annual compounding. For more frequent compounding, use the exact formula or the Rule of 69.3 (which is more accurate for continuous compounding). The calculator shows all variants." },
     ],
   },
   nl: {

@@ -14,6 +14,9 @@ const i18n: CalculatorI18n = {
     faq: [
       { q: "How do I know if a year is a leap year?", a: "A year is a leap year if it is divisible by 4 — except for century years (like 1900), which must also be divisible by 400. So 2000 and 2024 are leap years, but 1900 and 2100 are not." },
       { q: "Why do leap years exist?", a: "Earth takes about 365.2422 days to orbit the Sun. Adding a leap day (29 February) every four years keeps the calendar aligned with the seasons; the 100/400 rule fine-tunes the small remaining drift." },
+      { q: "Is 2024 a leap year? What about 2025?", a: "Yes, 2024 is a leap year (366 days, February has 29 days). 2025 is not a leap year — it has 365 days with February ending on the 28th." },
+      { q: "What are the upcoming leap years?", a: "Recent and upcoming leap years include 2024, 2028, 2032, 2036, 2040, 2044, and 2048. The calculator shows the next and previous leap year for any year you enter." },
+      { q: "What happens if you're born on February 29?", a: "Leaplings (people born on February 29) typically celebrate birthdays on February 28 or March 1 in non-leap years. Legally, most jurisdictions recognize March 1 as the official birthday for leaplings." },
     ],
   },
   nl: {

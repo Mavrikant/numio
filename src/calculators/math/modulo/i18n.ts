@@ -14,6 +14,9 @@ const i18n: CalculatorI18n = {
     faq: [
       { q: "What is the modulo operation?", a: "It returns what's left over after dividing one number by another. 17 mod 5 = 2 because 17 = 3×5 + 2." },
       { q: "Why are there two remainder results?", a: "Languages differ on negative numbers. The truncated remainder (JS/C) takes the dividend's sign; the floored modulo (Python) takes the divisor's sign. For positive inputs they're identical." },
+      { q: "How does modulo work with negative numbers?", a: "In truncated mode (JavaScript/C), -17 mod 5 = -2 (dividend's sign). In floored mode (Python), -17 mod 5 = 3 (divisor's sign, always non-negative). Always check which convention your language uses." },
+      { q: "What are common real-world uses of the modulo operation?", a: "Modulo is used everywhere: checking even/odd (x % 2 = 0), wrapping around circular buffers, calculating remainders in group theory, finding array indices in a cycle, and computing check digits in identification numbers." },
+      { q: "Can the divisor be zero in modulo?", a: "No — dividing by zero is mathematically undefined. The calculator will not accept a zero divisor. In programming, attempting n % 0 throws an error or returns NaN." },
     ],
   },
   nl: {

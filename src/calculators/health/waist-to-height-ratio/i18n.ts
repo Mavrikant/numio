@@ -14,6 +14,9 @@ const i18n: CalculatorI18n = {
     faq: [
       { q: "What is a healthy waist-to-height ratio?", a: "For most adults, keeping the ratio below 0.5 — i.e. waist less than half your height — is associated with lower cardiometabolic risk. Higher ratios indicate more central fat." },
       { q: "Where do I measure my waist?", a: "Around the narrowest point or at the navel, after breathing out normally, without holding the tape too tight." },
+      { q: "Is WHtR better than BMI for predicting health risk?", a: "Many studies suggest WHtR is a stronger predictor of cardiovascular disease, diabetes, and overall mortality than BMI because it specifically measures central obesity, which is more metabolically harmful." },
+      { q: "Does the healthy ratio differ by age or gender?", a: "The 0.5 threshold is a good general guideline for adults. Some experts suggest slightly lower targets for Asians (<0.47) and note that children's ratios change with growth, requiring age-specific charts." },
+      { q: "Can I use centimeters or inches for waist and height?", a: "Yes — as long as both measurements use the same unit (both cm or both inches), the ratio will be the same since it's unitless. The calculator accepts any consistent unit." },
     ],
   },
   nl: {

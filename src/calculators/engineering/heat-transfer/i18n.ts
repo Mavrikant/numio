@@ -15,6 +15,28 @@ const i18n: CalculatorI18n = {
       heatFluxKW: { label: "Heat Flux (kW)", help: "Heat flow in kilowatts" },
       heatFluxBtu: { label: "Heat Flux (BTU/h)", help: "Heat flow in BTU per hour" },
     },
+    faq: [
+      {
+        q: "How is heat flux calculated?",
+        a: "Heat flux (Q) is calculated using the formula Q = ΔT / R, where ΔT is the temperature difference in °C (or K) and R is the thermal resistance in m²·K/W. For example, with a 20°C temperature difference and 2.5 m²·K/W thermal resistance, the heat flux is 8 W/m².",
+      },
+      {
+        q: "What is thermal resistance (R-value) in building materials?",
+        a: "Thermal resistance, or R-value, measures a material's ability to resist heat flow. A higher R-value means better insulation. Typical R-values include R-13 for fiberglass batt insulation in 2×4 walls, R-30 to R-60 for attic insulation, and R-1 to R-2 per inch for common building materials.",
+      },
+      {
+        q: "How do I convert heat flux from Watts to BTU/h?",
+        a: "To convert heat flux from watts to BTU per hour, multiply by 3.412. For example, 1,000 watts equals 3,412 BTU/h. Our calculator automatically displays the result in all three units — Watts, kilowatts, and BTU/h — so you do not need to perform any manual conversions.",
+      },
+      {
+        q: "What is a typical temperature difference for HVAC calculations?",
+        a: "For residential HVAC design, common temperature differences are 15-25°C (27-45°F) between indoor and outdoor conditions. In winter heating calculations, a typical ΔT might be 30-40°C assuming -10°C outdoor and 21°C indoor temperatures.",
+      },
+      {
+        q: "How can I calculate heat loss through a wall using this calculator?",
+        a: "To calculate heat loss through a wall, determine the wall's total R-value (sum of all layers including insulation, drywall, and siding), measure the indoor-to-outdoor temperature difference (ΔT), and enter both values. The result in Watts tells you the heat loss rate, which is essential for sizing heating equipment.",
+      },
+    ],
   },
   nl: {
     title: "Warmteoverdracht Calculator",

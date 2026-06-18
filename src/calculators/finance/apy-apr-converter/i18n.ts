@@ -18,6 +18,9 @@ const i18n: CalculatorI18n = {
     faq: [
       { q: "What's the difference between APR and APY?", a: "APR is the nominal annual rate ignoring compounding; APY (or EAR) includes it. A 12% APR compounded monthly is about 12.683% APY." },
       { q: "Why does it matter?", a: "Loans often quote APR (lower-looking) while savings quote APY (higher-looking). Converting to the same basis lets you compare offers fairly." },
+      { q: "Which compounding frequency gives the highest effective yield?", a: "More frequent compounding produces a higher APY for the same APR. Daily compounding gives the highest yield, followed by monthly, quarterly, semi-annual, and annual. The difference is most noticeable at higher rates." },
+      { q: "How do I convert APY back to APR?", a: "Use the inverse formula: APR = n × ((1 + APY)^(1/n) − 1), where n is the number of compounding periods per year. The converter handles both directions automatically." },
+      { q: "What is the effective annual rate (EAR) and how is it different from APY?", a: "EAR and APY are mathematically identical — both represent the true annual return after accounting for compounding. EAR is the term used in some regulatory contexts, while APY is more common in consumer banking." },
     ],
   },
   nl: {

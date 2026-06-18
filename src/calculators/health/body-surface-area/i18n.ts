@@ -14,6 +14,9 @@ const i18n: CalculatorI18n = {
     faq: [
       { q: "What is body surface area used for?", a: "BSA is used in medicine to scale drug doses (especially chemotherapy), cardiac index and metabolic rates, since it tracks metabolic mass better than weight alone." },
       { q: "Which formula should I use?", a: "Mosteller is the simplest and most common in clinical practice. Du Bois and Haycock are classic alternatives; results usually agree within a few percent." },
+      { q: "What is a normal BSA range?", a: "Average BSA for adults is roughly 1.6–2.0 m². Values vary with height, weight, age and sex; there is no single 'normal' — your BSA is used primarily for medical calculations relative to your own body." },
+      { q: "Can I use this calculator for pediatric patients?", a: "Yes, but note that the formulas were developed for adults and older children. For infants and neonates, specialized BSA formulas (like Boyd or Mosteller adapted) are often preferred in clinical settings." },
+      { q: "Why do three formulas give slightly different results?", a: "Each formula was derived from different populations — Mosteller (simplified square root), Du Bois (1916 study of 9 subjects), Haycock (1978 pediatric/obese focus). The differences are usually under 5%." },
     ],
   },
   nl: {

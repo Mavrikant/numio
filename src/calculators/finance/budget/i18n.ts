@@ -23,6 +23,28 @@ const i18n: CalculatorI18n = {
       isBalanced: { label: "Budget Balanced?", help: "Whether savings rate meets the 10% minimum recommendation" },
       monthlyEmergencyFund: { label: "Emergency Fund Target (3 months)", help: "Three months of essential expenses as emergency reserve" },
     },
+    faq: [
+      {
+        q: "What is the 50/30/20 budgeting rule?",
+        a: "The 50/30/20 rule, popularized by Senator Elizabeth Warren, divides your after-tax income into three categories: 50% for needs (housing, utilities, groceries, transportation), 30% for wants (dining out, entertainment, hobbies), and 20% for savings and debt repayment (emergency fund, retirement, credit card payments).",
+      },
+      {
+        q: "How much should I save from a $5,000 monthly income?",
+        a: "With a $5,000 monthly net income following the 50/30/20 rule, you should allocate $2,500 (50%) to needs, $1,500 (30%) to wants, and $1,000 (20%) to savings and debt repayment. Over a year, this would accumulate $12,000 in savings, plus any investment returns.",
+      },
+      {
+        q: "What counts as 'needs' vs 'wants' in the 50/30/20 budget?",
+        a: "Needs are essential expenses you cannot avoid — rent or mortgage, utilities, minimum debt payments, groceries, health insurance, and basic transportation. Wants are discretionary — restaurant meals, streaming subscriptions, vacations, shopping, and hobbies. If something is optional, it belongs in the wants category.",
+      },
+      {
+        q: "How large should my emergency fund be?",
+        a: "Financial experts recommend an emergency fund covering 3 to 6 months of essential living expenses. Our calculator automatically shows your emergency fund target as 3 months of needs-based expenses. For example, if your monthly needs are $2,500, you should aim for at least $7,500 in emergency savings.",
+      },
+      {
+        q: "Can I adjust the 50/30/20 percentages to fit my situation?",
+        a: "Yes, the 50/30/20 rule is a guideline, not a rigid formula. Our calculator allows you to customize the percentages for needs, wants, and savings to match your personal financial situation. A 10% minimum savings rate is recommended, and you can increase the savings percentage as your income grows.",
+      },
+    ],
   },
   nl: {
     title: "Budget Planner (50/30/20 Rule)",

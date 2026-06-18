@@ -14,6 +14,9 @@ const i18n: CalculatorI18n = {
     faq: [
       { q: "What's the difference between rounding and truncating?", a: "Rounding goes to the nearest value (3.146 → 3.15 at 2 dp), while truncating just drops the extra digits (3.146 → 3.14). Round up always increases, round down always decreases." },
       { q: "How does 'round half' work here?", a: "We use standard round-half-up via Math.round, so 2.5 rounds to 3 and −2.5 rounds to −2 (toward +∞ at the half)." },
+      { q: "What is the difference between rounding up and rounding down?", a: "Rounding up (ceiling) moves a number to the next higher value at the specified decimal place regardless of the next digit. Rounding down (floor) always moves to the next lower value, effectively discarding any extra precision." },
+      { q: "When would I use truncation instead of rounding?", a: "Truncation is common in financial calculations where you need to avoid rounding up (e.g., calculating fractional shares), in digital signal processing, and in programming when displaying fixed-width numbers without banker's rounding." },
+      { q: "Can I round to whole numbers or zero decimal places?", a: "Yes — just set decimal places to 0. The calculator will show the number rounded to the nearest integer, rounded up (ceiling), rounded down (floor), and truncated to the integer portion." },
     ],
   },
   nl: {

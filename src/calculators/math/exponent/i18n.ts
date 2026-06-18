@@ -33,6 +33,28 @@ const i18n: CalculatorI18n = {
     errors: {
       invalidInput: "Invalid input values.",
     },
+    faq: [
+      {
+        q: "How do I calculate a negative exponent?",
+        a: "To calculate a negative exponent like 2⁻³, simply take the reciprocal of the base raised to the positive exponent: 1 ÷ (2³) = 1/8 = 0.125. Our calculator handles negative exponents automatically — just enter a negative number in the exponent field.",
+      },
+      {
+        q: "What is 0 raised to the power of 0?",
+        a: "Zero raised to the power of zero (0⁰) is mathematically undefined. Different branches of mathematics treat it differently — some define it as 1 for convenience, while others leave it undefined. Our calculator will alert you to this special case.",
+      },
+      {
+        q: "How do I convert a large number to scientific notation using this calculator?",
+        a: "Simply enter your base and exponent, and the calculator will automatically display the result in scientific notation. For example, 5¹² equals 244,140,625 which is shown as 2.44140625 × 10⁸.",
+      },
+      {
+        q: "Can I calculate fractional exponents like 4^(1/2)?",
+        a: "Yes. A fractional exponent such as 4^(1/2) is equivalent to the square root of 4, which equals 2. In general, a^(m/n) equals the n-th root of a raised to the m-th power. Enter the decimal value of the fraction as the exponent.",
+      },
+      {
+        q: "What happens when I raise a base to the exponent of 1 or 0?",
+        a: "Any number raised to the power of 1 equals itself (a¹ = a). Any non-zero number raised to the power of 0 equals 1 (a⁰ = 1). Our calculator will show these results instantly along with the expanded notation.",
+      },
+    ],
   },
   nl: {
     title: "Exponent Calculator",

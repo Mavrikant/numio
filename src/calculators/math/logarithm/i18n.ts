@@ -39,6 +39,28 @@ const i18n: CalculatorI18n = {
       baseNotPositive: "Base must be positive.",
       baseCannotBeOne: "Base cannot be 1.",
     },
+    faq: [
+      {
+        q: "How do I calculate log base 10 of 100?",
+        a: "Enter 100 as the value and 10 as the base. The result is 2 because 10² = 100. Our calculator also automatically shows ln (natural log), log₁₀, and log₂ results alongside the custom-base calculation for your convenience.",
+      },
+      {
+        q: "What is the difference between ln, log₁₀, and log₂?",
+        a: "ln is the natural logarithm with base e (≈2.71828), log₁₀ is the common logarithm with base 10, and log₂ is the binary logarithm with base 2. Each is useful in different fields — ln in calculus and physics, log₁₀ in chemistry and decibel scales, and log₂ in computer science and information theory.",
+      },
+      {
+        q: "Can I calculate the logarithm of a number less than 1?",
+        a: "Yes. The logarithm of any positive number less than 1 (e.g., log₁₀(0.5)) is negative. For example, log₁₀(0.5) ≈ -0.301. However, the value must be positive — logarithms of zero or negative numbers are undefined.",
+      },
+      {
+        q: "Why can't the base of a logarithm be 1?",
+        a: "The base of a logarithm must be positive and not equal to 1 because 1 raised to any power always equals 1. This means log₁(x) is undefined for any x ≠ 1, and for x = 1 it would be ambiguous.",
+      },
+      {
+        q: "How does the change of base formula work?",
+        a: "The change of base formula states that log_b(a) = log_c(a) / log_c(b) for any valid base c. Our calculator uses this formula internally to compute logarithms in any base by converting to natural logarithms: log_b(a) = ln(a) / ln(b).",
+      },
+    ],
   },
   nl: {
     title: "Logaritme Calculator",

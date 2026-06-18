@@ -14,6 +14,9 @@ const i18n: CalculatorI18n = {
     faq: [
       { q: "How is sales commission calculated?", a: "Multiply the sale amount by the commission rate. A 5% commission on a $50,000 sale is $2,500. Add any base salary for total pay." },
       { q: "What is the effective rate?", a: "It's total pay (commission plus base) as a percentage of the sale amount — useful when a base salary is included." },
+      { q: "Can I use different commission rates for different tiers?", a: "This calculator uses a single flat rate. For tiered commission structures (e.g., 3% on first $10k, 5% on the rest), calculate each tier separately and add the results." },
+      { q: "How do I calculate commission with a draw or advance?", a: "A draw is an advance against future commissions. Enter your base salary as zero and subtract any draw already paid from the commission result to determine what you'll actually receive." },
+      { q: "What is a typical commission rate for different industries?", a: "Real estate: 2.5–6%, retail sales: 2–10%, software/tech sales: 5–15%, financial services: 1–5% of assets. Rates vary widely by company, product, and experience level." },
     ],
   },
   nl: {

@@ -29,6 +29,28 @@ const i18n: CalculatorI18n = {
       liquidAssets: { label: "Liquid Assets", help: "Assets quickly convertible to cash (cash + investments)" },
       illiquidAssets: { label: "Illiquid Assets", help: "Assets not easily converted to cash (real estate, vehicles, retirement accounts)" },
     },
+    faq: [
+      {
+        q: "What is the formula for calculating net worth?",
+        a: "Your net worth is calculated as Total Assets minus Total Liabilities. Total assets include cash, investments, real estate, vehicles, and other valuables. Total liabilities include mortgages, car loans, student loans, credit card debt, and other debts. A positive net worth means your assets exceed your debts.",
+      },
+      {
+        q: "What is considered a good net worth by age?",
+        a: "According to Federal Reserve data, the median net worth for Americans under 35 is about $14,000; for ages 35-44 it is around $91,000; for 45-54 it is about $168,000; and for 55-64 it is approximately $213,000. However, your personal financial goals are more important than averages.",
+      },
+      {
+        q: "Should I include my home equity in my net worth?",
+        a: "Yes, your home's current market value should be included as an asset, and your remaining mortgage balance should be included as a liability. The difference (home equity) contributes to your net worth. Our calculator makes this easy by including separate fields for home value and mortgage balance.",
+      },
+      {
+        q: "What is a good debt-to-asset ratio?",
+        a: "A debt-to-asset ratio below 0.5 (50%) is generally considered healthy, meaning your assets are at least double your liabilities. A ratio above 0.8 indicates high financial leverage and potential risk. Our calculator automatically computes this ratio along with your net worth.",
+      },
+      {
+        q: "How often should I calculate my net worth?",
+        a: "It is recommended to calculate your net worth at least quarterly or semi-annually to track your financial progress. Monthly tracking can be helpful if you are actively paying down debt or building savings. Our calculator includes fields for all major asset and liability categories for a complete picture.",
+      },
+    ],
   },
   nl: {
     title: "Eigen Vermogen Calculator",

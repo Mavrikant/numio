@@ -16,6 +16,9 @@ const i18n: CalculatorI18n = {
     faq: [
       { q: "What is the day of the year?", a: "It's the ordinal position of a date within its year — 1 January is day 1, 31 December is day 365 (or 366 in a leap year)." },
       { q: "How many days are in a year?", a: "365 in a common year and 366 in a leap year (when February has 29 days). This tool detects leap years automatically." },
+      { q: "What is today's day of the year?", a: "Simply select today's date in the calculator to see the current ordinal day number, how many days remain in the year, and the percentage of the year that has already elapsed." },
+      { q: "How is the day of the year used in practice?", a: "It's commonly used in project management for tracking milestones, in astronomy for Julian day calculations, in agriculture for planting schedules, and in software for date arithmetic and log file analysis." },
+      { q: "Why does the day of the year matter for daily planning?", a: "Knowing the ordinal day helps with year-over-year comparisons, tracking seasonal patterns, calculating exact mid-year points, and understanding where you are in the annual timeline for goal tracking." },
     ],
   },
   nl: {

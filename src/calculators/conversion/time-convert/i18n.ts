@@ -47,6 +47,18 @@ const i18n: CalculatorI18n = {
         q: "Why does 1 month ≈ 30.4375 days?",
         a: "Average calendar month: 365.25 days / 12 = 30.4375 days.",
       },
+      {
+        q: "How do I convert seconds directly to hours?",
+        a: "Divide the number of seconds by 3,600 (since 1 hour = 60 minutes × 60 seconds). For example, 7,200 seconds ÷ 3,600 = 2 hours. The converter handles this and any other time unit pair instantly.",
+      },
+      {
+        q: "What is the difference between a month and a year in this converter?",
+        a: "This converter uses the average Gregorian month of 30.4375 days and the average year of 365.25 days. Actual calendar months vary from 28–31 days, but the averages are used for consistent conversions.",
+      },
+      {
+        q: "Can I convert centuries to milliseconds?",
+        a: "Yes — the converter supports all pairs from nanoseconds to millennia. For example, 1 century = 100 years × 365.25 days × 24 hours × 60 minutes × 60 seconds × 1,000 milliseconds ≈ 3.15576 trillion milliseconds.",
+      },
     ],
   },
   nl: {

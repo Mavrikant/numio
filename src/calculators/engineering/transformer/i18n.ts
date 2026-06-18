@@ -19,6 +19,28 @@ const i18n: CalculatorI18n = {
       secondaryPower: { label: "Secondary Power", help: "Output power (W)" },
       powerLoss: { label: "Power Loss", help: "Power dissipated (W)" },
     },
+    faq: [
+      {
+        q: "How do I calculate the turns ratio of a transformer?",
+        a: "The turns ratio (Np/Ns) of a transformer equals the primary voltage divided by the secondary voltage (Vp/Vs). For example, if primary voltage is 240V and secondary voltage is 120V, the turns ratio is 2:1 — meaning there are twice as many turns on the primary winding as on the secondary.",
+      },
+      {
+        q: "What is transformer efficiency and what is a typical value?",
+        a: "Transformer efficiency is the ratio of output power (secondary) to input power (primary), expressed as a percentage. Typical power transformers operate at 95-99% efficiency. Losses come from copper losses (I²R in windings), core losses (hysteresis and eddy currents), and stray losses.",
+      },
+      {
+        q: "How do I calculate the secondary current of a transformer?",
+        a: "For an ideal transformer, secondary current = (Np/Ns) × primary current. Using a 2:1 turns ratio, a 10A primary current would produce 20A on the secondary. Our calculator accounts for efficiency losses, so the actual secondary current may be slightly higher to deliver the required output power.",
+      },
+      {
+        q: "What causes power loss in a transformer?",
+        a: "Power loss in a transformer equals primary power minus secondary power. It consists of copper losses (I²R heating in the windings), core losses (hysteresis and eddy current losses in the magnetic core), and stray losses. Our calculator shows the total power loss in watts based on your efficiency input.",
+      },
+      {
+        q: "How does transformer efficiency affect the secondary current?",
+        a: "With efficiency below 100%, the secondary current must be higher than the ideal calculation to deliver the same output power. For example, at 95% efficiency, the secondary current increases by approximately 5.3% compared to an ideal transformer to compensate for power losses.",
+      },
+    ],
   },
   nl: {
     title: "Transformatteeror Calculator",

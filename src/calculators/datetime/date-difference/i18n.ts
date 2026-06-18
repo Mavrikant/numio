@@ -24,6 +24,8 @@ const i18n: CalculatorI18n = {
       { q: "How many days are between two dates?", a: "Subtract the start date from the end date. This tool counts whole days in UTC, so a result of 30 means exactly 30 × 24 hours, unaffected by daylight-saving changes." },
       { q: "What counts as a business day?", a: "Business days are Monday through Friday. The count excludes weekends but not public holidays, which differ by country — subtract those manually if needed." },
       { q: "Does the order of dates matter?", a: "No. The calculator returns the absolute span, so swapping the start and end dates gives the same number of days." },
+      { q: "How are weeks and remaining days calculated?", a: "The calculator divides the total days by 7 to get full weeks, and the remainder is the leftover days. For example, 23 days = 3 weeks and 2 days." },
+      { q: "Can I calculate the difference including the end date?", a: "This calculator counts full 24-hour periods between dates. This is equivalent to an 'exclusive' count — the end date itself is not counted. If you need to count the end date, add 1 to the total." },
     ],
   },
   nl: {

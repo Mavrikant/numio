@@ -14,6 +14,9 @@ const i18n: CalculatorI18n = {
     faq: [
       { q: "What counts as a business day?", a: "Monday through Friday. Weekends (Saturday and Sunday) are skipped. Public holidays are not excluded since they differ by country." },
       { q: "Can I count backwards?", a: "Yes — enter a negative number of business days to find a date that many working days before the start date." },
+      { q: "How many business days are in a typical work year?", a: "The typical work year contains about 260 business days (52 weeks × 5 weekdays), though this varies slightly depending on the year's start day and whether it's a leap year." },
+      { q: "Can this calculator help with contract deadline planning?", a: "Absolutely. Use it to calculate delivery dates, notice periods, and response times that are defined in business days — common in legal contracts, service level agreements (SLAs), and procurement." },
+      { q: "What is the difference between calendar days and business days spanned?", a: "Calendar days spanned is the total days between start and result dates. Weekend days spanned shows how many of those fall on Saturday or Sunday. Add business days + weekend days = calendar days." },
     ],
   },
   nl: {

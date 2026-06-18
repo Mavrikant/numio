@@ -14,6 +14,9 @@ const i18n: CalculatorI18n = {
     faq: [
       { q: "How is overtime pay calculated?", a: "Overtime hours are paid at your hourly rate times a multiplier — commonly 1.5× ('time and a half'). Total pay = regular hours × rate + overtime hours × (rate × multiplier)." },
       { q: "Is this gross or net pay?", a: "Gross — before taxes and deductions. Use a paycheck calculator for take-home pay." },
+      { q: "What is the standard overtime multiplier?", a: "In the US, federal law (FLSA) requires 1.5× for hours over 40/week. Many countries have similar rules; some use 1.25× for evening/weekend work or 2× for holidays. The calculator lets you set any multiplier." },
+      { q: "Does the calculator account for double time or different multipliers for different hours?", a: "This calculator uses a single multiplier for all overtime hours. If you have different rates (e.g., 1.5× for weekdays and 2× for holidays), calculate each portion separately and add the results." },
+      { q: "What if I'm salaried instead of hourly?", a: "Convert your salary to an effective hourly rate by dividing your salary by the number of hours you're expected to work. Then use that rate in the calculator with your overtime hours and desired multiplier." },
     ],
   },
   nl: {

@@ -14,6 +14,9 @@ const i18n: CalculatorI18n = {
     faq: [
       { q: "What is present value?", a: "It's how much a future amount is worth today, given a discount rate that reflects the time value of money. $10,000 in 10 years at 5% is worth about $6,139 today." },
       { q: "What discount rate should I use?", a: "Use your required rate of return or cost of capital — e.g. an expected investment return, or an interest rate. Higher rates produce lower present values." },
+      { q: "What is the difference between present value and future value?", a: "Present value (PV) discounts future money to today's value. Future value (FV) grows today's money to a future amount. They are inverse calculations: FV = PV × (1+r)ⁿ and PV = FV / (1+r)ⁿ." },
+      { q: "How does the number of periods affect present value?", a: "More periods (years) reduce the present value because money is discounted over a longer time. $10,000 at 5% is worth $9,524 in 1 year, $6,139 in 10 years, and only $376 in 50 years." },
+      { q: "What is the discount factor and how is it used?", a: "The discount factor is 1/(1+r)ⁿ. Multiply any future cash flow by the discount factor to get its present value. A factor of 0.6139 means the future amount is worth about 61.4% of its face value today." },
     ],
   },
   nl: {

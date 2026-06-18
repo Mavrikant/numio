@@ -15,6 +15,9 @@ const i18n: CalculatorI18n = {
     faq: [
       { q: "How much protein do I need per day?", a: "It depends on activity: roughly 0.8–1.0 g/kg for sedentary adults, 1.2–1.6 g/kg if active, and 1.6–2.2 g/kg for athletes or those building muscle. This tool shows the range for your weight." },
       { q: "Should I split protein across meals?", a: "Spreading intake across ~3–4 meals (about 20–40 g each) supports muscle protein synthesis better than one large serving. The 'per meal' output assumes four meals." },
+      { q: "Can I eat too much protein?", a: "For healthy individuals, protein intakes up to 2–3 g/kg are generally well-tolerated. Excessive intake beyond needs is stored as fat, and very high levels (>3.5 g/kg long-term) may stress the kidneys, especially in those with pre-existing conditions." },
+      { q: "Does protein timing before or after a workout matter?", a: "Consuming protein within a few hours of exercise supports muscle repair. While the post-workout 'anabolic window' is less urgent than once thought, splitting intake evenly across the day is more important than a single post-workout shake." },
+      { q: "Is plant-based protein as effective as animal protein?", a: "Yes, when total intake is adequate and varied. Plant proteins (beans, lentils, tofu, quinoa) are sometimes lower in one or more essential amino acids, but eating a variety through the day provides a complete amino acid profile." },
     ],
   },
   nl: {

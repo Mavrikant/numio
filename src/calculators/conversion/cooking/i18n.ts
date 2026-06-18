@@ -25,6 +25,28 @@ const i18n: CalculatorI18n = {
       g: { label: "Gram" },
       water: { label: "Water" },
     },
+    faq: [
+      {
+        q: "How many grams are in one cup of all-purpose flour?",
+        a: "One US cup of all-purpose flour weighs approximately 120-125 grams. However, this varies by ingredient — one cup of granulated sugar weighs about 200 grams, while one cup of butter weighs about 227 grams. Our converter adjusts automatically based on the ingredient you select.",
+      },
+      {
+        q: "How do I convert tablespoons to milliliters?",
+        a: "One US tablespoon equals 14.79 milliliters (often rounded to 15 ml). To convert tablespoons to milliliters, simply multiply the number of tablespoons by 15. Our cooking converter handles this instantly along with cups, teaspoons, and other common kitchen units.",
+      },
+      {
+        q: "What's the difference between a US cup and a metric cup?",
+        a: "A US cup measures 236.6 ml (8 US fluid ounces), while a metric cup is 250 ml. Our converter uses the US standard. If you are using a recipe from outside the US, you may need to account for this 13.4 ml difference.",
+      },
+      {
+        q: "How much does one teaspoon of water weigh in grams?",
+        a: "One US teaspoon of water weighs approximately 4.93 grams, since 1 ml of water weighs 1 gram and a teaspoon holds about 4.93 ml. For other ingredients, the weight varies by density — our converter displays both the volume result and the weight in grams.",
+      },
+      {
+        q: "Can I convert between grams and cups for any ingredient?",
+        a: "Yes, our converter supports density-aware conversions for common ingredients including water, all-purpose flour, granulated sugar, butter, milk, and olive oil. For each ingredient, we use the correct density to ensure accurate gram-to-cup or cup-to-gram conversions.",
+      },
+    ],
   },
   nl: {
     title: "Cooking Converteerer",

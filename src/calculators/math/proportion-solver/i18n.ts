@@ -14,6 +14,9 @@ const i18n: CalculatorI18n = {
     faq: [
       { q: "How do I solve a proportion?", a: "For a/b = c/x, cross-multiply to get a·x = b·c, then x = b·c/a. For 2/3 = 8/x, x = 3·8/2 = 12." },
       { q: "What can this be used for?", a: "Scaling recipes, converting units, map distances, similar triangles — anywhere two ratios are equal and one term is unknown." },
+      { q: "Can I solve for any missing term in a proportion?", a: "Yes. The calculator solves for x in a/b = c/x, but the same cross-multiplication method works for any missing term. If a is missing: a = b·c/x. The pattern is always product of the known pair divided by the remaining term." },
+      { q: "What happens if I enter a = 0?", a: "If a = 0, the proportion is undefined because division by zero would occur during cross-multiplication (x = b·c/a). Always ensure the value in the denominator position is non-zero." },
+      { q: "Is this the same as the 'rule of three'?", a: "Yes — in many countries this method is called the 'rule of three' (règle de trois, regla de tres, regra de três). It's the same cross-multiplication technique taught worldwide for solving direct proportions." },
     ],
   },
   nl: {
