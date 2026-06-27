@@ -6,7 +6,7 @@ export const GET: APIRoute = () => {
     name: "Numio",
     short_name: "Numio",
     description:
-      "Free calculators for health, finance, engineering, math, and conversion — in 12 languages.",
+      "Free calculators for health, finance, engineering, math, and conversion — in 16 languages.",
     start_url: `${BASE_PATH}/en/`,
     scope: `${BASE_PATH}/`,
     display: "standalone",

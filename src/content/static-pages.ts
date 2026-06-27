@@ -35,7 +35,7 @@ Make accurate, well-sourced calculations available to anyone, in any language, o
 
 - **100% client-side.** Calculations run in your browser. Nothing you type is sent to any server.
 - **Open formulas.** Each calculator links to the published formula or standard (WHO, NIST, IEEE, etc.) it implements.
-- **12 languages.** UI, content, and number formatting all adapt to your locale.
+- **16 languages.** UI, content, and number formatting all adapt to your locale.
 - **Built for the web.** Static pages, fast loading, works offline once visited.
 
 ## Built by AI
@@ -58,7 +58,7 @@ Doğru, güvenilir kaynaklı hesaplamaları herkese, her dilde, her cihazda — 
 
 - **%100 istemci tarafı.** Hesaplamalar tarayıcınızda çalışır. Yazdıklarınızın hiçbiri sunucuya gönderilmez.
 - **Açık formüller.** Her hesaplayıcı, uyguladığı yayımlanmış formüle veya standarda (WHO, NIST, IEEE, vb.) bağlantı verir.
-- **12 dil.** Arayüz, içerik ve sayı biçimlendirmesi diliniz için uyarlanır.
+- **16 dil.** Arayüz, içerik ve sayı biçimlendirmesi diliniz için uyarlanır.
 - **Web için tasarlandı.** Statik sayfalar, hızlı yükleme, ilk ziyaretten sonra çevrimdışı çalışır.
 
 ## Yapay zekâ ile inşa edildi
@@ -81,7 +81,7 @@ Genaue, gut belegte Berechnungen jedem zugänglich machen — in jeder Sprache, 
 
 - **100% clientseitig.** Berechnungen laufen in Ihrem Browser. Nichts, was Sie eingeben, wird an einen Server gesendet.
 - **Offene Formeln.** Jeder Rechner verlinkt auf die veröffentlichte Formel oder den Standard (WHO, NIST, IEEE usw.), den er implementiert.
-- **12 Sprachen.** Benutzeroberfläche, Inhalte und Zahlenformatierung passen sich Ihrem Gebietsschema an.
+- **16 Sprachen.** Benutzeroberfläche, Inhalte und Zahlenformatierung passen sich Ihrem Gebietsschema an.
 - **Für das Web gebaut.** Statische Seiten, schnelles Laden, funktioniert offline nach dem ersten Besuch.
 
 ## Von KI gebaut
@@ -104,7 +104,7 @@ Rendre des calculs précis et bien sourcés accessibles à tous, dans n'importe 
 
 - **100% côté client.** Les calculs s'exécutent dans votre navigateur. Rien de ce que vous tapez n'est envoyé à un serveur.
 - **Formules ouvertes.** Chaque calculateur renvoie vers la formule ou la norme publiée (OMS, NIST, IEEE, etc.) qu'il implémente.
-- **12 langues.** L'interface, le contenu et le formatage des nombres s'adaptent à votre langue.
+- **16 langues.** L'interface, le contenu et le formatage des nombres s'adaptent à votre langue.
 - **Conçu pour le web.** Pages statiques, chargement rapide, fonctionne hors ligne après la première visite.
 
 ## Construit par l'IA
@@ -127,7 +127,7 @@ Hacer que los cálculos precisos y bien documentados estén disponibles para tod
 
 - **100% del lado del cliente.** Los cálculos se ejecutan en tu navegador. Nada de lo que escribes se envía a ningún servidor.
 - **Fórmulas abiertas.** Cada calculadora enlaza a la fórmula o estándar publicado (OMS, NIST, IEEE, etc.) que implementa.
-- **12 idiomas.** La interfaz, el contenido y el formato de números se adaptan a tu idioma.
+- **16 idiomas.** La interfaz, el contenido y el formato de números se adaptan a tu idioma.
 - **Construido para la web.** Páginas estáticas, carga rápida, funciona sin conexión después de la primera visita.
 
 ## Construido por IA
@@ -150,7 +150,7 @@ Rendere calcoli accurati e ben documentati accessibili a tutti, in qualsiasi lin
 
 - **100% lato client.** I calcoli vengono eseguiti nel tuo browser. Nulla di ciò che digiti viene inviato a nessun server.
 - **Formule aperte.** Ogni calcolatore rimanda alla formula o allo standard pubblicato (OMS, NIST, IEEE, ecc.) che implementa.
-- **12 lingue.** L'interfaccia, il contenuto e la formattazione dei numeri si adattano alla tua lingua.
+- **16 lingue.** L'interfaccia, il contenuto e la formattazione dei numeri si adattano alla tua lingua.
 - **Costruito per il web.** Pagine statiche, caricamento veloce, funziona offline dopo la prima visita.
 
 ## Costruito dall'IA
@@ -173,7 +173,7 @@ Stiamo crescendo da un unico calcolatore di riferimento (IMC) a 100+ calcolatori
 
 - **100% من جانب العميل.** تعمل الحسابات في متصفحك. لا شيء مما تكتبه يُرسل إلى أي خادم.
 - **صيغ مفتوحة.** ترتبط كل حاسبة بالصيغة أو المعيار المنشور (منظمة الصحة العالمية، NIST، IEEE، إلخ) الذي تنفذه.
-- **12 لغة.** تتكيف الواجهة والمحتوى وتنسيق الأرقام مع لغتك.
+- **16 لغة.** تتكيف الواجهة والمحتوى وتنسيق الأرقام مع لغتك.
 - **مبني للويب.** صفحات ثابتة، تحميل سريع، يعمل دون اتصال بعد الزيارة الأولى.
 
 ## مبني بالذكاء الاصطناعي
@@ -196,7 +196,7 @@ Stiamo crescendo da un unico calcolatore di riferimento (IMC) a 100+ calcolatori
 
 - **100% на стороне клиента.** Вычисления выполняются в вашем браузере. Ничто из того, что вы вводите, не отправляется ни на один сервер.
 - **Открытые формулы.** Каждый калькулятор ссылается на опубликованную формулу или стандарт (ВОЗ, NIST, IEEE и т.д.), который он реализует.
-- **12 языков.** Интерфейс, содержание и форматирование чисел адаптируются к вашей языковой среде.
+- **16 языков.** Интерфейс, содержание и форматирование чисел адаптируются к вашей языковой среде.
 - **Создан для веба.** Статические страницы, быстрая загрузка, работает офлайн после первого посещения.
 
 ## Создан с помощью ИИ
@@ -219,7 +219,7 @@ Stiamo crescendo da un unico calcolatore di riferimento (IMC) a 100+ calcolatori
 
 - **100% 客户端运行。** 计算在您的浏览器中运行。您输入的任何内容都不会发送到任何服务器。
 - **开放公式。** 每个计算器都链接到其实现的已发布公式或标准（WHO、NIST、IEEE 等）。
-- **12 种语言。** 界面、内容和数字格式均适应您的语言环境。
+- **16 种语言。** 界面、内容和数字格式均适应您的语言环境。
 - **为网络而生。** 静态页面、快速加载，首次访问后可离线使用。
 
 ## 由 AI 构建
@@ -242,7 +242,7 @@ Stiamo crescendo da un unico calcolatore di riferimento (IMC) a 100+ calcolatori
 
 - **100% クライアントサイド。** 計算はブラウザ内で実行されます。入力した内容はどのサーバーにも送信されません。
 - **オープンな数式。** 各計算ツールは実装する公開された数式または基準（WHO、NIST、IEEE等）にリンクしています。
-- **12言語対応。** UI、コンテンツ、数値フォーマットがすべてお使いのロケールに適応します。
+- **16言語対応。** UI、コンテンツ、数値フォーマットがすべてお使いのロケールに適応します。
 - **Web向けに構築。** 静的ページ、高速読み込み、初回訪問後はオフラインで動作。
 
 ## AIによって構築
@@ -265,7 +265,7 @@ Stiamo crescendo da un unico calcolatore di riferimento (IMC) a 100+ calcolatori
 
 - **100% 클라이언트 사이드.** 계산은 브라우저에서 실행됩니다. 입력한 내용은 어떤 서버에도 전송되지 않습니다.
 - **공개 수식.** 각 계산기는 구현하는 공개된 수식 또는 표준(WHO, NIST, IEEE 등)에 링크합니다.
-- **12개 언어.** UI, 콘텐츠, 숫자 형식이 모두 사용자의 로케일에 맞게 조정됩니다.
+- **16개 언어.** UI, 콘텐츠, 숫자 형식이 모두 사용자의 로케일에 맞게 조정됩니다.
 - **웹을 위해 제작.** 정적 페이지, 빠른 로딩, 첫 방문 후 오프라인에서도 작동.
 
 ## AI로 구축됨
@@ -288,7 +288,7 @@ Stiamo crescendo da un unico calcolatore di riferimento (IMC) a 100+ calcolatori
 
 - **100% क्लाइंट-साइड।** गणनाएं आपके ब्राउज़र में चलती हैं। आप जो कुछ भी टाइप करते हैं वह किसी भी सर्वर पर नहीं भेजा जाता।
 - **खुले सूत्र।** प्रत्येक कैलकुलेटर प्रकाशित सूत्र या मानक (WHO, NIST, IEEE, आदि) से जोड़ता है जिसे वह लागू करता है।
-- **12 भाषाएं।** UI, सामग्री और संख्या प्रारूपण सभी आपकी लोकेल के अनुसार अनुकूलित होते हैं।
+- **16 भाषाएं।** UI, सामग्री और संख्या प्रारूपण सभी आपकी लोकेल के अनुसार अनुकूलित होते हैं।
 - **वेब के लिए बनाया गया।** स्थैतिक पृष्ठ, तेज़ लोडिंग, पहली यात्रा के बाद ऑफ़लाइन काम करता है।
 
 ## AI द्वारा निर्मित

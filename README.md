@@ -4,7 +4,7 @@ Static, client-side calculator site — Astro + TypeScript + Tailwind + Zod.
 
 - **Live URL**: https://karaman.dev/numio/
 - **Hosting**: GitHub Pages (custom domain via CNAME)
-- **Languages**: 12 (en, tr, de, fr, es, it, ar, ru, zh, ja, ko, hi)
+- **Languages**: 16 (en, tr, de, fr, es, it, pt, id, ar, ru, zh, ja, ko, hi, nl, pl)
 - **Target**: 100+ calculators (health, finance, engineering, math, conversion)
 - **Built by**: parallel AI agents (Sonnet producers + Opus validator) per the orchestration plan
 

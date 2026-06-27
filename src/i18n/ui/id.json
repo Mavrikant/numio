@@ -2,7 +2,7 @@
   "site": {
     "name": "Numio",
     "tagline": "Kalkulator gratis untuk kehidupan sehari-hari — keuangan, kesehatan, teknik, matematika.",
-    "description": "Gunakan kalkulator gratis dan akurat dalam 14 bahasa. Tanpa login, tanpa pelacakan, hasil instan."
+    "description": "Gunakan kalkulator gratis dan akurat dalam 16 bahasa. Tanpa login, tanpa pelacakan, hasil instan."
   },
   "nav": {
     "home": "Beranda",
@@ -157,7 +157,7 @@
     "featurePrivateDesc": "Tanpa akun, tanpa pelacakan. Semua berjalan di browser Anda.",
     "featureInstantTitle": "Hasil instan",
     "featureInstantDesc": "Hasil diperbarui saat Anda mengetik, tanpa menunggu.",
-    "featureLanguagesTitle": "14 bahasa",
+    "featureLanguagesTitle": "16 bahasa",
     "featureLanguagesDesc": "Sepenuhnya dilokalkan untuk audiens global.",
     "featureOfflineTitle": "Berfungsi offline",
     "featureOfflineDesc": "Pasang Numio sebagai aplikasi dan gunakan di mana saja."

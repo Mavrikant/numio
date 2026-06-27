@@ -35,7 +35,7 @@ export const GET: APIRoute = () => {
   lines.push("# numio");
   lines.push("");
   lines.push(
-    "> Free calculators across health, finance, engineering, math, and conversion — in 12 languages." +
+    "> Free calculators across health, finance, engineering, math, and conversion — in 16 languages." +
       " Each calculator returns deterministic results in the browser; no signup required.",
   );
   lines.push("");

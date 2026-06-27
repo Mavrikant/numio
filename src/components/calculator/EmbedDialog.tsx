@@ -5,7 +5,7 @@
  * - Tab: "iframe" — copy-paste <iframe> snippet
  * - Tab: "script" — copy-paste <script> snippet that injects the iframe
  * - Theme picker: light / dark / auto
- * - Locale picker: all 12 supported locales
+ * - Locale picker: all 16 supported locales
  * - Live preview iframe
  * - Copy-to-clipboard buttons
  */

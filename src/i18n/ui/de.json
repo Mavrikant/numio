@@ -2,7 +2,7 @@
   "site": {
     "name": "Numio",
     "tagline": "Kostenlose Rechner für den Alltag — Finanzen, Gesundheit, Technik, Mathematik.",
-    "description": "Nutzen Sie kostenlose, genaue Rechner in 12 Sprachen. Kein Login, kein Tracking, sofortige Ergebnisse."
+    "description": "Nutzen Sie kostenlose, genaue Rechner in 16 Sprachen. Kein Login, kein Tracking, sofortige Ergebnisse."
   },
   "nav": {
     "home": "Startseite",
@@ -157,7 +157,7 @@
     "featurePrivateDesc": "Keine Konten, kein Tracking. Alles läuft in deinem Browser.",
     "featureInstantTitle": "Sofortige Ergebnisse",
     "featureInstantDesc": "Ergebnisse aktualisieren sich beim Tippen — ohne Warten.",
-    "featureLanguagesTitle": "14 Sprachen",
+    "featureLanguagesTitle": "16 Sprachen",
     "featureLanguagesDesc": "Vollständig lokalisiert für ein globales Publikum.",
     "featureOfflineTitle": "Funktioniert offline",
     "featureOfflineDesc": "Installiere Numio als App und nutze es überall."

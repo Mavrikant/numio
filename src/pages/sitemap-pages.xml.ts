@@ -1,7 +1,7 @@
 /**
  * /sitemap-pages.xml — static / chrome pages:
  *   - Home (per locale)
- *   - Category index pages (5 × 12 locales)
+ *   - Category index pages (5 × 16 locales)
  *   - Static pages (about, contact, privacy)
  *
  * High priority for home (1.0) and category indexes (0.8) — these are the

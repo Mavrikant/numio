@@ -234,7 +234,7 @@ export function assertDefinitionShape(
     `${calc.slug}: meta.references must be an array`,
   ).toBe(true);
 
-  // 10. i18n has all 12 locales — full coverage is asserted separately via
+  // 10. i18n has all 16 locales — full coverage is asserted separately via
   //     assertI18nComplete, here we just guard the shape.
   expect(
     Object.keys(calc.i18n).length,
