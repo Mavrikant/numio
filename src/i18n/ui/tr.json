@@ -2,7 +2,7 @@
   "site": {
     "name": "Numio",
     "tagline": "Günlük hayat için ücretsiz hesaplayıcılar — finans, sağlık, mühendislik, matematik.",
-    "description": "12 dilde ücretsiz ve doğru hesaplayıcılar. Giriş gerekmez, takip yok, anında sonuç."
+    "description": "16 dilde ücretsiz ve doğru hesaplayıcılar. Giriş gerekmez, takip yok, anında sonuç."
   },
   "nav": {
     "home": "Ana Sayfa",
@@ -157,7 +157,7 @@
     "featurePrivateDesc": "Hesap yok, takip yok. Her şey tarayıcınızda çalışır.",
     "featureInstantTitle": "Anında sonuç",
     "featureInstantDesc": "Siz yazdıkça sonuçlar güncellenir — bekleme yok.",
-    "featureLanguagesTitle": "14 dil",
+    "featureLanguagesTitle": "16 dil",
     "featureLanguagesDesc": "Küresel kullanıcılar için tamamen yerelleştirildi.",
     "featureOfflineTitle": "Çevrimdışı çalışır",
     "featureOfflineDesc": "Numio'yu uygulama olarak yükleyin, her yerde kullanın."

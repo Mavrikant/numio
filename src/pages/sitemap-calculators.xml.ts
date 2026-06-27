@@ -1,8 +1,8 @@
 /**
  * /sitemap-calculators.xml — every calculator page in every locale.
  *
- * 90 calcs × 12 locales = ~1,080 URLs. Each <url> includes xhtml:link
- * hreflang annotations for the same calculator in the other 11 locales,
+ * 90 calcs × 16 locales = ~1,440 URLs. Each <url> includes xhtml:link
+ * hreflang annotations for the same calculator in the other 15 locales,
  * which is Google's required pattern for multilingual sites.
  *
  * Priority: P0 = 0.9, P1 = 0.7, P2 = 0.5. Changefreq: monthly (formulas

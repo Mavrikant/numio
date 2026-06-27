@@ -2,7 +2,7 @@
   "site": {
     "name": "Numio",
     "tagline": "日常生活のための無料計算ツール — 金融、健康、工学、数学。",
-    "description": "12言語で無料かつ正確な計算ツールをご利用ください。ログイン不要、追跡なし、即時結果。"
+    "description": "16言語で無料かつ正確な計算ツールをご利用ください。ログイン不要、追跡なし、即時結果。"
   },
   "nav": {
     "home": "ホーム",
@@ -157,7 +157,7 @@
     "featurePrivateDesc": "アカウント不要・追跡なし。すべてブラウザー内で動作します。",
     "featureInstantTitle": "即時に結果",
     "featureInstantDesc": "入力に合わせて結果が更新。待ち時間はありません。",
-    "featureLanguagesTitle": "14 言語",
+    "featureLanguagesTitle": "16 言語",
     "featureLanguagesDesc": "世界中のユーザー向けに完全ローカライズ。",
     "featureOfflineTitle": "オフライン対応",
     "featureOfflineDesc": "Numio をアプリとしてインストールしてどこでも利用。"

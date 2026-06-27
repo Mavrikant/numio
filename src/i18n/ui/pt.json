@@ -2,7 +2,7 @@
   "site": {
     "name": "Numio",
     "tagline": "Calculadoras gratuitas para o dia a dia — finanças, saúde, engenharia, matemática.",
-    "description": "Utilize calculadoras gratuitas e precisas em 14 idiomas. Sem registo, sem rastreamento, resultados instantâneos."
+    "description": "Utilize calculadoras gratuitas e precisas em 16 idiomas. Sem registo, sem rastreamento, resultados instantâneos."
   },
   "nav": {
     "home": "Início",
@@ -157,7 +157,7 @@
     "featurePrivateDesc": "Sem contas, sem rastreamento. Tudo roda no seu navegador.",
     "featureInstantTitle": "Resultados instantâneos",
     "featureInstantDesc": "Os resultados atualizam enquanto você digita, sem esperas.",
-    "featureLanguagesTitle": "14 idiomas",
+    "featureLanguagesTitle": "16 idiomas",
     "featureLanguagesDesc": "Totalmente localizado para um público global.",
     "featureOfflineTitle": "Funciona offline",
     "featureOfflineDesc": "Instale o Numio como app e use em qualquer lugar."

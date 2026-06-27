@@ -2,7 +2,7 @@
   "site": {
     "name": "Numio",
     "tagline": "免费计算器，服务日常生活 — 金融、健康、工程、数学。",
-    "description": "以12种语言使用免费、精准的计算器。无需登录，不跟踪用户，即时获得结果。"
+    "description": "以16种语言使用免费、精准的计算器。无需登录，不跟踪用户，即时获得结果。"
   },
   "nav": {
     "home": "首页",
@@ -157,7 +157,7 @@
     "featurePrivateDesc": "无需账户，不做追踪。一切都在你的浏览器中运行。",
     "featureInstantTitle": "即时结果",
     "featureInstantDesc": "输入即更新结果，无需等待。",
-    "featureLanguagesTitle": "14 种语言",
+    "featureLanguagesTitle": "16 种语言",
     "featureLanguagesDesc": "为全球用户完整本地化。",
     "featureOfflineTitle": "离线可用",
     "featureOfflineDesc": "将 Numio 安装为应用，随时随地使用。"

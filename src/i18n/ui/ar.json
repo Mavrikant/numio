@@ -2,7 +2,7 @@
   "site": {
     "name": "Numio",
     "tagline": "حاسبات مجانية للحياة اليومية — المالية والصحة والهندسة والرياضيات.",
-    "description": "استخدم حاسبات مجانية ودقيقة بـ12 لغة. بدون تسجيل، بدون تتبع، نتائج فورية."
+    "description": "استخدم حاسبات مجانية ودقيقة بـ16 لغة. بدون تسجيل، بدون تتبع، نتائج فورية."
   },
   "nav": {
     "home": "الرئيسية",
@@ -157,7 +157,7 @@
     "featurePrivateDesc": "بدون حسابات أو تتبّع. كل شيء يعمل في متصفحك.",
     "featureInstantTitle": "نتائج فورية",
     "featureInstantDesc": "تتحدّث النتائج أثناء الكتابة، دون انتظار.",
-    "featureLanguagesTitle": "14 لغة",
+    "featureLanguagesTitle": "16 لغة",
     "featureLanguagesDesc": "مترجَم بالكامل لجمهور عالمي.",
     "featureOfflineTitle": "يعمل دون اتصال",
     "featureOfflineDesc": "ثبّت Numio كتطبيق واستخدمه في أي مكان."

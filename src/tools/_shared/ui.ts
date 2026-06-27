@@ -1,7 +1,7 @@
 import type { Locale } from "@/config/site";
 
 /**
- * Common UI strings shared across the text/developer tools, in all 12 locales.
+ * Common UI strings shared across the text/developer tools, in all 16 locales.
  * Each tool spreads `COMMON_UI[locale]` into its own `ui` bundle and adds only
  * the strings unique to that tool, so the universal chrome (Input, Copy, …) is
  * translated once.
